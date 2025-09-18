@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Liczba wierzchołków, krawędzi brył w przestrzeni</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+<h1>Liczba wierzchołków, krawędzi brył w przestrzeni</h1><br>
+
+<!-- Zadanie 1 -->
+<div class="section" id="zad1" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2024 - zad. 24)</div>
+      <div class="qtext">Liczba wszystkich ścian ostrosłupa prawidłowego jest równa 12. Liczba wszystkich wierzchołków tego ostrosłupa jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> 10</div></label>
+    <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> 11</div></label>
+    <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> 12</div></label>
+    <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> 13</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Ostrosłup ma 11 ścian bocznych i 1 podstawę, czyli 12 ścian. Podstawa to jedenastokąt, więc liczba wierzchołków to \(11+1=12\). Odp.: <b>C</b>.</div>
+</div>
+
+<!-- Zadanie 2 -->
+<div class="section" id="zad2" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 2</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2024 - zad. 25)</div>
+      <div class="qtext">Ostrosłup prawidłowy ma 2024 ściany boczne. Liczba wszystkich krawędzi tego ostrosłupa jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> 2025</div></label>
+    <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> 2026</div></label>
+    <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> 4048</div></label>
+    <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> 4052</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Liczba ścian bocznych = liczbie boków podstawy = 2024. Liczba krawędzi = 2024 (podstawa) + 2024 (boczne) = 4048. Odp.: <b>C</b>.</div>
+</div>
+
+<!-- Zadanie 3 -->
+<div class="section" id="zad3" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 3</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2023 - zad. 27)</div>
+      <div class="qtext">W pewnym ostrosłupie prawidłowym stosunek liczby \(W\) wszystkich wierzchołków do liczby \(K\) wszystkich krawędzi jest równy \(\tfrac{3}{5}\). Podstawą tego ostrosłupa jest</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> kwadrat</div></label>
+    <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> pięciokąt foremny</div></label>
+    <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> sześciokąt foremny</div></label>
+    <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> siedmiokąt foremny</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Ostrosłup prawidłowy o podstawie n-kąta: liczba wierzchołków \(n+1\), liczba krawędzi \(2n\). Stosunek \(\frac{n+1}{2n}=\frac{3}{5}\). Rozwiązując: \(5n+5=6n\Rightarrow n=5\). Podstawa: pięciokąt. Odp.: <b>B</b>.</div>
+</div>
+
+<!-- Zadanie 4 -->
+<div class="section" id="zad4" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 4</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2022 - zad. 24)</div>
+      <div class="qtext">Liczba wszystkich krawędzi graniastosłupa jest równa 42. Liczba wszystkich wierzchołków tego graniastosłupa jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> 14</div></label>
+    <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> 28</div></label>
+    <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> 15</div></label>
+    <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> 42</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Graniastosłup o podstawie n-kąta: krawędzi \(3n\). Tu \(3n=42 \Rightarrow n=14\). Wierzchołków \(2n=28\). Odp.: <b>B</b>.</div>
+</div>
+
+<!-- Zadanie 5 -->
+<div class="section" id="zad5" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 5</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2014 - zad. 19)</div>
+      <div class="qtext">Jeżeli ostrosłup ma 10 krawędzi, to liczba ścian bocznych jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> 10</div></label>
+    <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> 8</div></label>
+    <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> 7</div></label>
+    <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> 5</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Dla ostrosłupa o podstawie n-kąta: krawędzi \(2n\). Tu \(2n=10 \Rightarrow n=5\). Ścian bocznych = 5. Odp.: <b>D</b>.</div>
+</div>
+
+<!-- Zadanie 6 -->
+<div class="section" id="zad6" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 6</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2013 - zad. 19)</div>
+      <div class="qtext">Liczba wszystkich krawędzi graniastosłupa jest równa 24. Wtedy liczba wszystkich jego wierzchołków jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> 6</div></label>
+    <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> 8</div></label>
+    <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> 12</div></label>
+    <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> 16</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Graniastosłup o podstawie n-kąta: krawędzi \(3n=24 \Rightarrow n=8\). Wierzchołków \(2n=16\). Odp.: <b>D</b>.</div>
+</div>
+
+<!-- Zadanie 7 -->
+<div class="section" id="zad7" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 7</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2013 - zad. 20)</div>
+      <div class="qtext">Liczba wszystkich krawędzi graniastosłupa jest o 10 większa od liczby wszystkich jego ścian bocznych. Stąd wynika, że podstawą tego graniastosłupa jest</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> czworokąt</div></label>
+    <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> pięciokąt</div></label>
+    <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> sześciokąt</div></label>
+    <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> dziesięciokąt</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Graniastosłup: krawędzi \(3n\), ścian bocznych \(n\). Równanie: \(3n=n+10\Rightarrow 2n=10\Rightarrow n=5\). Podstawa: pięciokąt. Odp.: <b>B</b>.</div>
+</div>
+
+<!-- Zadanie 8 -->
+<div class="section" id="zad8" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 8</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2010 - zad. 24)</div>
+      <div class="qtext">Graniastołup ma 15 krawędzi. Ile wierzchołków ma ten graniastosłup?</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> 10</div></label>
+    <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> 5</div></label>
+    <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> 15</div></label>
+    <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> 30</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Graniastosłup: krawędzi \(3n=15 \Rightarrow n=5\). Wierzchołków \(2n=10\). Odp.: <b>A</b>.</div>
+</div>
+
+<!-- Zadanie 9 -->
+<div class="section" id="zad9" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 9</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2010 - zad. 24)</div>
+      <div class="qtext">Ostrosłup ma 18 wierzchołków. Liczba wszystkich krawędzi tego ostrosłupa jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> 11</div></label>
+    <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> 18</div></label>
+    <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> 27</div></label>
+    <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> 34</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Ostrosłup o podstawie n-kąta: wierzchołków \(n+1=18\Rightarrow n=17\). Krawędzi \(2n=34\). Odp.: <b>D</b>.</div>
+</div>
+
+<!-- Zadanie 10 -->
+<div class="section" id="zad10" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 10</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">Pewien wielościan ma 6 krawędzi. Liczba jego ścian jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q10" value="A"><div><b>A.</b> 4</div></label>
+    <label class="option"><input type="radio" name="q10" value="B"><div><b>B.</b> 5</div></label>
+    <label class="option"><input type="radio" name="q10" value="C"><div><b>C.</b> 6</div></label>
+    <label class="option"><input type="radio" name="q10" value="D"><div><b>D.</b> 9</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Wielościan z 6 krawędziami to czworościan (np. ostrosłup trójkątny) – ma 4 ściany. Odp.: <b>A</b>.</div>
+</div>
+
+<footer>Nie ma rzeczy niemożliwych – tylko te, które wymagają czasu ( ͡• ͜໒ ͡• )</footer>
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const correct = (sec.getAttribute('data-ans')||'').toUpperCase().trim();
+  const options = sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input = opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val = (input.value||'').toUpperCase().trim();
+      if(val === correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click', ()=> { 
+      sol.style.display = sol.style.display === 'block' ? 'none' : 'block'; 
+      MathJax.typesetPromise(); 
+    });
+  }
+}
+['zad1','zad2','zad3','zad4','zad5','zad6','zad7','zad8','zad9','zad10'].forEach(setupQuestion);
+</script>
+</body>
+</html>

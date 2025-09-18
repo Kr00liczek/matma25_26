@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Prawdopodobieństwo</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+<h1>Prawdopodobieństwo</h1><br>
+<!-- Zadanie 1 -->
+<div class="section" id="zad1" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div class="qmeta">(maj 2025 - zad. 28)</div>
+  </div>
+  <div class="qtext">
+    Dwukrotny rzut kostką. Zdarzenie A: suma oczek = 11. Prawdopodobieństwo zdarzenia A jest równe:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad1" value="A"> A. \( \tfrac{1}{36} \)</label>
+    <label class="option"><input type="radio" name="zad1" value="B"> B. \( \tfrac{6}{36} \)</label>
+    <label class="option"><input type="radio" name="zad1" value="C"> C. \( \tfrac{11}{36} \)</label>
+    <label class="option"><input type="radio" name="zad1" value="D"> D. \( \tfrac{2}{36} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol1">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol1">
+    <ol>
+      <li>Suma 11 wypada tylko w parach (5,6) i (6,5).</li>
+      <li>To 2 wyniki z 36 możliwych.</li>
+      <li>Prawdopodobieństwo \( = \tfrac{2}{36} \). Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 2 (input + sprawdzanie) -->
+<div class="section" id="zad2" data-ans-text="4/15">
+  <div class="qheader">
+    <div class="qid">Zad. 2</div>
+    <div class="qmeta">(sierpień 2024 - zad. 29)</div>
+  </div>
+  <div class="qtext">
+    Losujemy liczbę z \( C=\{0,4,5,7,9\} \) i \( D=\{1,2,3\} \). Oblicz prawdopodobieństwo, że suma będzie &gt; 9.<br>
+    Wpisz ułamek w postaci a/b:
+  </div>
+  <input type="text" class="frac-input" data-answer="4/15" placeholder="np. 2/3">
+  <button class="btn btn-check">Sprawdź</button>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol2">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol2">
+    <ol>
+      <li>Łącznie wyników: \(5 \cdot 3 = 15\).</li>
+      <li>Suma&gt;9 dla par: (7,3), (9,1), (9,2), (9,3) → 4 wyniki.</li>
+      <li>Prawdopodobieństwo \( = \tfrac{4}{15} \).</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 3 -->
+<div class="section" id="zad3" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 3</div>
+    <div class="qmeta">(czerwiec 2024 - zad. 30)</div>
+  </div>
+  <div class="qtext">
+    W pudełku są kule: czarne 18, białe – ?. Prawdopodobieństwo czarnej \(=\tfrac{3}{5}\). Ile kul białych było?
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad3" value="A"> A. 9</label>
+    <label class="option"><input type="radio" name="zad3" value="B"> B. 12</label>
+    <label class="option"><input type="radio" name="zad3" value="C"> C. 15</label>
+    <label class="option"><input type="radio" name="zad3" value="D"> D. 30</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol3">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol3">
+    <ol>
+      <li>Oznacz \( b \) – liczbę białych. Razem = \( b+18 \).</li>
+      <li>\( \tfrac{18}{b+18}=\tfrac{3}{5} \implies b=12 \).</li>
+      <li>Odp.: <b>12</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 4 (input + sprawdzanie) -->
+<div class="section" id="zad4" data-ans-text="5/12">
+  <div class="qheader">
+    <div class="qid">Zad. 4</div>
+    <div class="qmeta">(czerwiec 2024 - zad. 31)</div>
+  </div>
+  <div class="qtext">
+    Dwukrotny rzut kostką. Oblicz \( P(A) \), że pierwszy wynik &gt; drugi.<br>
+    Wpisz ułamek a/b:
+  </div>
+  <input type="text" class="frac-input" data-answer="5/12" placeholder="np. 2/3">
+  <button class="btn btn-check">Sprawdź</button>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol4">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol4">
+    <ol>
+      <li>Liczba wszystkich wyników: \(36\).</li>
+      <li>Przypadki korzystne: 15.</li>
+      <li>Prawdopodobieństwo \(= \tfrac{15}{36} = \tfrac{5}{12}\).</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 5 -->
+<div class="section" id="zad5" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 5</div>
+    <div class="qmeta">(grudzień 2023 - zad. 28)</div>
+  </div>
+  <div class="qtext">
+    Dwukrotny rzut kostką. Prawdopodobieństwo, że iloczyn oczek jest nieparzysty:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad5" value="A"> A. \( \tfrac{1}{2} \)</label>
+    <label class="option"><input type="radio" name="zad5" value="B"> B. \( \tfrac{1}{5} \)</label>
+    <label class="option"><input type="radio" name="zad5" value="C"> C. \( \tfrac{1}{4} \)</label>
+    <label class="option"><input type="radio" name="zad5" value="D"> D. \( \tfrac{3}{4} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol5">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol5">
+    <ol>
+      <li>Iloczyn nieparzysty ⇔ oba rzuty nieparzyste.</li>
+      <li>Prawdop. 1. rzutu nieparzystego = \( \tfrac{3}{6}=\tfrac{1}{2} \).</li>
+      <li>Łącznie: \( \tfrac{1}{2}\cdot \tfrac{1}{2} = \tfrac{1}{4} \). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+<!-- Zadanie 6 -->
+<div class="section" id="zad6" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 6</div>
+    <div class="qmeta">(grudzień 2023 - zad. 29.1)</div>
+  </div>
+  <div class="qtext">
+    W hurtowni owoców wyselekcjonowane jabłko spełnia normę jakości, gdy jego masa (po zaokrągleniu
+    do pełnych dekagramów) mieści się w przedziale [19 dag, 21 dag]. Pobrano próbę kontrolną liczącą
+    50 jabłek i następnie zważono każde z nich. Na poniższym wykresie słupkowym przedstawiono rozkład masy
+    jabłek w badanej próbie.
+  </div>
+  <img src="img/prawdopodobienstwo01.png" alt="Wykres jabłek">
+  <div class="qtext">
+    Spośród 50 zważonych jabłek losujemy jedno. Prawdopodobieństwo, że jabłko spełnia normę jakości, jest równe:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad6" value="A"> A. \( \tfrac{3}{7} \)</label>
+    <label class="option"><input type="radio" name="zad6" value="B"> B. \( \tfrac{5}{7} \)</label>
+    <label class="option"><input type="radio" name="zad6" value="C"> C. \( \tfrac{18}{25} \)</label>
+    <label class="option"><input type="radio" name="zad6" value="D"> D. \( \tfrac{9}{10} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol6">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol6">
+    <ol>
+      <li>Z wykresu: liczba jabłek o masie 19–21 dag = 36.</li>
+      <li>Łączna liczba jabłek = 50.</li>
+      <li>Prawdopodobieństwo \( = \tfrac{36}{50} = \tfrac{18}{25} \). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 7 -->
+<div class="section" id="zad7" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 7</div>
+    <div class="qmeta">(grudzień 2022 - zad. 32)</div>
+  </div>
+  <div class="qtext">
+    Na loterii stosunek liczby losów wygrywających do przegrywających = 2 : 7. Kupiono jeden los. Prawdopodobieństwo, że będzie wygrywający:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad7" value="A"> A. \( \tfrac{1}{9} \)</label>
+    <label class="option"><input type="radio" name="zad7" value="B"> B. \( \tfrac{1}{2} \)</label>
+    <label class="option"><input type="radio" name="zad7" value="C"> C. \( \tfrac{2}{9} \)</label>
+    <label class="option"><input type="radio" name="zad7" value="D"> D. \( \tfrac{2}{7} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol7">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol7">
+    <ol>
+      <li>Losów razem: \(2+7=9\).</li>
+      <li>Wygrywające = 2.</li>
+      <li>Prawdopodobieństwo \( = \tfrac{2}{9} \). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 8 -->
+<div class="section" id="zad8" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 8</div>
+    <div class="qmeta">(wrzesień 2022 - zad. 19)</div>
+  </div>
+  <div class="qtext">
+    W pojemniku kule białe : czerwone = 4 : 5. Losujemy jedną kulę. Prawdopodobieństwo kuli białej:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad8" value="A"> A. \( \tfrac{4}{9} \)</label>
+    <label class="option"><input type="radio" name="zad8" value="B"> B. \( \tfrac{4}{5} \)</label>
+    <label class="option"><input type="radio" name="zad8" value="C"> C. \( \tfrac{1}{9} \)</label>
+    <label class="option"><input type="radio" name="zad8" value="D"> D. \( \tfrac{1}{4} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol8">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol8">
+    <ol>
+      <li>Razem: \(4+5=9\).</li>
+      <li>Białych: 4.</li>
+      <li>Prawdopodobieństwo \( = \tfrac{4}{9} \). Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 9 -->
+<div class="section" id="zad9" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 9</div>
+    <div class="qmeta">(sierpień 2022 - zad. 28)</div>
+  </div>
+  <div class="qtext">
+    Dwukrotny rzut kostką. \(p\) = prawdopodobieństwo, że w drugim rzucie liczba oczek jest podzielna przez 3.
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad9" value="A"> A. \( \tfrac{1}{18} \)</label>
+    <label class="option"><input type="radio" name="zad9" value="B"> B. \( \tfrac{1}{6} \)</label>
+    <label class="option"><input type="radio" name="zad9" value="C"> C. \( \tfrac{1}{3} \)</label>
+    <label class="option"><input type="radio" name="zad9" value="D"> D. \( \tfrac{2}{3} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol9">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol9">
+    <ol>
+      <li>Liczby podzielne przez 3 na kostce: {3,6} → 2 wyniki z 6.</li>
+      <li>Prawdopodobieństwo = \( \tfrac{2}{6}=\tfrac{1}{3} \). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 10 -->
+<div class="section" id="zad10" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 10</div>
+    <div class="qmeta">(czerwiec 2022 - zad. 27)</div>
+  </div>
+  <div class="qtext">
+    W pudełku są kule: białe 2× czarne, czarne 3× zielone. Losujemy jedną kulę. Prawdopodobieństwo białej:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad10" value="A"> A. \( \tfrac{2}{3} \)</label>
+    <label class="option"><input type="radio" name="zad10" value="B"> B. \( \tfrac{2}{9} \)</label>
+    <label class="option"><input type="radio" name="zad10" value="C"> C. \( \tfrac{1}{6} \)</label>
+    <label class="option"><input type="radio" name="zad10" value="D"> D. \( \tfrac{3}{5} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol10">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol10">
+    <ol>
+      <li>Załóżmy zielonych = 1 → czarnych = 3 → białych = 6.</li>
+      <li>Razem = 10, białych 6.</li>
+      <li>Prawdopodobieństwo = \( \tfrac{6}{10}=\tfrac{3}{5} \). Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 11 -->
+<div class="section" id="zad11" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 11</div>
+    <div class="qmeta">(czerwiec 2021 - zad. 27)</div>
+  </div>
+  <div class="qtext">
+    Spółgłoskowych płytek jest o 25% więcej niż samogłoskowych. Losujemy jedną. Prawdopodobieństwo samogłoski:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad11" value="A"> A. 0,75</label>
+    <label class="option"><input type="radio" name="zad11" value="B"> B. 0,25</label>
+    <label class="option"><input type="radio" name="zad11" value="C"> C. \( \tfrac{4}{9} \)</label>
+    <label class="option"><input type="radio" name="zad11" value="D"> D. \( \tfrac{5}{9} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol11">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol11">
+    <ol>
+      <li>Samogł. = 4, spółgł. = 5 → razem 9.</li>
+      <li>Prawdopodobieństwo = \( \tfrac{4}{9} \). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 12 -->
+<div class="section" id="zad12" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 12</div>
+    <div class="qmeta">(maj 2021 - zad. 26)</div>
+  </div>
+  <div class="qtext">
+    Sześcian ma 8 wierzchołków. Losujemy 2 różne wierzchołki. Prawdopodobieństwo, że są końcami przekątnej sześcianu:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad12" value="A"> A. \( \tfrac{1}{7} \)</label>
+    <label class="option"><input type="radio" name="zad12" value="B"> B. \( \tfrac{4}{7} \)</label>
+    <label class="option"><input type="radio" name="zad12" value="C"> C. \( \tfrac{1}{14} \)</label>
+    <label class="option"><input type="radio" name="zad12" value="D"> D. \( \tfrac{3}{7} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol12">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol12">
+    <ol>
+      <li>Liczba par wierzchołków: \( \binom{8}{2}=28\).</li>
+      <li>Przekątnych w sześcianie: 4 na każdej ścianie? → 4*3 = 12 (przekątnych przestrzennych).</li>
+      <li>Prawdopodobieństwo \( = \tfrac{4}{28}= \tfrac{1}{7} \). Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 13 -->
+<div class="section" id="zad13" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 13</div>
+    <div class="qmeta">(marzec 2021 - zad. 27)</div>
+  </div>
+  <div class="qtext">
+    Ze zbioru dwucyfrowych losujemy jedną. Prawdopodobieństwo podzielnej przez 5:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad13" value="A"> A. \( \tfrac{2}{5} \)</label>
+    <label class="option"><input type="radio" name="zad13" value="B"> B. \( \tfrac{5}{100} \)</label>
+    <label class="option"><input type="radio" name="zad13" value="C"> C. \( \tfrac{5}{90} \)</label>
+    <label class="option"><input type="radio" name="zad13" value="D"> D. \( \tfrac{18}{90} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol13">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol13">
+    <ol>
+      <li>Dwucyfrowych = 90.</li>
+      <li>Podzielnych przez 5 = 18 (od 10 do 95).</li>
+      <li>Prawdopodobieństwo = \( \tfrac{18}{90}=\tfrac{1}{5} \). Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 14 -->
+<div class="section" id="zad14" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 14</div>
+    <div class="qmeta">(czerwiec 2020 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    W urnie 9 kul: 4 czerwone, 3 zielone, 2 białe. Losujemy 1 kulę. Prawdopodobieństwo, że nie wylosowano ani zielonej, ani białej:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad14" value="A"> A. \( \tfrac{4}{5} \)</label>
+    <label class="option"><input type="radio" name="zad14" value="B"> B. \( \tfrac{4}{9} \)</label>
+    <label class="option"><input type="radio" name="zad14" value="C"> C. \( \tfrac{5}{9} \)</label>
+    <label class="option"><input type="radio" name="zad14" value="D"> D. \( \tfrac{6}{9} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol14">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol14">
+    <ol>
+      <li>Kul czerwonych = 4.</li>
+      <li>Razem = 9.</li>
+      <li>Prawdopodobieństwo = \( \tfrac{4}{9} \). Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 15 -->
+<div class="section" id="zad15" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 15</div>
+    <div class="qmeta">(sierpień 2019 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    W grupie 60 osób jest 35 kobiet. Losujemy 1 osobę. Prawdopodobieństwo wylosowania mężczyzny:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad15" value="A"> A. \( \tfrac{1}{60} \)</label>
+    <label class="option"><input type="radio" name="zad15" value="B"> B. \( \tfrac{1}{25} \)</label>
+    <label class="option"><input type="radio" name="zad15" value="C"> C. \( \tfrac{7}{12} \)</label>
+    <label class="option"><input type="radio" name="zad15" value="D"> D. \( \tfrac{5}{12} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol15">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol15">
+    <ol>
+      <li>Kobiet = 35, mężczyzn = 25.</li>
+      <li>Prawdopodobieństwo = \( \tfrac{25}{60}=\tfrac{5}{12} \). Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+<!-- Zadanie 16 -->
+<div class="section" id="zad16" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 16</div>
+    <div class="qmeta">(czerwiec 2019 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    Ze zbioru kolejnych liczb naturalnych {20, 21, ..., 40} losujemy jedną liczbę. 
+    Prawdopodobieństwo, że będzie podzielna przez 4:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad16" value="A"> A. \( \tfrac{1}{4} \)</label>
+    <label class="option"><input type="radio" name="zad16" value="B"> B. \( \tfrac{2}{7} \)</label>
+    <label class="option"><input type="radio" name="zad16" value="C"> C. \( \tfrac{6}{19} \)</label>
+    <label class="option"><input type="radio" name="zad16" value="D"> D. \( \tfrac{3}{10} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol16">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol16">
+    <ol>
+      <li>Liczb w zbiorze: \(40-20+1=21\).</li>
+      <li>Podzielne przez 4: 20,24,28,32,36,40 → 6 liczb.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{6}{21}=\tfrac{2}{7}\). Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 17 -->
+<div class="section" id="zad17" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 17</div>
+    <div class="qmeta">(maj 2019 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    W pudełku 40 kul: 35 białych, 5 czerwonych. Losujemy jedną kulę. 
+    Prawdopodobieństwo, że wylosujemy czerwoną:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad17" value="A"> A. \( \tfrac{1}{8} \)</label>
+    <label class="option"><input type="radio" name="zad17" value="B"> B. \( \tfrac{1}{5} \)</label>
+    <label class="option"><input type="radio" name="zad17" value="C"> C. \( \tfrac{1}{40} \)</label>
+    <label class="option"><input type="radio" name="zad17" value="D"> D. \( \tfrac{1}{35} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol17">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol17">
+    <ol>
+      <li>Czerwonych = 5, razem 40.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{5}{40}=\tfrac{1}{8}\). Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 18 -->
+<div class="section" id="zad18" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 18</div>
+    <div class="qmeta">(sierpień 2018 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    W klasie 29 uczniów, w tym 15 chłopców. Losujemy jedną osobę. 
+    Prawdopodobieństwo, że będzie to dziewczyna:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad18" value="A"> A. \( \tfrac{14}{15} \)</label>
+    <label class="option"><input type="radio" name="zad18" value="B"> B. \( \tfrac{1}{14} \)</label>
+    <label class="option"><input type="radio" name="zad18" value="C"> C. \( \tfrac{14}{29} \)</label>
+    <label class="option"><input type="radio" name="zad18" value="D"> D. \( \tfrac{15}{29} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol18">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol18">
+    <ol>
+      <li>Dziewczyn = \(29-15=14\).</li>
+      <li>Prawdopodobieństwo \(=\tfrac{14}{29}\). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 19 -->
+<div class="section" id="zad19" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 19</div>
+    <div class="qmeta">(czerwiec 2018 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    Z pudełka (czarna i biała kula) losujemy 4 razy ze zwracaniem. 
+    Prawdopodobieństwo, że dokładnie 3 razy wypadnie biała kula:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad19" value="A"> A. \( \tfrac{1}{16} \)</label>
+    <label class="option"><input type="radio" name="zad19" value="B"> B. \( \tfrac{3}{8} \)</label>
+    <label class="option"><input type="radio" name="zad19" value="C"> C. \( \tfrac{1}{4} \)</label>
+    <label class="option"><input type="radio" name="zad19" value="D"> D. \( \tfrac{3}{4} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol19">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol19">
+    <ol>
+      <li>Prawdop. białej = \( \tfrac{1}{2}\).</li>
+      <li>Model dwumianowy: \( \binom{4}{3} \cdot \left(\tfrac{1}{2}\right)^3 \cdot \left(\tfrac{1}{2}\right)^1\).</li>
+      <li>\(4 \cdot \tfrac{1}{16} = \tfrac{4}{16}=\tfrac{1}{4}\). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 20 -->
+<div class="section" id="zad20" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 20</div>
+    <div class="qmeta">(maj 2018 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    W pudełku 50 kuponów: 15 przegrywających, 35 wygrywających. Losujemy 1 kupon. 
+    Prawdopodobieństwo kuponu wygrywającego:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad20" value="A"> A. \( \tfrac{15}{35} \)</label>
+    <label class="option"><input type="radio" name="zad20" value="B"> B. \( \tfrac{1}{50} \)</label>
+    <label class="option"><input type="radio" name="zad20" value="C"> C. \( \tfrac{15}{50} \)</label>
+    <label class="option"><input type="radio" name="zad20" value="D"> D. \( \tfrac{35}{50} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol20">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol20">
+    <ol>
+      <li>Wygrywających = 35, razem 50.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{35}{50}=\tfrac{7}{10}\). Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 21 -->
+<div class="section" id="zad21" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 21</div>
+    <div class="qmeta">(sierpień 2017 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    W pudełku 6 kul białych i \(n\) czarnych. Prawdopodobieństwo wylosowania białej = \( \tfrac{1}{3} \). Oblicz \(n\).
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad21" value="A"> A. 9</label>
+    <label class="option"><input type="radio" name="zad21" value="B"> B. 2</label>
+    <label class="option"><input type="radio" name="zad21" value="C"> C. 18</label>
+    <label class="option"><input type="radio" name="zad21" value="D"> D. 12</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol21">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol21">
+    <ol>
+      <li>Prawdop. = \( \tfrac{6}{6+n}=\tfrac{1}{3}\).</li>
+      <li>\(18=6+n \implies n=12\).</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 22 -->
+<div class="section" id="zad22" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 22</div>
+    <div class="qmeta">(czerwiec 2017 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 2 razy kostką. Prawdopodobieństwo, że iloczyn > 20:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad22" value="A"> A. \( \tfrac{1}{6} \)</label>
+    <label class="option"><input type="radio" name="zad22" value="B"> B. \( \tfrac{5}{36} \)</label>
+    <label class="option"><input type="radio" name="zad22" value="C"> C. \( \tfrac{1}{9} \)</label>
+    <label class="option"><input type="radio" name="zad22" value="D"> D. \( \tfrac{2}{9} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol22">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol22">
+    <ol>
+      <li>Łącznie wyników: 36.</li>
+      <li>Iloczyn > 20: policz możliwe pary → 6.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{6}{36}=\tfrac{1}{6}\). Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 23 -->
+<div class="section" id="zad23" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 23</div>
+    <div class="qmeta">(sierpień 2016 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 2 monetami i kostką. Prawdopodobieństwo: dwa orły i 6 oczek.
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad23" value="A"> A. \( \tfrac{1}{48} \)</label>
+    <label class="option"><input type="radio" name="zad23" value="B"> B. \( \tfrac{1}{24} \)</label>
+    <label class="option"><input type="radio" name="zad23" value="C"> C. \( \tfrac{1}{12} \)</label>
+    <label class="option"><input type="radio" name="zad23" value="D"> D. \( \tfrac{1}{3} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol23">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol23">
+    <ol>
+      <li>Prawdop. 2 orłów = \( \tfrac{1}{4}\).</li>
+      <li>Prawdop. 6 oczek = \( \tfrac{1}{6}\).</li>
+      <li>Łącznie = \( \tfrac{1}{24}\). Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 24 -->
+<div class="section" id="zad24" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 24</div>
+    <div class="qmeta">(czerwiec 2016 - zad. 21)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 3 razy monetą. Prawdopodobieństwo dokładnie 1 orła należy do:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad24" value="A"> A. \(0 \le p < 0,25\)</label>
+    <label class="option"><input type="radio" name="zad24" value="B"> B. \(0,25 \le p \le 0,4\)</label>
+    <label class="option"><input type="radio" name="zad24" value="C"> C. \(0,4 < p \le 0,5\)</label>
+    <label class="option"><input type="radio" name="zad24" value="D"> D. \(p > 0,5\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol24">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol24">
+    <ol>
+      <li>\(P= \binom{3}{1} \cdot \left(\tfrac{1}{2}\right)^3 = 3 \cdot \tfrac{1}{8} = \tfrac{3}{8}=0,375\).</li>
+      <li>Czyli \(0,25 \le p \le 0,4\). Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 25 -->
+<div class="section" id="zad25" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 25</div>
+    <div class="qmeta">(maj 2016 - zad. 22)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 3 razy monetą. Prawdopodobieństwo dokładnie 2 orłów należy do:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad25" value="A"> A. \(0 \le p < 0,2\)</label>
+    <label class="option"><input type="radio" name="zad25" value="B"> B. \(0,2 \le p < 0,35\)</label>
+    <label class="option"><input type="radio" name="zad25" value="C"> C. \(0,35 < p \le 0,5\)</label>
+    <label class="option"><input type="radio" name="zad25" value="D"> D. \(0,5 < p \le 1\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol25">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol25">
+    <ol>
+      <li>\(P= \binom{3}{2} \cdot \left(\tfrac{1}{2}\right)^3 = 3 \cdot \tfrac{1}{8} = \tfrac{3}{8}=0,375\).</li>
+      <li>Czyli \(0,35 < p \le 0,5\). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+<!-- Zadanie 26 -->
+<div class="section" id="zad26" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 26</div>
+    <div class="qmeta">(sierpień 2015 - zad. 24)</div>
+  </div>
+  <div class="qtext">
+    W grupie 15 kobiet i 18 mężczyzn. Losujemy jedną osobę. 
+    Prawdopodobieństwo, że wylosujemy kobietę:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad26" value="A"> A. \( \tfrac{1}{15} \)</label>
+    <label class="option"><input type="radio" name="zad26" value="B"> B. \( \tfrac{1}{33} \)</label>
+    <label class="option"><input type="radio" name="zad26" value="C"> C. \( \tfrac{15}{33} \)</label>
+    <label class="option"><input type="radio" name="zad26" value="D"> D. \( \tfrac{15}{18} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol26">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol26">
+    <ol>
+      <li>Razem osób = 33, kobiet = 15.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{15}{33}\). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 27 -->
+<div class="section" id="zad27" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 27</div>
+    <div class="qmeta">(czerwiec 2015 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    Na loterii przygotowano 100 losów, w tym 4 wygrywające. 
+    Po wylosowaniu pewnej liczby losów, wśród których był dokładnie jeden wygrywający, 
+    szansa na wygraną była taka sama jak przed rozpoczęciem. Ile losów wylosowano?
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad27" value="A"> A. 4</label>
+    <label class="option"><input type="radio" name="zad27" value="B"> B. 20</label>
+    <label class="option"><input type="radio" name="zad27" value="C"> C. 50</label>
+    <label class="option"><input type="radio" name="zad27" value="D"> D. 25</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol27">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol27">
+    <ol>
+      <li>Początkowe prawdopodobieństwo wygranej = \( \tfrac{4}{100}=\tfrac{1}{25}\).</li>
+      <li>Po losowaniu: \( \tfrac{1}{n}\) (1 wygrany wśród n losów).</li>
+      <li>\( \tfrac{1}{n}=\tfrac{1}{25}\implies n=25\).</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 28 -->
+<div class="section" id="zad28" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 28</div>
+    <div class="qmeta">(maj 2015 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    W trzech pojemnikach są pary kul: 1 czerwona i 1 niebieska. 
+    Losujemy po 1 kuli z każdego pojemnika. 
+    Prawdopodobieństwo, że dokładnie 2 z 3 będą czerwone:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad28" value="A"> A. \( \tfrac{1}{4} \)</label>
+    <label class="option"><input type="radio" name="zad28" value="B"> B. \( \tfrac{3}{8} \)</label>
+    <label class="option"><input type="radio" name="zad28" value="C"> C. \( \tfrac{1}{2} \)</label>
+    <label class="option"><input type="radio" name="zad28" value="D"> D. \( \tfrac{2}{3} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol28">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol28">
+    <ol>
+      <li>Każda kula: \(P(czerwona)=\tfrac{1}{2}\).</li>
+      <li>\(P(2 czerwone) = \binom{3}{2} \cdot \left(\tfrac{1}{2}\right)^2 \cdot \left(\tfrac{1}{2}\right) = \tfrac{3}{8}\).</li>
+      <li>Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 29 -->
+<div class="section" id="zad29" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 29</div>
+    <div class="qmeta">(grudzień 2014 - zad. 23)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 6 razy kostką. Niech \(p_i\) = prawdopodobieństwo wyrzucenia i oczek w i-tym rzucie.
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad29" value="A"> A. \(p_6=1\)</label>
+    <label class="option"><input type="radio" name="zad29" value="B"> B. \(p_6=\tfrac{1}{6}\)</label>
+    <label class="option"><input type="radio" name="zad29" value="C"> C. \(p_3=0\)</label>
+    <label class="option"><input type="radio" name="zad29" value="D"> D. \(p_3=\tfrac{1}{3}\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol29">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol29">
+    <ol>
+      <li>Każdy rzut: prawdopodobieństwo \(p_i=\tfrac{1}{6}\) dla i=1..6.</li>
+      <li>Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 30 -->
+<div class="section" id="zad30" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 30</div>
+    <div class="qmeta">(sierpień 2014 - zad. 24)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 3 razy monetą. Prawdopodobieństwo, że wypadnie co najmniej jedna reszka:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad30" value="A"> A. \( \tfrac{7}{8} \)</label>
+    <label class="option"><input type="radio" name="zad30" value="B"> B. \( \tfrac{1}{2} \)</label>
+    <label class="option"><input type="radio" name="zad30" value="C"> C. \( \tfrac{1}{4} \)</label>
+    <label class="option"><input type="radio" name="zad30" value="D"> D. \( \tfrac{1}{8} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol30">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol30">
+    <ol>
+      <li>Jedyny przypadek „bez reszki” = 3 orły = \( \tfrac{1}{8}\).</li>
+      <li>Prawdopodobieństwo co najmniej 1 reszki = \(1-\tfrac{1}{8}=\tfrac{7}{8}\).</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 31 -->
+<div class="section" id="zad31" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 31</div>
+    <div class="qmeta">(czerwiec 2014 - zad. 19)</div>
+  </div>
+  <div class="qtext">
+    Losujemy liczbę z {1,2,...,30}. Prawdopodobieństwo, że będzie kwadratem całkowitym:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad31" value="A"> A. \( \tfrac{4}{30} \)</label>
+    <label class="option"><input type="radio" name="zad31" value="B"> B. \( \tfrac{5}{30} \)</label>
+    <label class="option"><input type="radio" name="zad31" value="C"> C. \( \tfrac{6}{30} \)</label>
+    <label class="option"><input type="radio" name="zad31" value="D"> D. \( \tfrac{10}{30} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol31">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol31">
+    <ol>
+      <li>Kwadraty ≤30: 1,4,9,16,25 → 5 liczb.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{5}{30}=\tfrac{1}{6}\).</li>
+      <li>Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 32 -->
+<div class="section" id="zad32" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 32</div>
+    <div class="qmeta">(grudzień 2013 - zad. 23)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 1 kostką. Niech \(p_i\) = prawdopodobieństwo liczby oczek podzielnej przez i. 
+    Wtedy:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad32" value="A"> A. \(2p_4=p_2\)</label>
+    <label class="option"><input type="radio" name="zad32" value="B"> B. \(2p_6=p_3\)</label>
+    <label class="option"><input type="radio" name="zad32" value="C"> C. \(2p_3=p_6\)</label>
+    <label class="option"><input type="radio" name="zad32" value="D"> D. \(2p_2=p_4\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol32">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol32">
+    <ol>
+      <li>\(p_2=\tfrac{3}{6}, p_3=\tfrac{2}{6}, p_4=\tfrac{1}{6}, p_6=\tfrac{1}{6}\).</li>
+      <li>Sprawdzamy: \(2p_6=2\cdot\tfrac{1}{6}=\tfrac{2}{6} = p_3\).</li>
+      <li>Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 33 -->
+<div class="section" id="zad33" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 33</div>
+    <div class="qmeta">(sierpień 2013 - zad. 23)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 2 razy kostką. Prawdopodobieństwo, że 2 razy wypadnie 5 oczek:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad33" value="A"> A. \( \tfrac{1}{6} \)</label>
+    <label class="option"><input type="radio" name="zad33" value="B"> B. \( \tfrac{1}{12} \)</label>
+    <label class="option"><input type="radio" name="zad33" value="C"> C. \( \tfrac{1}{18} \)</label>
+    <label class="option"><input type="radio" name="zad33" value="D"> D. \( \tfrac{1}{36} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol33">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol33">
+    <ol>
+      <li>Prawdop. jednego 5 = \( \tfrac{1}{6}\).</li>
+      <li>Dwa razy: \( \left(\tfrac{1}{6}\right)^2=\tfrac{1}{36}\).</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 34 -->
+<div class="section" id="zad34" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 34</div>
+    <div class="qmeta">(czerwiec 2013 - zad. 24)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 3 razy monetą. Prawdopodobieństwo, że w 3. rzucie wypadnie orzeł:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad34" value="A"> A. \( \tfrac{1}{4} \)</label>
+    <label class="option"><input type="radio" name="zad34" value="B"> B. \( \tfrac{3}{8} \)</label>
+    <label class="option"><input type="radio" name="zad34" value="C"> C. \( \tfrac{1}{2} \)</label>
+    <label class="option"><input type="radio" name="zad34" value="D"> D. \( \tfrac{3}{4} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol34">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol34">
+    <ol>
+      <li>Każdy rzut niezależny: \(P(orzeł)=\tfrac{1}{2}\).</li>
+      <li>Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+<!-- Zadanie 35 -->
+<div class="section" id="zad35" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 35</div>
+    <div class="qmeta">(maj 2013 - zad. 22)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 2 razy kostką. Prawdopodobieństwo, że iloczyn oczek = 5:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad35" value="A"> A. \( \tfrac{1}{36} \)</label>
+    <label class="option"><input type="radio" name="zad35" value="B"> B. \( \tfrac{1}{18} \)</label>
+    <label class="option"><input type="radio" name="zad35" value="C"> C. \( \tfrac{1}{12} \)</label>
+    <label class="option"><input type="radio" name="zad35" value="D"> D. \( \tfrac{1}{9} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol35">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol35">
+    <ol>
+      <li>Iloczyn 5 tylko dla (1,5) lub (5,1).</li>
+      <li>Łącznie 2 korzystne spośród 36 możliwych.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{2}{36}=\tfrac{1}{18}\).</li>
+      <li>Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 36 -->
+<div class="section" id="zad36" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 36</div>
+    <div class="qmeta">(sierpień 2011 - zad. 19)</div>
+  </div>
+  <div class="qtext">
+    Losujemy liczbę dwucyfrową. Prawdopodobieństwo, że będzie podzielna przez 30:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad36" value="A"> A. \( \tfrac{1}{90} \)</label>
+    <label class="option"><input type="radio" name="zad36" value="B"> B. \( \tfrac{2}{90} \)</label>
+    <label class="option"><input type="radio" name="zad36" value="C"> C. \( \tfrac{3}{90} \)</label>
+    <label class="option"><input type="radio" name="zad36" value="D"> D. \( \tfrac{10}{90} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol36">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol36">
+    <ol>
+      <li>Dwucyfrowe od 10 do 99 → 90 liczb.</li>
+      <li>Podzielne przez 30: 30,60,90 → 3 liczby.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{3}{90}=\tfrac{1}{30}\).</li>
+      <li>Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 37 -->
+<div class="section" id="zad37" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 37</div>
+    <div class="qmeta">(maj 2011 - zad. 22)</div>
+  </div>
+  <div class="qtext">
+    Rzucamy 2 razy kostką. Prawdopodobieństwo, że suma oczek = 3:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad37" value="A"> A. \( \tfrac{1}{6} \)</label>
+    <label class="option"><input type="radio" name="zad37" value="B"> B. \( \tfrac{1}{9} \)</label>
+    <label class="option"><input type="radio" name="zad37" value="C"> C. \( \tfrac{1}{12} \)</label>
+    <label class="option"><input type="radio" name="zad37" value="D"> D. \( \tfrac{1}{18} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol37">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol37">
+    <ol>
+      <li>Suma 3 tylko dla (1,2) lub (2,1).</li>
+      <li>2 przypadki z 36 → \( \tfrac{2}{36}=\tfrac{1}{18}\).</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 38 -->
+<div class="section" id="zad38" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 38</div>
+    <div class="qmeta">(sierpień 2010 - zad. 25)</div>
+  </div>
+  <div class="qtext">
+    Losujemy liczbę z {1,...,11}. Niech p oznacza prawdopodobieństwo liczby będącej wielokrotnością 3:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad38" value="A"> A. \(p&lt;0,3\)</label>
+    <label class="option"><input type="radio" name="zad38" value="B"> B. \(p=0,3\)</label>
+    <label class="option"><input type="radio" name="zad38" value="C"> C. \(p=0,4\)</label>
+    <label class="option"><input type="radio" name="zad38" value="D"> D. \(p&gt;0,4\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol38">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol38">
+    <ol>
+      <li>Wielokrotności 3: 3,6,9 → 3 liczby.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{3}{11}\approx0,27\).</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 39 -->
+<div class="section" id="zad39" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 39</div>
+    <div class="qmeta">(informator CKE)</div>
+  </div>
+  <div class="qtext">
+    Losujemy liczbę z {1,...,8}. Prawdopodobieństwo liczby podzielnej przez 3:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad39" value="A"> A. \(p&lt;0,3\)</label>
+    <label class="option"><input type="radio" name="zad39" value="B"> B. \(p=0,3\)</label>
+    <label class="option"><input type="radio" name="zad39" value="C"> C. \( \tfrac{1}{3} \)</label>
+    <label class="option"><input type="radio" name="zad39" value="D"> D. \(p&gt;\tfrac{1}{3}\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol39">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol39">
+    <ol>
+      <li>Podzielne przez 3: 3,6 → 2 liczby.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{2}{8}=0,25&lt;0,3\).</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 40 -->
+<div class="section" id="zad40" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 40</div>
+    <div class="qmeta">(zbiór CKE - zad. 63)</div>
+  </div>
+  <div class="qtext">
+    Marek ma 3 koszulki: czerw., niebieską, białą.  
+    Darek ma 5 koszulek: czerw., białą, zieloną, żółtą, szarą.  
+    Prawdopodobieństwo, że założą ten sam kolor:
+  </div>
+  <img src="img/prawdopodobienstwo02.png" alt="koszulki">
+  <div class="options">
+    <label class="option"><input type="radio" name="zad40" value="A"> A. \( \tfrac{2}{15} \)</label>
+    <label class="option"><input type="radio" name="zad40" value="B"> B. \( \tfrac{3}{5} \)</label>
+    <label class="option"><input type="radio" name="zad40" value="C"> C. \( \tfrac{2}{5} \)</label>
+    <label class="option"><input type="radio" name="zad40" value="D"> D. \( \tfrac{4}{15} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol40">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol40">
+    <ol>
+      <li>Wspólne kolory: czerwony i biały (2 kolory).</li>
+      <li>Łącznie 3×5=15 kombinacji, sprzyjających 2.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{2}{15}\).</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 41 -->
+<div class="section" id="zad41" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 41</div>
+    <div class="qmeta">(zbiór CKE - zad. 64)</div>
+  </div>
+  <div class="qtext">
+    W pięciokącie foremnym losujemy 2 wierzchołki. 
+    Prawdopodobieństwo, że będą końcami przekątnej:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad41" value="A"> A. \( \tfrac{3}{10} \)</label>
+    <label class="option"><input type="radio" name="zad41" value="B"> B. \( \tfrac{3}{5} \)</label>
+    <label class="option"><input type="radio" name="zad41" value="C"> C. \( \tfrac{2}{5} \)</label>
+    <label class="option"><input type="radio" name="zad41" value="D"> D. \( \tfrac{1}{2} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol41">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol41">
+    <ol>
+      <li>W 5-kącie: liczba wszystkich par = \(\binom{5}{2}=10\).</li>
+      <li>Przekątnych = 5.</li>
+      <li>Prawdopodobieństwo \(=\tfrac{5}{10}=\tfrac{1}{2}\).</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 42 -->
+<div class="section" id="zad42" data-ans="F,F">
+  <div class="qheader">
+    <div class="qid">Zad. 42</div>
+    <div class="qmeta">(zbiór CKE - zad. 65)</div>
+  </div>
+  <div class="qtext">
+    Losujemy 2 razy liczbę ze zbioru {1,2,3,4,5} ze zwracaniem. Oceń prawdziwość:
+  </div>
+  <div class="options">
+    <p>Prawdopodobieństwo sumy parzystej = \( \tfrac{8}{25} \).</p>
+    <label class="option"><input type="radio" name="zad42a" value="P"> Prawda</label>
+    <label class="option"><input type="radio" name="zad42a" value="F"> Fałsz</label>
+    <p>Prawdopodobieństwo 2 parzystych = \( \tfrac{2}{25} \).</p>
+    <label class="option"><input type="radio" name="zad42b" value="P"> Prawda</label>
+    <label class="option"><input type="radio" name="zad42b" value="F"> Fałsz</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol42">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol42">
+    <ol>
+      <li>Poprawna wartość sumy parzystej ≠ \( \tfrac{8}{25} \).</li>
+      <li>Poprawna wartość 2 parzystych ≠ \( \tfrac{2}{25} \).</li>
+      <li>Oba stwierdzenia są fałszywe.</li>
+      <li>Odp.: <b>F,F</b>.</li>
+    </ol>
+  </div>
+</div>
+<footer>Hej, dasz radę, krok po kroku (ง’̀-‘́)ง</footer>
+
+
+</div> <!-- /container -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.section').forEach(sec => {
+    const correct = (sec.dataset.ans || '').trim().toUpperCase();
+
+    // radio przy standardowych zadaniach (A,B,C,D)
+    if (!correct.includes(',')) {
+      sec.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          sec.querySelectorAll('.option').forEach(opt => opt.classList.remove('correct','incorrect'));
+          const label = radio.closest('.option');
+          if (radio.value.toUpperCase() === correct) {
+            label.classList.add('correct');
+          } else {
+            label.classList.add('incorrect');
+          }
+        });
+      });
+    } else {
+      // obsługa P/F (np. data-ans="F,F")
+      const correctArr = correct.split(',').map(c => c.trim());
+      
+      correctArr.forEach((ans, idx) => {
+        const groupName = sec.id + String.fromCharCode(97 + idx); // zad42a, zad42b...
+        const radios = sec.querySelectorAll(`input[name="${groupName}"]`);
+        
+        radios.forEach(radio => {
+          radio.addEventListener('change', () => {
+            radios.forEach(r => r.closest('.option').classList.remove('correct','incorrect'));
+            const label = radio.closest('.option');
+            if (radio.value.toUpperCase() === ans) {
+              label.classList.add('correct');
+            } else {
+              label.classList.add('incorrect');
+            }
+          });
+        });
+      });
+    }
+
+    // input + przycisk "Sprawdź"
+    const inp = sec.querySelector('.frac-input');
+    const btn = sec.querySelector('.btn-check');
+    if (inp && btn) {
+      btn.addEventListener('click', () => {
+        const val = inp.value.trim();
+        const good = (inp.dataset.answer || '').trim();
+        btn.classList.remove('correct','incorrect');
+        if (val === good) {
+          btn.classList.add('correct');
+          alert("Dobrze! To poprawna odpowiedź.");
+        } else {
+          btn.classList.add('incorrect');
+          alert("Źle! Spróbuj ponownie.");
+        }
+      });
+    }
+
+    // toggle rozwiązania
+    sec.querySelectorAll('.btn-solution').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (target) {
+          target.style.display = target.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>

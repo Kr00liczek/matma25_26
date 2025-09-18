@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Proporcjonalność prosta i odwrotna</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+<h1>Proporcjonalność prosta i odwrotna</h1><br>
+
+<!-- Zadanie 1 -->
+<div class="section" id="zad1" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2022 - zad. 15)</div>
+      <div class="qtext">W ciągu dwóch godzin trzy jednakowe maszyny produkują razem 1200 guzików. Ile guzików wyprodukuje pięć takich maszyn w ciągu jednej godziny? Przyjmij, że maszyny pracują z taką samą, stałą wydajnością.</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> 800</div></label>
+    <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> 900</div></label>
+    <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> 1000</div></label>
+    <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> 1500</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">3 maszyny w 2h: 1200 → 1 maszyna w 2h: 400 → 1 maszyna w 1h: 200 → 5 maszyn w 1h: 1000. Odp.: <b>C</b>.</div>
+</div>
+
+<!-- Zadanie 2 -->
+<div class="section" id="zad2" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 2</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2020 - zad. 20)</div>
+      <div class="qtext">Wielkości \(x\) i \(y\) są odwrotnie proporcjonalne (tabela poniżej).\n\n\\[\n\\begin{array}{c|c|c|c}\nx & a & 3 & 8 \\\\\ny & 36 & 24 & b\n\\end{array}\n\\]\nStąd wynika, że</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> a=6, b=22,5</div></label>
+    <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> a=4/3, b=6</div></label>
+    <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> a=3, b=96</div></label>
+    <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> a=2, b=9</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Odwrotna proporcjonalność: \(x \cdot y = const\). Z danych: \(3 \cdot 24 = 72\). Stąd \(a \cdot 36=72 \Rightarrow a=2\). Tak samo \(8 \cdot b = 72 \Rightarrow b=9\). Odp.: <b>D</b>.</div>
+</div>
+
+<!-- Zadanie 3 -->
+<div class="section" id="zad3" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 3</div>
+    <div style="flex:1">
+      <div class="qmeta">(grudzień 2014 - zad. 11)</div>
+      <div class="qtext">Ekipa złożona z 25 pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> 14</div></label>
+    <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> 17</div></label>
+    <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> 25</div></label>
+    <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> 39</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">Praca: \(25 \cdot 156 = 3900\) osobo-dni. Potrzebne: \(3900/100 = 39\) osób. Więc dodatkowych trzeba zatrudnić \(39-25=14\). Odp.: <b>A</b>.</div>
+</div>
+
+<!-- Zadanie 4 -->
+<div class="section" id="zad4" data-ans="P,P">
+  <div class="qheader">
+    <div class="qid">Zad. 4</div>
+    <div style="flex:1">
+      <div class="qmeta">(zbiór CKE - zad. 29)</div>
+      <div class="qtext">Aby zaorać pole o powierzchni \(P\) w ciągu 8 godzin, potrzeba trzech ciągników. Przyjmijmy, że każdy ciągnik w ustalonej jednostce czasu może zaorać tę samą powierzchnię pola. 
+      <br><br>
+      Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.
+      </div>
+    </div>
+  </div>
+
+  <div class="qmeta"><b>1.</b> Zaoranie pola o powierzchni \(P\) przy pomocy dwóch ciągników zajęłoby 12 godzin.</div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q4_1" value="P"><div><b>P.</b> Prawda</div></label>
+    <label class="option"><input type="radio" name="q4_1" value="F"><div><b>F.</b> Fałsz</div></label>
+  </div>
+
+  <div class="qmeta"><b>2.</b> Cztery ciągniki, które pracują o połowę szybciej, zaorałyby to pole w ciągu 4 godzin.</div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q4_2" value="P"><div><b>P.</b> Prawda</div></label>
+    <label class="option"><input type="radio" name="q4_2" value="F"><div><b>F.</b> Fałsz</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    1. Trzy ciągniki: 8h → 24 osobo-godziny. Dwa ciągniki: \(24/2=12\)h ✅.<br>
+    2. Cztery ciągniki o połowę szybciej = wydajność 6 ciągników. \(24/6=4\)h ✅.<br>
+    Odp.: <b>P, P</b>.
+  </div>
+</div>
+
+<footer>Twoja praca dzisiaj = Twój sukces jutro (⌐■_■)</footer>
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec=document.getElementById(sectionId);
+  if(!sec) return;
+  const correct=(sec.getAttribute('data-ans')||'').toUpperCase().trim();
+  const options=sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input=opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val=(input.value||'').toUpperCase().trim();
+      if(correct.split(',').includes(val)) opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+  const btn=sec.querySelector('.btn-solution');
+  const sol=sec.querySelector('.sol');
+  if(btn&&sol){
+    btn.addEventListener('click', ()=>{ sol.style.display=sol.style.display==='block'?'none':'block'; MathJax.typesetPromise(); });
+  }
+}
+['zad1','zad2','zad3','zad4'].forEach(setupQuestion);
+</script>
+</body>
+</html>

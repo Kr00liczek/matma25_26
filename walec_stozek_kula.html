@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Walec, stożek, kula</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+    <h1>Walec, stożek, kula</h1><br>
+
+    <!-- Zadanie 1 -->
+
+    <div class="section" id="zad1" data-ans="C">
+
+      <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(czerwiec 2025 - zad. 26)</div></div>
+
+      <div class="qtext">
+
+        Tworząca stożka ma długość 6. Kąt rozwarcia tego stożka ma miarę 60&deg;. Wysokość tego stożka jest równa
+
+      </div>
+
+      <div class="options">
+
+        <label class="option"><input type="radio" name="zad1" value="A"> A. 3</label>
+
+        <label class="option"><input type="radio" name="zad1" value="B"> B. \(2\sqrt{3}\)</label>
+
+        <label class="option"><input type="radio" name="zad1" value="C"> C. \(3\sqrt{3}\)</label>
+
+        <label class="option"><input type="radio" name="zad1" value="D"> D. \(3\sqrt{5}\)</label>
+
+      </div>
+
+      <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+
+      <div class="sol" id="sol1">
+
+        <ol>
+
+          <li>Kąt rozwarcia stożka to kąt między tworzącymi. Jego połowa (\(30^\circ\)) jest kątem w trójkącie prostokątnym utworzonym z wysokości, promienia i tworzącej.</li>
+
+          <li>Mamy \(\cos 30^\circ = \frac{h}{l} = \frac{h}{6}\).</li>
+
+          <li>\(\cos 30^\circ = \tfrac{\sqrt{3}}{2}\), więc \(h = 6 \cdot \tfrac{\sqrt{3}}{2} = 3\sqrt{3}\).</li>
+
+          <li>Odp.: <b>C</b>.</li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+    <!-- Zadanie 2 -->
+
+    <div class="section" id="zad2" data-ans="C">
+
+      <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(czerwiec 2020 - zad. 20)</div></div>
+
+      <div class="qtext">
+
+        Tworząca stożka jest o 2 dłuższa od promienia jego podstawy, a pole powierzchni bocznej jest o \(2\pi\) większe od pola podstawy.
+
+        Promień podstawy tego stożka jest równy
+
+      </div>
+
+      <div class="options">
+
+        <label class="option"><input type="radio" name="zad2" value="A"> A. 3</label>
+
+        <label class="option"><input type="radio" name="zad2" value="B"> B. 2π</label>
+
+        <label class="option"><input type="radio" name="zad2" value="C"> C. 1</label>
+
+        <label class="option"><input type="radio" name="zad2" value="D"> D. π</label>
+
+      </div>
+
+      <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+
+      <div class="sol" id="sol2">
+
+        <ol>
+
+          <li>Niech \(r\) – promień, \(l=r+2\).</li>
+
+          <li>Pole boczne: \(P_b=\pi rl\). Pole podstawy: \(P_p=\pi r^2\).</li>
+
+          <li>Dane: \(\pi rl = \pi r^2 + 2\pi \Rightarrow rl = r^2+2\).</li>
+
+          <li>Podstawiamy \(l=r+2\): \(r(r+2)=r^2+2 \Rightarrow r^2+2r=r^2+2 \Rightarrow 2r=2\Rightarrow r=1\).</li>
+
+          <li>Odp.: <b>C</b>.</li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+    <!-- Zadanie 3 -->
+
+    <div class="section" id="zad3" data-ans="B">
+
+      <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(maj 2020 - zad. 25)</div></div>
+
+      <div class="qtext">
+
+        Dwa stożki o takich samych podstawach połączono podstawami (zobacz rysunek). Stosunek wysokości tych stożków jest równy 3:2. 
+
+        Objętość stożka o krótszej wysokości jest równa 12 cm³.<br>
+
+        <img src="img/wsk01.png" alt="wsk01">
+Objętość bryły utworzonej z połączonych stożków jest równa
+      </div>
+
+      <div class="options">
+
+        <label class="option"><input type="radio" name="zad3" value="A"> A. 20 cm³</label>
+
+        <label class="option"><input type="radio" name="zad3" value="B"> B. 30 cm³</label>
+
+        <label class="option"><input type="radio" name="zad3" value="C"> C. 39 cm³</label>
+
+        <label class="option"><input type="radio" name="zad3" value="D"> D. 52,5 cm³</label>
+
+      </div>
+
+      <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+
+      <div class="sol" id="sol3">
+
+        <ol>
+
+          <li>Objętość stożka \(V=\tfrac{1}{3}\pi r^2h\). Podstawy obu są takie same, więc stosunek objętości = stosunek wysokości.</li>
+
+          <li>Dane: \(\tfrac{h_1}{h_2}=3:2\). Krótszy stożek (2 części) ma objętość 12.</li>
+
+          <li>Skoro \(V_1:V_2=3:2\), a \(V_2=12\), to \(V_1=\tfrac{3}{2}\cdot 12=18\).</li>
+
+          <li>Całość: \(V_1+V_2=18+12=30\).</li>
+
+          <li>Odp.: <b>B</b>.</li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+    <!-- Zadanie 4 -->
+
+    <div class="section" id="zad4" data-ans="D">
+
+      <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(sierpień 2019 - zad. 22)</div></div>
+
+      <div class="qtext">
+
+        Pole powierzchni całkowitej pewnego stożka jest 3 razy większe od pola powierzchni kuli. Promień tej kuli jest równy 2 i taki sam jak promień podstawy stożka.
+
+        Tworząca tego stożka ma długość równą
+
+      </div>
+
+      <div class="options">
+
+        <label class="option"><input type="radio" name="zad4" value="A"> A. 12</label>
+
+        <label class="option"><input type="radio" name="zad4" value="B"> B. 11</label>
+
+        <label class="option"><input type="radio" name="zad4" value="C"> C. 24</label>
+
+        <label class="option"><input type="radio" name="zad4" value="D"> D. 22</label>
+
+      </div>
+
+      <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+
+      <div class="sol" id="sol4">
+
+        <ol>
+
+          <li>Pole kuli: \(4\pi r^2=4\pi \cdot 2^2=16\pi\).</li>
+
+          <li>Pole stożka: \(P=\pi r l+\pi r^2=\pi \cdot 2l+4\pi=2\pi l+4\pi\).</li>
+
+          <li>Warunek: \(2\pi l+4\pi=3\cdot 16\pi=48\pi\).</li>
+
+          <li>\(2\pi l=44\pi\Rightarrow l=22\).</li>
+
+          <li>Odp.: <b>D</b>.</li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+<!-- Zadanie 5 -->
+
+<div class="section" id="zad5" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(czerwiec 2019 - zad. 24)</div></div>
+
+  <div class="qtext">
+
+    Przekrojem osiowym walca jest kwadrat o przekątnej długości 12. Objętość tego walca jest zatem równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad5" value="A"> A. \(36\pi\sqrt{2}\)</label>
+
+    <label class="option"><input type="radio" name="zad5" value="B"> B. \(108\pi\sqrt{2}\)</label>
+
+    <label class="option"><input type="radio" name="zad5" value="C"> C. \(54\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad5" value="D"> D. \(108\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol5">
+
+    <ol>
+
+      <li>Przekrój osiowy walca to prostokąt \(2r\times h\). Jest kwadratem, więc \(2r=h=s\).</li>
+
+      <li>Z przekątnej: \(s\sqrt{2}=12\Rightarrow s=6\sqrt{2}\). Zatem \(r=\tfrac{s}{2}=3\sqrt{2}\), \(h=s=6\sqrt{2}\).</li>
+
+      <li>\(V=\pi r^2h=\pi\cdot(18)\cdot 6\sqrt{2}=108\pi\sqrt{2}\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 6 -->
+
+<div class="section" id="zad6" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(maj 2019 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Promień kuli i promień podstawy stożka są równe 4. Pole powierzchni kuli jest równe polu powierzchni całkowitej stożka. Długość tworzącej stożka jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad6" value="A"> A. 8</label>
+
+    <label class="option"><input type="radio" name="zad6" value="B"> B. 4</label>
+
+    <label class="option"><input type="radio" name="zad6" value="C"> C. 16</label>
+
+    <label class="option"><input type="radio" name="zad6" value="D"> D. 12</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol6">
+
+    <ol>
+
+      <li>\(P_{\text{kuli}}=4\pi r^2=4\pi\cdot 4^2=64\pi\).</li>
+
+      <li>\(P_{\text{stożka}}=\pi rl+\pi r^2=\pi\cdot 4l+16\pi\stackrel{!}{=}64\pi\Rightarrow4\pi l=48\pi\).</li>
+
+      <li>\(l=12\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 7 -->
+
+<div class="section" id="zad7" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(sierpień 2018 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Przekrój osiowy walca jest kwadratem o przekątnej \(10\sqrt{2}\). Pole powierzchni bocznej tego walca jest równe
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad7" value="A"> A. \(50\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad7" value="B"> B. \(100\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad7" value="C"> C. \(200\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad7" value="D"> D. \(250\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol7">
+
+    <ol>
+
+      <li>Niech bok kwadratu \(s\). \(s\sqrt{2}=10\sqrt{2}\Rightarrow s=10\).</li>
+
+      <li>\(2r=h=s=10\Rightarrow r=5,\ h=10\).</li>
+
+      <li>\(P_b=2\pi r h=2\pi\cdot 5\cdot 10=100\pi\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 8 -->
+
+<div class="section" id="zad8" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(czerwiec 2018 - zad. 20)</div></div>
+
+  <div class="qtext">
+
+    Dany jest walec, w którym wysokość jest równa promieniowi podstawy. Objętość tego walca jest równa \(27\pi\). Wynika stąd, że promień podstawy tego walca jest równy
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad8" value="A"> A. 9</label>
+
+    <label class="option"><input type="radio" name="zad8" value="B"> B. 6</label>
+
+    <label class="option"><input type="radio" name="zad8" value="C"> C. 3</label>
+
+    <label class="option"><input type="radio" name="zad8" value="D"> D. 2</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol8">
+
+    <ol>
+
+      <li>\(h=r\Rightarrow V=\pi r^2h=\pi r^3=27\pi\).</li>
+
+      <li>\(r^3=27\Rightarrow r=3\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 9 -->
+
+<div class="section" id="zad9" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(czerwiec 2018 - zad. 21)</div></div>
+
+  <div class="qtext">
+
+    Stożek o promieniu podstawy \(r\) i kula o tym samym promieniu mają równe objętości. Tangens kąta między tworzącą i płaszczyzną podstawy tego stożka jest równy
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad9" value="A"> A. \(\tfrac{4}{3}\)</label>
+
+    <label class="option"><input type="radio" name="zad9" value="B"> B. 12</label>
+
+    <label class="option"><input type="radio" name="zad9" value="C"> C. \(\sqrt{17}\)</label>
+
+    <label class="option"><input type="radio" name="zad9" value="D"> D. 4</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol9">
+
+    <ol>
+
+      <li>\(V_{\text{stoż}}=\tfrac{1}{3}\pi r^2h\), \(V_{\text{kuli}}=\tfrac{4}{3}\pi r^3\). Równość objętości daje \(h=4r\).</li>
+
+      <li>W trójkącie przekroju: \(\tan\varphi=\dfrac{h}{r}=\dfrac{4r}{r}=4\), gdzie \(\varphi\) – kąt między tworzącą a płaszczyzną podstawy.</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 10 -->
+
+<div class="section" id="zad10" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(maj 2018 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Na rysunku przedstawiono bryłę zbudowaną z walca i półkuli. Wysokość walca jest równa \(r\) i jest taka sama jak promień półkuli oraz taka sama jak promień podstawy walca.<br>
+
+    <img src="img/wsk02.png" alt="wsk02">
+Objętość tej bryły jest równa
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad10" value="A"> A. \(\tfrac{5}{3}\pi r^3\)</label>
+
+    <label class="option"><input type="radio" name="zad10" value="B"> B. \(\tfrac{4}{3}\pi r^3\)</label>
+
+    <label class="option"><input type="radio" name="zad10" value="C"> C. \(\tfrac{2}{3}\pi r^3\)</label>
+
+    <label class="option"><input type="radio" name="zad10" value="D"> D. \(\tfrac{1}{3}\pi r^3\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol10">
+
+    <ol>
+
+      <li>Walec: \(V_w=\pi r^2h=\pi r^3\) (bo \(h=r\)).</li>
+
+      <li>Półkula: \(V_{1/2\,k}=\tfrac{1}{2}\cdot \tfrac{4}{3}\pi r^3=\tfrac{2}{3}\pi r^3\).</li>
+
+      <li>Razem: \(V=\pi r^3+\tfrac{2}{3}\pi r^3=\tfrac{5}{3}\pi r^3\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 11 -->
+
+<div class="section" id="zad11" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(sierpień 2017 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Dany jest stożek o wysokości 6 i tworzącej \(3\sqrt{5}\). Objętość tego stożka jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad11" value="A"> A. \(36\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad11" value="B"> B. \(18\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad11" value="C"> C. \(108\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad11" value="D"> D. \(54\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol11">
+
+    <ol>
+
+      <li>\(l^2=r^2+h^2\Rightarrow (3\sqrt{5})^2=r^2+6^2\Rightarrow 45=r^2+36\Rightarrow r^2=9\Rightarrow r=3\).</li>
+
+      <li>\(V=\tfrac{1}{3}\pi r^2h=\tfrac{1}{3}\pi\cdot 9\cdot 6=18\pi\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 12 -->
+
+<div class="section" id="zad12" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(czerwiec 2017 - zad. 24)</div></div>
+
+  <div class="qtext">
+
+    Pole powierzchni bocznej walca jest równe \(16\pi\), a promień jego podstawy ma długość 2. Wysokość tego walca jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad12" value="A"> A. 4</label>
+
+    <label class="option"><input type="radio" name="zad12" value="B"> B. 8</label>
+
+    <label class="option"><input type="radio" name="zad12" value="C"> C. \(4\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad12" value="D"> D. \(8\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol12">
+
+    <ol>
+
+      <li>\(P_b=2\pi r h=16\pi\) i \(r=2\Rightarrow 4\pi h=16\pi\).</li>
+
+      <li>\(h=4\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 13 -->
+
+<div class="section" id="zad13" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(sierpień 2016 - zad. 15)</div></div>
+
+  <div class="qtext">
+
+    Kąt rozwarcia stożka ma miarę \(120^\circ\), a tworząca tego stożka ma długość 6. Promień podstawy stożka jest równy
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad13" value="A"> A. 3</label>
+
+    <label class="option"><input type="radio" name="zad13" value="B"> B. 6</label>
+
+    <label class="option"><input type="radio" name="zad13" value="C"> C. \(3\sqrt{3}\)</label>
+
+    <label class="option"><input type="radio" name="zad13" value="D"> D. \(6\sqrt{3}\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol13">
+
+    <ol>
+
+      <li>Połowa kąta rozwarcia: \(\alpha=60^\circ\).</li>
+
+      <li>W trójkącie przekroju: \(r=l\sin\alpha=6\cdot \sin 60^\circ=6\cdot \tfrac{\sqrt{3}}{2}=3\sqrt{3}\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 14 -->
+
+<div class="section" id="zad14" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(sierpień 2016 - zad. 17)</div></div>
+
+  <div class="qtext">
+
+    Dany jest walec, w którym promień podstawy jest równy \(r\), a wysokość walca jest od tego promienia dwa razy większa. Objętość tego walca jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad14" value="A"> A. \(2\pi r^3\)</label>
+
+    <label class="option"><input type="radio" name="zad14" value="B"> B. \(4\pi r^3\)</label>
+
+    <label class="option"><input type="radio" name="zad14" value="C"> C. \(\pi r^2(r+2)\)</label>
+
+    <label class="option"><input type="radio" name="zad14" value="D"> D. \(\pi r^2(r-2)\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol14">
+
+    <ol>
+
+      <li>\(h=2r\). Objętość: \(V=\pi r^2h=\pi r^2\cdot 2r=2\pi r^3\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+<!-- Zadanie 15 -->
+
+<div class="section" id="zad15" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(maj 2016 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Kąt rozwarcia stożka ma miarę \(120^\circ\), a tworząca tego stożka ma długość 4. Objętość tego stożka jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad15" value="A"> A. \(36\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad15" value="B"> B. \(18\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad15" value="C"> C. \(24\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad15" value="D"> D. \(8\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol15">
+
+    <ol>
+
+      <li>Połowa kąta rozwarcia: \(\alpha=\tfrac{120^\circ}{2}=60^\circ\).</li>
+
+      <li>\(r=l\sin\alpha=4\cdot \tfrac{\sqrt{3}}{2}=2\sqrt{3}\), \(h=l\cos\alpha=4\cdot \tfrac{1}{2}=2\).</li>
+
+      <li>\(V=\tfrac{1}{3}\pi r^2 h=\tfrac{1}{3}\pi\cdot (2\sqrt{3})^2\cdot 2=\tfrac{1}{3}\pi\cdot 12\cdot 2=8\pi\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 16 -->
+
+<div class="section" id="zad16" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(sierpień 2015 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Dany jest trójkąt prostokątny o długościach boków \(a,b,c\), gdzie \(a&lt;b&lt;c\). Obracając ten trójkąt wokół dłuższej przyprostokątnej, otrzymujemy bryłę, której objętość jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad16" value="A"> A. \(V=\tfrac{1}{3}a^{2}b\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad16" value="B"> B. \(V=a^{2}b\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad16" value="C"> C. \(V=\tfrac{1}{3}b^{2}a\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad16" value="D"> D. \(V=a^{2}\pi+\pi ac\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol16">
+
+    <ol>
+
+      <li>Oś obrotu: dłuższa przyprostokątna \(b\) → wysokość stożka \(h=b\), promień podstawy \(r=a\).</li>
+
+      <li>\(V=\tfrac{1}{3}\pi r^{2}h=\tfrac{1}{3}\pi a^{2} b\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 17 -->
+
+<div class="section" id="zad17" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(sierpień 2015 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Przekątna przekroju osiowego walca, którego \(r=4\) i \(h=6\), ma długość
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad17" value="A"> A. \(\sqrt{10}\)</label>
+
+    <label class="option"><input type="radio" name="zad17" value="B"> B. \(\sqrt{20}\)</label>
+
+    <label class="option"><input type="radio" name="zad17" value="C"> C. \(\sqrt{52}\)</label>
+
+    <label class="option"><input type="radio" name="zad17" value="D"> D. 10</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol17">
+
+    <ol>
+
+      <li>Przekrój osiowy: prostokąt \(2r\times h=8\times 6\).</li>
+
+      <li>Przekątna: \(d=\sqrt{(2r)^2+h^2}=\sqrt{8^2+6^2}=\sqrt{64+36}=10\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 18 -->
+
+<div class="section" id="zad18" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(czerwiec 2015 - zad. 19)</div></div>
+
+  <div class="qtext">
+
+    Tworząca stożka o promieniu podstawy 3 ma długość 6 (zobacz rysunek).<br>
+
+    <img src="img/wsk03.png" alt="wsk03">
+
+    <br>Kąt \(\alpha\) rozwarcia tego stożka jest równy
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad18" value="A"> A. \(30^\circ\)</label>
+
+    <label class="option"><input type="radio" name="zad18" value="B"> B. \(45^\circ\)</label>
+
+    <label class="option"><input type="radio" name="zad18" value="C"> C. \(60^\circ\)</label>
+
+    <label class="option"><input type="radio" name="zad18" value="D"> D. \(90^\circ\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol18">
+
+    <ol>
+
+      <li>\(\sin\frac{\alpha}{2}=\dfrac{r}{l}=\dfrac{3}{6}=\tfrac{1}{2}\Rightarrow \frac{\alpha}{2}=30^\circ\).</li>
+
+      <li>\(\alpha=60^\circ\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 19 -->
+
+<div class="section" id="zad19" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(maj 2015 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Przekrojem osiowym stożka jest trójkąt równoboczny o boku długości 6. Objętość tego stożka jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad19" value="A"> A. \(27\pi\sqrt{3}\)</label>
+
+    <label class="option"><input type="radio" name="zad19" value="B"> B. \(9\pi\sqrt{3}\)</label>
+
+    <label class="option"><input type="radio" name="zad19" value="C"> C. \(18\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad19" value="D"> D. \(6\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol19">
+
+    <ol>
+
+      <li>W przekroju: boki równe to tworzące, więc \(l=6\), a podstawa to \(2r=6\Rightarrow r=3\).</li>
+
+      <li>Wysokość trójkąta równobocznego: \(h= \tfrac{\sqrt{3}}{2}\cdot 6=3\sqrt{3}\) (to wysokość stożka).</li>
+
+      <li>\(V=\tfrac{1}{3}\pi r^2 h=\tfrac{1}{3}\pi\cdot 9\cdot 3\sqrt{3}=9\pi\sqrt{3}\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 20 -->
+
+<div class="section" id="zad20" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(sierpień 2014 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Pole powierzchni całkowitej walca, którego przekrojem osiowym jest kwadrat o boku długości 4, jest równe<br>
+
+    <img src="img/wsk04.png" alt="wsk04">
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad20" value="A"> A. \(256\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad20" value="B"> B. \(128\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad20" value="C"> C. \(48\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad20" value="D"> D. \(24\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol20">
+
+    <ol>
+
+      <li>Kwadrat \(s=4\Rightarrow 2r=h=4\). Zatem \(r=2,\ h=4\).</li>
+
+      <li>\(P_b=2\pi r h=2\pi\cdot 2\cdot 4=16\pi\), sumy podstaw: \(2\pi r^2=2\pi\cdot 4=8\pi\).</li>
+
+      <li>\(P_c=16\pi+8\pi=24\pi\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 21 -->
+
+<div class="section" id="zad21" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(czerwiec 2014 - zad. 24)</div></div>
+
+  <div class="qtext">
+
+    Objętość walca o promieniu podstawy 4 jest równa \(96\pi\). Pole powierzchni bocznej tego walca jest równe
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad21" value="A"> A. \(16\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad21" value="B"> B. \(24\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad21" value="C"> C. \(32\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad21" value="D"> D. \(48\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol21">
+
+    <ol>
+
+      <li>\(V=\pi r^2 h=96\pi\), \(r=4\Rightarrow 16\pi h=96\pi\Rightarrow h=6\).</li>
+
+      <li>\(P_b=2\pi r h=2\pi\cdot 4\cdot 6=48\pi\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 22 -->
+
+<div class="section" id="zad22" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(maj 2014 - zad. 20)</div></div>
+
+  <div class="qtext">
+
+    Stożek i walec mają takie same podstawy i równe pola powierzchni bocznej. Wtedy tworząca stożka jest
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad22" value="A"> A. równa wysokości walca.</label>
+
+    <label class="option"><input type="radio" name="zad22" value="B"> B. dwa razy dłuższa od wysokości walca.</label>
+
+    <label class="option"><input type="radio" name="zad22" value="C"> C. trzy razy dłuższa od wysokości walca.</label>
+
+    <label class="option"><input type="radio" name="zad22" value="D"> D. sześć razy dłuższa od wysokości walca.</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol22">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol22">
+
+    <ol>
+
+      <li>Dla tej samej podstawy \(r\): \(P_b(\text{stoż})=\pi r l\), \(P_b(\text{wal})=2\pi r h\).</li>
+
+      <li>Równość: \(\pi r l=2\pi r h\Rightarrow l=2h\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 23 -->
+
+<div class="section" id="zad23" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(grudzień 2013 - zad. 18)</div></div>
+
+  <div class="qtext">
+
+    Tworząca stożka ma długość \(l\), a promień jego podstawy jest równy \(r\) (zobacz rysunek).<br>
+
+    <img src="img/wsk05.png" alt="wsk05"><br>
+
+    Powierzchnia boczna tego stożka jest 2 razy większa od pola jego podstawy. Wówczas
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad23" value="A"> A. \(r=\tfrac{1}{6}l\)</label>
+
+    <label class="option"><input type="radio" name="zad23" value="B"> B. \(r=\tfrac{1}{4}l\)</label>
+
+    <label class="option"><input type="radio" name="zad23" value="C"> C. \(r=\tfrac{1}{3}l\)</label>
+
+    <label class="option"><input type="radio" name="zad23" value="D"> D. \(r=\tfrac{1}{2}l\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol23">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol23">
+
+    <ol>
+
+      <li>\(P_b=\pi r l\), \(P_{pod}=\pi r^2\), warunek: \(\pi r l=2\pi r^2\).</li>
+
+      <li>Dzielimy przez \(\pi r\,(r&gt;0)\): \(l=2r\Rightarrow r=\tfrac{1}{2}l\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+<!-- Zadanie 24 -->
+
+<div class="section" id="zad24" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(sierpień 2013 - zad. 20)</div></div>
+
+  <div class="qtext">
+
+    Objętość walca o wysokości \(8\) jest równa \(72\pi\). Promień podstawy tego walca jest równy
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad24" value="A"> A. \(9\)</label>
+
+    <label class="option"><input type="radio" name="zad24" value="B"> B. \(8\)</label>
+
+    <label class="option"><input type="radio" name="zad24" value="C"> C. \(6\)</label>
+
+    <label class="option"><input type="radio" name="zad24" value="D"> D. \(3\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol24">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol24">
+
+    <ol>
+
+      <li>\(V=\pi r^2 h=72\pi\), dla \(h=8\) mamy \(\pi r^2\cdot 8=72\pi\Rightarrow r^2=9\).</li>
+
+      <li>\(r=3\) (promień dodatni).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 25 -->
+
+<div class="section" id="zad25" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 25</div><div class="qmeta">(czerwiec 2013 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Objętość stożka o wysokości \(h\) i promieniu podstawy trzy razy mniejszym od wysokości jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad25" value="A"> A. \(\tfrac{1}{9}\pi h^2\)</label>
+
+    <label class="option"><input type="radio" name="zad25" value="B"> B. \(\tfrac{1}{27}\pi h^2\)</label>
+
+    <label class="option"><input type="radio" name="zad25" value="C"> C. \(\tfrac{1}{9}\pi h^3\)</label>
+
+    <label class="option"><input type="radio" name="zad25" value="D"> D. \(\tfrac{1}{27}\pi h^3\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol25">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol25">
+
+    <ol>
+
+      <li>\(r=\tfrac{h}{3}\).</li>
+
+      <li>\(V=\tfrac{1}{3}\pi r^2 h=\tfrac{1}{3}\pi\left(\tfrac{h}{3}\right)^2 h=\tfrac{1}{27}\pi h^3\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 26 -->
+
+<div class="section" id="zad26" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 26</div><div class="qmeta">(maj 2013 - zad. 21)</div></div>
+
+  <div class="qtext">
+
+    Pole powierzchni bocznej stożka o wysokości \(4\) i promieniu podstawy \(3\) jest równe
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad26" value="A"> A. \(9\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad26" value="B"> B. \(12\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad26" value="C"> C. \(15\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad26" value="D"> D. \(16\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol26">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol26">
+
+    <ol>
+
+      <li>Tworząca: \(l=\sqrt{r^2+h^2}=\sqrt{3^2+4^2}=5\).</li>
+
+      <li>\(P_b=\pi r l=\pi\cdot 3\cdot 5=15\pi\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 27 -->
+
+<div class="section" id="zad27" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 27</div><div class="qmeta">(marzec 2012 - zad. 19)</div></div>
+
+  <div class="qtext">
+
+    Stożek powstał w wyniku obrotu trójkąta prostokątnego o przyprostokątnych \(13\) i \(15\) wokół dłuższej przyprostokątnej. Promień podstawy tego stożka jest równy
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad27" value="A"> A. \(15\)</label>
+
+    <label class="option"><input type="radio" name="zad27" value="B"> B. \(13\)</label>
+
+    <label class="option"><input type="radio" name="zad27" value="C"> C. \(7{,}5\)</label>
+
+    <label class="option"><input type="radio" name="zad27" value="D"> D. \(6{,}5\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol27">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol27">
+
+    <ol>
+
+      <li>Oś obrotu: dłuższa przyprostokątna \(15\) ⇒ promień to druga przyprostokątna.</li>
+
+      <li>\(r=13\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 28 -->
+
+<div class="section" id="zad28" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 28</div><div class="qmeta">(sierpień 2011 - zad. 20)</div></div>
+
+  <div class="qtext">
+
+    Przekrój osiowy walca jest kwadratem o boku długości \(6\). Objętość tego walca jest równa<br>
+
+    <img src="img/wsk06.png" alt="wsk06">
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad28" value="A"> A. \(108\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad28" value="B"> B. \(54\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad28" value="C"> C. \(36\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad28" value="D"> D. \(27\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol28">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol28">
+
+    <ol>
+
+      <li>Kwadrat jako przekrój osiowy ⇒ \(2r=h=6\Rightarrow r=3,\ h=6\).</li>
+
+      <li>\(V=\pi r^2 h=\pi\cdot 9\cdot 6=54\pi\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 29 -->
+
+<div class="section" id="zad29" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 29</div><div class="qmeta">(sierpień 2011 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Kula ma objętość \(V=288\pi\). Promień \(r\) tej kuli jest równy
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad29" value="A"> A. \(6\)</label>
+
+    <label class="option"><input type="radio" name="zad29" value="B"> B. \(8\)</label>
+
+    <label class="option"><input type="radio" name="zad29" value="C"> C. \(9\)</label>
+
+    <label class="option"><input type="radio" name="zad29" value="D"> D. \(12\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol29">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol29">
+
+    <ol>
+
+      <li>\(\tfrac{4}{3}\pi r^3=288\pi\Rightarrow r^3=288\cdot \tfrac{3}{4}=216\).</li>
+
+      <li>\(r=\sqrt[3]{216}=6\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 30 -->
+
+<div class="section" id="zad30" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 30</div><div class="qmeta">(maj 2011 - zad. 21)</div></div>
+
+  <div class="qtext">
+
+    Objętość stożka o wysokości \(8\) i średnicy podstawy \(12\) jest równa
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad30" value="A"> A. \(124\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad30" value="B"> B. \(96\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad30" value="C"> C. \(64\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad30" value="D"> D. \(32\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol30">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol30">
+
+    <ol>
+
+      <li>Promień \(r=6\), wysokość \(h=8\).</li>
+
+      <li>\(V=\tfrac{1}{3}\pi r^2 h=\tfrac{1}{3}\pi\cdot 36\cdot 8=96\pi\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 31 -->
+
+<div class="section" id="zad31" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 31</div><div class="qmeta">(informator CKE)</div></div>
+
+  <div class="qtext">
+
+    Powierzchnia boczna stożka po rozwinięciu jest półkolem o promieniu \(12\) cm. Podstawa tego stożka jest kołem o promieniu
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad31" value="A"> A. \(12\) cm</label>
+
+    <label class="option"><input type="radio" name="zad31" value="B"> B. \(6\) cm</label>
+
+    <label class="option"><input type="radio" name="zad31" value="C"> C. \(3\) cm</label>
+
+    <label class="option"><input type="radio" name="zad31" value="D"> D. \(1\) cm</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol31">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol31">
+
+    <ol>
+
+      <li>Promień rozwinięcia = tworząca \(l=12\).</li>
+
+      <li>Długość łuku półkola \(=\pi l\) równa się obwodowi podstawy \(2\pi r\): \(\pi\cdot 12=2\pi r\Rightarrow r=6\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 32 -->
+
+<div class="section" id="zad32" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 32</div><div class="qmeta">(informator CKE)</div></div>
+
+  <div class="qtext">
+
+    Przekrój osiowy stożka jest trójkątem równobocznym o boku długości \(6\). Pole powierzchni bocznej tego stożka jest równe<br>
+
+    <img src="img/wsk07.png" alt="wsk07">
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad32" value="A"> A. \(12\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad32" value="B"> B. \(18\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad32" value="C"> C. \(27\pi\)</label>
+
+    <label class="option"><input type="radio" name="zad32" value="D"> D. \(36\pi\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol32">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol32">
+
+    <ol>
+
+      <li>W przekroju: boki równe to tworzące, a podstawa przekroju to \(2r\).</li>
+
+      <li>Skoro trójkąt równoboczny ma bok \(6\): \(2r=6\Rightarrow r=3\) oraz \(l=6\).</li>
+
+      <li>\(P_b=\pi r l=\pi\cdot 3\cdot 6=18\pi\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+<footer>Każde równanie to mała wycieczka po logice (^‿^)</footer>
+
+  </div>
+
+  <script>
+
+    document.querySelectorAll('.btn-solution').forEach(btn=>{
+
+      btn.addEventListener('click',()=>{
+
+        const sol=document.getElementById(btn.dataset.target);
+
+        sol.style.display= sol.style.display==='block'?'none':'block';
+
+      });
+
+    });
+
+    document.querySelectorAll('.section').forEach(sec=>{
+
+      const ans=sec.dataset.ans;
+
+      sec.querySelectorAll('input[type=radio]').forEach(inp=>{
+
+        inp.addEventListener('change',()=>{
+
+          sec.querySelectorAll('.option').forEach(o=>o.classList.remove('correct','incorrect'));
+
+          if(inp.value===ans){
+
+            inp.parentElement.classList.add('correct');
+
+          } else {
+
+            inp.parentElement.classList.add('incorrect');
+
+          }
+
+        });
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>

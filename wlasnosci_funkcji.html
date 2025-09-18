@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Własności funkcji</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Własności funkcji</h1><br>
+
+  <!-- Sekcja: informacja do zadań 1 i 2 -->
+<div class="section">
+  <div class="qheader"><div class="qid">Informacja do zadań 1 i 2</div><div class="qmeta">(sierpień 2024)</div></div><br>
+  Pusta bańka na mleko o pojemności 10 litrów ma masę 6,5 kg. Jeden litr mleka ma masę 1,03 kg. 
+  Niech x oznacza liczbę litrów mleka w tej bańce, a f(x) oznacza wyrażoną w kilogramach masę bańki wraz z mlekiem,<br>
+  gdzie x ∈ &lt;0,10&gt;
+</div>
+
+<!-- Zadanie 1 -->
+<div class="section" data-ans="F,P">
+  <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(sierpień 2024 - zad. 11.1)</div></div>
+  <p>Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,
+  albo F – jeśli jest fałszywe.</p>
+  <div class="statement">Funkcja f jest malejąca:
+    <label class="option"><input type="radio" name="q1a" value="P"> P</label>
+    <label class="option"><input type="radio" name="q1a" value="F"> F</label>
+  </div>
+  <div class="statement">Funkcja f nie ma miejsc zerowych:
+    <label class="option"><input type="radio" name="q1b" value="P"> P</label>
+    <label class="option"><input type="radio" name="q1b" value="F"> F</label>
+  </div>
+  <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+  <div class="sol" id="sol1">f(x)=6.5+1.03x. Funkcja rośnie (a=1.03&gt;0), więc pierwsze stwierdzenie jest fałszywe (F). 
+  Funkcja nie przecina osi Ox, więc drugie stwierdzenie jest prawdziwe (P). Odpowiedź: F,P.</div>
+</div>
+
+<!-- Zadanie 2 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(sierpień 2024 - zad. 11.2)</div></div>
+  <p>Największa wartość funkcji f jest równa</p>
+  <label class="option"><input type="radio" name="q2" value="A"> A. 16,8</label>
+  <label class="option"><input type="radio" name="q2" value="B"> B. 15,8</label>
+  <label class="option"><input type="radio" name="q2" value="C"> C. 11,3</label>
+  <label class="option"><input type="radio" name="q2" value="D"> D. 10,3</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+  <div class="sol" id="sol2">Dla x=10 mamy f(10)=6.5+10·1.03=16.8. Największa wartość to 16.8. Odpowiedź: A.</div>
+</div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="D,C">
+    <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(sierpień 2024 - zad. 9)</div></div>
+    <p>Funkcja y=f(x) jest określona za pomocą tabeli:<br>
+ <table>
+      <tr><th>x:</th>
+     <td>−6</td> <td>−4</td> <td>−2</td> <td>0</td> <td>2</td> <td>4</td> <td>6</td></tr>
+    <th>y:</th>
+	<td>−3</td> <td>−4</td> <td>4</td> <td>1</td> <td>5</td> <td>0 </td><td>2</td></tr></table><br>
+    Uzupełnij poniższą tabelę. Wpisz w każdą pustą komórkę tabeli właściwą odpowiedź, wybraną spośród A–E.<br><br>
+    <table>
+      <tr><th>Największa wartość funkcji f jest równa</th>
+<td><input type="text" class="frac-input" data-answer="D" ></td></tr>
+    <tr><th>Miejsce zerowe funkcji f jest równe</th>
+<td><input type="text" class="frac-input" data-answer="C" ></td></tr></table>
+    <center>A. 1 &nbsp; B. 2 &nbsp; C. 4 &nbsp; D. 5 &nbsp; E. 6</center>
+    
+    
+    <button class="btn btn-check" style="float:right;">Sprawdź</button><br><br>
+    <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol3">Największa wartość w tabeli to 5, więc 9.1=D. Miejsce zerowe przy x=4, więc 9.2=C.</div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(sierpień 2023 - zad. 14.1)</div></div>
+    <p>W kartezjańskim układzie współrzędnych (x, y) narysowano wykres funkcji y=f(x) (zobacz rysunek).</p>
+    <img src="img/wf01.png" alt="wykres funkcji - zadanie 4"><br>
+    <p>Funkcja f jest rosnąca w przedziale</p>
+    <label class="option"><input type="radio" name="q4" value="A"> A. &lt;−5, 4&gt;</label>
+    <label class="option"><input type="radio" name="q4" value="B"> B. &lt;5, 7&gt;</label>
+    <label class="option"><input type="radio" name="q4" value="C"> C. &lt;1, 5&gt;</label>
+    <label class="option"><input type="radio" name="q4" value="D"> D. &lt;−1, 5&gt;</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol4">Z wykresu widać, że f rośnie w przedziale &lt;5,7&gt;. Odpowiedź: B.</div>
+  </div>
+  <!-- Sekcja: zadania 5 i 6 -->
+  <div class="section" id="info5-6" data-ans="">
+    <div class="qheader"><div class="qid">Informacja do zadań 5 i 6</div><div class="qmeta">(czerwiec 2023)</div></div>
+    <p>W kartezjańskim układzie współrzędnych (x, y) narysowano wykres funkcji y = f(x) (zobacz rysunek).</p>
+    <img src="img/wf02.png" alt="wykres funkcji - zadania 5 i 6"><br>
+</div>
+    <!-- Zadanie 5 -->
+    <div class="section" data-ans="F,A">
+      <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(czerwiec 2023 - zad. 13.1)</div></div>
+      <p>Uzupełnij tabelę. Wpisz w każdą pustą komórkę tabeli właściwą odpowiedź, wybraną spośród A–F.</p>
+      <p>Dziedziną funkcji f jest zbiór<br>
+      Zbiorem wartości funkcji f jest zbiór</p>
+      <p>A. &lt;−3, −1&gt; ∪ &lt;1, 3&gt;<br>
+      B. (−3, 3)<br>
+      C. (−3, −1) ∪ (1, 3)<br>
+      D. &lt;−5, −1&gt; ∪ &lt;1, 5&gt;<br>
+      E. (−5, 5)<br>
+      F. (−5, −1) ∪ (1, 5)</p>
+      Dziedzina:
+      <input type="text" class="frac-input" data-answer="F"><br><br>
+      Zbiór wartości:
+      <input type="text" class="frac-input" data-answer="A"><br><br>
+      <button class="btn btn-check">Sprawdź</button>
+      <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div><br><br>
+      <div class="sol" id="sol5">Dziedziną funkcji jest F=(−5,−1) ∪ (1,5), a zbiorem wartości A=&lt;−3,−1&gt; ∪ &lt;1,3&gt;.</div>
+    </div>
+
+    <!-- Zadanie 6 -->
+<div class="section">
+  <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(czerwiec 2023 - zad. 13.2)</div></div>
+  <p>Zapisz poniżej zbiór wszystkich rozwiązań nierówności f(x) &lt; −1.</p>
+  <input type="text" class="frac-input" data-answer="(−5;−3)">
+  <div class="controls"><button class="btn btn-check">Sprawdź</button></div>
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+  <div class="sol" id="sol6">Z wykresu widać, że f(x) &lt; −1 dla x ∈ (−5, −3).</div>
+</div>
+
+<!-- Sekcja: informacja do zadań 7, 8 i 9 -->
+<div class="section">
+  <div class="qheader"><div class="qid">Informacja do zadań 7, 8 i 9</div><div class="qmeta">(maj 2023)</div></div>
+  <p>W kartezjańskim układzie współrzędnych (x, y) narysowano wykres funkcji y = f(x).</p>
+  <img src="img/wf03.png"><br>
+</div>
+
+<!-- Zadanie 7 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(maj 2023 - zad. 12.1)</div></div>
+  <p>Dziedziną funkcji f jest zbiór</p>
+  <label class="option"><input type="radio" name="q7" value="A"> A. &lt;−6, 5&gt;</label>
+  <label class="option"><input type="radio" name="q7" value="B"> B. (−6, 5)</label>
+  <label class="option"><input type="radio" name="q7" value="C"> C. (−3, 5)</label>
+  <label class="option"><input type="radio" name="q7" value="D"> D. &lt;−3, 5&gt;</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+  <div class="sol" id="sol7">Dziedziną funkcji jest przedział &lt;−6,5&gt;. Odpowiedź: A.</div>
+</div>
+
+<!-- Zadanie 8 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(maj 2023 - zad. 12.2)</div></div>
+  <p>Największa wartość funkcji f w przedziale &lt;−4, 1&gt; jest równa</p>
+  <label class="option"><input type="radio" name="q8" value="A"> A. 0</label>
+  <label class="option"><input type="radio" name="q8" value="B"> B. 1</label>
+  <label class="option"><input type="radio" name="q8" value="C"> C. 2</label>
+  <label class="option"><input type="radio" name="q8" value="D"> D. 5</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+  <div class="sol" id="sol8">Największa wartość w tym przedziale to 2. Odpowiedź: C.</div>
+</div>
+
+<!-- Zadanie 9 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(maj 2023 - zad. 12.3)</div></div>
+  <p>Funkcja f jest malejąca w zbiorze</p>
+  <label class="option"><input type="radio" name="q9" value="A"> A. &lt;−6, −3)</label>
+  <label class="option"><input type="radio" name="q9" value="B"> B. &lt;−3, 1&gt;</label>
+  <label class="option"><input type="radio" name="q9" value="C"> C. (1, 2)</label>
+  <label class="option"><input type="radio" name="q9" value="D"> D. &lt;2, 5&gt;</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+  <div class="sol" id="sol9">Funkcja maleje w przedziale &lt;2,5&gt;. Odpowiedź: D.</div>
+</div>
+
+  <!-- Sekcja: informacja do zadań 10 i 11 -->
+<div class="section">
+  <div class="qheader"><div class="qid">Informacja do zadań 10 i 11</div><div class="qmeta">(wrzesień 2022)</div></div>
+  <p>Na rysunku, w kartezjańskim układzie współrzędnych (x, y), przedstawiono wykres funkcji f określonej
+  dla każdego x ∈ &lt;−5, 4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych.</p>
+  <img src="img/wf04.png" alt="wykres funkcji - zadania 10 i 11"><br>
+</div>
+
+<!-- Zadanie 10 -->
+<div class="section" data-ans="F,P">
+  <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(wrzesień 2022 - zad. 10.2)</div></div>
+  <p>Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,
+  albo F – jeśli jest fałszywe.</p>
+  <div class="statement">Dla każdego argumentu z przedziału (−4, −2) funkcja f przyjmuje wartości ujemne:
+    <label class="option"><input type="radio" name="q10a" value="P"> P</label>
+    <label class="option"><input type="radio" name="q10a" value="F"> F</label>
+  </div><br>
+  <div class="statement">Funkcja f ma trzy miejsca zerowe:
+    <label class="option"><input type="radio" name="q10b" value="P"> P</label>
+    <label class="option"><input type="radio" name="q10b" value="F"> F</label>
+  </div>
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+  <div class="sol" id="sol10">Pierwsze zdanie: fałsz (F). Drugie zdanie: prawda (P). Odpowiedź: F,P.</div>
+</div>
+
+<!-- Zadanie 11 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(wrzesień 2022 - zad. 10.3)</div></div>
+  <p>Najmniejsza wartość funkcji f w przedziale &lt;−4, 0) jest równa</p>
+  <label class="option"><input type="radio" name="q11" value="A"> A. −4</label>
+  <label class="option"><input type="radio" name="q11" value="B"> B. −3</label>
+  <label class="option"><input type="radio" name="q11" value="C"> C. −2</label>
+  <label class="option"><input type="radio" name="q11" value="D"> D. 0</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+  <div class="sol" id="sol11">Najmniejsza wartość funkcji to −2. Odpowiedź: C.</div>
+</div>
+
+
+
+<!-- Sekcja: informacja do zadań 12 i 13 -->
+<div class="section">
+  <div class="qheader"><div class="qid">Informacja do zadań 12 i 13</div><div class="qmeta">(wrzesień 2022)</div></div>
+  <p>Basen ma długość 25 m. W najpłytszym miejscu jego głębokość jest równa 1,2 m. 
+  Przekrój podłużny basenu przedstawiono poglądowo na rysunku. 
+  Głębokość y basenu zmienia się wraz z odległością x od brzegu w sposób opisany funkcją:<br><center>
+  \( y = \begin{cases} ax+b &amp; \text{dla } 0 \le x \le 15 \\ 0.18x-0.9 &amp; \text{dla } 15 \le x \le 25 \end{cases} \)</center><br>
+  Odległość x jest mierzona od płytszego brzegu (rysunek).</p>
+  <img src="img/wf05.png" alt="wykres basenu - zadania 12 i 13"><br>
+</div>
+
+<!-- Zadanie 12 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(wrzesień 2022 - zad. 12.1)</div></div>
+  <p>Największa głębokość basenu jest równa</p>
+  <label class="option"><input type="radio" name="q12" value="A"> A. 5,4 m</label>
+  <label class="option"><input type="radio" name="q12" value="B"> B. 3,6 m</label>
+  <label class="option"><input type="radio" name="q12" value="C"> C. 2,2 m</label>
+  <label class="option"><input type="radio" name="q12" value="D"> D. 1,8 m</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+  <div class="sol" id="sol12">Największa głębokość wynosi 3,6 m. Odpowiedź: B.</div>
+</div>
+
+<!-- Zadanie 13 -->
+<div class="section">
+  <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(wrzesień 2022 - zad. 12.2)</div></div>
+  <p>Oblicz wartość współczynnika a oraz wartość współczynnika b. Należy posłużyć się kropką, by oddzielić liczbę całkowitą od dziesiętnej np. "2.5".</p>
+  <input type="text" class="frac-input" data-answer="0.04" placeholder="a">
+  <input type="text" class="frac-input" data-answer="1.2" placeholder="b">
+  <div class="controls"><button class="btn btn-check">Sprawdź</button></div>
+  <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+  <div class="sol" id="sol13">Z warunków: y=ax+b, otrzymujemy a=0,04 oraz b=1,2.</div>
+</div>
+  <!-- Zadanie 14 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(czerwiec 2022 - zad. 13)</div></div>
+    <p>Na rysunku jest przedstawiony fragment wykresu funkcji \( y = f(x) \).</p>
+    <img src="img/wf06.png" alt="wykres funkcji - zadanie 14"><br>
+    <p>W przedziale \((-4, 6)\) równanie \( f(x) = -1 \)</p>
+    <label class="option"><input type="radio" name="q14" value="A"> A. nie ma rozwiązań.</label>
+    <label class="option"><input type="radio" name="q14" value="B"> B. ma dokładnie jedno rozwiązanie.</label>
+    <label class="option"><input type="radio" name="q14" value="C"> C. ma dokładnie dwa rozwiązania.</label>
+    <label class="option"><input type="radio" name="q14" value="D"> D. ma dokładnie trzy rozwiązania.</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol14">Z wykresu odczytujemy dwa punkty przecięcia z prostą \( y = -1 \). Odpowiedź: C.</div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(maj 2022 - zad. 9)</div></div>
+    <p>Na rysunku przedstawiono wykres funkcji \( f \).</p>
+    <img src="img/wf07.png" alt="wykres funkcji - zadanie 15"><br>
+    <p>Iloczyn \( f(-3) \cdot f(0) \cdot f(4) \) jest równy</p>
+    <label class="option"><input type="radio" name="q15" value="A"> A. −12</label>
+    <label class="option"><input type="radio" name="q15" value="B"> B. −8</label>
+    <label class="option"><input type="radio" name="q15" value="C"> C. 0</label>
+    <label class="option"><input type="radio" name="q15" value="D"> D. 16</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol15">Podstawiając wartości z wykresu: \( f(-3) = -2 \), \( f(0) = 2 \), \( f(4) = 2 \). Iloczyn = −8. Odpowiedź: B.</div>
+  </div>
+
+  <!-- Zadanie 16 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(czerwiec 2021 - zad. 9)</div></div>
+    <p>Na rysunku przedstawiono wykres funkcji \( f \) określonej w zbiorze \((-1, 7)\).</p>
+    <img src="img/wf08.png" alt="wykres funkcji - zadanie 16"><br>
+    <p>Wskaż zdanie prawdziwe.</p>
+    <label class="option"><input type="radio" name="q16" value="A"> A. Funkcja f ma trzy miejsca zerowe.</label>
+    <label class="option"><input type="radio" name="q16" value="B"> B. Zbiorem wartości funkcji f jest \( \langle -1, 1) \).</label>
+    <label class="option"><input type="radio" name="q16" value="C"> C. Funkcja f osiąga wartość największą równą 1.</label>
+    <label class="option"><input type="radio" name="q16" value="D"> D. Funkcja f osiąga wartości ujemne dla argumentów ze zbioru \((-1, 0)\).</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol16">Z wykresu wynika, że największa wartość funkcji to 1. Odpowiedź: C.</div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(maj 2021 - zad. 10)</div></div>
+    <p>Funkcja \( f \) jest określona wzorem 
+      \[
+      f(x) = \frac{x^2}{2x - 2}, \quad x \neq 1.
+      \]
+      Wtedy dla argumentu \( x = \sqrt{3} - 1 \) wartość funkcji f jest równa</p>
+    <label class="option"><input type="radio" name="q17" value="A"> A. \( \tfrac{1}{\sqrt{3} - 1} \)</label>
+    <label class="option"><input type="radio" name="q17" value="B"> B. −1</label>
+    <label class="option"><input type="radio" name="q17" value="C"> C. 1</label>
+    <label class="option"><input type="radio" name="q17" value="D"> D. \( \tfrac{1}{\sqrt{3} - 2} \)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol17">Po podstawieniu i uproszczeniu otrzymujemy \( f(\sqrt{3}-1) = -1 \). Odpowiedź: B.</div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(maj 2021 - zad. 11)</div></div>
+    <p>Do wykresu funkcji \( f(x) = 3x - 2 \) należy punkt o współrzędnych</p>
+    <label class="option"><input type="radio" name="q18" value="A"> A. (−1, −5)</label>
+    <label class="option"><input type="radio" name="q18" value="B"> B. (0, −2)</label>
+    <label class="option"><input type="radio" name="q18" value="C"> C. (0, −1)</label>
+    <label class="option"><input type="radio" name="q18" value="D"> D. (2, 4)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol18">Po podstawieniu \( x=0 \) mamy \( f(0)=-2 \). Taki punkt to (0,−2). Odpowiedź: B.</div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(marzec 2021 - zad. 11)</div></div>
+    <p>Na wykresie przedstawiono wykres funkcji \( f \).</p>
+    <img src="img/wf09.png" alt="wykres funkcji - zadanie 19"><br>
+    <p>Wskaż zdanie prawdziwe.</p>
+    <label class="option"><input type="radio" name="q19" value="A"> A. Dziedziną funkcji f jest przedział (−4, 5).</label>
+    <label class="option"><input type="radio" name="q19" value="B"> B. Funkcja f ma dwa miejsca zerowe.</label>
+    <label class="option"><input type="radio" name="q19" value="C"> C. Funkcja f dla argumentu 1 przyjmuje wartość −1.</label>
+    <label class="option"><input type="radio" name="q19" value="D"> D. Zbiorem wartości funkcji f jest przedział (−4, 5).</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol19">Z wykresu wynika, że zbiorem wartości jest (−4, 5). Odpowiedź: D.</div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(czerwiec 2020 - zad. 10)</div></div>
+    <p>Funkcja f każdej liczbie naturalnej \( n \geq 1 \) przyporządkowuje resztę z dzielenia tej liczby przez 4. Zbiorem
+    wartości funkcji f jest</p>
+    <label class="option"><input type="radio" name="q20" value="A"> A. {0, 1, 2, 3}</label>
+    <label class="option"><input type="radio" name="q20" value="B"> B. {1, 2, 3, 4}</label>
+    <label class="option"><input type="radio" name="q20" value="C"> C. {0, 1, 2, 3, 4}</label>
+    <label class="option"><input type="radio" name="q20" value="D"> D. {0, 2}</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol20">Reszta z dzielenia przez 4 to 0,1,2,3. Odpowiedź: A.</div>
+  </div>
+
+  <!-- Zadanie 21 -->
+  <div class="section" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(czerwiec 2019 - zad. 8)</div></div>
+    <p>Rysunek przedstawia wykres funkcji f zbudowany z 6 odcinków, przy czym punkty B = (2, −1) i C = (4, 1)
+    należą do wykresu funkcji.</p>
+    <img src="img/wf10.png" alt="wykres funkcji - zadanie 21"><br>
+    <p>Równanie \( f(x) = -1 \) ma</p>
+    <label class="option"><input type="radio" name="q21" value="A"> A. dokładnie jedno rozwiązanie.</label>
+    <label class="option"><input type="radio" name="q21" value="B"> B. dokładnie dwa rozwiązania.</label>
+    <label class="option"><input type="radio" name="q21" value="C"> C. dokładnie trzy rozwiązania.</label>
+    <label class="option"><input type="radio" name="q21" value="D"> D. nieskończenie wiele rozwiązań.</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol21">Z wykresu: równanie \( f(x)=-1 \) ma nieskończenie wiele rozwiązań. Odpowiedź: D.</div>
+  </div>
+
+  <!-- Zadanie 22 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(czerwiec 2018 - zad. 9)</div></div>
+    <p>Funkcja f jest określona wzorem
+      \[
+      f(x) = \frac{-2(x+2)-1}{(x-3)^2}, \quad x \neq -2.
+      \]
+      Wartość funkcji f dla argumentu 2 jest równa</p>
+    <label class="option"><input type="radio" name="q22" value="A"> A. −8</label>
+    <label class="option"><input type="radio" name="q22" value="B"> B. −\(\tfrac{1}{2}\)</label>
+    <label class="option"><input type="radio" name="q22" value="C"> C. \(\tfrac{1}{2}\)</label>
+    <label class="option"><input type="radio" name="q22" value="D"> D. 8</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol22">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol22">Po podstawieniu \( x=2 \) mamy \(-\tfrac{1}{2}\). Odpowiedź: B.</div>
+  </div>
+  <!-- Zadanie 23 -->
+  <div class="section" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(sierpień 2015 - zad. 10)</div></div>
+    <p>Funkcja f jest określona wzorem 
+      \[
+      f(x) = \frac{2x - 8}{x}, \quad x \neq 0.
+      \]
+      Wówczas wartość funkcji \( f(\sqrt{2}) \) jest równa</p>
+    <label class="option"><input type="radio" name="q23" value="A"> A. \( 2 - 4\sqrt{2} \)</label>
+    <label class="option"><input type="radio" name="q23" value="B"> B. \( 1 - 2\sqrt{2} \)</label>
+    <label class="option"><input type="radio" name="q23" value="C"> C. \( 1 + 2\sqrt{2} \)</label>
+    <label class="option"><input type="radio" name="q23" value="D"> D. \( 2 + 4\sqrt{2} \)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol23">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol23">Podstawiamy \( x=\sqrt{2} \): \( f(\sqrt{2}) = \tfrac{2\sqrt{2}-8}{\sqrt{2}} = 2 - 4\sqrt{2} \). Odpowiedź: A.</div>
+  </div>
+
+  <!-- Zadanie 24 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(czerwiec 2015 - zad. 12)</div></div>
+    <p>Na rysunku przedstawiono wykres funkcji \( f \).</p>
+    <img src="img/wf11.png" alt="wykres funkcji - zadanie 24"><br>
+    <p>Funkcja f jest rosnąca w przedziale</p>
+    <label class="option"><input type="radio" name="q24" value="A"> A. \(\langle -1, 1 \rangle\)</label>
+    <label class="option"><input type="radio" name="q24" value="B"> B. \(\langle 1, 5 \rangle\)</label>
+    <label class="option"><input type="radio" name="q24" value="C"> C. \(\langle 5, 6 \rangle\)</label>
+    <label class="option"><input type="radio" name="q24" value="D"> D. \(\langle 6, 8 \rangle\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol24">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol24">Z wykresu wynika, że funkcja rośnie na odcinku (5,6). Odpowiedź: C.</div>
+  </div>
+
+  <!-- Zadanie 25 -->
+  <div class="section" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 25</div><div class="qmeta">(maj 2015 - zad. 8)</div></div>
+    <p>Na rysunku przedstawiono wykres funkcji \( f \).</p>
+    <img src="img/wf12.png" alt="wykres funkcji - zadanie 25"><br>
+    <p>Zbiorem wartości funkcji jest</p>
+    <label class="option"><input type="radio" name="q25" value="A"> A. (−2, 2)</label>
+    <label class="option"><input type="radio" name="q25" value="B"> B. \(\langle -2, 2)\)</label>
+    <label class="option"><input type="radio" name="q25" value="C"> C. \(\langle -2, 2 \rangle\)</label>
+    <label class="option"><input type="radio" name="q25" value="D"> D. (−2, 2]</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol25">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol25">Z wykresu: zbiór wartości = (−2,2]. Odpowiedź: D.</div>
+  </div>
+
+  <!-- Sekcja: informacja do zadań 26 i 27 -->
+  <div class="section">
+    <div class="qheader"><div class="qid">Informacja do zadań 26 i 27</div> <div class="qmeta">(sierpień 2014)</div></div><br>
+    Wykorzystaj przedstawiony poniżej wykres funkcji \( f \).</p>
+    <img src="img/wf13.png" alt="wykres funkcji - informacja do zadań 26 i 27"><br>
+  </div>
+
+  <!-- Zadanie 26 -->
+  <div class="section" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 26</div><div class="qmeta">(sierpień 2014 - zad. 8)</div></div>
+    <p>Dziedziną funkcji f jest przedział</p>
+    <label class="option"><input type="radio" name="q26" value="A"> A. \(\langle 0, 3 \rangle\)</label>
+    <label class="option"><input type="radio" name="q26" value="B"> B. (0, 8)</label>
+    <label class="option"><input type="radio" name="q26" value="C"> C. \(\langle -3, 3 \rangle\)</label>
+    <label class="option"><input type="radio" name="q26" value="D"> D. (−3, 8)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol26">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol26">Na osi x funkcja istnieje od −3 do 8 (bez końców). Odpowiedź: D.</div>
+  </div>
+
+  <!-- Zadanie 27 -->
+  <div class="section" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 27</div><div class="qmeta">(sierpień 2014 - zad. 9)</div></div>
+    <p>Największą wartością funkcji f jest</p>
+    <label class="option"><input type="radio" name="q27" value="A"> A. 3</label>
+    <label class="option"><input type="radio" name="q27" value="B"> B. 0</label>
+    <label class="option"><input type="radio" name="q27" value="C"> C. −3</label>
+    <label class="option"><input type="radio" name="q27" value="D"> D. 8</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol27">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol27">Najwyższa wartość osiągnięta na wykresie to 3. Odpowiedź: A.</div>
+  </div>
+
+  <!-- Zadanie 28 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 28</div><div class="qmeta">(grudzień 2014 - zad. 10)</div></div>
+    <p>Funkcja f, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę
+    jej kwadratu. Zbiór wartości funkcji f zawiera dokładnie</p>
+    <label class="option"><input type="radio" name="q28" value="A"> A. 5 elementów.</label>
+    <label class="option"><input type="radio" name="q28" value="B"> B. 6 elementów.</label>
+    <label class="option"><input type="radio" name="q28" value="C"> C. 9 elementów.</label>
+    <label class="option"><input type="radio" name="q28" value="D"> D. 10 elementów.</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol28">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol28">Możliwe reszty z kwadratu to {0,1,4,5,6,9}. Jest ich 6. Odpowiedź: B.</div>
+  </div>
+
+  <!-- Zadanie 29 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 29</div><div class="qmeta">(grudzień 2013 - zad. 11)</div></div>
+    <p>Funkcja f przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą
+    pierwszą. Spośród liczb: f(42), f(44), f(45), f(48) największa to</p>
+    <label class="option"><input type="radio" name="q29" value="A"> A. f(42)</label>
+    <label class="option"><input type="radio" name="q29" value="B"> B. f(44)</label>
+    <label class="option"><input type="radio" name="q29" value="C"> C. f(45)</label>
+    <label class="option"><input type="radio" name="q29" value="D"> D. f(48)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol29">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol29">
+      f(42)=7, f(44)=11, f(45)=5, f(48)=3. Największy z nich to 11. Odpowiedź: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 30 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 30</div><div class="qmeta">(sierpień 2013 - zad. 25)</div></div>
+    <p>Na rysunku przedstawiono wykres funkcji \( y = f(x) \).</p>
+    <img src="img/wf14.png" alt="wykres funkcji - zadanie 30"><br>
+    <p>Największa wartość funkcji f w przedziale \(\langle -1, 1 \rangle\) jest równa</p>
+    <label class="option"><input type="radio" name="q30" value="A"> A. 4</label>
+    <label class="option"><input type="radio" name="q30" value="B"> B. 3</label>
+    <label class="option"><input type="radio" name="q30" value="C"> C. 2</label>
+    <label class="option"><input type="radio" name="q30" value="D"> D. 1</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol30">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol30">Na tym przedziale największa wartość funkcji to 3. Odpowiedź: B.</div>
+  </div>
+
+  <!-- Sekcja: informacja do zadań 31 i 32 -->
+  <div class="section">
+    <div class="qheader"><div class="qid">Informacja do zadań 31 i 32</div> <div class="qmeta">(czerwiec 2013)</div></div><br>
+
+    Wykorzystaj przedstawiony poniżej wykres funkcji \( f \).</p>
+    <img src="img/wf15.png" alt="wykres funkcji - informacja do zadań 31 i 32"><br>
+  </div>
+
+  <!-- Zadanie 31 -->
+  <div class="section" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 31</div><div class="qmeta">(czerwiec 2013 - zad. 8)</div></div>
+    <p>Zbiorem wartości funkcji f jest przedział</p>
+    <label class="option"><input type="radio" name="q31" value="A"> A. \(\langle -3, 5 \rangle\)</label>
+    <label class="option"><input type="radio" name="q31" value="B"> B. \(\langle -6, 7 \rangle\)</label>
+    <label class="option"><input type="radio" name="q31" value="C"> C. \(\langle 0, 6 \rangle\)</label>
+    <label class="option"><input type="radio" name="q31" value="D"> D. \(\langle -5, 8 \rangle\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol31">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol31">Na osi y funkcja przyjmuje wartości od −3 do 5. Odpowiedź: A.</div>
+  </div>
+  <!-- Zadanie 32 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 32</div><div class="qmeta">(czerwiec 2013 - zad. 9)</div></div>
+    <p>Przedziałem, w którym funkcja f przyjmuje tylko wartości ujemne, jest</p>
+    <label class="option"><input type="radio" name="q32" value="A"> A. \(\langle 5, 0)\)</label>
+    <label class="option"><input type="radio" name="q32" value="B"> B. (5, 7)</label>
+    <label class="option"><input type="radio" name="q32" value="C"> C. (0, 7)</label>
+    <label class="option"><input type="radio" name="q32" value="D"> D. \(\langle -6, 5)\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol32">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol32">Z wykresu wynika, że dla x ∈ (5,7) wartości funkcji są ujemne. Odpowiedź: B.</div>
+  </div>
+
+  <!-- Zadanie 33 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 33</div><div class="qmeta">(marzec 2012 - zad. 11)</div></div>
+    <p>Na rysunku przedstawiony jest wykres funkcji \( y = f(x) \).</p>
+    <img src="img/wf16.png" alt="wykres funkcji - zadanie 33"><br>
+    <p>Zbiorem wartości tej funkcji jest</p>
+    <label class="option"><input type="radio" name="q33" value="A"> A. \(\langle -4, 3 \rangle\)</label>
+    <label class="option"><input type="radio" name="q33" value="B"> B. \(\langle -4, -1 \rangle \cup \langle 1, 3 \rangle\)</label>
+    <label class="option"><input type="radio" name="q33" value="C"> C. \(\langle -4, -1 \rangle \cup (1, 3)\)</label>
+    <label class="option"><input type="radio" name="q33" value="D"> D. \(\langle -5, 6 \rangle\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol33">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol33">Z wykresu: wartości od -4 do -1 i od 1 do 3, przy czym prawa strona otwarta. Odpowiedź: C.</div>
+  </div>
+
+  <!-- Sekcja: informacja do zadań 34 i 35 -->
+  <div class="section">
+    <div class="qheader"><div class="qid">Informacja do zadań 34 i 35</div> <div class="qmeta">(listopad 2010)</div></div><br>
+
+    Wykorzystaj przedstawiony poniżej wykres funkcji \( f \).</p>
+    <img src="img/wf17.png" alt="wykres funkcji - informacja do zadań 34 i 35"><br>
+  </div>
+
+  <!-- Zadanie 34 -->
+  <div class="section" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 34</div><div class="qmeta">(listopad 2010 - zad. 7)</div></div>
+    <p>Zbiorem wartości funkcji f jest</p>
+    <label class="option"><input type="radio" name="q34" value="A"> A. \(\langle -2, 5 \rangle\)</label>
+    <label class="option"><input type="radio" name="q34" value="B"> B. \(\langle -4, 8 \rangle\)</label>
+    <label class="option"><input type="radio" name="q34" value="C"> C. \(\langle -1, 4 \rangle\)</label>
+    <label class="option"><input type="radio" name="q34" value="D"> D. \(\langle 5, 8 \rangle\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol34">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol34">Wartości funkcji zawierają się w przedziale od -2 do 5. Odpowiedź: A.</div>
+  </div>
+
+  <!-- Zadanie 35 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 35</div><div class="qmeta">(listopad 2010 - zad. 8)</div></div>
+    <p>Korzystając z wykresu funkcji f, wskaż nierówność prawdziwą</p>
+    <label class="option"><input type="radio" name="q35" value="A"> A. f(−1) &lt; f(1)</label>
+    <label class="option"><input type="radio" name="q35" value="B"> B. f(1) &lt; f(3)</label>
+    <label class="option"><input type="radio" name="q35" value="C"> C. f(−1) &lt; f(3)</label>
+    <label class="option"><input type="radio" name="q35" value="D"> D. f(3) &lt; f(0)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol35">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol35">Z wykresu: f(1) jest mniejsze od f(3). Odpowiedź: B.</div>
+  </div>
+
+  <!-- Zadanie 36 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 36</div><div class="qmeta">(maj 2010 - zad. 10)</div></div>
+    <p>Na rysunku jest przedstawiony wykres funkcji \( y = f(x) \).</p>
+    <img src="img/wf18.png" alt="wykres funkcji - zadanie 36"><br>
+    <p>Które równanie ma dokładnie trzy rozwiązania?</p>
+    <label class="option"><input type="radio" name="q36" value="A"> A. f(x) = 0</label>
+    <label class="option"><input type="radio" name="q36" value="B"> B. f(x) = 1</label>
+    <label class="option"><input type="radio" name="q36" value="C"> C. f(x) = 2</label>
+    <label class="option"><input type="radio" name="q36" value="D"> D. f(x) = 3</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol36">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol36">Prosta y=2 przecina wykres w trzech punktach. Odpowiedź: C.</div>
+  </div>
+  <!-- Zadanie 37 -->
+  <div class="section" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 37</div><div class="qmeta">(informator CKE)</div></div>
+    <p>Dana jest funkcja \( f(x) = x^3 - b - 5\sqrt{2} \) dla każdej liczby rzeczywistej \(x\).  
+    Miejscem zerowym funkcji f jest \(x = \sqrt{2} + 1\).  
+    Współczynnik b we wzorze funkcji f jest równy</p>
+    <label class="option"><input type="radio" name="q37" value="A"> A. b = 1</label>
+    <label class="option"><input type="radio" name="q37" value="B"> B. b = 7</label>
+    <label class="option"><input type="radio" name="q37" value="C"> C. b = 1 − 3√2</label>
+    <label class="option"><input type="radio" name="q37" value="D"> D. b = 3 − 3√2</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol37">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol37">Podstawiamy \(x=\sqrt{2}+1\): \((\sqrt{2}+1)^3 - b - 5\sqrt{2}=0\).  
+    Rozwijamy: \( (3+3\sqrt{2}+2\sqrt{2}) +1 = 7+5\sqrt{2}\).  
+    Zatem \(7+5\sqrt{2}-b-5\sqrt{2}=0 \implies b=7\). Odpowiedź: B.</div>
+  </div>
+
+  <!-- Sekcja: informacja do zadań 38 -->
+  <div class="section">
+    <p>Dana jest funkcja \( y=f(x) \), której wykres przedstawiono w kartezjańskim układzie współrzędnych (x, y) na rysunku obok.  
+    Ta funkcja jest określona dla \(x \in \langle -3,5 \rangle\).</p>
+    <img src="img/wf19.png" alt="wykres funkcji f - zadania 38"><br>
+    <p>Funkcje g oraz h są określone za pomocą funkcji f następująco:</p>
+    <p>\(y = g(x) = f(x+2)\), \(\quad y=h(x)=f(-x)\)</p>
+    <p>Na rysunkach A–F przedstawiono wykresy różnych funkcji – w tym wykresy funkcji g oraz h.</p>
+    <img src="img/wf20.png" alt="wykresy A-F - zadanie 38"><br>
+  </div>
+
+  <!-- Zadanie 38 -->
+  <div class="section" data-ans="D,B">
+    <div class="qheader"><div class="qid">Zad. 38</div><div class="qmeta">(informator CKE)</div></div>
+    <p>Każdej z funkcji \(y=g(x)\) oraz \(y=h(x)\) przyporządkuj jej wykres.  
+    Wpisz obok symboli funkcji w tabeli poniżej właściwe odpowiedzi wybrane spośród A–F.</p>
+    <table>
+      <tr><th>Funkcja</th><th>Rysunek</th></tr>
+      <tr><td>y = g(x)</td><td><input type="text" class="frac-input" data-answer="D"></td></tr>
+      <tr><td>y = h(x)</td><td><input type="text" class="frac-input" data-answer="B"></td></tr>
+    </table>
+    <div class="controls"><button class="btn btn-check">Sprawdź</button></div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol38">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol38">Przesunięcie o 2 jednostki w lewo daje wykres D, a symetria względem osi Oy – wykres B.</div>
+  </div>
+
+  <!-- Zadanie 39 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 39</div><div class="qmeta">(informator CKE)</div></div>
+    <p>Dana jest funkcja \( y=f(x) \) określona dla \(x \in \langle -1,8 \rangle\), której wykres jest przedstawiony na rysunku:</p>
+    <img src="img/wf21.png" alt="wykres funkcji f - zadanie 39"><br>
+    <p>Wskaż zbiór wartości tej funkcji</p>
+    <label class="option"><input type="radio" name="q39" value="A"> A. {−1,0,1,2,3,4,5,6,7,8}</label>
+    <label class="option"><input type="radio" name="q39" value="B"> B. (−1,4)</label>
+    <label class="option"><input type="radio" name="q39" value="C"> C. \(\langle -1,4 \rangle\)</label>
+    <label class="option"><input type="radio" name="q39" value="D"> D. \(\langle -1,8 \rangle\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol39">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol39">Z wykresu wartości przyjmują przedział od -1 do 4 włącznie. Odpowiedź: C.</div>
+  </div>
+  <!-- Sekcja: informacja do zadań 40-42 -->
+  <div class="section">
+    <div class="qheader"><div class="qid">Informacja do zadań 40, 41  i 42</div> <div class="qmeta">(zbiór zadań CKE)</div></div><br>
+
+    <p>W kartezjańskim układzie współrzędnych (x, y) przedstawiono fragmenty wykresów czterech funkcji: f, g, h, s.</p>
+    <img src="img/wf22.png" alt="wykresy funkcji f,g,h,s - zadania 40-42"><br>
+  </div>
+
+  <!-- Zadanie 40 -->
+  <div class="section" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 40</div><div class="qmeta">(zbiór zadań CKE - zad. 25.1)</div></div>
+    <p>Największą wartość dla argumentu x = 2 przyjmuje funkcja</p>
+    <label class="option"><input type="radio" name="q40" value="A"> A. f</label>
+    <label class="option"><input type="radio" name="q40" value="B"> B. g</label>
+    <label class="option"><input type="radio" name="q40" value="C"> C. h</label>
+    <label class="option"><input type="radio" name="q40" value="D"> D. s</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol40">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol40">Dla x=2 najwyżej położony punkt ma wykres f. Odpowiedź: A.</div>
+  </div>
+
+  <!-- Zadanie 41 -->
+  <div class="section" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 41</div><div class="qmeta">(zbiór zadań CKE - zad. 25.2)</div></div>
+    <p>Dla argumentu x=3 tę samą wartość przyjmują funkcje</p>
+    <label class="option"><input type="radio" name="q41" value="A"> A. f i s</label>
+    <label class="option"><input type="radio" name="q41" value="B"> B. s i h</label>
+    <label class="option"><input type="radio" name="q41" value="C"> C. f i g</label>
+    <label class="option"><input type="radio" name="q41" value="D"> D. g i s</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol41">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol41">Na wykresie dla x=3 wartości są równe dla f i g. Odpowiedź: C.</div>
+  </div>
+
+  <!-- Zadanie 42 -->
+  <div class="section" data-ans="(1;6)">
+    <div class="qheader"><div class="qid">Zad. 42</div><div class="qmeta">(zbiór zadań CKE - zad. 25.3)</div></div>
+    <p>Zapisz maksymalny przedział, w którym prawdziwa jest nierówność g(x) &gt; h(x).</p>
+    <input type="text" class="frac-input" data-answer="(1;6)">
+    <div class="controls"><button class="btn btn-check">Sprawdź</button></div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol42">Rozwiązanie</button></div><br>
+    <div class="sol" id="sol42">Z wykresu: g(x) > h(x) zachodzi dla x ∈ (1,6).</div>
+  </div>
+
+<footer>Wierz w proces – wynik sam przyjdzie ( •̀ ω •́ )</footer>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.section').forEach(sec => {
+    const correct = (sec.dataset.ans||'').trim().toUpperCase();
+
+    // P/F i radio — poprawione
+const radioInputs = Array.from(sec.querySelectorAll('input[type="radio"]'));
+const radioGroups = [...new Set(radioInputs.map(r => r.name))];
+const answersArray = (sec.dataset.ans || '').split(',').map(s => s.trim().toUpperCase());
+
+radioInputs.forEach(radio => {
+  radio.addEventListener('change', () => {
+    const groupName = radio.name;
+
+    // usuń klasy tylko w obrębie tej grupy (by notyfikacja była lokalna)
+    sec.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+      const lab = r.closest('.option') || r.parentElement;
+      if (lab) lab.classList.remove('correct', 'incorrect');
+    });
+
+    // znajdź, które miejsce w kolejności grup zajmuje ta grupa
+    const idx = radioGroups.indexOf(groupName);
+    const expected = answersArray[idx] || null;
+
+    const lab = radio.closest('.option') || radio.parentElement;
+
+    if (expected) {
+      // jeśli jest przypisana oczekiwana odpowiedź dla tej grupy — porównuj bezpośrednio
+      if (radio.value.toUpperCase() === expected) {
+        if (lab) lab.classList.add('correct');
+      } else {
+        if (lab) lab.classList.add('incorrect');
+      }
+    } else {
+      // fallback: zachowawczo — sprawdź czy wartość występuje gdziekolwiek w data-ans
+      if (answersArray.includes(radio.value.toUpperCase())) {
+        if (lab) lab.classList.add('correct');
+      } else {
+        if (lab) lab.classList.add('incorrect');
+      }
+    }
+  });
+});
+
+
+    // inputy + Sprawdź
+    const btn = sec.querySelector('.btn-check');
+    if(btn){
+      btn.addEventListener('click', ()=>{
+        let allGood = true;
+        sec.querySelectorAll('.frac-input').forEach(inp=>{
+          const val = inp.value.trim().toUpperCase();
+          const good = (inp.dataset.answer||'').trim().toUpperCase();
+          if(val!==good){ allGood = false; }
+        });
+        if(allGood){ alert("Dobrze! To poprawna odpowiedź."); }
+        else{ alert("Źle! Spróbuj ponownie."); }
+      });
+    }
+
+    // toggle rozwiązania
+    sec.querySelectorAll('.btn-solution').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const target=document.getElementById(btn.dataset.target);
+        if(target){
+          target.style.display = target.style.display==='block' ? 'none':'block';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

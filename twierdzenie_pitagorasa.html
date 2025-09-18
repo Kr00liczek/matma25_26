@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Twierdzenie Pitagorasa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Twierdzenie Pitagorasa</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2021 - zad. 20)</div>
+        <div class="qtext">
+          W trójkącie ABC bok BC ma długość 13, a wysokość CD tego trójkąta dzieli bok AB
+          na odcinki o długościach \(|AD|=3\) i \(|BD|=12\) (zobacz rysunek obok).
+          Długość boku AC jest równa:
+        </div>
+      </div>
+    </div>
+    <img src="img/pitagoras.png" alt="pitagoras">
+    <div class="options">
+      <label class="option"><input type="radio" name="zad1" value="A"> A. \(\sqrt{34}\)</label>
+      <label class="option"><input type="radio" name="zad1" value="B"> B. \(\tfrac{13}{4}\)</label>
+      <label class="option"><input type="radio" name="zad1" value="C"> C. \(2\sqrt{14}\)</label>
+      <label class="option"><input type="radio" name="zad1" value="D"> D. \(3\sqrt{45}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Wysokość \(CD\) dzieli trójkąt na dwa prostokątne: \(\triangle ACD\) i \(\triangle BCD\).  
+      W \(\triangle ACD\): \(AC^2 = AD^2 + CD^2 = 3^2 + CD^2\).  
+      W \(\triangle BCD\): \(BC^2 = BD^2 + CD^2 = 12^2 + CD^2\).  
+      Ponieważ \(BC=13\), mamy \(13^2 = 12^2 + CD^2 \Rightarrow CD^2=25 \Rightarrow CD=5\).  
+      Wtedy \(AC^2 = 9+25=34 \Rightarrow AC=\sqrt{34}\).  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2010 - zad. 17)</div>
+        <div class="qtext">
+          Ogród ma kształt prostokąta o bokach długości 20m i 40m. Na dwóch końcach przekątnej wbito słupki.
+          Odległość między słupkami jest:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad2" value="A"> A. równa 40m</label>
+      <label class="option"><input type="radio" name="zad2" value="B"> B. większa niż 50m</label>
+      <label class="option"><input type="radio" name="zad2" value="C"> C. większa niż 40m i mniejsza niż 45m</label>
+      <label class="option"><input type="radio" name="zad2" value="D"> D. większa niż 45m i mniejsza niż 50m</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Przekątna prostokąta: \(\sqrt{20^2+40^2} = \sqrt{400+1600} = \sqrt{2000} \approx 44,72\).  
+      Leży między 40 a 45.  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2010 - zad. 18)</div>
+        <div class="qtext">
+          Przekątna AC prostokąta ABCD ma długość 11, a bok AB jest od niej o 5 krótszy. Oblicz długość boku AD.
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad3" value="A"> A. \(\sqrt{157}\)</label>
+      <label class="option"><input type="radio" name="zad3" value="B"> B. \(\sqrt{85}\)</label>
+      <label class="option"><input type="radio" name="zad3" value="C"> C. 5</label>
+      <label class="option"><input type="radio" name="zad3" value="D"> D. \(\sqrt{83}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Bok \(AB = 11-5=6\).  
+      Z Pitagorasa: \(AD^2 = AC^2 - AB^2 = 11^2 - 6^2 = 121-36=85\).  
+      \(AD = \sqrt{85}\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2010 - zad. 16)</div>
+        <div class="qtext">
+          Podstawa trójkąta równoramiennego ma długość 6, a ramię ma długość 5. Wysokość opuszczona na podstawę ma długość:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad4" value="A"> A. 3</label>
+      <label class="option"><input type="radio" name="zad4" value="B"> B. 4</label>
+      <label class="option"><input type="radio" name="zad4" value="C"> C. \(\sqrt{34}\)</label>
+      <label class="option"><input type="radio" name="zad4" value="D"> D. \(\sqrt{61}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Połowa podstawy: \(6:2=3\).  
+      Z Pitagorasa: \(h^2 = 5^2 - 3^2 = 25-9=16 \Rightarrow h=4\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2009 - zad. 17)</div>
+        <div class="qtext">
+          W trójkącie równoramiennym ABC dane są \(|AC|=|BC|=7\) oraz \(|AB|=12\).
+          Wysokość opuszczona z wierzchołka C jest równa:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad5" value="A"> A. \(\sqrt{13}\)</label>
+      <label class="option"><input type="radio" name="zad5" value="B"> B. \(\sqrt{5}\)</label>
+      <label class="option"><input type="radio" name="zad5" value="C"> C. 1</label>
+      <label class="option"><input type="radio" name="zad5" value="D"> D. 5</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Podstawa \(AB=12\). Połowa to 6.  
+      Wysokość: \(h^2 = 7^2 - 6^2 = 49-36=13\).  
+      \(h = \sqrt{13}\).  
+      Odp.: A.
+    </div>
+  </div>
+<footer>Hej, nawet Pitagoras kiedyś zaczynał od podstaw! ( ^◡^)</footer>
+
+</div>
+
+<script>
+function byId(id){return document.getElementById(id)}
+function setupSingleChoice(sec){
+  const correct=(sec.dataset.ans||'').trim().toUpperCase();
+  const labels=sec.querySelectorAll('.option');
+  labels.forEach(lbl=>{
+    const inp=lbl.querySelector('input[type=radio]');
+    if(!inp) return;
+    inp.addEventListener('change',()=>{
+      labels.forEach(l=>l.classList.remove('correct','incorrect'));
+      const val=(inp.value||'').toUpperCase();
+      if(val===correct) lbl.classList.add('correct');
+      else lbl.classList.add('incorrect');
+    });
+  });
+}
+function setupToggleSolution(sec){
+  const btn=sec.querySelector('.btn-solution');
+  const sol=sec.querySelector('.sol');
+  if(btn&&sol){
+    btn.addEventListener('click',()=>{
+      sol.style.display=sol.style.display==='block'?'none':'block';
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+function setupSection(id){
+  const sec=byId(id);
+  if(!sec) return;
+  setupSingleChoice(sec);
+  setupToggleSolution(sec);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  for(let i=1;i<=5;i++){setupSection('zad'+i);}
+});
+</script>
+</body>
+</html>

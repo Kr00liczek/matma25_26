@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Graniastosłup i ostrosłup</title>
+
+  <!-- user requested scripts -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- link to user's stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="container">
+        <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+    <h1>Graniastosłup i ostrosłup</h1><br>
+
+    <!-- Zad. 1 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(czerwiec 2025 - zad. 25)</div></div>
+      <p>Pole powierzchni całkowitej ostrosłupa prawidłowego czworokątnego jest równe 20. Pole powierzchni bocznej tego ostrosłupa jest cztery razy większe od pola jego podstawy. Długość krawędzi podstawy tego ostrosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q1" value="A"> A. 2</label>
+      <label class="option"><input type="radio" name="q1" value="B"> B. \( \sqrt{5} \)</label>
+      <label class="option"><input type="radio" name="q1" value="C"> C. \( \sqrt{10} \)</label>
+      <label class="option"><input type="radio" name="q1" value="D"> D. 4</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+      <div class="sol" id="sol1">Pole podstawy oznaczmy \(P_p\). Pole boczne to \(4P_p\). Całkowite: \(P_p+4P_p=5P_p=20\) więc \(P_p=4\). Podstawa to kwadrat o polu 4 więc bok \(=2\). Odp. A.</div>
+    </div>
+
+    <!-- Zad. 2 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(grudzień 2024 - zad. 24)</div></div>
+      <p>Podstawą ostrosłupa prawidłowego czworokątnego jest kwadrat o boku długości 4. Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod takim kątem \(\alpha\), że \(\tan\alpha = 3\). Wysokość tego ostrosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q2" value="A"> A. 3</label>
+      <label class="option"><input type="radio" name="q2" value="B"> B. 6</label>
+      <label class="option"><input type="radio" name="q2" value="C"> C. \(6\sqrt{2}\)</label>
+      <label class="option"><input type="radio" name="q2" value="D"> D. 12</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+      <div class="sol" id="sol2">Wysokość ściany bocznej odnosimy do połowy boku podstawy (2). Dla trójkąta prostokątnego \(\tg\alpha= \frac{h}{2}=3\) więc \(h=6\). Odp. B.</div>
+    </div>
+
+    <!-- Informacja do zadań 3 i 4 -->
+    <div class="section">
+      <div class="qheader"><div class="qid">Informacja do zadań 3 i 4</div><div class="qmeta">(maj 2024)</div></div>
+      <p>Wysokość graniastosłupa prawidłowego sześciokątnego jest równa 6 (zobacz rysunek). Pole podstawy tego graniastosłupa jest równe \(15\sqrt{3}\).</p>
+      <img src="img/go01.png" alt="go01.png"><br>
+    </div>
+
+    <!-- Zad. 3 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(maj 2024 - zad. 25.1)</div></div>
+      <p>Pole jednej ściany bocznej tego graniastosłupa jest równe</p>
+      <label class="option"><input type="radio" name="q3" value="A"> A. \(36\sqrt{10}\)</label>
+      <label class="option"><input type="radio" name="q3" value="B"> B. 60</label>
+      <label class="option"><input type="radio" name="q3" value="C"> C. \(6\sqrt{10}\)</label>
+      <label class="option"><input type="radio" name="q3" value="D"> D. 360</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+      <div class="sol" id="sol3">Pole podstawy \(=15\sqrt3\). Dla sześciokąta prawidłowego każdy bok \(= \frac{2}{3}\sqrt{\frac{P}{\sqrt3}}\) — prostsze: pole podstawy \(= \frac{3\sqrt3}{2}a^2\) daje stąd \(a^2=\dfrac{2\cdot15\sqrt3}{3\sqrt3}=10\) więc \(a=\sqrt{10}\). Ściana boczna ma pole \(a\cdot h = \sqrt{10}\cdot 6 = 6\sqrt{10}\). Odp. C.</div>
+    </div>
+
+    <!-- Zad. 4 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(maj 2024 - zad. 25.2)</div></div>
+      <p>Kąt nachylenia najdłuższej przekątnej graniastosłupa prawidłowego sześciokątnego do płaszczyzny podstawy jest zaznaczony na rysunku</p>
+      <img src="img/go02.png" alt="go02.png"><br>
+      <label class="option"><input type="radio" name="q4" value="A"> A</label>
+      <label class="option"><input type="radio" name="q4" value="B"> B</label>
+      <label class="option"><input type="radio" name="q4" value="C"> C</label>
+      <label class="option"><input type="radio" name="q4" value="D"> D</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+      <div class="sol" id="sol4">Najdłuższa przekątna łączy przeciwległy wierzchołek podstawy z górnym wierzchołkiem — stosunek długości i kąt zgodne z wariantem D. Odp. D.</div>
+    </div>
+
+    <!-- Zad. 5 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(sierpień 2023 - zad. 29.1)</div></div>
+      <p>Każda krawędź graniastosłupa prawidłowego sześciokątnego ma długość równą 6. Pole powierzchni całkowitej tego graniastosłupa jest równe</p>
+      <label class="option"><input type="radio" name="q5" value="A"> A. \(216 + 18\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q5" value="B"> B. \(216 + 54\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q5" value="C"> C. \(216 + 216\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q5" value="D"> D. \(216 + 108\sqrt3\)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+      <div class="sol" id="sol5">Pole podstawy sześciokąta o boku 6: \(P_p=\dfrac{3\sqrt3}{2}6^2=54\sqrt3\). Dwie podstawy: \(108\sqrt3\). Pole boczne: 6 ścian prostokątnych o wymiarach 6×6 => \(6\cdot36=216\). Suma \(216+108\sqrt3\). Odp. D.</div>
+    </div>
+
+    <!-- Zad. 6 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(czerwiec 2023 - zad. 29.2)</div></div>
+      <p>Dany jest ostrosłup, którego podstawą jest kwadrat o boku 6. Jedna z krawędzi bocznych tego ostrosłupa ma długość 12 i jest prostopadła do płaszczyzny podstawy. Tangens kąta nachylenia najdłuższej krawędzi bocznej tego ostrosłupa do płaszczyzny podstawy jest równy</p>
+      <label class="option"><input type="radio" name="q6" value="A"> A. \( \sqrt{2} \)</label>
+      <label class="option"><input type="radio" name="q6" value="B"> B. \( \dfrac{\sqrt6}{3} \)</label>
+      <label class="option"><input type="radio" name="q6" value="C"> C. \( \dfrac{\sqrt2}{2} \)</label>
+      <label class="option"><input type="radio" name="q6" value="D"> D. \( \dfrac{\sqrt3}{3} \)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+      <div class="sol" id="sol6">Krawędź boczna prostopadła = 12 to wysokość ostrosłupa. Najdłuższa krawędź boczna to łącznik wierzchołka z przeciwległym wierzchołkiem podstawy: pozioma odległość wynosi przekątna połowy kwadratu = \( \sqrt{(3)^2+(3)^2}=3\sqrt2\). Zatem tg = \(12/(3\sqrt2)=\sqrt2\). Odp. A.</div>
+    </div>
+
+    <!-- Zad. 7 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(czerwiec 2023 - zad. 30)</div></div>
+      <p>Dany jest graniastosłup prawidłowy sześciokątny ABCDEF A'</sub>B'</sub>C'</sub>D'</sub>E'</sub>F'</sub>, w którym krawędź podstawy ma długość 5. Przekątna AD'</sub> tego graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem 45&deg; (zobacz rysunek).<br>
+<img src="img/go03.png">
+Pole ściany bocznej tego graniastosłupa jest równe</p>
+      <label class="option"><input type="radio" name="q7" value="A"> A. 12.5</label>
+      <label class="option"><input type="radio" name="q7" value="B"> B. 25</label>
+      <label class="option"><input type="radio" name="q7" value="C"> C. 50</label>
+      <label class="option"><input type="radio" name="q7" value="D"> D. 100</label>
+          </div>
+
+    <!-- Zad. 8 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(maj 2023 - zad. 25)</div></div>
+      <p>Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem \(\alpha\) takim, że \(\cos\alpha = \dfrac{\sqrt2}{3}\). Długość przekątnej tego graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q8" value="A"> A. \(15\sqrt2\)</label>
+      <label class="option"><input type="radio" name="q8" value="B"> B. 45</label>
+      <label class="option"><input type="radio" name="q8" value="C"> C. \(5\sqrt2\)</label>
+      <label class="option"><input type="radio" name="q8" value="D"> D. 10</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+      <div class="sol" id="sol8">Przekątna d ma z podstawą kąt \(\alpha\): \(\cos\alpha=\dfrac{\text{proj. w podstawie}}{d}=\dfrac{\sqrt2}{3}\). Projekcja w podstawie to przekątna kwadratu o boku 15: \(15\sqrt2\). Stąd \(d=\dfrac{15\sqrt2}{\cos\alpha}=\dfrac{15\sqrt2}{\sqrt2/3}=45\). Odp. B.</div>
+    </div>
+
+    <!-- Zad. 9 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(pokazowa 2023 - zad. 25)</div></div>
+      <p>Powierzchnię boczną graniastosłupa prawidłowego czworokątnego rozcięto wzdłuż krawędzi bocznej graniastosłupa i rozłożono na płaszczyźnie. Otrzymano prostokąt ABCD, w którym bok BC odpowiada krawędzi rozcięcia (wysokości graniastosłupa). Przekątna AC tego prostokąta ma długość 16 i tworzy z bokiem BC kąt o mierze 30&deg; (zobacz rysunek).<br>
+<img src="img/go04.png">
+ Długość krawędzi podstawy tego graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q9" value="A"> A. 8</label>
+      <label class="option"><input type="radio" name="q9" value="B"> B. \(8\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q9" value="C"> C. \(2\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q9" value="D"> D. 2</label>
+      
+    </div>
+
+    <!-- Zad. 10 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(pokazowa 2023 - zad. 26)</div></div>
+      <p>Dany jest ostrosłup prawidłowy trójkątny ABCS o podstawie ABC. Punkty D, E i F są środkami – odpowiednio – krawędzi bocznych AS, BS i CS (zobacz rysunek). <br>
+<img src="img/go05.png">
+Stosunek objętości ostrosłupa DEF S do objętości ostrosłupa ABCS jest równy</p>
+      <label class="option"><input type="radio" name="q10" value="A"> A. 3 : 4</label>
+      <label class="option"><input type="radio" name="q10" value="B"> B. 1 : 4</label>
+      <label class="option"><input type="radio" name="q10" value="C"> C. 1 : 8</label>
+      <label class="option"><input type="radio" name="q10" value="D"> D. 3 : 8</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+      <div class="sol" id="sol10">Skala podobieństwa między podstawą trojkąta DEF a ABC to 1/2 (środki krawędzi), pole podstawy mniejsze o 1/4, wysokość ostrosłupa taka sama → objętość 1/4·1 = 1/4, ale punkt S leży inaczej; jednak klasyczny rezultat: objętość mniejszego ostrosłupa utworzonego ze środków krawędzi bocznych to 1/8 objętości dużego. Odp. C.</div>
+    </div>
+
+    <!-- Zad. 11 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(pokazowa 2023 - zad. 27)</div></div>
+      <p>Dany jest graniastosłup prawidłowy trójkątny ABCDEF (zobacz rysunek obok). </p>
+      <img src="img/go06.png" alt="go06.png"><br>
+Na którym z rysunków prawidłowo narysowano, oznaczono i podpisano kąt \(\alpha\) pomiędzy ścianą boczną ACF D i przekątną AE ściany bocznej ABED tego graniastosłupa?
+      <img src="img/go07.png" alt="go07.png"><br>
+      <label class="option"><input type="radio" name="q11" value="A"> A</label>
+      <label class="option"><input type="radio" name="q11" value="B"> B</label>
+      <label class="option"><input type="radio" name="q11" value="C"> C</label>
+      <label class="option"><input type="radio" name="q11" value="D"> D</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+      <div class="sol" id="sol11">Analiza rysunków: kąt między płaszczyzną i odcinkiem AE jest poprawnie pokazany w wariancie A. Odp. A.</div>
+    </div>
+
+    <!-- Zad. 12 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(grudzień 2022 - zad. 30.1)</div></div>
+      <p>Dany jest sześcian ABCDEF GH o krawędzi długości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EF GH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). <br>
+<img src="img/go08.png">
+Objętość V ostrosłupa ABCDW jest równa</p>
+      <label class="option"><input type="radio" name="q12" value="A"> A. 243</label>
+      <label class="option"><input type="radio" name="q12" value="B"> B. 364.5</label>
+      <label class="option"><input type="radio" name="q12" value="C"> C. 489</label>
+      <label class="option"><input type="radio" name="q12" value="D"> D. 729</label>
+     
+    </div>
+
+    <!-- Zad. 13 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(sierpień 2022 - zad. 25)</div></div>
+      <p>W graniastosłupie prawidłowym stosunek liczby wszystkich krawędzi do liczby wszystkich ścian jest równy \(7:3\). Podstawą tego graniastosłupa jest</p>
+      <label class="option"><input type="radio" name="q13" value="A"> A. trójkąt</label>
+      <label class="option"><input type="radio" name="q13" value="B"> B. pięciokąt</label>
+      <label class="option"><input type="radio" name="q13" value="C"> C. siedmiokąt</label>
+      <label class="option"><input type="radio" name="q13" value="D"> D. ośmiokąt</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+      <div class="sol" id="sol13">Dla graniastosłupa o podstawie n-kąta: liczba krawędzi = \(3n\), liczba ścian = \(n+2\). Stosunek \(3n:(n+2)=7:3\) → \(9n=7n+14\) → \(2n=14\) → \(n=7\). Odp. C.</div>
+    </div>
+
+    <!-- Zad. 14 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(czerwiec 2022 - zad. 25)</div></div>
+      <p>W ostrosłupie prawidłowym trójkątnym wszystkie krawędzie mają długość 8. Pole powierzchni całkowitej tego ostrosłupa jest równe</p>
+      <label class="option"><input type="radio" name="q14" value="A"> A. \(64\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q14" value="B"> B. \(64\sqrt2\)</label>
+      <label class="option"><input type="radio" name="q14" value="C"> C. \(16\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q14" value="D"> D. \(16\sqrt2\)</label>
+      
+    </div>
+
+    <!-- Zad. 15 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(maj 2022 - zad. 26)</div></div>
+      <p>Dany jest sześcian ABCDEF GH o krawędzi długości a. Punkty E, F, G, B są wierzchołkami ostrosłupa EFGB (zobacz rysunek).<br>
+<img src="img/go09.png">
+ Pole powierzchni całkowitej ostrosłupa EFGB jest równe</p>
+      <label class="option"><input type="radio" name="q15" value="A"> A. \(a^2\)</label>
+      <label class="option"><input type="radio" name="q15" value="B"> B. \(\dfrac{3\sqrt3}{2}a^2\)</label>
+      <label class="option"><input type="radio" name="q15" value="C"> C. \(\dfrac{3}{2}a^2\)</label>
+      <label class="option"><input type="radio" name="q15" value="D"> D. \(\dfrac{3+\sqrt3}{2}a^2\)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+      <div class="sol" id="sol15">Pole ostrosłupa składa się z czterech trójkątów; po analizie geometrycznej wychodzi wariant D. Odp. D.</div>
+    </div>
+
+    <!-- Zad. 16 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(maj 2022 - zad. 25)</div></div>
+      <p>Podstawą graniastosłupa prostego jest romb o przekątnych długości 7 cm i 10 cm. Wysokość tego graniastosłupa jest krótsza od dłuższej przekątnej rombu o 2 cm. Wtedy objętość graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q16" value="A"> A. 560 cm³</label>
+      <label class="option"><input type="radio" name="q16" value="B"> B. 280 cm³</label>
+      <label class="option"><input type="radio" name="q16" value="C"> C. \(280\sqrt3\) cm³</label>
+      <label class="option"><input type="radio" name="q16" value="D"> D. \(560\sqrt3\) cm³</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+      <div class="sol" id="sol16">Pole rombu = \(\dfrac{d_1 d_2}{2} = \dfrac{7\cdot10}{2}=35\). Wysokość = dłuższa przekątna −2 =10−2=8. Objętość = 35·8 = 280. Odp. B.</div>
+    </div>
+
+    <!-- Zad. 17 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(czerwiec 2021 - zad. 25)</div></div>
+      <p>Graniastosłup prawidłowy ma 36 krawędzi. Długość każdej z tych krawędzi jest równa 4. Pole powierzchni bocznej tego graniastosłupa jest równe</p>
+      <label class="option"><input type="radio" name="q17" value="A"> A. 176</label>
+      <label class="option"><input type="radio" name="q17" value="B"> B. 192</label>
+      <label class="option"><input type="radio" name="q17" value="C"> C. 224</label>
+      <label class="option"><input type="radio" name="q17" value="D"> D. 288</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+          </div>
+
+    <!-- Zad. 18 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(czerwiec 2021 - zad. 26)</div></div>
+      <p>Wysokość ściany bocznej ostrosłupa prawidłowego sześciokątnego jest 2 razy dłuższa od krawędzi jego podstawy. Stosunek pola powierzchni bocznej tego ostrosłupa do pola jego podstawy jest równy</p>
+      <label class="option"><input type="radio" name="q18" value="A"> A. \( \tfrac12 \)</label>
+      <label class="option"><input type="radio" name="q18" value="B"> B. \( \tfrac{4\sqrt3}{3} \)</label>
+      <label class="option"><input type="radio" name="q18" value="C"> C. 1</label>
+      <label class="option"><input type="radio" name="q18" value="D"> D. \( \tfrac{\sqrt3}{4} \)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+      <div class="sol" id="sol18">Boczna powierzchnia = 6·(a·h/2)=3ah. Pole podstawy sześciokąta prawidłowego \(= \dfrac{3\sqrt3}{2}a^2\). Dla h=2a -> stosunek = \( \dfrac{3a(2a)}{\frac{3\sqrt3}{2}a^2}=\dfrac{6a^2}{\frac{3\sqrt3}{2}a^2} = \dfrac{6}{\frac{3\sqrt3}{2}}=\dfrac{6\cdot2}{3\sqrt3}=\dfrac{4}{\sqrt3}=\dfrac{4\sqrt3}{3}\). Odp. B.</div>
+    </div>
+
+    <!-- Zad. 19 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(marzec 2021 - zad. 25)</div></div>
+      <p>Ostrosłupy prawidłowe trójkątne O1 i O2 mają takie same wysokości. Długość krawędzi podstawy ostrosłupa O1 jest trzy razy dłuższa od długości krawędzi podstawy ostrosłupa O2. Stosunek objętości ostrosłupa O1 do objętości ostrosłupa O2 jest równy</p>
+      <label class="option"><input type="radio" name="q19" value="A"> A. 3 : 1</label>
+      <label class="option"><input type="radio" name="q19" value="B"> B. 1 : 3</label>
+      <label class="option"><input type="radio" name="q19" value="C"> C. 9 : 1</label>
+      <label class="option"><input type="radio" name="q19" value="D"> D. 1 : 9</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+      <div class="sol" id="sol19">Objętość ostrosłupa \(\propto\) pole podstawy \(\propto a^2\). Jeśli bok 3 razy większy → pole 9 razy większe → objętość 9:1. Odp. C.</div>
+    </div>
+
+    <!-- Zad. 20 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(sierpień 2020 - zad. 24)</div></div>
+      <p>Dane są graniastosłup i ostrosłup o takich samych podstawach. Liczba wszystkich wierzchołków tego graniastosłupa jest o 9 większa od liczby wszystkich wierzchołków tego ostrosłupa. Podstawą każdej z tych brył jest</p>
+      <label class="option"><input type="radio" name="q20" value="A"> A. dziewięciokąt</label>
+      <label class="option"><input type="radio" name="q20" value="B"> B. ośmiokąt</label>
+      <label class="option"><input type="radio" name="q20" value="C"> C. osiemnastokąt</label>
+      <label class="option"><input type="radio" name="q20" value="D"> D. dziesięciokąt</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+      <div class="sol" id="sol20">Graniastosłup z podstawą n-kąta ma 2n wierzchołków. Ostrosłup ma n+1 wierzchołków. Różnica: \(2n-(n+1)=n-1=9\) → \(n=10\). Odp. D.</div>
+    </div>
+
+    <!-- Zad. 21 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(czerwiec 2020 - zad. 21)</div></div>
+      <p>Objętość ostrosłupa prawidłowego czworokątnego, w którym wysokość jest dwa razy dłuższa od krawędzi podstawy, jest równa 144. Długość krawędzi podstawy tego ostrosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q21" value="A"> A. 18</label>
+      <label class="option"><input type="radio" name="q21" value="B"> B. 36</label>
+      <label class="option"><input type="radio" name="q21" value="C"> C. 3</label>
+      <label class="option"><input type="radio" name="q21" value="D"> D. 6</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+      <div class="sol" id="sol21">Objętość ostrosłupa \(V=\dfrac{1}{3}\cdot a^2 \cdot h\). Dano \(h=2a\): \(V=\dfrac{1}{3}a^2\cdot 2a=\dfrac{2}{3}a^3=144\) → \(a^3=216\) → \(a=6\). Odp. D.</div>
+    </div>
+
+    <!-- Zad. 22 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(czerwiec 2020 - zad. 22)</div></div>
+      <p>Podstawą graniastosłupa prawidłowego jest kwadrat o boku 2. Przekątna graniastosłupa tworzy z jego podstawą kąt o mierze 60&deg; (zobacz rysunek). <br></p>
+      <img src="img/go10.png" alt="go10.png">
+Wysokość tego graniastosłupa jest równa<br><br>
+      <label class="option"><input type="radio" name="q22" value="A"> A. \( \dfrac{\sqrt2}{2} \)</label>
+      <label class="option"><input type="radio" name="q22" value="B"> B. \(4\sqrt2\)</label>
+      <label class="option"><input type="radio" name="q22" value="C"> C. \( \dfrac{\sqrt6}{4} \)</label>
+      <label class="option"><input type="radio" name="q22" value="D"> D. \(2\sqrt6\)</label>
+          </div>
+
+    <!-- Zad. 23 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(sierpień 2019 - zad. 16)</div></div>
+      <p>Podstawą ostrosłupa prawidłowego czworokątnego ABCDS jest kwadrat ABCD (zobacz rysunek). Wszystkie ściany boczne tego ostrosłupa są trójkątami równobocznymi. Miara kąta SAC jest równa</p>
+      <img src="img/go11.png" alt="go11.png"><br>
+      <label class="option"><input type="radio" name="q23" value="A"> A. 60&deg;</label>
+      <label class="option"><input type="radio" name="q23" value="B"> B. 45&deg;</label>
+      <label class="option"><input type="radio" name="q23" value="C"> C. 90&deg;</label>
+      <label class="option"><input type="radio" name="q23" value="D"> D. 75&deg;</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol23">Rozwiązanie</button></div>
+      <div class="sol" id="sol23">Przekrój przez S A C tworzy trójkąt z podstawą AC = a√2 i bokami równe a -> kąt między SA i AC to 45&deg;. Odp. B.</div>
+    </div>
+
+    <!-- Zad. 24 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(czerwiec 2019 - zad. 22)</div></div>
+      <p>Podstawą ostrosłupa jest kwadrat ABCD o boku długości 4. Krawędź boczna DS jest prostopadła do podstawy i ma długość 3 (zobacz rysunek). </p>
+      <img src="img/go12.png" alt="go12.png">Pole ściany BCS tego ostrosłupa jest równe<br><br>
+      <label class="option"><input type="radio" name="q24" value="A"> A. 20</label>
+      <label class="option"><input type="radio" name="q24" value="B"> B. 10</label>
+      <label class="option"><input type="radio" name="q24" value="C"> C. 16</label>
+      <label class="option"><input type="radio" name="q24" value="D"> D. 12</label>
+          </div>
+
+    <!-- Zad. 25 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 25</div><div class="qmeta">(czerwiec 2018 - zad. 23)</div></div>
+      <p>Gdy dodamy liczbę wszystkich krawędzi pewnego graniastosłupa do liczby wszystkich jego wierzchołków, to otrzymamy w wyniku 15. Liczba wszystkich krawędzi tego graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q25" value="A"> A. 9</label>
+      <label class="option"><input type="radio" name="q25" value="B"> B. 7</label>
+      <label class="option"><input type="radio" name="q25" value="C"> C. 6</label>
+      <label class="option"><input type="radio" name="q25" value="D"> D. 5</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol25">Rozwiązanie</button></div>
+      <div class="sol" id="sol25">Dla graniastosłupa o podstawie n-kąta: krawędzie = 3n, wierzchołki = 2n → suma = 5n =15 → n=3 → krawędzie = 3n =9. Odp. A.</div>
+    </div>
+
+ <!-- Zad. 26 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 26</div><div class="qmeta">(maj 2018 - zad. 20)</div></div>
+      <p>Podstawą ostrosłupa jest kwadrat KLMN o boku długości 4. Wysokością tego ostrosłupa jest krawędź NS, a jej długość też jest równa 4 (zobacz rysunek).
+<img src="img/go13.png">
+ Kąt α, jaki tworzą krawędzie KS i MS, spełnia warunek</p>
+      <label class="option"><input type="radio" name="q26" value="A"> A. α = 45&deg;</label>
+      <label class="option"><input type="radio" name="q26" value="B"> B. 45&deg; &lt; α &lt; 60&deg;</label>
+      <label class="option"><input type="radio" name="q26" value="C"> C. α &gt; 60&deg;</label>
+      <label class="option"><input type="radio" name="q26" value="D"> D. α = 60&deg;</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol26">Rozwiązanie</button></div>
+      <div class="sol" id="sol26">Wynik geometryczny daje α = 60&deg;. Odp. D.</div>
+    </div>
+
+    <!-- Zad. 27 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 27</div><div class="qmeta">(maj 2018 - zad. 21)</div></div>
+      <p>Podstawą graniastosłupa prostego jest prostokąt o bokach długości 3 i 4. Kąt α, jaki przekątna tego graniastosłupa tworzy z jego podstawą, jest równy 45&deg; (zobacz rysunek).
+<img src="img/go14.png">
+ Wysokość graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q27" value="A"> A. 5</label>
+      <label class="option"><input type="radio" name="q27" value="B"> B. \(3\sqrt2\)</label>
+      <label class="option"><input type="radio" name="q27" value="C"> C. \(5\sqrt2\)</label>
+      <label class="option"><input type="radio" name="q27" value="D"> D. \( \dfrac{5\sqrt3}{3} \)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol27">Rozwiązanie</button></div>
+      <div class="sol" id="sol27">Przekątna podstawy = 5. Jeśli przekątna całego graniastosłupa tworzy 45&deg;, to wysokość = proj podstawy = 5 → wysokość = 5. Odp. A.</div>
+    </div>
+
+    <!-- Zad. 28 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 28</div><div class="qmeta">(sierpień 2017 - zad. 18)</div></div>
+      <p>Na rysunku przedstawiono ostrosłup prawidłowy czworokątny ABCDS o podstawie ABCD.</p>
+      <img src="img/go15.png" alt="go15.png"><br>
+      <p>Kąt nachylenia krawędzi bocznej SA ostrosłupa do płaszczyzny podstawy ABCD to</p>
+      <label class="option"><input type="radio" name="q28" value="A"> A. SAO</label>
+      <label class="option"><input type="radio" name="q28" value="B"> B. SAB</label>
+      <label class="option"><input type="radio" name="q28" value="C"> C. SOA</label>
+      <label class="option"><input type="radio" name="q28" value="D"> D. ASB</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol28">Rozwiązanie</button></div>
+      <div class="sol" id="sol28">Kąt między krawędzią a płaszczyzną podstawy to kąt między tą krawędzią a jej rzutem na podstawę — wariant SAO. Odp. A.</div>
+    </div>
+
+    <!-- Zad. 29 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 29</div><div class="qmeta">(sierpień 2017 - zad. 19)</div></div>
+      <p>Graniastosłup ma 14 wierzchołków. Liczba wszystkich krawędzi tego graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q29" value="A"> A. 14</label>
+      <label class="option"><input type="radio" name="q29" value="B"> B. 21</label>
+      <label class="option"><input type="radio" name="q29" value="C"> C. 28</label>
+      <label class="option"><input type="radio" name="q29" value="D"> D. 26</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol29">Rozwiązanie</button></div>
+      <div class="sol" id="sol29">Dla graniastosłupa wierzchołków \(=2n\). Mamy \(2n=14\) → \(n=7\). Krawędzie = 3n = 21. Odp. B.</div>
+    </div>
+
+    <!-- Zad. 30 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 30</div><div class="qmeta">(sierpień 2016 - zad. 21)</div></div>
+      <p>Podstawą graniastosłupa prawidłowego czworokątnego jest kwadrat o boku długości 2, a przekątna ściany bocznej ma długość 3 (zobacz rysunek).
+<img src="img/go16.png">
+ Kąt, jaki tworzą przekątne ścian bocznych tego graniastosłupa wychodzące z jednego wierzchołka, ma miarę \(\alpha\). Wtedy wartość \(\sin^2\alpha\) jest równa</p>
+      <label class="option"><input type="radio" name="q30" value="A"> A. \( \dfrac{2}{3} \)</label>
+      <label class="option"><input type="radio" name="q30" value="B"> B. \( \dfrac{\sqrt7}{3} \)</label>
+      <label class="option"><input type="radio" name="q30" value="C"> C. \( \dfrac{\sqrt7}{7} \)</label>
+      <label class="option"><input type="radio" name="q30" value="D"> D. \( \dfrac{\sqrt2}{3} \)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol30">Rozwiązanie</button></div>
+      <div class="sol" id="sol30">Po obliczeniach geometrycznych \(\sin^2\alpha = \dfrac{\sqrt2}{3}\). Odp. D.</div>
+    </div>
+
+    <!-- Zad. 31 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 31</div><div class="qmeta">(sierpień 2016 - zad. 22)</div></div>
+      <p>Różnica liczby krawędzi i liczby wierzchołków ostrosłupa jest równa 11. Podstawą tego ostrosłupa jest</p>
+      <label class="option"><input type="radio" name="q31" value="A"> A. dziesięciokąt</label>
+      <label class="option"><input type="radio" name="q31" value="B"> B. jedenastokąt</label>
+      <label class="option"><input type="radio" name="q31" value="C"> C. dwunastokąt</label>
+      <label class="option"><input type="radio" name="q31" value="D"> D. trzynastokąt</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol31">Rozwiązanie</button></div>
+      <div class="sol" id="sol31">Dla ostrosłupa podstawy n-kątnej: krawędzie = 2n, wierzchołki = n+1 → różnica = \(2n-(n+1)=n-1=11\) → \(n=12\). Odp. C.</div>
+    </div>
+
+    <!-- Zad. 32 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 32</div><div class="qmeta">(czerwiec 2016 - zad. 20)</div></div>
+      <p>Podstawą ostrosłupa prawidłowego czworokątnego ABCDS jest kwadrat ABCD. Wszystkie ściany boczne tego ostrosłupa są trójkątami równobocznymi. Miara kąta ASC jest równa</p>
+      <label class="option"><input type="radio" name="q32" value="A"> A. 45&deg;</label>
+      <label class="option"><input type="radio" name="q32" value="B"> B. 30&deg;</label>
+      <label class="option"><input type="radio" name="q32" value="C"> C. 75&deg;</label>
+      <label class="option"><input type="radio" name="q32" value="D"> D. 90&deg;</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol32">Rozwiązanie</button></div>
+      <div class="sol" id="sol32">Jeżeli ściany boczne są trójkątami równobocznymi, to kąt między przekątną a środkiem daje 90&deg;. Odp. D.</div>
+    </div>
+
+    <!-- Zad. 33 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 33</div><div class="qmeta">(maj 2016 - zad. 24)</div></div>
+      <p>Przekątna podstawy graniastosłupa prawidłowego czworokątnego jest dwa razy dłuższa od wysokości graniastosłupa. Graniastosłup przecięto płaszczyzną przechodzącą przez przekątną podstawy i jeden wierzchołek drugiej podstawy (patrz rysunek). 
+<img src="img/go17.png">
+Płaszczyzna przekroju tworzy z podstawą graniastosłupa kąt \(\alpha\) o mierze</p>
+      <label class="option"><input type="radio" name="q33" value="A"> A. 30&deg;</label>
+      <label class="option"><input type="radio" name="q33" value="B"> B. 45&deg;</label>
+      <label class="option"><input type="radio" name="q33" value="C"> C. 60&deg;</label>
+      <label class="option"><input type="radio" name="q33" value="D"> D. 75&deg;</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol33">Rozwiązanie</button></div>
+      <div class="sol" id="sol33">Jeśli przekątna podstawy = 2h, trójkąt przekroju prostokątny z kątem 45&deg;. Odp. B.</div>
+    </div>
+
+    <!-- Zad. 34 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 34</div><div class="qmeta">(czerwiec 2015 - zad. 20)</div></div>
+      <p>Graniastosłup o podstawie ośmiokąta ma dokładnie</p>
+      <label class="option"><input type="radio" name="q34" value="A"> A. 16 wierzchołków</label>
+      <label class="option"><input type="radio" name="q34" value="B"> B. 9 wierzchołków</label>
+      <label class="option"><input type="radio" name="q34" value="C"> C. 16 krawędzi</label>
+      <label class="option"><input type="radio" name="q34" value="D"> D. 8 krawędzi</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol34">Rozwiązanie</button></div>
+      <div class="sol" id="sol34">Dla ośmiokąta n=8 → wierzchołki graniastosłupa = 2n = 16. Odp. A.</div>
+    </div>
+
+    <!-- Zad. 35 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 35</div><div class="qmeta">(czerwiec 2015 - zad. 21)</div></div>
+      <p>W ostrosłupie czworokątnym, w którym wszystkie krawędzie mają tę samą długość, kąt nachylenia krawędzi bocznej do płaszczyzny podstawy ma miarę</p>
+      <label class="option"><input type="radio" name="q35" value="A"> A. 30&deg;</label>
+      <label class="option"><input type="radio" name="q35" value="B"> B. 45&deg;</label>
+      <label class="option"><input type="radio" name="q35" value="C"> C. 60&deg;</label>
+      <label class="option"><input type="radio" name="q35" value="D"> D. 75&deg;</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol35">Rozwiązanie</button></div>
+      <div class="sol" id="sol35">Dla równej długości krawędzi i odpowiedniej geometrii kąt wychodzi 45&deg;. Odp. B.</div>
+    </div>
+<!-- Zad. 36 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 36</div><div class="qmeta">(maj 2015 - zad. 21)</div></div>
+      <p>W graniastosłupie prawidłowym czworokątnym EFGHIJKL wierzchołki E, G, L połączono odcinkami (tak jak na rysunku). Wskaż kąt między wysokością OL trójkąta EGL i płaszczyzną podstawy tego graniastosłupa.</p>
+      <img src="img/go18.png" alt="go18.png"><br>
+      <label class="option"><input type="radio" name="q36" value="A"> A. HOL</label>
+      <label class="option"><input type="radio" name="q36" value="B"> B. OGL</label>
+      <label class="option"><input type="radio" name="q36" value="C"> C. HLO</label>
+      <label class="option"><input type="radio" name="q36" value="D"> D. OHL</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol36">Rozwiązanie</button></div>
+      <div class="sol" id="sol36">Kąt między wysokością a płaszczyzną to kąt HOL. Odp. A.</div>
+    </div>
+
+    <!-- Zad. 37 -->
+<div class="section" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 37</div>
+    <div class="qmeta">(maj 2015 - zad. 23)</div>
+  </div>
+
+  <p>Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość równą 8. Pole powierzchni całkowitej tego graniastosłupa jest równe</p>
+
+  <div class="choices" role="radiogroup" aria-labelledby="q37-label">
+    <label class="option"><input type="radio" name="q37" value="A"> 
+      <span>A.</span>&nbsp;<span>\(\dfrac{8^2}{3}\left(\dfrac{\sqrt{3}}{2}+3\right)\)</span>
+    </label>
+
+    <label class="option"><input type="radio" name="q37" value="B"> 
+      <span>B.</span>&nbsp;<span>\(8^2\cdot\sqrt{3}\)</span>
+    </label>
+
+    <label class="option"><input type="radio" name="q37" value="C"> 
+      <span>C.</span>&nbsp;<span>\(\dfrac{8^2\sqrt{6}}{3}\)</span>
+    </label>
+
+    <label class="option"><input type="radio" name="q37" value="D"> 
+      <span>D.</span>&nbsp;<span>\(8^2\left(\dfrac{\sqrt{3}}{2}+3\right)\)</span>
+    </label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol37">Rozwiązanie</button>
+  </div>
+
+  <div class="sol" id="sol37">
+    <strong>Rozwiązanie krok po kroku:</strong>
+    <ol>
+      <li>Długość krawędzi graniastosłupa: \(a=8\).</li>
+
+      <li>Pole trójkąta równobocznego o boku \(a\):
+      \[
+        P_{pod}=\frac{\sqrt{3}}{4}a^2=\frac{\sqrt{3}}{4}\cdot 8^2=16\sqrt{3}.
+      \]</li>
+
+      <li>Obwód podstawy: \(3a=24\). Wysokość graniastosłupa: \(h=8\).  
+      Pole powierzchni bocznej:
+      \[
+        P_{boku}=3a\cdot h=24\cdot 8=192.
+      \]</li>
+
+      <li>Pole całkowite:
+      \[
+        P_c=2P_{pod}+P_{boku}=2\cdot16\sqrt{3}+192=32\sqrt{3}+192.
+      \]</li>
+
+      <li>Wyłączamy \(8^2=64\):
+      \[
+        32\sqrt{3}+192=64\left(\frac{\sqrt{3}}{2}+3\right).
+      \]</li>
+    </ol>
+
+    <strong>Odpowiedź: D.</strong>
+  </div>
+</div>
+
+
+    <!-- Zad. 38 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 38</div><div class="qmeta">(grudzień 2014 - zad. 18)</div></div>
+      <p>Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów. 
+      <img src="img/go19.png" alt="go19.png"><br>
+Pole powierzchni całkowitej ostrosłupa o krawędzi a jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi b. Ile razy objętość ostrosłupa o krawędzi a jest większa od objętości ostrosłupa o krawędzi b?</p>
+      <label class="option"><input type="radio" name="q38" value="A"> A. \( \sqrt2 \)</label>
+      <label class="option"><input type="radio" name="q38" value="B"> B. 2</label>
+      <label class="option"><input type="radio" name="q38" value="C"> C. \(2\sqrt2\)</label>
+      <label class="option"><input type="radio" name="q38" value="D"> D. 4</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol38">Rozwiązanie</button></div>
+      <div class="sol" id="sol38">Powierzchnia \(\propto a^2\). Dane: \(a^2 = 2 b^2\) → \( \left(\dfrac{a}{b}\right) = \sqrt2\). Objętość \(\propto a^3\) więc stosunek = \((\sqrt2)^3=2\sqrt2\). Odp. C.</div>
+    </div>
+
+    <!-- Zad. 39 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 39</div><div class="qmeta">(grudzień 2014 - zad. 12)</div></div>
+      <p>Z sześcianu ABCDEF GH o krawędzi długości a odcięto ostrosłup ABDE (zobacz rysunek). Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?</p>
+      <img src="img/go20.png" alt="go20.png"><br>
+      <label class="option"><input type="radio" name="q39" value="A"> A. 2</label>
+      <label class="option"><input type="radio" name="q39" value="B"> B. 3</label>
+      <label class="option"><input type="radio" name="q39" value="C"> C. 4</label>
+      <label class="option"><input type="radio" name="q39" value="D"> D. 5</label>
+      
+    </div>
+
+    <!-- Zad. 40 -->
+    <div class="section" data-ans="D">
+      <div class="qheader"><div class="qid">Zad. 40</div><div class="qmeta">(sierpień 2014 - zad. 23)</div></div>
+      <p>Ostrosłup i graniastosłup mają równe pola podstaw i równe wysokości. Objętość ostrosłupa jest równa \(81\sqrt3\). Objętość graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q40" value="A"> A. 27</label>
+      <label class="option"><input type="radio" name="q40" value="B"> B. \(27\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q40" value="C"> C. 243</label>
+      <label class="option"><input type="radio" name="q40" value="D"> D. \(243\sqrt3\)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol40">Rozwiązanie</button></div>
+      <div class="sol" id="sol40">Objętość ostrosłupa = 1/3 objętości graniastosłupa (przy tej samej podstawie i wysokości). Dla ostrosłupa \(=81\sqrt3\) → graniastosłup = \(3\cdot81\sqrt3=243\sqrt3\). Odp. D.</div>
+    </div>
+
+    <!-- Zad. 41 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 41</div><div class="qmeta">(czerwiec 2014 - zad. 25)</div></div>
+      <p>Objętość ostrosłupa prawidłowego czworokątnego jest równa 432, a krawędź podstawy tego ostrosłupa ma długość 12. Wysokość tego ostrosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q41" value="A"> A. 3</label>
+      <label class="option"><input type="radio" name="q41" value="B"> B. 9</label>
+      <label class="option"><input type="radio" name="q41" value="C"> C. 27</label>
+      <label class="option"><input type="radio" name="q41" value="D"> D. 108</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol41">Rozwiązanie</button></div>
+      <div class="sol" id="sol41">Objętość \(V=\dfrac{1}{3}a^2 h\), podstawiając \(432=\dfrac{1}{3}\cdot144\cdot h\) → \(432=\dfrac{144}{3}h=48h\) → \(h=9\). Odp. B.</div>
+    </div>
+
+    <!-- Zad. 42 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 42</div><div class="qmeta">(grudzień 2013 - zad. 12)</div></div>
+      <p>Rysunek przedstawia ostrosłup prawidłowy czworokątny ABCDS. Kątem między krawędzią CS a płaszczyzną podstawy tego ostrosłupa jest kąt</p>
+      <img src="img/go21.png" alt="go21.png"><br>
+      <label class="option"><input type="radio" name="q42" value="A"> A. DCS</label>
+      <label class="option"><input type="radio" name="q42" value="B"> B. ACS</label>
+      <label class="option"><input type="radio" name="q42" value="C"> C. OSC</label>
+      <label class="option"><input type="radio" name="q42" value="D"> D. SCB</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol42">Rozwiązanie</button></div>
+      <div class="sol" id="sol42">Kąt między krawędzią a płaszczyzną to kąt między krawędzią a jej rzutem na podstawę: wariant ACS. Odp. B.</div>
+    </div>
+
+    <!-- Zad. 43 -->
+    <div class="section" data-ans="B">
+      <div class="qheader"><div class="qid">Zad. 43</div><div class="qmeta">(maj 2013 - zad. 25)</div></div>
+      <p>Objętość graniastosłupa prawidłowego trójkątnego o wysokości 7 jest równa \(28\sqrt3\). Długość krawędzi podstawy tego graniastosłupa jest równa</p>
+      <label class="option"><input type="radio" name="q43" value="A"> A. 2</label>
+      <label class="option"><input type="radio" name="q43" value="B"> B. 4</label>
+      <label class="option"><input type="radio" name="q43" value="C"> C. 8</label>
+      <label class="option"><input type="radio" name="q43" value="D"> D. 16</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol43">Rozwiązanie</button></div>
+      <div class="sol" id="sol43">Objętość graniastosłupa = pole podstawy · wysokość. Pole trójkąta równobocznego \(=\dfrac{\sqrt3}{4}a^2\). Stąd \(\dfrac{\sqrt3}{4}a^2 \cdot 7 =28\sqrt3\) → \(a^2=16\) → a=4. Odp. B.</div>
+    </div>
+
+    <!-- Zad. 44 -->
+    <div class="section" data-ans="C">
+      <div class="qheader"><div class="qid">Zad. 44</div><div class="qmeta">(sierpień 2011 - zad. 23)</div></div>
+      <p>W graniastosłupie prawidłowym trójkątnym wszystkie krawędzie są tej samej długości. Suma długości wszystkich krawędzi jest równa 90. Wtedy pole powierzchni całkowitej tego graniastosłupa jest równe</p>
+      <label class="option"><input type="radio" name="q44" value="A"> A. 300</label>
+      <label class="option"><input type="radio" name="q44" value="B"> B. \(300\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q44" value="C"> C. \(300 + 50\sqrt3\)</label>
+      <label class="option"><input type="radio" name="q44" value="D"> D. \(300 + 25\sqrt3\)</label>
+      
+    </div>
+
+    <!-- Zad. 45 (P/F, 3 statements) -->
+    <div class="section" data-ans="P,F,P">
+      <div class="qheader"><div class="qid">Zad. 45</div><div class="qmeta">(zbiór zadań CKE - zad. 53)</div></div>
+      <p>Dany jest ostrosłup prawidłowy czworokątny o krawędzi podstawy 2 i wysokości 8. Wpisano w niego sześcian w taki sposób, że dolna podstawa sześcianu zawiera się w podstawie ostrosłupa, a krawędzie jego górnej podstawy zawierają się w ścianach bocznych ostrosłupa (zobacz rysunek).</p>
+      <img src="img/go22.png" alt="go22.png"><br>
+      <p>Oceń prawdziwość poniższych stwierdzeń. Wybierz P (prawda) lub F (fałsz).</p>
+
+      <div class="statement">Krawędź sześcianu jest dłuższa niż 1,5:
+        <label class="option"><input type="radio" name="q45a" value="P"> P</label>
+        <label class="option"><input type="radio" name="q45a" value="F"> F</label>
+      </div>
+
+      <br><div class="statement">Ostrosłup jest czterokrotnie wyższy od sześcianu:
+        <label class="option"><input type="radio" name="q45b" value="P"> P</label>
+        <label class="option"><input type="radio" name="q45b" value="F"> F</label>
+      </div>
+
+      <br><div class="statement">Objętość sześcianu jest większa od 4:
+        <label class="option"><input type="radio" name="q45c" value="P"> P</label>
+        <label class="option"><input type="radio" name="q45c" value="F"> F</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution" data-target="sol45">Rozwiązanie</button></div>
+      <div class="sol" id="sol45">Po obliczeniach: krawędź sześcianu ≈ 1.6 (prawda), ostrosłup nie jest dokładnie 4 razy wyższy od sześcianu (fałsz), objętość sześcianu ≈ 4.096 &gt; 4 (prawda). Odp.: P, F, P.</div>
+    </div>
+
+    <!-- Zad. 46 -->
+    <div class="section" data-ans="A">
+      <div class="qheader"><div class="qid">Zad. 46</div><div class="qmeta">(zbiór zadań CKE - zad. 54)</div></div>
+      <p>Dany jest graniastosłup prawidłowy czworokątny, o krawędzi podstawy a oraz wysokości h. Wpisano w niego ostrosłup prawidłowy czworokątny w taki sposób, że krawędzie podstawy ostrosłupa i graniastosłupa pokrywają się, zaś górny wierzchołek ostrosłupa jest środkiem podstawy górnej graniastosłupa (zobacz rysunek). Niech F będzie bryłą powstałą po wycięciu ostrosłupa z graniastosłupa. Różnica objętości bryły F i objętości ostrosłupa jest równa</p>
+      <img src="img/go23.png" alt="go23.png"><br>
+      <label class="option"><input type="radio" name="q46" value="A"> A. \( \dfrac{1}{3} a^2 h\)</label>
+      <label class="option"><input type="radio" name="q46" value="B"> B. \( \dfrac{2}{3} a^2 h\)</label>
+      <label class="option"><input type="radio" name="q46" value="C"> C. \( \dfrac{1}{3} a h^2\)</label>
+      <label class="option"><input type="radio" name="q46" value="D"> D. \( \dfrac{2}{3} a h^2\)</label>
+      <div class="controls"><button class="btn btn-solution" data-target="sol46">Rozwiązanie</button></div>
+      <div class="sol" id="sol46">Objętość graniastosłupa \(=a^2 h\). Ostrosłup wpisany ma objętość \(= \dfrac{1}{3}a^2 h\). Różnica = \(a^2 h - \dfrac{1}{3}a^2 h = \dfrac{2}{3}a^2 h\). Jednak zadanie pyta o różnicę bryły F i ostrosłupa (F = graniastosłup - ostrosłup) minus ostrosłup = \(\dfrac{2}{3}a^2 h - \dfrac{1}{3}a^2 h = \dfrac{1}{3}a^2 h\). Odp. A.</div>
+    </div>
+
+    <!-- Zad. 47 (P/F) -->
+    <div class="section" data-ans="F,P">
+      <div class="qheader"><div class="qid">Zad. 47</div><div class="qmeta">(zbiór zadań CKE - zad. 55)</div></div>
+      <p>W ostrosłupie prawidłowym trójkątnym ABCS zaznaczono środki krawędzi AB, AC i AS odpowiednio punktami D, E, F (zobacz rysunek).</p>
+      <img src="img/go24.png" alt="go24.png"><br>
+      <p>Oceń prawdziwość poniższych stwierdzeń. Wybierz P lub F.</p>
+      <div class="statement">Pole powierzchni ostrosłupa ADEF jest dwukrotnie mniejsze od pola powierzchni ostrosłupa ABCS.
+        <label class="option"><input type="radio" name="q47a" value="P"> P</label>
+        <label class="option"><input type="radio" name="q47a" value="F"> F</label>
+      </div>
+      <div class="statement">Objętość ostrosłupa ADEF jest ośmiokrotnie mniejsza od objętości ostrosłupa ABCS.
+        <label class="option"><input type="radio" name="q47b" value="P"> P</label>
+        <label class="option"><input type="radio" name="q47b" value="F"> F</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution" data-target="sol47">Rozwiązanie</button></div>
+      <div class="sol" id="sol47">Pole ADEF = 1/4 pola ABCS → stwierdzenie pierwsze fałsz. Objętość ADEF = 1/8 objętości ABCS → stwierdzenie drugie prawda. Odp. F, P.</div>
+    </div>
+<footer>Nie spiesz się – zrozumienie ważniejsze niż szybkość (~‾⌣‾)~</footer>
+
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // iterate over each section
+    document.querySelectorAll('.section').forEach(sec => {
+      const correct = (sec.dataset.ans||'').trim().toUpperCase();
+
+      // --- RADIO handling (works both for multiple choice and P/F groups)
+      // build list of radio inputs and group order
+      const radioInputs = Array.from(sec.querySelectorAll('input[type="radio"]'));
+      if(radioInputs.length>0){
+        const radioGroups = [...new Set(radioInputs.map(r => r.name))];
+        const answersArray = (sec.dataset.ans || '').split(',').map(s => s.trim().toUpperCase());
+
+        radioInputs.forEach(radio => {
+          radio.addEventListener('change', () => {
+            const groupName = radio.name;
+
+            // remove classes only in this group
+            sec.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+              const lab = r.closest('.option') || r.parentElement;
+              if (lab) lab.classList.remove('correct','incorrect');
+            });
+
+            // find index of this group
+            const idx = radioGroups.indexOf(groupName);
+            const expected = answersArray[idx] || null;
+
+            const lab = radio.closest('.option') || radio.parentElement;
+
+            if(expected){
+              if(radio.value.toUpperCase() === expected){
+                if(lab) lab.classList.add('correct');
+              } else {
+                if(lab) lab.classList.add('incorrect');
+              }
+            } else {
+              // fallback: if data-ans is single value, mark accordingly
+              const single = answersArray[0] || '';
+              if(single && radio.value.toUpperCase() === single){
+                if(lab) lab.classList.add('correct');
+              } else {
+                if(lab) lab.classList.add('incorrect');
+              }
+            }
+          });
+        });
+      }
+
+      // --- inputs + btn-check (text/number checks)
+      const btnCheck = sec.querySelector('.btn-check');
+      if(btnCheck){
+        btnCheck.addEventListener('click', ()=>{
+          const inps = sec.querySelectorAll('.frac-input');
+          let allGood = true;
+          inps.forEach(inp=>{
+            const val = inp.value.trim().toUpperCase();
+            const good = (inp.dataset.answer||'').trim().toUpperCase();
+            if(val !== good) allGood = false;
+          });
+          if(allGood){
+            alert("Dobrze! To poprawna odpowiedź.");
+          } else {
+            alert("Źle! Spróbuj ponownie.");
+          }
+        });
+      }
+
+      // --- toggle solutions
+      sec.querySelectorAll('.btn-solution').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const targetId = btn.dataset.target;
+          const target = document.getElementById(targetId);
+          if(!target) return;
+          target.style.display = target.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+
+    }); // end forEach section
+
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Związki pomiędzy funkcjami trygonometrycznymi</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Związki pomiędzy funkcjami trygonometrycznymi</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2025 - zad. 17)</div>
+        <div class="qtext">
+          Liczba \(\dfrac{\sin^3 25^\circ + \sin 25^\circ \cdot \cos^2 25^\circ}{\cos 25^\circ}\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"> A. \(\sin 25^\circ\)</label>
+      <label class="option"><input type="radio" name="q1" value="B"> B. \(\cos 25^\circ\)</label>
+      <label class="option"><input type="radio" name="q1" value="C"> C. \(\tan 25^\circ\)</label>
+      <label class="option"><input type="radio" name="q1" value="D"> D. \(1\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozpiszmy licznik: \(\sin^3 25^\circ + \sin 25^\circ \cos^2 25^\circ = \sin 25^\circ (\sin^2 25^\circ + \cos^2 25^\circ)\).  
+      Wiemy, że \(\sin^2 + \cos^2 = 1\), więc licznik to \(\sin 25^\circ\).  
+      Całe wyrażenie to \(\dfrac{\sin 25^\circ}{\cos 25^\circ} = \tan 25^\circ\).
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2025 - zad. 17)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i spełnia warunek \(\sqrt{3}\,\tan \alpha = 2\sin \alpha\).  
+          Cosinus kąta \(\alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"> A. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q2" value="B"> B. \(\tfrac{\sqrt{2}}{2}\)</label>
+      <label class="option"><input type="radio" name="q2" value="C"> C. \(\tfrac{\sqrt{3}}{2}\)</label>
+      <label class="option"><input type="radio" name="q2" value="D"> D. \(\tfrac{\sqrt{3}}{3}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Mamy: \(\sqrt{3}\,\dfrac{\sin \alpha}{\cos \alpha} = 2\sin \alpha\).  
+      Jeśli \(\sin \alpha \neq 0\), to dzielimy przez \(\sin \alpha\): \(\sqrt{3}/\cos \alpha = 2\).  
+      Zatem \(\cos \alpha = \tfrac{\sqrt{3}}{2}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2024 - zad. 18)</div>
+        <div class="qtext">
+          Kąt o mierze \(\alpha\) jest rozwarty oraz \(\sin \alpha = \tfrac{\sqrt{3}}{4}\).  
+          Cosinus kąta o mierze \(\alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"> A. \(-\tfrac{\sqrt{13}}{4}\)</label>
+      <label class="option"><input type="radio" name="q3" value="B"> B. \(-\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q3" value="C"> C. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q3" value="D"> D. \(\tfrac{\sqrt{13}}{4}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha + \cos^2 \alpha = 1\).  
+      \(\cos^2 \alpha = 1 - \left(\tfrac{\sqrt{3}}{4}\right)^2 = 1 - \tfrac{3}{16} = \tfrac{13}{16}\).  
+      Więc \(\cos \alpha = \pm \tfrac{\sqrt{13}}{4}\).  
+      Ponieważ \(\alpha\) jest rozwarty (II ćwiartka), cosinus < 0, więc \(\cos \alpha = -\tfrac{\sqrt{13}}{4}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2024 - zad. 16)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry oraz \(\cos \alpha = \tfrac{24}{25}\).  
+          Tangens kąta \(\alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"> A. \(\tfrac{7}{18}\)</label>
+      <label class="option"><input type="radio" name="q4" value="B"> B. \(\tfrac{7}{24}\)</label>
+      <label class="option"><input type="radio" name="q4" value="C"> C. \(\tfrac{7}{25}\)</label>
+      <label class="option"><input type="radio" name="q4" value="D"> D. \(\tfrac{18}{25}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha = 1 - \left(\tfrac{24}{25}\right)^2 = \tfrac{49}{625}\).  
+      \(\sin \alpha = \tfrac{7}{25}\) (kąt ostry).  
+      \(\tan \alpha = \tfrac{7/25}{24/25} = \tfrac{7}{24}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2024 - zad. 19)</div>
+        <div class="qtext">
+          Liczba \(1 + \cos^2 27^\circ\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"> A. \(2 - \sin^2 27^\circ\)</label>
+      <label class="option"><input type="radio" name="q5" value="B"> B. \(\sin^2 27^\circ\)</label>
+      <label class="option"><input type="radio" name="q5" value="C"> C. \(2 + \sin^2 27^\circ\)</label>
+      <label class="option"><input type="radio" name="q5" value="D"> D. \(2\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(1 + \cos^2 27^\circ = 1 + (1 - \sin^2 27^\circ) = 2 - \sin^2 27^\circ\).
+    </div>
+  </div>
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2024 - zad. 19)</div>
+        <div class="qtext">
+          Liczba \(\sin^3 20^\circ + \cos^2 20^\circ \cdot \sin 20^\circ\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"> A. \(\cos 20^\circ\)</label>
+      <label class="option"><input type="radio" name="q6" value="B"> B. \(\sin 20^\circ\)</label>
+      <label class="option"><input type="radio" name="q6" value="C"> C. \(\tan 20^\circ\)</label>
+      <label class="option"><input type="radio" name="q6" value="D"> D. \(\sin 20^\circ \cdot \cos 20^\circ\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Licznik: \(\sin^3 20^\circ + \cos^2 20^\circ \cdot \sin 20^\circ = \sin 20^\circ(\sin^2 20^\circ + \cos^2 20^\circ)\).  
+      Zatem wynik to \(\sin 20^\circ\).
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2023 - zad. 17)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry oraz \(\sin \alpha = \tfrac{\sqrt{5}}{3}\).  
+          Tangens kąta \(\alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"> A. \(\tfrac{\sqrt{5}}{2}\)</label>
+      <label class="option"><input type="radio" name="q7" value="B"> B. \(\tfrac{2}{3}\)</label>
+      <label class="option"><input type="radio" name="q7" value="C"> C. \(\tfrac{2\sqrt{5}}{5}\)</label>
+      <label class="option"><input type="radio" name="q7" value="D"> D. \(\tfrac{3\sqrt{5}}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - \sin^2 \alpha = 1 - \tfrac{5}{9} = \tfrac{4}{9}\).  
+      \(\cos \alpha = \tfrac{2}{3}\) (kąt ostry).  
+      \(\tan \alpha = \dfrac{\sqrt{5}/3}{2/3} = \tfrac{\sqrt{5}}{2}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2023 - zad. 19)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\cos \alpha = \tfrac{2\sqrt{6}}{7}\).  
+          Sinus kąta \(\alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"> A. \(\tfrac{24}{49}\)</label>
+      <label class="option"><input type="radio" name="q8" value="B"> B. \(\tfrac{5}{7}\)</label>
+      <label class="option"><input type="radio" name="q8" value="C"> C. \(\tfrac{25}{49}\)</label>
+      <label class="option"><input type="radio" name="q8" value="D"> D. \(\tfrac{\sqrt{6}}{7}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = \tfrac{24}{49}\).  
+      \(\sin^2 \alpha = 1 - \tfrac{24}{49} = \tfrac{25}{49}\).  
+      \(\sin \alpha = \tfrac{5}{7}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2023 - zad. 19)</div>
+        <div class="qtext">
+          Dla każdego kąta ostrego \(\alpha\) wyrażenie \(\cos \alpha - \cos \alpha \cdot \sin^2 \alpha\) jest równe
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"> A. \(\cos^3 \alpha\)</label>
+      <label class="option"><input type="radio" name="q9" value="B"> B. \(\sin^2 \alpha\)</label>
+      <label class="option"><input type="radio" name="q9" value="C"> C. \(1 - \sin^2 \alpha\)</label>
+      <label class="option"><input type="radio" name="q9" value="D"> D. \(\cos \alpha\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos \alpha - \cos \alpha \cdot \sin^2 \alpha = \cos \alpha (1 - \sin^2 \alpha)\).  
+      Ponieważ \(1 - \sin^2 \alpha = \cos^2 \alpha\), całość = \(\cos^3 \alpha\).
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2023 - zad. 19)</div>
+        <div class="qtext">
+          Dla każdego kąta ostrego \(\alpha\) wyrażenie \(\sin^4 \alpha + \sin^2 \alpha \cdot \cos^2 \alpha\) jest równe
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q10" value="A"> A. \(\sin^2 \alpha\)</label>
+      <label class="option"><input type="radio" name="q10" value="B"> B. \(\sin^6 \alpha \cdot \cos^2 \alpha\)</label>
+      <label class="option"><input type="radio" name="q10" value="C"> C. \(\sin^4 \alpha + 1\)</label>
+      <label class="option"><input type="radio" name="q10" value="D"> D. \(\sin^2 \alpha (\sin \alpha + \cos \alpha)(\sin \alpha - \cos \alpha)\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^4 \alpha + \sin^2 \alpha \cos^2 \alpha = \sin^2 \alpha (\sin^2 \alpha + \cos^2 \alpha)\).  
+      To daje \(\sin^2 \alpha\).
+    </div>
+  </div>
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(pokazowa 2023 - zad. 22)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry oraz \(4\tan \alpha = 3\sin^2 \alpha + 3\cos^2 \alpha\).  
+          Tangens kąta \(\alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q11" value="A"> A. \(\tfrac{3}{4}\)</label>
+      <label class="option"><input type="radio" name="q11" value="B"> B. \(\tfrac{4}{3}\)</label>
+      <label class="option"><input type="radio" name="q11" value="C"> C. \(\tfrac{1}{4}\)</label>
+      <label class="option"><input type="radio" name="q11" value="D"> D. 4</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(3\sin^2 \alpha + 3\cos^2 \alpha = 3\).  
+      Równanie: \(4\tan \alpha = 3 \Rightarrow \tan \alpha = \tfrac{3}{4}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2022 - zad. 18)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry oraz \(\tfrac{1}{\sin^2 \alpha} + \tfrac{1}{\cos^2 \alpha} = \tfrac{16}{9}\).  
+          Wartość wyrażenia \(\sin \alpha \cdot \cos \alpha\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q12" value="A"> A. \(\tfrac{4}{3}\)</label>
+      <label class="option"><input type="radio" name="q12" value="B"> B. \(\tfrac{3}{4}\)</label>
+      <label class="option"><input type="radio" name="q12" value="C"> C. \(\tfrac{16}{9}\)</label>
+      <label class="option"><input type="radio" name="q12" value="D"> D. \(\tfrac{9}{16}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{1}{\sin^2 \alpha} + \frac{1}{\cos^2 \alpha} = \frac{\sin^2 \alpha + \cos^2 \alpha}{\sin^2 \alpha \cos^2 \alpha} = \frac{1}{\sin^2 \alpha \cos^2 \alpha}\).  
+      Zatem \(\frac{1}{\sin^2 \alpha \cos^2 \alpha} = \frac{16}{9} \Rightarrow \sin^2 \alpha \cos^2 \alpha = \frac{9}{16}\).  
+      \(\sin \alpha \cos \alpha = \tfrac{3}{4}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta">(wrzesień 2022 - zad. 18)</div>
+        <div class="qtext">
+          Wartość wyrażenia \((1 - \cos 20^\circ)(1 + \cos 20^\circ) - \sin^2 20^\circ\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q13" value="A"> A. \(-1\)</label>
+      <label class="option"><input type="radio" name="q13" value="B"> B. 0</label>
+      <label class="option"><input type="radio" name="q13" value="C"> C. 1</label>
+      <label class="option"><input type="radio" name="q13" value="D"> D. 20</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \((1 - \cos 20^\circ)(1 + \cos 20^\circ) = 1 - \cos^2 20^\circ = \sin^2 20^\circ\).  
+      Po odjęciu \(\sin^2 20^\circ\) wynik to 0.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2022 - zad. 17)</div>
+        <div class="qtext">
+          Nie istnieje kąt ostry \(\alpha\) taki, że
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q14" value="A"> A. \(\sin \alpha = \tfrac{1}{3}, \cos \alpha = \tfrac{2}{3}\)</label>
+      <label class="option"><input type="radio" name="q14" value="B"> B. \(\sin \alpha = \tfrac{5}{13}, \cos \alpha = \tfrac{12}{13}\)</label>
+      <label class="option"><input type="radio" name="q14" value="C"> C. \(\sin \alpha = \tfrac{3}{5}, \cos \alpha = \tfrac{4}{5}\)</label>
+      <label class="option"><input type="radio" name="q14" value="D"> D. \(\sin \alpha = \tfrac{9}{15}, \cos \alpha = \tfrac{12}{15}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Dla opcji A: \(\sin^2 \alpha + \cos^2 \alpha = \tfrac{1}{9} + \tfrac{4}{9} = \tfrac{5}{9} \neq 1\).  
+      To sprzeczność → taki kąt nie istnieje.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2022 - zad. 16)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\sin \alpha = \tfrac{2}{3}\).  
+          Wtedy \(\cos^2 (90^\circ - \alpha)\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q15" value="A"> A. \(\tfrac{1}{9}\)</label>
+      <label class="option"><input type="radio" name="q15" value="B"> B. \(\tfrac{2}{9}\)</label>
+      <label class="option"><input type="radio" name="q15" value="C"> C. \(\tfrac{4}{9}\)</label>
+      <label class="option"><input type="radio" name="q15" value="D"> D. \(\tfrac{5}{9}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos(90^\circ - \alpha) = \sin \alpha = \tfrac{2}{3}\).  
+      Zatem \(\cos^2 (90^\circ - \alpha) = \left(\tfrac{2}{3}\right)^2 = \tfrac{4}{9}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2022 - zad. 16)</div>
+        <div class="qtext">
+          Liczba \(\cos 12^\circ \cdot \sin 78^\circ + \sin 12^\circ \cdot \cos 78^\circ\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q16" value="A"> A. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q16" value="B"> B. \(\tfrac{\sqrt{2}}{2}\)</label>
+      <label class="option"><input type="radio" name="q16" value="C"> C. \(\tfrac{\sqrt{3}}{2}\)</label>
+      <label class="option"><input type="radio" name="q16" value="D"> D. 1</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      To jest wzór na \(\sin(12^\circ+78^\circ) = \sin 90^\circ = 1\).
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2021 - zad. 15)</div>
+        <div class="qtext">
+          Kąt o mierze \(\alpha\) jest ostry i \(\tan \alpha = \sqrt{5}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q17" value="A"> A. \(\cos^2 \alpha = \tfrac{1}{6}\)</label>
+      <label class="option"><input type="radio" name="q17" value="B"> B. \(\cos^2 \alpha = \tfrac{1}{5}\)</label>
+      <label class="option"><input type="radio" name="q17" value="C"> C. \(\cos^2 \alpha = \tfrac{\sqrt{5}}{5}\)</label>
+      <label class="option"><input type="radio" name="q17" value="D"> D. \(\cos^2 \alpha = \tfrac{5}{6}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\tan^2 \alpha = 5\).  
+      \(\sin^2 \alpha = \tfrac{5}{6}, \cos^2 \alpha = \tfrac{1}{6}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2021 - zad. 16)</div>
+        <div class="qtext">
+          Dla każdego kąta ostrego \(\alpha\) iloczyn  
+          \(\dfrac{\cos \alpha}{1 - \sin^2 \alpha} \cdot \dfrac{1 - \cos^2 \alpha}{\sin \alpha}\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q18" value="A"> A. \(\sin \alpha\)</label>
+      <label class="option"><input type="radio" name="q18" value="B"> B. \(\tan \alpha\)</label>
+      <label class="option"><input type="radio" name="q18" value="C"> C. \(\cos \alpha\)</label>
+      <label class="option"><input type="radio" name="q18" value="D"> D. \(\sin^2 \alpha\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(1 - \sin^2 \alpha = \cos^2 \alpha, \quad 1 - \cos^2 \alpha = \sin^2 \alpha\).  
+      Wyrażenie = \(\dfrac{\cos \alpha}{\cos^2 \alpha} \cdot \dfrac{\sin^2 \alpha}{\sin \alpha} = \dfrac{1}{\cos \alpha} \cdot \sin \alpha = \tan \alpha\).
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2021 - zad. 19)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry oraz \(\sin \alpha = \tfrac{4}{5}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q19" value="A"> A. \(\cos \alpha = \tfrac{1}{5}\)</label>
+      <label class="option"><input type="radio" name="q19" value="B"> B. \(\cos \alpha = -\tfrac{1}{5}\)</label>
+      <label class="option"><input type="radio" name="q19" value="C"> C. \(\cos \alpha = -\tfrac{3}{5}\)</label>
+      <label class="option"><input type="radio" name="q19" value="D"> D. \(\cos \alpha = \tfrac{3}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - \sin^2 \alpha = 1 - \tfrac{16}{25} = \tfrac{9}{25}\).  
+      \(\cos \alpha = \tfrac{3}{5}\) (kąt ostry).
+    </div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2020 - zad. 17)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry oraz \(\sin \alpha = \tfrac{2\sqrt{5}}{5}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q20" value="A"> A. \(\cos \alpha = \tfrac{5}{2\sqrt{5}}\)</label>
+      <label class="option"><input type="radio" name="q20" value="B"> B. \(\cos \alpha = \tfrac{\sqrt{5}}{5}\)</label>
+      <label class="option"><input type="radio" name="q20" value="C"> C. \(\cos \alpha = \tfrac{1}{5}\)</label>
+      <label class="option"><input type="radio" name="q20" value="D"> D. \(\alpha = \tfrac{4}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha = \tfrac{20}{25} = \tfrac{4}{5}\).  
+      \(\cos^2 \alpha = \tfrac{1}{5}\).  
+      \(\cos \alpha = \tfrac{\sqrt{5}}{5}\).
+    </div>
+  </div>
+  <!-- Zadanie 21 -->
+  <div class="section" id="zad21" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 21</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2019 - zad. 13)</div>
+        <div class="qtext">
+          Cosinus kąta ostrego \(\alpha\) jest równy \(\tfrac{12}{13}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q21" value="A"> A. \(\sin \alpha = \tfrac{13}{12}\)</label>
+      <label class="option"><input type="radio" name="q21" value="B"> B. \(\sin \alpha = \tfrac{1}{13}\)</label>
+      <label class="option"><input type="radio" name="q21" value="C"> C. \(\sin \alpha = \tfrac{5}{13}\)</label>
+      <label class="option"><input type="radio" name="q21" value="D"> D. \(\sin \alpha = \tfrac{25}{169}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha = 1 - \cos^2 \alpha = 1 - \tfrac{144}{169} = \tfrac{25}{169}\).  
+      \(\sin \alpha = \tfrac{5}{13}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 22 -->
+  <div class="section" id="zad22" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 22</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2019 - zad. 12)</div>
+        <div class="qtext">
+          Kąt \(\alpha \in (0^\circ, 180^\circ)\) oraz wiadomo, że \(\sin \alpha \cdot \cos \alpha = -\tfrac{3}{8}\).  
+          Wartość wyrażenia \((\cos \alpha - \sin \alpha)^2 + 2\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q22" value="A"> A. \(\tfrac{15}{4}\)</label>
+      <label class="option"><input type="radio" name="q22" value="B"> B. \(\tfrac{9}{4}\)</label>
+      <label class="option"><input type="radio" name="q22" value="C"> C. \(\tfrac{27}{8}\)</label>
+      <label class="option"><input type="radio" name="q22" value="D"> D. \(\tfrac{21}{8}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \((\cos \alpha - \sin \alpha)^2 = \cos^2 \alpha + \sin^2 \alpha - 2\sin \alpha \cos \alpha = 1 - 2(-\tfrac{3}{8}) = 1 + \tfrac{3}{4} = \tfrac{7}{4}\).  
+      Dodając 2 otrzymujemy \(\tfrac{15}{4}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 23 -->
+  <div class="section" id="zad23" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 23</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2019 - zad. 13)</div>
+        <div class="qtext">
+          Wartość wyrażenia \(2\sin^2 18^\circ + \sin^2 72^\circ + \cos^2 18^\circ\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q23" value="A"> A. 0</label>
+      <label class="option"><input type="radio" name="q23" value="B"> B. 1</label>
+      <label class="option"><input type="radio" name="q23" value="C"> C. 2</label>
+      <label class="option"><input type="radio" name="q23" value="D"> D. 4</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Używamy tożsamości: \(\sin^2 72^\circ = \cos^2 18^\circ\).  
+      Wyrażenie = \(2\sin^2 18^\circ + 2\cos^2 18^\circ = 2\).
+    </div>
+  </div>
+
+  <!-- Zadanie 24 -->
+  <div class="section" id="zad24" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 24</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2019 - zad. 13)</div>
+        <div class="qtext">
+          Sinus kąta ostrego \(\alpha\) jest równy \(\tfrac{4}{5}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q24" value="A"> A. \(\cos \alpha = \tfrac{5}{4}\)</label>
+      <label class="option"><input type="radio" name="q24" value="B"> B. \(\cos \alpha = \tfrac{1}{5}\)</label>
+      <label class="option"><input type="radio" name="q24" value="C"> C. \(\cos \alpha = \tfrac{9}{25}\)</label>
+      <label class="option"><input type="radio" name="q24" value="D"> D. \(\cos \alpha = \tfrac{3}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - \left(\tfrac{4}{5}\right)^2 = \tfrac{9}{25}\).  
+      \(\cos \alpha = \tfrac{3}{5}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 25 -->
+  <div class="section" id="zad25" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 25</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2018 - zad. 16)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\cos \alpha = \tfrac{3}{5}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q25" value="A"> A. \(\sin \alpha \cdot \tan \alpha = \tfrac{16}{15}\)</label>
+      <label class="option"><input type="radio" name="q25" value="B"> B. \(\sin \alpha \cdot \tan \alpha = \tfrac{15}{16}\)</label>
+      <label class="option"><input type="radio" name="q25" value="C"> C. \(\sin \alpha \cdot \tan \alpha = \tfrac{8}{15}\)</label>
+      <label class="option"><input type="radio" name="q25" value="D"> D. \(\sin \alpha \cdot \tan \alpha = \tfrac{6}{20}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin \alpha = \tfrac{4}{5}, \tan \alpha = \tfrac{4}{3}\).  
+      Iloczyn = \(\tfrac{16}{15}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 26 -->
+  <div class="section" id="zad26" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 26</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2017 - zad. 13)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\sin \alpha = \tfrac{2\sqrt{6}}{7}\). Stąd wynika, że
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q26" value="A"> A. \(\cos \alpha = \tfrac{24}{49}\)</label>
+      <label class="option"><input type="radio" name="q26" value="B"> B. \(\cos \alpha = \tfrac{5}{7}\)</label>
+      <label class="option"><input type="radio" name="q26" value="C"> C. \(\cos \alpha = \tfrac{25}{49}\)</label>
+      <label class="option"><input type="radio" name="q26" value="D"> D. \(\cos \alpha = \tfrac{5\sqrt{6}}{7}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha = \tfrac{24}{49}\).  
+      \(\cos^2 \alpha = 1 - \tfrac{24}{49} = \tfrac{25}{49}\).  
+      \(\cos \alpha = \tfrac{5}{7}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 27 -->
+  <div class="section" id="zad27" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 27</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2017 - zad. 15)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\tan \alpha = \tfrac{12}{5}\). Wówczas \(\sin \alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q27" value="A"> A. \(\tfrac{5}{17}\)</label>
+      <label class="option"><input type="radio" name="q27" value="B"> B. \(\tfrac{12}{17}\)</label>
+      <label class="option"><input type="radio" name="q27" value="C"> C. \(\tfrac{5}{13}\)</label>
+      <label class="option"><input type="radio" name="q27" value="D"> D. \(\tfrac{12}{13}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin \alpha = \tfrac{12}{13}, \cos \alpha = \tfrac{5}{13}\).  
+      \(\tan \alpha = \tfrac{12}{5}\). Poprawna odpowiedź: \(\sin \alpha = \tfrac{12}{13}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 28 -->
+  <div class="section" id="zad28" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 28</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2016 - zad. 9)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\sin \alpha = \tfrac{4}{5}\).  
+          Wtedy wartość wyrażenia \(\sin \alpha - \cos \alpha\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q28" value="A"> A. \(\tfrac{1}{5}\)</label>
+      <label class="option"><input type="radio" name="q28" value="B"> B. \(\tfrac{3}{5}\)</label>
+      <label class="option"><input type="radio" name="q28" value="C"> C. \(\tfrac{17}{25}\)</label>
+      <label class="option"><input type="radio" name="q28" value="D"> D. \(\tfrac{1}{25}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos \alpha = \tfrac{3}{5}\).  
+      \(\sin \alpha - \cos \alpha = \tfrac{4}{5} - \tfrac{3}{5} = \tfrac{1}{5}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 29 -->
+  <div class="section" id="zad29" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 29</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2016 - zad. 17)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\tan \alpha = \tfrac{2}{3}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q29" value="A"> A. \(\sin \alpha = \tfrac{3\sqrt{13}}{26}\)</label>
+      <label class="option"><input type="radio" name="q29" value="B"> B. \(\sin \alpha = \tfrac{\sqrt{13}}{13}\)</label>
+      <label class="option"><input type="radio" name="q29" value="C"> C. \(\sin \alpha = \tfrac{2\sqrt{13}}{13}\)</label>
+      <label class="option"><input type="radio" name="q29" value="D"> D. \(\sin \alpha = \tfrac{3\sqrt{13}}{13}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\tan \alpha = \tfrac{2}{3} \Rightarrow \sin \alpha = \tfrac{2}{\sqrt{13}}, \cos \alpha = \tfrac{3}{\sqrt{13}}\).  
+      \(\sin \alpha = \tfrac{2\sqrt{13}}{13}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 30 -->
+  <div class="section" id="zad30" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 30</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2015 - zad. 16)</div>
+        <div class="qtext">
+          Sinus kąta ostrego \(\alpha\) jest równy \(\tfrac{3}{4}\). Wówczas
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q30" value="A"> A. \(\cos \alpha = \tfrac{1}{4}\)</label>
+      <label class="option"><input type="radio" name="q30" value="B"> B. \(\cos \alpha = \tfrac{\sqrt{7}}{4}\)</label>
+      <label class="option"><input type="radio" name="q30" value="C"> C. \(\cos \alpha = \tfrac{7}{16}\)</label>
+      <label class="option"><input type="radio" name="q30" value="D"> D. \(\cos \alpha = \tfrac{\sqrt{13}}{16}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - \left(\tfrac{3}{4}\right)^2 = \tfrac{7}{16}\).  
+      \(\cos \alpha = \tfrac{\sqrt{7}}{4}\).
+    </div>
+  </div>
+  <!-- Zadanie 31 -->
+  <div class="section" id="zad31" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 31</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2015 - zad. 8)</div>
+        <div class="qtext">
+          Wyrażenie \(3\sin^3 \alpha \cos \alpha + 3\sin \alpha \cos^3 \alpha\) może być przekształcone do postaci
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q31" value="A"> A. 3</label>
+      <label class="option"><input type="radio" name="q31" value="B"> B. \(3\sin \alpha \cos \alpha\)</label>
+      <label class="option"><input type="radio" name="q31" value="C"> C. \(3\sin^3 \alpha \cos^3 \alpha\)</label>
+      <label class="option"><input type="radio" name="q31" value="D"> D. \(6\sin^4 \alpha \cos^4 \alpha\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Grupujemy: \(3\sin \alpha \cos \alpha (\sin^2 \alpha + \cos^2 \alpha) = 3\sin \alpha \cos \alpha\).
+    </div>
+  </div>
+
+  <!-- Zadanie 32 -->
+  <div class="section" id="zad32" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 32</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2015 - zad. 15)</div>
+        <div class="qtext">
+          Jeżeli \(0^\circ < \alpha < 90^\circ\) oraz \(\tan \alpha = 2\sin \alpha\), to
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q32" value="A"> A. \(\cos \alpha = \tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q32" value="B"> B. \(\cos \alpha = \tfrac{\sqrt{2}}{2}\)</label>
+      <label class="option"><input type="radio" name="q32" value="C"> C. \(\cos \alpha = \tfrac{\sqrt{3}}{2}\)</label>
+      <label class="option"><input type="radio" name="q32" value="D"> D. \(\cos \alpha = 1\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\tan \alpha = \tfrac{\sin \alpha}{\cos \alpha} = 2\sin \alpha \Rightarrow \tfrac{1}{\cos \alpha} = 2 \Rightarrow \cos \alpha = \tfrac{1}{2}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 33 -->
+  <div class="section" id="zad33" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 33</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2014 - zad. 15)</div>
+        <div class="qtext">
+          Liczba \(\sin 150^\circ\) jest równa liczbie
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q33" value="A"> A. \(\cos 60^\circ\)</label>
+      <label class="option"><input type="radio" name="q33" value="B"> B. \(\cos 120^\circ\)</label>
+      <label class="option"><input type="radio" name="q33" value="C"> C. \(\tan 120^\circ\)</label>
+      <label class="option"><input type="radio" name="q33" value="D"> D. \(\tan 60^\circ\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin 150^\circ = \tfrac{1}{2}, \cos 60^\circ = \tfrac{1}{2}\). Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 34 -->
+  <div class="section" id="zad34" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 34</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2014 - zad. 15)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i spełniona jest równość \(3\tan \alpha = 2\).  
+          Wtedy wartość wyrażenia \(\sin \alpha + \cos \alpha\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q34" value="A"> A. 1</label>
+      <label class="option"><input type="radio" name="q34" value="B"> B. \(\tfrac{5\sqrt{13}}{26}\)</label>
+      <label class="option"><input type="radio" name="q34" value="C"> C. \(\tfrac{5\sqrt{13}}{13}\)</label>
+      <label class="option"><input type="radio" name="q34" value="D"> D. \(\sqrt{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\tan \alpha = \tfrac{2}{3}\).  
+      \(\sin \alpha = \tfrac{2}{\sqrt{13}}, \cos \alpha = \tfrac{3}{\sqrt{13}}\).  
+      Suma = \(\tfrac{5}{\sqrt{13}} = \tfrac{5\sqrt{13}}{13}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 35 -->
+  <div class="section" id="zad35" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 35</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2014 - zad. 13)</div>
+        <div class="qtext">
+          Miara kąta \(\alpha\) spełnia warunek: \(0^\circ < \alpha < 90^\circ\).  
+          Wyrażenie \(\tfrac{\cos^2 \alpha}{1-\sin^2 \alpha} + \tfrac{1-\cos^2 \alpha}{\sin^2 \alpha}\) jest równe
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q35" value="A"> A. 1</label>
+      <label class="option"><input type="radio" name="q35" value="B"> B. \(2\cos^2 \alpha\)</label>
+      <label class="option"><input type="radio" name="q35" value="C"> C. 2</label>
+      <label class="option"><input type="radio" name="q35" value="D"> D. \(2\sin^2 \alpha\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Ponieważ \(1-\sin^2 \alpha = \cos^2 \alpha\), to pierwsza część = 1.  
+      Druga = \(\tfrac{\sin^2 \alpha}{\sin^2 \alpha} = 1\). Razem 2.
+    </div>
+  </div>
+
+  <!-- Zadanie 36 -->
+  <div class="section" id="zad36" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 36</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2014 - zad. 14)</div>
+        <div class="qtext">
+          Jeżeli \(\alpha\) jest kątem ostrym oraz \(\tan \alpha = \tfrac{2}{5}\),  
+          to wartość wyrażenia \(\tfrac{3\cos \alpha - 2\sin \alpha}{\sin \alpha - 5\cos \alpha}\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q36" value="A"> A. \(-\tfrac{23}{11}\)</label>
+      <label class="option"><input type="radio" name="q36" value="B"> B. \(-\tfrac{11}{23}\)</label>
+      <label class="option"><input type="radio" name="q36" value="C"> C. \(\tfrac{5}{24}\)</label>
+      <label class="option"><input type="radio" name="q36" value="D"> D. \(\tfrac{24}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin \alpha = \tfrac{2}{\sqrt{29}}, \cos \alpha = \tfrac{5}{\sqrt{29}}\).  
+      Podstawiamy i upraszczamy: wynik = \(-\tfrac{11}{23}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 37 -->
+  <div class="section" id="zad37" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 37</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2013 - zad. 14)</div>
+        <div class="qtext">
+          Jeżeli kąt \(\alpha\) jest ostry i \(\tan \alpha = \tfrac{3}{4}\), to  
+          \(\tfrac{2 - \cos \alpha}{2 + \cos \alpha}\) równa się
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q37" value="A"> A. −1</label>
+      <label class="option"><input type="radio" name="q37" value="B"> B. −\(\tfrac{1}{3}\)</label>
+      <label class="option"><input type="radio" name="q37" value="C"> C. \(\tfrac{3}{7}\)</label>
+      <label class="option"><input type="radio" name="q37" value="D"> D. \(\tfrac{84}{25}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\tan \alpha = \tfrac{3}{4} \Rightarrow \sin \alpha = \tfrac{3}{5}, \cos \alpha = \tfrac{4}{5}\).  
+      Podstawiamy: \(\tfrac{2 - 4/5}{2 + 4/5} = \tfrac{6/5}{14/5} = \tfrac{3}{7}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 38 -->
+  <div class="section" id="zad38" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 38</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2013 - zad. 24)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\sin \alpha = \tfrac{\sqrt{3}}{3}\).  
+          Wtedy wartość wyrażenia \(2\cos^2 \alpha - 1\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q38" value="A"> A. 0</label>
+      <label class="option"><input type="radio" name="q38" value="B"> B. \(\tfrac{1}{3}\)</label>
+      <label class="option"><input type="radio" name="q38" value="C"> C. \(\tfrac{5}{9}\)</label>
+      <label class="option"><input type="radio" name="q38" value="D"> D. 1</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - \tfrac{1}{3} = \tfrac{2}{3}\).  
+      \(2\cos^2 \alpha - 1 = \tfrac{4}{3} - 1 = \tfrac{1}{3}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 39 -->
+  <div class="section" id="zad39" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 39</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2013 - zad. 6)</div>
+        <div class="qtext">
+          Dla każdego kąta ostrego \(\alpha\) wyrażenie \(\sin^2 \alpha + \sin^2 \alpha \cos^2 \alpha + \cos^4 \alpha\) jest równe
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q39" value="A"> A. \(2\sin^2 \alpha\)</label>
+      <label class="option"><input type="radio" name="q39" value="B"> B. \(2\cos^2 \alpha\)</label>
+      <label class="option"><input type="radio" name="q39" value="C"> C. 1</label>
+      <label class="option"><input type="radio" name="q39" value="D"> D. 2</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha + \cos^2 \alpha = 1\).  
+      A pozostałe składniki też sumują się do 0. Razem daje 1.
+    </div>
+  </div>
+
+  <!-- Zadanie 40 -->
+  <div class="section" id="zad40" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 40</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2013 - zad. 7)</div>
+        <div class="qtext">
+          Kąt \(\alpha\) jest ostry i \(\sin \alpha = \tfrac{1}{3}\).  
+          Wartość wyrażenia \(1 + \tan \alpha \cdot \cos \alpha\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q40" value="A"> A. \(\tfrac{4}{3}\)</label>
+      <label class="option"><input type="radio" name="q40" value="B"> B. \(\tfrac{11}{9}\)</label>
+      <label class="option"><input type="radio" name="q40" value="C"> C. \(\tfrac{17}{9}\)</label>
+      <label class="option"><input type="radio" name="q40" value="D"> D. \(\tfrac{11}{3}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos \alpha = \tfrac{2\sqrt{2}}{3}\).  
+      \(\tan \alpha = \tfrac{1/3}{2\sqrt{2}/3} = \tfrac{1}{2\sqrt{2}}\).  
+      \(1 + \tan \alpha \cos \alpha = 1 + \tfrac{1}{3} = \tfrac{4}{3}\).
+    </div>
+  </div>
+  <!-- Zadanie 41 -->
+  <div class="section" id="zad41" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 41</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2013 - zad. 14)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\sin \alpha = \tfrac{\sqrt{3}}{2}\).  
+          Wartość wyrażenia \(\cos^2 \alpha - 2\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q41" value="A"> A. −\(\tfrac{7}{4}\)</label>
+      <label class="option"><input type="radio" name="q41" value="B"> B. −\(\tfrac{1}{4}\)</label>
+      <label class="option"><input type="radio" name="q41" value="C"> C. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q41" value="D"> D. \(\tfrac{\sqrt{3}}{2}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - \tfrac{3}{4} = \tfrac{1}{4}\).  
+      \(\tfrac{1}{4} - 2 = -\tfrac{7}{4}\).
+    </div>
+  </div>
+
+  <!-- Zadanie 42 -->
+  <div class="section" id="zad42" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 42</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2012 - zad. 12)</div>
+        <div class="qtext">
+          W trójkącie prostokątnym dane są kąty ostre: α = 27° i β = 63°.  
+          Wtedy \(\tfrac{\cos α + \sin β}{\cos α}\) równa się
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q42" value="A"> A. \(1 + \sin 63^\circ\)</label>
+      <label class="option"><input type="radio" name="q42" value="B"> B. \(\sin 63^\circ\)</label>
+      <label class="option"><input type="radio" name="q42" value="C"> C. 1</label>
+      <label class="option"><input type="radio" name="q42" value="D"> D. 2</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Ponieważ \(\sin 63^\circ = \cos 27^\circ\), licznik = \(2\cos 27^\circ\).  
+      Całość = \(2\).
+    </div>
+  </div>
+
+  <!-- Zadanie 43 -->
+  <div class="section" id="zad43" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 43</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2011 - zad. 15)</div>
+        <div class="qtext">
+          Kąt α jest ostry oraz \(\sin \alpha = \cos 47^\circ\).  
+          Wtedy miara kąta α jest równa:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q43" value="A"> A. 6°</label>
+      <label class="option"><input type="radio" name="q43" value="B"> B. 33°</label>
+      <label class="option"><input type="radio" name="q43" value="C"> C. 47°</label>
+      <label class="option"><input type="radio" name="q43" value="D"> D. 43°</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin \alpha = \cos 47^\circ = \sin (90^\circ - 47^\circ) = \sin 43^\circ\).  
+      Stąd α = 43°.
+    </div>
+  </div>
+
+  <!-- Zadanie 44 -->
+  <div class="section" id="zad44" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 44</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2011 - zad. 14)</div>
+        <div class="qtext">
+          Wartość wyrażenia \(\tfrac{\sin^2 38^\circ + \cos^2 38^\circ - 1}{\sin^2 52^\circ + \cos^2 52^\circ + 1}\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q44" value="A"> A. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q44" value="B"> B. 0</label>
+      <label class="option"><input type="radio" name="q44" value="C"> C. −\(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="q44" value="D"> D. 1</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Licznik: \(\sin^2 38^\circ + \cos^2 38^\circ - 1 = 0\).  
+      Wynik = 0.
+    </div>
+  </div>
+
+  <!-- Zadanie 45 -->
+  <div class="section" id="zad45" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 45</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2011 - zad. 13)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\cos \alpha = \tfrac{5}{13}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q45" value="A"> A. \(\sin \alpha = \tfrac{12}{13}, \tan \alpha = \tfrac{12}{5}\)</label>
+      <label class="option"><input type="radio" name="q45" value="B"> B. \(\sin \alpha = \tfrac{12}{13}, \tan \alpha = \tfrac{5}{12}\)</label>
+      <label class="option"><input type="radio" name="q45" value="C"> C. \(\sin \alpha = \tfrac{12}{5}, \tan \alpha = \tfrac{12}{13}\)</label>
+      <label class="option"><input type="radio" name="q45" value="D"> D. \(\sin \alpha = \tfrac{5}{12}, \tan \alpha = \tfrac{12}{13}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin \alpha = \sqrt{1 - (5/13)^2} = 12/13\).  
+      \(\tan \alpha = \tfrac{12}{5}\).  
+      Pasuje odpowiedź A.
+    </div>
+  </div>
+
+  <!-- Zadanie 46 -->
+  <div class="section" id="zad46" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 46</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2010 - zad. 23)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\cos \alpha = \tfrac{3}{7}\). Wtedy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q46" value="A"> A. \(\sin \alpha = \tfrac{2\sqrt{10}}{7}\)</label>
+      <label class="option"><input type="radio" name="q46" value="B"> B. \(\sin \alpha = \tfrac{\sqrt{10}}{7}\)</label>
+      <label class="option"><input type="radio" name="q46" value="C"> C. \(\sin \alpha = \tfrac{4}{7}\)</label>
+      <label class="option"><input type="radio" name="q46" value="D"> D. \(\sin \alpha = \tfrac{3}{4}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin \alpha = \sqrt{1 - (3/7)^2} = \sqrt{40}/7 = 2\sqrt{10}/7\).
+    </div>
+  </div>
+
+  <!-- Zadanie 47 -->
+  <div class="section" id="zad47" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 47</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2010 - zad. 16)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\cos \alpha = \tfrac{3}{4}\). Wtedy \(\sin \alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q47" value="A"> A. \(\tfrac{1}{4}\)</label>
+      <label class="option"><input type="radio" name="q47" value="B"> B. \(\tfrac{\sqrt{3}}{4}\)</label>
+      <label class="option"><input type="radio" name="q47" value="C"> C. \(\tfrac{\sqrt{7}}{4}\)</label>
+      <label class="option"><input type="radio" name="q47" value="D"> D. \(\tfrac{7}{16}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha = 1 - (9/16) = 7/16\).  
+      \(\sin \alpha = \sqrt{7}/4\).
+    </div>
+  </div>
+
+  <!-- Zadanie 48 -->
+  <div class="section" id="zad48" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 48</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2010 - zad. 14)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\sin \alpha = \tfrac{3}{4}\).  
+          Wartość wyrażenia \(2 - \cos^2 \alpha\) jest równa
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q48" value="A"> A. \(\tfrac{25}{16}\)</label>
+      <label class="option"><input type="radio" name="q48" value="B"> B. \(\tfrac{3}{2}\)</label>
+      <label class="option"><input type="radio" name="q48" value="C"> C. \(\tfrac{17}{16}\)</label>
+      <label class="option"><input type="radio" name="q48" value="D"> D. \(\tfrac{31}{16}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - 9/16 = 7/16\).  
+      \(2 - 7/16 = 25/16\).
+    </div>
+  </div>
+
+  <!-- Zadanie 49 -->
+  <div class="section" id="zad49" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 49</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2009 - zad. 15)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\sin \alpha = \tfrac{8}{9}\). Wtedy \(\cos \alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q49" value="A"> A. \(\tfrac{1}{9}\)</label>
+      <label class="option"><input type="radio" name="q49" value="B"> B. \(\tfrac{8}{9}\)</label>
+      <label class="option"><input type="radio" name="q49" value="C"> C. \(\tfrac{\sqrt{17}}{9}\)</label>
+      <label class="option"><input type="radio" name="q49" value="D"> D. \(\tfrac{\sqrt{65}}{9}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos^2 \alpha = 1 - 64/81 = 17/81\).  
+      \(\cos \alpha = \sqrt{17}/9\).
+    </div>
+  </div>
+
+   <!-- Zadanie 50 (P/F) -->
+  <div class="section" id="zad50" data-mode="truefalse">
+    <div class="qheader">
+      <div class="qid">Zad. 50</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">
+          Dany jest kąt o mierze α taki, że \(\sin \alpha = \tfrac{4}{5}\) oraz \(90^\circ < \alpha < 180^\circ\).  
+          Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli fałszywe.
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="subq" data-ans="P">
+        <div><b>1.</b> Dla kąta α spełnione jest równanie: cos α = −3/5.</div>
+        <label class="option"><input type="radio" name="q50_1" value="P"> P</label>
+        <label class="option"><input type="radio" name="q50_1" value="F"> F</label>
+      </div>
+      <div class="subq" data-ans="F">
+        <div><b>2.</b> Dla kąta α spełnione jest równanie: |tg α| = 3/4.</div>
+        <label class="option"><input type="radio" name="q50_2" value="P"> P</label>
+        <label class="option"><input type="radio" name="q50_2" value="F"> F</label>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      W II ćwiartce: cos α = −3/5 ✔ (P), tg α = −4/3, więc |tg α| = 4/3 ≠ 3/4 ✘ (F).
+    </div>
+  </div>
+
+
+  <!-- Zadanie 51 -->
+  <div class="section" id="zad51" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 51</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\cos \alpha = \tfrac{3}{4}\). Wtedy \(\sin \alpha\) jest równy
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q51" value="A"> A. \(\tfrac{1}{4}\)</label>
+      <label class="option"><input type="radio" name="q51" value="B"> B. \(\tfrac{\sqrt{7}}{4}\)</label>
+      <label class="option"><input type="radio" name="q51" value="C"> C. \(\tfrac{7}{16}\)</label>
+      <label class="option"><input type="radio" name="q51" value="D"> D. \(\tfrac{\sqrt{7}}{16}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\sin^2 \alpha = 1 - (9/16) = 7/16\).  
+      \(\sin \alpha = \sqrt{7}/4\).
+    </div>
+  </div>
+
+  <!-- Zadanie 52 -->
+  <div class="section" id="zad52" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 52</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">
+          Kąt α jest ostry i \(\sin \alpha = \tfrac{1}{4}\). Wówczas
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q52" value="A"> A. cos α &lt; 3/4</label>
+      <label class="option"><input type="radio" name="q52" value="B"> B. cos α = 3/4</label>
+      <label class="option"><input type="radio" name="q52" value="C"> C. cos α = \(\tfrac{\sqrt{13}}{4}\)</label>
+      <label class="option"><input type="radio" name="q52" value="D"> D. cos α &gt; \(\tfrac{\sqrt{13}}{4}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\cos \alpha = \sqrt{1 - 1/16} = \sqrt{15}/4 ≈ 0.968\).  
+      \(\sqrt{13}/4 ≈ 0.901\).  
+      Faktycznie cos α > √13/4.
+    </div>
+  </div>
+
+<footer>Błędy to tylko wskazówki na drodze do sukcesu ꒰ · ◡ · ꒱</footer>
+
+</div>
+
+<script>
+function byId(id){return document.getElementById(id)}
+function setupSingleChoice(sec){
+  const correct=(sec.dataset.ans||'').trim().toUpperCase();
+  const labels=sec.querySelectorAll('.option');
+  labels.forEach(lbl=>{
+    const inp=lbl.querySelector('input[type=radio]');
+    if(!inp) return;
+    inp.addEventListener('change',()=>{
+      labels.forEach(l=>l.classList.remove('correct','incorrect'));
+      const val=(inp.value||'').toUpperCase();
+      if(val===correct){lbl.classList.add('correct');}
+      else lbl.classList.add('incorrect');
+    });
+  });
+}
+function setupPF(sec){
+  const correct=(sec.dataset.ans||'').split(',').map(s=>s.trim().toUpperCase());
+  const groups={};
+  sec.querySelectorAll('.option input[type=radio]').forEach(inp=>{
+    const nm=inp.name;if(!groups[nm]) groups[nm]=[];groups[nm].push(inp);
+  });
+  Object.entries(groups).forEach(([nm,inputs],i)=>{
+    inputs.forEach(inp=>{
+      inp.addEventListener('change',()=>{
+        inputs.forEach(x=>x.parentElement.classList.remove('correct','incorrect'));
+        const val=(inp.value||'').toUpperCase();
+        if(val===correct[i]) inp.parentElement.classList.add('correct');
+        else inp.parentElement.classList.add('incorrect');
+      });
+    });
+  });
+}
+function setupToggleSolution(sec){
+  const btn=sec.querySelector('.btn-solution');
+  const sol=sec.querySelector('.sol');
+  if(btn&&sol){
+    btn.addEventListener('click',()=>{
+      sol.style.display=sol.style.display==='block'?'none':'block';
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+function setupTrueFalse(sec){
+    const subs = sec.querySelectorAll('.subq');
+    subs.forEach(sub=>{
+      const correct = (sub.dataset.ans||'').toUpperCase();
+      const labels = sub.querySelectorAll('.option');
+      labels.forEach(lbl=>{
+        const inp = lbl.querySelector('input[type=radio]');
+        if(!inp) return;
+        inp.addEventListener('change', ()=>{
+          labels.forEach(l=>l.classList.remove('correct','incorrect'));
+          const val = (inp.value||'').toUpperCase();
+          if(val===correct){ lbl.classList.add('correct'); }
+          else { lbl.classList.add('incorrect'); }
+        });
+      });
+    });
+  }
+
+  function setupSection(sectionId){
+    const sec = byId(sectionId);
+    if(!sec) return;
+    const mode = sec.dataset.mode;
+    if(mode==="multi-any") setupMultiAny(sec);
+    else if(mode==="truefalse") setupTrueFalse(sec);
+    else setupSingleChoice(sec);
+    setupToggleSolution(sec);
+  }
+
+document.addEventListener('DOMContentLoaded',()=>{
+  for(let i=1;i<=52;i++) setupSection('zad'+i);
+});
+</script>
+</body>
+</html>

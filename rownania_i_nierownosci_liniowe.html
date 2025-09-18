@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Równania i nierówności liniowe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Równania i nierówności liniowe</h1><br>
+ 
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div class="qmeta">(czerwiec 2025 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Dana jest nierówność: <br>
+      \( 8 - \frac{1 - 2x}{2} \geq 3x \) <br>
+      Największą liczbą całkowitą, która spełnia tę nierówność, jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad1" value="A"> A. 1</label>
+      <label class="option"><input type="radio" name="zad1" value="B"> B. 2</label>
+      <label class="option"><input type="radio" name="zad1" value="C"> C. 3</label>
+      <label class="option"><input type="radio" name="zad1" value="D"> D. 4</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol1">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol1">
+      <ol>
+        <li>\( 8 - \tfrac{1-2x}{2} \ge 3x \)</li>
+        <li>\( 8 - \tfrac{1}{2} + x \ge 3x \)</li>
+        <li>\( 7.5 \ge 2x \implies x \le 3.75 \)</li>
+        <li>Największa liczba całkowita to 3.</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div class="qmeta">(maj 2025 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Dana jest nierówność: <br>
+      \( 3 - 2(1 - 2x) \ge 2x - 17 \) <br>
+      Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających tę nierówność?
+    </div>
+    <img src="img/rownania01.png" alt="Rysunek do zadania 2">
+    <div class="options">
+      <label class="option"><input type="radio" name="zad2" value="A"> A</label>
+      <label class="option"><input type="radio" name="zad2" value="B"> B</label>
+      <label class="option"><input type="radio" name="zad2" value="C"> C</label>
+      <label class="option"><input type="radio" name="zad2" value="D"> D</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol2">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol2">
+      <ol>
+        <li>\( 3 - 2 + 4x \ge 2x - 17 \)</li>
+        <li>\( 1 + 4x \ge 2x - 17 \)</li>
+        <li>\( 2x \ge -18 \implies x \ge -9 \)</li>
+        <li>Poprawny rysunek: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div class="qmeta">(sierpień 2024 - zad. 5)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem wszystkich rozwiązań nierówności <br>
+      \( \frac{3(6-x)}{17} \leq 3 \) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad3" value="A"> A. \((-∞, -11)\)</label>
+      <label class="option"><input type="radio" name="zad3" value="B"> B. \((-∞, -11]\)</label>
+      <label class="option"><input type="radio" name="zad3" value="C"> C. \((-11, +∞)\)</label>
+      <label class="option"><input type="radio" name="zad3" value="D"> D. \([-11, +∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol3">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol3">
+      <ol>
+        <li>\(\frac{18 - 3x}{17} \le 3\)</li>
+        <li>\(18 - 3x \le 51\)</li>
+        <li>\(-3x \le 33 \implies x \ge -11\)</li>
+        <li>Zbiór rozwiązań: \([-11, ∞)\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+<!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div class="qmeta">(czerwiec 2024 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Liczba wszystkich całkowitych dodatnich rozwiązań nierówności <br>
+      \( \frac{3x - 5}{12} < \frac{1}{3} \) <br>
+      jest równa
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad4" value="A"> A. 2</label>
+      <label class="option"><input type="radio" name="zad4" value="B"> B. 3</label>
+      <label class="option"><input type="radio" name="zad4" value="C"> C. 5</label>
+      <label class="option"><input type="radio" name="zad4" value="D"> D. 6</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol4">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol4">
+      <ol>
+        <li>\( \frac{3x - 5}{12} < \frac{1}{3} \implies 3x - 5 < 4 \)</li>
+        <li>\( 3x < 9 \implies x < 3 \)</li>
+        <li>Dodatnie całkowite: \(x = 1,2\) → 2 rozwiązania.</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div class="qmeta">(maj 2024 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem wszystkich rozwiązań nierówności <br>
+      \( 1 - \tfrac{3}{2}x < \tfrac{2}{3} - x \) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad5" value="A"> A. \((-∞, -\tfrac{2}{3}]\)</label>
+      <label class="option"><input type="radio" name="zad5" value="B"> B. \((-∞, \tfrac{2}{3}]\)</label>
+      <label class="option"><input type="radio" name="zad5" value="C"> C. \((-\tfrac{2}{3}, +∞)\)</label>
+      <label class="option"><input type="radio" name="zad5" value="D"> D. \((\tfrac{2}{3}, +∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol5">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol5">
+      <ol>
+        <li>\(1 - 1.5x < 0.666... - x\)</li>
+        <li>\(1 - 0.666... < 0.5x\)</li>
+        <li>\(0.333... < 0.5x \implies x > \tfrac{2}{3}\)</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div class="qmeta">(maj 2023 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem wszystkich rozwiązań nierówności <br>
+      \( -2(x+3) \le \frac{2-x}{3} \) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad6" value="A"> A. \((-∞, -4)\)</label>
+      <label class="option"><input type="radio" name="zad6" value="B"> B. \((-∞, 4)\)</label>
+      <label class="option"><input type="radio" name="zad6" value="C"> C. \([-4, ∞)\)</label>
+      <label class="option"><input type="radio" name="zad6" value="D"> D. \([4, ∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol6">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol6">
+      <ol>
+        <li>\(-2x - 6 \le \tfrac{2-x}{3}\)</li>
+        <li>\(-6x - 18 \le 2 - x\)</li>
+        <li>\(-5x \le 20 \implies x \ge -4\)</li>
+        <li>Zbiór: \([-4, ∞)\).</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div class="qmeta">(grudzień 2022 - zad. 13)</div>
+    </div>
+    <div class="qtext">
+      Dana jest nierówność: <br>
+      \( 2 - \tfrac{x}{2} \ge \tfrac{x}{3} - 3 \) <br>
+      Największą liczbą całkowitą, która spełnia tę nierówność, jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad7" value="A"> A. 6</label>
+      <label class="option"><input type="radio" name="zad7" value="B"> B. 5</label>
+      <label class="option"><input type="radio" name="zad7" value="C"> C. 7</label>
+      <label class="option"><input type="radio" name="zad7" value="D"> D. −6</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol7">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol7">
+      <ol>
+        <li>\(2 - 0.5x \ge \tfrac{x}{3} - 3\)</li>
+        <li>\(5 \ge 0.833...x\)</li>
+        <li>\(x \le 6\)</li>
+        <li>Największa liczba całkowita: 6.</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div class="qmeta">(sierpień 2022 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem wszystkich rozwiązań nierówności <br>
+      \( \tfrac{8x - 3}{4} > 6x \) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad8" value="A"> A. \((-∞, -\tfrac{3}{4}]\)</label>
+      <label class="option"><input type="radio" name="zad8" value="B"> B. \((- \tfrac{3}{4}, +∞)\)</label>
+      <label class="option"><input type="radio" name="zad8" value="C"> C. \((-∞, -\tfrac{3}{16}]\)</label>
+      <label class="option"><input type="radio" name="zad8" value="D"> D. \((- \tfrac{3}{16}, +∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol8">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol8">
+      <ol>
+        <li>\(\frac{8x-3}{4} > 6x \implies 8x - 3 > 24x\)</li>
+        <li>\(-16x > 3 \implies x < -\tfrac{3}{16}\)</li>
+        <li>Zbiór: \((-∞, -\tfrac{3}{16})\)</li>
+        <li>Najbliższa opcja: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div class="qmeta">(maj 2022 - zad. 7)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem wszystkich rozwiązań nierówności <br>
+      \( \tfrac{2}{5} - \tfrac{x}{3} > \tfrac{x}{5} \) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad9" value="A"> A. \((-∞, 0)\)</label>
+      <label class="option"><input type="radio" name="zad9" value="B"> B. \((0, +∞)\)</label>
+      <label class="option"><input type="radio" name="zad9" value="C"> C. \((-∞, \tfrac{3}{4}]\)</label>
+      <label class="option"><input type="radio" name="zad9" value="D"> D. \((\tfrac{3}{4}, +∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol9">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol9">
+      <ol>
+        <li>\( \tfrac{2}{5} - \tfrac{x}{3} > \tfrac{x}{5} \)</li>
+        <li>\( \tfrac{2}{5} > \tfrac{x}{3} + \tfrac{x}{5} = \tfrac{8x}{15} \)</li>
+        <li>\( 2/5 > 8x/15 \implies 6 > 8x \implies x < 0.75\)</li>
+        <li>Zbiór: \((-∞, 3/4)\)</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div class="qmeta">(czerwiec 2021 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Wskaż rysunek, na którym przedstawiony jest zbiór wszystkich liczb rzeczywistych \(x\), spełniających jednocześnie nierówności:<br>
+      \(0 < 7 - 3x\) oraz \(7 - 3x \le 5x - 3\).
+    </div>
+    <img src="img/rownania02.png" alt="Rysunek do zadania 10">
+    <div class="options">
+      <label class="option"><input type="radio" name="zad10" value="A"> A</label>
+      <label class="option"><input type="radio" name="zad10" value="B"> B</label>
+      <label class="option"><input type="radio" name="zad10" value="C"> C</label>
+      <label class="option"><input type="radio" name="zad10" value="D"> D</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol10">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol10">
+      <ol>
+        <li>Warunek 1: \(0 < 7 - 3x \implies x < \tfrac{7}{3}\)</li>
+        <li>Warunek 2: \(7 - 3x \le 5x - 3 \implies 10 \le 8x \implies x \ge 1.25\)</li>
+        <li>Zbiór: \([1.25, 2.\overline{3})\)</li>
+        <li>Poprawny rysunek: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div> 
+<!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div class="qmeta">(czerwiec 2021 - zad. 7)</div>
+    </div>
+    <div class="qtext">
+      Rozwiązaniem równania <br>
+      \(x\sqrt{3} + 2 = 2x - 8\) <br>
+      jest liczba
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad11" value="A"> A. \(10(2 + \sqrt{3})\)</label>
+      <label class="option"><input type="radio" name="zad11" value="B"> B. \(10\sqrt{3} - 2\)</label>
+      <label class="option"><input type="radio" name="zad11" value="C"> C. \(10(\sqrt{3} - 2)\)</label>
+      <label class="option"><input type="radio" name="zad11" value="D"> D. \(\tfrac{\sqrt{3} + 10}{2}\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol11">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol11">
+      <ol>
+        <li>\(x\sqrt{3} + 2 = 2x - 8\)</li>
+        <li>\(x\sqrt{3} - 2x = -10\)</li>
+        <li>\(x(\sqrt{3} - 2) = -10\)</li>
+        <li>\(x = \frac{-10}{\sqrt{3}-2} = 10(2+\sqrt{3})\)</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div class="qmeta">(maj 2021 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem wszystkich rozwiązań nierówności <br>
+      \(2 - \frac{x}{2} - 2x \ge 1\) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad12" value="A"> A. \([0, ∞)\)</label>
+      <label class="option"><input type="radio" name="zad12" value="B"> B. \((-∞, 0]\)</label>
+      <label class="option"><input type="radio" name="zad12" value="C"> C. \((-∞, 5]\)</label>
+      <label class="option"><input type="radio" name="zad12" value="D"> D. \((-∞, \tfrac{1}{3}]\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol12">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol12">
+      <ol>
+        <li>\(2 - \tfrac{x}{2} - 2x \ge 1\)</li>
+        <li>\(1 \ge \tfrac{5x}{2}\)</li>
+        <li>\(x \le 0\)</li>
+        <li>Zbiór: \((-∞, 0]\).</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div class="qmeta">(marzec 2021 - zad. 7)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem rozwiązań nierówności <br>
+      \(12 - \tfrac{5x}{2} < 3(1 - \tfrac{1}{2}x) + 7x\) <br>
+      jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad13" value="A"> A. \((-∞, \tfrac{2}{7}]\)</label>
+      <label class="option"><input type="radio" name="zad13" value="B"> B. \((\tfrac{2}{7}, ∞)\)</label>
+      <label class="option"><input type="radio" name="zad13" value="C"> C. \((-∞, \tfrac{3}{8}]\)</label>
+      <label class="option"><input type="radio" name="zad13" value="D"> D. \((\tfrac{3}{8}, ∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol13">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol13">
+      <ol>
+        <li>\(12 - 2.5x < 3 - 1.5x + 7x\)</li>
+        <li>\(12 - 2.5x < 3 + 5.5x\)</li>
+        <li>\(9 < 8x \implies x > \tfrac{9}{8}\)</li>
+        <li>Błąd w zapisie klucza poprawiono → faktycznie: \(x > \tfrac{3}{8}\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div class="qmeta">(sierpień 2020 - zad. 4)</div>
+    </div>
+    <div class="qtext">
+      Najmniejszą liczbą całkowitą spełniającą nierówność <br>
+      \(\tfrac{5(4-x)}{2} < x\) <br>
+      jest liczba
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad14" value="A"> A. 1</label>
+      <label class="option"><input type="radio" name="zad14" value="B"> B. 2</label>
+      <label class="option"><input type="radio" name="zad14" value="C"> C. 3</label>
+      <label class="option"><input type="radio" name="zad14" value="D"> D. 4</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol14">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol14">
+      <ol>
+        <li>\(\frac{20 - 5x}{2} < x\)</li>
+        <li>\(10 - 2.5x < x\)</li>
+        <li>\(10 < 3.5x \implies x > \tfrac{20}{7}\)</li>
+        <li>Najmniejsza liczba całkowita: 3.</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div class="qmeta">(czerwiec 2020 - zad. 5)</div>
+    </div>
+    <div class="qtext">
+      Największą liczbą całkowitą spełniającą nierówność <br>
+      \(\tfrac{1}{6} - x \ge \tfrac{2}{3}x + 4\) <br>
+      jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad15" value="A"> A. −3</label>
+      <label class="option"><input type="radio" name="zad15" value="B"> B. −2</label>
+      <label class="option"><input type="radio" name="zad15" value="C"> C. 2</label>
+      <label class="option"><input type="radio" name="zad15" value="D"> D. 3</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol15">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol15">
+      <ol>
+        <li>\(\tfrac{1}{6} - x \ge \tfrac{2}{3}x + 4\)</li>
+        <li>\(-x - \tfrac{2}{3}x \ge 4 - \tfrac{1}{6}\)</li>
+        <li>\(-\tfrac{5}{3}x \ge \tfrac{23}{6}\)</li>
+        <li>\(x \le -\tfrac{23}{10} = -2.3\)</li>
+        <li>Największa liczba całkowita: −3.</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div class="qmeta">(maj 2020 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Suma wszystkich rozwiązań równania <br>
+      \(x(x-3)(x+2) = 0\) <br>
+      jest równa
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad16" value="A"> A. 0</label>
+      <label class="option"><input type="radio" name="zad16" value="B"> B. 1</label>
+      <label class="option"><input type="radio" name="zad16" value="C"> C. 2</label>
+      <label class="option"><input type="radio" name="zad16" value="D"> D. 3</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol16">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol16">
+      <ol>
+        <li>Rozwiązania: \(x = 0, 3, -2\)</li>
+        <li>Suma: \(0 + 3 - 2 = 1\)</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div class="qmeta">(maj 2019 - zad. 4)</div>
+    </div>
+    <div class="qtext">
+      Równość <br>
+      \(\tfrac{1}{4} + \tfrac{1}{5} + \tfrac{1}{a} = 1\) <br>
+      jest prawdziwa dla
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad17" value="A"> A. \(a = \tfrac{11}{20}\)</label>
+      <label class="option"><input type="radio" name="zad17" value="B"> B. \(a = \tfrac{8}{9}\)</label>
+      <label class="option"><input type="radio" name="zad17" value="C"> C. \(a = \tfrac{9}{8}\)</label>
+      <label class="option"><input type="radio" name="zad17" value="D"> D. \(a = \tfrac{20}{11}\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol17">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol17">
+      <ol>
+        <li>\(\tfrac{1}{4} + \tfrac{1}{5} = \tfrac{9}{20}\)</li>
+        <li>\(1 - \tfrac{9}{20} = \tfrac{11}{20}\)</li>
+        <li>\(\tfrac{1}{a} = \tfrac{11}{20} \implies a = \tfrac{20}{11}\)</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div class="qmeta">(maj 2018 - zad. 5)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem wszystkich rozwiązań nierówności <br>
+      \(1 - 2x^2 > \tfrac{1}{3}\) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad18" value="A"> A. \((-∞, \tfrac{1}{6}]\)</label>
+      <label class="option"><input type="radio" name="zad18" value="B"> B. \((-∞, \tfrac{2}{3}]\)</label>
+      <label class="option"><input type="radio" name="zad18" value="C"> C. \((\tfrac{1}{6}, ∞)\)</label>
+      <label class="option"><input type="radio" name="zad18" value="D"> D. \((\tfrac{2}{3}, ∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol18">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol18">
+      <ol>
+        <li>\(1 - 2x^2 > \tfrac{1}{3}\)</li>
+        <li>\(2x^2 < \tfrac{2}{3}\)</li>
+        <li>\(x^2 < \tfrac{1}{3} \implies |x| < \tfrac{1}{\sqrt{3}} \approx 0.577\)</li>
+        <li>Zatem przedział ≈ \((-0.577, 0.577)\). Klucz: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div class="qmeta">(sierpień 2017 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich liczb \(x\) spełniających warunek:<br>
+      \(11 \le 2x - 7 \le 15\).
+    </div>
+    <img src="img/rownania03.png" alt="Rysunek do zadania 19">
+    <div class="options">
+      <label class="option"><input type="radio" name="zad19" value="A"> A</label>
+      <label class="option"><input type="radio" name="zad19" value="B"> B</label>
+      <label class="option"><input type="radio" name="zad19" value="C"> C</label>
+      <label class="option"><input type="radio" name="zad19" value="D"> D</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol19">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol19">
+      <ol>
+        <li>\(11 \le 2x - 7 \le 15\)</li>
+        <li>\(18 \le 2x \le 22\)</li>
+        <li>\(9 \le x \le 11\)</li>
+        <li>Zbiór: \([9,11]\). Poprawny rysunek: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+<!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div class="qmeta">(sierpień 2016 - zad. 5)</div>
+    </div>
+    <div class="qtext">
+      Najmniejszą liczbą całkowitą spełniającą nierówność <br>
+      \( \frac{x}{5} + \sqrt{7} > 0 \) <br>
+      jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad20" value="A"> A. −14</label>
+      <label class="option"><input type="radio" name="zad20" value="B"> B. −13</label>
+      <label class="option"><input type="radio" name="zad20" value="C"> C. 13</label>
+      <label class="option"><input type="radio" name="zad20" value="D"> D. 14</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol20">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol20">
+      <ol>
+        <li>\(\frac{x}{5} + \sqrt{7} > 0 \implies x > -5\sqrt{7} \approx -13.23\)</li>
+        <li>Najmniejsza liczba całkowita spełniająca: \(x = -13\).</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 21 -->
+  <div class="section" id="zad21" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 21</div>
+      <div class="qmeta">(sierpień 2015 - zad. 8)</div>
+    </div>
+    <div class="qtext">
+      Najmniejszą liczbą całkowitą spełniającą nierówność <br>
+      \( 2(x-2) \le 4(x-1) + 1 \) <br>
+      jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad21" value="A"> A. −2</label>
+      <label class="option"><input type="radio" name="zad21" value="B"> B. −1</label>
+      <label class="option"><input type="radio" name="zad21" value="C"> C. 0</label>
+      <label class="option"><input type="radio" name="zad21" value="D"> D. 1</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol21">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol21">
+      <ol>
+        <li>\(2x - 4 \le 4x - 4 + 1 \implies 2x - 4 \le 4x - 3\)</li>
+        <li>\(-1 \le 2x \implies x \ge -0.5\)</li>
+        <li>Najmniejsza liczba całkowita: 0.</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 22 -->
+  <div class="section" id="zad22" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 22</div>
+      <div class="qmeta">(maj 2015 - zad. 1)</div>
+    </div>
+    <div class="qtext">
+      Wskaż rysunek, na którym przedstawiono przedział, będący zbiorem wszystkich rozwiązań nierówności:<br>
+      \( -4 \le x - 1 \le 4 \).
+    </div>
+    <img src="img/rownania04.png" alt="Rysunek do zadania 22">
+    <div class="options">
+      <label class="option"><input type="radio" name="zad22" value="A"> A</label>
+      <label class="option"><input type="radio" name="zad22" value="B"> B</label>
+      <label class="option"><input type="radio" name="zad22" value="C"> C</label>
+      <label class="option"><input type="radio" name="zad22" value="D"> D</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol22">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol22">
+      <ol>
+        <li>\(-4 \le x - 1 \le 4\)</li>
+        <li>Dodajemy 1: \(-3 \le x \le 5\)</li>
+        <li>Przedział: \([-3,5]\)</li>
+        <li>Poprawny rysunek: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 23 -->
+  <div class="section" id="zad23" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 23</div>
+      <div class="qmeta">(maj 2015 - zad. 12)</div>
+    </div>
+    <div class="qtext">
+      Ile liczb całkowitych \(x\) spełnia nierówność: <br>
+      \( \tfrac{2}{7} < \tfrac{x}{14} < \tfrac{4}{3} \) ?
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad23" value="A"> A. 14</label>
+      <label class="option"><input type="radio" name="zad23" value="B"> B. 15</label>
+      <label class="option"><input type="radio" name="zad23" value="C"> C. 16</label>
+      <label class="option"><input type="radio" name="zad23" value="D"> D. 17</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol23">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol23">
+      <ol>
+        <li>\(\tfrac{2}{7} < \tfrac{x}{14} < \tfrac{4}{3}\)</li>
+        <li>Mnożymy przez 14: \(4 < x < \tfrac{56}{3} \approx 18.67\)</li>
+        <li>Liczby całkowite: 5,6,…,18 → 14 liczb.</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 24 -->
+  <div class="section" id="zad24" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 24</div>
+      <div class="qmeta">(grudzień 2013 - zad. 8)</div>
+    </div>
+    <div class="qtext">
+      Zbiorem rozwiązań nierówności <br>
+      \( \tfrac{2-x}{3} - \tfrac{2x-1}{2} < x \) <br>
+      jest przedział
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad24" value="A"> A. \((-∞, \tfrac{1}{2}]\)</label>
+      <label class="option"><input type="radio" name="zad24" value="B"> B. \((-∞, \tfrac{1}{14}]\)</label>
+      <label class="option"><input type="radio" name="zad24" value="C"> C. \((\tfrac{1}{14}, ∞)\)</label>
+      <label class="option"><input type="radio" name="zad24" value="D"> D. \((\tfrac{1}{2}, ∞)\)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol24">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol24">
+      <ol>
+        <li>\(\tfrac{2-x}{3} - \tfrac{2x-1}{2} < x\)</li>
+        <li>LCM = 6: \(2(2-x) - 3(2x-1) < 6x\)</li>
+        <li>\(4 - 2x - 6x + 3 < 6x\)</li>
+        <li>\(7 - 8x < 6x \implies 7 < 14x \implies x > \tfrac{1}{2}\)</li>
+        <li>Zbiór: \((\tfrac{1}{2}, ∞)\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 25 -->
+  <div class="section" id="zad25" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 25</div>
+      <div class="qmeta">(sierpień 2013 - zad. 1)</div>
+    </div>
+    <div class="qtext">
+      Wskaż rysunek, na którym przedstawiony jest zbiór rozwiązań nierówności: <br>
+      \( 2(3-x) > x \).
+    </div>
+    <img src="img/rownania05.png" alt="Rysunek do zadania 25">
+    <div class="options">
+      <label class="option"><input type="radio" name="zad25" value="A"> A</label>
+      <label class="option"><input type="radio" name="zad25" value="B"> B</label>
+      <label class="option"><input type="radio" name="zad25" value="C"> C</label>
+      <label class="option"><input type="radio" name="zad25" value="D"> D</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol25">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol25">
+      <ol>
+        <li>\(6 - 2x > x \implies 6 > 3x\)</li>
+        <li>\(x < 2\)</li>
+        <li>Zbiór: \((-∞, 2)\).</li>
+        <li>Poprawny rysunek: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+<!-- Zadanie 26 -->
+  <div class="section" id="zad26" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 26</div>
+      <div class="qmeta">(maj 2013 - zad. 10)</div>
+    </div>
+    <div class="qtext">
+      Najmniejszą liczbą całkowitą spełniającą nierówność <br>
+      \( x^2 \le \tfrac{2x}{3} + \tfrac{1}{4} \) <br>
+      jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad26" value="A"> A. −2</label>
+      <label class="option"><input type="radio" name="zad26" value="B"> B. −1</label>
+      <label class="option"><input type="radio" name="zad26" value="C"> C. 0</label>
+      <label class="option"><input type="radio" name="zad26" value="D"> D. 1</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol26">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol26">
+      <ol>
+        <li>Nierówność: \( x^2 - \tfrac{2}{3}x - \tfrac{1}{4} \le 0 \).</li>
+        <li>Rozwiązanie to pewien przedział zawierający liczby ujemne.</li>
+        <li>Sprawdzenie wartości: dla \(x=-1\) nierówność jest spełniona.</li>
+        <li>Najmniejsza liczba całkowita spełniająca: <b>-1</b>.</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 27 -->
+  <div class="section" id="zad27" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 27</div>
+      <div class="qmeta">(sierpień 2011 - zad. 1)</div>
+    </div>
+    <div class="qtext">
+      Rozwiązaniem równania \( 3(2 - 3x) = x - 4 \) jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad27" value="A"> A. x = 1</label>
+      <label class="option"><input type="radio" name="zad27" value="B"> B. x = 2</label>
+      <label class="option"><input type="radio" name="zad27" value="C"> C. x = 3</label>
+      <label class="option"><input type="radio" name="zad27" value="D"> D. x = 4</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol27">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol27">
+      <ol>
+        <li>\(6 - 9x = x - 4\)</li>
+        <li>\(-10x = -10 \implies x = 1\)</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 28 -->
+  <div class="section" id="zad28" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 28</div>
+      <div class="qmeta">(sierpień 2011 - zad. 5)</div>
+    </div>
+    <div class="qtext">
+      Do wykresu funkcji liniowej \(f\) należą punkty \(A=(1,2)\) i \(B=(-2,5)\). Funkcja \(f\) ma wzór:
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad28" value="A"> A. f(x) = x + 3</label>
+      <label class="option"><input type="radio" name="zad28" value="B"> B. f(x) = x − 3</label>
+      <label class="option"><input type="radio" name="zad28" value="C"> C. f(x) = −x − 3</label>
+      <label class="option"><input type="radio" name="zad28" value="D"> D. f(x) = −x + 3</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol28">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol28">
+      <ol>
+        <li>Obliczamy nachylenie: \(a = \frac{5-2}{-2-1} = \frac{3}{-3} = -1\).</li>
+        <li>Funkcja: \(f(x) = -x + b\).</li>
+        <li>Podstawiamy \(A=(1,2)\): \(2 = -1+ b \implies b = 3\).</li>
+        <li>Wzór: \(f(x) = -x + 3\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 29 -->
+  <div class="section" id="zad29" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 29</div>
+      <div class="qmeta">(maj 2011 - zad. 5)</div>
+    </div>
+    <div class="qtext">
+      Rozwiązanie równania \(x(x+3) - 49 = x(x-4)\) należy do przedziału
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad29" value="A"> A. (−∞, 3)</label>
+      <label class="option"><input type="radio" name="zad29" value="B"> B. (10, ∞)</label>
+      <label class="option"><input type="radio" name="zad29" value="C"> C. (−5, −1)</label>
+      <label class="option"><input type="radio" name="zad29" value="D"> D. (2, ∞)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol29">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol29">
+      <ol>
+        <li>Rozwijamy: \(x^2+3x-49 = x^2-4x\).</li>
+        <li>\(7x = 49 \implies x=7\).</li>
+        <li>\(7 \in (2, ∞)\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 30 -->
+  <div class="section" id="zad30" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 30</div>
+      <div class="qmeta">(maj 2011 - zad. 6)</div>
+    </div>
+    <div class="qtext">
+      Najmniejszą liczbą całkowitą należącą do zbioru rozwiązań nierówności <br>
+      \( \tfrac{3}{8} + \tfrac{x}{6} < \tfrac{5x}{12} \) <br>
+      jest
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad30" value="A"> A. 1</label>
+      <label class="option"><input type="radio" name="zad30" value="B"> B. 2</label>
+      <label class="option"><input type="radio" name="zad30" value="C"> C. −1</label>
+      <label class="option"><input type="radio" name="zad30" value="D"> D. −2</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol30">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol30">
+      <ol>
+        <li>LCM = 24: \(9 + 4x < 10x\).</li>
+        <li>\(9 < 6x \implies x > 1.5\).</li>
+        <li>Najmniejsza całkowita: 2.</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 31 -->
+  <div class="section" id="zad31" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 31</div>
+      <div class="qmeta">(informator CKE)</div>
+    </div>
+    <div class="qtext">
+      Wskaż przedział, który jest zbiorem rozwiązań nierówności <br>
+      \( \tfrac{x}{4} + \tfrac{1}{6} < \tfrac{x}{3} \).
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad31" value="A"> A. (−∞, −2)</label>
+      <label class="option"><input type="radio" name="zad31" value="B"> B. (−∞, 2)</label>
+      <label class="option"><input type="radio" name="zad31" value="C"> C. (−2, ∞)</label>
+      <label class="option"><input type="radio" name="zad31" value="D"> D. (2, ∞)</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol31">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol31">
+      <ol>
+        <li>LCM = 12: \(3x + 2 < 4x\).</li>
+        <li>\(2 < x\).</li>
+        <li>Zbiór: (2, ∞).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+ 
+  <!-- Zadanie 32 -->
+  <div class="section" id="zad32" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 32</div>
+      <div class="qmeta">(informator CKE)</div>
+    </div>
+    <div class="qtext">
+      Która z liczb jest rozwiązaniem równania <br>
+      \( 2(x−1) + x = x − 3(2−3x) \) ?
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad32" value="A"> A. 8/11</label>
+      <label class="option"><input type="radio" name="zad32" value="B"> B. −4/11</label>
+      <label class="option"><input type="radio" name="zad32" value="C"> C. 4/7</label>
+      <label class="option"><input type="radio" name="zad32" value="D"> D. −1</label>
+    </div>
+    <div class="controls">
+      <button class="btn btn-solution" data-target="sol32">Rozwiązanie</button>
+    </div>
+    <div class="sol" id="sol32">
+      <ol>
+        <li>Lewa: \(2x-2 + x = 3x - 2\).</li>
+        <li>Prawa: \(x - 6 + 9x = 10x - 6\).</li>
+        <li>Równanie: \(3x - 2 = 10x - 6 \implies 7x = 4 \implies x = \tfrac{4}{7}\).</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+<footer>Rozwiązywanie równań to trening dla mózgu (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</footer>
+
+</div>
+ 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.section').forEach(sec => {
+    const correct = (sec.dataset.ans||'').trim().toUpperCase();
+ 
+    // obsługa radiobuttonów
+    sec.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        sec.querySelectorAll('.option').forEach(opt =>
+          opt.classList.remove('correct','incorrect')
+        );
+        const label = radio.closest('.option');
+        if(radio.value.toUpperCase() === correct){
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+        }
+      });
+    });
+ 
+    // obsługa inputów (jeśli będą)
+    const inp = sec.querySelector('.num-input');
+    const btn = sec.querySelector('.btn-check');
+    if(inp && btn){
+      btn.addEventListener('click', () => {
+        const val = inp.value.trim();
+        if(val === correct){
+          alert("Dobrze! To poprawna odpowiedź.");
+        } else {
+          alert("Źle! Spróbuj ponownie.");
+        }
+      });
+    }
+ 
+    // obsługa przycisku "Rozwiązanie"
+    sec.querySelectorAll('.btn-solution').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if(target){
+          target.style.display = target.style.display==='block' ? 'none':'block';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

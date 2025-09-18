@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Symetria w układzie współrzędnych</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+<h1>Symetria w układzie współrzędnych</h1><br>
+<!-- Zad. 1 -->
+<div class="section" id="zad1" data-ans="F,F" data-mode="multi-pf">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2024 - zad. 12)</div>
+      <div class="qtext">
+        Funkcja \(y=f(x)\) jest określona za pomocą tabeli:
+        <center>
+        <table style="border-collapse:collapse; margin:8px;">
+          <tbody>
+            <tr>
+              <td style="border:1px solid #1f2a35; padding:10px;"><b>x</b></td>
+              <td style="border:1px solid #1f2a35; padding:10px;">−2</td>
+              <td style="border:1px solid #1f2a35; padding:10px;">−1</td>
+              <td style="border:1px solid #1f2a35; padding:10px">0</td>
+              <td style="border:1px solid #1f2a35; padding:10px">1</td>
+              <td style="border:1px solid #1f2a35; padding:10px">2</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #1f2a35; padding:10px;"><b>y</b></td>
+              <td style="border:1px solid #1f2a35; padding:10px;">−1</td>
+              <td style="border:1px solid #1f2a35; padding:10px;">0</td>
+              <td style="border:1px solid #1f2a35; padding:10px;">1</td>
+              <td style="border:1px solid #1f2a35; padding:10px;">0</td>
+              <td style="border:1px solid #1f2a35; padding:10px;">3</td>
+            </tr>
+          </tbody>
+        </table></center>
+        Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.
+      </div>
+    </div>
+  </div>
+  <div class="qmeta"><b>1.</b> Funkcja \(f\) ma dokładnie jedno miejsce zerowe.</div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q1_1" value="P"><div><b>P.</b> Prawda</div></label>
+    <label class="option"><input type="radio" name="q1_1" value="F"><div><b>F.</b> Fałsz</div></label>
+  </div><br>
+
+  <div class="qmeta"><b>2.</b> W kartezjańskim układzie współrzędnych wykres funkcji \(f\) jest symetryczny względem osi \(Oy\).</div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q1_2" value="P"><div><b>P.</b> Prawda</div></label>
+    <label class="option"><input type="radio" name="q1_2" value="F"><div><b>F.</b> Fałsz</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    1) Miejsca zerowe to \(x\) dla których \(y=0\). Z tabeli wartości \(y=0\) dla \(x=-1\) i \(x=1\) — są więc **dwa** miejsca zerowe. Stwierdzenie 1 jest fałszywe. (F)
+    <br><br>
+    2) Symetria względem osi \(Oy\) oznacza, że dla każdego \(x\) powinno być \(f(-x)=f(x)\). Sprawdzamy: \(f(-2)=-1\) a \(f(2)=3\) — różne, zatem wykres nie jest symetryczny względem \(Oy\). Stwierdzenie 2 jest fałszywe. (F)
+  </div>
+</div>
+
+<!-- Zad. 2 -->
+<div class="section" id="zad2" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 2</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2024 - zad. 23.2)</div>
+      <div class="qtext">
+        Okrąg \(O\) o równaniu \((x-1)^2+(y+2)^2=5\). Okrąg \(K\) jest obrazem \(O\) w symetrii środkowej względem początku układu współrzędnych. Równanie okręgu \(K\) jest:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> \((x-1)^2+(y+2)^2=5\)</div></label>
+    <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> \((x+1)^2+(y+2)^2=5\)</div></label>
+    <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> \((x-1)^2+(y-2)^2=5\)</div></label>
+    <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> \((x+1)^2+(y-2)^2=5\)</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Symetria środkowa względem początku (0,0) wysyła punkt \((x,y)\) na \((-x,-y)\). Środek okręgu \(O\) to \(S=(1,-2)\). Obrazem środka w symetrii środkowej będzie \((-1,2)\). Zatem równanie okręgu \(K\) to \((x+1)^2+(y-2)^2=5\). Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zad. 3 -->
+<div class="section" id="zad3" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 3</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2022 - zad. 24)</div>
+      <div class="qtext">
+        Obrazem prostej \(y=2x+5\) w symetrii osiowej względem osi \(Ox\) jest prosta o równaniu:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> \(y=2x-5\)</div></label>
+    <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> \(y=-2x-5\)</div></label>
+    <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> \(y=-2x+5\)</div></label>
+    <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> \(y=2x+5\)</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Symetria względem osi \(Ox\) zmienia znak współrzędnej \(y\): \((x,y)\mapsto(x,-y)\). Prosta \(y=2x+5\) po odbiciu daje równanie \(-y=2x+5\) czyli \(y=-2x-5\). Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zad. 4 -->
+<div class="section" id="zad4" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 4</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2021 - zad. 24)</div>
+      <div class="qtext">
+        Obrazem prostej \(x-2y+3=0\) w symetrii osiowej względem osi \(Oy\) jest prosta o równaniu:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> \(-x+2y+3=0\)</div></label>
+    <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(-x+2y-3=0\)</div></label>
+    <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> \(x+2y-3=0\)</div></label>
+    <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> \(x+2y+3=0\)</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Symetria względem osi \(Oy\) zamienia \(x\) na \(-x\). Podstawiamy: \((-x)-2y+3=0\) → \(-x-2y+3=0\). Możemy pomnożyć przez \(-1\): \(x+2y-3=0\). Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zad. 5 -->
+<div class="section" id="zad5" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 5</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2020 - zad. 20)</div>
+      <div class="qtext">
+        Punkt \(B\) jest obrazem punktu \(A=(-3,5)\) w symetrii względem początku układu współrzędnych. Długość odcinka \(AB\) jest równa:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> \(2\sqrt{34}\)</div></label>
+    <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> 8</div></label>
+    <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> \(\sqrt{34}\)</div></label>
+    <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> 12</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Obraz punktu \(A=(-3,5)\) w symetrii względem początku to \(B=(3,-5)\). Długość odcinka \(AB\):
+    \[
+      |AB|=\sqrt{(3-(-3))^2+(-5-5)^2}=\sqrt{6^2+(-10)^2}=\sqrt{36+100}=\sqrt{136}=2\sqrt{34}.
+    \]
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zad. 6 -->
+<div class="section" id="zad6" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 6</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2019 - zad. 19)</div>
+      <div class="qtext">
+        Punkt \(P=(-6,-8)\) przekształcono najpierw w symetrii względem osi \(Ox\), a potem względem osi \(Oy\). Otrzymano punkt \(Q\). Zatem:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> \(Q=(6,8)\)</div></label>
+    <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> \(Q=(-6,-8)\)</div></label>
+    <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> \(Q=(8,6)\)</div></label>
+    <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> \(Q=(-8,-6)\)</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Symetria względem osi \(Ox\) zamienia \((x,y)\mapsto(x,-y)\): \(P\mapsto(-6,8)\). Następnie symetria względem osi \(Oy\) zamienia \((x,y)\mapsto(-x,y)\): \((-6,8)\mapsto(6,8)\). Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zad. 7 (z obrazkiem) -->
+<div class="section" id="zad7" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 7</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2019 - zad. 19)</div>
+      <div class="qtext">
+        Na rysunku fragment wykresu funkcji liniowej \(f\). Na wykresie leżą punkty \(A=(0,4)\) i \(B=(2,2)\).
+        <br><br>
+        Obrazem prostej \(AB\) w symetrii względem początku układu współrzędnych jest wykres funkcji \(g\) określonej wzorem:
+      </div>
+    </div>
+  </div>
+
+  <!-- obrazek -->
+  <div style="margin-top:10px;">
+    <img src="img/symetria.png" alt="symetria - rysunek">
+  </div>
+
+  <div class="options" style="margin-top:12px;">
+    <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> \(g(x)=x+4\)</div></label>
+    <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> \(g(x)=x-4\)</div></label>
+    <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> \(g(x)=-x-4\)</div></label>
+    <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> \(g(x)=-x+4\)</div></label>
+  </div>
+
+  <div class="controls"><!-- brak rozwiązania krok po kroku - zadanie z obrazkiem --></div>
+</div>
+
+<!-- Zad. 8 -->
+<div class="section" id="zad8" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 8</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2017 - zad. 19)</div>
+      <div class="qtext">
+        Punkty \(A=(-21,11)\) i \(B=(3,17)\) są końcami odcinka \(AB\). Obrazem tego odcinka w symetrii względem osi \(Ox\) jest odcinek \(A'B'\). Środkiem odcinka \(A'B'\) jest punkt o współrzędnych:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> \((-9,-14)\)</div></label>
+    <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> \((-9,14)\)</div></label>
+    <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> \((9,-14)\)</div></label>
+    <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> \((9,14)\)</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Środek odcinka \(AB\): \(\left(\frac{-21+3}{2},\frac{11+17}{2}\right)=(-9,14)\). Po odbiciu względem osi \(Ox\) zmienia się znak współrzędnej \(y\): środek \(A'B'\) ma współrzędne \((-9,-14)\). Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zad. 9 -->
+<div class="section" id="zad9" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 9</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2015 - zad. 20)</div>
+      <div class="qtext">
+        Dane są punkty \(M=(-2,1)\) i \(N=(-1,3)\). Punkt \(K\) jest środkiem odcinka \(MN\). Obrazem punktu \(K\) w symetrii względem początku układu współrzędnych jest punkt:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> \(\left(2,\,-\tfrac{3}{2}\right)\)</div></label>
+    <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> \(\left(2,\tfrac{3}{2}\right)\)</div></label>
+    <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> \(\left(\tfrac{3}{2},2\right)\)</div></label>
+    <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> \(\left(\tfrac{3}{2},-2\right)\)</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Środek \(K\) odcinka \(MN\) to:
+    \[
+      K=\left(\frac{-2+(-1)}{2},\frac{1+3}{2}\right)=\left(-\tfrac{3}{2},2\right).
+    \]
+    Obraz w symetrii środkowej względem początku: \(K'=\left(\tfrac{3}{2},-2\right)\). Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zad. 10 -->
+<div class="section" id="zad10" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 10</div>
+    <div style="flex:1">
+      <div class="qmeta">(grudzień 2014 - zad. 2)</div>
+      <div class="qtext">
+        Okrąg o środku \(S=(-6,-8)\) i promieniu \(2014\). Obraz tego okręgu w symetrii osiowej względem osi \(Oy\) ma środek \(S_1\). Odległość między punktami \(S\) i \(S_1\) jest równa:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q10" value="A"><div><b>A.</b> 12</div></label>
+    <label class="option"><input type="radio" name="q10" value="B"><div><b>B.</b> 16</div></label>
+    <label class="option"><input type="radio" name="q10" value="C"><div><b>C.</b> 2014</div></label>
+    <label class="option"><input type="radio" name="q10" value="D"><div><b>D.</b> 4028</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Symetria względem osi \(Oy\) zmienia \((x,y)\mapsto(-x,y)\). Zatem \(S=(-6,-8)\mapsto S_1=(6,-8)\). Odległość:
+    \[
+      |SS_1|=\sqrt{(6-(-6))^2+(-8-(-8))^2}=\sqrt{12^2+0} = 12.
+    \]
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zad. 11 -->
+<div class="section" id="zad11" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 11</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">
+        Dane punkty \(A=(1,2)\) i \(B=(3,7)\). Punkty \(A_O\) i \(B_O\) są obrazami \(A\) i \(B\) w symetrii środkowej względem \(O=(0,0)\). Współczynnik kierunkowy prostej przechodzącej przez \(A_O\) i \(B_O\) jest równy:
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> \(\tfrac{5}{2}\)</div></label>
+    <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> \(-\tfrac{5}{2}\)</div></label>
+    <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> \(\tfrac{2}{5}\)</div></label>
+    <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> \(-\tfrac{2}{5}\)</div></label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Symetria środkowa względem początku zamienia punkt \((x,y)\) na \((-x,-y)\). Zatem \(A_O=(-1,-2)\), \(B_O=(-3,-7)\). Współczynnik kierunkowy prostej przez te punkty:
+    \[
+      m=\frac{-7-(-2)}{-3-(-1)}=\frac{-5}{-2}=\frac{5}{2}.
+    \]
+    Odp.: <b>A</b>.
+  </div>
+</div>
+<footer>Pamiętaj: nie musisz być idealny, wystarczy że się starasz (¬‿¬)</footer>
+
+</div>
+<script>
+function byId(id){return document.getElementById(id)}
+function setupSingleChoice(sec){
+  const correct = (sec.dataset.ans||'').trim().toUpperCase();
+  const groups = {};
+  sec.querySelectorAll('.option input[type=radio]').forEach(inp=>{
+    const name = inp.name;
+    if(!groups[name]) groups[name] = [];
+    groups[name].push(inp);
+  });
+  Object.entries(groups).forEach(([name,inputs],idx)=>{
+    inputs.forEach(inp=>{
+      inp.addEventListener('change',()=>{
+        inputs.forEach(i=>i.parentElement.classList.remove('correct','incorrect'));
+        if(inp.value.toUpperCase()===correct.split(',')[idx]){
+          inp.parentElement.classList.add('correct');
+        } else {
+          inp.parentElement.classList.add('incorrect');
+        }
+      });
+    });
+  });
+}
+function setupToggleSolution(sec){
+  const btn=sec.querySelector('.btn-solution');
+  const sol=sec.querySelector('.sol');
+  if(btn&&sol){
+    btn.addEventListener('click',()=>{
+      sol.style.display=sol.style.display==='block'?'none':'block';
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+function setupSection(id){
+  const sec=byId(id);
+  if(!sec) return;
+  setupSingleChoice(sec);
+  setupToggleSolution(sec);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  for(let i=1;i<=28;i++){ setupSection('zad'+i); }
+});
+</script>
+</body>
+</html>

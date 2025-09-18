@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinus, cosinus, tangens</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+    <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Sinus, cosinus, tangens</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="F,P">
+    <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(czerwiec 2025 - zad. 18)</div></div>
+    <div class="qtext">
+      Dany jest trójkąt prostokątny o kątach ostrych \( \alpha \) oraz \( \beta \) (zobacz rysunek). Sinus kąta \( \alpha \) jest równy \( \tfrac{4}{7} \).<br>
+      <img src="img/sct01.png" alt="sct01">
+    </div>
+    <div class="options">
+      <p>Cosinus kąta α jest równy \( \tfrac{3}{7} \).</p>
+      <label class="option"><input type="radio" name="zad1a" value="P"> Prawda</label>
+    <label class="option"><input type="radio" name="zad1a" value="F"> Fałsz</label>
+      <p>Cosinus kąta β jest równy \( \tfrac{4}{7} \).</p>
+      <label class="option"><input type="radio" name="zad1b" value="P"> Prawda</label>
+    <label class="option"><input type="radio" name="zad1b" value="F"> Fałsz</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+    <div class="sol" id="sol1">
+      <ol>
+        <li>Skoro \(\sin \alpha = \tfrac{4}{7}\), to \(\cos \alpha = \sqrt{1-(\tfrac{4}{7})^2} = \tfrac{\sqrt{33}}{7}\), a nie \(\tfrac{3}{7}\). Pierwsze stwierdzenie fałszywe.</li>
+        <li>\(\cos \beta = \sin \alpha = \tfrac{4}{7}\). Drugie stwierdzenie prawdziwe.</li>
+        <li>Odp.: <b>F, P</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(maj 2025 - zad. 18.1)</div></div>
+    <div class="qtext">
+      Tangens kąta \( \alpha \) jest równy<br>
+      <img src="img/sct02.png" alt="sct02">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad2" value="A"> A. \(\tfrac{2}{3}\)</label>
+      <label class="option"><input type="radio" name="zad2" value="B"> B. \(\tfrac{3}{4}\)</label>
+      <label class="option"><input type="radio" name="zad2" value="C"> C. \(\tfrac{4}{5}\)</label>
+      <label class="option"><input type="radio" name="zad2" value="D"> D. \(\tfrac{4}{3}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+    <div class="sol" id="sol2">
+      <ol>
+        <li>Z danych: \(AB=6\), \(CD=5\), \(BC=10\). Obliczenia prowadzą do \(\tan \alpha = \tfrac{4}{3}\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(maj 2025 - zad. 18.2)</div></div>
+    <div class="qtext">
+      Sinus kąta \( \beta \) jest równy<br>
+      <img src="img/sct02.png" alt="sct02">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad3" value="A"> A. \(\tfrac{2}{\sqrt{13}}\)</label>
+      <label class="option"><input type="radio" name="zad3" value="B"> B. \(\tfrac{3}{\sqrt{13}}\)</label>
+      <label class="option"><input type="radio" name="zad3" value="C"> C. \(\tfrac{5}{2\sqrt{13}}\)</label>
+      <label class="option"><input type="radio" name="zad3" value="D"> D. \(\tfrac{4}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+    <div class="sol" id="sol3">
+      <ol>
+        <li>Ze wzorów trójkąta prostokątnego i środkowej obliczamy stosunki boków.</li>
+        <li>Wynik: \(\sin \beta = \tfrac{2}{\sqrt{13}}\).</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(grudzień 2024 - zad. 17.1)</div></div>
+    <div class="qtext">
+      Sinus kąta ostrego \( \angle ABC \) jest równy<br>
+      <img src="img/sct03.png" alt="sct03">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad4" value="A"> A. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="zad4" value="B"> B. \(\tfrac{7}{8}\)</label>
+      <label class="option"><input type="radio" name="zad4" value="C"> C. \(\tfrac{\sqrt{15}}{4}\)</label>
+      <label class="option"><input type="radio" name="zad4" value="D"> D. \(\tfrac{\sqrt{15}}{8}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+    <div class="sol" id="sol4">
+      <ol>
+        <li>W trójkącie prostokątnym dane: \(|AC|=\sqrt{15}, |BC|=8\).</li>
+        <li>Stosunki boków prowadzą do \(\sin \angle ABC = \tfrac{\sqrt{15}}{8}\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(grudzień 2024 - zad. 17.2)</div></div>
+    <div class="qtext">
+      Tangens kąta ostrego \( \angle ADC \) jest równy<br>
+      <img src="img/sct03.png" alt="sct03">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad5" value="A"> A. \(\sqrt{15}\)</label>
+      <label class="option"><input type="radio" name="zad5" value="B"> B. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="zad5" value="C"> C. \(\tfrac{7}{8}\)</label>
+      <label class="option"><input type="radio" name="zad5" value="D"> D. \(\tfrac{\sqrt{15}}{8}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+    <div class="sol" id="sol5">
+      <ol>
+        <li>Obliczamy stosunek odpowiednich boków trójkąta.</li>
+        <li>Dostajemy \(\tan \angle ADC = \sqrt{15}\).</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(sierpień 2024 - zad. 17)</div></div>
+    <div class="qtext">
+      W trójkącie prostokątnym \(ABC\) sinus kąta \(CAB\) jest równy \(\tfrac{3}{5}\), a przeciwprostokątna \(AB\) jest o 8 dłuższa od przyprostokątnej \(BC\). Długość przeciwprostokątnej \(AB\) jest równa
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad6" value="A"> A. 18</label>
+      <label class="option"><input type="radio" name="zad6" value="B"> B. 20</label>
+      <label class="option"><input type="radio" name="zad6" value="C"> C. 24</label>
+      <label class="option"><input type="radio" name="zad6" value="D"> D. 25</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+    <div class="sol" id="sol6">
+      <ol>
+        <li>\(\sin \angle CAB = \tfrac{3}{5} = \tfrac{BC}{AB}\).</li>
+        <li>Stąd \(BC = \tfrac{3}{5} AB\).</li>
+        <li>Warunek: \(AB = BC + 8\). Podstawiając, \(\tfrac{3}{5} AB + 8 = AB\).</li>
+        <li>Otrzymujemy \(AB = 20\).</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(czerwiec 2024 - zad. 20)</div></div>
+    <div class="qtext">
+      Trapez prostokątny \(ABCD\) ma podstawy \(|AB|=8\), \(|CD|=5\), wysokość \(|AD|=\sqrt{3}\). Miara kąta ostrego \( \angle ABC \) jest równa<br>
+      <img src="img/sct04.png" alt="sct04">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad7" value="A"> A. 15°</label>
+      <label class="option"><input type="radio" name="zad7" value="B"> B. 30°</label>
+      <label class="option"><input type="radio" name="zad7" value="C"> C. 45°</label>
+      <label class="option"><input type="radio" name="zad7" value="D"> D. 60°</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+    <div class="sol" id="sol7">
+      <ol>
+        <li>Różnica długości podstaw to \(8-5=3\).</li>
+        <li>Trójkąt prostokątny z przyprostokątnymi: \(\sqrt{3}\) i \(3\).</li>
+        <li>\(\tan \angle ABC = \tfrac{\sqrt{3}}{3} = \tfrac{1}{\sqrt{3}}\).</li>
+        <li>Stąd kąt ma miarę 30°.</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(sierpień 2022 - zad. 16)</div></div>
+    <div class="qtext">
+      W trójkącie prostokątnym \(ABC\) przyprostokątna \(AC=6\), przeciwprostokątna \(AB=3\sqrt{5}\). Tangens kąta \(CAB\) jest równy
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad8" value="A"> A. \(\tfrac{\sqrt{5}}{5}\)</label>
+      <label class="option"><input type="radio" name="zad8" value="B"> B. \(\tfrac{2\sqrt{5}}{5}\)</label>
+      <label class="option"><input type="radio" name="zad8" value="C"> C. \(\tfrac{1}{2}\)</label>
+      <label class="option"><input type="radio" name="zad8" value="D"> D. 2</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+    <div class="sol" id="sol8">
+      <ol>
+        <li>Obliczamy drugą przyprostokątną: \(BC = \sqrt{(3\sqrt{5})^2 - 6^2} = \sqrt{45-36} = 3\).</li>
+        <li>\(\tan \angle CAB = \tfrac{BC}{AC} = \tfrac{3}{6} = \tfrac{1}{2}\).</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(czerwiec 2022 - zad. 18)</div></div>
+    <div class="qtext">
+      Trójkąt \(ABC\) jest prostokątny. Odcinek \(AD\) jest wysokością na przeciwprostokątną \(BC\). Wtedy
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad9" value="A"> A. \(\tfrac{|AD|}{|AB|} = \tfrac{|CD|}{|AC|}\)</label>
+      <label class="option"><input type="radio" name="zad9" value="B"> B. \(\tfrac{|AD|}{|AB|} = \tfrac{|CD|}{|AD|}\)</label>
+      <label class="option"><input type="radio" name="zad9" value="C"> C. \(\tfrac{|AD|}{|AB|} = \tfrac{|AC|}{|AB|}\)</label>
+      <label class="option"><input type="radio" name="zad9" value="D"> D. \(\tfrac{|AD|}{|AB|} = \tfrac{|BC|}{|BD|}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+    <div class="sol" id="sol9">
+      <ol>
+        <li>Korzystamy z twierdzenia Talesa i własności wysokości w trójkącie prostokątnym.</li>
+        <li>Zachodzi równość \(\tfrac{|AD|}{|AB|} = \tfrac{|CD|}{|AC|}\).</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(marzec 2021 - zad. 20)</div></div>
+    <div class="qtext">
+      Dane są punkty M = (6, 0), N = (6, 8), O = (0, 0). Tangens kąta ostrego \( \angle MON \) jest równy<br>
+      <img src="img/sct09.png" alt="sct09">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad10" value="A"> A. \(\tfrac{4}{3}\)</label>
+      <label class="option"><input type="radio" name="zad10" value="B"> B. \(\tfrac{6}{10}\)</label>
+      <label class="option"><input type="radio" name="zad10" value="C"> C. \(\tfrac{3}{4}\)</label>
+      <label class="option"><input type="radio" name="zad10" value="D"> D. \(\tfrac{8}{10}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+    <div class="sol" id="sol10">
+      <ol>
+        <li>Wektor \(OM = (6,0)\), \(ON = (6,8)\).</li>
+        <li>Nachylenie prostej ON: \(\tfrac{8}{6} = \tfrac{4}{3}\).</li>
+        <li>Tangens kąta MON = \(\tfrac{4}{3}\).</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(czerwiec 2020 - zad. 16)</div></div>
+    <div class="qtext">
+      W trapezie prostokątnym \(ABCD\) dane: \(|AB|=8, |BC|=5, |DC|=5, |AD|=4\). Tangens kąta ostrego \( \angle ABC \) jest równy<br>
+      <img src="img/sct05.png" alt="sct05">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad11" value="A"> A. \(\tfrac{4}{3}\)</label>
+      <label class="option"><input type="radio" name="zad11" value="B"> B. \(\tfrac{4}{5}\)</label>
+      <label class="option"><input type="radio" name="zad11" value="C"> C. \(\tfrac{3}{4}\)</label>
+      <label class="option"><input type="radio" name="zad11" value="D"> D. \(\tfrac{3}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+    <div class="sol" id="sol11">
+      <ol>
+        <li>Korzystamy z własności trapezu prostokątnego i długości boków.</li>
+        <li>Obliczamy: \(\tan \angle ABC = \tfrac{4}{3}\).</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(maj 2020 - zad. 19)</div></div>
+    <div class="qtext">
+      Dany jest trójkąt prostokątny o kątach ostrych \( \alpha \) i \( \beta \). Wyrażenie \(2 \cos \alpha - \sin \beta\) jest równe<br>
+      <img src="img/sct06.png" alt="sct06">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad12" value="A"> A. \(2 \sin \beta\)</label>
+      <label class="option"><input type="radio" name="zad12" value="B"> B. \(\cos \alpha\)</label>
+      <label class="option"><input type="radio" name="zad12" value="C"> C. 0</label>
+      <label class="option"><input type="radio" name="zad12" value="D"> D. 2</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+    <div class="sol" id="sol12">
+      <ol>
+        <li>Zależność: \(\sin \beta = \cos \alpha\).</li>
+        <li>Wyrażenie \(2 \cos \alpha - \sin \beta = 2\cos \alpha - \cos \alpha = \cos \alpha\).</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(sierpień 2016 - zad. 16)</div></div>
+    <div class="qtext">
+      Wartość wyrażenia \((\tan 60^\circ + \tan 45^\circ)^2 - \sin 60^\circ\) jest równa
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad13" value="A"> A. \(2 - \tfrac{3\sqrt{3}}{2}\)</label>
+      <label class="option"><input type="radio" name="zad13" value="B"> B. \(2 + \tfrac{\sqrt{3}}{2}\)</label>
+      <label class="option"><input type="radio" name="zad13" value="C"> C. \(4 - \tfrac{\sqrt{3}}{2}\)</label>
+      <label class="option"><input type="radio" name="zad13" value="D"> D. \(4 + \tfrac{3\sqrt{3}}{2}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+    <div class="sol" id="sol13">
+      <ol>
+        <li>\(\tan 60^\circ = \sqrt{3}, \tan 45^\circ = 1\). Suma = \(\sqrt{3}+1\).</li>
+        <li>Kwadrat: \((\sqrt{3}+1)^2 = 4 + 2\sqrt{3}\).</li>
+        <li>Odejmujemy \(\sin 60^\circ = \tfrac{\sqrt{3}}{2}\).</li>
+        <li>Wynik: \(4 + 2\sqrt{3} - \tfrac{\sqrt{3}}{2} = 4 + \tfrac{3\sqrt{3}}{2}\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+    <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(sierpień 2015 - zad. 17)</div></div>
+    <div class="qtext">
+      W trójkącie prostokątnym o długościach przyprostokątnych 2 i 5 cosinus większego z kątów ostrych jest równy
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad14" value="A"> A. \(\tfrac{5}{2}\)</label>
+      <label class="option"><input type="radio" name="zad14" value="B"> B. \(\tfrac{2}{5}\)</label>
+      <label class="option"><input type="radio" name="zad14" value="C"> C. \(\tfrac{2}{\sqrt{29}}\)</label>
+      <label class="option"><input type="radio" name="zad14" value="D"> D. \(\tfrac{5}{\sqrt{29}}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+    <div class="sol" id="sol14">
+      <ol>
+        <li>Przeciwprostokątna: \(c=\sqrt{2^2+5^2}=\sqrt{29}\).</li>
+        <li>Większy kąt ostry leży przy krótszej przyprostokątnej (2).</li>
+        <li>\(\cos = \tfrac{\text{przyległa}}{\text{przeciwprostokątna}} = \tfrac{2}{\sqrt{29}}\).</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(czerwiec 2015 - zad. 7)</div></div>
+    <div class="qtext">
+      Wartość wyrażenia \(\sin 120^\circ - \cos 30^\circ\) jest równa
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad15" value="A"> A. \(\sin 90^\circ\)</label>
+      <label class="option"><input type="radio" name="zad15" value="B"> B. \(\sin 150^\circ\)</label>
+      <label class="option"><input type="radio" name="zad15" value="C"> C. \(\sin 0^\circ\)</label>
+      <label class="option"><input type="radio" name="zad15" value="D"> D. \(\sin 60^\circ\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+    <div class="sol" id="sol15">
+      <ol>
+        <li>\(\sin 120^\circ = \tfrac{\sqrt{3}}{2}, \cos 30^\circ = \tfrac{\sqrt{3}}{2}\).</li>
+        <li>Różnica: \( \tfrac{\sqrt{3}}{2} - \tfrac{\sqrt{3}}{2} = 0\).</li>
+        <li>\(\sin 0^\circ = 0\).</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="A">
+    <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(grudzień 2014 - zad. 9)</div></div>
+    <div class="qtext">
+      Na płaszczyźnie dane są punkty: \(A=(\sqrt{2}, \sqrt{6}), B=(0,0), C=(\sqrt{2},0)\). Kąt \(BAC\) jest równy
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad16" value="A"> A. 30°</label>
+      <label class="option"><input type="radio" name="zad16" value="B"> B. 45°</label>
+      <label class="option"><input type="radio" name="zad16" value="C"> C. 60°</label>
+      <label class="option"><input type="radio" name="zad16" value="D"> D. 70°</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+    <div class="sol" id="sol16">
+      <ol>
+        <li>Wektor \(AB=(-\sqrt{2}, -\sqrt{6})\), \(AC=(0,-\sqrt{6})\).</li>
+        <li>Obliczamy cosinus kąta: \(\cos = \frac{AB \cdot AC}{|AB||AC|}\).</li>
+        <li>Iloczyn skalarny = \(0+6=6\). Długości: \(|AB|=\sqrt{2+6}= \sqrt{8}=2\sqrt{2}, |AC|=\sqrt{6}\).</li>
+        <li>\(\cos = \tfrac{6}{2\sqrt{2}\cdot \sqrt{6}} = \tfrac{6}{2\sqrt{12}} = \tfrac{6}{4\sqrt{3}} = \tfrac{\sqrt{3}}{2}\).</li>
+        <li>Kąt = 30°.</li>
+        <li>Odp.: <b>A</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(grudzień 2013 - zad. 17)</div></div>
+    <div class="qtext">
+      W trójkącie przedstawionym na rysunku sinus kąta ostrego \(\alpha\) jest równy<br>
+      <img src="img/sct07.png" alt="sct07">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad17" value="A"> A. \(\tfrac{1}{5}\)</label>
+      <label class="option"><input type="radio" name="zad17" value="B"> B. \(\tfrac{\sqrt{6}}{12}\)</label>
+      <label class="option"><input type="radio" name="zad17" value="C"> C. \(\tfrac{5}{24}\)</label>
+      <label class="option"><input type="radio" name="zad17" value="D"> D. \(\tfrac{2\sqrt{6}}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+    <div class="sol" id="sol17">
+      <ol>
+        <li>Korzystamy z definicji sinusa i danych z rysunku.</li>
+        <li>Po obliczeniach otrzymujemy \(\sin \alpha = \tfrac{2\sqrt{6}}{5}\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="B">
+    <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(czerwiec 2013 - zad. 19)</div></div>
+    <div class="qtext">
+      Przyprostokątne w trójkącie prostokątnym mają długości 1 oraz \(\sqrt{3}\). Najmniejszy kąt ma miarę
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad18" value="A"> A. 60°</label>
+      <label class="option"><input type="radio" name="zad18" value="B"> B. 30°</label>
+      <label class="option"><input type="radio" name="zad18" value="C"> C. 45°</label>
+      <label class="option"><input type="radio" name="zad18" value="D"> D. 15°</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+    <div class="sol" id="sol18">
+      <ol>
+        <li>Najmniejszy kąt leży naprzeciw krótszej przyprostokątnej (1).</li>
+        <li>\(\tan \theta = \tfrac{1}{\sqrt{3}} = \tfrac{1}{\sqrt{3}}\).</li>
+        <li>Stąd kąt = 30°.</li>
+        <li>Odp.: <b>B</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(listopad 2010 - zad. 16)</div></div>
+    <div class="qtext">
+      Na rysunku zaznaczono długości boków i kąt \(\alpha\) trójkąta prostokątnego.<br>
+      <img src="img/sct08.png" alt="sct08">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad19" value="A"> A. \(\cos \alpha = \tfrac{5}{13}\)</label>
+      <label class="option"><input type="radio" name="zad19" value="B"> B. \(\tan \alpha = \tfrac{13}{12}\)</label>
+      <label class="option"><input type="radio" name="zad19" value="C"> C. \(\cos \alpha = \tfrac{12}{13}\)</label>
+      <label class="option"><input type="radio" name="zad19" value="D"> D. \(\tan \alpha = \tfrac{12}{5}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+    <div class="sol" id="sol19">
+      <ol>
+        <li>Z twierdzenia Pitagorasa: trójkąt 5-12-13.</li>
+        <li>Cosinus kąta \(\alpha\) przy boku długości 12: \(\tfrac{12}{13}\).</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="D">
+    <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(listopad 2009 - zad. 16)</div></div>
+    <div class="qtext">
+      Dany jest trójkąt prostokątny (patrz rysunek). Wtedy \(\tan \alpha\) jest równy<br>
+      <img src="img/sct09.png" alt="sct09">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad20" value="A"> A. \(\sqrt{2}\)</label>
+      <label class="option"><input type="radio" name="zad20" value="B"> B. \(\tfrac{\sqrt{2}}{\sqrt{3}}\)</label>
+      <label class="option"><input type="radio" name="zad20" value="C"> C. \(\tfrac{\sqrt{3}}{\sqrt{2}}\)</label>
+      <label class="option"><input type="radio" name="zad20" value="D"> D. \(\tfrac{1}{\sqrt{2}}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+    <div class="sol" id="sol20">
+      <ol>
+        <li>Z danych z rysunku obliczamy stosunek boków.</li>
+        <li>\(\tan \alpha = \tfrac{1}{\sqrt{2}}\).</li>
+        <li>Odp.: <b>D</b>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Zadanie 21 -->
+  <div class="section" id="zad21" data-ans="C">
+    <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(informator CKE)</div></div>
+    <div class="qtext">
+      Dane są długości boków \(|BC|=5, |AC|=3\) trójkąta prostokątnego \(ABC\) o kącie ostrym \(\beta\).<br>
+      <img src="img/sct10.png" alt="sct10">
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad21" value="A"> A. \(\sin \beta = \tfrac{3}{5}\)</label>
+      <label class="option"><input type="radio" name="zad21" value="B"> B. \(\sin \beta = \tfrac{4}{5}\)</label>
+      <label class="option"><input type="radio" name="zad21" value="C"> C. \(\sin \beta = \tfrac{3}{\sqrt{34}}\)</label>
+      <label class="option"><input type="radio" name="zad21" value="D"> D. \(\sin \beta = \tfrac{5}{\sqrt{34}}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+    <div class="sol" id="sol21">
+      <ol>
+        <li>Przeciwprostokątna: \(AB=\sqrt{5^2+3^2}=\sqrt{34}\).</li>
+        <li>\(\sin \beta = \tfrac{AC}{AB} = \tfrac{3}{\sqrt{34}}\).</li>
+        <li>Odp.: <b>C</b>.</li>
+      </ol>
+    </div>
+  </div>
+  <footer>Dobra robota! Oby tak dalej (ﾉ´ヮ`)ﾉ</footer>
+
+</div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.section').forEach(sec => {
+    const correct = (sec.dataset.ans || '').trim().toUpperCase();
+
+    // radio przy standardowych zadaniach (A,B,C,D)
+    if (!correct.includes(',')) {
+      sec.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          sec.querySelectorAll('.option').forEach(opt => opt.classList.remove('correct','incorrect'));
+          const label = radio.closest('.option');
+          if (radio.value.toUpperCase() === correct) {
+            label.classList.add('correct');
+          } else {
+            label.classList.add('incorrect');
+          }
+        });
+      });
+    } else {
+      // obsługa P/F (np. data-ans="F,F")
+      const correctArr = correct.split(',').map(c => c.trim());
+      
+      correctArr.forEach((ans, idx) => {
+        const groupName = sec.id + String.fromCharCode(97 + idx); // zad42a, zad42b...
+        const radios = sec.querySelectorAll(`input[name="${groupName}"]`);
+        
+        radios.forEach(radio => {
+          radio.addEventListener('change', () => {
+            radios.forEach(r => r.closest('.option').classList.remove('correct','incorrect'));
+            const label = radio.closest('.option');
+            if (radio.value.toUpperCase() === ans) {
+              label.classList.add('correct');
+            } else {
+              label.classList.add('incorrect');
+            }
+          });
+        });
+      });
+    }
+
+    // input + przycisk "Sprawdź"
+    const inp = sec.querySelector('.frac-input');
+    const btn = sec.querySelector('.btn-check');
+    if (inp && btn) {
+      btn.addEventListener('click', () => {
+        const val = inp.value.trim();
+        const good = (inp.dataset.answer || '').trim();
+        btn.classList.remove('correct','incorrect');
+        if (val === good) {
+          btn.classList.add('correct');
+          alert("Dobrze! To poprawna odpowiedź.");
+        } else {
+          btn.classList.add('incorrect');
+          alert("Źle! Spróbuj ponownie.");
+        }
+      });
+    }
+
+    // toggle rozwiązania
+    sec.querySelectorAll('.btn-solution').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (target) {
+          target.style.display = target.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

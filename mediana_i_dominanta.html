@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Mediana i dominanta</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+  <script id="MathJax-script" async
+
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+
+  <h1>Mediana i dominanta</h1><br>
+
+  <!-- Zadanie 1 -->
+
+  <div class="section" id="zad1" data-ans="C">
+
+    <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(maj 2024 - zad. 29)</div></div>
+
+    <div class="qtext">
+
+      Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej.  
+
+      <img src="img/md01.png" alt="Wykres dla zadania 1"><br>
+
+      Mediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad1" value="A"> A. 4,5</label>
+
+      <label class="option"><input type="radio" name="zad1" value="B"> B. 4</label>
+
+      <label class="option"><input type="radio" name="zad1" value="C"> C. 3,5</label>
+
+      <label class="option"><input type="radio" name="zad1" value="D"> D. 3</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol1">
+
+      <ol>
+
+        <li>Z diagramu odczytujemy liczności ocen.</li>
+
+        <li>Mediana to środkowa wartość w uporządkowanym zbiorze.</li>
+
+        <li>Wychodzi wartość 3,5.</li>
+
+        <li>Odp.: <b>C</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 2 -->
+
+  <div class="section" id="zad2" data-ans="A,3">
+
+    <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(grudzień 2023 - zad. 29.2)</div></div>
+
+    <div class="qtext">
+
+      W hurtowni owoców wyselekcjonowane jabłko spełnia normę jakości, gdy jego masa mieści się w [19 dag, 21 dag].  
+
+      Pobrano próbę 50 jabłek, rozkład mas przedstawiono na wykresie.  
+
+      <img src="img/md02.png" alt="Wykres dla zadania 2"><br>
+
+      Dokończ zdanie tak, aby było prawdziwe.  
+
+      Dominanta masy 50 zważonych jabłek jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad2a" value="A"> A. 20 dag</label>
+
+      <label class="option"><input type="radio" name="zad2a" value="B"> B. 23 dag</label>
+
+    </div>
+
+    <div class="qtext">ponieważ:</div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad2b" value="1"> 1. ta masa jest największa w tej próbie.</label>
+
+      <label class="option"><input type="radio" name="zad2b" value="2"> 2. iloczyn tej masy i liczby jabłek o takiej masie jest największy.</label>
+
+      <label class="option"><input type="radio" name="zad2b" value="3"> 3. ta masa występuje najliczniej w tej próbie.</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol2">
+
+      <ol>
+
+        <li>Z wykresu: największa liczność odpowiada 20 dag.</li>
+
+        <li>Dominanta to wartość najczęściej występująca.</li>
+
+        <li>Uzasadnienie: 3.</li>
+
+        <li>Odp.: <b>A,3</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 3 -->
+
+  <div class="section" id="zad3" data-ans="C,A">
+
+    <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(maj 2023 - zad. 29)</div></div>
+
+    <div class="qtext">
+
+      Na diagramie poniżej przedstawiono ceny pomidorów w 16 sklepach.  
+
+      <img src="img/md03.png" alt="Wykres dla zadania 3"><br>
+
+      Uzupełnij tabelę. Wpisz literę A–E:
+
+    </div>
+
+    <table class="data">
+
+      <tr><th>Wielkość</th><th>Odpowiedź</th></tr>
+
+      <tr><td>Mediana ceny</td><td><input type="text" class="frac-input" data-answer="C"></td></tr>
+
+      <tr><td>Średnia cena</td><td><input type="text" class="frac-input" data-answer="A"></td></tr>
+
+    </table>
+
+    <div class="controls">
+
+      <button class="btn btn-check">Sprawdź</button>
+
+      <button class="btn btn-solution" data-target="sol3">Rozwiązanie</button>
+
+    </div>
+
+    <div class="sol" id="sol3">
+
+      <ol>
+
+        <li>Z danych odczytujemy wartości i liczności.</li>
+
+        <li>Mediana: po uporządkowaniu wychodzi 5,85 zł → <b>C</b>.</li>
+
+        <li>Średnia: suma / liczba sklepów = 5,73 zł → <b>A</b>.</li>
+
+        <li>Odp.: <b>C,A</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 4 -->
+
+  <div class="section" id="zad4" data-ans="P,P">
+
+    <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(pokazowa 2023 - zad. 30.1)</div></div>
+
+    <div class="qtext">
+
+      Diagram pokazuje czas korzystania z komputera.  
+
+      <img src="img/md04.png" alt="Wykres dla zadania 4"><br>
+
+      Oceń prawdziwość stwierdzeń:
+
+    </div>
+
+    <div class="options">
+
+      <p>Mediana dziennego czasu korzystania z komputera = 2,25 h.</p>
+
+      <label class="option"><input type="radio" name="zad4a" value="P"> P</label>
+
+      <label class="option"><input type="radio" name="zad4a" value="F"> F</label>
+
+      <p>Połowa uczniów korzysta mniej niż 2,5 h dziennie.</p>
+
+      <label class="option"><input type="radio" name="zad4b" value="P"> P</label>
+
+      <label class="option"><input type="radio" name="zad4b" value="F"> F</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol4">
+
+      <ol>
+
+        <li>Mediana z rozkładu = 2,25 h → Prawda.</li>
+
+        <li>Połowa uczniów poniżej 2,5 h → również Prawda.</li>
+
+        <li>Odp.: <b>P,P</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 5 -->
+
+  <div class="section" id="zad5" data-ans="B">
+
+    <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(pokazowa 2023 - zad. 30.2)</div></div>
+
+    <div class="qtext">
+
+      Dominanta dziennego czasu korzystania z komputera (na podstawie diagramu):  
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad5" value="A"> A. 2,25 h</label>
+
+      <label class="option"><input type="radio" name="zad5" value="B"> B. 2,50 h</label>
+
+      <label class="option"><input type="radio" name="zad5" value="C"> C. 2,75 h</label>
+
+      <label class="option"><input type="radio" name="zad5" value="D"> D. 1,50 h</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol5">
+
+      <ol>
+
+        <li>Dominanta to wartość najczęściej występująca.</li>
+
+        <li>Z diagramu: 2,50 h.</li>
+
+        <li>Odp.: <b>B</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+<!-- Zadanie 6 -->
+
+  <div class="section" id="zad6" data-ans="B">
+
+    <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(wrzesień 2022 - zad. 24.2)</div></div>
+
+    <div class="qtext">
+
+      Firma F zatrudnia 160 osób. Rozkład płac brutto pracowników tej firmy przedstawia poniższy diagram.<br>
+
+      <img src="img/md05.png" alt="Wykres dla zadania 6"><br>
+
+      Mediana miesięcznej płacy pracowników firmy F jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad6" value="A"> A. 4 000 zł</label>
+
+      <label class="option"><input type="radio" name="zad6" value="B"> B. 4 800 zł</label>
+
+      <label class="option"><input type="radio" name="zad6" value="C"> C. 5 000 zł</label>
+
+      <label class="option"><input type="radio" name="zad6" value="D"> D. 5 500 zł</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol6">
+
+      <ol>
+
+        <li>Ustalamy 80. i 81. pracownika w szeregu uporządkowanym.</li>
+
+        <li>Z wykresu odpowiada im wartość 4 800 zł.</li>
+
+        <li>Odp.: <b>B</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 7 -->
+
+  <div class="section" id="zad7" data-ans="C">
+
+    <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(czerwiec 2022 - zad. 28)</div></div>
+
+    <div class="qtext">
+
+      W ankiecie zbadano liczbę odsłuchanych audiobooków w lutym 2022 r.<br>
+
+      <table class="data">
+
+        <tr><th>Liczba audiobooków</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>7</td></tr>
+
+        <tr><th>Liczba uczniów</th><td>9</td><td>5</td><td>3</td><td>4</td><td>1</td><td>3</td></tr>
+
+      </table>
+
+      Mediana liczby odsłuchanych audiobooków w tej grupie uczniów jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad7" value="A"> A. 3</label>
+
+      <label class="option"><input type="radio" name="zad7" value="B"> B. 2</label>
+
+      <label class="option"><input type="radio" name="zad7" value="C"> C. 1</label>
+
+      <label class="option"><input type="radio" name="zad7" value="D"> D. \(\frac{3}{2}\)</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol7">
+
+      <ol>
+
+        <li>Łączna liczba uczniów = 25.</li>
+
+        <li>Środkowy (13. wynik) należy do przedziału z wartością 1.</li>
+
+        <li>Mediana = 1. Odp.: <b>C</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 8 -->
+
+  <div class="section" id="zad8" data-ans="C">
+
+    <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(maj 2021 - zad. 28)</div></div>
+
+    <div class="qtext">
+
+      Sześciowyrazowy ciąg (1, 2, 2x, x+2, 5, 6) jest niemalejący. Mediana wyrazów tego ciągu jest równa 4. Wynika stąd, że:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad8" value="A"> A. x = 1</label>
+
+      <label class="option"><input type="radio" name="zad8" value="B"> B. x = \(\frac{3}{2}\)</label>
+
+      <label class="option"><input type="radio" name="zad8" value="C"> C. x = 2</label>
+
+      <label class="option"><input type="radio" name="zad8" value="D"> D. x = \(\frac{8}{3}\)</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol8">
+
+      <ol>
+
+        <li>Środkowe wartości: 3. i 4. element.</li>
+
+        <li>Przy x=2 ciąg: 1,2,4,4,5,6 → mediana = 4.</li>
+
+        <li>Odp.: <b>C</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 9 -->
+
+  <div class="section" id="zad9" data-ans="A">
+
+    <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(marzec 2021 - zad. 28)</div></div>
+
+    <div class="qtext">
+
+      Liczba x jest dodatnia. Mediana zestawu (1+x, 1+2x, 4+3x, 1) jest równa 10. Wtedy:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad9" value="A"> A. x = 6</label>
+
+      <label class="option"><input type="radio" name="zad9" value="B"> B. x = 5,5</label>
+
+      <label class="option"><input type="radio" name="zad9" value="C"> C. x = 2,5</label>
+
+      <label class="option"><input type="radio" name="zad9" value="D"> D. x = 1</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol9">
+
+      <ol>
+
+        <li>Porządkujemy: 1, 1+x, 1+2x, 4+3x.</li>
+
+        <li>Mediana = średnia z 2. i 3. = (1+x + 1+2x)/2 = 1,5x + 1.</li>
+
+        <li>Równa 10 → 1,5x + 1 = 10 → x = 6.</li>
+
+        <li>Odp.: <b>A</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 10 -->
+
+  <div class="section" id="zad10" data-ans="A">
+
+    <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(maj 2020 - zad. 23)</div></div>
+
+    <div class="qtext">
+
+      Cztery liczby: 2, 3, a, 8 (rosnąco). Mediana równa medianie zbioru {5,3,6,8,2}. Wynika stąd, że:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad10" value="A"> A. a = 7</label>
+
+      <label class="option"><input type="radio" name="zad10" value="B"> B. a = 6</label>
+
+      <label class="option"><input type="radio" name="zad10" value="C"> C. a = 5</label>
+
+      <label class="option"><input type="radio" name="zad10" value="D"> D. a = 4</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol10">
+
+      <ol>
+
+        <li>Mediana zbioru {2,3,5,6,8} = 5.</li>
+
+        <li>W zbiorze {2,3,a,8}, mediana = (3+a)/2.</li>
+
+        <li>(3+a)/2 = 5 → a=7.</li>
+
+        <li>Odp.: <b>A</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 11 -->
+
+  <div class="section" id="zad11" data-ans="B">
+
+    <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(maj 2019 - zad. 23)</div></div>
+
+    <div class="qtext">
+
+      Mediana zbioru {4, 8, 21, a, 16, 25} = 14. Zatem:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad11" value="A"> A. a = 7</label>
+
+      <label class="option"><input type="radio" name="zad11" value="B"> B. a = 12</label>
+
+      <label class="option"><input type="radio" name="zad11" value="C"> C. a = 14</label>
+
+      <label class="option"><input type="radio" name="zad11" value="D"> D. a = 20</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol11">
+
+      <ol>
+
+        <li>Po uporządkowaniu i wstawieniu a, środkowe dwie wartości muszą dać średnią 14.</li>
+
+        <li>Dla a=12 zbiór: 4,8,12,16,21,25 → środkowe 12 i 16 → (12+16)/2=14.</li>
+
+        <li>Odp.: <b>B</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 12 -->
+
+  <div class="section" id="zad12" data-ans="C">
+
+    <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(sierpień 2018 - zad. 24)</div></div>
+
+    <div class="qtext">
+
+      Abiturient zestawił oceny ze świadectwa:<br>
+
+      <table class="data">
+
+        <tr><th>Ocena</th><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td></tr>
+
+        <tr><th>Liczba ocen</th><td>2</td><td>3</td><td>5</td><td>5</td><td>1</td></tr>
+
+      </table>
+
+      Mediana tego zestawu jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad12" value="A"> A. 3</label>
+
+      <label class="option"><input type="radio" name="zad12" value="B"> B. 3,5</label>
+
+      <label class="option"><input type="radio" name="zad12" value="C"> C. 4</label>
+
+      <label class="option"><input type="radio" name="zad12" value="D"> D. 4,5</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol12">
+
+      <ol>
+
+        <li>Łączna liczba ocen = 16.</li>
+
+        <li>Środkowe to 8. i 9. w szeregu.</li>
+
+        <li>Oba są oceną 4.</li>
+
+        <li>Mediana = 4. Odp.: <b>C</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 13 -->
+
+  <div class="section" id="zad13" data-ans="B">
+
+    <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(sierpień 2017 - zad. 23)</div></div>
+
+    <div class="qtext">
+
+      Średnia zestawu {x,2,4,6,8,10,12,14} = 9. Wtedy mediana jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad13" value="A"> A. 8</label>
+
+      <label class="option"><input type="radio" name="zad13" value="B"> B. 9</label>
+
+      <label class="option"><input type="radio" name="zad13" value="C"> C. 10</label>
+
+      <label class="option"><input type="radio" name="zad13" value="D"> D. 16</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol13">
+
+      <ol>
+
+        <li>Średnia = (x+56)/8 = 9 → x=16.</li>
+
+        <li>Zbiór: 2,4,6,8,10,12,14,16 → mediana = (8+10)/2=9.</li>
+
+        <li>Odp.: <b>B</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 14 -->
+
+  <div class="section" id="zad14" data-ans="C">
+
+    <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(maj 2016 - zad. 25)</div></div>
+
+    <div class="qtext">
+
+      Średnia liczb {31,16,25,29,27,x} = \(\frac{x}{2}\). Mediana tych liczb jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad14" value="A"> A. 26</label>
+
+      <label class="option"><input type="radio" name="zad14" value="B"> B. 27</label>
+
+      <label class="option"><input type="radio" name="zad14" value="C"> C. 28</label>
+
+      <label class="option"><input type="radio" name="zad14" value="D"> D. 29</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol14">
+
+      <ol>
+
+        <li>Średnia: (128+x)/6 = x/2 → x=32.</li>
+
+        <li>Zbiór: 16,25,27,29,31,32.</li>
+
+        <li>Mediana = (27+29)/2=28.</li>
+
+        <li>Odp.: <b>C</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 15 -->
+
+  <div class="section" id="zad15" data-ans="A">
+
+    <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(grudzień 2014 - zad. 20)</div></div>
+
+    <div class="qtext">
+
+      Średnia zestawu {3,8,3,11,3,10,3,x} = 6. Mediana tego zestawu jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad15" value="A"> A. 5</label>
+
+      <label class="option"><input type="radio" name="zad15" value="B"> B. 6</label>
+
+      <label class="option"><input type="radio" name="zad15" value="C"> C. 7</label>
+
+      <label class="option"><input type="radio" name="zad15" value="D"> D. 8</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol15">
+
+      <ol>
+
+        <li>Średnia: (41+x)/8 = 6 → x=7.</li>
+
+        <li>Zbiór: 3,3,3,3,7,8,10,11.</li>
+
+        <li>Mediana = (3+7)/2=5.</li>
+
+        <li>Odp.: <b>A</b>.</li>
+
+      </ol>
+
+    </div>
+
+</div>
+<!-- Zadanie 16 -->
+
+  <div class="section" id="zad16" data-ans="A">
+
+    <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(sierpień 2014 - zad. 25)</div></div>
+
+    <div class="qtext">
+
+      Średnia liczb {x,13,7,5,5,3,2,11} = 7. Mediana tego zestawu jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad16" value="A"> A. 6</label>
+
+      <label class="option"><input type="radio" name="zad16" value="B"> B. 7</label>
+
+      <label class="option"><input type="radio" name="zad16" value="C"> C. 10</label>
+
+      <label class="option"><input type="radio" name="zad16" value="D"> D. 5</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol16">
+
+      <ol>
+
+        <li>Suma = 8·7 = 56 → x=10.</li>
+
+        <li>Zbiór: 2,3,5,5,7,10,11,13.</li>
+
+        <li>Mediana = (5+7)/2 = 6.</li>
+
+        <li>Odp.: <b>A</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 17 -->
+
+  <div class="section" id="zad17" data-ans="A">
+
+    <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(maj 2014 - zad. 25)</div></div>
+
+    <div class="qtext">
+
+      Mediana zbioru {2,12,a,10,5,3} = 7. Wtedy:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad17" value="A"> A. a = 9</label>
+
+      <label class="option"><input type="radio" name="zad17" value="B"> B. a = 7</label>
+
+      <label class="option"><input type="radio" name="zad17" value="C"> C. a = 6</label>
+
+      <label class="option"><input type="radio" name="zad17" value="D"> D. a = 4</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol17">
+
+      <ol>
+
+        <li>Dla a=9: zbiór 2,3,5,9,10,12 → mediana (5+9)/2=7.</li>
+
+        <li>Odp.: <b>A</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 18 -->
+
+  <div class="section" id="zad18" data-ans="D">
+
+    <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(maj 2013 - zad. 24)</div></div>
+
+    <div class="qtext">
+
+      Mediana zbioru {1,2,3,x,5,8} = 4. Wtedy:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad18" value="A"> A. x = 2</label>
+
+      <label class="option"><input type="radio" name="zad18" value="B"> B. x = 3</label>
+
+      <label class="option"><input type="radio" name="zad18" value="C"> C. x = 4</label>
+
+      <label class="option"><input type="radio" name="zad18" value="D"> D. x = 5</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol18">
+
+      <ol>
+
+        <li>Środkowe wartości to 3. i 4. liczba.</li>
+
+        <li>Dla x=5: 1,2,3,5,5,8 → mediana (3+5)/2=4.</li>
+
+        <li>Odp.: <b>D</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 19 -->
+
+  <div class="section" id="zad19" data-ans="D">
+
+    <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(listopad 2010 - zad. 25)</div></div>
+
+    <div class="qtext">
+
+      W czterech rzutach kostką wypadło: 6,3,1,4. Mediana wynosi:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad19" value="A"> A. 2</label>
+
+      <label class="option"><input type="radio" name="zad19" value="B"> B. 2,5</label>
+
+      <label class="option"><input type="radio" name="zad19" value="C"> C. 5</label>
+
+      <label class="option"><input type="radio" name="zad19" value="D"> D. 3,5</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol19">
+
+      <ol>
+
+        <li>Uporządkowany zbiór: 1,3,4,6.</li>
+
+        <li>Mediana = (3+4)/2 = 3,5.</li>
+
+        <li>Odp.: <b>D</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 20 -->
+
+  <div class="section" id="zad20" data-ans="C,1">
+
+    <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(informator CKE)</div></div>
+
+    <div class="qtext">
+
+      Na wykresie podano rozkład miesięcznych zarobków netto pracowników firmy F.<br>
+
+      <img src="img/md06.png" alt="Wykres do zadania 20"><br>
+
+      Dokończ zdanie: Dominantą miesięcznych zarobków w firmie F jest:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad20a" value="A"> A. 10 tys. zł</label>
+
+      <label class="option"><input type="radio" name="zad20a" value="B"> B. 4,5 tys. zł</label>
+
+      <label class="option"><input type="radio" name="zad20a" value="C"> C. 4 tys. zł</label>
+
+      <p>ponieważ</p>
+
+      <label class="option"><input type="radio" name="zad20b" value="1"> 1. tę wartość osiąga najwięcej osób</label>
+
+      <label class="option"><input type="radio" name="zad20b" value="2"> 2. ta wartość jest największa</label>
+
+      <label class="option"><input type="radio" name="zad20b" value="3"> 3. iloczyn wartości i liczby osób jest największy</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol20">
+
+      <ol>
+
+        <li>Dominanta to najczęściej występująca wartość.</li>
+
+        <li>Z wykresu najwięcej osób ma zarobki 4 tys. zł.</li>
+
+        <li>Odp.: <b>C,1</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 21 -->
+
+  <div class="section" id="zad21" data-ans="B">
+
+    <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(informator CKE)</div></div>
+
+    <div class="qtext">
+
+      Wyniki sprawdzianu przedstawiono na diagramie:<br>
+
+      <img src="img/md07.png" alt="Wykres do zadania 21"><br>
+
+      Mediana ocen uzyskanych przez uczniów jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad21" value="A"> A. 6</label>
+
+      <label class="option"><input type="radio" name="zad21" value="B"> B. 5</label>
+
+      <label class="option"><input type="radio" name="zad21" value="C"> C. 4,5</label>
+
+      <label class="option"><input type="radio" name="zad21" value="D"> D. 4</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol21">
+
+      <ol>
+
+        <li>Z diagramu odczytujemy połowę liczby uczniów.</li>
+
+        <li>Mediana wypada przy ocenie 5.</li>
+
+        <li>Odp.: <b>B</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 22 -->
+
+  <div class="section" id="zad22" data-ans="A">
+
+    <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(informator CKE)</div></div>
+
+    <div class="qtext">
+
+      Mediana danych: 0,1,1,2,3,1 jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad22" value="A"> A. 1</label>
+
+      <label class="option"><input type="radio" name="zad22" value="B"> B. 1,5</label>
+
+      <label class="option"><input type="radio" name="zad22" value="C"> C. 2</label>
+
+      <label class="option"><input type="radio" name="zad22" value="D"> D. 2,5</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol22">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol22">
+
+      <ol>
+
+        <li>Uporządkowany: 0,1,1,1,2,3.</li>
+
+        <li>Mediana = (1+1)/2 = 1.</li>
+
+        <li>Odp.: <b>A</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 23 -->
+
+  <div class="section" id="zad23" data-ans="A">
+
+    <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(informator CKE)</div></div>
+
+    <div class="qtext">
+
+      Mediana danych przedstawionych w tabeli:<br>
+
+      <table class="data">
+
+        <tr><th>Wartość</th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+
+        <tr><th>Liczebność</th><td>5</td><td>2</td><td>1</td><td>1</td></tr>
+
+      </table>
+
+      Mediana jest równa:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad23" value="A"> A. 0</label>
+
+      <label class="option"><input type="radio" name="zad23" value="B"> B. 0,5</label>
+
+      <label class="option"><input type="radio" name="zad23" value="C"> C. 1</label>
+
+      <label class="option"><input type="radio" name="zad23" value="D"> D. 5</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol23">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol23">
+
+      <ol>
+
+        <li>Łączna liczba elementów = 9.</li>
+
+        <li>Środkowy (5.) element to wartość 0.</li>
+
+        <li>Odp.: <b>A</b>.</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+  <!-- Zadanie 24 -->
+
+  <div class="section" id="zad24" data-ans="B">
+
+    <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(zbiór CKE - zad. 62)</div></div>
+
+    <div class="qtext">
+
+      Mediana zbioru {1,2,3,4,5,2x} = 3. Wtedy x jest równe:
+
+    </div>
+
+    <div class="options">
+
+      <label class="option"><input type="radio" name="zad24" value="A"> A. 1</label>
+
+      <label class="option"><input type="radio" name="zad24" value="B"> B. 1,5</label>
+
+      <label class="option"><input type="radio" name="zad24" value="C"> C. 2</label>
+
+      <label class="option"><input type="radio" name="zad24" value="D"> D. 3</label>
+
+    </div>
+
+    <div class="controls"><button class="btn btn-solution" data-target="sol24">Rozwiązanie</button></div>
+
+    <div class="sol" id="sol24">
+
+      <ol>
+
+        <li>Łącznie 6 elementów → mediana = średnia 3. i 4. wartości.</li>
+
+        <li>Dla x=1,5 → 2x=3 → zbiór: 1,2,3,3,4,5 → mediana = (3+3)/2=3.</li>
+
+        <li>Odp.: <b>B</b>.</li>
+
+      </ol>
+
+    </div>
+<footer>Każda linijka obliczeń to krok naprzód (ง •̀_•́)ง</footer>
+
+  </div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.querySelectorAll('.section').forEach(sec => {
+
+    const correct = (sec.dataset.ans||'').trim().toUpperCase();
+
+    // radio inputs
+
+    sec.querySelectorAll('input[type="radio"]').forEach(radio=>{
+
+      radio.addEventListener('change', ()=>{
+
+        const groupName = radio.name;
+
+        sec.querySelectorAll('input[name="'+groupName+'"]').forEach(r=>{
+
+          r.closest('.option').classList.remove('correct','incorrect');
+
+        });
+
+        const label = radio.closest('.option');
+
+        if(correct.split(',').includes(radio.value.toUpperCase())){
+
+          label.classList.add('correct');
+
+        } else {
+
+          label.classList.add('incorrect');
+
+        }
+
+      });
+
+    });
+
+    // inputs + przycisk Sprawdź
+
+    const btn = sec.querySelector('.btn-check');
+
+    if(btn){
+
+      btn.addEventListener('click', ()=>{
+
+        const inps = sec.querySelectorAll('.frac-input');
+
+        inps.forEach(inp=>{
+
+          const val = inp.value.trim().toUpperCase();
+
+          const good = (inp.dataset.answer||'').trim().toUpperCase();
+
+          if(val===good){
+
+            alert("Dobrze! To poprawna odpowiedź.");
+
+          } else {
+
+            alert("Źle! Spróbuj ponownie.");
+
+          }
+
+        });
+
+      });
+
+    }
+
+    // toggle rozwiązania
+
+    sec.querySelectorAll('.btn-solution').forEach(btn=>{
+
+      btn.addEventListener('click', ()=>{
+
+        const target=document.getElementById(btn.dataset.target);
+
+        if(target){
+
+          target.style.display = target.style.display==='block' ? 'none':'block';
+
+        }
+
+      });
+
+    });
+
+  });
+
+});
+
+</script>
+
+</body>
+
+</html>

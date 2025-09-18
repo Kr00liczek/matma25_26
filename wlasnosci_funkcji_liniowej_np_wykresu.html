@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Własności funkcji liniowej na podstawie wykresu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+	<h1>Własności funkcji liniowej na podstawie wykresu</h1><br>
+
+  <!-- Zadanie 1 -->
+<div class="section" id="zad1">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div class="qmeta">(grudzień 2024 - zad. 11)</div>
+  </div>
+  <p>Miejscem zerowym funkcji liniowej \(f\) jest liczba 2, a punkt przecięcia wykresu funkcji \(f\) z osią Oy ma współrzędne (0, 4).</p>
+  <img src="img/wflwykres01.png" alt="Wykres funkcji f - zad.1">
+  <p>Oceń prawdziwość poniższych stwierdzeń:</p>
+
+  <div class="subq" data-ans="P">
+    <p>Współczynnik kierunkowy prostej \(f\) jest równy \(-2\).</p>
+    <label class="option"><input type="radio" name="q1a" value="P"> Prawda</label>
+    <label class="option"><input type="radio" name="q1a" value="F"> Fałsz</label>
+  </div>
+
+  <div class="subq" data-ans="F">
+    <p>Pole trójkąta ograniczonego osiami i wykresem funkcji \(f\) wynosi 8.</p>
+    <label class="option"><input type="radio" name="q1b" value="P"> Prawda</label>
+    <label class="option"><input type="radio" name="q1b" value="F"> Fałsz</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+  <div class="sol" id="sol1">
+    
+    – Miejsce zerowe: (2, 0), punkt przecięcia z OY: (0, 4).<br>
+    – Nachylenie: \(\frac{0-4}{2-0} = -2\). Pierwsze stwierdzenie <b>Prawda</b>.<br>
+    – Trójkąt: podstawa = 2, wysokość = 4, pole = 4, nie 8. Drugie stwierdzenie <b>Fałsz</b>.</p>
+  </div>
+</div>
+
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div class="qmeta">(maj 2023 - zad. 13)</div>
+    </div>
+    <p>Funkcja liniowa \(f(x)=ax+b\). Fragment wykresu na rysunku:</p>
+    <img src="img/wflwykres02.png" alt="Wykres funkcji liniowej - zad.2">
+    <p>Liczby \(a\) i \(b\) spełniają warunki:</p>
+    <label class="option"><input type="radio" name="q2" value="A"> A. \(a&gt;0, b&gt;0\)</label>
+    <label class="option"><input type="radio" name="q2" value="B"> B. \(a&gt;0, b&lt;0\)</label>
+    <label class="option"><input type="radio" name="q2" value="C"> C. \(a&lt;0, b&gt;0\)</label>
+    <label class="option"><input type="radio" name="q2" value="D"> D. \(a&lt;0, b&lt;0\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+    <div class="sol" id="sol2">
+      
+      – Z wykresu: prosta malejąca → \(a&lt;0\).<br>
+      – Punkt przecięcia z osią OY: dodatni → \(b&gt;0\).<br>
+      – Poprawna odpowiedź: C.</p>
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div class="qmeta">(pokazowy 2023 - zad. 11)</div>
+    </div>
+    <p>Dana funkcja liniowa \(f(x)=ax+b\). Wykres przedstawiono poniżej:</p>
+    <img src="img/wflwykres03.png" alt="Wykres funkcji liniowej - zad.3">
+    <p>Współczynniki \(a, b\) spełniają warunki:</p>
+    <label class="option"><input type="radio" name="q3" value="A"> A. \(a&gt;0, b&gt;0\)</label>
+    <label class="option"><input type="radio" name="q3" value="B"> B. \(a&gt;0, b&lt;0\)</label>
+    <label class="option"><input type="radio" name="q3" value="C"> C. \(a&lt;0, b&gt;0\)</label>
+    <label class="option"><input type="radio" name="q3" value="D"> D. \(a&lt;0, b&lt;0\)</label>
+    <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+    <div class="sol" id="sol3">
+      
+      – Prosta rosnąca → \(a&gt;0\).<br>
+      – Punkt przecięcia z OY ujemny → \(b&lt;0\).<br>
+      – Poprawna odpowiedź: B.</p>
+    </div>
+  </div>
+<!-- Zadanie 4 -->
+<div class="section" id="zad4" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(sierpień 2018 - zad. 6)</div></div>
+  <p>Na rysunku jest przedstawiona graficzna ilustracja układu dwóch równań stopnia pierwszego z dwiema niewiadomymi \(x\) i \(y\):</p>
+  <img src="img/wflwykres04.png" alt="Układ równań - wykres">
+  <p>Wskaż ten układ.</p>
+  <label class="option"><input type="radio" name="q4" value="A"> A. \(\begin{cases} y=-2x+8 \\ y=-\tfrac{3}{2}x+\tfrac{13}{2}\end{cases}\)</label>
+  <label class="option"><input type="radio" name="q4" value="B"> B. \(\begin{cases} y=2x-4 \\ y=-\tfrac{1}{2}x+\tfrac{7}{2}\end{cases}\)</label>
+  <label class="option"><input type="radio" name="q4" value="C"> C. \(\begin{cases} y=x-1 \\ y=\tfrac{1}{2}x+\tfrac{1}{2}\end{cases}\)</label>
+  <label class="option"><input type="radio" name="q4" value="D"> D. \(\begin{cases} y=3x-7 \\ y=-\tfrac{2}{3}x+4\end{cases}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+  <div class="sol" id="sol4">
+    
+    – Na wykresie widać prostą rosnącą oraz prostą malejącą.<br>
+    – Sprawdzenie przecięcia potwierdza układ B.<br>
+    – Poprawna odpowiedź: <b>B</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 5 -->
+<div class="section" id="zad5" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(sierpień 2017 - zad. 21)</div></div>
+  <p>Prosta \(l\) jest nachylona do osi \(Ox\) pod kątem \(30^\circ\) i przecina oś \(Oy\) w punkcie \((0,-\sqrt{3})\).</p>
+  <img src="img/wflwykres05.png" alt="Prosta l - wykres">
+  <p>Równanie prostej \(l\) to:</p>
+  <label class="option"><input type="radio" name="q5" value="A"> A. \(y=\tfrac{\sqrt{3}}{3}x-\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q5" value="B"> B. \(y=\tfrac{\sqrt{3}}{3}x+\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q5" value="C"> C. \(y=\tfrac{1}{2}x-\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q5" value="D"> D. \(y=\tfrac{1}{2}x+\sqrt{3}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+  <div class="sol" id="sol5">
+    
+    – Nachylenie pod kątem \(30^\circ\): współczynnik kierunkowy \(m=\tan 30^\circ=\tfrac{\sqrt{3}}{3}\).<br>
+    – Punkt przecięcia z OY: \((0,-\sqrt{3})\).<br>
+    – Równanie: \(y=\tfrac{\sqrt{3}}{3}x-\sqrt{3}\).<br>
+    – Poprawna odpowiedź: <b>A</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 6 -->
+<div class="section" id="zad6" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(sierpień 2016 - zad. 7)</div></div>
+  <p>Na rysunku przedstawiony jest fragment wykresu funkcji liniowej \(f\), przy czym \(f(0)=-2\) i \(f(1)=0\).</p>
+  <img src="img/wflwykres06.png" alt="Wykres f - zad.6">
+  <p>Wykres funkcji \(g\) jest symetryczny do wykresu funkcji \(f\) względem początku układu współrzędnych. Wzór funkcji \(g\) to:</p>
+  <label class="option"><input type="radio" name="q6" value="A"> A. \(g(x)=2x+2\)</label>
+  <label class="option"><input type="radio" name="q6" value="B"> B. \(g(x)=2x-2\)</label>
+  <label class="option"><input type="radio" name="q6" value="C"> C. \(g(x)=-2x+2\)</label>
+  <label class="option"><input type="radio" name="q6" value="D"> D. \(g(x)=-2x-2\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+  <div class="sol" id="sol6">
+    
+    – Prosta \(f\) przechodzi przez (0,−2) i (1,0), czyli ma współczynnik kierunkowy \(a=2\).<br>
+    – Równanie \(f(x)=2x-2\).<br>
+    – Symetria względem początku: \(g(x)=-f(-x)=2x+2\).<br>
+    – Poprawna odpowiedź: <b>A</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 7 -->
+<div class="section" id="zad7" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(czerwiec 2016 - zad. 23)</div></div>
+  <p>Na rysunku przedstawione są dwie proste równoległe \(k\) i \(l\) o równaniach \(y=ax+b\) oraz \(y=mx+n\). Początek układu współrzędnych leży między tymi prostymi.</p>
+  <img src="img/wflwykres07.png" alt="Równoległe proste k i l">
+  <p>Zatem:</p>
+  <label class="option"><input type="radio" name="q7" value="A"> A. \(a\cdot m>0\) i \(b\cdot n>0\)</label>
+  <label class="option"><input type="radio" name="q7" value="B"> B. \(a\cdot m>0\) i \(b\cdot n<0\)</label>
+  <label class="option"><input type="radio" name="q7" value="C"> C. \(a\cdot m<0\) i \(b\cdot n>0\)</label>
+  <label class="option"><input type="radio" name="q7" value="D"> D. \(a\cdot m<0\) i \(b\cdot n<0\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+  <div class="sol" id="sol7">
+    
+    – Proste równoległe mają równe współczynniki kierunkowe → \(a\cdot m>0\).<br>
+    – Początek układu jest między nimi, więc wyrazy wolne \(b,n\) mają różne znaki → \(b\cdot n<0\).<br>
+    – Poprawna odpowiedź: <b>B</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 8 -->
+<div class="section" id="zad8" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(sierpień 2015 - zad. 7)</div></div>
+  <p>Na jednym z poniższych rysunków przedstawiono interpretację geometryczną układu równań:</p>
+  <center><p>\(\begin{cases} x+3y=-5 \\ 3x-2y=-4 \end{cases}\)</p></center>
+
+Wskaż ten rysunek
+  <img src="img/wflwykres08.png" alt="Interpretacja układu równań - wykres">
+  <label class="option"><input type="radio" name="q8" value="A"> A</label>
+  <label class="option"><input type="radio" name="q8" value="B"> B</label>
+  <label class="option"><input type="radio" name="q8" value="C"> C</label>
+  <label class="option"><input type="radio" name="q8" value="D"> D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+  <div class="sol" id="sol8">
+    
+    – Pierwsze równanie: \(y=-\tfrac{1}{3}x-\tfrac{5}{3}\).<br>
+    – Drugie równanie: \(y=\tfrac{3}{2}x+2\).<br>
+    – Na rysunku odpowiadają układowi w wariancie A.<br>
+    – Poprawna odpowiedź: <b>A</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 9 -->
+<div class="section" id="zad9" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(sierpień 2015 - zad. 20)</div></div>
+  <p>Współczynnik kierunkowy prostej, na której leżą punkty \(A=(-4,3)\) oraz \(B=(8,7)\), jest równy:</p>
+  <label class="option"><input type="radio" name="q9" value="A"> A. \(a=3\)</label>
+  <label class="option"><input type="radio" name="q9" value="B"> B. \(a=-1\)</label>
+  <label class="option"><input type="radio" name="q9" value="C"> C. \(a=\tfrac{5}{6}\)</label>
+  <label class="option"><input type="radio" name="q9" value="D"> D. \(a=\tfrac{1}{3}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+  <div class="sol" id="sol9">
+    
+    – Współczynnik kierunkowy: \(a=\frac{7-3}{8-(-4)}=\frac{4}{12}=\tfrac{1}{3}\).<br>
+    – Poprawna odpowiedź: <b>D</b>.</p>
+  </div>
+</div>
+<!-- Zadanie 10 -->
+<div class="section" id="zad10" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(czerwiec 2015 - zad. 9)</div></div>
+  <p>Na rysunku przedstawiony jest fragment prostej o równaniu \(y=ax+b\), przechodzącej przez punkty \((0,-2)\) i \((6,2)\).</p>
+  <img src="img/wflwykres09.png" alt="Prosta przez punkty (0,-2) i (6,2)">
+  <p>Wtedy:</p>
+  <label class="option"><input type="radio" name="q10" value="A"> A. \(a=\tfrac{2}{3}, b=-2\)</label>
+  <label class="option"><input type="radio" name="q10" value="B"> B. \(a=3, b=-2\)</label>
+  <label class="option"><input type="radio" name="q10" value="C"> C. \(a=\tfrac{3}{2}, b=2\)</label>
+  <label class="option"><input type="radio" name="q10" value="D"> D. \(a=-3, b=2\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+  <div class="sol" id="sol10">
+    
+    – Współczynnik kierunkowy: \(a=\frac{2-(-2)}{6-0}=\frac{4}{6}=\tfrac{2}{3}\).<br>
+    – Punkt (0,−2) daje wyraz wolny \(b=-2\).<br>
+    – Poprawna odpowiedź: <b>A</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 11 -->
+<div class="section" id="zad11" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(maj 2015 - zad. 5)</div></div>
+  <p>Układ równań:</p>
+  <p>\(\begin{cases} x-y=3 \\ 2x+0.5y=4 \end{cases}\)</p>
+  <p>opisuje w układzie współrzędnych na płaszczyźnie:</p>
+  <label class="option"><input type="radio" name="q11" value="A"> A. zbiór pusty</label>
+  <label class="option"><input type="radio" name="q11" value="B"> B. dokładnie jeden punkt</label>
+  <label class="option"><input type="radio" name="q11" value="C"> C. dokładnie dwa różne punkty</label>
+  <label class="option"><input type="radio" name="q11" value="D"> D. zbiór nieskończony</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+  <div class="sol" id="sol11">
+    
+    – Układ dwóch równań liniowych z dwiema niewiadomymi ma jedno rozwiązanie, jeśli proste się przecinają.<br>
+    – W tym przypadku mają różne współczynniki kierunkowe, więc przecinają się w jednym punkcie.<br>
+    – Poprawna odpowiedź: <b>B</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 12 -->
+<div class="section" id="zad12" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(maj 2014 - zad. 1)</div></div>
+  <p>Na rysunku przedstawiono geometryczną interpretację jednego z niżej zapisanych układów równań.</p>
+  <img src="img/wflwykres10.png" alt="Interpretacja układu równań - zad.12">
+  <label class="option"><input type="radio" name="q12" value="A"> A. \(\begin{cases} y=x-1 \\ y=-2x+4 \end{cases}\)</label>
+  <label class="option"><input type="radio" name="q12" value="B"> B. \(\begin{cases} y=x-1 \\ y=2x+4 \end{cases}\)</label>
+  <label class="option"><input type="radio" name="q12" value="C"> C. \(\begin{cases} y=x+1 \\ y=-2x+4 \end{cases}\)</label>
+  <label class="option"><input type="radio" name="q12" value="D"> D. \(\begin{cases} y=x+1 \\ y=2x+4 \end{cases}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+  <div class="sol" id="sol12">
+    
+    – Z rysunku widać proste: jedna rosnąca, druga malejąca.<br>
+    – Układ odpowiada wariantowi C.<br>
+    – Poprawna odpowiedź: <b>C</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 13 -->
+<div class="section" id="zad13" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(czerwiec 2013 - zad. 18)</div></div>
+  <p>Wskaż równanie prostej, której fragment przedstawiony jest na poniższym wykresie:</p>
+  <img src="img/wflwykres11.png" alt="Fragment prostej - zad.13">
+  <label class="option"><input type="radio" name="q13" value="A"> A. \(x-2y-4=0\)</label>
+  <label class="option"><input type="radio" name="q13" value="B"> B. \(x+2y+4=0\)</label>
+  <label class="option"><input type="radio" name="q13" value="C"> C. \(x-2y+4=0\)</label>
+  <label class="option"><input type="radio" name="q13" value="D"> D. \(x+2y-4=0\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+  <div class="sol" id="sol13">
+    
+    – Analizując przecięcia z osiami można ustalić równanie.<br>
+    – Wariant D odpowiada wykresowi.<br>
+    – Poprawna odpowiedź: <b>D</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 14 -->
+<div class="section" id="zad14" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(maj 2013 - zad. 9)</div></div>
+  <p>Na rysunku przedstawiony jest fragment wykresu pewnej funkcji liniowej \(y=ax+b\).</p>
+  <img src="img/wflwykres12.png" alt="Funkcja liniowa - zad.14">
+  <p>Jakie znaki mają współczynniki \(a\) i \(b\)?</p>
+  <label class="option"><input type="radio" name="q14" value="A"> A. \(a&lt;0, b&lt;0\)</label>
+  <label class="option"><input type="radio" name="q14" value="B"> B. \(a&lt;0, b&gt;0\)</label>
+  <label class="option"><input type="radio" name="q14" value="C"> C. \(a&gt;0, b&lt;0\)</label>
+  <label class="option"><input type="radio" name="q14" value="D"> D. \(a&gt;0, b&gt;0\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+  <div class="sol" id="sol14">
+    
+    – Z wykresu widać, że prosta maleje (\(a&lt;0\)).<br>
+    – Punkt przecięcia z osią OY jest ujemny (\(b&lt;0\)).<br>
+    – Poprawna odpowiedź: <b>A</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 15 -->
+<div class="section" id="zad15" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(sierpień 2010 - zad. 12)</div></div>
+  <p>Na którym rysunku przedstawiono wykres funkcji liniowej \(y=ax+b\) takiej, że \(a&gt;0\) i \(b&lt;0\)?</p>
+  <img src="img/wflwykres13.png" alt="Możliwe wykresy - zad.15">
+  <label class="option"><input type="radio" name="q15" value="A"> A</label>
+  <label class="option"><input type="radio" name="q15" value="B"> B</label>
+  <label class="option"><input type="radio" name="q15" value="C"> C</label>
+  <label class="option"><input type="radio" name="q15" value="D"> D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+  <div class="sol" id="sol15">
+    
+    – Szukamy prostej rosnącej (\(a&gt;0\)) i przecinającej oś OY poniżej zera (\(b&lt;0\)).<br>
+    – Odpowiada temu wykres w wariancie C.<br>
+    – Poprawna odpowiedź: <b>C</b>.</p>
+  </div>
+</div>
+<footer>Każdy problem ma rozwiązanie – wystarczy cierpliwość (^_^)</footer>
+
+</div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // dla całych sekcji
+  document.querySelectorAll('.section').forEach(sec => {
+
+    // obsługa podpytań P/F
+    sec.querySelectorAll('.subq').forEach(sub=>{
+      const correct = (sub.dataset.ans||'').trim().toUpperCase();
+      sub.querySelectorAll('input[type="radio"]').forEach(radio=>{
+        radio.addEventListener('change', ()=>{
+          const groupName = radio.name;
+          sub.querySelectorAll('input[name="'+groupName+'"]').forEach(r=>{
+            r.closest('.option').classList.remove('correct','incorrect');
+          });
+          const label = radio.closest('.option');
+          if(radio.value.toUpperCase()===correct){
+            label.classList.add('correct');
+          } else {
+            label.classList.add('incorrect');
+          }
+        });
+      });
+    });
+
+    // obsługa zwykłych pytań (radio)
+    const correct = (sec.dataset.ans||'').trim().toUpperCase();
+    sec.querySelectorAll('input[type="radio"]').forEach(radio=>{
+      if(radio.closest('.subq')) return; // już obsłużone wyżej
+      radio.addEventListener('change', ()=>{
+        const groupName = radio.name;
+        sec.querySelectorAll('input[name="'+groupName+'"]').forEach(r=>{
+          r.closest('.option').classList.remove('correct','incorrect');
+        });
+        const label = radio.closest('.option');
+        if(correct.split(',').includes(radio.value.toUpperCase())){
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+        }
+      });
+    });
+
+    // przyciski Rozwiązanie
+    sec.querySelectorAll('.btn-solution').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const target=document.getElementById(btn.dataset.target);
+        if(target){
+          target.style.display = target.style.display==='block' ? 'none':'block';
+        }
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Równania wymierne</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Równania wymierne</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2020 - zad. 1)</div>
+        <div class="qtext">Równość \(2+a=\tfrac{9a}{2a+1}\) jest prawdziwa, gdy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> \(-2\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> \(-1\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> 2</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \((2+a)(2a+1)=9a\). Rozwiązanie: \(a=1\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2020 - zad. 6)</div>
+        <div class="qtext">Równanie \(\tfrac{1-x}{x}=2x\) w zbiorze liczb całkowitych</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> brak rozwiązań</div></label>
+      <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> jedno rozwiązanie</div></label>
+      <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> dwa rozwiązania</div></label>
+      <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> więcej niż dwa rozwiązania</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \((1-x)=2x^2\Rightarrow 2x^2+x-1=0\). Rozwiązania: \(\tfrac{-1\pm 3}{4}\Rightarrow x=\tfrac12,-1\). Całkowite: \(-1\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2018 - zad. 7)</div>
+        <div class="qtext">Rozwiązaniem równania \(\tfrac{x-2}{3(x+2)}=\tfrac19\) jest</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> \(-2\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> \(-4\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Mnożymy: \(9(x-2)=3(x+2)\Rightarrow 9x-18=3x+6\Rightarrow 6x=24\Rightarrow x=4\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2018 - zad. 6)</div>
+        <div class="qtext">Równanie \(x-\tfrac{1}{2x+1}=0\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> dwa rozwiązania</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> trzy rozwiązania</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> jedno rozwiązanie</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> brak rozwiązań</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(x(2x+1)=1\Rightarrow 2x^2+x-1=0\Rightarrow x=\tfrac{-1\pm 3}{4}=\tfrac12,-1\). Dwa rozwiązania. Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2017 - zad. 8)</div>
+        <div class="qtext">Rozwiązaniem \(\tfrac{x+1}{x+2}=3\) (\(x\neq -2\)) jest liczba z przedziału</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> \((-2,1)\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> \([1,+\infty)\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> \((-\infty,-5)\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> \([-5,-2)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(x+1=3x+6\Rightarrow -2x=5\Rightarrow x=-\tfrac52\in[-5,-2)\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2016 - zad. 8)</div>
+        <div class="qtext">Rozwiązaniem równania \(\tfrac{x-7}{x}=5\), gdzie \(x\neq 0\), jest liczba należąca do przedziału:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> \((-\infty,-2)\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> \([-2,-1)\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> \([-1,0)\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> \((0,+\infty)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \((x-7)/x=5\Rightarrow x-7=5x\Rightarrow -7=4x\Rightarrow x=-\tfrac74=-1.75\in[-2,-1)\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2016 - zad. 9)</div>
+        <div class="qtext">Równanie \(\tfrac{3x-1}{x+5}=3\), gdzie \(x\neq -5\),</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> nie ma rozwiązań</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> jedno rozwiązanie</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> dwa rozwiązania</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> trzy rozwiązania</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(3x-1=3(x+5)\Rightarrow 3x-1=3x+15\Rightarrow -1=15\), sprzeczność. Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2015 - zad. 7)</div>
+        <div class="qtext">Równanie \(\tfrac{x-1}{x+1}=x-1\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> jedno rozwiązanie: \(x=1\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> jedno rozwiązanie: \(x=0\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> jedno rozwiązanie: \(x=-1\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> dwa rozwiązania: \(x=0,1\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \((x-1)/(x+1)=x-1\). Po przekształceniu: \(x^2-2x= x-1\Rightarrow x^2-3x+1=0\). Rozwiązania \(x=0,1\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2014 - zad. 6)</div>
+        <div class="qtext">Rozwiązaniem równania \(\tfrac{x-5}{7-x}=\tfrac13\) jest</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> \(-11\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> \(\tfrac{11}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> \(\tfrac{2}{11}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> 11</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \((x-5)/(7-x)=1/3\Rightarrow 3(x-5)=7-x\Rightarrow 3x-15=7-x\Rightarrow 4x=22\Rightarrow x=11/2\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2012 - zad. 7)</div>
+        <div class="qtext">Równanie \(\tfrac{x^2+36}{x-6}=0\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q10" value="A"><div><b>A.</b> brak rozwiązań</div></label>
+      <label class="option"><input type="radio" name="q10" value="B"><div><b>B.</b> jedno rozwiązanie</div></label>
+      <label class="option"><input type="radio" name="q10" value="C"><div><b>C.</b> dwa rozwiązania</div></label>
+      <label class="option"><input type="radio" name="q10" value="D"><div><b>D.</b> trzy rozwiązania</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Licznik \(x^2+36=0\) nie ma rozwiązań rzeczywistych. Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2010 - zad. 6)</div>
+        <div class="qtext">Rozwiązaniem równania \(\tfrac{3x-1}{7x+1}=\tfrac25\) jest</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> \(\tfrac73\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> \(\tfrac47\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> 7</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(5(3x-1)=2(7x+1)\Rightarrow 15x-5=14x+2\Rightarrow x=7\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2009 - zad. 10)</div>
+        <div class="qtext">Rozwiązaniem równania \(\tfrac{x-5}{x+3}=\tfrac23\) jest</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q12" value="A"><div><b>A.</b> 21</div></label>
+      <label class="option"><input type="radio" name="q12" value="B"><div><b>B.</b> 7</div></label>
+      <label class="option"><input type="radio" name="q12" value="C"><div><b>C.</b> \(\tfrac{17}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q12" value="D"><div><b>D.</b> 0</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(3(x-5)=2(x+3)\Rightarrow 3x-15=2x+6\Rightarrow x=21\). Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Równanie \(\tfrac{2x+1}{x}=3x\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q13" value="A"><div><b>A.</b> dwa rozwiązania: \(-\tfrac13,1\)</div></label>
+      <label class="option"><input type="radio" name="q13" value="B"><div><b>B.</b> dwa rozwiązania: \(\tfrac13,1\)</div></label>
+      <label class="option"><input type="radio" name="q13" value="C"><div><b>C.</b> brak rozwiązań</div></label>
+      <label class="option"><input type="radio" name="q13" value="D"><div><b>D.</b> jedno rozwiązanie: 1</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(2x+1=3x^2\Rightarrow 3x^2-2x-1=0\). Rozwiązania: \((2\pm4)/6=\{1,-1/3\}\). Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Rozwiązaniem równania \(\tfrac{x-3}{2-x}=\tfrac12\) jest</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q14" value="A"><div><b>A.</b> \(-\tfrac43\)</div></label>
+      <label class="option"><input type="radio" name="q14" value="B"><div><b>B.</b> \(-\tfrac34\)</div></label>
+      <label class="option"><input type="radio" name="q14" value="C"><div><b>C.</b> \(\tfrac38\)</div></label>
+      <label class="option"><input type="radio" name="q14" value="D"><div><b>D.</b> \(\tfrac83\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \((x-3)/(2-x)=1/2\Rightarrow 2(x-3)=2-x\Rightarrow 2x-6=2-x\Rightarrow 3x=8\Rightarrow x=8/3\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Liczba rozwiązań równania \(\tfrac{11-x}{x^2-11}=0\) to</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q15" value="A"><div><b>A.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q15" value="B"><div><b>B.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q15" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q15" value="D"><div><b>D.</b> 3</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: licznik \(11-x=0\Rightarrow x=11\). Mianownik: \(x^2-11\neq0\), więc \(x\neq\pm\sqrt{11}\). Rozwiązanie: \(x=11\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+
+  <footer>Nie szukaj drogi na skróty – droga uczy najwięcej ╭( ･ㅂ･)و</footer>
+
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const correct = (sec.getAttribute('data-ans')||'').toUpperCase().trim();
+
+  const options = sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input = opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val = (input.value||'').toUpperCase().trim();
+      if(val === correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click', ()=>{ 
+      sol.style.display = sol.style.display==='block' ? 'none' : 'block'; 
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+Array.from({length:15},(_,i)=>'zad'+(i+1)).forEach(setupQuestion);
+</script>
+</body>
+</html>

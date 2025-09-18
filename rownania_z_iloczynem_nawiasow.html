@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Równania z iloczynem nawiasów</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Równania z iloczynem nawiasów</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2025 - zad. 7)</div>
+        <div class="qtext">Równanie \(4(x-1)^2(x^2-25)=0\) w zbiorze liczb rzeczywistych ma dokładnie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> dwa rozwiązania.</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> trzy rozwiązania.</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> cztery rozwiązania.</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> pięć rozwiązań.</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Krok 1: \(4\neq 0\), więc szukamy miejsc zerowych iloczynu \((x-1)^2(x^2-25)=0\).<br/>
+      Krok 2: \((x-1)^2=0 \Rightarrow x=1\) (pierwiastek podwójny, ale <i>jeden</i> różny).<br/>
+      Krok 3: \(x^2-25=0 \Rightarrow x=\pm 5\).<br/>
+      Wniosek: trzy różne rozwiązania rzeczywiste: \(-5,\,1,\,5\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2025 - zad. 7)</div>
+        <div class="qtext">Równanie \(2x(x+3)(x^2+25)=0\) w zbiorze liczb rzeczywistych ma dokładnie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> dwa rozwiązania: \(-3\) oraz 0.</div></label>
+      <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> dwa rozwiązania: \(-3\) oraz 2.</div></label>
+      <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> trzy rozwiązania: \(-5\), \(-3\) oraz 0.</div></label>
+      <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> cztery rozwiązania: \(-5\), \(-3\), 0 oraz 5.</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Krok 1: \(2\neq 0\). Iloczyn równy zero, gdy któryś czynnik równy zero.<br/>
+      Krok 2: \(x=0\) lub \(x+3=0\Rightarrow x=-3\).<br/>
+      Krok 3: \(x^2+25=0\Rightarrow x^2=-25\) – brak rozwiązań rzeczywistych.<br/>
+      Wniosek: dokładnie dwa rozwiązania rzeczywiste: \(-3\) i \(0\). Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2023 - zad. 7)</div>
+        <div class="qtext">Jednym z rozwiązań równania \(\sqrt{3}(x^2-2)(x+3)=0\) jest liczba</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> \(\sqrt{3}\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> \(\sqrt{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Krok 1: \(\sqrt{3}\neq 0\), więc warunki: \(x^2-2=0\) lub \(x+3=0\).<br/>
+      Krok 2: \(x^2-2=0 \Rightarrow x=\pm\sqrt{2}\); drugi czynnik daje \(x=-3\).<br/>
+      Wśród odpowiedzi tylko \(\sqrt{2}\) występuje. Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2022 - zad. 7)</div>
+        <div class="qtext">Suma wszystkich rozwiązań równania \((2x-1)(2x-2)(x+2)=0\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> \(-\tfrac{7}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(-\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> \(\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> 1</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Krok 1: Miejsca zerowe: \(2x-1=0\Rightarrow x=\tfrac12\), \(2x-2=0\Rightarrow x=1\), \(x+2=0\Rightarrow x=-2\).<br/>
+      Krok 2: Suma: \(\tfrac12+1-2=-\tfrac12\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2022 - zad. 9)</div>
+        <div class="qtext">Równanie \((x^2-27)(x^2+16)=0\) ma dokładnie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> jedno rozwiązanie rzeczywiste.</div></label>
+      <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> dwa rozwiązania rzeczywiste.</div></label>
+      <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> trzy rozwiązania rzeczywiste.</div></label>
+      <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> cztery rozwiązania rzeczywiste.</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Krok 1: \(x^2-27=0\Rightarrow x=\pm\sqrt{27}=\pm 3\sqrt{3}\) (dwa rzeczywiste).<br/>
+      Krok 2: \(x^2+16=0\Rightarrow x^2=-16\) — brak rzeczywistych.<br/>
+      Wniosek: dokładnie dwa rozwiązania rzeczywiste. Odp.: <b>B</b>.
+    </div>
+  </div>
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2022 - zad. 8)</div>
+        <div class="qtext">Iloczyn wszystkich rozwiązań równania \(2x(x^2-9)(x+1)=0\) jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> −3</div></label>
+      <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> 9</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Miejsca zerowe: \(x=0,\;x=\pm 3,\;x=-1\).<br/>
+      Iloczyn: \(0\cdot(-3)\cdot 3\cdot(-1)=0\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2021 - zad. 6)</div>
+        <div class="qtext">Iloczyn wszystkich rozwiązań równania \(2(x-4)(x^2-1)=0\) jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> −8</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> −4</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> 8</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozwiązania: \(x=4,\;x=1,\;x=-1\).<br/>
+      Iloczyn: \(4\cdot 1\cdot(-1)=-4\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2020 - zad. 5)</div>
+        <div class="qtext">Zbiorem wszystkich rozwiązań nierówności \(3(1-x) > 2(3x-1)-12x\) jest przedział</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> \(\left(-\tfrac{5}{3},+\infty\right)\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> \((-\infty,\tfrac{5}{3})\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> \((\tfrac{5}{3},+\infty)\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> \((-\infty,-\tfrac{5}{3})\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Upraszczamy: \(3-3x > 6x-2-12x\Rightarrow 3-3x > -6x-2\).<br/>
+      Dodajemy \(6x\): \(3+3x > -2\).<br/>
+      \(3x>-5 \Rightarrow x>-\tfrac53\).<br/> Rozwiązanie: \(\left(-\tfrac{5}{3},+\infty\right)\). Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2019 - zad. 4)</div>
+        <div class="qtext">Równanie \(x(5x+1)=5x+1\) ma dokładnie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> jedno rozwiązanie: \(x=1\).</div></label>
+      <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> dwa rozwiązania: \(x=1\) i \(x=-1\).</div></label>
+      <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> dwa rozwiązania: \(x=-\tfrac{1}{5}\) i \(x=1\).</div></label>
+      <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> dwa rozwiązania: \(x=\tfrac{1}{5}\) i \(x=-1\).</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \(5x^2+x=5x+1\Rightarrow 5x^2-4x-1=0\).<br/>
+      Δ=\(16+20=36\). Rozwiązania: \(\tfrac{4\pm 6}{10}=\{-\tfrac15,1\}\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2017 - zad. 10)</div>
+        <div class="qtext">Równanie \(x(x-3)(x^2+25)=0\) ma dokładnie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q10" value="A"><div><b>A.</b> cztery rozwiązania: 0,3,5,−5</div></label>
+      <label class="option"><input type="radio" name="q10" value="B"><div><b>B.</b> trzy rozwiązania: 3,5,−5</div></label>
+      <label class="option"><input type="radio" name="q10" value="C"><div><b>C.</b> dwa rozwiązania: 0 i 3</div></label>
+      <label class="option"><input type="radio" name="q10" value="D"><div><b>D.</b> jedno rozwiązanie: 3</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(x=0\) lub \(x-3=0\Rightarrow x=3\).<br/>
+      \(x^2+25=0\) brak rzeczywistych.<br/>
+      Wniosek: dwa rozwiązania: 0 i 3. Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2016 - zad. 7)</div>
+        <div class="qtext">Spośród liczb, które są rozwiązaniami równania \((x-8)(x^2-4)(x^2+16)=0\) wybrano największą i najmniejszą. Suma tych dwóch liczb jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> 12</div></label>
+      <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> 6</div></label>
+      <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> 4</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozwiązania: \(x=8,\;x=2,\;x=-2\).<br/>
+      Największe=8, najmniejsze=−2. Suma=6. Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2015 - zad. 9)</div>
+        <div class="qtext">Rozwiązaniem równania \(x^2(x+1)=x^2-8\) jest</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q12" value="A"><div><b>A.</b> −9</div></label>
+      <label class="option"><input type="radio" name="q12" value="B"><div><b>B.</b> −2</div></label>
+      <label class="option"><input type="radio" name="q12" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q12" value="D"><div><b>D.</b> 7</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \(x^3+x^2=x^2-8\Rightarrow x^3=-8\Rightarrow x=-2\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2015 - zad. 11)</div>
+        <div class="qtext">Liczba niewymiernych rozwiązań równania \(x^2(x+5)(2x-3)(x^2-7)=0\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q13" value="A"><div><b>A.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q13" value="B"><div><b>B.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q13" value="C"><div><b>C.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q13" value="D"><div><b>D.</b> 2</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozwiązania: \(x=0,\;x=-5,\;x=\tfrac{3}{2},\;x=\pm\sqrt{7}\).<br/>
+      Niewymierne: \(\pm\sqrt{7}\). Dwie liczby. Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2015 - zad. 6)</div>
+        <div class="qtext">Suma wszystkich pierwiastków równania \((x+3)(x+7)(x-11)=0\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q14" value="A"><div><b>A.</b> −1</div></label>
+      <label class="option"><input type="radio" name="q14" value="B"><div><b>B.</b> 21</div></label>
+      <label class="option"><input type="radio" name="q14" value="C"><div><b>C.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q14" value="D"><div><b>D.</b> −21</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Pierwiastki: \(-3,\,-7,\,11\).<br/>
+      Suma: \(-3-7+11=1\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2014 - zad. 3)</div>
+        <div class="qtext">Rozwiązaniami równania \((x^3-8)(x-5)(2x+1)=0\) są liczby</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q15" value="A"><div><b>A.</b> −8, −5, 1</div></label>
+      <label class="option"><input type="radio" name="q15" value="B"><div><b>B.</b> −1, 5, 8</div></label>
+      <label class="option"><input type="radio" name="q15" value="C"><div><b>C.</b> −½, 2, 5</div></label>
+      <label class="option"><input type="radio" name="q15" value="D"><div><b>D.</b> −½, 5, 8</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \(x^3-8=0\Rightarrow x=2\).<br/>
+      Dalej: \(x-5=0\Rightarrow x=5\).<br/>
+      \(2x+1=0\Rightarrow x=-\tfrac12\).<br/>
+      Rozwiązania: \(-\tfrac12,2,5\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2014 - zad. 5)</div>
+        <div class="qtext">Wspólnym pierwiastkiem równań \((x^2-1)(x-10)(x-5)=0\) oraz \(\tfrac{2x-10}{x-1}=0\) jest liczba</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q16" value="A"><div><b>A.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q16" value="B"><div><b>B.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q16" value="C"><div><b>C.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q16" value="D"><div><b>D.</b> −1</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Pierwiastki pierwszego: \(-1,1,10,5\).<br/>
+      Drugie: \(\tfrac{2x-10}{x-1}=0\Rightarrow 2x-10=0\Rightarrow x=5\).<br/>
+      Wspólny: 5. Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2013 - zad. 15)</div>
+        <div class="qtext">Równanie \((2x-1)(x-2)=(1-2x)(x+2)\) ma dwa rozwiązania. Są to liczby</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q17" value="A"><div><b>A.</b> −2 oraz ½</div></label>
+      <label class="option"><input type="radio" name="q17" value="B"><div><b>B.</b> 0 oraz ½</div></label>
+      <label class="option"><input type="radio" name="q17" value="C"><div><b>C.</b> ½ oraz 2</div></label>
+      <label class="option"><input type="radio" name="q17" value="D"><div><b>D.</b> −2 oraz 2</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      LHS: \((2x-1)(x-2)\). RHS: \((1-2x)(x+2)=-(2x-1)(x+2)\).<br/>
+      Równanie: \((2x-1)(x-2)+(2x-1)(x+2)=0\).<br/>
+      \((2x-1)(2x)=0\Rightarrow x=0,\;x=\tfrac12\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2013 - zad. 17)</div>
+        <div class="qtext">Funkcja \(f(x)=3x(x^2+5)(2-x)(x+1)\) ma dokładnie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q18" value="A"><div><b>A.</b> dwa miejsca zerowe</div></label>
+      <label class="option"><input type="radio" name="q18" value="B"><div><b>B.</b> trzy miejsca zerowe</div></label>
+      <label class="option"><input type="radio" name="q18" value="C"><div><b>C.</b> cztery miejsca zerowe</div></label>
+      <label class="option"><input type="radio" name="q18" value="D"><div><b>D.</b> pięć miejsc zerowych</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Miejsca zerowe: \(x=0,\;x=2,\;x=-1\).<br/>
+      Czynnik \(x^2+5=0\) nie daje rzeczywistych.<br/>
+      Razem 3 miejsca zerowe. Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2013 - zad. 16)</div>
+        <div class="qtext">Liczba rzeczywistych rozwiązań równania \((x+1)(x+2)(x^2+3)=0\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q19" value="A"><div><b>A.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q19" value="B"><div><b>B.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q19" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q19" value="D"><div><b>D.</b> 4</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozwiązania: \(x=-1,\;x=-2\).<br/>
+      Czynnik \(x^2+3\) nie ma rzeczywistych.<br/>
+      Razem 2. Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Ile rozwiązań rzeczywistych ma równanie \(5x^4-13=0\)?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q20" value="A"><div><b>A.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q20" value="B"><div><b>B.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q20" value="C"><div><b>C.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q20" value="D"><div><b>D.</b> 4</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(5x^4-13=0\Rightarrow x^4=\tfrac{13}{5}\).<br/>
+      \(x=\pm\sqrt[4]{\tfrac{13}{5}}\).<br/>
+      Dwa rozwiązania rzeczywiste. Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <footer>Każdy krok do przodu to małe zwycięstwo (☞ﾟヮﾟ)☞</footer>
+
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec=document.getElementById(sectionId);
+  if(!sec) return;
+  const correct=(sec.getAttribute('data-ans')||'').toUpperCase().trim();
+  const options=sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input=opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change',()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val=(input.value||'').toUpperCase().trim();
+      if(val===correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click',()=>{
+      sol.style.display = sol.style.display==='block' ? 'none' : 'block';
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+['zad1','zad2','zad3','zad4','zad5','zad6','zad7','zad8','zad9','zad10','zad11','zad12','zad13','zad14','zad15','zad16','zad17','zad18','zad19','zad20'].forEach(setupQuestion);
+</script>
+</body>
+</html>

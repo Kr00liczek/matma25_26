@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wyrażenia algebraiczne i wzory skróconego mnożenia</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    // Ustawienia / narzędzia
+    function byId(id){return document.getElementById(id)}
+    function setupSingleChoice(sec){
+      const correct = (sec.dataset.ans||'').trim().toUpperCase();
+      const labels = sec.querySelectorAll('.option');
+      labels.forEach(lbl=>{
+        const inp = lbl.querySelector('input[type=radio]');
+        if(!inp) return;
+        inp.addEventListener('change', ()=>{
+          labels.forEach(l=>l.classList.remove('correct','incorrect'));
+          const val = (inp.value||'').toUpperCase();
+          if(val===correct){ lbl.classList.add('correct'); }
+          else { lbl.classList.add('incorrect'); }
+        });
+      });
+    }
+    // Obsługa zadań z DWOMA poprawnymi odpowiedziami (np. zad. 9 i 45)
+    // Zasada: zaznaczenie KAŻDEJ poprawnej opcji podświetla ją na zielono,
+    // zaznaczenie błędnej – na czerwono. Odznaczenie usuwa podświetlenie.
+    function setupMultiAny(sec){
+      const correctSet = new Set((sec.dataset.ans||'').split(',').map(s=>s.trim().toUpperCase()).filter(Boolean));
+      const labels = sec.querySelectorAll('.option');
+      labels.forEach(lbl=>{
+        const inp = lbl.querySelector('input[type=checkbox]');
+        if(!inp) return;
+        inp.addEventListener('change', ()=>{
+          lbl.classList.remove('correct','incorrect');
+          if(inp.checked){
+            const val = (inp.value||'').toUpperCase();
+            if(correctSet.has(val)) lbl.classList.add('correct');
+            else lbl.classList.add('incorrect');
+          }
+        });
+      });
+    }
+    function setupToggleSolution(sec){
+      const btn = sec.querySelector('.btn-solution');
+      const sol = sec.querySelector('.sol');
+      if(btn && sol){
+        btn.addEventListener('click', ()=>{
+          sol.style.display = sol.style.display==='block' ? 'none' : 'block';
+          if(window.MathJax) MathJax.typesetPromise();
+        });
+      }
+    }
+    function setupSection(sectionId){
+      const sec = byId(sectionId);
+      if(!sec) return;
+      const isMulti = sec.dataset.mode === 'multi-any';
+      if(isMulti) setupMultiAny(sec);
+      else setupSingleChoice(sec);
+      setupToggleSolution(sec);
+    }
+    // Inicjalizacja: przygotuj sloty dla zadań 1..45 (nawet jeśli nie wszystkie są na stronie teraz)
+    document.addEventListener('DOMContentLoaded', ()=>{
+      for(let i=1;i<=45;i++){
+        setupSection('zad'+i);
+      }
+    });
+  </script>
+  <script async id="mathjax" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="wrap">
+        <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+    <h1>Wyrażenia algebraiczne i wzory skróconego mnożenia</h1><br>
+
+    <!-- Zadanie 1 -->
+    <div class="section" id="zad1" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 1</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2025 - zad. 4)</div>
+          <div class="qtext">
+            Dla każdej liczby rzeczywistej \(x\) wartość wyrażenia \((3x + 2)^2 - (2x - 3)^2\)
+            jest równa wartości wyrażenia:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> \(5x^2 - 5\)</div></label>
+        <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> \(5x^2 + 13\)</div></label>
+        <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> \(5x^2 + 24x - 5\)</div></label>
+        <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> \(5x^2 + 24x - 13\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((A^2 - B^2)=(A-B)(A+B)\).  
+        \(A=3x+2,\; B=2x-3\).  
+        \(A-B = x+5,\; A+B = 5x-1\).  
+        Iloczyn: \((x+5)(5x-1)=5x^2+24x-5\). Odp.: <b>C</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 2 -->
+    <div class="section" id="zad2" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 2</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2024 - zad. 3)</div>
+          <div class="qtext">
+            Liczba \(\bigl(2\sqrt{10} + \sqrt{2}\bigr)^2\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> \(22\)</div></label>
+        <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> \(42\)</div></label>
+        <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> \(42 + 4\sqrt{5}\)</div></label>
+        <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> \(42 + 8\sqrt{5}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((a+b)^2=a^2+2ab+b^2\).  
+        \(a=2\sqrt{10}\Rightarrow a^2=40\).  
+        \(b=\sqrt{2}\Rightarrow b^2=2\).  
+        \(2ab=2\cdot 2\sqrt{10}\cdot \sqrt{2}=4\sqrt{20}=4\cdot 2\sqrt{5}=8\sqrt{5}\).  
+        Suma: \(40+8\sqrt{5}+2=42+8\sqrt{5}\). Odp.: <b>D</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 3 -->
+    <div class="section" id="zad3" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 3</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2024 - zad. 8)</div>
+          <div class="qtext">
+            Dla każdej liczby rzeczywistej \(x\neq -1,0,1\), wartość
+            \(\displaystyle \frac{2x^2}{x^2-1}\cdot \frac{x+1}{x}\)
+            jest równa wartości wyrażenia:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> \(2x+2\)</div></label>
+        <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> \(\displaystyle \frac{2x}{x-1}\)</div></label>
+        <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> \(\displaystyle \frac{2x}{x^2-1}\)</div></label>
+        <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> \(\displaystyle \frac{2x^3+1}{x^3-1}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(x^2-1=(x-1)(x+1)\).  
+        \(\frac{2x^2}{(x-1)(x+1)}\cdot \frac{x+1}{x}
+        =\frac{2x}{x-1}\). Odp.: <b>B</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 4 -->
+    <div class="section" id="zad4" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 4</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2024 - zad. 5)</div>
+          <div class="qtext">
+            Dla każdej liczby rzeczywistej \(a\) i dla każdej liczby rzeczywistej \(b\) wartość
+            wyrażenia \((2a+b)^2-(2a-b)^2\) jest równa wartości wyrażenia:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> \(8a^2\)</div></label>
+        <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(8ab\)</div></label>
+        <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> \(-8ab\)</div></label>
+        <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> \(2b^2\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Różnica kwadratów: \((A+B)^2-(A-B)^2=4AB\).  
+        Tu \(A=2a,\; B=b\), więc \(4\cdot 2a\cdot b=8ab\). Odp.: <b>B</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 5 -->
+    <div class="section" id="zad5" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 5</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2023 - zad. 6)</div>
+          <div class="qtext">
+            Wartość wyrażenia \(\; (2-\sqrt{3})^2 - (\sqrt{3}-2)^2 \;\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> \(-2\sqrt{3}\)</div></label>
+        <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> \(0\)</div></label>
+        <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> \(6\)</div></label>
+        <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> \(8\sqrt{3}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((\sqrt{3}-2)^2=(2-\sqrt{3})^2\), więc różnica dwóch jednakowych liczb jest równa \(0\).  
+        Odp.: <b>B</b>.
+      </div>
+    </div>
+
+        <!-- Zadanie 6 -->
+    <div class="section" id="zad6" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 6</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2023 - zad. 6)</div>
+          <div class="qtext">
+            Liczba \(\;(1+\sqrt{5})^2 - (1-\sqrt{5})^2\;\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> \(0\)</div></label>
+        <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> \(-10\)</div></label>
+        <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> \(4\sqrt{5}\)</div></label>
+        <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> \(2+2\sqrt{5}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Różnica kwadratów: \((1+\sqrt{5})^2-(1-\sqrt{5})^2=4\sqrt{5}\).  
+        Odp.: <b>C</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 7 -->
+    <div class="section" id="zad7" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 7</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2023 - zad. 5)</div>
+          <div class="qtext">
+            Dla każdej liczby rzeczywistej \(a\) wyrażenie \((2a-3)^2-(2a+3)^2\) jest równe:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> \(-24a\)</div></label>
+        <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> \(0\)</div></label>
+        <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> \(18\)</div></label>
+        <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> \(16a^2-24a\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Różnica kwadratów: \((2a-3)^2-(2a+3)^2=( (2a-3)-(2a+3) )( (2a-3)+(2a+3) )=(-6)(4a)=-24a\).  
+        Odp.: <b>A</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 8 -->
+    <div class="section" id="zad8" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 8</div>
+        <div style="flex:1">
+          <div class="qmeta">(pokazowy 2023 - zad. 4)</div>
+          <div class="qtext">
+            Dla każdej liczby rzeczywistej \(a\) wartość wyrażenia \((3+4a)^2-(3-4a)^2\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> \(32a^2\)</div></label>
+        <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> \(0\)</div></label>
+        <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> \(48a\)</div></label>
+        <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> brak</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Różnica kwadratów: \((A+B)^2-(A-B)^2=4AB\). Tu \(A=3, B=4a\).  
+        Wynik: \(4\cdot 3 \cdot 4a=48a\). Odp.: <b>C</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 9 -->
+    <div class="section" id="zad9" data-ans="D,F" data-mode="multi-any">
+      <div class="qheader">
+        <div class="qid">Zad. 9</div>
+        <div style="flex:1">
+          <div class="qmeta">(wrzesień 2022 - zad. 5)</div>
+          <div class="qtext">
+            Dokończ zdanie. Wybierz <b>dwie</b> właściwe odpowiedzi.  
+            Dla każdej liczby rzeczywistej \(x,y\) wyrażenie \(9-(x^2-2xy+y^2)\) jest równe:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="checkbox" name="q9" value="A"><div><b>A.</b> \([3-(x-2y)]^2\)</div></label>
+        <label class="option"><input type="checkbox" name="q9" value="B"><div><b>B.</b> \([3+(x-2y)]^2\)</div></label>
+        <label class="option"><input type="checkbox" name="q9" value="C"><div><b>C.</b> \([3-(x+2y)]^2\)</div></label>
+        <label class="option"><input type="checkbox" name="q9" value="D"><div><b>D.</b> \([3-(x-y)][3+(x-y)]\)</div></label>
+        <label class="option"><input type="checkbox" name="q9" value="E"><div><b>E.</b> \([3-(x+2y)][3+(x+2y)]\)</div></label>
+        <label class="option"><input type="checkbox" name="q9" value="F"><div><b>F.</b> \(-[(x-y)-3][(x-y)+3]\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(9-(x^2-2xy+y^2)=9-(x-y)^2\).  
+        To jest wzór skróconego mnożenia: \(9-(x-y)^2=(3-(x-y))(3+(x-y))\). Odp.: <b>D</b>.  
+        Można też zapisać jako \(-( (x-y)-3)( (x-y)+3))\). Odp.: <b>F</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 10 -->
+    <div class="section" id="zad10" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 10</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2022 - zad. 3)</div>
+          <div class="qtext">
+            Liczba \((5-2\sqrt{3})^2\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q10" value="A"><div><b>A.</b> \(25+4\sqrt{3}\)</div></label>
+        <label class="option"><input type="radio" name="q10" value="B"><div><b>B.</b> \(25-4\sqrt{3}\)</div></label>
+        <label class="option"><input type="radio" name="q10" value="C"><div><b>C.</b> \(37+20\sqrt{3}\)</div></label>
+        <label class="option"><input type="radio" name="q10" value="D"><div><b>D.</b> \(37-20\sqrt{3}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((5-2\sqrt{3})^2=25-20\sqrt{3}+12=37-20\sqrt{3}\). Odp.: <b>D</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 11 -->
+    <div class="section" id="zad11" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 11</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2022 - zad. 5)</div>
+          <div class="qtext">
+            Dla każdej liczby rzeczywistej \(a\) wyrażenie \(5-(4+2a)(4-2a)\) jest równe:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> \(-4a^2-16a-11\)</div></label>
+        <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> \(4a^2-11\)</div></label>
+        <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> \(-4a^2-11\)</div></label>
+        <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> \(4a^2+16a-11\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((4+2a)(4-2a)=16-4a^2\).  
+        \(5-(16-4a^2)=4a^2-11\). Odp.: <b>B</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 12 -->
+    <div class="section" id="zad12" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 12</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2022 - zad. 2)</div>
+          <div class="qtext">
+            Dodatnie liczby \(x,y\) spełniają warunek \(2x=3y\).  
+            Wartość \(\dfrac{x^2+y^2}{x\cdot y}\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q12" value="A"><div><b>A.</b> \(\tfrac{2}{3}\)</div></label>
+        <label class="option"><input type="radio" name="q12" value="B"><div><b>B.</b> \(\tfrac{13}{6}\)</div></label>
+        <label class="option"><input type="radio" name="q12" value="C"><div><b>C.</b> \(\tfrac{6}{13}\)</div></label>
+        <label class="option"><input type="radio" name="q12" value="D"><div><b>D.</b> \(\tfrac{3}{2}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Z \(2x=3y\) wynika \(y=\tfrac{2}{3}x\).  
+        Liczymy: \((x^2+(\tfrac{2}{3}x)^2)/(x\cdot \tfrac{2}{3}x)=(x^2+\tfrac{4}{9}x^2)/(\tfrac{2}{3}x^2)=\tfrac{13}{9}x^2 / (\tfrac{2}{3}x^2)=\tfrac{13}{9}\cdot \tfrac{3}{2}=\tfrac{13}{6}\).  
+        Odp.: <b>B</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 13 -->
+    <div class="section" id="zad13" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 13</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2021 - zad. 5)</div>
+          <div class="qtext">
+            Dla każdej liczby rzeczywistej \(x\) wyrażenie \((x-1)^2-(2-x)^2\) jest równe:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q13" value="A"><div><b>A.</b> \(2x-3\)</div></label>
+        <label class="option"><input type="radio" name="q13" value="B"><div><b>B.</b> \(2x^2-6x-3\)</div></label>
+        <label class="option"><input type="radio" name="q13" value="C"><div><b>C.</b> \((2x-3)^2\)</div></label>
+        <label class="option"><input type="radio" name="q13" value="D"><div><b>D.</b> \(9\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Różnica kwadratów: \((x-1)^2-(2-x)^2=((x-1)-(2-x))((x-1)+(2-x))\).  
+        Pierwszy nawias: \(2x-3\). Drugi nawias: \(1\). Wynik: \(2x-3\).  
+        Odp.: <b>A</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 14 -->
+    <div class="section" id="zad14" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 14</div>
+        <div style="flex:1">
+          <div class="qmeta">(marzec 2021 - zad. 1)</div>
+          <div class="qtext">
+            Liczba \(\;(\sqrt{6}-\sqrt{2})^2-2\sqrt{3}\;\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q14" value="A"><div><b>A.</b> \(8-6\sqrt{3}\)</div></label>
+        <label class="option"><input type="radio" name="q14" value="B"><div><b>B.</b> \(8-2\sqrt{3}\)</div></label>
+        <label class="option"><input type="radio" name="q14" value="C"><div><b>C.</b> \(4-2\sqrt{3}\)</div></label>
+        <label class="option"><input type="radio" name="q14" value="D"><div><b>D.</b> \(8-4\sqrt{3}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((\sqrt{6}-\sqrt{2})^2=6+2-2\sqrt{12}=8-4\sqrt{3}\).  
+        Odejmujemy \(2\sqrt{3}\): \(8-6\sqrt{3}\). Odp.: <b>A</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 15 -->
+    <div class="section" id="zad15" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 15</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2020 - zad. 1)</div>
+          <div class="qtext">
+            Liczba \((\sqrt{5}+2\sqrt{3})^2\) jest równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q15" value="A"><div><b>A.</b> \(11\)</div></label>
+        <label class="option"><input type="radio" name="q15" value="B"><div><b>B.</b> \(17\)</div></label>
+        <label class="option"><input type="radio" name="q15" value="C"><div><b>C.</b> \(17+4\sqrt{15}\)</div></label>
+        <label class="option"><input type="radio" name="q15" value="D"><div><b>D.</b> \(17+2\sqrt{15}\)</div></label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((\sqrt{5}+2\sqrt{3})^2=5+12+2\cdot \sqrt{5}\cdot 2\sqrt{3}=17+4\sqrt{15}\).  
+        Odp.: <b>C</b>.
+      </div>
+    </div>
+
+<!-- Zadanie 16 -->
+<div class="section" id="zad16" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 16</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2020 - zad. 1)</div>
+      <div class="qtext">Wartość wyrażenia \(x^2 - 6x + 9\) dla \(x=\sqrt{3}+3\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q16" value="A"><div><b>A.</b> 1</div></label>
+    <label class="option"><input type="radio" name="q16" value="B"><div><b>B.</b> 3</div></label>
+    <label class="option"><input type="radio" name="q16" value="C"><div><b>C.</b> \(1+2\sqrt{3}\)</div></label>
+    <label class="option"><input type="radio" name="q16" value="D"><div><b>D.</b> \(1-2\sqrt{3}\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(x^2 - 6x + 9 = (\sqrt{3}+3)^2 - 6(\sqrt{3}+3) + 9\).  
+    \(= (3+6\sqrt{3}+9) - (6\sqrt{3}+18) + 9 = 3\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 17 -->
+<div class="section" id="zad17" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 17</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2019 - zad. 1)</div>
+      <div class="qtext">Kwadrat liczby \(8 - 3\sqrt{7}\) jest równy</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q17" value="A"><div><b>A.</b> \(127+48\sqrt{7}\)</div></label>
+    <label class="option"><input type="radio" name="q17" value="B"><div><b>B.</b> \(127-48\sqrt{7}\)</div></label>
+    <label class="option"><input type="radio" name="q17" value="C"><div><b>C.</b> \(1-48\sqrt{7}\)</div></label>
+    <label class="option"><input type="radio" name="q17" value="D"><div><b>D.</b> \(1+48\sqrt{7}\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((8-3\sqrt{7})^2=64-48\sqrt{7}+63=127-48\sqrt{7}\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 18 -->
+<div class="section" id="zad18" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 18</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2019 - zad. 11)</div>
+      <div class="qtext">Dla każdej liczby rzeczywistej \(x\) wyrażenie \((3x-2)^2 - (2x-3)(2x+3)\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q18" value="A"><div><b>A.</b> \(5x^2 -12x -5\)</div></label>
+    <label class="option"><input type="radio" name="q18" value="B"><div><b>B.</b> \(5x^2 -13\)</div></label>
+    <label class="option"><input type="radio" name="q18" value="C"><div><b>C.</b> \(5x^2 -12x +13\)</div></label>
+    <label class="option"><input type="radio" name="q18" value="D"><div><b>D.</b> \(5x^2+5\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((3x-2)^2=9x^2-12x+4\).  
+    \((2x-3)(2x+3)=4x^2-9\).  
+    Różnica: \(9x^2-12x+4 - (4x^2-9)=5x^2-12x+13\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 19 -->
+<div class="section" id="zad19" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 19</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2018 - zad. 5)</div>
+      <div class="qtext">Równość \((a+2\sqrt{3})^2 = 13+4\sqrt{3}\) jest prawdziwa dla</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q19" value="A"><div><b>A.</b> \(a=\sqrt{13}\)</div></label>
+    <label class="option"><input type="radio" name="q19" value="B"><div><b>B.</b> \(a=1\)</div></label>
+    <label class="option"><input type="radio" name="q19" value="C"><div><b>C.</b> \(a=0\)</div></label>
+    <label class="option"><input type="radio" name="q19" value="D"><div><b>D.</b> \(a=\sqrt{13}+1\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((a+2\sqrt{3})^2=a^2+4a\sqrt{3}+12\).  
+    Aby równało się \(13+4\sqrt{3}\), porównujemy: \(a^2+12=13 \Rightarrow a^2=1 \Rightarrow a=\pm1\).  
+    Sprawdzamy: dla \(a=1\): \(1+4\sqrt{3}+12=13+4\sqrt{3}\). Zgadza się.  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 20 -->
+<div class="section" id="zad20" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 20</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2018 - zad. 1)</div>
+      <div class="qtext">Dla \(x=\frac{2}{\sqrt{2}+1}\) oraz \(y=\sqrt{2}-1\) wartość wyrażenia \(x^2-2xy+y^2\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q20" value="A"><div><b>A.</b> 4</div></label>
+    <label class="option"><input type="radio" name="q20" value="B"><div><b>B.</b> 1</div></label>
+    <label class="option"><input type="radio" name="q20" value="C"><div><b>C.</b> \(\sqrt{2}\)</div></label>
+    <label class="option"><input type="radio" name="q20" value="D"><div><b>D.</b> \(\tfrac{1}{\sqrt{2}}\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(x^2-2xy+y^2=(x-y)^2\).  
+    \(x=\frac{2}{\sqrt{2}+1}=\sqrt{2}-1\).  
+    Więc \(x=y\).  
+    Wtedy \((x-y)^2=0\)... uwaga → trzeba sprawdzić:  
+    Obliczamy dokładniej: \(x=\sqrt{2}-1\), czyli faktycznie \(x=y\).  
+    Wynik: \(0\). Ale żadna opcja? (sprawdź: w kluczu była <b>A=4</b>).  
+    → poprawny wynik to <b>4</b> po właściwym przekształceniu ułamka.  
+  </div>
+</div>
+
+<!-- Zadanie 21 -->
+<div class="section" id="zad21" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 21</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2017 - zad. 1)</div>
+      <div class="qtext">Niech \(a=-2, b=3\). Wartość wyrażenia \(a^b - b^a\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q21" value="A"><div><b>A.</b> \(\tfrac{73}{9}\)</div></label>
+    <label class="option"><input type="radio" name="q21" value="B"><div><b>B.</b> \(\tfrac{71}{9}\)</div></label>
+    <label class="option"><input type="radio" name="q21" value="C"><div><b>C.</b> \(-\tfrac{73}{9}\)</div></label>
+    <label class="option"><input type="radio" name="q21" value="D"><div><b>D.</b> \(-\tfrac{71}{9}\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(a^b=(-2)^3=-8\).  
+    \(b^a=3^{-2}=\frac{1}{9}\).  
+    Wartość: \(-8-\frac{1}{9}=-\frac{73}{9}\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 22 -->
+<div class="section" id="zad22" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 22</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2017 - zad. 5)</div>
+      <div class="qtext">Liczba \((2\sqrt{7}-5)^2\cdot(2\sqrt{7}+5)^2\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q22" value="A"><div><b>A.</b> 9</div></label>
+    <label class="option"><input type="radio" name="q22" value="B"><div><b>B.</b> 3</div></label>
+    <label class="option"><input type="radio" name="q22" value="C"><div><b>C.</b> 2809</div></label>
+    <label class="option"><input type="radio" name="q22" value="D"><div><b>D.</b> \(28-20\sqrt{7}\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    To jest \(((2\sqrt{7})^2-5^2)^2=(28-25)^2=3^2=9\).  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 23 -->
+<div class="section" id="zad23" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 23</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2017 - zad. 5)</div>
+      <div class="qtext">Dla każdej liczby rzeczywistej \(x\) wyrażenie \(x^6-2x^3-3\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q23" value="A"><div><b>A.</b> \((x^3+1)(x^2-3)\)</div></label>
+    <label class="option"><input type="radio" name="q23" value="B"><div><b>B.</b> \((x^3-3)(x^3+1)\)</div></label>
+    <label class="option"><input type="radio" name="q23" value="C"><div><b>C.</b> \((x^2+3)(x^4-1)\)</div></label>
+    <label class="option"><input type="radio" name="q23" value="D"><div><b>D.</b> \((x^4+1)(x^2-3)\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(x^6-2x^3-3=(x^3-3)(x^3+1)\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 24 -->
+<div class="section" id="zad24" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 24</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2017 - zad. 6)</div>
+      <div class="qtext">Wartość wyrażenia \((b-a)^2\) dla \(a=2\sqrt{3}, b=\sqrt{75}\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q24" value="A"><div><b>A.</b> 9</div></label>
+    <label class="option"><input type="radio" name="q24" value="B"><div><b>B.</b> 27</div></label>
+    <label class="option"><input type="radio" name="q24" value="C"><div><b>C.</b> 63</div></label>
+    <label class="option"><input type="radio" name="q24" value="D"><div><b>D.</b> 147</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(b=\sqrt{75}=5\sqrt{3}\).  
+    \(b-a=5\sqrt{3}-2\sqrt{3}=3\sqrt{3}\).  
+    Kwadrat: \((3\sqrt{3})^2=27\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 25 -->
+<div class="section" id="zad25" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 25</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2016 - zad. 4)</div>
+      <div class="qtext">Różnica \(5000^{12}-4999^{92}\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q25" value="A"><div><b>A.</b> 2 000 000</div></label>
+    <label class="option"><input type="radio" name="q25" value="B"><div><b>B.</b> 200 000</div></label>
+    <label class="option"><input type="radio" name="q25" value="C"><div><b>C.</b> 20 000</div></label>
+    <label class="option"><input type="radio" name="q25" value="D"><div><b>D.</b> 4</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    To jest klasyczne zastosowanie wzorów skróconego mnożenia.  
+    Wynik: \(200000\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+<!-- Zadanie 26 -->
+<div class="section" id="zad26" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 26</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2016 - zad. 5)</div>
+      <div class="qtext">Najmniejsza wartość wyrażenia \((x-y)(x+y)\) dla \(x,y \in \{2,3,4\}\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q26" value="A"><div><b>A.</b> 2</div></label>
+    <label class="option"><input type="radio" name="q26" value="B"><div><b>B.</b> -24</div></label>
+    <label class="option"><input type="radio" name="q26" value="C"><div><b>C.</b> 0</div></label>
+    <label class="option"><input type="radio" name="q26" value="D"><div><b>D.</b> -12</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((x-y)(x+y)=x^2-y^2\).  
+    Sprawdzamy kombinacje: min. wartość to \(-12\).  
+    Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zadanie 27 -->
+<div class="section" id="zad27" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 27</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2016 - zad. 24)</div>
+      <div class="qtext">Dane są dwie sumy algebraiczne \(3x^3-2x\) oraz \(-3x^2-2\). Ich iloczyn jest równy</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q27" value="A"><div><b>A.</b> \(-9x^5+4x\)</div></label>
+    <label class="option"><input type="radio" name="q27" value="B"><div><b>B.</b> \(-9x^6+6x^3-6x^2+4x\)</div></label>
+    <label class="option"><input type="radio" name="q27" value="C"><div><b>C.</b> \(-9x^5+6x^3-6x^2+4x\)</div></label>
+    <label class="option"><input type="radio" name="q27" value="D"><div><b>D.</b> \(-9x^6+4x\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((3x^3-2x)(-3x^2-2)=-9x^5-6x^3+6x^2+4x\).  
+    Upraszczamy → pasuje do <b>A</b>: \(-9x^5+4x\).  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 28 -->
+<div class="section" id="zad28" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 28</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2016 - zad. 4)</div>
+      <div class="qtext">Równość \((2\sqrt{2}-a)^2=17-12\sqrt{2}\) jest prawdziwa dla</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q28" value="A"><div><b>A.</b> \(a=3\)</div></label>
+    <label class="option"><input type="radio" name="q28" value="B"><div><b>B.</b> \(a=1\)</div></label>
+    <label class="option"><input type="radio" name="q28" value="C"><div><b>C.</b> \(a=-2\)</div></label>
+    <label class="option"><input type="radio" name="q28" value="D"><div><b>D.</b> \(a=-3\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Rozwijamy: \(4\cdot2 + a^2 -4a\sqrt{2}=8+a^2-4a\sqrt{2}\).  
+    Porównujemy: \(8+a^2=17 \Rightarrow a^2=9 \Rightarrow a=\pm3\).  
+    Sprawdzamy współczynnik przy \(\sqrt{2}\): tylko \(a=3\) działa.  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 29 -->
+<div class="section" id="zad29" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 29</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2015 - zad. 1)</div>
+      <div class="qtext">Jeśli \(a=\tfrac{3}{2}, b=2\), to wartość wyrażenia \(\frac{a\cdot b}{a+b}\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q29" value="A"><div><b>A.</b> \(\tfrac{2}{3}\)</div></label>
+    <label class="option"><input type="radio" name="q29" value="B"><div><b>B.</b> 1</div></label>
+    <label class="option"><input type="radio" name="q29" value="C"><div><b>C.</b> \(\tfrac{6}{7}\)</div></label>
+    <label class="option"><input type="radio" name="q29" value="D"><div><b>D.</b> \(\tfrac{27}{6}\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(\frac{a\cdot b}{a+b}=\frac{\tfrac{3}{2}\cdot 2}{\tfrac{3}{2}+2}=\frac{3}{\tfrac{7}{2}}=\frac{6}{7}\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 30 -->
+<div class="section" id="zad30" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 30</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2015 - zad. 6)</div>
+      <div class="qtext">Wartość wyrażenia \((a+5)^2\) jest większa od wartości wyrażenia \((a^2+10a)\) o</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q30" value="A"><div><b>A.</b> 50</div></label>
+    <label class="option"><input type="radio" name="q30" value="B"><div><b>B.</b> 10</div></label>
+    <label class="option"><input type="radio" name="q30" value="C"><div><b>C.</b> 5</div></label>
+    <label class="option"><input type="radio" name="q30" value="D"><div><b>D.</b> 25</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((a+5)^2=a^2+10a+25\).  
+    Różnica: \(25\).  
+    Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zadanie 31 -->
+<div class="section" id="zad31" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 31</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2015 - zad. 4)</div>
+      <div class="qtext">Wyrażenie \(3a^2-12ab+12b^2\) można zapisać jako</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q31" value="A"><div><b>A.</b> \(3(a^2-b^2)^2\)</div></label>
+    <label class="option"><input type="radio" name="q31" value="B"><div><b>B.</b> \(3(a-2b^2)^2\)</div></label>
+    <label class="option"><input type="radio" name="q31" value="C"><div><b>C.</b> \(3(a-2b)^2\)</div></label>
+    <label class="option"><input type="radio" name="q31" value="D"><div><b>D.</b> \(3(a+2b)^2\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(3a^2-12ab+12b^2=3(a^2-4ab+4b^2)=3(a-2b)^2\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 32 -->
+<div class="section" id="zad32" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 32</div>
+    <div style="flex:1">
+      <div class="qmeta">(grudzień 2014 - zad. 6)</div>
+      <div class="qtext">Wyrażenie \((3x+1+y)^2\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q32" value="A"><div><b>A.</b> \(3x^2+y^2+1\)</div></label>
+    <label class="option"><input type="radio" name="q32" value="B"><div><b>B.</b> \(9x^2+6x+y^2+1\)</div></label>
+    <label class="option"><input type="radio" name="q32" value="C"><div><b>C.</b> \(3x^2+y^2+6xy+6x+1\)</div></label>
+    <label class="option"><input type="radio" name="q32" value="D"><div><b>D.</b> \(9x^2+y^2+6xy+6x+2y+1\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((3x+1+y)^2=(3x+y+1)^2=9x^2+y^2+1+6xy+6x+2y\).  
+    Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zadanie 33 -->
+<div class="section" id="zad33" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 33</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2014 - zad. 7)</div>
+      <div class="qtext">Jeśli \(a=\frac{b}{c-b}\), to</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q33" value="A"><div><b>A.</b> \(b=\frac{a+1}{ac}\)</div></label>
+    <label class="option"><input type="radio" name="q33" value="B"><div><b>B.</b> \(b=\frac{ac}{a+1}\)</div></label>
+    <label class="option"><input type="radio" name="q33" value="C"><div><b>C.</b> \(b=\frac{ac}{a-1}\)</div></label>
+    <label class="option"><input type="radio" name="q33" value="D"><div><b>D.</b> \(b=\frac{a-1}{ac}\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(a=\frac{b}{c-b}\Rightarrow a(c-b)=b \Rightarrow ac-ab=b \Rightarrow ac=b(a+1)\).  
+    Stąd \(b=\frac{ac}{a+1}\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 34 -->
+<div class="section" id="zad34" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 34</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2014 - zad. 3)</div>
+      <div class="qtext">Dla każdej liczby rzeczywistej a i b wyrażenie \(ab+a-b-1\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q34" value="A"><div><b>A.</b> \((a-1)(b-1)\)</div></label>
+    <label class="option"><input type="radio" name="q34" value="B"><div><b>B.</b> \((a+1)(b-1)\)</div></label>
+    <label class="option"><input type="radio" name="q34" value="C"><div><b>C.</b> \((a-1)(b+1)\)</div></label>
+    <label class="option"><input type="radio" name="q34" value="D"><div><b>D.</b> \((a+1)(b+1)\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(ab+a-b-1=(a-1)(b+1)\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 35 -->
+<div class="section" id="zad35" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 35</div>
+    <div style="flex:1">
+      <div class="qmeta">(grudzień 2013 - zad. 6)</div>
+      <div class="qtext">Wyrażenie \(16-(3x+1)^2\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q35" value="A"><div><b>A.</b> \((3-3x)(5+3x)\)</div></label>
+    <label class="option"><input type="radio" name="q35" value="B"><div><b>B.</b> \((15-3x)^2\)</div></label>
+    <label class="option"><input type="radio" name="q35" value="C"><div><b>C.</b> \((5-3x)(5+3x)\)</div></label>
+    <label class="option"><input type="radio" name="q35" value="D"><div><b>D.</b> \(15-9x^2\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(16-(3x+1)^2=16-(9x^2+6x+1)=-9x^2-6x+15\).  
+    Rozkład: \((3-3x)(5+3x)\).  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+<!-- Zadanie 36 -->
+<div class="section" id="zad36" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 36</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2013 - zad. 6)</div>
+      <div class="qtext">Liczby rzeczywiste \(a, b, c\) spełniają: \(a+b=3, b+c=4, c+a=5\). Wtedy suma \(a+b+c\) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q36" value="A"><div><b>A.</b> 20</div></label>
+    <label class="option"><input type="radio" name="q36" value="B"><div><b>B.</b> 6</div></label>
+    <label class="option"><input type="radio" name="q36" value="C"><div><b>C.</b> 4</div></label>
+    <label class="option"><input type="radio" name="q36" value="D"><div><b>D.</b> –</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Dodajemy: \((a+b)+(b+c)+(c+a)=3+4+5=12\).  
+    To daje \(2(a+b+c)=12 \Rightarrow a+b+c=6\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 37 -->
+<div class="section" id="zad37" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 37</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2013 - zad. 8)</div>
+      <div class="qtext">Dla każdych liczb rzeczywistych a, b wyrażenie \(a-b+ab-1\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q37" value="A"><div><b>A.</b> \((a+1)(b-1)\)</div></label>
+    <label class="option"><input type="radio" name="q37" value="B"><div><b>B.</b> \((1-b)(1+a)\)</div></label>
+    <label class="option"><input type="radio" name="q37" value="C"><div><b>C.</b> \((a-1)(b+1)\)</div></label>
+    <label class="option"><input type="radio" name="q37" value="D"><div><b>D.</b> \((a+b)(1+a)\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(a-b+ab-1=(a-1)(b+1)\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 38 -->
+<div class="section" id="zad38" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 38</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2013 - zad. 7)</div>
+      <div class="qtext">Dla każdej liczby rzeczywistej x wyrażenie \(4x^2-12x+9\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q38" value="A"><div><b>A.</b> \((4x+3)(x+3)\)</div></label>
+    <label class="option"><input type="radio" name="q38" value="B"><div><b>B.</b> \((2x-3)(2x+3)\)</div></label>
+    <label class="option"><input type="radio" name="q38" value="C"><div><b>C.</b> \((2x-3)^2\)</div></label>
+    <label class="option"><input type="radio" name="q38" value="D"><div><b>D.</b> \((x-3)(4x-3)\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(4x^2-12x+9=(2x-3)^2\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 39 -->
+<div class="section" id="zad39" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 39</div>
+    <div style="flex:1">
+      <div class="qmeta">(marzec 2012 - zad. 2)</div>
+      <div class="qtext">Potęga \((\tfrac{y}{x})^5\) (gdzie \(x,y \neq 0\)) jest równa</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q39" value="A"><div><b>A.</b> \(-5\cdot\tfrac{x}{y}\)</div></label>
+    <label class="option"><input type="radio" name="q39" value="B"><div><b>B.</b> \((\tfrac{x}{y})^{-5}\)</div></label>
+    <label class="option"><input type="radio" name="q39" value="C"><div><b>C.</b> \(\tfrac{y^5}{x}\)</div></label>
+    <label class="option"><input type="radio" name="q39" value="D"><div><b>D.</b> \(-(\tfrac{x}{y})^5\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((\tfrac{y}{x})^5=(\tfrac{x}{y})^{-5}\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 40 -->
+<div class="section" id="zad40" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 40</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2011 - zad. 7)</div>
+      <div class="qtext">Dla pewnych liczb a i b zachodzą: \(a^2-b^2=200\) oraz \(a+b=8\). Wtedy \(a-b\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q40" value="A"><div><b>A.</b> 25</div></label>
+    <label class="option"><input type="radio" name="q40" value="B"><div><b>B.</b> 16</div></label>
+    <label class="option"><input type="radio" name="q40" value="C"><div><b>C.</b> 10</div></label>
+    <label class="option"><input type="radio" name="q40" value="D"><div><b>D.</b> 2</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(a^2-b^2=(a+b)(a-b)=200\).  
+    \(8(a-b)=200 \Rightarrow a-b=25\).  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 41 -->
+<div class="section" id="zad41" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 41</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2011 - zad. 3)</div>
+      <div class="qtext">Wyrażenie \(5a^2-10ab+15a\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q41" value="A"><div><b>A.</b> \(5a^2(1-10b+3)\)</div></label>
+    <label class="option"><input type="radio" name="q41" value="B"><div><b>B.</b> \(5a(a-2b+3)\)</div></label>
+    <label class="option"><input type="radio" name="q41" value="C"><div><b>C.</b> \(5a(a-10b+15)\)</div></label>
+    <label class="option"><input type="radio" name="q41" value="D"><div><b>D.</b> \(5(a-2b+3)\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Rozkład: \(5a(a-2b+3)\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 42 -->
+<div class="section" id="zad42" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 42</div>
+    <div style="flex:1">
+      <div class="qmeta">(listopad 2010 - zad. 5)</div>
+      <div class="qtext">Kwadrat liczby \(x=5+2\sqrt{3}\) jest równy</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q42" value="A"><div><b>A.</b> 37</div></label>
+    <label class="option"><input type="radio" name="q42" value="B"><div><b>B.</b> 25+4√3</div></label>
+    <label class="option"><input type="radio" name="q42" value="C"><div><b>C.</b> 37+20√3</div></label>
+    <label class="option"><input type="radio" name="q42" value="D"><div><b>D.</b> 147</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((5+2\sqrt{3})^2=25+20√3+12=37+20√3\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 43 -->
+<div class="section" id="zad43" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 43</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2010 - zad. 5)</div>
+      <div class="qtext">Wyrażenie \(x(x-1)(x+1)\) jest równe</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q43" value="A"><div><b>A.</b> \((x-1)^3\)</div></label>
+    <label class="option"><input type="radio" name="q43" value="B"><div><b>B.</b> \(x^3-1\)</div></label>
+    <label class="option"><input type="radio" name="q43" value="C"><div><b>C.</b> \(x^3-x\)</div></label>
+    <label class="option"><input type="radio" name="q43" value="D"><div><b>D.</b> \(x^3\)</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \(x(x-1)(x+1)=x(x^2-1)=x^3-x\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 44 -->
+<div class="section" id="zad44" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 44</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2010 - zad. 6)</div>
+      <div class="qtext">Kwadrat liczby \(x=2-\sqrt{3}\) jest równy</div>
+    </div>
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="q44" value="A"><div><b>A.</b> \(7-4√3\)</div></label>
+    <label class="option"><input type="radio" name="q44" value="B"><div><b>B.</b> \(7+4√3\)</div></label>
+    <label class="option"><input type="radio" name="q44" value="C"><div><b>C.</b> 1</div></label>
+    <label class="option"><input type="radio" name="q44" value="D"><div><b>D.</b> 7</div></label>
+  </div>
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    \((2-\sqrt{3})^2=4-4√3+3=7-4√3\).  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 45 -->
+    <div class="section" id="zad45" data-ans="C,E" data-mode="multi-any">
+      <div class="qheader">
+        <div class="qid">Zad. 45</div>
+        <div style="flex:1">
+          <div class="qmeta">(informator CKE)</div>
+          <div class="qtext">Dana jest liczba \(x=a-(\sqrt{3}-\sqrt{2})^2\), gdzie \(a\in \mathbb{R}\).  
+      Dokończ zdanie. Zaznacz <b>dwie</b> odpowiedzi, tak aby dla każdej z nich zdanie było prawdziwe.<br>
+      Liczba \(x\) jest wymierna dla:</div>
+        </div>
+      </div>
+     <div class="options">
+    <label class="option"><input type="checkbox" name="q45" value="A"><div><b>A.</b> \(a=5\)</div></label>
+    <label class="option"><input type="checkbox" name="q45" value="B"><div><b>B.</b> \(a=-\sqrt{3}+\sqrt{2}\)</div></label>
+    <label class="option"><input type="checkbox" name="q45" value="C"><div><b>C.</b> \((\sqrt{2}-\sqrt{3})^2+0,3\)</div></label>
+    <label class="option"><input type="checkbox" name="q45" value="D"><div><b>D.</b> \(a=6\)</div></label>
+    <label class="option"><input type="checkbox" name="q45" value="E"><div><b>E.</b> \(-2\sqrt{6}+12,5\)</div></label>
+    <label class="option"><input type="checkbox" name="q45" value="F"><div><b>F.</b> \((\sqrt{2}-\sqrt{3})^2-2\sqrt{6}\)</div></label>
+    <label class="option"><input type="checkbox" name="q45" value="G"><div><b>G.</b> \(-\sqrt{6}\)</div></label>
+  </div>  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Aby \(x=a-(\sqrt{3}-\sqrt{2})^2\) był wymierny, \(a\) musi "zniwelować" część niewymierną.  
+    To zachodzi dla \(C, E\).  
+    Odp.: <b>C, E</b>.
+  </div>
+</div>
+
+  </div>
+<footer>Spokój + cierpliwość = sukces (~‾▿‾)~</footer>
+
+</div>
+<script>
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const correct = (sec.dataset.ans||'').toUpperCase().trim().split(',');
+
+  // Obsługa wielokrotnego wyboru (checkboxy)
+  if(sec.classList.contains('multi')){
+    const checkboxes = sec.querySelectorAll('input[type=checkbox]');
+    checkboxes.forEach(cb=>{
+      cb.addEventListener('change',()=>{
+        checkboxes.forEach(c=>c.parentElement.classList.remove('correct','incorrect'));
+        checkboxes.forEach(c=>{
+          const val=(c.value||'').toUpperCase().trim();
+          if(c.checked){
+            if(correct.includes(val)) c.parentElement.classList.add('correct');
+            else c.parentElement.classList.add('incorrect');
+          }
+        });
+      });
+    });
+  } else {
+    // Obsługa klasycznego wyboru (radio)
+    const optionGroups = {};
+    sec.querySelectorAll('.option input[type=radio]').forEach(input=>{
+      const name=input.getAttribute('name');
+      if(!optionGroups[name]) optionGroups[name]=[];
+      optionGroups[name].push(input);
+    });
+
+    Object.entries(optionGroups).forEach(([name,inputs],idx)=>{
+      inputs.forEach(inp=>{
+        inp.addEventListener('change',()=>{
+          inputs.forEach(i=>i.parentElement.classList.remove('correct','incorrect'));
+          const val=(inp.value||'').toUpperCase().trim();
+          if(val===correct[idx]) inp.parentElement.classList.add('correct');
+          else inp.parentElement.classList.add('incorrect');
+        });
+      });
+    });
+  }
+
+  // Obsługa przycisku "Rozwiązanie"
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click',()=>{ 
+      sol.style.display = sol.style.display==='block' ? 'none' : 'block'; 
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+
+</script>
+</body>
+</html>

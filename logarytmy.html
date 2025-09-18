@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Logarytmy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+        <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+    <h1>Logarytmy</h1><br>
+
+    <!-- Zadanie 1 (P/F) -->
+    <div class="section" id="zad1" data-ans="P,F" data-mode="pf">
+      <div class="qheader">
+        <div class="qid">Zad. 1</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2025 - zad. 3)</div>
+          <div class="qtext">
+            Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.<br>
+            1) Iloczyn \(2\cdot\log_{3}5\) jest równy \(\log_{3}25\).<br>
+            2) Suma \(2+\log_{3}5\) jest równa \(\log_{3}10\).
+          </div>
+        </div>
+      </div>
+      <div class="options" style="gap:12px;">
+        <div class="pfrow" style="display:flex; align-items:center; gap:10px;">
+          <div class="qmeta">1)</div>
+          <label class="option"><input type="radio" name="zad1-1" value="P">P</label>
+          <label class="option"><input type="radio" name="zad1-1" value="F">F</label>
+        </div>
+        <div class="pfrow" style="display:flex; align-items:center; gap:10px;">
+          <div class="qmeta">2)</div>
+          <label class="option"><input type="radio" name="zad1-2" value="P">P</label>
+          <label class="option"><input type="radio" name="zad1-2" value="F">F</label>
+        </div>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        <b>1)</b> \(2\cdot \log_{3}5=\log_{3}(5^2)=\log_{3}25\) — prawda (P).<br>
+        <b>2)</b> \(2+\log_{3}5\neq \log_{3}10\) — fałsz (F).
+      </div>
+    </div>
+
+    <!-- Zadanie 2 -->
+    <div class="section" id="zad2" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 2</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2025 - zad. 3)</div>
+          <div class="qtext">
+            Liczba \( \log_{3}108 - 2\log_{3}2 \) jest równa
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad2" value="A">A. 3</label>
+        <label class="option"><input type="radio" name="zad2" value="B">B. 9</label>
+        <label class="option"><input type="radio" name="zad2" value="C">C. \(\log_{3}104\)</label>
+        <label class="option"><input type="radio" name="zad2" value="D">D. \(2\log_{3}54\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}108 - 2\log_{3}2=\log_{3}\!\left(\frac{108}{4}\right)=\log_{3}27=3\). Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 3 -->
+    <div class="section" id="zad3" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 3</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2024 - zad. 4)</div>
+          <div class="qtext">
+            Dla każdej dodatniej liczby \(x\) i \(y\) wartość \(\log_{7}x+6\log_{7}y\) jest równa wartości
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad3" value="A">A. \(\log_{7}\!\left(\frac{x}{y^6}\right)\)</label>
+        <label class="option"><input type="radio" name="zad3" value="B">B. \(\log_{7}\big((xy)^6\big)\)</label>
+        <label class="option"><input type="radio" name="zad3" value="C">C. \(\log_{7}(6xy)\)</label>
+        <label class="option"><input type="radio" name="zad3" value="D">D. \(\log_{7}(xy^6)\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{7}x+6\log_{7}y=\log_{7}x+\log_{7}(y^6)=\log_{7}(xy^6)\). Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 4 (P/F) -->
+    <div class="section" id="zad4" data-ans="F,P" data-mode="pf">
+      <div class="qheader">
+        <div class="qid">Zad. 4</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2024 - zad. 13)</div>
+          <div class="qtext">
+            \(f(x)=\log_{6}x\). Oceń prawdziwość:<br>
+            1) \(f(36)=6\).<br>
+            2) Funkcja \(f\) jest rosnąca.
+          </div>
+        </div>
+      </div>
+      <div class="options" style="gap:12px;">
+        <div class="pfrow" style="display:flex; align-items:center; gap:10px;">
+          <div class="qmeta">1)</div>
+          <label class="option"><input type="radio" name="zad4-1" value="P">P</label>
+          <label class="option"><input type="radio" name="zad4-1" value="F">F</label>
+        </div>
+        <div class="pfrow" style="display:flex; align-items:center; gap:10px;">
+          <div class="qmeta">2)</div>
+          <label class="option"><input type="radio" name="zad4-2" value="P">P</label>
+          <label class="option"><input type="radio" name="zad4-2" value="F">F</label>
+        </div>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        <b>1)</b> \(\log_{6}36=2\), więc stwierdzenie fałszywe (F).<br>
+        <b>2)</b> Podstawa \(6>1\) ⇒ funkcja rosnąca (P).
+      </div>
+    </div>
+
+    <!-- Zadanie 5 (multi-any) -->
+    <div class="section" id="zad5" data-ans="C,E" data-mode="multi-any">
+      <div class="qheader">
+        <div class="qid">Zad. 5</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2024 - zad. 4)</div>
+          <div class="qtext">
+            Wybierz dwie prawdziwe równości.
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="checkbox" value="A">A. \(\log_{2}16+\log_{2}9=\log_{2}25\)</label>
+        <label class="option"><input type="checkbox" value="B">B. \(\log_{2}16+\log_{2}9=2\log_{2}5\)</label>
+        <label class="option"><input type="checkbox" value="C">C. \(\log_{2}16+\log_{2}9=\log_{2}144\)</label>
+        <label class="option"><input type="checkbox" value="D">D. \(\log_{2}16+\log_{2}9=\log_{4}144\)</label>
+        <label class="option"><input type="checkbox" value="E">E. \(\log_{2}16+\log_{2}9=4+2\log_{2}3\)</label>
+        <label class="option"><input type="checkbox" value="F">F. \(\log_{2}16+\log_{2}9=2\log_{4}12\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{2}16=4\), \(\log_{2}9=2\log_{2}3\). Suma \(=4+2\log_{2}3=\log_{2}(16\cdot9)=\log_{2}144\). Poprawne: C, E.
+      </div>
+    </div>
+
+    <!-- Zadanie 6 -->
+    <div class="section" id="zad6" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 6</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2024 - zad. 2)</div>
+          <div class="qtext">
+            Liczba \( \log_{3}\!\left(\tfrac{3}{2}\right)+\log_{3}\!\left(\tfrac{2}{9}\right) \) jest równa
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad6" value="A">A. \(\log_{3}\tfrac{31}{18}\)</label>
+        <label class="option"><input type="radio" name="zad6" value="B">B. \(\log_{3}\tfrac{5}{11}\)</label>
+        <label class="option"><input type="radio" name="zad6" value="C">C. \(-1\)</label>
+        <label class="option"><input type="radio" name="zad6" value="D">D. \(\tfrac{1}{3}\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}\tfrac{3}{2}+\log_{3}\tfrac{2}{9}=\log_{3}\tfrac{1}{3}=-1\). Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 7 -->
+    <div class="section" id="zad7" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 7</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2024 - zad. 4)</div>
+          <div class="qtext">Liczba \(\log_{\sqrt{3}}9\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad7" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad7" value="B">B. 3</label>
+        <label class="option"><input type="radio" name="zad7" value="C">C. 4</label>
+        <label class="option"><input type="radio" name="zad7" value="D">D. 9</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \((3^{1/2})^x=3^2 \Rightarrow x=4\). Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 8 -->
+    <div class="section" id="zad8" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 8</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2023 - zad. 2)</div>
+          <div class="qtext">Liczba \( \log_{2}96-\log_{2}3\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad8" value="A">A. \(\log_{2}93\)</label>
+        <label class="option"><input type="radio" name="zad8" value="B">B. \(\log_{2}30\)</label>
+        <label class="option"><input type="radio" name="zad8" value="C">C. 4</label>
+        <label class="option"><input type="radio" name="zad8" value="D">D. 5</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{2}\frac{96}{3}=\log_{2}32=5\). Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 9 -->
+    <div class="section" id="zad9" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 9</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2023 - zad. 3)</div>
+          <div class="qtext">Liczba \(\log_{25}1-\frac{1}{2}\log_{25}5\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad9" value="A">A. \(-\tfrac{1}{4}\)</label>
+        <label class="option"><input type="radio" name="zad9" value="B">B. \(-\tfrac{1}{2}\)</label>
+        <label class="option"><input type="radio" name="zad9" value="C">C. \(\tfrac{1}{4}\)</label>
+        <label class="option"><input type="radio" name="zad9" value="D">D. \(\tfrac{1}{2}\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{25}1=0\), \(\log_{25}5=\tfrac12\). Stąd \(0-\tfrac12\cdot\tfrac12=-\tfrac14\). Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 10 -->
+    <div class="section" id="zad10" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 10</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2023 - zad. 5)</div>
+          <div class="qtext">Liczba \( \log_{2}\tfrac{1}{8}+\log_{2}4 \) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad10" value="A">A. -1</label>
+        <label class="option"><input type="radio" name="zad10" value="B">B. 1/2</label>
+        <label class="option"><input type="radio" name="zad10" value="C">C. 2</label>
+        <label class="option"><input type="radio" name="zad10" value="D">D. 5</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{2}\tfrac{1}{8}=-3\), \(\log_{2}4=2\) ⇒ suma \(-1\). Odp.: A.
+      </div>
+    </div>
+    <!-- Zadanie 11 -->
+    <div class="section" id="zad11" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 11</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2023 - zad. 4)</div>
+          <div class="qtext">Liczba \(\log_{9}27+\log_{9}3\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad11" value="A">A. 81</label>
+        <label class="option"><input type="radio" name="zad11" value="B">B. 9</label>
+        <label class="option"><input type="radio" name="zad11" value="C">C. 4</label>
+        <label class="option"><input type="radio" name="zad11" value="D">D. 2</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{9}27=\tfrac32\), \(\log_{9}3=\tfrac12\). Suma \(=2\). Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 12 -->
+    <div class="section" id="zad12" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 12</div>
+        <div style="flex:1">
+          <div class="qmeta">(pokazowy 2023 - zad. 2)</div>
+          <div class="qtext">Wartość \(\log_{7}98-\log_{7}2\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad12" value="A">A. 7</label>
+        <label class="option"><input type="radio" name="zad12" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad12" value="C">C. 1</label>
+        <label class="option"><input type="radio" name="zad12" value="D">D. -1</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{7}\tfrac{98}{2}=\log_{7}49=\log_{7}(7^2)=2\). Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 13 -->
+    <div class="section" id="zad13" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 13</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2022 - zad. 6)</div>
+          <div class="qtext">Funkcja \(f(x)=-\log x\). Oblicz \(f(\sqrt{10})\).</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad13" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad13" value="B">B. -1/2</label>
+        <label class="option"><input type="radio" name="zad13" value="C">C. 1/2</label>
+        <label class="option"><input type="radio" name="zad13" value="D">D. -2</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(f(\sqrt{10})=-\log\sqrt{10}=-\tfrac12\log 10=-\tfrac12\). Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 14 -->
+    <div class="section" id="zad14" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 14</div>
+        <div style="flex:1">
+          <div class="qmeta">(wrzesień 2022 - zad. 2)</div>
+          <div class="qtext">Wartość \(2\log_{5}5+1-\tfrac12\log_{5}625\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad14" value="A">A. 1</label>
+        <label class="option"><input type="radio" name="zad14" value="B">B. 5</label>
+        <label class="option"><input type="radio" name="zad14" value="C">C. 10</label>
+        <label class="option"><input type="radio" name="zad14" value="D">D. 25</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(2\cdot1+1-\tfrac12\cdot4=3-2=1\). Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 15 -->
+    <div class="section" id="zad15" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 15</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2022 - zad. 2)</div>
+          <div class="qtext">Liczba \(\log_{2}32-\log_{2}8\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad15" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad15" value="B">B. 14</label>
+        <label class="option"><input type="radio" name="zad15" value="C">C. 16</label>
+        <label class="option"><input type="radio" name="zad15" value="D">D. 24</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{2}\tfrac{32}{8}=\log_{2}4=2\). Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 16 -->
+    <div class="section" id="zad16" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 16</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2022 - zad. 3)</div>
+          <div class="qtext">Liczba dwukrotnie większa od \(\log 3+\log 2\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad16" value="A">A. \(\log 12\)</label>
+        <label class="option"><input type="radio" name="zad16" value="B">B. \(\log 36\)</label>
+        <label class="option"><input type="radio" name="zad16" value="C">C. \(\log 10\)</label>
+        <label class="option"><input type="radio" name="zad16" value="D">D. \(\log 25\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log 3+\log 2=\log 6\). Dwukrotnie większa: \(2\log 6=\log 36\). Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 17 -->
+    <div class="section" id="zad17" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 17</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2022 - zad. 3)</div>
+          <div class="qtext">Liczba \(4\log_{4}2+2\log_{4}8\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad17" value="A">A. \(6\log_{4}10\)</label>
+        <label class="option"><input type="radio" name="zad17" value="B">B. 16</label>
+        <label class="option"><input type="radio" name="zad17" value="C">C. 5</label>
+        <label class="option"><input type="radio" name="zad17" value="D">D. \(6\log_{4}16\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(4\cdot\tfrac12+2\cdot\tfrac32=2+3=5\). Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 18 -->
+    <div class="section" id="zad18" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 18</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2021 - zad. 3)</div>
+          <div class="qtext">Niech \(\log_{3}18=c\). Wtedy \(\log_{3}54\) jest równy</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad18" value="A">A. \(c-1\)</label>
+        <label class="option"><input type="radio" name="zad18" value="B">B. \(c\)</label>
+        <label class="option"><input type="radio" name="zad18" value="C">C. \(c+1\)</label>
+        <label class="option"><input type="radio" name="zad18" value="D">D. \(c+2\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}54=\log_{3}(18\cdot3)=\log_{3}18+1=c+1\). Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 19 -->
+    <div class="section" id="zad19" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 19</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2021 - zad. 4)</div>
+          <div class="qtext">Suma \(2\log\sqrt{10}+\log 10^3\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad19" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad19" value="B">B. 3</label>
+        <label class="option"><input type="radio" name="zad19" value="C">C. 4</label>
+        <label class="option"><input type="radio" name="zad19" value="D">D. 5</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(2\cdot\tfrac12\log 10+\log 1000=1+3=4\). Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 20 -->
+    <div class="section" id="zad20" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 20</div>
+        <div style="flex:1">
+          <div class="qmeta">(marzec 2021 - zad. 2)</div>
+          <div class="qtext">Liczba \(2\log_{5}4-3\log_{5}\tfrac12\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad20" value="A">A. \(-\log_{5}\tfrac72\)</label>
+        <label class="option"><input type="radio" name="zad20" value="B">B. \(7\log_{5}2\)</label>
+        <label class="option"><input type="radio" name="zad20" value="C">C. \(-\log_{5}2\)</label>
+        <label class="option"><input type="radio" name="zad20" value="D">D. \(\log_{5}2\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(2\cdot2\log_{5}2-3(-\log_{5}2)=4\log_{5}2+3\log_{5}2=7\log_{5}2\). Odp.: B.
+      </div>
+    </div>
+    <!-- Zadanie 21 -->
+    <div class="section" id="zad21" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 21</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2019 - zad. 3)</div>
+          <div class="qtext">Liczba \(2\log 5+3\log 2\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad21" value="A">A. \(\log(2\cdot5)+\log(3\cdot2)\)</label>
+        <label class="option"><input type="radio" name="zad21" value="B">B. \(\log 25+\log 32\)</label>
+        <label class="option"><input type="radio" name="zad21" value="C">C. \(2\cdot3\log(5\cdot2)\)</label>
+        <label class="option"><input type="radio" name="zad21" value="D">D. \(\log(5^2\cdot2^3)\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(2\log 5=\log 25,\; 3\log 2=\log 8\). Suma \(=\log(25\cdot8)=\log(200)\).  
+        Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 22 -->
+    <div class="section" id="zad22" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 22</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2020 - zad. 3)</div>
+          <div class="qtext">Liczba \(\log_{\sqrt{2}}4^8\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad22" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad22" value="B">B. 4</label>
+        <label class="option"><input type="radio" name="zad22" value="C">C. 32</label>
+        <label class="option"><input type="radio" name="zad22" value="D">D. 16</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(4^8=(2^2)^8=2^{16}\).  
+        Podstawa \(\sqrt{2}=2^{1/2}\).  
+        \(\log_{2^{1/2}}2^{16}=\frac{16}{1/2}=32\).  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 23 -->
+    <div class="section" id="zad23" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 23</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2020 - zad. 3)</div>
+          <div class="qtext">Liczba \(\log_{5}\sqrt{125}\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad23" value="A">A. 2/3</label>
+        <label class="option"><input type="radio" name="zad23" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad23" value="C">C. 3</label>
+        <label class="option"><input type="radio" name="zad23" value="D">D. 3/2</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\sqrt{125}=125^{1/2}=(5^3)^{1/2}=5^{3/2}\).  
+        \(\log_{5}5^{3/2}=3/2\).  
+        Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 24 -->
+    <div class="section" id="zad24" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 24</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2019 - zad. 1)</div>
+          <div class="qtext">Liczba \(\log_{\sqrt{2}}2\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad24" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad24" value="B">B. 4</label>
+        <label class="option"><input type="radio" name="zad24" value="C">C. \(\sqrt{2}\)</label>
+        <label class="option"><input type="radio" name="zad24" value="D">D. 1/2</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\sqrt{2}=2^{1/2}\).  
+        \(\log_{2^{1/2}}2=1/(1/2)=2\).  
+        Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 25 -->
+    <div class="section" id="zad25" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 25</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2019 - zad. 2)</div>
+          <div class="qtext">\(\frac{\log_{3}27}{\log_{3}\sqrt{27}}\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad25" value="A">A. -1/2</label>
+        <label class="option"><input type="radio" name="zad25" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad25" value="C">C. -2</label>
+        <label class="option"><input type="radio" name="zad25" value="D">D. 1/2</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}27=3,\; \log_{3}\sqrt{27}=\tfrac32\).  
+        Iloraz \(=3/(3/2)=2\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 26 -->
+    <div class="section" id="zad26" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 26</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2019 - zad. 1)</div>
+          <div class="qtext">Liczba \(\log_{\sqrt{7}}7\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad26" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad26" value="B">B. 7</label>
+        <label class="option"><input type="radio" name="zad26" value="C">C. \(\sqrt{7}\)</label>
+        <label class="option"><input type="radio" name="zad26" value="D">D. 1/2</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\sqrt{7}=7^{1/2}\).  
+        \(\log_{7^{1/2}}7=1/(1/2)=2\).  
+        Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 27 -->
+    <div class="section" id="zad27" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 27</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2018 - zad. 4)</div>
+          <div class="qtext">Liczba \(\log_{4}96-\log_{4}6\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad27" value="A">A. \(\log_{4}90\)</label>
+        <label class="option"><input type="radio" name="zad27" value="B">B. \(\log_{6}96\)</label>
+        <label class="option"><input type="radio" name="zad27" value="C">C. 4</label>
+        <label class="option"><input type="radio" name="zad27" value="D">D. 2</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{4}(96/6)=\log_{4}16=\log_{4}(4^2)=2\).  
+        Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 28 -->
+    <div class="section" id="zad28" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 28</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2018 - zad. 2)</div>
+          <div class="qtext">Dane są liczby \(a=\log_{1/2}8,\; b=\log_{4}8,\; c=\log_{4}\tfrac12\). Liczby te spełniają warunek:</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad28" value="A">A. \(a>b>c\)</label>
+        <label class="option"><input type="radio" name="zad28" value="B">B. \(b>a>c\)</label>
+        <label class="option"><input type="radio" name="zad28" value="C">C. \(c>b>a\)</label>
+        <label class="option"><input type="radio" name="zad28" value="D">D. \(b>c>a\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(a=\log_{1/2}8=-3,\; b=\tfrac32,\; c=-1\).  
+        Kolejność: \(b>c>a\).  
+        Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 29 -->
+    <div class="section" id="zad29" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 29</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2018 - zad. 1)</div>
+          <div class="qtext">Liczba \(2\log_{3}6-\log_{3}4\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad29" value="A">A. 4</label>
+        <label class="option"><input type="radio" name="zad29" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad29" value="C">C. \(2\log_{3}2\)</label>
+        <label class="option"><input type="radio" name="zad29" value="D">D. \(\log_{3}8\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(2\log_{3}6=\log_{3}36\).  
+        \(\log_{3}36-\log_{3}4=\log_{3}9=2\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 30 -->
+    <div class="section" id="zad30" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 30</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2017 - zad. 3)</div>
+          <div class="qtext">Wartość wyrażenia \(\log_{4}8+5\log_{4}2\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad30" value="A">A. 2</label>
+        <label class="option"><input type="radio" name="zad30" value="B">B. 4</label>
+        <label class="option"><input type="radio" name="zad30" value="C">C. \(2+\log_{4}5\)</label>
+        <label class="option"><input type="radio" name="zad30" value="D">D. \(1+\log_{4}10\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{4}8=\tfrac32,\; 5\log_{4}2=5\cdot\tfrac12=2.5\).  
+        Suma \(=1.5+2.5=4\).  
+        Odp.: B.
+      </div>
+    </div>
+    <!-- Zadanie 31 -->
+    <div class="section" id="zad31" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 31</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2017 - zad. 4)</div>
+          <div class="qtext">Liczba \(\log_{3}27-\log_{3}1\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad31" value="A">A. 0</label>
+        <label class="option"><input type="radio" name="zad31" value="B">B. 1</label>
+        <label class="option"><input type="radio" name="zad31" value="C">C. 2</label>
+        <label class="option"><input type="radio" name="zad31" value="D">D. 3</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}27=3,\; \log_{3}1=0\).  
+        Różnica \(=3-0=3\).  
+        Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 32 -->
+    <div class="section" id="zad32" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 32</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2016 - zad. 4)</div>
+          <div class="qtext">Liczba \(\dfrac{\log_{3}729}{\log_{6}36}\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad32" value="A">A. \(\log_{6}693\)</label>
+        <label class="option"><input type="radio" name="zad32" value="B">B. 3</label>
+        <label class="option"><input type="radio" name="zad32" value="C">C. \(\log_{1/2}81/4\)</label>
+        <label class="option"><input type="radio" name="zad32" value="D">D. 4</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}729=\log_{3}3^6=6\).  
+        \(\log_{6}36=\log_{6}6^2=2\).  
+        Iloraz \(=6/2=3\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 33 -->
+    <div class="section" id="zad33" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 33</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2016 - zad. 6)</div>
+          <div class="qtext">Wartość wyrażenia \(\log_{3}\tfrac{3}{2}+\log_{3}\tfrac{2}{9}\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad33" value="A">A. -1</label>
+        <label class="option"><input type="radio" name="zad33" value="B">B. -2</label>
+        <label class="option"><input type="radio" name="zad33" value="C">C. \(\log_{3}\tfrac{5}{11}\)</label>
+        <label class="option"><input type="radio" name="zad33" value="D">D. \(\log_{3}\tfrac{31}{18}\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Suma \(=\log_{3}\left(\tfrac{3}{2}\cdot\tfrac{2}{9}\right)=\log_{3}\tfrac{1}{3}=-1\).  
+        Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 34 -->
+    <div class="section" id="zad34" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 34</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2016 - zad. 2)</div>
+          <div class="qtext">Liczba \(\log_{\sqrt{2}}(2\sqrt{2})\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad34" value="A">A. 3/2</label>
+        <label class="option"><input type="radio" name="zad34" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad34" value="C">C. 5/2</label>
+        <label class="option"><input type="radio" name="zad34" value="D">D. 3</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Podstawa: \(\sqrt{2}=2^{1/2}\).  
+        Liczba: \(2\sqrt{2}=2^{3/2}\).  
+        \(\log_{2^{1/2}}2^{3/2}=(3/2)/(1/2)=3\).  
+        Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 35 -->
+    <div class="section" id="zad35" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 35</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2015 - zad. 5)</div>
+          <div class="qtext">Wartość wyrażenia \(\log_{5}0.04-\tfrac{1}{2}\log_{25}5\cdot\log_{25}1\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad35" value="A">A. -3</label>
+        <label class="option"><input type="radio" name="zad35" value="B">B. -2.25</label>
+        <label class="option"><input type="radio" name="zad35" value="C">C. -2</label>
+        <label class="option"><input type="radio" name="zad35" value="D">D. 0</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{5}0.04=\log_{5}\tfrac{1}{25}=-2\).  
+        \(\log_{25}1=0\), więc cały drugi składnik = 0.  
+        Wynik = -2.  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 36 -->
+    <div class="section" id="zad36" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 36</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2015 - zad. 2)</div>
+          <div class="qtext">Dane są liczby \(a=-\tfrac{1}{27},\; b=\log_{1/4}64,\; c=\log_{1/3}27\). Iloczyn \(abc\) jest równy</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad36" value="A">A. -9</label>
+        <label class="option"><input type="radio" name="zad36" value="B">B. -1/3</label>
+        <label class="option"><input type="radio" name="zad36" value="C">C. 1/3</label>
+        <label class="option"><input type="radio" name="zad36" value="D">D. 3</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(b=\log_{1/4}64=\frac{\log64}{\log(1/4)}=\frac{6}{-2}=-3\).  
+        \(c=\log_{1/3}27=\frac{\log27}{\log(1/3)}=\frac{3}{-1}=-3\).  
+        Iloczyn: \(-\tfrac{1}{27}\cdot(-3)\cdot(-3)=-\tfrac{9}{27}=-\tfrac{1}{3}\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 37 -->
+    <div class="section" id="zad37" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 37</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2014 - zad. 24)</div>
+          <div class="qtext">Wskaż liczbę, która spełnia równanie \(4^x=9\).</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad37" value="A">A. \(\log 9-\log 4\)</label>
+        <label class="option"><input type="radio" name="zad37" value="B">B. \(\frac{\log 2}{\log 3}\)</label>
+        <label class="option"><input type="radio" name="zad37" value="C">C. \(2\log_{9}2\)</label>
+        <label class="option"><input type="radio" name="zad37" value="D">D. \(2\log_{4}3\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(4^x=9 \implies x=\log_{4}9=2\log_{4}3\).  
+        Odp.: D.
+      </div>
+    </div>
+
+    <!-- Zadanie 38 -->
+    <div class="section" id="zad38" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 38</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2014 - zad. 3)</div>
+          <div class="qtext">Liczba \(c=\log_{3}2\). Wtedy</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad38" value="A">A. \(c^3=2\)</label>
+        <label class="option"><input type="radio" name="zad38" value="B">B. \(3^c=2\)</label>
+        <label class="option"><input type="radio" name="zad38" value="C">C. \(3^2=c\)</label>
+        <label class="option"><input type="radio" name="zad38" value="D">D. \(c^2=3\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Definicja logarytmu: \(\log_{3}2=c \iff 3^c=2\).  
+        Odp.: B.
+      </div>
+    </div>
+
+       <!-- Zadanie 39 -->
+    <div class="section" id="zad39" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 39</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2014 - zad. 5)</div>
+          <div class="qtext">Dane są liczby: \(a=\log_{3}\tfrac{1}{9},\; b=\log_{3}3,\; c=\log_{3}\tfrac{1}{27}\). Który z poniższych warunków jest prawdziwy?</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad39" value="A">A. \(c&lt;b&lt;a\)</label>
+        <label class="option"><input type="radio" name="zad39" value="B">B. \(b&lt;c&lt;a\)</label>
+        <label class="option"><input type="radio" name="zad39" value="C">C. \(a&lt;c&lt;b\)</label>
+        <label class="option"><input type="radio" name="zad39" value="D">D. \(c&lt;a&lt;b\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(a=\log_{3}3^{-2}=-2,\; b=1,\; c=\log_{3}3^{-3}=-3\).  
+        Kolejność: \(c=-3&lt;a=-2&lt;b=1\).  
+        Odp.: D.
+      </div>
+    </div>
+
+
+    <!-- Zadanie 40 -->
+    <div class="section" id="zad40" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 40</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2014 - zad. 4)</div>
+          <div class="qtext">Suma \(\log_{8}16+1\) równa się</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad40" value="A">A. \(\log_{8}17\)</label>
+        <label class="option"><input type="radio" name="zad40" value="B">B. 3/2</label>
+        <label class="option"><input type="radio" name="zad40" value="C">C. 7/3</label>
+        <label class="option"><input type="radio" name="zad40" value="D">D. 3</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{8}16=\log_{2^3}2^4=4/3\).  
+        \(4/3+1=7/3\).  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 41 -->
+    <div class="section" id="zad41" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 41</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2013 - zad. 10)</div>
+          <div class="qtext">Liczba \(\log_{2}100 - \log_{2}50\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad41" value="A">A. \(\log_{2}50\)</label>
+        <label class="option"><input type="radio" name="zad41" value="B">B. 1</label>
+        <label class="option"><input type="radio" name="zad41" value="C">C. 2</label>
+        <label class="option"><input type="radio" name="zad41" value="D">D. \(\log_{2}5000\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{2}100 - \log_{2}50 = \log_{2}\tfrac{100}{50} = \log_{2}2 = 1\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 42 -->
+    <div class="section" id="zad42" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 42</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2013 - zad. 26)</div>
+          <div class="qtext">Liczba \(\log 4 + \log 5 - \log 2\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad42" value="A">A. 10</label>
+        <label class="option"><input type="radio" name="zad42" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad42" value="C">C. 1</label>
+        <label class="option"><input type="radio" name="zad42" value="D">D. 0</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log 4 + \log 5 - \log 2 = \log \tfrac{20}{2} = \log 10 = 1\).  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 43 -->
+    <div class="section" id="zad43" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 43</div>
+        <div style="flex:1">
+          <div class="qmeta">(czerwiec 2013 - zad. 4)</div>
+          <div class="qtext">Wartość wyrażenia \(\log_{2}20 - \log_{2}5\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad43" value="A">A. \(\log_{2}15\)</label>
+        <label class="option"><input type="radio" name="zad43" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad43" value="C">C. 4</label>
+        <label class="option"><input type="radio" name="zad43" value="D">D. \(\log_{2}25\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{2}20 - \log_{2}5 = \log_{2}\tfrac{20}{5} = \log_{2}4 = 2\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 44 -->
+    <div class="section" id="zad44" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 44</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2013 - zad. 3)</div>
+          <div class="qtext">Liczba \(\log 100 - \log_{2}8\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad44" value="A">A. −2</label>
+        <label class="option"><input type="radio" name="zad44" value="B">B. −1</label>
+        <label class="option"><input type="radio" name="zad44" value="C">C. 0</label>
+        <label class="option"><input type="radio" name="zad44" value="D">D. 1</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log 100 = 2,\;\; \log_{2}8 = 3.\;\; 2 - 3 = -1\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 45 -->
+    <div class="section" id="zad45" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 45</div>
+        <div style="flex:1">
+          <div class="qmeta">(marzec 2012 - zad. 3)</div>
+          <div class="qtext">Liczba \(\log_{3}\tfrac{1}{27}\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad45" value="A">A. −3</label>
+        <label class="option"><input type="radio" name="zad45" value="B">B. −\(\tfrac{1}{3}\)</label>
+        <label class="option"><input type="radio" name="zad45" value="C">C. \(\tfrac{1}{3}\)</label>
+        <label class="option"><input type="radio" name="zad45" value="D">D. 3</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\tfrac{1}{27} = 3^{-3}\), więc \(\log_{3}(3^{-3}) = -3\).  
+        Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 46 -->
+    <div class="section" id="zad46" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 46</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2011 - zad. 9)</div>
+          <div class="qtext">Liczba \(\log_{2}4 + 2\log_{3}1\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad46" value="A">A. 0</label>
+        <label class="option"><input type="radio" name="zad46" value="B">B. 1</label>
+        <label class="option"><input type="radio" name="zad46" value="C">C. 2</label>
+        <label class="option"><input type="radio" name="zad46" value="D">D. 4</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{2}4 = 2\). Ponieważ \(\log_{3}1 = 0\), całe wyrażenie = \(2 + 2\cdot0 = 2\).  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 47 -->
+    <div class="section" id="zad47" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 47</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2011 - zad. 8)</div>
+          <div class="qtext">Wyrażenie \(\log_{4}(2x-1)\) jest określone dla wszystkich liczb \(x\) spełniających warunek</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad47" value="A">A. \(x \le \tfrac{1}{2}\)</label>
+        <label class="option"><input type="radio" name="zad47" value="B">B. \(x &gt; \tfrac{1}{2}\)</label>
+        <label class="option"><input type="radio" name="zad47" value="C">C. \(x \le 0\)</label>
+        <label class="option"><input type="radio" name="zad47" value="D">D. \(x &gt; 0\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        W logarytmie argument musi być dodatni: \(2x-1&gt;0 \implies x&gt;\tfrac{1}{2}\).  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 48 -->
+    <div class="section" id="zad48" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 48</div>
+        <div style="flex:1">
+          <div class="qmeta">(listopad 2010 - zad. 6)</div>
+          <div class="qtext">Liczba \(\log_{5}5 - \log_{5}125\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad48" value="A">A. −2</label>
+        <label class="option"><input type="radio" name="zad48" value="B">B. −1</label>
+        <label class="option"><input type="radio" name="zad48" value="C">C. \(\tfrac{1}{25}\)</label>
+        <label class="option"><input type="radio" name="zad48" value="D">D. 4</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{5}5 = 1,\;\; \log_{5}125 = 3.\;\; 1-3=-2\).  
+        Odp.: A.
+      </div>
+    </div>
+
+    <!-- Zadanie 49 -->
+    <div class="section" id="zad49" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 49</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2010 - zad. 3)</div>
+          <div class="qtext">Różnica \(\log_{3}9 - \log_{3}1\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad49" value="A">A. 0</label>
+        <label class="option"><input type="radio" name="zad49" value="B">B. 1</label>
+        <label class="option"><input type="radio" name="zad49" value="C">C. 2</label>
+        <label class="option"><input type="radio" name="zad49" value="D">D. 3</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}9=2,\;\; \log_{3}1=0.\;\; 2-0=2\).  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 50 -->
+    <div class="section" id="zad50" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 50</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2010 - zad. 4)</div>
+          <div class="qtext">Liczba \(\log_{4}8 + \log_{4}2\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad50" value="A">A. 1</label>
+        <label class="option"><input type="radio" name="zad50" value="B">B. 2</label>
+        <label class="option"><input type="radio" name="zad50" value="C">C. \(\log_{4}6\)</label>
+        <label class="option"><input type="radio" name="zad50" value="D">D. \(\log_{4}10\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{4}8=1.5,\;\; \log_{4}2=0.5.\;\; Suma=2\).  
+        Odp.: B.
+      </div>
+    </div>
+    <!-- Zadanie 51 -->
+    <div class="section" id="zad51" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 51</div>
+        <div style="flex:1">
+          <div class="qmeta">(listopad 2009 - zad. 5)</div>
+          <div class="qtext">O liczbie x wiadomo, że \(\log_{3}x = 9\). Zatem</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad51" value="A">A. \(x = 2\)</label>
+        <label class="option"><input type="radio" name="zad51" value="B">B. \(x = \tfrac{1}{2}\)</label>
+        <label class="option"><input type="radio" name="zad51" value="C">C. \(x = 3^{9}\)</label>
+        <label class="option"><input type="radio" name="zad51" value="D">D. \(x = 9^{3}\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log_{3}x = 9 \implies x = 3^{9}\).  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 52 (obrazek) -->
+    <div class="section" id="zad52" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 52</div>
+        <div style="flex:1">
+          <div class="qmeta">(informator CKE)</div>
+          <div class="qtext">
+            Na wykresie przedstawiono zależność \(\log K(t)\), gdzie \(K(t)\) jest liczbą bakterii po czasie \(t\) godzin od chwili \(t=0\).
+            <br><br>
+            <img src="img/logarytmy.png" alt="wykres logarytmy">
+            <br><br>
+            Gdy upłynęły 3 godziny od chwili \(t=0\), liczba \(K\) bakterii była równa:
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad52" value="A">A. 3</label>
+        <label class="option"><input type="radio" name="zad52" value="B">B. 100</label>
+        <label class="option"><input type="radio" name="zad52" value="C">C. 1000</label>
+        <label class="option"><input type="radio" name="zad52" value="D">D. 10 000</label>
+      </div>
+    </div>
+
+    <!-- Zadanie 53 -->
+    <div class="section" id="zad53" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 53</div>
+        <div style="flex:1">
+          <div class="qmeta">(informator CKE)</div>
+          <div class="qtext">Liczba \(\log_{2}\!\big(\sqrt{2}^{\,2}\cdot\sqrt{2}^{\,4}\cdot\sqrt{2}^{\,8}\big)\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad53" value="A">A. \(\sqrt{2}\)</label>
+        <label class="option"><input type="radio" name="zad53" value="B">B. 7</label>
+        <label class="option"><input type="radio" name="zad53" value="C">C. 14</label>
+        <label class="option"><input type="radio" name="zad53" value="D">D. \(\tfrac{2}{7}\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\sqrt{2}^{\,2}=2,\;\; \sqrt{2}^{\,4}=4,\;\; \sqrt{2}^{\,8}=16.\)  
+        Iloczyn \(=128=2^{7}.\;\; \log_{2}128=7.\)  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 54 -->
+    <div class="section" id="zad54" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 54</div>
+        <div style="flex:1">
+          <div class="qmeta">(informator CKE)</div>
+          <div class="qtext">Liczba \(\log 36\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad54" value="A">A. \(2\log 18\)</label>
+        <label class="option"><input type="radio" name="zad54" value="B">B. \(\log 40 - 2\log 2\)</label>
+        <label class="option"><input type="radio" name="zad54" value="C">C. \(2\log 4 - 3\log 2\)</label>
+        <label class="option"><input type="radio" name="zad54" value="D">D. \(2\log 6 - \log 1\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log 36 = \log 6^{2} = 2\log 6.\;\; Odp.: D\) (ponieważ \(\log 1 = 0\)).  
+      </div>
+    </div>
+
+    <!-- Zadanie 55 -->
+    <div class="section" id="zad55" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 55</div>
+        <div style="flex:1">
+          <div class="qmeta">(informator CKE)</div>
+          <div class="qtext">Liczba \(\log 12\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad55" value="A">A. \(\log 3 \cdot \log 4\)</label>
+        <label class="option"><input type="radio" name="zad55" value="B">B. \(\log 3 + \log 4\)</label>
+        <label class="option"><input type="radio" name="zad55" value="C">C. \(\log 16 - \log 4\)</label>
+        <label class="option"><input type="radio" name="zad55" value="D">D. \(\log 10 + \log 2\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log 12 = \log(3\cdot4) = \log 3 + \log 4.\)  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 56 -->
+    <div class="section" id="zad56" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 56</div>
+        <div style="flex:1">
+          <div class="qmeta">(informator CKE)</div>
+          <div class="qtext">Liczba \(\log 24\) jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad56" value="A">A. \(2\log 2 + \log 20\)</label>
+        <label class="option"><input type="radio" name="zad56" value="B">B. \(\log 6 + 2\log 2\)</label>
+        <label class="option"><input type="radio" name="zad56" value="C">C. \(2\log 6 - \log 12\)</label>
+        <label class="option"><input type="radio" name="zad56" value="D">D. \(\log 30 - \log 6\)</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(\log 24 = \log (6\cdot4) = \log 6 + \log 4 = \log 6 + 2\log 2.\)  
+        Odp.: B.
+      </div>
+    </div>
+
+    <!-- Zadanie 57 -->
+    <div class="section" id="zad57" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 57</div>
+        <div style="flex:1">
+          <div class="qmeta">(zbiór CKE - zad. 7)</div>
+          <div class="qtext">Wartość wyrażenia \(\log k + \log \tfrac{1}{100}k^{2} - \log \tfrac{1}{10}k^{3}, \;k&gt;0\), jest równa</div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="radio" name="zad57" value="A">A. 0</label>
+        <label class="option"><input type="radio" name="zad57" value="B">B. 1</label>
+        <label class="option"><input type="radio" name="zad57" value="C">C. (−1)</label>
+        <label class="option"><input type="radio" name="zad57" value="D">D. k</label>
+      </div>
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Upraszczamy: \(\log k + \log\frac{k^{2}}{100} - \log\frac{k^{3}}{10} = \log k + (2\log k -2) - (3\log k -1).\)  
+        = \(\log k + 2\log k -2 -3\log k +1 = -1.\)  
+        Odp.: C.
+      </div>
+    </div>
+
+    <!-- Zadanie 58 (multi) -->
+    <div class="section" id="zad58" data-mode="multi-any" data-ans="B,E">
+      <div class="qheader">
+        <div class="qid">Zad. 58</div>
+        <div style="flex:1">
+          <div class="qmeta">(zbiór CKE - zad. 8)</div>
+          <div class="qtext">
+            Dane są liczby rzeczywiste \(x,y,z &gt;0,\; x,y,z\neq1\) oraz \(y^{z}=x\).  
+            Dokończ zdanie. Wybierz <b>dwie</b> właściwe odpowiedzi.
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <label class="option"><input type="checkbox" name="zad58" value="A">A. \(\log_{x}y=z\)</label>
+        <label class="option"><input type="checkbox" name="zad58" value="B">B. \(y^{-\log_{y}x}=\tfrac{1}{x}\)</label>
+        <label class="option"><input type="checkbox" name="zad58" value="C">C. \(\log_{x}z=y\)</label>
+        <label class="option"><input type="checkbox" name="zad58" value="D">D. \(y^{\log_{x}y}=x\)</label>
+        <label class="option"><input type="checkbox" name="zad58" value="E">E. \(\log_{y}x=z\)</label>
+        <label class="option"><input type="checkbox" name="zad58" value="F">F. \(z^{-\log_{x}z}=\tfrac{1}{y}\)</label>
+      </div>
+    </div>
+<footer>Twoja ciekawość to Twój supermocny napęd (ᵔᴥᵔ)</footer>
+
+  </div>
+
+  <!-- Skrypt dla wszystkich trybów (single / P-F / multi-any) -->
+  <script>
+    // Pokazywanie/ukrywanie rozwiązań:
+    document.querySelectorAll(".btn-solution").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const sol = btn.closest(".section").querySelector(".sol");
+        sol.style.display = (sol.style.display === "block") ? "none" : "block";
+      });
+    });
+
+    // Helper: usuń podświetlenia w grupie
+    function clearGroupHighlights(inputs) {
+      const nameset = new Set(Array.from(inputs).map(i => i.name));
+      nameset.forEach(n => {
+        document.querySelectorAll('input[name="'+n+'"]').forEach(inp => {
+          const lab = inp.closest("label.option");
+          if (lab) { lab.classList.remove("correct","incorrect"); }
+        });
+      });
+    }
+
+    document.querySelectorAll(".section").forEach(sec => {
+      const mode = sec.dataset.mode || "single";
+      if (mode === "pf") {
+        const correct = sec.dataset.ans.split(",");
+        ["1","2"].forEach((idx,i) => {
+          const groupName = `${sec.id}-${idx}`;
+          sec.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+            r.addEventListener("change", () => {
+              // wyczyść poprzednie podświetlenia w tej parze
+              clearGroupHighlights(sec.querySelectorAll(`input[name="${groupName}"]`));
+              const lab = r.closest("label.option");
+              if (!lab) return;
+              if (r.value === correct[i]) lab.classList.add("correct");
+              else lab.classList.add("incorrect");
+            });
+          });
+        });
+      } else if (mode === "multi-any") {
+        const correct = sec.dataset.ans.split(",");
+        sec.querySelectorAll('input[type="checkbox"]').forEach(ch => {
+          ch.addEventListener("change", () => {
+            const lab = ch.closest("label.option");
+            if (!lab) return;
+            lab.classList.remove("correct","incorrect");
+            if (ch.checked) {
+              if (correct.includes(ch.value)) lab.classList.add("correct");
+              else lab.classList.add("incorrect");
+            }
+          });
+        });
+      } else {
+        const correct = sec.dataset.ans;
+        sec.querySelectorAll('input[type="radio"]').forEach(r => {
+          r.addEventListener("change", () => {
+            // wyczyść poprzednie w obrębie tej grupy name
+            clearGroupHighlights(sec.querySelectorAll('input[name="'+r.name+'"]'));
+            const lab = r.closest("label.option");
+            if (!lab) return;
+            if (r.value === correct) lab.classList.add("correct");
+            else lab.classList.add("incorrect");
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

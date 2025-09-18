@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Równania kwadratowe</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Równania kwadratowe</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2023 - zad. 13)</div>
+        <div class="qtext">Funkcja \(f(x)=(x-13)^2-256\). Jednym z miejsc zerowych jest \(-3\). Drugie miejsce zerowe to</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> \(-29\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> \(-23\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> 23</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> 29</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozwiązujemy \(f(x)=0\): \((x-13)^2=256\). Stąd \(x-13=\pm 16\). Miejsca zerowe: \(-3, 29\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2020 - zad. 10)</div>
+        <div class="qtext">Rozwiąż równanie: \(x(x-2)=(x-2)^2\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> Brak rozwiązań</div></label>
+      <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> jedno: \(x=2\)</div></label>
+      <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> jedno: \(x=0\)</div></label>
+      <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> dwa: \(x=1,2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(x^2-2x=(x^2-4x+4)\). Redukcja: \(2x-4=0\Rightarrow x=2\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2015 - zad. 6)</div>
+        <div class="qtext">Rozważ równanie \(2x^2+11x+3=0\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> brak rozwiązań</div></label>
+      <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> jedno rozwiązanie</div></label>
+      <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> dwa dodatnie rozwiązania</div></label>
+      <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> dwa ujemne rozwiązania</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\Delta=121-24=97>0\). Pierwiastki: \(\tfrac{-11\pm \sqrt{97}}{4}\), oba ujemne. Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2014 - zad. 10)</div>
+        <div class="qtext">Dla pierwiastków równania \(2(x+2)(x-2)=0\) oblicz \(\tfrac1{x_1}+\tfrac1{x_2}\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> \(\tfrac12\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(\tfrac14\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> \(-1\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> 0</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \(2(x^2-4)=0\Rightarrow x=\pm 2\). Suma odwrotności: \(\tfrac12+\tfrac{-1}{2}=0\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2012 - zad. 10)</div>
+        <div class="qtext">Dla rów. \(4(x+2)(x-6)=0\), oblicz \(x_1^2+x_2^2\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> 16</div></label>
+      <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> 32</div></label>
+      <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> 40</div></label>
+      <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> 48</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Pierwiastki: \(-2,6\). Suma kwadratów: \((-2)^2+6^2=4+36=40\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2010 - zad. 10)</div>
+        <div class="qtext">Pierwiastki równania \(x^2+10x-24=0\) to \(x_1&lt;x_2\). Oblicz \(2x_1+x_2\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> \(-22\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> \(-17\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> 8</div></label>
+      <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> 13</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\Delta=100+96=196\). Pierwiastki: \(\tfrac{-10\pm 14}{2}\Rightarrow -12,2\). Więc \(2(-12)+2=-24+2=-22\). Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Mniejszą z liczb spełniających \(x^2+5x+6=0\) jest:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> \(-6\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> \(-3\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> \(-2\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> \(-1\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozkład: \((x+2)(x+3)=0\). Pierwiastki: \(-2,-3\). Mniejszy: \(-3\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <footer>Równania? To tylko zagadki w przebraniu ^_^</footer>
+
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const correct = (sec.getAttribute('data-ans')||'').toUpperCase().trim();
+
+  const options = sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input = opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val = (input.value||'').toUpperCase().trim();
+      if(val === correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click', ()=>{ 
+      sol.style.display = sol.style.display==='block' ? 'none' : 'block'; 
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+Array.from({length:7},(_,i)=>'zad'+(i+1)).forEach(setupQuestion);
+</script>
+</body>
+</html>

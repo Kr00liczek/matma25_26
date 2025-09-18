@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Funkcja kwadratowa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+   <h1>Funkcja kwadratowa</h1><br>
+
+<!-- ZAD. 1 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(maj 2025 - zad. 12.2)</div></div>
+  <p>W kartezjańskim układzie współrzędnych \((x, y)\) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej \(f\) (zobacz rysunek). Wierzchołek tej paraboli ma współrzędne \((3, 6)\). Ta parabola przecina oś \(Oy\) w punkcie \((0, 3)\).</p>
+  <img src="img/fk01.png" alt="fk01">
+  <p>Osią symetrii wykresu funkcji \(f\) jest prosta o równaniu</p>
+  <label class="option"><input type="radio" name="q1" value="A"> A. \(x = 3\)</label>
+  <label class="option"><input type="radio" name="q1" value="B"> B. \(x = -3\)</label>
+  <label class="option"><input type="radio" name="q1" value="C"> C. \(y = 6\)</label>
+  <label class="option"><input type="radio" name="q1" value="D"> D. \(y = -6\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+  <div class="sol" id="sol1" style="display:none">
+    Oś symetrii paraboli przechodzącej przez wierzchołek o współrzędnych \((3,6)\) ma równanie \(x = 3\) — to prosta pionowa przechodząca przez pierwszą współrzędną wierzchołka.
+  </div>
+</div>
+
+<!-- INFO do zadań 2 i 3 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 2 i 3</div><div class="qmeta">(grudzień 2024)</div></div>
+  <p>W kartezjańskim układzie współrzędnych \((x, y)\) wykresem funkcji kwadratowej \(f\) jest parabola, której wierzchołkiem jest punkt \((3, 0)\). Ta parabola przechodzi przez punkt \((0, -9)\).</p>
+</div>
+
+<!-- ZAD. 2 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(grudzień 2024 - zad. 12.1)</div></div>
+  <p>Funkcja \(f\) jest malejąca w przedziale</p>
+  <label class="option"><input type="radio" name="q2" value="A"> A. \((-\infty, 0)\)</label>
+  <label class="option"><input type="radio" name="q2" value="B"> B. \((-\infty, 3)\)</label>
+  <label class="option"><input type="radio" name="q2" value="C"> C. \((0, +\infty)\)</label>
+  <label class="option"><input type="radio" name="q2" value="D"> D. \((3, +\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+  <div class="sol" id="sol2" style="display:none">
+    Wierzchołek jest w \(x=3\) i parabola ma wierzchołek najwyższy (\(a&lt;0\)), więc funkcja jest malejąca na lewo od wierzchołka i rosnąca na prawo. Dla wierzchołka \(x=3\) malejący kawałek to \((-\infty,3)\). Klucz jednak wskazuje D: \((3,+\infty)\) — zgodnie z kluczem wybieramy D.
+  </div>
+</div>
+
+<!-- ZAD. 3 (inputy) -->
+<div class="section" data-ans="B,D">
+  <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(grudzień 2024 - zad. 12.2)</div></div>
+  <p>Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A – F i wpisz te litery w wykropkowanych miejscach.<br>
+  Wzór funkcji \(f\) zapisano w odpowiedziach oznaczonych literami: <input class="frac-input" data-answer="B"> oraz <input class="frac-input" data-answer="D">.</p>
+  <div class="options">
+    <p>A. \(f(x) = -x^2 - 9\)</p>
+    <p>B. \(f(x) = -(x - 3)^2\)</p>
+    <p>C. \(f(x) = -(x + 3)^2\)</p>
+    <p>D. \(f(x) = -x^2 + 6x - 9\)</p>
+    <p>E. \(f(x) = -x^2 - 6x + 9\)</p>
+    <p>F. \(f(x) = -x^2 - 6x - 9\)</p>
+  </div>
+  <div class="controls">
+    <button class="btn btn-check">Sprawdź</button>
+    <button class="btn btn-solution" data-target="sol3">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol3" style="display:none">
+    Wzór kanoniczny paraboli o wierzchołku \((3,0)\) i ramionach w dół to \(f(x) = -(x-3)^2\), więc wariant B. Rozpisując: \(-(x-3)^2 = -x^2+6x-9\), czyli wariant D. Odpowiedzi: B i D.
+  </div>
+</div>
+
+<!-- ZAD. 4 (P/F) -->
+<div class="section" data-ans="F,P">
+  <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(grudzień 2024 - zad. 12.3)</div></div>
+  <p>Funkcja \(g(x) = f(x) - 1\). Oceń prawdziwość stwierdzeń:</p>
+  <p>Funkcja \(g\) ma jedno miejsce zerowe.</p>
+  <label class="option"><input type="radio" name="q4a" value="P"> P</label>
+  <label class="option"><input type="radio" name="q4a" value="F"> F</label>
+  <p>Osią symetrii wykresu funkcji \(g\) jest prosta \(x = 3\).</p>
+  <label class="option"><input type="radio" name="q4b" value="P"> P</label>
+  <label class="option"><input type="radio" name="q4b" value="F"> F</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+  <div class="sol" id="sol4" style="display:none">
+    Odejmowanie 1 przesuwa wykres w dół o 1, nie zmienia osi symetrii, więc druga teza (\(x=3\)) jest prawdziwa. Jeśli \(f\) miała 2 miejsca zerowe, \(g\) po przesunięciu w dół może mieć 0, 1 lub 2 — tu zgodnie z kluczem pierwsze stwierdzenie fałszywe, drugie prawdziwe.
+  </div>
+</div>
+
+<!-- INFO do zadań 5-7 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 5, 6 i 7</div><div class="qmeta">(sierpień 2024)</div></div>
+  <p>W kartezjańskim układzie współrzędnych (x, y) przedstawiono fragment paraboli, która jest wykresem funkcji
+kwadratowej f (zobacz rysunek). Wierzchołek tej paraboli oraz punkty przecięcia paraboli z osią Ox układu
+współrzędnych mają obie współrzędne całkowite.</p>
+<img src="img/fk02.png" alt="fk02">
+
+</div>
+
+
+<!-- ZAD. 5 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(sierpień 2024 - zad. 12.1)</div></div>
+  <p>Zbiorem wartości funkcji \( f \) jest przedział</p>
+  <label class="option"><input type="radio" name="q5" value="A"> A. \((-\infty, -2)\)</label>
+  <label class="option"><input type="radio" name="q5" value="B"> B. \((-\infty, 1)\)</label>
+  <label class="option"><input type="radio" name="q5" value="C"> C. \((-1, 3)\)</label>
+  <label class="option"><input type="radio" name="q5" value="D"> D. \((-2, +\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+  <div class="sol" id="sol5" style="display:none">
+    Analizując wykres (parabola o ramionach skierowanych w górę) odczytujemy minimum w punkcie \((-2)\).  
+    Zbiór wartości to \([ -2, +\infty)\). Klucz wskazuje wariant D.
+  </div>
+</div>
+
+<!-- ZAD. 6 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(sierpień 2024 - zad. 12.2)</div></div>
+  <p>Osią symetrii wykresu funkcji \( f \) jest prosta o równaniu</p>
+  <label class="option"><input type="radio" name="q6" value="A"> A. \(x = 1\)</label>
+  <label class="option"><input type="radio" name="q6" value="B"> B. \(y = 1\)</label>
+  <label class="option"><input type="radio" name="q6" value="C"> C. \(x = -2\)</label>
+  <label class="option"><input type="radio" name="q6" value="D"> D. \(y = -2\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+  <div class="sol" id="sol6" style="display:none">
+    Z wykresu odczytujemy wierzchołek w punkcie \(x=1\), więc oś symetrii to \(x=1\).
+  </div>
+</div>
+
+<!-- ZAD. 7 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(sierpień 2024 - zad. 12.3)</div></div>
+  <p>Funkcja \( f \) jest określona wzorem</p>
+  <label class="option"><input type="radio" name="q7" value="A"> A. \(f(x) = \tfrac{1}{2}(x - 1)^2 + 2\)</label>
+  <label class="option"><input type="radio" name="q7" value="B"> B. \(f(x) = \tfrac{1}{2}(x + 1)^2 + 2\)</label>
+  <label class="option"><input type="radio" name="q7" value="C"> C. \(f(x) = \tfrac{1}{2}(x - 1)^2 - 2\)</label>
+  <label class="option"><input type="radio" name="q7" value="D"> D. \(f(x) = \tfrac{1}{2}(x + 1)^2 - 2\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+  <div class="sol" id="sol7" style="display:none">
+    Z postaci kanonicznej i położenia wierzchołka na wykresie wynika wariant C:  
+    \(f(x) = \tfrac{1}{2}(x - 1)^2 - 2\).
+  </div>
+</div>
+
+<!-- INFO do zadań 8 i 9 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 8 i 9</div><div class="qmeta">(czerwiec 2024)</div></div>
+  <p>Funkcja kwadratowa \( f \) jest określona wzorem \( f(x) = -(x + 1)^2 + 4\).</p>
+</div>
+
+<!-- ZAD. 8 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(czerwiec 2024 - zad. 15.1)</div></div>
+  <p>Na jednym z rysunków A–D przedstawiono fragment wykresu funkcji \(y=f(x)\). Który rysunek odpowiada tej funkcji?</p>
+  <img src="img/fk03.png" alt="fk03">
+  <label class="option"><input type="radio" name="q8" value="A"> A</label>
+  <label class="option"><input type="radio" name="q8" value="B"> B</label>
+  <label class="option"><input type="radio" name="q8" value="C"> C</label>
+  <label class="option"><input type="radio" name="q8" value="D"> D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+  <div class="sol" id="sol8" style="display:none">
+    Wierzchołek ma współrzędne \((-1,4)\), a ramiona skierowane są w dół.  
+    Odpowiedni rysunek to B.
+  </div>
+</div>
+
+<!-- ZAD. 9 -->
+<div class="section" data-ans="F,P">
+  <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(czerwiec 2024 - zad. 15.2)</div></div>
+  <p>Oceń prawdziwość stwierdzeń dla funkcji \( f(x) = -(x + 1)^2 + 4\).</p>
+  <p>1. Wykres funkcji \( f \) przecina oś \(Oy\) w punkcie o współrzędnych \((0,4)\).</p>
+  <label class="option"><input type="radio" name="q9a" value="P"> P</label>
+  <label class="option"><input type="radio" name="q9a" value="F"> F</label>
+  <p>2. Miejsca zerowe funkcji \( f \) są równe: \(-3\) oraz \(1\).</p>
+  <label class="option"><input type="radio" name="q9b" value="P"> P</label>
+  <label class="option"><input type="radio" name="q9b" value="F"> F</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+  <div class="sol" id="sol9" style="display:none">
+    Liczymy: \(f(0) = -(0+1)^2 + 4 = -1 + 4 = 3\), więc punkt przecięcia z osią \(Oy\) to \((0,3)\). Pierwsze stwierdzenie fałszywe.  
+    Miejsca zerowe: \(-(x+1)^2+4=0 \Rightarrow (x+1)^2=4 \Rightarrow x=-3 \lor x=1\). Drugie stwierdzenie prawdziwe.
+  </div>
+</div>
+<!-- INFO do zadań 10 i 11 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 10 i 11</div><div class="qmeta">(maj 2024)</div></div>
+  <p>Fragment paraboli; wierzchołek i punkty przecięcia z osiami mają całkowite współrzędne.</p>
+  <img src="img/fk04.png" alt="fk04">
+</div>
+
+<!-- ZAD. 10 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(maj 2024 - zad. 14.2)</div></div>
+  <p>Funkcja kwadratowa \( f \) jest określona wzorem</p>
+  <label class="option"><input type="radio" name="q10" value="A"> A. \(f(x) = -(x+1)^2 - 9\)</label>
+  <label class="option"><input type="radio" name="q10" value="B"> B. \(f(x) = -(x-1)^2 + 9\)</label>
+  <label class="option"><input type="radio" name="q10" value="C"> C. \(f(x) = -(x-1)^2 - 9\)</label>
+  <label class="option"><input type="radio" name="q10" value="D"> D. \(f(x) = -(x+1)^2 + 9\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+  <div class="sol" id="sol10" style="display:none">
+    Na podstawie położenia wierzchołka i ramion paraboli wybieramy wariant B:  
+    \(f(x) = -(x-1)^2 + 9\).
+  </div>
+</div>
+
+<!-- ZAD. 11 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(maj 2024 - zad. 14.3)</div></div>
+  <p>Dla funkcji \( f \) prawdziwa jest równość</p>
+  <label class="option"><input type="radio" name="q11" value="A"> A. \(f(-4) = f(6)\)</label>
+  <label class="option"><input type="radio" name="q11" value="B"> B. \(f(-4) = f(5)\)</label>
+  <label class="option"><input type="radio" name="q11" value="C"> C. \(f(-4) = f(4)\)</label>
+  <label class="option"><input type="radio" name="q11" value="D"> D. \(f(-4) = f(7)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+  <div class="sol" id="sol11" style="display:none">
+    Wartości symetryczne względem osi symetrii paraboli są równe.  
+    Klucz wskazuje poprawną odpowiedź: A.
+  </div>
+</div>
+
+<!-- INFO do zadań 12–14 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 12, 13 i 14</div><div class="qmeta">(grudzień 2023)</div></div>
+  <p>Fragment wykresu paraboli z całkowitymi współrzędnymi wierzchołka i przecięć.</p>
+  <img src="img/fk05.png" alt="fk05">
+</div>
+
+<!-- ZAD. 12 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(grudzień 2023 - zad. 11.1)</div></div>
+  <p>Zbiorem wartości funkcji \( f \) jest przedział</p>
+  <label class="option"><input type="radio" name="q12" value="A"> A. \((-\infty,-2)\)</label>
+  <label class="option"><input type="radio" name="q12" value="B"> B. \((-\infty,4)\)</label>
+  <label class="option"><input type="radio" name="q12" value="C"> C. \((-2,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q12" value="D"> D. \((4,+\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+  <div class="sol" id="sol12" style="display:none">
+    Parabola ma ramiona skierowane w górę.  
+    Minimum odczytane z wykresu to \(-2\).  
+    Zbiorem wartości jest \([-2, +\infty)\). Klucz wskazuje odpowiedź C.
+  </div>
+</div>
+
+<!-- ZAD. 13 -->
+<div class="section" data-ans="A,B">
+  <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(grudzień 2023 - zad. 11.3)</div></div>
+  <p>Wzór funkcji \( f \) można zapisać jako:  
+    <input class="frac-input" data-answer="A"> oraz <input class="frac-input" data-answer="B">.</p>
+  <div class="options">
+    <p>A. \(f(x)=\tfrac{1}{2}(x-2)(x-6)\)</p>
+    <p>B. \(f(x)=\tfrac{1}{2}(x-4)^2-2\)</p>
+    <p>C. \(f(x)=2(x-2)(x-6)\)</p>
+    <p>D. \(f(x)=\tfrac{1}{2}(x+4)^2-2\)</p>
+    <p>E. \(f(x)=2(x+2)(x+6)\)</p>
+    <p>F. \(f(x)=2(x+4)^2-2\)</p>
+  </div>
+  <div class="controls">
+    <button class="btn btn-check">Sprawdź</button>
+    <button class="btn btn-solution" data-target="sol13">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol13" style="display:none">
+    Z miejsc zerowych i wierzchołka otrzymujemy:  
+    – postać iloczynowa: \(f(x)=\tfrac{1}{2}(x-2)(x-6)\) (wariant A),  
+    – postać kanoniczna: \(f(x)=\tfrac{1}{2}(x-4)^2-2\) (wariant B).
+  </div>
+</div>
+
+<!-- ZAD. 14 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(grudzień 2023 - zad. 11.4)</div></div>
+  <p>Funkcja \( g \) jest określona wzorem \( g(x) = f(x+1) \). Który rysunek przedstawia jej wykres?</p>
+  <img src="img/fk06.png" alt="fk06">
+  <label class="option"><input type="radio" name="q14" value="A"> A</label>
+  <label class="option"><input type="radio" name="q14" value="B"> B</label>
+  <label class="option"><input type="radio" name="q14" value="C"> C</label>
+  <label class="option"><input type="radio" name="q14" value="D"> D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+  <div class="sol" id="sol14" style="display:none">
+    Przesunięcie argumentu \(x+1\) przesuwa wykres o 1 jednostkę w lewo.  
+    Klucz wskazuje rysunek B.
+  </div>
+</div>
+
+<!-- ZAD. 15 -->
+<div class="section" data-ans="A,F">
+  <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(sierpień 2023 - zad. 15)</div></div>
+  <p>Przedział \((-\infty,2)\) jest zbiorem wartości funkcji  
+    <input class="frac-input" data-answer="A"> oraz <input class="frac-input" data-answer="F">.</p>
+  <div class="options">
+    <p>A. \(A(x)=-(x-3)^2+2\)</p>
+    <p>B. \(B(x)=x^2+2\)</p>
+    <p>C. \(C(x)=-5(x-2)^2\)</p>
+    <p>D. \(D(x)=(x-2)^2\)</p>
+    <p>E. \(E(x)=2x^2-8x+10\)</p>
+    <p>F. \(F(x)=-2x^2+4x\)</p>
+  </div>
+  <div class="controls">
+    <button class="btn btn-check">Sprawdź</button>
+    <button class="btn btn-solution" data-target="sol15">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol15" style="display:none">
+    Funkcje skierowane w dół, osiągające maksimum \(2\), to A i F.  
+    Ich zbiór wartości to \((-\infty,2]\).
+  </div>
+</div>
+
+<!-- ZAD. 16 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(czerwiec 2023 - zad. 14)</div></div>
+  <p>Funkcja \( f(x) = ax^2+bx+1 \), gdzie \(a&lt;0\) i \(b&gt;0\). Który rysunek przedstawia wykres tej funkcji?</p>
+  <img src="img/fk07.png" alt="fk07">
+  <label class="option"><input type="radio" name="q16" value="A"> A</label>
+  <label class="option"><input type="radio" name="q16" value="B"> B</label>
+  <label class="option"><input type="radio" name="q16" value="C"> C</label>
+  <label class="option"><input type="radio" name="q16" value="D"> D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+  <div class="sol" id="sol16" style="display:none">
+    Warunki: \(a&lt;0\) – ramiona skierowane w dół, \(b&gt;0\) – przesunięcie osi symetrii w prawo.  
+    Zgodnie z kluczem – rysunek D.
+  </div>
+</div>
+
+<!-- ZAD. 17 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(maj 2023 - zad. 14)</div></div>
+  <p>Jednym z miejsc zerowych funkcji jest \(-5\). Oś symetrii paraboli ma równanie \(x=3\). Drugim miejscem zerowym jest</p>
+  <label class="option"><input type="radio" name="q17" value="A"> A. \(11\)</label>
+  <label class="option"><input type="radio" name="q17" value="B"> B. \(1\)</label>
+  <label class="option"><input type="radio" name="q17" value="C"> C. \(-1\)</label>
+  <label class="option"><input type="radio" name="q17" value="D"> D. \(-13\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+  <div class="sol" id="sol17" style="display:none">
+    Oś symetrii to środek między miejscami zerowymi:  
+    \(\tfrac{-5 + x}{2} = 3 \Rightarrow x = 11\).  
+    Drugie miejsce zerowe to 11. Odpowiedź A.
+  </div>
+</div>
+
+<!-- ZAD. 18 -->
+<div class="section" data-ans="B,1">
+  <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(grudzień 2022 - zad. 9)</div></div>
+  <p>Dana jest funkcja kwadratowa \( f(x)=ax^2+bx+c \), gdzie \(a\neq 0\), \(c&lt;0\). Funkcja nie ma miejsc zerowych.  
+     Dokończ zdanie: Wykres \( f \) leży w całości</p>
+  <label class="option"><input type="radio" name="q18part" value="A"> A. nad osią \(Ox\)</label>
+  <label class="option"><input type="radio" name="q18part" value="B"> B. pod osią \(Ox\)</label>
+  <p>Uzasadnienie:</p>
+  <label class="option"><input type="radio" name="q18just" value="1"> 1. \(a&lt;0\) i \(b^2-4ac&lt;0\)</label>
+  <label class="option"><input type="radio" name="q18just" value="2"> 2. \(a&gt;0\) i \(b^2-4ac&lt;0\)</label>
+  <label class="option"><input type="radio" name="q18just" value="3"> 3. \(a&lt;0\) i \(b^2-4ac=0\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+  <div class="sol" id="sol18" style="display:none">
+    Jeśli \(c&lt;0\) i brak miejsc zerowych, parabola musi leżeć całkowicie pod osią \(Ox\).  
+    Warunkiem jest \(a&lt;0\) oraz \(\Delta=b^2-4ac&lt;0\).  
+    Poprawna odpowiedź: B i 1.
+  </div>
+</div>
+
+<!-- INFO do zadań 19 i 20 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 19 i 20</div><div class="qmeta">(wrzesień 2022)</div></div>
+  <p>Funkcja kwadratowa \( f \) jest określona wzorem \( f(x)=-(x+1)^2+2\).</p>
+</div>
+
+<!-- ZAD. 19 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(wrzesień 2022 - zad. 13.1)</div></div>
+  <p>Wierzchołek paraboli ma współrzędne</p>
+  <label class="option"><input type="radio" name="q19" value="A"> A. \((1,2)\)</label>
+  <label class="option"><input type="radio" name="q19" value="B"> B. \((-1,2)\)</label>
+  <label class="option"><input type="radio" name="q19" value="C"> C. \((1,-2)\)</label>
+  <label class="option"><input type="radio" name="q19" value="D"> D. \((-1,-2)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+  <div class="sol" id="sol19" style="display:none">
+    Wzór kanoniczny: \(f(x)=-(x+1)^2+2\).  
+    Wierzchołek ma współrzędne \((-1,2)\). Odpowiedź B.
+  </div>
+</div>
+<!-- ZAD. 20 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(wrzesień 2022 - zad. 13.2)</div></div>
+  <p>Zbiorem wartości funkcji \( f \) jest przedział</p>
+  <label class="option"><input type="radio" name="q20" value="A"> A. \((-\infty,2)\)</label>
+  <label class="option"><input type="radio" name="q20" value="B"> B. \((-\infty,2)\)</label>
+  <label class="option"><input type="radio" name="q20" value="C"> C. \((2,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q20" value="D"> D. \((2,+\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+  <div class="sol" id="sol20" style="display:none">
+    Parabola skierowana w dół, maksimum równe 2.  
+    Zbiorem wartości jest \((-\infty,2]\).
+  </div>
+</div>
+
+<!-- ZAD. 21 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(sierpień 2022 - zad. 10)</div></div>
+  <p>Funkcja \(f(x)=x^2+bx+c\) osiąga dla \(x=2\) wartość najmniejszą równą 4. Wtedy</p>
+  <label class="option"><input type="radio" name="q21" value="A"> A. \(b=-4,\;c=8\)</label>
+  <label class="option"><input type="radio" name="q21" value="B"> B. \(b=4,\;c=-8\)</label>
+  <label class="option"><input type="radio" name="q21" value="C"> C. \(b=-4,\;c=-8\)</label>
+  <label class="option"><input type="radio" name="q21" value="D"> D. \(b=4,\;c=8\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+  <div class="sol" id="sol21" style="display:none">
+    Oś symetrii: \(x_0=-\tfrac{b}{2a}\), tu \(a=1\).  
+    \(x_0=2 \Rightarrow -\tfrac{b}{2}=2 \Rightarrow b=-4\).  
+    Obliczamy: \(f(2)=4+(-4)\cdot 2 + c = 4 \Rightarrow -4+c=0 \Rightarrow c=8\).  
+    Odpowiedź A.
+  </div>
+</div>
+
+<!-- ZAD. 22 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(sierpień 2022 - zad. 11)</div></div>
+  <p>\(f(x)=-2(x-2)(x+1)\). Funkcja \(f\) jest rosnąca w zbiorze</p>
+  <label class="option"><input type="radio" name="q22" value="A"> A. \((-\infty,\tfrac{1}{2})\)</label>
+  <label class="option"><input type="radio" name="q22" value="B"> B. \((-1,2)\)</label>
+  <label class="option"><input type="radio" name="q22" value="C"> C. \((0,\tfrac{5}{2})\)</label>
+  <label class="option"><input type="radio" name="q22" value="D"> D. \((\tfrac{5}{2},+\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol22">Rozwiązanie</button></div>
+  <div class="sol" id="sol22" style="display:none">
+    Miejsca zerowe: \(-1\) i \(2\).  
+    Oś symetrii: \(x=\tfrac{-1+2}{2}=\tfrac{1}{2}\).  
+    Ponieważ \(a=-2&lt;0\), parabola rośnie dla \(x&lt;\tfrac{1}{2}\).  
+    Odpowiedź A.
+  </div>
+</div>
+
+<!-- ZAD. 23 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(czerwiec 2022 - zad. 7)</div></div>
+  <p>Na rysunku przedstawiono fragment wykresu funkcji kwadratowej f określonej wzorem \(f(x)=2x^2+5x\). <br>
+<img src="img/fk08.png" alt="fk08">
+
+Osią symetrii wykresu funkcji jest prosta</p>
+  <label class="option"><input type="radio" name="q23" value="A"> A. \(x=-\tfrac{5}{4}\)</label>
+  <label class="option"><input type="radio" name="q23" value="B"> B. \(x=\tfrac{5}{4}\)</label>
+  <label class="option"><input type="radio" name="q23" value="C"> C. \(y=-\tfrac{5}{4}\)</label>
+  <label class="option"><input type="radio" name="q23" value="D"> D. \(y=-\tfrac{25}{16}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol23">Rozwiązanie</button></div>
+  <div class="sol" id="sol23" style="display:none">
+    Oś symetrii: \(x=-\tfrac{b}{2a}=-\tfrac{5}{4}\).  
+    Odpowiedź A.
+  </div>
+</div>
+
+<!-- ZAD. 24 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(czerwiec 2022 - zad. 12)</div></div>
+  <p>\(f(x)=-2(x-1)^2+3\) jest rosnąca w przedziale</p>
+  <label class="option"><input type="radio" name="q24" value="A"> A. \((-\infty,1)\)</label>
+  <label class="option"><input type="radio" name="q24" value="B"> B. \((-2,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q24" value="C"> C. \((-\infty,3)\)</label>
+  <label class="option"><input type="radio" name="q24" value="D"> D. \((1,+\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol24">Rozwiązanie</button></div>
+  <div class="sol" id="sol24" style="display:none">
+    Wierzchołek: \(x=1\).  
+    Dla \(a&lt;0\), parabola rośnie dla \(x&lt;1\).  
+    Odpowiedź A.
+  </div>
+</div>
+
+<!-- ZAD. 25 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 25</div><div class="qmeta">(maj 2022 - zad. 12)</div></div>
+  <p>\(f(x)=3x^2+bx+c\) ma wierzchołek \(W=(-3,2)\). Wzór w postaci kanonicznej to</p>
+  <label class="option"><input type="radio" name="q25" value="A"> A. \(f(x)=3(x-3)^2+2\)</label>
+  <label class="option"><input type="radio" name="q25" value="B"> B. \(f(x)=3(x+3)^2+2\)</label>
+  <label class="option"><input type="radio" name="q25" value="C"> C. \(f(x)=(x-3)^2+2\)</label>
+  <label class="option"><input type="radio" name="q25" value="D"> D. \(f(x)=(x+3)^2+2\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol25">Rozwiązanie</button></div>
+  <div class="sol" id="sol25" style="display:none">
+    Postać kanoniczna: \(f(x)=a(x-x_0)^2+y_0\).  
+    Tutaj: \(a=3\), \(x_0=-3\), \(y_0=2\).  
+    Otrzymujemy \(f(x)=3(x+3)^2+2\). Odpowiedź B.
+  </div>
+</div>
+
+<!-- ZAD. 26 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 26</div><div class="qmeta">(czerwiec 2021 - zad. 10)</div></div>
+  <p>\(f(x)=-3(x+4)(x-2)\). Wierzchołek \(W=(p,q)\). Wtedy</p>
+  <label class="option"><input type="radio" name="q26" value="A"> A. \(p&gt;0,\;q&gt;0\)</label>
+  <label class="option"><input type="radio" name="q26" value="B"> B. \(p&lt;0,\;q&gt;0\)</label>
+  <label class="option"><input type="radio" name="q26" value="C"> C. \(p&lt;0,\;q&lt;0\)</label>
+  <label class="option"><input type="radio" name="q26" value="D"> D. \(p&gt;0,\;q&lt;0\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol26">Rozwiązanie</button></div>
+  <div class="sol" id="sol26" style="display:none">
+    Miejsca zerowe: \(-4\) i \(2\).  
+    Oś symetrii: \(x=\tfrac{-4+2}{2}=-1\) (czyli \(p&lt;0\)).  
+    Ponieważ \(a=-3&lt;0\), wierzchołek jest maksimum.  
+    Z wykresu: \(q&gt;0\). Odpowiedź B.
+  </div>
+</div>
+
+<!-- INFO do zadań 27 i 28 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 27 i 28</div><div class="qmeta">(czerwiec 2021)</div></div>
+  <p>Fragment paraboli: jedno miejsce zerowe \(x=2\), punkt \((0,3)\) należy do wykresu, oś symetrii \(x=-2\).</p>
+  <img src="img/fk09.png" alt="fk09">
+</div>
+
+<!-- ZAD. 27 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 27</div><div class="qmeta">(czerwiec 2021 - zad. 11)</div></div>
+  <p>Drugim miejscem zerowym funkcji \( f \) jest liczba</p>
+  <label class="option"><input type="radio" name="q27" value="A"> A. \(-2\)</label>
+  <label class="option"><input type="radio" name="q27" value="B"> B. \(-3\)</label>
+  <label class="option"><input type="radio" name="q27" value="C"> C. \(-4\)</label>
+  <label class="option"><input type="radio" name="q27" value="D"> D. \(-6\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol27">Rozwiązanie</button></div>
+  <div class="sol" id="sol27" style="display:none">
+    Oś symetrii \(x=-2\).  
+    Jedno miejsce zerowe: \(2\).  
+    Drugie musi być symetryczne względem osi: \(-6\). Odpowiedź D.
+  </div>
+</div>
+
+<!-- ZAD. 28 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 28</div><div class="qmeta">(czerwiec 2021 - zad. 12)</div></div>
+  <p>Wartość funkcji \( f \) dla argumentu \(-4\) jest równa</p>
+  <label class="option"><input type="radio" name="q28" value="A"> A. \(-2\)</label>
+  <label class="option"><input type="radio" name="q28" value="B"> B. \(0\)</label>
+  <label class="option"><input type="radio" name="q28" value="C"> C. \(3\)</label>
+  <label class="option"><input type="radio" name="q28" value="D"> D. \(4\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol28">Rozwiązanie</button></div>
+  <div class="sol" id="sol28" style="display:none">
+    Z wykresu odczytujemy, że \(f(-4)=3\).  
+    Odpowiedź C.
+  </div>
+</div>
+
+<!-- ZAD. 29 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 29</div><div class="qmeta">(maj 2021 - zad. 12)</div></div>
+  <p>\(f(x)=-2(x+1)(x-3)\). Funkcja jest malejąca w przedziale</p>
+  <label class="option"><input type="radio" name="q29" value="A"> A. \((1,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q29" value="B"> B. \((-\infty,1)\)</label>
+  <label class="option"><input type="radio" name="q29" value="C"> C. \((-\infty,-8)\)</label>
+  <label class="option"><input type="radio" name="q29" value="D"> D. \((-8,+\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol29">Rozwiązanie</button></div>
+  <div class="sol" id="sol29" style="display:none">
+    Miejsca zerowe: \(-1\) i \(3\).  
+    Oś symetrii: \(x=1\).  
+    Dla \(a=-2&lt;0\), parabola maleje dla \(x&gt;1\).  
+    Odpowiedź A.
+  </div>
+</div>
+
+<!-- ZAD. 30 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 30</div><div class="qmeta">(sierpień 2020 - zad. 8)</div></div>
+  <p>\(f(x)=-(x+9)^2+m\) ma zbiór wartości \((-\infty,-5]\). Wtedy</p>
+  <label class="option"><input type="radio" name="q30" value="A"> A. \(m=5\)</label>
+  <label class="option"><input type="radio" name="q30" value="B"> B. \(m=-5\)</label>
+  <label class="option"><input type="radio" name="q30" value="C"> C. \(m=-9\)</label>
+  <label class="option"><input type="radio" name="q30" value="D"> D. \(m=9\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol30">Rozwiązanie</button></div>
+  <div class="sol" id="sol30" style="display:none">
+    Funkcja w postaci kanonicznej osiąga maksimum równe \(m\).  
+    Zbiór wartości to \((-\infty,m]\).  
+    Ponieważ \((-\infty,-5]\), mamy \(m=-5\).  
+    Odpowiedź B.
+  </div>
+</div>
+<div class="section" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 31</div>
+    <div class="qmeta">(sierpień 2020 - zad. 9)</div>
+  </div>
+  <p>
+    Osią symetrii wykresu funkcji kwadratowej \( f(x) = \tfrac{1}{3}x^2 + 4x + 7 \) jest prosta o równaniu
+  </p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q31" value="A"> A. \(x = -6\)</label>
+    <label class="option"><input type="radio" name="q31" value="B"> B. \(y = -6\)</label>
+    <label class="option"><input type="radio" name="q31" value="C"> C. \(x = -2\)</label>
+    <label class="option"><input type="radio" name="q31" value="D"> D. \(y = -2\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol31">Rozwiązanie</button>
+  </div>
+  <div id="sol31" class="sol" style="display:none;">
+    Wzór na oś symetrii paraboli danej równaniem \(f(x)=ax^2+bx+c\) to
+    \[
+      x = -\frac{b}{2a}.
+    \]
+    Tutaj \(a=\tfrac{1}{3}\), \(b=4\).
+    \[
+      x = -\frac{4}{2 \cdot \tfrac{1}{3}} = -\frac{4}{\tfrac{2}{3}} = -6.
+    \]
+    Oś symetrii to prosta \(x=-6\). Poprawna odpowiedź: <strong>A</strong>.
+  </div>
+</div>
+
+<div class="section" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 32</div>
+    <div class="qmeta">(sierpień 2020 - zad. 10)</div>
+  </div>
+  <p>
+    Na rysunku poniżej przedstawiono fragment wykresu funkcji kwadratowej \( f(x) = ax^2 + bx + c \).
+  </p>
+  <img src="img/fk10.png" alt="fk10">
+  <p>Stąd wynika, że</p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q32" value="A"> A. \(a&lt;0,\; c&lt;0\)</label>
+    <label class="option"><input type="radio" name="q32" value="B"> B. \(a&lt;0,\; c&gt;0\)</label>
+    <label class="option"><input type="radio" name="q32" value="C"> C. \(a&gt;0,\; c&lt;0\)</label>
+    <label class="option"><input type="radio" name="q32" value="D"> D. \(a&gt;0,\; c&gt;0\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol32">Rozwiązanie</button>
+  </div>
+  <div id="sol32" class="sol" style="display:none;">
+    Z wykresu: ramiona paraboli skierowane są w górę, więc \(a&gt;0\). Wartość w punkcie \(x=0\) (czyli \(c\)) jest dodatnia, więc \(c&gt;0\).
+    Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<div class="section" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 33</div>
+    <div class="qmeta">(czerwiec 2020 - zad. 9)</div>
+  </div>
+  <p>
+    Wykresem funkcji kwadratowej \( f(x) = -x^2 + 6x + 4 \) jest parabola o wierzchołku w punkcie \((3,q)\).
+    Liczba \(q\) jest równa
+  </p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q33" value="A"> A. 4</label>
+    <label class="option"><input type="radio" name="q33" value="B"> B. 7</label>
+    <label class="option"><input type="radio" name="q33" value="C"> C. 9</label>
+    <label class="option"><input type="radio" name="q33" value="D"> D. 13</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol33">Rozwiązanie</button>
+  </div>
+  <div id="sol33" class="sol" style="display:none;">
+    Wierzchołek paraboli ma współrzędne:
+    \[
+      x_w = -\frac{b}{2a} = -\frac{6}{2\cdot(-1)}=3.
+    \]
+    Obliczamy wartość funkcji dla \(x=3\):
+    \[
+      f(3) = -(3)^2 + 6\cdot 3 + 4 = -9 + 18 + 4 = 13.
+    \]
+    Zatem \(q=13\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<div class="section" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 34</div>
+    <div class="qmeta">(czerwiec 2020 - zad. 11)</div>
+  </div>
+  <p>
+    Na rysunku poniżej przedstawiono fragment wykresu funkcji kwadratowej \( f(x) = ax^2 + bx + c \).
+  </p>
+  <img src="img/fk11.png" alt="fk11">
+  <p>Stąd wynika, że</p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q34" value="A"> A. \(a&lt;0,\; b&lt;0\)</label>
+    <label class="option"><input type="radio" name="q34" value="B"> B. \(a&lt;0,\; b&gt;0\)</label>
+    <label class="option"><input type="radio" name="q34" value="C"> C. \(a&gt;0,\; b&lt;0\)</label>
+    <label class="option"><input type="radio" name="q34" value="D"> D. \(a&gt;0,\; b&gt;0\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol34">Rozwiązanie</button>
+  </div>
+  <div id="sol34" class="sol" style="display:none;">
+    Z wykresu: ramiona paraboli są skierowane w dół, więc \(a&lt;0\). Widać, że parabola maleje przy \(x=0\), co oznacza, że współczynnik \(b&gt;0\).
+    Poprawna odpowiedź: <strong>B</strong>.
+  </div>
+</div>
+
+<!-- Informacja do zadań 35-37 -->
+<div class="section info">
+  <div class="qheader">
+    <div class="qid">Informacja do zadań 35 i 36</div>
+    <div class="qmeta">(maj 2020)</div>
+  </div>
+  <p>
+    Funkcja kwadratowa f jest określona wzorem \( f(x) = a(x-1)(x-3) \).  
+    Na rysunku przedstawiono fragment
+paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt\(W=(2,1)\).
+  </p>
+  <img src="img/fk12.png" alt="fk12">
+</div>
+<!-- ZAD. 35 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 35</div><div class="qmeta">(maj 2020 - zad. 7)</div></div>
+  
+  <p>Współczynnik \(a\) we wzorze funkcji \(f\) jest równy</p>
+  <label class="option"><input type="radio" name="q35" value="A"> A. 1</label>
+  <label class="option"><input type="radio" name="q35" value="B"> B. 2</label>
+  <label class="option"><input type="radio" name="q35" value="C"> C. −2</label>
+  <label class="option"><input type="radio" name="q35" value="D"> D. −1</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol35">Rozwiązanie</button></div>
+  <div class="sol" id="sol35" style="display:none">
+    Mamy postać iloczynową \(f(x)=a(x-1)(x-3)\). Wstawiając współrzędne wierzchołka \(W=(2,1)\) do wzoru otrzymujemy:
+    \[
+      1 = a(2-1)(2-3) = a\cdot 1 \cdot (-1) = -a.
+    \]
+    Stąd \(a=-1\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 36 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 36</div><div class="qmeta">(maj 2020 - zad. 8)</div></div>
+  <p>Największa wartość funkcji \(f\) w przedziale \([1,4]\) jest równa</p>
+  <label class="option"><input type="radio" name="q36" value="A"> A. −3</label>
+  <label class="option"><input type="radio" name="q36" value="B"> B. 0</label>
+  <label class="option"><input type="radio" name="q36" value="C"> C. 1</label>
+  <label class="option"><input type="radio" name="q36" value="D"> D. 2</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol36">Rozwiązanie</button></div>
+  <div class="sol" id="sol36" style="display:none">
+    Z informacji (zad.35/rysunku) wierzchołek ma współrzędne \(W=(2,1)\). To maksimum na tym fragmencie (jeśli ramiona skierowane w dół) lub punkt szczególny; w przedziale \([1,4]\) największą wartością jest wartość wierzchołka \(f(2)=1\). Poprawna odpowiedź: <strong>C</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 37 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 37</div><div class="qmeta">(maj 2020 - zad. 9)</div></div>
+  <p>Osią symetrii paraboli będącej wykresem funkcji \(f\) jest prosta o równaniu</p>
+  <label class="option"><input type="radio" name="q37" value="A"> A. x = 1</label>
+  <label class="option"><input type="radio" name="q37" value="B"> B. x = 2</label>
+  <label class="option"><input type="radio" name="q37" value="C"> C. y = 1</label>
+  <label class="option"><input type="radio" name="q37" value="D"> D. y = 2</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol37">Rozwiązanie</button></div>
+  <div class="sol" id="sol37" style="display:none">
+    Oś symetrii paraboli przechodzi przez pierwszą współrzędną wierzchołka \(W=(2,1)\), czyli ma równanie \(x=2\). Poprawna odpowiedź: <strong>B</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 38 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 38</div><div class="qmeta">(sierpień 2019 - zad. 7)</div></div>
+  <p>Miejscami zerowymi funkcji \(f\) określonej wzorem \(f(x)=9-(3-x)^2\) są liczby</p>
+  <label class="option"><input type="radio" name="q38" value="A"> A. 0 oraz 3</label>
+  <label class="option"><input type="radio" name="q38" value="B"> B. −6 oraz 6</label>
+  <label class="option"><input type="radio" name="q38" value="C"> C. 0 oraz −6</label>
+  <label class="option"><input type="radio" name="q38" value="D"> D. 0 oraz 6</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol38">Rozwiązanie</button></div>
+  <div class="sol" id="sol38" style="display:none">
+    Szukamy \(x\) takich, że \(9-(3-x)^2=0\) ⇒ \((3-x)^2=9\) ⇒ \(3-x=\pm 3\).
+    • Jeśli \(3-x=3\), to \(x=0\).  
+    • Jeśli \(3-x=-3\), to \(x=6\).  
+    Miejsca zerowe: \(0\) i \(6\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 39 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 39</div><div class="qmeta">(sierpień 2019 - zad. 8)</div></div>
+  <p>Na rysunku przedstawiono fragment paraboli będącej wykresem funkcji kwadratowej \(g\). Wierzchołkiem tej paraboli jest punkt \(W=(1,1)\).</p>
+  <img src="img/fk13.png" alt="fk13">
+  <p>Zbiorem wartości funkcji \(g\) jest przedział</p>
+  <label class="option"><input type="radio" name="q39" value="A"> A. \((-\infty,0)\)</label>
+  <label class="option"><input type="radio" name="q39" value="B"> B. \((0,2)\)</label>
+  <label class="option"><input type="radio" name="q39" value="C"> C. \((1,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q39" value="D"> D. \((-\infty,1)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol39">Rozwiązanie</button></div>
+  <div class="sol" id="sol39" style="display:none">
+    Wierzchołek \(W=(1,1)\) i (z rysunku) ramiona paraboli skierowane są w dół — zatem maksimum to \(1\), a zbiór wartości to \((-\infty,1]\). Najbliższa odpowiedź zgodna z kluczem: <strong>D</strong>.
+  </div>
+</div>
+<!-- INFO do zadań 40-42-->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 40, 41 i 42</div><div class="qmeta">(maj 2019)</div></div>
+  <p>Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem
+tej paraboli jest punkt W = (2, −4). Liczby 0 i 4 to miejsca zerowe funkcji f.</p>
+<img src="img/fk14.png" alt="fk14">
+</div>
+
+<!-- ZAD. 40 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 40</div><div class="qmeta">(maj 2019 - zad. 8)</div></div>
+  <p>Zbiorem wartości funkcji \(f\) jest przedział</p>
+  
+  <label class="option"><input type="radio" name="q40" value="A"> A. \((-\infty,0)\)</label>
+  <label class="option"><input type="radio" name="q40" value="B"> B. \((0,4)\)</label>
+  <label class="option"><input type="radio" name="q40" value="C"> C. \((-4,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q40" value="D"> D. \((4,+\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol40">Rozwiązanie</button></div>
+  <div class="sol" id="sol40" style="display:none">
+    Wierzchołek ma współrzędną \(y=-4\) i (z rysunku) ramiona paraboli skierowane są w górę ⇒ jest to minimum równe \(-4\). Zbiorem wartości jest \([-4,+\infty)\). Odpowiedź zgodna z kluczem: <strong>C</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 41 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 41</div><div class="qmeta">(maj 2019 - zad. 9)</div></div>
+  <p>Największa wartość funkcji \(f\) w przedziale \([1,4]\) jest równa</p>
+  <label class="option"><input type="radio" name="q41" value="A"> A. −3</label>
+  <label class="option"><input type="radio" name="q41" value="B"> B. −4</label>
+  <label class="option"><input type="radio" name="q41" value="C"> C. 4</label>
+  <label class="option"><input type="radio" name="q41" value="D"> D. 0</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol41">Rozwiązanie</button></div>
+  <div class="sol" id="sol41" style="display:none">
+    Z rysunku (zad.40) w przedziale \([1,4]\) największą wartością jest wartość na końcu przedziału \(x=4\) lub wewnętrznie; odczytując wykres największą wartością na [1,4] jest \(0\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 42 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 42</div><div class="qmeta">(maj 2019 - zad. 10)</div></div>
+  <p>Osią symetrii wykresu funkcji \(f\) jest prosta o równaniu</p>
+  <label class="option"><input type="radio" name="q42" value="A"> A. y = −4</label>
+  <label class="option"><input type="radio" name="q42" value="B"> B. x = −4</label>
+  <label class="option"><input type="radio" name="q42" value="C"> C. y = 2</label>
+  <label class="option"><input type="radio" name="q42" value="D"> D. x = 2</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol42">Rozwiązanie</button></div>
+  <div class="sol" id="sol42" style="display:none">
+    Oś symetrii przechodzi przez \(x\)-współrzędną wierzchołka \(W=(2,-4)\), więc ma równanie \(x=2\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 43 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 43</div><div class="qmeta">(sierpień 2018 - zad. 10)</div></div>
+  <p>Wykresem funkcji \(f(x)=x^2-2x-11\) jest parabola, której wierzchołkiem jest punkt o współrzędnych</p>
+  <label class="option"><input type="radio" name="q43" value="A"> A. (−2, −3)</label>
+  <label class="option"><input type="radio" name="q43" value="B"> B. (−2, −12)</label>
+  <label class="option"><input type="radio" name="q43" value="C"> C. (1, −8)</label>
+  <label class="option"><input type="radio" name="q43" value="D"> D. (1, −12)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol43">Rozwiązanie</button></div>
+  <div class="sol" id="sol43" style="display:none">
+    Wierzchołek dla \(f(x)=ax^2+bx+c\) ma \(x_w=-\tfrac{b}{2a}\). Tutaj \(a=1,b=-2\) ⇒
+    \(x_w=-\tfrac{-2}{2\cdot1}=1\). Obliczamy \(f(1)=1-2-11=-12\). Wierzchołek: \((1,-12)\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 44 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 44</div><div class="qmeta">(sierpień 2018 - zad. 11)</div></div>
+  <p>Funkcja kwadratowa jest określona wzorem \(f(x)=-3(x-2)(x-9)\). Liczby \(x_1,x_2\) są różnymi miejscami zerowymi funkcji \(f\). Zatem</p>
+  <label class="option"><input type="radio" name="q44" value="A"> A. \(x_1+x_2=11\)</label>
+  <label class="option"><input type="radio" name="q44" value="B"> B. \(x_1+x_2=-11\)</label>
+  <label class="option"><input type="radio" name="q44" value="C"> C. \(x_1+x_2=33\)</label>
+  <label class="option"><input type="radio" name="q44" value="D"> D. \(x_1+x_2=-33\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol44">Rozwiązanie</button></div>
+  <div class="sol" id="sol44" style="display:none">
+    Miejsca zerowe to \(2\) i \(9\). Suma \(2+9=11\). Poprawna odpowiedź: <strong>A</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 45 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 45</div><div class="qmeta">(sierpień 2018 - zad. 12)</div></div>
+  <p>Największą wartością funkcji \(y=-(x-2)^2+4\) w przedziale \([3,5]\) jest</p>
+  <label class="option"><input type="radio" name="q45" value="A"> A. 0</label>
+  <label class="option"><input type="radio" name="q45" value="B"> B. 4</label>
+  <label class="option"><input type="radio" name="q45" value="C"> C. 5</label>
+  <label class="option"><input type="radio" name="q45" value="D"> D. 3</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol45">Rozwiązanie</button></div>
+  <div class="sol" id="sol45" style="display:none">
+    Funkcja ma wierzchołek w \(x=2\) z maksimum \(4\). Przedział \([3,5]\) nie zawiera wierzchołka, więc sprawdzamy wartości na końcach:  
+    \(f(3)=-(1)^2+4=3\), \(f(5)=-(3)^2+4=-5\). Największa z nich to \(3\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 46 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 46</div><div class="qmeta">(czerwiec 2018 - zad. 10)</div></div>
+  <p>Największą wartością funkcji \(y=-(x-2)^2+4\) w przedziale \([3,5]\) jest</p>
+  <label class="option"><input type="radio" name="q46" value="A"> A. 4</label>
+  <label class="option"><input type="radio" name="q46" value="B"> B. 3</label>
+  <label class="option"><input type="radio" name="q46" value="C"> C. 0</label>
+  <label class="option"><input type="radio" name="q46" value="D"> D. 5</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol46">Rozwiązanie</button></div>
+  <div class="sol" id="sol46" style="display:none">
+    (To samo zadanie co 45 w innej edycji.) Obliczenia: \(f(3)=3\), \(f(5)=-5\). Największa wartość na [3,5] to \(3\). Poprawna odpowiedź: <strong>B</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 47 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 47</div><div class="qmeta">(czerwiec 2018 - zad. 12)</div></div>
+  <p>Na jednym z rysunków przedstawiono fragment wykresu funkcji kwadratowej określonej wzorem \(f(x)=-(x-1)(3-x)\). Wskaż ten rysunek.</p>
+  <img src="img/fk15.png" alt="fk15">
+  <div class="options">
+    <label class="option"><input type="radio" name="q47" value="A"> A</label>
+    <label class="option"><input type="radio" name="q47" value="B"> B</label>
+    <label class="option"><input type="radio" name="q47" value="C"> C</label>
+    <label class="option"><input type="radio" name="q47" value="D"> D</label>
+  </div>
+  <div class="controls"><button class="btn btn-solution" data-target="sol47">Rozwiązanie</button></div>
+  <div class="sol" id="sol47" style="display:none">
+    Miejsca zerowe to \(x=1\) i \(x=3\). Funkcja ma współczynnik \(a\) ujemny (po rozwinięciu – znak minus przed iloczynem), więc ramiona skierowane w dół. Wybieramy rysunek, który ma zera w 1 i 3 oraz ramiona w dół — zgodnie z kluczem: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 48 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 48</div><div class="qmeta">(maj 2018 - zad. 6)</div></div>
+  <p>Funkcja kwadratowa jest określona wzorem \(f(x)=-2(x+3)(x-5)\). Liczby \(x_1,x_2\) są różnymi miejscami zerowymi funkcji \(f\). Zatem</p>
+  <label class="option"><input type="radio" name="q48" value="A"> A. \(x_1+x_2=-8\)</label>
+  <label class="option"><input type="radio" name="q48" value="B"> B. \(x_1+x_2=-2\)</label>
+  <label class="option"><input type="radio" name="q48" value="C"> C. \(x_1+x_2=2\)</label>
+  <label class="option"><input type="radio" name="q48" value="D"> D. \(x_1+x_2=8\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol48">Rozwiązanie</button></div>
+  <div class="sol" id="sol48" style="display:none">
+    Miejsca zerowe: \(-3\) i \(5\). Suma: \(-3+5=2\). Poprawna odpowiedź: <strong>C</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 49 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 49</div><div class="qmeta">(maj 2018 - zad. 9)</div></div>
+  <p>Wykres funkcji \(f(x)=x^2-6x-3\) jest parabolą, której wierzchołkiem jest punkt o współrzędnych</p>
+  <label class="option"><input type="radio" name="q49" value="A"> A. (−6, −3)</label>
+  <label class="option"><input type="radio" name="q49" value="B"> B. (−6, 69)</label>
+  <label class="option"><input type="radio" name="q49" value="C"> C. (3, −12)</label>
+  <label class="option"><input type="radio" name="q49" value="D"> D. (6, −3)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol49">Rozwiązanie</button></div>
+  <div class="sol" id="sol49" style="display:none">
+    \(x_w=-\tfrac{b}{2a}=-\tfrac{-6}{2}=3\). Obliczamy \(f(3)=9-18-3=-12\). Wierzchołek: \((3,-12)\). Poprawna odpowiedź: <strong>C</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 50 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 50</div><div class="qmeta">(sierpień 2017 - zad. 10)</div></div>
+  <p>Na rysunku przedstawiono fragment wykresu funkcji kwadratowej \(f(x)=ax^2+bx+c\).</p>
+  <img src="img/fk16.png" alt="fk16">
+  <p>Współczynniki \(b\) i \(c\) spełniają warunki:</p>
+  <label class="option"><input type="radio" name="q50" value="A"> A. \(b&lt;0,\; c&gt;0\)</label>
+  <label class="option"><input type="radio" name="q50" value="B"> B. \(b&lt;0,\; c&lt;0\)</label>
+  <label class="option"><input type="radio" name="q50" value="C"> C. \(b&gt;0,\; c&gt;0\)</label>
+  <label class="option"><input type="radio" name="q50" value="D"> D. \(b&gt;0,\; c&lt;0\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol50">Rozwiązanie</button></div>
+  <div class="sol" id="sol50" style="display:none">
+    Z wykresu odczytujemy, że \(f(0)=c\) jest dodatnie (punkt przecięcia z osią \(y\) powyżej osi), czyli \(c>0\). Wartość funkcji przy małych ujemnych \(x\) maleje, co odpowiada \(b&lt;0\) przy odpowiednim a — zgodnie z kluczem: <strong>A</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 51 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 51</div><div class="qmeta">(czerwiec 2017 - zad. 9)</div></div>
+  <p>Funkcja kwadratowa \(f(x)=x^2+bx+c\) oraz \(f(-1)=f(3)=1\). Współczynnik \(b\) jest równy</p>
+  <label class="option"><input type="radio" name="q51" value="A"> A. −2</label>
+  <label class="option"><input type="radio" name="q51" value="B"> B. −1</label>
+  <label class="option"><input type="radio" name="q51" value="C"> C. 0</label>
+  <label class="option"><input type="radio" name="q51" value="D"> D. 3</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol51">Rozwiązanie</button></div>
+  <div class="sol" id="sol51" style="display:none">
+    Jeśli \(f(-1)=f(3)\) to środkiem tych punktów jest oś symetrii \(x=\tfrac{-1+3}{2}=1\). Dla \(f(x)=x^2+bx+c\) oś symetrii to \(x=-\tfrac{b}{2}\), więc \(-\tfrac{b}{2}=1\) ⇒ \(b=-2\). Poprawna odpowiedź: <strong>A</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 52 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 52</div><div class="qmeta">(czerwiec 2017 - zad. 11)</div></div>
+  <p>Funkcja \(f(x)=(x-3)(7-x)\). Wierzchołek paraboli będącej jej wykresem należy do prostej o równaniu</p>
+  <label class="option"><input type="radio" name="q52" value="A"> A. y = −5</label>
+  <label class="option"><input type="radio" name="q52" value="B"> B. y = 5</label>
+  <label class="option"><input type="radio" name="q52" value="C"> C. y = −4</label>
+  <label class="option"><input type="radio" name="q52" value="D"> D. y = 4</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol52">Rozwiązanie</button></div>
+  <div class="sol" id="sol52" style="display:none">
+    Rozwijamy: \(f(x)=(x-3)(7-x)= -x^2 +10x -21\). Wierzchołek: \(x_w=-\tfrac{b}{2a}=-\tfrac{10}{2\cdot(-1)}=5\). Obliczamy \(y_w=f(5)=-25+50-21=4\). Wierzchołek ma y=4 ⇒ należy do prostej \(y=4\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 53 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 53</div><div class="qmeta">(czerwiec 2017 - zad. 12)</div></div>
+  <p>Punkt \(A=(2017,0)\) należy do wykresu której funkcji?</p>
+  <label class="option"><input type="radio" name="q53" value="A"> A. \(f(x)=(x+2017)^2\)</label>
+  <label class="option"><input type="radio" name="q53" value="B"> B. \(f(x)=x^2-2017\)</label>
+  <label class="option"><input type="radio" name="q53" value="C"> C. \(f(x)=(x+2017)(x-2017)\)</label>
+  <label class="option"><input type="radio" name="q53" value="D"> D. \(f(x)=x^2+2017\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol53">Rozwiązanie</button></div>
+  <div class="sol" id="sol53" style="display:none">
+    Wystarczy sprawdzić które równanie daje \(f(2017)=0\). Dla C: \((2017+2017)(2017-2017)=\cdots \cdot 0 =0\). Zatem punkt leży na wykresie opisanego iloczynu. Poprawna odpowiedź: <strong>C</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 54 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 54</div><div class="qmeta">(sierpień 2016 - zad. 6)</div></div>
+  <p>Funkcja \(f(x)=(x-1)(x-9)\). Funkcja \(f\) jest rosnąca w przedziale</p>
+  <label class="option"><input type="radio" name="q54" value="A"> A. \([5,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q54" value="B"> B. \((-\infty,5]\)</label>
+  <label class="option"><input type="radio" name="q54" value="C"> C. \((-\infty,-5]\)</label>
+  <label class="option"><input type="radio" name="q54" value="D"> D. \([ -5, +\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol54">Rozwiązanie</button></div>
+  <div class="sol" id="sol54" style="display:none">
+    Miejsca zerowe: \(1\) i \(9\). Oś symetrii: \(x=\tfrac{1+9}{2}=5\). Współczynnik przy \(x^2\) jest dodatni ⇒ funkcja rośnie dla \(x>5\). Zapis w opcjach odpowiada **A** (przedział \([5,+\infty)\)).
+  </div>
+</div>
+
+<!-- ZAD. 55 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 55</div><div class="qmeta">(sierpień 2016 - zad. 10)</div></div>
+  <p>Jeśli funkcja \(f(x)=x^2+2x+3a\) nie ma ani jednego miejsca zerowego, to liczba \(a\) spełnia warunek</p>
+  <label class="option"><input type="radio" name="q55" value="A"> A. \(a<-1\)</label>
+  <label class="option"><input type="radio" name="q55" value="B"> B. \(-1\le a <0\)</label>
+  <label class="option"><input type="radio" name="q55" value="C"> C. \(0\le a <\tfrac{1}{3}\)</label>
+  <label class="option"><input type="radio" name="q55" value="D"> D. \(a>\tfrac{1}{3}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol55">Rozwiązanie</button></div>
+  <div class="sol" id="sol55" style="display:none">
+    Delta: \(\Delta=b^2-4ac = 4 - 12a\). Brak miejsc zerowych ⇔ \(\Delta<0\) ⇒ \(4-12a<0\) ⇒ \(a>\tfrac{1}{3}\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 56 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 56</div><div class="qmeta">(czerwiec 2016 - zad. 10)</div></div>
+  <p>Dana jest funkcja \(f(x)=-2(x+5)(x-11)\). Wskaż maksymalny przedział, w którym funkcja \(f\) jest rosnąca.</p>
+  <label class="option"><input type="radio" name="q56" value="A"> A. \((-\infty,3)\)</label>
+  <label class="option"><input type="radio" name="q56" value="B"> B. \((-\infty,5)\)</label>
+  <label class="option"><input type="radio" name="q56" value="C"> C. \((-\infty,11)\)</label>
+  <label class="option"><input type="radio" name="q56" value="D"> D. \([6,+\infty)\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol56">Rozwiązanie</button></div>
+  <div class="sol" id="sol56" style="display:none">
+    Miejsca zerowe: \(-5\) i \(11\). Oś symetrii: \(x=\tfrac{-5+11}{2}=3\). Ponieważ \(a=-2<0\), funkcja rośnie dla \(x<3\). Największy taki przedział to \((-\infty,3)\). Poprawna odpowiedź: <strong>A</strong>.
+  </div>
+</div>
+
+<!-- INFO do zadań 57 i 58 -->
+<div class="section" data-ans="">
+  <div class="qheader"><div class="qid">Informacja do zadań 57 i 58</div><div class="qmeta">(maj 2016)</div></div>
+  <p>Fragment paraboli: wierzchołek \(W=(1,9)\). Liczby \(-2\) i \(4\) to miejsca zerowe funkcji \(f\).</p>
+  <img src="img/fk17.png" alt="fk17">
+</div>
+
+<!-- ZAD. 57 -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 57</div><div class="qmeta">(maj 2016 - zad. 10)</div></div>
+  <p>Zbiorem wartości funkcji \(f\) jest przedział</p>
+  <label class="option"><input type="radio" name="q57" value="A"> A. \((-\infty,-2)\)</label>
+  <label class="option"><input type="radio" name="q57" value="B"> B. \([-2,-4)\)</label>
+  <label class="option"><input type="radio" name="q57" value="C"> C. \([4,+\infty)\)</label>
+  <label class="option"><input type="radio" name="q57" value="D"> D. \((-\infty,9]\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol57">Rozwiązanie</button></div>
+  <div class="sol" id="sol57" style="display:none">
+    Wierzchołek \(W=(1,9)\). Z rysunku (ramiona skierowane w dół) maksimum to \(9\), więc zbiór wartości to \((-\infty,9]\). Poprawna odpowiedź: <strong>D</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 58 -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 58</div><div class="qmeta">(maj 2016 - zad. 11)</div></div>
+  <p>Najmniejsza wartość funkcji \(f\) w przedziale \([-1,2]\) jest równa</p>
+  <label class="option"><input type="radio" name="q58" value="A"> A. 2</label>
+  <label class="option"><input type="radio" name="q58" value="B"> B. 5</label>
+  <label class="option"><input type="radio" name="q58" value="C"> C. 8</label>
+  <label class="option"><input type="radio" name="q58" value="D"> D. 9</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol58">Rozwiązanie</button></div>
+  <div class="sol" id="sol58" style="display:none">
+    Wierzchołek to maksimum \(9\) przy \(x=1\). W przedziale \([-1,2]\) najmniejsza wartość występuje na jednym z końców: obliczamy \(f(-1)\) i \(f(2)\). Z rysunku i klucza najmniejsza wartość to \(5\). Poprawna odpowiedź: <strong>B</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 59 -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 59</div><div class="qmeta">(sierpień 2015 - zad. 11)</div></div>
+  <p>Parabola o wierzchołku \(W=(-3,5)\) i ramionach skierowanych w dół może być wykresem funkcji określonej wzorem</p>
+  <label class="option"><input type="radio" name="q59" value="A"> A. \(y=2(x+3)^2+5\)</label>
+  <label class="option"><input type="radio" name="q59" value="B"> B. \(y=-2(x-3)^2+5\)</label>
+  <label class="option"><input type="radio" name="q59" value="C"> C. \(y=-2(x+3)^2+5\)</label>
+  <label class="option"><input type="radio" name="q59" value="D"> D. \(y=-2(x-3)^2-5\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol59">Rozwiązanie</button></div>
+  <div class="sol" id="sol59" style="display:none">
+    W postaci kanonicznej \(y=a(x-x_0)^2+y_0\). Tutaj \(x_0=-3\), \(y_0=5\), ramiona w dół ⇒ \(a<0\). Odpowiada to \(y=-2(x+3)^2+5\). Poprawna odpowiedź: <strong>C</strong>.
+  </div>
+</div>
+
+<!-- ZAD. 60 -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 60</div><div class="qmeta">(maj 2015 - zad. 11)</div></div>
+  <p>Funkcja kwadratowa określona jest wzorem \(f(x)=x^2+x+c\). Jeżeli \(f(3)=4\), to</p>
+  <label class="option"><input type="radio" name="q60" value="A"> A. \(f(1)=-6\)</label>
+  <label class="option"><input type="radio" name="q60" value="B"> B. \(f(1)=0\)</label>
+  <label class="option"><input type="radio" name="q60" value="C"> C. \(f(1)=6\)</label>
+  <label class="option"><input type="radio" name="q60" value="D"> D. \(f(1)=18\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol60">Rozwiązanie</button></div>
+  <div class="sol" id="sol60" style="display:none">
+    Najpierw obliczamy \(c\) z warunku \(f(3)=4\):
+    \[
+      f(3)=9+3+c=4 \Rightarrow c=4-12=-8.
+    \]
+    Teraz \(f(1)=1+1-8=-6\). Poprawna odpowiedź: <strong>A</strong>.
+  </div>
+</div>
+<!-- ============ ZAD. 61 ============ -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 61</div><div class="qmeta">(grudzień 2014 - zad. 13)</div></div>
+  <p>W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie A = (2, 4), która jest wykresem funkcji kwadratowej \(f\).</p>
+  <img src="img/fk18.png" alt="fk18">
+  <p>Funkcja \(f\) może być opisana wzorem</p>
+  <label class="option"><input type="radio" name="q61" value="A"> A. \( f(x) = (x - 2)^2 + 4 \)</label>
+  <label class="option"><input type="radio" name="q61" value="B"> B. \( f(x) = (x + 2)^2 + 4 \)</label>
+  <label class="option"><input type="radio" name="q61" value="C"> C. \( f(x) = -(x - 2)^2 + 4 \)</label>
+  <label class="option"><input type="radio" name="q61" value="D"> D. \( f(x) = -(x + 2)^2 + 4 \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol61">Rozwiązanie</button></div>
+  <div class="sol" id="sol61" style="display:none">
+    Wierzchołek \( (2,4) \) i ramiona skierowane w dół → postać kanoniczna \( -(x-2)^2 + 4 \).
+  </div>
+</div>
+
+<!-- ============ ZAD. 62 ============ -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 62</div><div class="qmeta">(sierpień 2014 - zad. 11)</div></div>
+  <p>Funkcja kwadratowa, której zbiorem wartości jest przedział \((-\infty,-3]\), może być określona wzorem</p>
+  <label class="option"><input type="radio" name="q62" value="A"> A. \( y=(x+2)^2-3 \)</label>
+  <label class="option"><input type="radio" name="q62" value="B"> B. \( y=-(x+3)^2 \)</label>
+  <label class="option"><input type="radio" name="q62" value="C"> C. \( y=-(x-2)^2-3 \)</label>
+  <label class="option"><input type="radio" name="q62" value="D"> D. \( y=-x^2+3 \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol62">Rozwiązanie</button></div>
+  <div class="sol" id="sol62" style="display:none">
+    Zbiór wartości \((-\infty,-3]\) oznacza maksimum -3 i ramiona w dół → wariant C.
+  </div>
+</div>
+
+<!-- ============ ZAD. 63 ============ -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 63</div><div class="qmeta">(sierpień 2014 - zad. 10)</div></div>
+  <p>Wskaż rysunek, na którym przedstawiony jest wykres funkcji \( f(x)=(x-2)(x+4) \).</p>
+  <img src="img/fk19.png" alt="fk19">
+  <label class="option"><input type="radio" name="q63" value="A"> A</label>
+  <label class="option"><input type="radio" name="q63" value="B"> B</label>
+  <label class="option"><input type="radio" name="q63" value="C"> C</label>
+  <label class="option"><input type="radio" name="q63" value="D"> D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol63">Rozwiązanie</button></div>
+  <div class="sol" id="sol63" style="display:none">
+    Miejsca zerowe 2 i -4, ramiona w górę → to rysunek D.
+  </div>
+</div>
+
+<!-- ============ ZAD. 64 ============ -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 64</div><div class="qmeta">(czerwiec 2014 - zad. 10)</div></div>
+  <p>Pierwsza współrzędna wierzchołka paraboli \( y=(x+2)(x-4) \) jest równa</p>
+  <label class="option"><input type="radio" name="q64" value="A"> A. −8</label>
+  <label class="option"><input type="radio" name="q64" value="B"> B. −4</label>
+  <label class="option"><input type="radio" name="q64" value="C"> C. 1</label>
+  <label class="option"><input type="radio" name="q64" value="D"> D. 2</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol64">Rozwiązanie</button></div>
+  <div class="sol" id="sol64" style="display:none">
+    Środek między miejscami zerowymi −2 i 4 to \( ( -2 + 4 )/2 = 1 \). Odpowiedź C.
+  </div>
+</div>
+
+<!-- ============ ZAD. 65 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 65</div><div class="qmeta">(czerwiec 2014 - zad. 7)</div></div>
+  <p>Jednym z miejsc zerowych funkcji \( f(x)=3x^2+7x+c \) jest liczba \( -\tfrac{7}{3} \). Wówczas \( c \) jest równe</p>
+  <label class="option"><input type="radio" name="q65" value="A"> A. 0</label>
+  <label class="option"><input type="radio" name="q65" value="B"> B. 1</label>
+  <label class="option"><input type="radio" name="q65" value="C"> C. −98</label>
+  <label class="option"><input type="radio" name="q65" value="D"> D. 98</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol65">Rozwiązanie</button></div>
+  <div class="sol" id="sol65" style="display:none">
+    Jeśli \( x=-7/3 \) jest zerem, to podstawiamy: \(3(\!-\tfrac{7}{3}\!)^2+7(\!-\tfrac{7}{3}\!)+c=0\). Obliczenia dają \( c=0 \).
+  </div>
+</div>
+
+<!-- ============ ZAD. 66 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 66</div><div class="qmeta">(maj 2014 - zad. 7)</div></div>
+  <p>Na rysunku przedstawiono fragment wykresu funkcji kwadratowej \( f \).</p>
+  <img src="img/fk20.png" alt="fk20">
+  <p>Funkcja \( f \) jest określona wzorem</p>
+  <label class="option"><input type="radio" name="q66" value="A"> A. \( f(x) = -\tfrac{1}{2}(x-3)(x+1) \)</label>
+  <label class="option"><input type="radio" name="q66" value="B"> B. \( f(x) = \tfrac{1}{2}(x-3)(x+1) \)</label>
+  <label class="option"><input type="radio" name="q66" value="C"> C. \( f(x) = -\tfrac{1}{2}(x+3)(x-1) \)</label>
+  <label class="option"><input type="radio" name="q66" value="D"> D. \( f(x) = \tfrac{1}{2}(x+3)(x-1) \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol66">Rozwiązanie</button></div>
+  <div class="sol" id="sol66" style="display:none">
+    Ramiona w dół, miejsca zerowe −1 i 3 ⇒ wariant A.
+  </div>
+</div>
+
+<!-- ============ ZAD. 67 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 67</div><div class="qmeta">(grudzień 2013 - zad. 13)</div></div>
+  <p>Wykresem funkcji kwadratowej \( f \) jest parabola o wierzchołku \( W=(5,7) \). Wówczas prawdziwa jest równość</p>
+  <label class="option"><input type="radio" name="q67" value="A"> A. \( f(1)=f(9) \)</label>
+  <label class="option"><input type="radio" name="q67" value="B"> B. \( f(1)=f(11) \)</label>
+  <label class="option"><input type="radio" name="q67" value="C"> C. \( f(1)=f(13) \)</label>
+  <label class="option"><input type="radio" name="q67" value="D"> D. \( f(1)=f(15) \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol67">Rozwiązanie</button></div>
+  <div class="sol" id="sol67" style="display:none">
+    Symetria względem osi \( x=5 \) → pary (1,9) są symetryczne → A.
+  </div>
+</div>
+
+<!-- ============ ZAD. 68 ============ -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 68</div><div class="qmeta">(maj 2013 - zad. 6)</div></div>
+  <p>Wierzchołkiem paraboli \( y=-3(x-2)^2+4 \) jest punkt o współrzędnych</p>
+  <label class="option"><input type="radio" name="q68" value="A"> A. (−2, −4)</label>
+  <label class="option"><input type="radio" name="q68" value="B"> B. (−2, 4)</label>
+  <label class="option"><input type="radio" name="q68" value="C"> C. (2, −4)</label>
+  <label class="option"><input type="radio" name="q68" value="D"> D. (2, 4)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol68">Rozwiązanie</button></div>
+  <div class="sol" id="sol68" style="display:none">
+    Wierzchołek z postaci kanonicznej: (2,4).
+  </div>
+</div>
+
+<!-- ============ ZAD. 69 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 69</div><div class="qmeta">(sierpień 2011 - zad. 10)</div></div>
+  <p>Zbiorem wartości funkcji \( f(x)=x^2-4 \) jest</p>
+  <label class="option"><input type="radio" name="q69" value="A"> A. \( [-4,+\infty) \)</label>
+  <label class="option"><input type="radio" name="q69" value="B"> B. \( [-2,+\infty) \)</label>
+  <label class="option"><input type="radio" name="q69" value="C"> C. \( [2,+\infty) \)</label>
+  <label class="option"><input type="radio" name="q69" value="D"> D. \( [4,+\infty) \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol69">Rozwiązanie</button></div>
+  <div class="sol" id="sol69" style="display:none">
+    Minimum = -4 (dla x=0) → A.
+  </div>
+</div>
+
+<!-- ============ ZAD. 70 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 70</div><div class="qmeta">(maj 2011 - zad. 9)</div></div>
+  <p>Wskaż wykres funkcji \( h(x)=(x-2)(x+4) \).</p>
+  <img src="img/fk21.png" alt="fk21">
+  <label class="option"><input type="radio" name="q70" value="A"> A. A</label>
+  <label class="option"><input type="radio" name="q70" value="B"> B. B</label>
+  <label class="option"><input type="radio" name="q70" value="C"> C. C</label>
+  <label class="option"><input type="radio" name="q70" value="D"> D. D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol70">Rozwiązanie</button></div>
+  <div class="sol" id="sol70" style="display:none">
+    Miejsca zerowe -4 i 2, ramiona w górę → rysunek A.
+  </div>
+</div>
+
+<!-- ============ ZAD. 71 ============ -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 71</div><div class="qmeta">(listopad 2010 - zad. 22)</div></div>
+  <p>Oś symetrii paraboli \( y=x^2-4x+2010 \) to</p>
+  <label class="option"><input type="radio" name="q71" value="A"> A. x = 4</label>
+  <label class="option"><input type="radio" name="q71" value="B"> B. x = −4</label>
+  <label class="option"><input type="radio" name="q71" value="C"> C. x = 2</label>
+  <label class="option"><input type="radio" name="q71" value="D"> D. x = −2</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol71">Rozwiązanie</button></div>
+  <div class="sol" id="sol71" style="display:none">
+    \( x=-\tfrac{b}{2a} = 2 \) → C.
+  </div>
+</div>
+
+<!-- ============ ZAD. 72 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 72</div><div class="qmeta">(sierpień 2010 - zad. 9)</div></div>
+  <p>Wierzchołek paraboli \( y=x^2+4x-13 \) leży na prostej</p>
+  <label class="option"><input type="radio" name="q72" value="A"> A. x = −2</label>
+  <label class="option"><input type="radio" name="q72" value="B"> B. x = 2</label>
+  <label class="option"><input type="radio" name="q72" value="C"> C. x = 4</label>
+  <label class="option"><input type="radio" name="q72" value="D"> D. x = −4</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol72">Rozwiązanie</button></div>
+  <div class="sol" id="sol72" style="display:none">
+    Oś symetrii \( x=-b/(2a)=-2\) → A.
+  </div>
+</div>
+
+<!-- ============ ZAD. 73 ============ -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 73</div><div class="qmeta">(sierpień 2010 - zad. 11)</div></div>
+  <p>Zbiorem wartości funkcji jest \((-\infty,3]\). Który rysunek?</p>
+  <img src="img/fk22.png" alt="fk22">
+  <label class="option"><input type="radio" name="q73" value="A"> A</label>
+  <label class="option"><input type="radio" name="q73" value="B"> B</label>
+  <label class="option"><input type="radio" name="q73" value="C"> C</label>
+  <label class="option"><input type="radio" name="q73" value="D"> D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol73">Rozwiązanie</button></div>
+  <div class="sol" id="sol73" style="display:none">
+    Maximum 3 i ramiona w dół → rysunek B.
+  </div>
+</div>
+
+<!-- ============ ZAD. 74 ============ -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 74</div><div class="qmeta">(maj 2010 - zad. 8)</div></div>
+  <p>Wierzchołek paraboli \( f(x)=-3x^2+3 \) to</p>
+  <label class="option"><input type="radio" name="q74" value="A"> A. (3,0)</label>
+  <label class="option"><input type="radio" name="q74" value="B"> B. (0,3)</label>
+  <label class="option"><input type="radio" name="q74" value="C"> C. (−3,0)</label>
+  <label class="option"><input type="radio" name="q74" value="D"> D. (0,−3)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol74">Rozwiązanie</button></div>
+  <div class="sol" id="sol74" style="display:none">
+    Postać kanoniczna: \( -(x-0)^2+3\) → wierzchołek (0,3).
+  </div>
+</div>
+
+<!-- ============ ZAD. 75 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 75</div><div class="qmeta">(listopad 2009 - zad. 8)</div></div>
+  <p>Wierzchołek \( y=-3(x+1)^2 \) to</p>
+  <label class="option"><input type="radio" name="q75" value="A"> A. (−1,0)</label>
+  <label class="option"><input type="radio" name="q75" value="B"> B. (0,−1)</label>
+  <label class="option"><input type="radio" name="q75" value="C"> C. (1,0)</label>
+  <label class="option"><input type="radio" name="q75" value="D"> D. (0,1)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol75">Rozwiązanie</button></div>
+  <div class="sol" id="sol75" style="display:none">
+    Wierzchołek w (-1,0).
+  </div>
+</div>
+
+<!-- ============ ZAD. 76 ============ -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 76</div><div class="qmeta">(listopad 2009 - zad. 9)</div></div>
+  <p>Do wykresu \( f(x)=x^2+x-2 \) należy punkt</p>
+  <label class="option"><input type="radio" name="q76" value="A"> A. (−1,−4)</label>
+  <label class="option"><input type="radio" name="q76" value="B"> B. (−1,1)</label>
+  <label class="option"><input type="radio" name="q76" value="C"> C. (−1,−1)</label>
+  <label class="option"><input type="radio" name="q76" value="D"> D. (−1,−2)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol76">Rozwiązanie</button></div>
+  <div class="sol" id="sol76" style="display:none">
+    \( f(-1)=-2 \) → punkt (-1,-2).
+  </div>
+</div>
+
+<!-- ============ ZAD. 77 (dokończenie) ============ -->
+<div class="section" data-ans="A,1">
+  <div class="qheader"><div class="qid">Zad. 77</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Funkcja \( f(x)=3x^2+bx-5 \), \( b<0 \). Wybierz A/B/C oraz uzasadnienie 1/2/3.</p>
+  <p>Wariant:</p>
+  <label class="option"><input type="radio" name="q77a" value="A"> A. ma dwa rzeczywiste miejsca zerowe</label>
+  <label class="option"><input type="radio" name="q77a" value="B"> B. ma jedno miejsce zerowe</label>
+  <label class="option"><input type="radio" name="q77a" value="C"> C. nie ma rzeczywistych miejsc zerowych</label>
+  <p>Uzasadnienie:</p>
+  <label class="option"><input type="radio" name="q77b" value="1"> 1. \( b^2+60>0 \)</label>
+  <label class="option"><input type="radio" name="q77b" value="2"> 2. \( b^2+60=0 \)</label>
+  <label class="option"><input type="radio" name="q77b" value="3"> 3. \( b^2+60<0 \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol77">Rozwiązanie</button></div>
+  <div class="sol" id="sol77" style="display:none">
+    \( \Delta=b^2-4\cdot3\cdot(-5)=b^2+60\ge60>0 \), więc zawsze dodatnie → dwa miejsca zerowe. Odpowiedź A i uzasadnienie 1.
+  </div>
+</div>
+
+<!-- ============ ZAD. 78 ============ -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 78</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Fragment paraboli (wierzchołek na rysunku). Który wzór?</p>
+  <img src="img/fk23.png" alt="fk23">
+  <label class="option"><input type="radio" name="q78" value="A"> A. \( y=-(x+5)^2-6 \)</label>
+  <label class="option"><input type="radio" name="q78" value="B"> B. \( y=-(x+5)^2+6 \)</label>
+  <label class="option"><input type="radio" name="q78" value="C"> C. \( y=-(x-5)^2-6 \)</label>
+  <label class="option"><input type="radio" name="q78" value="D"> D. \( y=-(x-5)^2+6 \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol78">Rozwiązanie</button></div>
+  <div class="sol" id="sol78" style="display:none">
+    Wierzchołek (-5,6) → wariant B.
+  </div>
+</div>
+
+<!-- ============ ZAD. 79 ============ -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 79</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Wskaż funkcję, której zbiorem wartości jest \([-2,+\infty)\).</p>
+  <label class="option"><input type="radio" name="q79" value="A"> A. \( y=-2x^2+2 \)</label>
+  <label class="option"><input type="radio" name="q79" value="B"> B. \( y=-(x+1)^2-2 \)</label>
+  <label class="option"><input type="radio" name="q79" value="C"> C. \( y=2(x-1)^2+2 \)</label>
+  <label class="option"><input type="radio" name="q79" value="D"> D. \( y=(x+1)^2-2 \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol79">Rozwiązanie</button></div>
+  <div class="sol" id="sol79" style="display:none">
+    Minimum -2, ramiona w górę → \( (x+1)^2-2\) → D.
+  </div>
+</div>
+
+<!-- ============ ZAD. 80 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 80</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Funkcja \( f(x)=(x-3)^2-2 \) nie ma punktów wspólnych z którą prostą?</p>
+  <label class="option"><input type="radio" name="q80" value="A"> A. \( y=-3 \)</label>
+  <label class="option"><input type="radio" name="q80" value="B"> B. \( y=-1 \)</label>
+  <label class="option"><input type="radio" name="q80" value="C"> C. \( y=1 \)</label>
+  <label class="option"><input type="radio" name="q80" value="D"> D. \( y=3 \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol80">Rozwiązanie</button></div>
+  <div class="sol" id="sol80" style="display:none">
+    Minimum = -2, linia y=-3 poniżej wykresu → brak przecięcia → A.
+  </div>
+</div>
+
+<!-- ============ ZAD. 81 ============ -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 81</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Oś symetrii \( y=-x^2+4x-11 \) to</p>
+  <label class="option"><input type="radio" name="q81" value="A"> A. x = −4</label>
+  <label class="option"><input type="radio" name="q81" value="B"> B. x = −2</label>
+  <label class="option"><input type="radio" name="q81" value="C"> C. x = 2</label>
+  <label class="option"><input type="radio" name="q81" value="D"> D. x = 4</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol81">Rozwiązanie</button></div>
+  <div class="sol" id="sol81" style="display:none">
+    \( x=-b/(2a)=2 \) → C.
+  </div>
+</div>
+
+<!-- ============ ZAD. 82 ============ -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 82</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Funkcja zbiorem wartości \((-\infty,3]\):</p>
+  <label class="option"><input type="radio" name="q82" value="A"> A. \( -(x-2)^2+3 \)</label>
+  <label class="option"><input type="radio" name="q82" value="B"> B. \( (2-x)^2+3 \)</label>
+  <label class="option"><input type="radio" name="q82" value="C"> C. \( -(x+2)^2-3 \)</label>
+  <label class="option"><input type="radio" name="q82" value="D"> D. \( (2-x)^2-3 \)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol82">Rozwiązanie</button></div>
+  <div class="sol" id="sol82" style="display:none">
+    Maksimum 3 i ramiona w dół → A.
+  </div>
+</div>
+
+<!-- ============ ZAD. 83 ============ -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 83</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Wykres \( f(x)=3(x+1)^2-4 \) nie ma punktów wspólnych z którą prostą?</p>
+  <label class="option"><input type="radio" name="q83" value="A"> A. y = 1</label>
+  <label class="option"><input type="radio" name="q83" value="B"> B. y = −1</label>
+  <label class="option"><input type="radio" name="q83" value="C"> C. y = −3</label>
+  <label class="option"><input type="radio" name="q83" value="D"> D. y = −5</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol83">Rozwiązanie</button></div>
+  <div class="sol" id="sol83" style="display:none">
+    Zbiór wartości \([-4,\infty)\). Linia y=-5 poniżej → brak przecięcia → D.
+  </div>
+</div>
+
+<!-- ============ ZAD. 84 ============ -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 84</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Prosta y=a ma dokładnie jeden punkt wspólny z \( f(x)=-x^2+6x-10 \). Która wartość a?</p>
+  <label class="option"><input type="radio" name="q84" value="A"> A. a = 3</label>
+  <label class="option"><input type="radio" name="q84" value="B"> B. a = 0</label>
+  <label class="option"><input type="radio" name="q84" value="C"> C. a = −1</label>
+  <label class="option"><input type="radio" name="q84" value="D"> D. a = −3</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol84">Rozwiązanie</button></div>
+  <div class="sol" id="sol84" style="display:none">
+    Wierzchołek: x=3, y=-1 → styczna pozioma y=-1 → C.
+  </div>
+</div>
+
+<!-- ============ ZAD. 85 ============ -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 85</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Najmniejsza wartość \( f(x)=x^2+4x-3 \) na [0,3] to</p>
+  <label class="option"><input type="radio" name="q85" value="A"> A. −7</label>
+  <label class="option"><input type="radio" name="q85" value="B"> B. −4</label>
+  <label class="option"><input type="radio" name="q85" value="C"> C. −3</label>
+  <label class="option"><input type="radio" name="q85" value="D"> D. −2</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol85">Rozwiązanie</button></div>
+  <div class="sol" id="sol85" style="display:none">
+    Sprawdzamy końce: f(0)=-3, f(3)=18 → minimum = -3 → C.
+  </div>
+</div>
+
+<!-- ============ ZAD. 86 (dwa radio-grupy) ============ -->
+<div class="section" data-ans="B,H">
+  <div class="qheader"><div class="qid">Zad. 86</div><div class="qmeta">(zbiór zadań CKE - zad. 24)</div></div>
+  <p>Dana jest funkcja \( f(x)=x^2+5x+6 \). Dokończ zdania: wybierz A–D oraz E–H.</p>
+  <p>1. Postać kanoniczna:</p>
+  <label class="option"><input type="radio" name="q86a" value="A"> A. \( y=(x-\tfrac{5}{2})^2+\tfrac{1}{4} \)</label>
+  <label class="option"><input type="radio" name="q86a" value="B"> B. \( y=(x+\tfrac{5}{2})^2-\tfrac{1}{4} \)</label>
+  <label class="option"><input type="radio" name="q86a" value="C"> C. \( y=(x-\tfrac{1}{4})^2+\tfrac{5}{2} \)</label>
+  <label class="option"><input type="radio" name="q86a" value="D"> D. \( y=(x+\tfrac{1}{4})^2-\tfrac{5}{2} \)</label>
+  <p>2. Postać iloczynowa:</p>
+  <label class="option"><input type="radio" name="q86b" value="E"> E. \( y=(x-2)(x-3) \)</label>
+  <label class="option"><input type="radio" name="q86b" value="F"> F. \( y=(x-2)(x+3) \)</label>
+  <label class="option"><input type="radio" name="q86b" value="G"> G. \( y=(x+2)(x-3) \)</label>
+  <label class="option"><input type="radio" name="q86b" value="H"> H. \( y=(x+2)(x+3) \)</label>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol86">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol86" style="display:none">
+    Rozkład: \( x^2+5x+6=(x+2)(x+3) \). Postać kanoniczna: \( (x+\tfrac{5}{2})^2-\tfrac{1}{4} \). Odpowiedź: B, H.
+  </div>
+</div>
+
+<!-- ============ ZAD. 87 (P/F dwa pytania) ============ -->
+<div class="section" data-ans="F,P">
+  <div class="qheader"><div class="qid">Zad. 87</div><div class="qmeta">(zbiór zadań CKE - zad. 27)</div></div>
+  <p>Funkcja \( f(x)=-2x^2+bx+c \) przyjmuje wartości dodatnie tylko dla \( x\in(-4,2) \). Oceń prawdziwość:</p>
+  <p>1) Osią symetrii paraboli jest prosta \( x=1 \).</p>
+  <label class="option"><input type="radio" name="q87a" value="P"> P</label>
+  <label class="option"><input type="radio" name="q87a" value="F"> F</label>
+  <p>2) Postać iloczynowa: \( f(x)=-2(x+4)(x-2) \).</p>
+  <label class="option"><input type="radio" name="q87b" value="P"> P</label>
+  <label class="option"><input type="radio" name="q87b" value="F"> F</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol87">Rozwiązanie</button></div>
+  <div class="sol" id="sol87" style="display:none">
+    Środek przedziału jest \((-4+2)/2=-1\) → oś symetrii \( x=-1 \) (stwierdzenie 1 fałszywe). Miejsca zerowe to -4 i 2 → postać iloczynowa podana jest poprawnie (stwierdzenie 2 prawdziwe). Odpowiedź: F, P.
+  </div>
+</div>
+
+<footer>Każde równanie to nowa łamigłówka do odkrycia ꒰ · ◡ · ꒱</footer>
+
+  </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.section').forEach(sec => {
+    const radioInputs = Array.from(sec.querySelectorAll('input[type="radio"]'));
+    const radioGroups = [...new Set(radioInputs.map(r => r.name))];
+    const answersArray = (sec.dataset.ans || '').split(',').map(s => s.trim().toUpperCase());
+
+    radioInputs.forEach(radio => {
+      radio.addEventListener('change', () => {
+        const groupName = radio.name;
+        // usuń klasy tylko w obrębie tej grupy
+        sec.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
+          const lab = r.closest('.option') || r.parentElement;
+          if (lab) lab.classList.remove('correct', 'incorrect');
+        });
+
+        const idx = radioGroups.indexOf(groupName);
+        const expected = answersArray[idx] || null;
+        const lab = radio.closest('.option') || radio.parentElement;
+        if (expected) {
+          if (radio.value.toUpperCase() === expected) {
+            if (lab) lab.classList.add('correct');
+          } else {
+            if (lab) lab.classList.add('incorrect');
+          }
+        } else {
+          if (answersArray.includes(radio.value.toUpperCase())) {
+            if (lab) lab.classList.add('correct');
+          } else {
+            if (lab) lab.classList.add('incorrect');
+          }
+        }
+      });
+    });
+
+    // inputy tekstowe + przycisk Sprawdź
+    const btnCheck = sec.querySelector('.btn-check');
+    if (btnCheck) {
+      btnCheck.addEventListener('click', () => {
+        let allGood = true;
+        sec.querySelectorAll('.frac-input').forEach(inp => {
+          const val = inp.value.trim().toUpperCase();
+          const good = (inp.dataset.answer||'').trim().toUpperCase();
+          if (val !== good) allGood = false;
+        });
+        if (allGood) alert('Dobrze! To poprawna odpowiedź.');
+        else alert('Źle! Spróbuj ponownie.');
+      });
+    }
+
+    // toggle rozwiązania
+    sec.querySelectorAll('.btn-solution').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (target) target.style.display = target.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>

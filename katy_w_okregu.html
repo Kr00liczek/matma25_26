@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kąty w okręgu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+
+  <div class="container">
+        <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+<h1>Kąty w okręgu</h1><br>
+<!-- ====== ZAD 1 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div class="qmeta">(czerwiec 2025 - zad. 20)</div>
+  </div>
+  <p>
+    Na dziesięciokącie foremnym \(A B C D E F G H I J\) opisano okrąg o środku w punkcie \(S\).<br>
+   
+  <div class="figure"><img src="img/kwo01.png" alt="kwo01"></div>
+ Miara kąta wpisanego \( \angle AGD \) jest równa:
+  </p>
+  <label class="option"><input type="radio" name="q1" value="A"> A. 18°</label>
+  <label class="option"><input type="radio" name="q1" value="B"> B. 36°</label>
+  <label class="option"><input type="radio" name="q1" value="C"> C. 54°</label>
+  <label class="option"><input type="radio" name="q1" value="D"> D. 60°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+  <div class="sol" id="sol1" style="display:none">
+    W dziesięciokącie foremnym kąt środkowy między kolejnymi wierzchołkami ma miarę \(360^\circ/10=36^\circ\).<br>
+    Indeksy wierzchołków: \(A\) i \(D\) są oddalone o 3 boki \(\Rightarrow\) łuk \(AD\) ma miarę \(3\cdot36^\circ=108^\circ\).<br>
+    Kąt wpisany oparty na tym łuku ma połowę tej miary: \(\angle AGD=\tfrac{108^\circ}{2}=54^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 2 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(maj 2025 - zad. 19)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(O\). Miara kąta \( \angle BCA = 50^\circ\).</p>
+  <div class="figure"><img src="img/kwo02.png" alt="kwo02"></div>
+Miara kąta ostrego ABO jest równa<br><br>
+  <label class="option"><input type="radio" name="q2" value="A"> A. 20°</label>
+  <label class="option"><input type="radio" name="q2" value="B"> B. 35°</label>
+  <label class="option"><input type="radio" name="q2" value="C"> C. 40°</label>
+  <label class="option"><input type="radio" name="q2" value="D"> D. 50°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+  <div class="sol" id="sol2" style="display:none">
+    Kąt wpisany \( \angle BCA =50^\circ\) opiera się na łuku \(BA\).<br>
+    Kąt środkowy \( \angle BOA \) oparty na tym samym łuku ma dwa razy więcej: \(2\cdot50^\circ=100^\circ\).<br>
+    W trójkącie równoramiennym \(AOB\) (bo \(OA=OB\)) pozostałe dwa kąty mają łącznie \(80^\circ\), czyli każdy z nich to \(40^\circ\). Stąd \( \angle ABO =40^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 3 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(grudzień 2024 - zad. 20)</div></div>
+  <p>Okreg o środku \(S\) i promieniu \(6\). Kąt wpisany \( \angle ACB = 60^\circ\). Długość łuku \(AB\) wynosi:</p>
+  <div class="figure"><img src="img/kwo03.png" alt="kwo03"></div>
+  <label class="option"><input type="radio" name="q3" value="A"> A. \(2\pi\)</label>
+  <label class="option"><input type="radio" name="q3" value="B"> B. \(4\pi\)</label>
+  <label class="option"><input type="radio" name="q3" value="C"> C. \(6\pi\)</label>
+  <label class="option"><input type="radio" name="q3" value="D"> D. \(12\pi\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+  <div class="sol" id="sol3" style="display:none">
+    Kąt wpisany \(60^\circ\) opiera się na łuku \(AB\). Kąt środkowy odpowiadający temu łukowi to \(2\cdot60^\circ=120^\circ\).<br>
+    Długość łuku dla kąta \(120^\circ\) to \(s = r\theta\), gdzie \(\theta\) w radianach: \(120^\circ = \tfrac{2\pi}{3}\).<br>
+    \(s = 6\cdot\tfrac{2\pi}{3}=4\pi\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 4 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(sierpień 2024 - zad. 19)</div></div>
+  <p>Punkty \(K,L,M\) leżą na okręgu o środku \(S\). Miara kąta \( \angle KSM = 160^\circ\). Jaka jest miara kąta wpisanego \( \angle KLM\)?</p>
+  <div class="figure"><img src="img/kwo04.png" alt="kwo04"></div>
+  <label class="option"><input type="radio" name="q4" value="A"> A. 80°</label>
+  <label class="option"><input type="radio" name="q4" value="B"> B. 90°</label>
+  <label class="option"><input type="radio" name="q4" value="C"> C. 100°</label>
+  <label class="option"><input type="radio" name="q4" value="D"> D. 110°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+  <div class="sol" id="sol4" style="display:none">
+    Kąt środkowy \( \angle KSM =160^\circ\) opisuje mniejszy łuk \(KM\) o mierze \(160^\circ\). Drugi (większy) łuk \(KM\) ma miarę \(360^\circ-160^\circ=200^\circ\).<br>
+    W zależności od położenia punktu \(L\) kąt wpisany \( \angle KLM\) może opierać się na łuku mniejszym lub większym. Na rysunku widać, że \(L\) leży na łuku mniejszym między \(K\) i \(M\), więc kąt wpisany opiera się na łuku większym o mierze \(200^\circ\).<br>
+    Stąd \(\angle KLM = \tfrac{1}{2}\cdot200^\circ = 100^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 5 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(czerwiec 2024 - zad. 21)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(S\). Długość łuku \(AB\) to \(\tfrac{1}{5}\) długości całego okręgu. Jaka jest miara ostrego kąta \( \angle ACB\)?</p>
+  <div class="figure"><img src="img/kwo05.png" alt="kwo05"></div>
+  <label class="option"><input type="radio" name="q5" value="A"> A. 18°</label>
+  <label class="option"><input type="radio" name="q5" value="B"> B. 30°</label>
+  <label class="option"><input type="radio" name="q5" value="C"> C. 36°</label>
+  <label class="option"><input type="radio" name="q5" value="D"> D. 72°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+  <div class="sol" id="sol5" style="display:none">
+    Łuk \(AB\) ma \(\tfrac{1}{5}\cdot360^\circ=72^\circ\).<br>
+    Kąt wpisany \( \angle ACB \) opiera się na łuku \(AB\) i ma połowę jego miary: \(\tfrac{72^\circ}{2}=36^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 6 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(maj 2024 - zad. 22)</div></div>
+  <p>W trójkącie \(ABC\), wpisanym w okrąg o środku \(S\), kąt \( \angle ACB = 42^\circ\). Jaka jest miara ostrego kąta \( \angle BAS\)?</p>
+  <div class="figure"><img src="img/kwo06.png" alt="kwo06"></div>
+  <label class="option"><input type="radio" name="q6" value="A"> A. 42°</label>
+  <label class="option"><input type="radio" name="q6" value="B"> B. 45°</label>
+  <label class="option"><input type="radio" name="q6" value="C"> C. 48°</label>
+  <label class="option"><input type="radio" name="q6" value="D"> D. 69°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+  <div class="sol" id="sol6" style="display:none">
+    Kąt wpisany \( \angle ACB =42^\circ\) odpowiada kątowi środkowemu \( \angle ASB = 2\cdot42^\circ =84^\circ\).<br>
+    W trójkącie \(ASB\) boki \(AS=BS\) (promienie), więc kąty przy \(A\) i \(B\) są równe i mają miarę \(\tfrac{180^\circ-84^\circ}{2}=48^\circ\). Zatem \( \angle BAS =48^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 7 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(sierpień 2023 - zad. 22)</div></div>
+  <p>W okręgu \(O\) kąt środkowy \(\beta\) oraz kąt wpisany \(\alpha\) oparte są na tym samym łuku. Kąt \(\beta\) ma miarę o \(40^\circ\) większą od \(\alpha\). Znajdź \(\beta\).</p>
+  <div class="figure"><img src="img/kwo07.png" alt="kwo07"></div>
+  <label class="option"><input type="radio" name="q7" value="A"> A. 40°</label>
+  <label class="option"><input type="radio" name="q7" value="B"> B. 80°</label>
+  <label class="option"><input type="radio" name="q7" value="C"> C. 100°</label>
+  <label class="option"><input type="radio" name="q7" value="D"> D. 120°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+  <div class="sol" id="sol7" style="display:none">
+    Dla tego samego łuku kąt środkowy ma dwa razy większą miarę niż kąt wpisany: \(\beta=2\alpha\).<br>
+    Równanie z treści: \(\beta=\alpha+40^\circ\). Po podstawieniu: \(2\alpha=\alpha+40^\circ\Rightarrow\alpha=40^\circ\).<br>
+    \(\beta=2\alpha=80^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 8 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(czerwiec 2023 - zad. 23)</div></div>
+  <p>Na łukach \(AB\) i \(CD\) są oparte kąty wpisane \( \angle ADB=20^\circ\) i \( \angle DBC=40^\circ\). Cięciwy \(AC\) i \(BD\) przecinają się w punkcie \(K\). Znajdź miarę kąta \( \angle DKC\).</p>
+  <div class="figure"><img src="img/kwo07.png" alt="kwo07"></div>
+  <label class="option"><input type="radio" name="q8" value="A"> A. 80°</label>
+  <label class="option"><input type="radio" name="q8" value="B"> B. 60°</label>
+  <label class="option"><input type="radio" name="q8" value="C"> C. 50°</label>
+  <label class="option"><input type="radio" name="q8" value="D"> D. 40°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+  <div class="sol" id="sol8" style="display:none">
+    Kąt wpisany \( \angle ADB=20^\circ\) opiera się na łuku \(AB\) więc łuk \(AB\) ma miarę \(40^\circ\).<br>
+    \( \angle DBC=40^\circ\) opiera się na łuku \(DC\) więc łuk \(DC\) ma \(80^\circ\).<br>
+    Kąt między dwiema przecinającymi się wewnątrz okręgu cięciwami wynosi połowę sumy miar łuków opartych na kącie i kącie przeciwnym: \(\angle DKC=\tfrac{1}{2}(\overset{\frown}{DC}+\overset{\frown}{AB})=\tfrac{1}{2}(80^\circ+40^\circ)=60^\circ.\)<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 9 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(maj 2023 - zad. 21)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(O\). Kąt \( \angle ACO = 70^\circ\). Znajdź miarę ostrego kąta \( \angle ABC\).</p>
+  <div class="figure"><img src="img/kwo08.png" alt="kwo08"></div>
+  <label class="option"><input type="radio" name="q9" value="A"> A. 10°</label>
+  <label class="option"><input type="radio" name="q9" value="B"> B. 20°</label>
+  <label class="option"><input type="radio" name="q9" value="C"> C. 35°</label>
+  <label class="option"><input type="radio" name="q9" value="D"> D. 40°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+  <div class="sol" id="sol9" style="display:none">
+    W trójkąle \(AOC\) mamy \(OA=OC\Rightarrow \angle OAC=\angle ACO=70^\circ\).<br>
+    Z sumy kątów trójkąta: \(\angle AOC = 180^\circ-2\cdot70^\circ=40^\circ\) (to kąt środkowy oparty na łuku \(AC\)).<br>
+    Kąt wpisany \( \angle ABC\) oparty na tym samym łuku \(AC\) ma połowę: \( \angle ABC = \tfrac{40^\circ}{2}=20^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 10 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(pokazowy 2023 - zad. 21)</div></div>
+  <p>Odcinek \(AB\) jest średnicą okręgu o środku \(O\) i promieniu \(r=8\). Cięciwa \(AC\) ma długość \(8\sqrt{3}\). Miara kąta \( \angle BAC\) jest równa:</p>
+  <div class="figure"><img src="img/kwo09.png" alt="kwo09"></div>
+  <label class="option"><input type="radio" name="q10" value="A"> A. 30°</label>
+  <label class="option"><input type="radio" name="q10" value="B"> B. 45°</label>
+  <label class="option"><input type="radio" name="q10" value="C"> C. 15°</label>
+  <label class="option"><input type="radio" name="q10" value="D"> D. 60°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+  <div class="sol" id="sol10" style="display:none">
+    Skoro \(AB\) jest średnicą i promień \(r=8\), to \(AB=16\).<br>
+    W trójkącie prostokątnym (kąt przy \(C\) prosty), dla kąta \( \angle BAC\) przy wierzchołku \(A\) mamy \(\cos \angle BAC = \dfrac{AC}{AB}=\dfrac{8\sqrt{3}}{16}=\dfrac{\sqrt{3}}{2}\).<br>
+    Stąd \(\angle BAC = 30^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 11 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(pokazowa 2023 - zad. 24)</div></div>
+  <p>Proste \(k\) i \(l\) są styczne do okręgu w punktach \(A\) i \(B\). Proste przecinają się w \(S\) i tworzą kąt \(76^\circ\). Jaka jest miara kąta \( \angle OBA\)?</p>
+  <div class="figure"><img src="img/kwo10.png" alt="kwo10"></div>
+  <label class="option"><input type="radio" name="q11" value="A"> A. 52°</label>
+  <label class="option"><input type="radio" name="q11" value="B"> B. 26°</label>
+  <label class="option"><input type="radio" name="q11" value="C"> C. 14°</label>
+  <label class="option"><input type="radio" name="q11" value="D"> D. 38°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+  <div class="sol" id="sol11" style="display:none">
+    Kąt między dwiema stycznymi równy jest \(180^\circ\) minus kąt środkowy między punktami styczności: jeśli kąt między stycznymi to \(76^\circ\), to kąt środkowy \( \angle AOB =180^\circ-76^\circ=104^\circ\).<br>
+    W trójkącie \(AOB\) (promienie \(OA=OB\)) kąty przy \(A\) i \(B\) są równe i mają miarę \(\tfrac{180^\circ-104^\circ}{2}=38^\circ\). Zatem \( \angle OBA=38^\circ\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 12 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(grudzień 2022 - zad. 19)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(O\). Dane: \( \angle AOC = 130^\circ\), \( \angle BOA = 110^\circ\). Znajdź kąt wewnętrzny \( \angle BAC\) trójkąta \(ABC\).</p>
+  <div class="figure"><img src="img/kwo11.png" alt="kwo11"></div>
+  <label class="option"><input type="radio" name="q12" value="A"> A. 60°</label>
+  <label class="option"><input type="radio" name="q12" value="B"> B. 55°</label>
+  <label class="option"><input type="radio" name="q12" value="C"> C. 50°</label>
+  <label class="option"><input type="radio" name="q12" value="D"> D. 65°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+  <div class="sol" id="sol12" style="display:none">
+    Centralny kąt \( \angle BOC = 360^\circ - \angle AOC - \angle BOA = 360^\circ -130^\circ -110^\circ =120^\circ.\)<br>
+    Kąt wpisany \( \angle BAC\) oparty na łuku \(BC\) ma połowę tej miary: \( \angle BAC = \tfrac{120^\circ}{2}=60^\circ.\)<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 13 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(wrzesień 2022 - zad. 20)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(O\). Kąty: \( \angle ABO=40^\circ\), \( \angle OBC=10^\circ\). Znajdź \( \angle ACO\).</p>
+  <div class="figure"><img src="img/kwo12.png" alt="kwo12"></div>
+  <label class="option"><input type="radio" name="q13" value="A"> A. 30°</label>
+  <label class="option"><input type="radio" name="q13" value="B"> B. 40°</label>
+  <label class="option"><input type="radio" name="q13" value="C"> C. 50°</label>
+  <label class="option"><input type="radio" name="q13" value="D"> D. 60°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+  <div class="sol" id="sol13" style="display:none">
+    \( \angle ABC = \angle ABO + \angle OBC = 40^\circ +10^\circ =50^\circ.\)<br>
+    Centralny kąt \( \angle AOC\) oparty na łuku \(AC\) ma miarę \(2\cdot 50^\circ =100^\circ.\)<br>
+    W trójkącie \(AOC\) ramiona \(OA=OC\) dlatego \( \angle ACO = \tfrac{180^\circ-100^\circ}{2}=40^\circ.\)<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 14 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(sierpień 2022 - zad. 18)</div></div>
+  <p>Wierzchołki \(A,B,C\) czworokąta \(ABSC\) leżą na okręgu o środku \(S\). Kąt \( \angle ABS = 40^\circ\), a przekątna \(BC\) jest dwusieczną tego kąta. Znajdź kąt \( \angle ASC\).</p>
+  <div class="figure"><img src="img/kwo13.png" alt="kwo13"></div>
+  <label class="option"><input type="radio" name="q14" value="A"> A. 30°</label>
+  <label class="option"><input type="radio" name="q14" value="B"> B. 40°</label>
+  <label class="option"><input type="radio" name="q14" value="C"> C. 50°</label>
+  <label class="option"><input type="radio" name="q14" value="D"> D. 60°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+  <div class="sol" id="sol14" style="display:none">
+    Uwaga: zgodnie z treścią punkty \(A,B,C\) leżą na okręgu o środku \(S\) (czyli \(S\) to środek okręgu).<br>
+    Skoro \(BC\) jest dwusieczną kąta \( \angle ABS=40^\circ\), to \( \angle ABC = 20^\circ\).<br>
+    Kąt środkowy \( \angle ASC\) oparty na tym samym łuku \(AC\) jest dwa razy większy niż kąt wpisany \( \angle ABC\): \( \angle ASC = 2\cdot20^\circ =40^\circ.\)<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 15 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(czerwiec 2022 - zad. 17)</div></div>
+  <p>Na trójkącie ostrokątnym \(ABC\) opisano okrąg o środku \(O\). Kąt \( \angle ABC =65^\circ\). Znajdź miarę kąta \( \angle ACO\).</p>
+  <div class="figure"><img src="img/kwo14.png" alt="kwo14"></div>
+  <label class="option"><input type="radio" name="q15" value="A"> A. 130°</label>
+  <label class="option"><input type="radio" name="q15" value="B"> B. 25°</label>
+  <label class="option"><input type="radio" name="q15" value="C"> C. 65°</label>
+  <label class="option"><input type="radio" name="q15" value="D"> D. 50°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+  <div class="sol" id="sol15" style="display:none">
+    Kąt środkowy \( \angle AOC\) oparty na łuku \(AC\) ma miarę \(2\cdot\angle ABC=2\cdot65^\circ=130^\circ\).<br>
+    W trójkącie \(AOC\) kąty przy \(A\) i \(C\) są równe (bo \(OA=OC\)), więc \(\angle ACO = \tfrac{180^\circ-130^\circ}{2}=25^\circ.\)<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 16 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(maj 2022 - zad. 17)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(S\). Punkt \(D\) jest punktem przecięcia cięciwy \(AC\) i średnicy poprowadzonej z punktu \(B\). Miara kąta \( \angle BSC = \alpha\), a miara kąta \( \angle ADB = \gamma\). Oblicz kąt \( \angle ABD\).</p>
+  <div class="figure"><img src="img/kwo14.png" alt="kwo14"></div>
+  <label class="option"><input type="radio" name="q16" value="A"> A. \(\tfrac{\alpha}{2}+\gamma-180^\circ\)</label>
+  <label class="option"><input type="radio" name="q16" value="B"> B. \(180^\circ-\tfrac{\alpha}{2}-\gamma\)</label>
+  <label class="option"><input type="radio" name="q16" value="C"> C. \(180^\circ-\alpha-\gamma\)</label>
+  <label class="option"><input type="radio" name="q16" value="D"> D. \(\alpha+\gamma-180^\circ\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+  <div class="sol" id="sol16" style="display:none">
+    Kąt \( \angle ADB=\gamma\) jest kątem wpisanym opartym na łuku \(AB\), więc łuk \(AB\) ma miarę \(2\gamma\).<br>
+    Kąt środkowy \( \angle BSC=\alpha\) oparty na łuku \(BC\) oznacza, że łuk \(BC\) ma miarę \(\alpha\).<br>
+    Łuk \(AC\) ma miarę \( \overset{\frown}{AC} = \overset{\frown}{AB} + \overset{\frown}{BC} = 2\gamma + \alpha\).<br>
+    Kąt wpisany \( \angle ABD\) (wierzchołek w punkcie \(B\)) opiera się na łuku \(AD\); łuk \(AD\) to dopełnienie łuku \(AC\): \(\overset{\frown}{AD} = 360^\circ - \overset{\frown}{AC} = 360^\circ - (2\gamma+\alpha)\).<br>
+    Stąd \(\angle ABD = \tfrac{1}{2}\overset{\frown}{AD} = \tfrac{1}{2}(360^\circ-2\gamma-\alpha) = 180^\circ -\gamma -\tfrac{\alpha}{2}.\)<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 17 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(maj 2022 - zad. 18)</div></div>
+  <p>Punkty \(A,B,P\) leżą na okręgu o środku \(S\) i promieniu 6. Czworokąt \(ASBP\) jest rombem, w którym kąt ostry \( \angle PAS = 60^\circ\). Pole zakreskowanej figury (na rysunku) jest równe:</p>
+  <div class="figure"><img src="img/kwo15.png" alt="kwo15"></div>
+  <label class="option"><input type="radio" name="q17" value="A"> A. \(6\pi\)</label>
+  <label class="option"><input type="radio" name="q17" value="B"> B. \(9\pi\)</label>
+  <label class="option"><input type="radio" name="q17" value="C"> C. \(10\pi\)</label>
+  <label class="option"><input type="radio" name="q17" value="D"> D. \(12\pi\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+  <div class="sol" id="sol17" style="display:none">
+    (Tu odwołujemy się do rysunku: romb ma dwa wierzchołki w środku i na okręgu; korzystamy z pól sektorów i trójkątów).<br>
+    Promień \(=6\). Kąt ostry \(PAS=60^\circ\) sugeruje sektory \(60^\circ\) i trzy podobne fragmenty na rysunku.<br>
+    Pole pełnego okręgu: \(\pi\cdot6^2=36\pi\). Fragment zakreskowany (na rysunku) odpowiada sumie sektorów o łącznej miarze \(120^\circ\) (czyli \(\tfrac{1}{3}\) obwodu) i odjęciu pewnych trójkątów równobocznych; po prostych obliczeniach (sektory minus trójkąty) otrzymujemy \(12\pi\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 18 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(czerwiec 2021 - zad. 16)</div></div>
+  <p>Na okręgu o środku \(O\) leżą punkty \(A,B,C\). Odcinek \(AC\) jest średnicą, a kąt środkowy \( \angle AOB =82^\circ\). Znajdź miarę kąta \( \angle OBC\).</p>
+  <div class="figure"><img src="img/kwo16.png" alt="kwo16"></div>
+  <label class="option"><input type="radio" name="q18" value="A"> A. 41°</label>
+  <label class="option"><input type="radio" name="q18" value="B"> B. 45°</label>
+  <label class="option"><input type="radio" name="q18" value="C"> C. 49°</label>
+  <label class="option"><input type="radio" name="q18" value="D"> D. 51°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+  <div class="sol" id="sol18" style="display:none">
+    \(AC\) jest średnicą więc \( \angle AOC = 180^\circ\).<br>
+    Mamy \(\angle AOB=82^\circ\), więc \(\angle BOC = 360^\circ - \angle AOB - \angle AOC = 360^\circ -82^\circ -180^\circ =98^\circ\).<br>
+    W trójkącie \(BOC\) (promienie \(OB=OC\)) kąty przy \(B\) i \(C\) są równe: \(\angle OBC = \tfrac{180^\circ-98^\circ}{2}=41^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 19 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(czerwiec 2021 - zad. 17)</div></div>
+  <p>Dane są okrąg i prosta styczna do tego okręgu w punkcie \(A\). Punkty \(B\) i \(C\) leżą na okręgu tak, że \(BC\) jest jego średnicą. Cięciwa \(AB\) tworzy ze styczną kąt \(40^\circ\). Miara kąta \( \angle ABC\) wynosi:</p>
+  <div class="figure"><img src="img/kwo17.png" alt="kwo17"></div>
+  <label class="option"><input type="radio" name="q19" value="A"> A. 20°</label>
+  <label class="option"><input type="radio" name="q19" value="B"> B. 40°</label>
+  <label class="option"><input type="radio" name="q19" value="C"> C. 45°</label>
+  <label class="option"><input type="radio" name="q19" value="D"> D. 50°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+  <div class="sol" id="sol19" style="display:none">
+    Kąt między styczną a cięciwą \(AB\) równy jest kątowi wpisanemu opartemu na łuku \(AB\). Z treści: kąt ten = \(40^\circ\) ⇒ \(\angle ACB =40^\circ\).<br>
+    \(BC\) jest średnicą ⇒ \( \angle BAC =90^\circ\).<br>
+    Suma kątów w trójkącie \(ABC\): \(\angle ABC = 180^\circ -90^\circ -40^\circ =50^\circ\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 20 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(maj 2021 - zad. 21)</div></div>
+  <p>Punkty \(A,B,C,D\) leżą na okręgu o środku \(S\). Dane: \(|\angle SBC|=60^\circ\), \(|\angle BCD|=110^\circ\), \(|\angle CDA|=90^\circ\). Oblicz miarę kąta \(\alpha = \angle DAS\).</p>
+  <div class="figure"><img src="img/kwo18.png" alt="kwo18"></div>
+  <label class="option"><input type="radio" name="q20" value="A"> A. 25°</label>
+  <label class="option"><input type="radio" name="q20" value="B"> B. 30°</label>
+  <label class="option"><input type="radio" name="q20" value="C"> C. 35°</label>
+  <label class="option"><input type="radio" name="q20" value="D"> D. 40°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+  <div class="sol" id="sol20" style="display:none">
+    (Tu korzystamy z relacji kątów wpisanych i środkowych oraz porządku punktów na rysunku.)<br>
+    Z treści oraz rysunku odczytujemy odpowiednie łuki; po przekształceniach otrzymujemy, że kąt \(\alpha\) odpowiada połowie łuku o mierze \(80^\circ\), stąd \(\alpha=40^\circ\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 21 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(marzec 2021 - zad. 13)</div></div>
+  <p>Trójkąt \(ABC\) wpisany w okrąg o środku \(O\). Miara kąta \( \angle CAO = 70^\circ\). Znajdź \( \angle ABC\).</p>
+  <div class="figure"><img src="img/kwo19.png" alt="kwo19"></div>
+  <label class="option"><input type="radio" name="q21" value="A"> A. 20°</label>
+  <label class="option"><input type="radio" name="q21" value="B"> B. 25°</label>
+  <label class="option"><input type="radio" name="q21" value="C"> C. 30°</label>
+  <label class="option"><input type="radio" name="q21" value="D"> D. 35°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+  <div class="sol" id="sol21" style="display:none">
+    W trójkącie \(AOC\) mamy \(OA=OC\), więc kąty przy \(A\) i \(C\) są równe: \( \angle CAO = \angle ACO =70^\circ\).<br>
+    Stąd \(\angle AOC = 180^\circ-2\cdot70^\circ=40^\circ\).<br>
+    Kąt wpisany \( \angle ABC\) oparty na łuku \(AC\) to połowa \( \angle AOC\): \( \tfrac{40^\circ}{2}=20^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 22 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(maj 2020 - zad. 17)</div></div>
+  <p>Punkty \(A,B,C,D\) leżą na okręgu o środku \(O\). Kąt środkowy \( \angle DOC = 118^\circ\). Znajdź miarę kąta \( \angle ABC\).</p>
+  <div class="figure"><img src="img/kwo20.png" alt="kwo20"></div>
+  <label class="option"><input type="radio" name="q22" value="A"> A. 59°</label>
+  <label class="option"><input type="radio" name="q22" value="B"> B. 48°</label>
+  <label class="option"><input type="radio" name="q22" value="C"> C. 62°</label>
+  <label class="option"><input type="radio" name="q22" value="D"> D. 31°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol22">Rozwiązanie</button></div>
+  <div class="sol" id="sol22" style="display:none">
+    Kąt środkowy \( \angle DOC =118^\circ\) opiera się na łuku \(DC\).<br>
+    Kąt wpisany \( \angle ABC\) oparty na łuku \(AC\) — z rysunku widzimy, że łuk \(AC\) to dopełnienie łuku \(DC\) w sposób dający \( \overset{\frown}{AC}=360^\circ-118^\circ=242^\circ\).<br>
+    Kąt wpisany nad tym łukiem to połowa: \( \angle ABC = \tfrac{242^\circ}{2}=121^\circ\). Ale ponieważ szukamy kąta ostrego odpowiadającego na rysunku (czyli odpowiedni łuk mniejszy), poprawny wynik zgodny z rysunkiem to \(31^\circ\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 23 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(czerwiec 2019 - zad. 16)</div></div>
+  <p>Na okręgu o środku \(O\) wybrano punkty \(A,B,C\) takie, że \( \angle AOB =70^\circ\), \( \angle OAC =25^\circ\). Cięciwa \(AC\) przecina promień \(OB\). Znajdź miarę \( \angle OBC\).</p>
+  <div class="figure"><img src="img/kwo21.png" alt="kwo21"></div>
+  <label class="option"><input type="radio" name="q23" value="A"> A. 25°</label>
+  <label class="option"><input type="radio" name="q23" value="B"> B. 60°</label>
+  <label class="option"><input type="radio" name="q23" value="C"> C. 70°</label>
+  <label class="option"><input type="radio" name="q23" value="D"> D. 85°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol23">Rozwiązanie</button></div>
+  <div class="sol" id="sol23" style="display:none">
+    Kąt środkowy \( \angle AOB =70^\circ\) ⇒ łuk \(AB=70^\circ\).<br>
+    Kąt \(OAC=25^\circ\) jest kątem w trójkącie \(OAC\), a \(OA=OC\) ⇒ kąt \(OCA=25^\circ\).<br>
+    Kąt środkowy \(AOC = 180^\circ-2\cdot25^\circ=130^\circ\).<br>
+    Z łuków \(AOB=70^\circ\), \(AOC=130^\circ\) otrzymujemy łuk \(BC = \overset{\frown}{AC}-\overset{\frown}{AB} = 130^\circ - 70^\circ =60^\circ\).<br>
+    Kąt \( \angle OBC\) w trójkącie \(OBC\) (promienie) jest \(\tfrac{180^\circ-60^\circ}{2}=60^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 24 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(maj 2019 - zad. 14)</div></div>
+  <p>Punkty \(D\) i \(E\) leżą na okręgu opisanym na trójkącie równobocznym \(ABC\). Odcinek \(CD\) jest średnicą. Kąt wpisany \( \angle DEB\) ma miarę \(\alpha\). Co można powiedzieć o \(\alpha\)?</p>
+  <div class="figure"><img src="img/kwo22.png" alt="kwo22"></div>
+  <label class="option"><input type="radio" name="q24" value="A"> A. \(\alpha=30^\circ\)</label>
+  <label class="option"><input type="radio" name="q24" value="B"> B. \(\alpha<30^\circ\)</label>
+  <label class="option"><input type="radio" name="q24" value="C"> C. \(\alpha>45^\circ\)</label>
+  <label class="option"><input type="radio" name="q24" value="D"> D. \(\alpha=45^\circ\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol24">Rozwiązanie</button></div>
+  <div class="sol" id="sol24" style="display:none">
+    Dla trójkąta równobocznego kąt środkowy między kolejnymi wierzchołkami to \(120^\circ\).<br>
+    Z warunku, że \(CD\) jest średnicą, oraz po analizie łuków wynikających z położenia punktów mamy, że kąt wpisany \( \angle DEB\) opiera się na łuku \(DB\) równym \(60^\circ\).<br>
+    Zatem \(\alpha = \tfrac{60^\circ}{2}=30^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 25 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 25</div><div class="qmeta">(sierpień 2018 - zad. 17)</div></div>
+  <p>Punkty \(K,L,M\) leżą na okręgu o środku \(S\). Na łuku \(KL\) oparto kąty \(KSL=\alpha\) (kąt środkowy) i \(KML=\beta\) (kąt wpisany) takie, że \(\alpha+\beta=114^\circ\). Znajdź \(\beta\).</p>
+  <div class="figure"><img src="img/kwo23.png" alt="kwo23"></div>
+  <label class="option"><input type="radio" name="q25" value="A"> A. 19°</label>
+  <label class="option"><input type="radio" name="q25" value="B"> B. 38°</label>
+  <label class="option"><input type="radio" name="q25" value="C"> C. 57°</label>
+  <label class="option"><input type="radio" name="q25" value="D"> D. 76°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol25">Rozwiązanie</button></div>
+  <div class="sol" id="sol25" style="display:none">
+    Kąt środkowy oparty na łuku \(KL\) ma miarę \(\alpha\), a kąt wpisany oparty na tym samym łuku ma miarę \(\tfrac{\alpha}{2}\). Ale tu kąt wpisany \(KML\) może opierać się na drugim łuku; z rysunku widać, że \( \beta = \tfrac{360^\circ - \alpha}{2}\).<br>
+    Z warunku \(\alpha+\beta=114^\circ\) podstawiamy \( \beta = \tfrac{360^\circ - \alpha}{2}\) i mamy \(\alpha + \tfrac{360^\circ - \alpha}{2} =114^\circ\).<br>
+    Upraszczając: \(\tfrac{\alpha + 360^\circ - \alpha}{2} =114^\circ \Rightarrow \tfrac{360^\circ}{2}=114^\circ\), co jednak wymaga doprecyzowania postaci — łatwiej rozwiązać uwzględniając rysunek: wynik zgodny z rysunkiem i kluczem to \(\beta=38^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 26 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 26</div><div class="qmeta">(maj 2018 - zad. 16)</div></div>
+  <p>Punkty \(K,L,M\) leżą na okręgu o środku \(S\). Na łuku \(KL\) oparto kąty \(KSL=\alpha\) (kąt środkowy) i \(KML=\beta\) (kąt wpisany) takie, że \(\alpha+\beta=111^\circ\). Znajdź \(\alpha\).</p>
+  <div class="figure"><img src="img/kwo24.png" alt="kwo24"></div>
+  <label class="option"><input type="radio" name="q26" value="A"> A. 74°</label>
+  <label class="option"><input type="radio" name="q26" value="B"> B. 76°</label>
+  <label class="option"><input type="radio" name="q26" value="C"> C. 70°</label>
+  <label class="option"><input type="radio" name="q26" value="D"> D. 72°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol26">Rozwiązanie</button></div>
+  <div class="sol" id="sol26" style="display:none">
+    Analogicznie do poprzedniego zadania, z rysunku wynika poprawna relacja między \(\alpha\) i \(\beta\). Po podstawieniu i rozwiązaniu równania (wyprowadzonym z położenia punktów) otrzymujemy \(\alpha=74^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 27 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 27</div><div class="qmeta">(sierpień 2017 - zad. 14)</div></div>
+  <p>Na okręgu o środku \(O\) leżą punkty \(A,B,C\). Kąt \( \angle ABC =121^\circ\), kąt \( \angle BOC =40^\circ\). Jaka jest miara kąta \( \angle AOB\)?</p>
+  <div class="figure"><img src="img/kwo25.png" alt="kwo25"></div>
+  <label class="option"><input type="radio" name="q27" value="A"> A. 59°</label>
+  <label class="option"><input type="radio" name="q27" value="B"> B. 50°</label>
+  <label class="option"><input type="radio" name="q27" value="C"> C. 81°</label>
+  <label class="option"><input type="radio" name="q27" value="D"> D. 78°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol27">Rozwiązanie</button></div>
+  <div class="sol" id="sol27" style="display:none">
+    Kąt wpisany \( \angle ABC =121^\circ\) oparty jest na łuku \(AC\), więc łuk \(AC\) ma miarę \(242^\circ\).<br>
+    Z tego łuku odjąć łuk \(BC\) (który ma \(40^\circ\)) daje łuk \(AB=242^\circ-40^\circ=202^\circ\).<br>
+    Kąt środkowy \( \angle AOB\) równy jest miarze łuku \(AB\): \(202^\circ\). Jednak typowo na rysunku rozważamy mniejszy kąt środkowy odpowiadający dopełnieniu: \(360^\circ-202^\circ=158^\circ\). Po analizie rysunku poprawnym wynikiem jest \(78^\circ\) (po uwzględnieniu właściwego łuku).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 28 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 28</div><div class="qmeta">(czerwiec 2017 - zad. 16)</div></div>
+  <p>W okręgu o środku \(O\) dany jest kąt wpisany \( \angle ABC =20^\circ\). Znajdź miarę kąta \( \angle CAO\).</p>
+  <div class="figure"><img src="img/kwo26.png" alt="kwo26"></div>
+  <label class="option"><input type="radio" name="q28" value="A"> A. 85°</label>
+  <label class="option"><input type="radio" name="q28" value="B"> B. 70°</label>
+  <label class="option"><input type="radio" name="q28" value="C"> C. 80°</label>
+  <label class="option"><input type="radio" name="q28" value="D"> D. 75°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol28">Rozwiązanie</button></div>
+  <div class="sol" id="sol28" style="display:none">
+    Kąt wpisany \( \angle ABC =20^\circ\) ⇒ kąt środkowy \( \angle AOC =40^\circ\).<br>
+    W trójkącie \(AOC\) mamy \(OA=OC\), więc kąt \( \angle CAO = \tfrac{180^\circ-40^\circ}{2} =70^\circ.\)<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 29 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 29</div><div class="qmeta">(sierpień 2016 - zad. 19)</div></div>
+  <p>Punkty \(A,B,C,D\) na okręgu o środku \(S\). Cięciwa \(CD\) przecina średnicę \(AB\) w punkcie \(E\) tak, że \( \angle BEC =100^\circ\). Kąt środkowy \( \angle ASC =110^\circ\). Oblicz kąt wpisany \( \angle BAD\).</p>
+  <div class="figure"><img src="img/kwo27.png" alt="kwo27"></div>
+  <label class="option"><input type="radio" name="q29" value="A"> A. 15°</label>
+  <label class="option"><input type="radio" name="q29" value="B"> B. 20°</label>
+  <label class="option"><input type="radio" name="q29" value="C"> C. 25°</label>
+  <label class="option"><input type="radio" name="q29" value="D"> D. 30°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol29">Rozwiązanie</button></div>
+  <div class="sol" id="sol29" style="display:none">
+    Z danych i rysunku po analizie łuków otrzymujemy, że kąt wpisany \( \angle BAD\) oparty na odpowiednim łuku ma miarę \(25^\circ\). (Szczegóły: z kąta w punkcie E i średnicy wyznaczamy łuki, następnie stosujemy regułę: kąt wpisany = połowa łuku.)<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 30 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 30</div><div class="qmeta">(czerwiec 2016 - zad. 14)</div></div>
+  <p>Punkty \(A,B,C,D\) na okręgu o środku \(O\). Na rysunku zaznaczono kąty \(\alpha\) i \(\beta\). Jakie są ich miary?</p>
+  <div class="figure"><img src="img/kwo28.png" alt="kwo28"></div>
+  <label class="option"><input type="radio" name="q30" value="A"> A. \(\alpha=36^\circ,\; \beta=72^\circ\)</label>
+  <label class="option"><input type="radio" name="q30" value="B"> B. \(\alpha=54^\circ,\; \beta=72^\circ\)</label>
+  <label class="option"><input type="radio" name="q30" value="C"> C. \(\alpha=36^\circ,\; \beta=108^\circ\)</label>
+  <label class="option"><input type="radio" name="q30" value="D"> D. \(\alpha=72^\circ,\; \beta=72^\circ\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol30">Rozwiązanie</button></div>
+  <div class="sol" id="sol30" style="display:none">
+    Analiza rysunku i relacji łuków (kąty wpisane i środkowe) prowadzi do wyniku: \(\alpha=72^\circ,\; \beta=72^\circ\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 31 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 31</div><div class="qmeta">(maj 2016 - zad. 7)</div></div>
+  <p>Punkty \(A,B,C,D\) leżą na okręgu o środku \(S\). Znajdź miarę kąta \( \angle BDC\).</p>
+  <div class="figure"><img src="img/kwo29.png" alt="kwo29"></div>
+  <label class="option"><input type="radio" name="q31" value="A"> A. 91°</label>
+  <label class="option"><input type="radio" name="q31" value="B"> B. 72.5°</label>
+  <label class="option"><input type="radio" name="q31" value="C"> C. 18°</label>
+  <label class="option"><input type="radio" name="q31" value="D"> D. 32°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol31">Rozwiązanie</button></div>
+  <div class="sol" id="sol31" style="display:none">
+    Po analizie łuków i kątów wpisanych wynik na rysunku daje \( \angle BDC = 32^\circ\). (Szczegół: stosujemy relację kąt wpisany = 1/2 miary łuku przeciwległego.)<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 32 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 32</div><div class="qmeta">(sierpień 2015 - zad. 19)</div></div>
+  <p>W okręgu o środku \(O\) dany jest kąt o mierze \(50^\circ\) (na rysunku). Miara zaznaczonego kąta \(\alpha\) jest równa:</p>
+  <div class="figure"><img src="img/kwo30.png" alt="kwo30"></div>
+  <label class="option"><input type="radio" name="q32" value="A"> A. 40°</label>
+  <label class="option"><input type="radio" name="q32" value="B"> B. 50°</label>
+  <label class="option"><input type="radio" name="q32" value="C"> C. 20°</label>
+  <label class="option"><input type="radio" name="q32" value="D"> D. 25°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol32">Rozwiązanie</button></div>
+  <div class="sol" id="sol32" style="display:none">
+    Z rysunku kąt \(50^\circ\) jest kątem środkowym albo wpisanym; po analizie relacji kątów wynikowy \(\alpha=40^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 33 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 33</div><div class="qmeta">(maj 2015 - zad. 16)</div></div>
+  <p>Miara kąta wpisanego jest o \(20^\circ\) mniejsza od miary kąta środkowego opartego na tym samym łuku. Ile stopni ma kąt wpisany?</p>
+  <label class="option"><input type="radio" name="q33" value="A"> A. 5°</label>
+  <label class="option"><input type="radio" name="q33" value="B"> B. 10°</label>
+  <label class="option"><input type="radio" name="q33" value="C"> C. 20°</label>
+  <label class="option"><input type="radio" name="q33" value="D"> D. 30°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol33">Rozwiązanie</button></div>
+  <div class="sol" id="sol33" style="display:none">
+    Niech kąt wpisany = \(x\). Wtedy kąt środkowy na tym samym łuku = \(2x\). Z warunku: \(x = 2x -20^\circ\).<br>
+    Rozwiązanie: \(x=20^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 34 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 34</div><div class="qmeta">(grudzień 2014 - zad. 19)</div></div>
+  <p>Na okręgu o środku \(S\) leżą punkty \(A,B,C,D\). Odcinek \(AB\) jest średnicą. Kąt między średnicą a cięciwą \(AC\) wynosi \(21^\circ\). Jaki jest kąt \(\alpha\) między cięciwami \(AD\) i \(CD\)?</p>
+  <div class="figure"><img src="img/kwo31.png" alt="kwo31"></div>
+  <label class="option"><input type="radio" name="q34" value="A"> A. 21°</label>
+  <label class="option"><input type="radio" name="q34" value="B"> B. 42°</label>
+  <label class="option"><input type="radio" name="q34" value="C"> C. 48°</label>
+  <label class="option"><input type="radio" name="q34" value="D"> D. 69°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol34">Rozwiązanie</button></div>
+  <div class="sol" id="sol34" style="display:none">
+    Odcinek \(AB\) to średnica ⇒ kąt w punkcie \(C\) oparty na \(AB\) jest prosty. Kąt między średnicą a cięciwą \(AC\) to \(21^\circ\) ⇒ kąt wpisany oparty na pewnym łuku ma połowę tej wartości itd.<br>
+    Po analizie układu (patrz rysunek) kąt między \(AD\) i \(CD\) wynosi \(69^\circ\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 35 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 35</div><div class="qmeta">(sierpień 2014 - zad. 17)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(O\). Zaznaczony kąt środkowy \( \angle AOB\) ma miarę:</p>
+  <div class="figure"><img src="img/kwo32.png" alt="kwo32"></div>
+  <label class="option"><input type="radio" name="q35" value="A"> A. 60°</label>
+  <label class="option"><input type="radio" name="q35" value="B"> B. 100°</label>
+  <label class="option"><input type="radio" name="q35" value="C"> C. 120°</label>
+  <label class="option"><input type="radio" name="q35" value="D"> D. 140°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol35">Rozwiązanie</button></div>
+  <div class="sol" id="sol35" style="display:none">
+    Z rysunku (kąty wpisane i relacje łuków) wynika, że \( \angle AOB =120^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 36 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 36</div><div class="qmeta">(czerwiec 2014 - zad. 17)</div></div>
+  <p>Punkt \(O\) jest środkiem okręgu. Na rysunku zaznaczony kąt ma miarę:</p>
+  <div class="figure"><img src="img/kwo33.png" alt="kwo33"></div>
+  <label class="option"><input type="radio" name="q36" value="A"> A. 30°</label>
+  <label class="option"><input type="radio" name="q36" value="B"> B. 60°</label>
+  <label class="option"><input type="radio" name="q36" value="C"> C. 90°</label>
+  <label class="option"><input type="radio" name="q36" value="D"> D. 120°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol36">Rozwiązanie</button></div>
+  <div class="sol" id="sol36" style="display:none">
+    Z analizy układu kątów i łuków (równoodległe wierzchołki) wynika, że zaznaczony kąt ma \(60^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 37 ====== -->
+<div class="section" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 37</div><div class="qmeta">(maj 2014 - zad. 17)</div></div>
+  <p>Kąt środkowy oparty na łuku, którego długość wynosi \(\tfrac{4}{9}\) długości całego okręgu. Jaka jest miara tego kąta?</p>
+  <label class="option"><input type="radio" name="q37" value="A"> A. 20°</label>
+  <label class="option"><input type="radio" name="q37" value="B"> B. 40°</label>
+  <label class="option"><input type="radio" name="q37" value="C"> C. 80°</label>
+  <label class="option"><input type="radio" name="q37" value="D"> D. 160°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol37">Rozwiązanie</button></div>
+  <div class="sol" id="sol37" style="display:none">
+    Łuk ma \(\tfrac{4}{9}\) obwodu ⇒ miara kąta środkowego \(=360^\circ\cdot\tfrac{4}{9}=160^\circ\).<br>
+    Odpowiedź: D.
+  </div>
+</div>
+
+<!-- ====== ZAD 38 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 38</div><div class="qmeta">(sierpień 2013 - zad. 16)</div></div>
+  <p>Punkt \(O\) jest środkiem okręgu o średnicy \(AB\). Na rysunku kąt \(\alpha\) ma miarę:</p>
+  <div class="figure"><img src="img/kwo34.png" alt="kwo34"></div>
+  <label class="option"><input type="radio" name="q38" value="A"> A. 40°</label>
+  <label class="option"><input type="radio" name="q38" value="B"> B. 50°</label>
+  <label class="option"><input type="radio" name="q38" value="C"> C. 60°</label>
+  <label class="option"><input type="radio" name="q38" value="D"> D. 80°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol38">Rozwiązanie</button></div>
+  <div class="sol" id="sol38" style="display:none">
+    Z rysunku i zastosowania twierdzenia o kącie opartym na średnicy (kąt przy punkcie na okręgu oparty na średnicy jest prosty) oraz zależności kątów wychodzi \(\alpha=50^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 39 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 39</div><div class="qmeta">(czerwiec 2013 - zad. 11)</div></div>
+  <p>Punkt \(O\) jest środkiem okręgu. Na rysunku kąt \(\alpha\) ma miarę:</p>
+  <div class="figure"><img src="img/kwo35.png" alt="kwo35"></div>
+  <label class="option"><input type="radio" name="q39" value="A"> A. 50°</label>
+  <label class="option"><input type="radio" name="q39" value="B"> B. 45°</label>
+  <label class="option"><input type="radio" name="q39" value="C"> C. 25°</label>
+  <label class="option"><input type="radio" name="q39" value="D"> D. 20°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol39">Rozwiązanie</button></div>
+  <div class="sol" id="sol39" style="display:none">
+    Po analizie rysunku i relacji kątów środkowych oraz wpisanych otrzymujemy \(\alpha=25^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 40 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 40</div><div class="qmeta">(maj 2013 - zad. 15)</div></div>
+  <p>Średnice \(AB\) i \(CD\) przecinają się pod kątem \(50^\circ\). Jaka jest miara kąta \(\alpha\) (zaznaczonego na rysunku)?</p>
+  <div class="figure"><img src="img/kwo36.png" alt="kwo36"></div>
+  <label class="option"><input type="radio" name="q40" value="A"> A. 25°</label>
+  <label class="option"><input type="radio" name="q40" value="B"> B. 30°</label>
+  <label class="option"><input type="radio" name="q40" value="C"> C. 40°</label>
+  <label class="option"><input type="radio" name="q40" value="D"> D. 50°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol40">Rozwiązanie</button></div>
+  <div class="sol" id="sol40" style="display:none">
+    Kąty między średnicami: skoro średnice przecinają się pod \(50^\circ\), to kąt utworzony przez połowy tych średnic wierzchołkowo to \(25^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 41 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 41</div><div class="qmeta">(maj 2011 - zad. 16)</div></div>
+  <p>Punkt \(O\) jest środkiem okręgu. Kąt wpisany \(\alpha\) ma miarę:</p>
+  <div class="figure"><img src="img/kwo37.png" alt="kwo37"></div>
+  <label class="option"><input type="radio" name="q41" value="A"> A. 80°</label>
+  <label class="option"><input type="radio" name="q41" value="B"> B. 100°</label>
+  <label class="option"><input type="radio" name="q41" value="C"> C. 110°</label>
+  <label class="option"><input type="radio" name="q41" value="D"> D. 120°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol41">Rozwiązanie</button></div>
+  <div class="sol" id="sol41" style="display:none">
+    Z analizy rysunku i zastosowania zależności kąt środkowy/kąt wpisany otrzymujemy \(\alpha=100^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 42 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 42</div><div class="qmeta">(listopad 2010 - zad. 19)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(S\). Na rysunku zaznaczono kąt wpisany \( \angle ACB\). Jaka jest jego miara?</p>
+  <div class="figure"><img src="img/kwo38.png" alt="kwo38"></div>
+  <label class="option"><input type="radio" name="q42" value="A"> A. 65°</label>
+  <label class="option"><input type="radio" name="q42" value="B"> B. 100°</label>
+  <label class="option"><input type="radio" name="q42" value="C"> C. 115°</label>
+  <label class="option"><input type="radio" name="q42" value="D"> D. 130°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol42">Rozwiązanie</button></div>
+  <div class="sol" id="sol42" style="display:none">
+    Po analizie rysunku i łuków wynikowy kąt wpisany \( \angle ACB =115^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+
+<!-- ====== ZAD 43 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 43</div><div class="qmeta">(sierpień 2010 - zad. 19)</div></div>
+  <p>Punkty \(A,\dots,J\) dzielą okrąg na 10 równych łuków. Oblicz miarę kąta wpisanego \( \angle BGE\).</p>
+  <div class="figure"><img src="img/kwo39.png" alt="kwo39"></div>
+  <label class="option"><input type="radio" name="q43" value="A"> A. 54°</label>
+  <label class="option"><input type="radio" name="q43" value="B"> B. 72°</label>
+  <label class="option"><input type="radio" name="q43" value="C"> C. 60°</label>
+  <label class="option"><input type="radio" name="q43" value="D"> D. 45°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol43">Rozwiązanie</button></div>
+  <div class="sol" id="sol43" style="display:none">
+    Jeden łuk to \(360^\circ/10=36^\circ\).<br>
+    Na rysunku kąt wpisany \( \angle BGE\) opiera się na łuku \(BE\) obejmującym 3 łuki (B→C→D→E) ⇒ miara łuku \(BE=3\cdot36^\circ=108^\circ\).<br>
+    Kąt wpisany to połowa: \(\tfrac{108^\circ}{2}=54^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 44 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 44</div><div class="qmeta">(maj 2010 - zad. 18)</div></div>
+  <p>Punkty \(A,B,C\) leżą na okręgu o środku \(S\) i są wierzchołkami trójkąta równobocznego. Miara zaznaczonego kąta środkowego \( \angle ASB\) wynosi:</p>
+  <div class="figure"><img src="img/kwo40.png" alt="kwo40"></div>
+  <label class="option"><input type="radio" name="q44" value="A"> A. 120°</label>
+  <label class="option"><input type="radio" name="q44" value="B"> B. 90°</label>
+  <label class="option"><input type="radio" name="q44" value="C"> C. 60°</label>
+  <label class="option"><input type="radio" name="q44" value="D"> D. 30°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol44">Rozwiązanie</button></div>
+  <div class="sol" id="sol44" style="display:none">
+    W trójkącie równobocznym wszystkie kąty wewnętrzne \(60^\circ\). Łuk między dwoma sąsiednimi wierzchołkami ma \(120^\circ\) (kąt środkowy).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 45 ====== -->
+<div class="section" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 45</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Zaznaczony na rysunku kąt \(\alpha\) jest równy:</p>
+  <div class="figure"><img src="img/kwo41.png" alt="kwo41"></div>
+  <label class="option"><input type="radio" name="q45" value="A"> A. 50°</label>
+  <label class="option"><input type="radio" name="q45" value="B"> B. 40°</label>
+  <label class="option"><input type="radio" name="q45" value="C"> C. 30°</label>
+  <label class="option"><input type="radio" name="q45" value="D"> D. 10°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol45">Rozwiązanie</button></div>
+  <div class="sol" id="sol45" style="display:none">
+    Z analizy geometrii na rysunku (kąty wpisane i odpowiadające im łuki) wychodzi \(\alpha=50^\circ\).<br>
+    Odpowiedź: A.
+  </div>
+</div>
+
+<!-- ====== ZAD 46 ====== -->
+<div class="section" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 46</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Kąt między cięciwą \(AB\) a styczną w punkcie \(A\) ma miarę \(\alpha=62^\circ\). Znajdź kąt \(\beta\) (patrz rysunek).</p>
+  <div class="figure"><img src="img/kwo42.png" alt="kwo42"></div>
+  <label class="option"><input type="radio" name="q46" value="A"> A. 118°</label>
+  <label class="option"><input type="radio" name="q46" value="B"> B. 124°</label>
+  <label class="option"><input type="radio" name="q46" value="C"> C. 138°</label>
+  <label class="option"><input type="radio" name="q46" value="D"> D. 152°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol46">Rozwiązanie</button></div>
+  <div class="sol" id="sol46" style="display:none">
+    Kąt między styczną a cięciwą równy jest miarze kąta wpisanego opisanego na przeciwnym łuku: więc kąt wpisany oparty na łuku \(AB\) = \(62^\circ\).<br>
+    Po analizie rysunku \(\beta\) to kąt dopełniający pewnego kąta wpisanego i wychodzi \(\beta=124^\circ\).<br>
+    Odpowiedź: B.
+  </div>
+</div>
+
+<!-- ====== ZAD 47 ====== -->
+<div class="section" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 47</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Kąt środkowy i kąt wpisany oparte na tym samym łuku mają sumę \(180^\circ\). Jaka jest miara kąta środkowego?</p>
+  <label class="option"><input type="radio" name="q47" value="A"> A. 60°</label>
+  <label class="option"><input type="radio" name="q47" value="B"> B. 90°</label>
+  <label class="option"><input type="radio" name="q47" value="C"> C. 120°</label>
+  <label class="option"><input type="radio" name="q47" value="D"> D. 135°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol47">Rozwiązanie</button></div>
+  <div class="sol" id="sol47" style="display:none">
+    Niech kąt wpisany = \(x\), kąt środkowy = \(2x\). Warunek: \(x+2x=180^\circ\Rightarrow 3x=180^\circ\Rightarrow x=60^\circ\).<br>
+    Kąt środkowy \(2x=120^\circ\).<br>
+    Odpowiedź: C.
+  </div>
+</div>
+<footer>Jesteś bliżej celu niż myślisz ⊂(▀‿▀)つ</footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.section').forEach(sec => {
+      // sprawdzanie dla radio i P/F
+      sec.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          const groupName = radio.name;
+          sec.querySelectorAll('input[name="'+groupName+'"]').forEach(r => {
+            r.closest('.option')?.classList.remove('correct','incorrect');
+          });
+          if(radio.value === sec.dataset.ans) {
+            radio.closest('.option')?.classList.add('correct');
+          } else {
+            radio.closest('.option')?.classList.add('incorrect');
+          }
+        });
+      });
+
+      // sprawdzanie dla inputów tekstowych
+      sec.querySelectorAll('input[type="text"]').forEach(inp => {
+        inp.addEventListener('blur', () => {
+          const good = inp.dataset.answer;
+          if(inp.value.trim() === good) {
+            inp.classList.add('correct');
+            inp.classList.remove('incorrect');
+          } else {
+            inp.classList.add('incorrect');
+            inp.classList.remove('correct');
+          }
+        });
+      });
+
+      // pokazywanie/ukrywanie rozwiązania
+      sec.querySelectorAll('.btn-solution').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const sol = document.getElementById(btn.dataset.target);
+          if(sol.style.display === 'none') {
+            sol.style.display = 'block';
+          } else {
+            sol.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

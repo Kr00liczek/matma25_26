@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wzór ciągu</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Wzór ciągu</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2025 - zad. 14.1)</div>
+        <div class="qtext">Ciąg \(a_n=3n^2-3n\). Oblicz \(S_3\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> 18</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> 24</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> 60</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> 90</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_1=0, a_2=6, a_3=18\). Suma: \(0+6+18=24\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2025 - zad. 14.1)</div>
+        <div class="qtext">Ciąg: \(a_1=2,\; a_{n+1}=2a_n+1\). Oblicz \(a_3\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> 7</div></label>
+      <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> 11</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_1=2, a_2=5, a_3=11\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2024 - zad. 13)</div>
+        <div class="qtext">Ciąg: \(S_n=n^2+2n\). Oblicz \(a_3\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> 7</div></label>
+      <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> 13</div></label>
+      <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> 15</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_3=S_3-S_2=(9+6)-(4+4)=15-8=7\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2024 - zad. 16.1)</div>
+        <div class="qtext">Ciąg: \(a_n=2(-1)^{n+1}+5\). Oblicz sumę 10 początkowych wyrazów.</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> 7</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> 50</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> 100</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Wyrazy: 7,3,7,3,... po 10 elementów. 5×7+5×3=35+15=50. Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="P,F">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2024 - zad. 15)</div>
+        <div class="qtext">Ciąg: \(a_n=(-1)^n(n-5)\). Oceń prawdziwość.</div>
+      </div>
+    </div>
+    <div class="qmeta"><b>1.</b> Pierwszy wyraz jest 2× większy od trzeciego.</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5_1" value="P"><div><b>P.</b> Prawda</div></label>
+      <label class="option"><input type="radio" name="q5_1" value="F"><div><b>F.</b> Fałsz</div></label>
+    </div>
+    <div class="qmeta"><b>2.</b> Wszystkie wyrazy są dodatnie.</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5_2" value="P"><div><b>P.</b> Prawda</div></label>
+      <label class="option"><input type="radio" name="q5_2" value="F"><div><b>F.</b> Fałsz</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_1=-4, a_3=-2\). Stwierdzenie 1: \(-4=2·(-2)\) → Prawda.  
+      Stwierdzenie 2: pojawiają się ujemne → Fałsz.  
+      Odp.: <b>P,F</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="P,F">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2023 - zad. 14)</div>
+        <div class="qtext">Ciąg: \(S_n=4(2n-1)\). Oceń prawdziwość.</div>
+      </div>
+    </div>
+    <div class="qmeta"><b>1.</b> \(a_1=4\).</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6_1" value="P"><div><b>P.</b> Prawda</div></label>
+      <label class="option"><input type="radio" name="q6_1" value="F"><div><b>F.</b> Fałsz</div></label>
+    </div>
+    <div class="qmeta"><b>2.</b> \(a_2=12\).</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6_2" value="P"><div><b>P.</b> Prawda</div></label>
+      <label class="option"><input type="radio" name="q6_2" value="F"><div><b>F.</b> Fałsz</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_1=S_1=4\) → Prawda.  
+      \(a_2=S_2-S_1=12-4=8\) → Fałsz.  
+      Odp.: <b>P,F</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2023 - zad. 16)</div>
+        <div class="qtext">Ciąg: \(a_n=(-1)^n\frac{n+1}{2}\). Oblicz \(a_3\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> -2</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> -1</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_3=(-1)^3\cdot\frac{4}{2}=-2\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2023 - zad. 16)</div>
+        <div class="qtext">Ciąg \(a_n=\frac{n-2}{3}\). Ile wyrazów tego ciągu jest mniejszych od 10?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> 28</div></label>
+      <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> 31</div></label>
+      <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> 32</div></label>
+      <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> 27</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Warunek: \(\tfrac{n-2}{3}<10 \Rightarrow n<32\). Naturalne \(n\geq1\), więc \(n=1,\dots,31\).  
+      Liczba wyrazów = 31. Odp.: <b>B</b>.
+    </div>
+  </div>
+
+   <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2023 - zad. 15)</div>
+        <div class="qtext">Ciąg \(a_n = 2^n \cdot (n+1)\). Oblicz \(a_4\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> 64</div></label>
+      <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> 40</div></label>
+      <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> 48</div></label>
+      <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> 80</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_4 = 2^4 \cdot (4+1) = 16 \cdot 5 = 80\).  
+      Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="F,P">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2022 - zad. 15)</div>
+        <div class="qtext">Ciąg \(a_n=2n^2+n\). Oceń prawdziwość.</div>
+      </div>
+    </div>
+    <div class="qmeta"><b>1.</b> Ciąg jest malejący.</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q10_1" value="P"><div><b>P.</b> Prawda</div></label>
+      <label class="option"><input type="radio" name="q10_1" value="F"><div><b>F.</b> Fałsz</div></label>
+    </div>
+    <div class="qmeta"><b>2.</b> Ósmy wyraz ciągu to 136.</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q10_2" value="P"><div><b>P.</b> Prawda</div></label>
+      <label class="option"><input type="radio" name="q10_2" value="F"><div><b>F.</b> Fałsz</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      1. Ciąg rośnie (bo kwadrat + liniowy) → Fałsz.  
+      2. \(a_8=2·64+8=136\) → Prawda.  
+      Odp.: <b>F,P</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(wrzesień 2022 - zad. 14.1)</div>
+        <div class="qtext">Ciąg \(a_n = \tfrac{7^n}{3}\). Oblicz \(a_{50}\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> \(\tfrac{7^{49}}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> \(\tfrac{7^{50}}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> \(\tfrac{7^{51}}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> \(\tfrac{7^{52}}{3}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_{50} = \tfrac{7^{50}}{3}\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2022 - zad. 13)</div>
+        <div class="qtext">Dane: \(a_n=3n,\; b_n=4n-2\). Czy 10 należy do któregoś ciągu?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q12" value="A"><div><b>A.</b> Tak, do obu</div></label>
+      <label class="option"><input type="radio" name="q12" value="B"><div><b>B.</b> Tylko do \(a_n\)</div></label>
+      <label class="option"><input type="radio" name="q12" value="C"><div><b>C.</b> Tylko do \(b_n\)</div></label>
+      <label class="option"><input type="radio" name="q12" value="D"><div><b>D.</b> Do żadnego</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_n=10 \Rightarrow 3n=10\) brak rozwiązania.  
+      \(b_n=10 \Rightarrow 4n-2=10 \Rightarrow n=3\).  
+      Pasuje tylko do \(b_n\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2022 - zad. 14)</div>
+        <div class="qtext">Ciąg \(a_n=\tfrac{n-2}{2n^2}\). Oblicz \(a_5\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q13" value="A"><div><b>A.</b> \(-\tfrac{1}{10}\)</div></label>
+      <label class="option"><input type="radio" name="q13" value="B"><div><b>B.</b> \(\tfrac{3}{50}\)</div></label>
+      <label class="option"><input type="radio" name="q13" value="C"><div><b>C.</b> \(\tfrac{3}{100}\)</div></label>
+      <label class="option"><input type="radio" name="q13" value="D"><div><b>D.</b> \(-\tfrac{1}{5}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5=\frac{5-2}{2·25}=\frac{3}{50}\). Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2022 - zad. 13)</div>
+        <div class="qtext">Ciąg \(a_n=\tfrac{2n^2-30n}{n}\). Oblicz \(a_7\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q14" value="A"><div><b>A.</b> -196</div></label>
+      <label class="option"><input type="radio" name="q14" value="B"><div><b>B.</b> -32</div></label>
+      <label class="option"><input type="radio" name="q14" value="C"><div><b>C.</b> -26</div></label>
+      <label class="option"><input type="radio" name="q14" value="D"><div><b>D.</b> -16</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_7=\frac{2·49-210}{7}=\frac{98-210}{7}=\frac{-112}{7}=-16\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2021 - zad. 13)</div>
+        <div class="qtext">Który ciąg ma dziesiąty wyraz równy 197?<br>
+          \(a_n=20n+3,\; b_n=2n^2-3,\; c_n=n^2+10n-2,\; d_n=\tfrac{n+187}{n}\).
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q15" value="A"><div><b>A.</b> \(a_n\)</div></label>
+      <label class="option"><input type="radio" name="q15" value="B"><div><b>B.</b> \(b_n\)</div></label>
+      <label class="option"><input type="radio" name="q15" value="C"><div><b>C.</b> \(c_n\)</div></label>
+      <label class="option"><input type="radio" name="q15" value="D"><div><b>D.</b> \(d_n\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(b_{10}=2·100-3=197\). Odp.: <b>B</b>.
+    </div>
+  </div>
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2021 - zad. 14)</div>
+        <div class="qtext">Ciąg \(b_n = 3n^2 - 25n\). Ile wyrazów niedodatnich ma ten ciąg?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q16" value="A"><div><b>A.</b> 14</div></label>
+      <label class="option"><input type="radio" name="q16" value="B"><div><b>B.</b> 13</div></label>
+      <label class="option"><input type="radio" name="q16" value="C"><div><b>C.</b> 9</div></label>
+      <label class="option"><input type="radio" name="q16" value="D"><div><b>D.</b> 8</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Nierówność: \(3n^2 - 25n \leq 0 \Rightarrow n(3n-25)\leq 0\).  
+      Rozwiązania: \(1 \leq n \leq 8\).  
+      Jest 8 takich wyrazów. Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2021 - zad. 15)</div>
+        <div class="qtext">Ciąg \(a_n = (-2)^n \cdot n + 1\). Oblicz trzeci wyraz ciągu.</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q17" value="A"><div><b>A.</b> -24</div></label>
+      <label class="option"><input type="radio" name="q17" value="B"><div><b>B.</b> -17</div></label>
+      <label class="option"><input type="radio" name="q17" value="C"><div><b>C.</b> -32</div></label>
+      <label class="option"><input type="radio" name="q17" value="D"><div><b>D.</b> -23</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_3 = (-2)^3 \cdot 3 + 1 = -8 \cdot 3 + 1 = -24 + 1 = -23\).  
+      Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2020 - zad. 14)</div>
+        <div class="qtext">Ciąg \(a_n = 2n^2\). Oblicz różnicę \(a_5 - a_4\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q18" value="A"><div><b>A.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q18" value="B"><div><b>B.</b> 20</div></label>
+      <label class="option"><input type="radio" name="q18" value="C"><div><b>C.</b> 36</div></label>
+      <label class="option"><input type="radio" name="q18" value="D"><div><b>D.</b> 18</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5 = 2\cdot 25 = 50\), \(a_4 = 2\cdot 16 = 32\).  
+      Różnica: \(50-32=18\).  
+      Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2019 - zad. 10)</div>
+        <div class="qtext">Ciąg spełnia warunek \(a_{n+3}=-2\cdot 3^{n+1}\). Oblicz \(a_5\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q19" value="A"><div><b>A.</b> -54</div></label>
+      <label class="option"><input type="radio" name="q19" value="B"><div><b>B.</b> -27</div></label>
+      <label class="option"><input type="radio" name="q19" value="C"><div><b>C.</b> 27</div></label>
+      <label class="option"><input type="radio" name="q19" value="D"><div><b>D.</b> 54</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Dla \(n=2\): \(a_5 = -2 \cdot 3^3 = -2 \cdot 27 = -54\).  
+      Odp.: <b>A</b>.
+    </div>
+  </div>
+
+   <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2015 - zad. 15)</div>
+        <div class="qtext">Ciąg \(a_n = \tfrac{2^n - 1}{2^n + 1}\). Oblicz piąty wyraz tego ciągu.</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q20" value="A"><div><b>A.</b> -1</div></label>
+      <label class="option"><input type="radio" name="q20" value="B"><div><b>B.</b> \(\tfrac{31}{33}\)</div></label>
+      <label class="option"><input type="radio" name="q20" value="C"><div><b>C.</b> \(\tfrac{9}{11}\)</div></label>
+      <label class="option"><input type="radio" name="q20" value="D"><div><b>D.</b> 1</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5 = \tfrac{2^5 - 1}{2^5 + 1} = \tfrac{31}{33}\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+
+  <!-- Zadanie 21 -->
+  <div class="section" id="zad21" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 21</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2014 - zad. 22)</div>
+        <div class="qtext">Ciąg \(a_n = \tfrac{24-4n}{n}\). Ile wyrazów tego ciągu jest całkowitych i nieujemnych?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q21" value="A"><div><b>A.</b> 7</div></label>
+      <label class="option"><input type="radio" name="q21" value="B"><div><b>B.</b> 6</div></label>
+      <label class="option"><input type="radio" name="q21" value="C"><div><b>C.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q21" value="D"><div><b>D.</b> 4</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Dla kolejnych \(n\): \(a_1=20\), \(a_2=10\), \(a_3=\tfrac{16}{3}\) (niecałk.), \(a_4=5\), \(a_6=0\).  
+      Razem 5 całkowitych nieujemnych.  
+      Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 22 -->
+  <div class="section" id="zad22" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 22</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2013 - zad. 22)</div>
+        <div class="qtext">Ciąg \(a_n = (n+3)(n-5)\). Ile wyrazów ciągu jest ujemnych?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q22" value="A"><div><b>A.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q22" value="B"><div><b>B.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q22" value="C"><div><b>C.</b> 7</div></label>
+      <label class="option"><input type="radio" name="q22" value="D"><div><b>D.</b> 9</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_n<0\) gdy \(1\leq n\leq 4\).  
+      To 4 wyrazy: \(a_1=-4\), \(a_2=-3\), \(a_3=-2\), \(a_4=-1\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 23 -->
+  <div class="section" id="zad23" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 23</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2013 - zad. 22)</div>
+        <div class="qtext">Ciąg \(a_n = n^2-n\). Który wyraz ciągu jest równy 6?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q23" value="A"><div><b>A.</b> drugi</div></label>
+      <label class="option"><input type="radio" name="q23" value="B"><div><b>B.</b> trzeci</div></label>
+      <label class="option"><input type="radio" name="q23" value="C"><div><b>C.</b> szósty</div></label>
+      <label class="option"><input type="radio" name="q23" value="D"><div><b>D.</b> trzydziesty</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(n^2-n=6 \Rightarrow n^2-n-6=0\Rightarrow (n-3)(n+2)=0\Rightarrow n=3\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 24 -->
+  <div class="section" id="zad24" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 24</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2013 - zad. 16)</div>
+        <div class="qtext">Ciąg \(a_n=-2+\tfrac{12}{n}\). Dla jakiego \(n\) jest \(a_n=4\)?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q24" value="A"><div><b>A.</b> n=2</div></label>
+      <label class="option"><input type="radio" name="q24" value="B"><div><b>B.</b> n=3</div></label>
+      <label class="option"><input type="radio" name="q24" value="C"><div><b>C.</b> n=4</div></label>
+      <label class="option"><input type="radio" name="q24" value="D"><div><b>D.</b> n=5</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(-2+\tfrac{12}{n}=4 \Rightarrow \tfrac{12}{n}=6 \Rightarrow n=2\).  
+      Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 25 -->
+  <div class="section" id="zad25" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 25</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2011 - zad. 16)</div>
+        <div class="qtext">Ciąg \(a_n=2n^2-9\). Ile wyrazów ujemnych ma ten ciąg?</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q25" value="A"><div><b>A.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q25" value="B"><div><b>B.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q25" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q25" value="D"><div><b>D.</b> 3</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_1=2-9=-7\), \(a_2=8-9=-1\), \(a_3=18-9=9>0\).  
+      Ujemne są tylko dwa wyrazy.  
+      Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 26 -->
+  <div class="section" id="zad26" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 26</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2009 - zad. 12)</div>
+        <div class="qtext">Ciąg \(a_n=(-1)^n(3-n)\). Oceń wartość \(a_3\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q26" value="A"><div><b>A.</b> \(a_3<0\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="B"><div><b>B.</b> \(a_3=0\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="C"><div><b>C.</b> \(a_3=1\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="D"><div><b>D.</b> \(a_3>1\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_3=(-1)^3(3-3)=-1\cdot 0=0\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 27 -->
+  <div class="section" id="zad27" data-ans="A,3">
+    <div class="qheader">
+      <div class="qid">Zad. 27</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Ciąg \(a_n=n^2-n\). Dokończ zdanie. Ciąg jest:</div>
+      </div>
+    </div>
+
+    <div class="qmeta"><b>1.</b> Typ ciągu</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q27_1" value="A"><div><b>A.</b> rosnący</div></label>
+      <label class="option"><input type="radio" name="q27_1" value="B"><div><b>B.</b> malejący</div></label>
+      <label class="option"><input type="radio" name="q27_1" value="C"><div><b>C.</b> stały</div></label>
+    </div>
+
+    <div class="qmeta"><b>2.</b> Uzasadnienie</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q27_2" value="1"><div><b>1.</b> różnica \(a_{n+1}-a_n\) jest ujemna</div></label>
+      <label class="option"><input type="radio" name="q27_2" value="2"><div><b>2.</b> różnica \(a_{n+1}-a_n=0\)</div></label>
+      <label class="option"><input type="radio" name="q27_2" value="3"><div><b>3.</b> różnica \(a_{n+1}-a_n\) jest dodatnia</div></label>
+    </div>
+
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_{n+1}-a_n=(n+1)^2-(n+1)-[n^2-n]=2n\), co dla \(n\geq 1\) jest dodatnie.  
+      Ciąg rosnący, bo różnica jest dodatnia.  
+      Odp.: <b>A,3</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 28 -->
+  <div class="section" id="zad28" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 28</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Ciąg \(a_n=(-1)^n(n^2-2n)\). Oceń wartość \(a_3\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q28" value="A"><div><b>A.</b> \(a_3>0\)</div></label>
+      <label class="option"><input type="radio" name="q28" value="B"><div><b>B.</b> \(a_3=3\)</div></label>
+      <label class="option"><input type="radio" name="q28" value="C"><div><b>C.</b> \(a_3<2\)</div></label>
+      <label class="option"><input type="radio" name="q28" value="D"><div><b>D.</b> \(a_3=2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_3=(-1)^3(9-6)=-3\).  
+      \(-3<2\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 29 -->
+  <div class="section" id="zad29" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 29</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Ciąg \(a_n=(-3)^n(9-n^2)\). Oceń wartość \(a_3\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q29" value="A"><div><b>A.</b> -81</div></label>
+      <label class="option"><input type="radio" name="q29" value="B"><div><b>B.</b> -27</div></label>
+      <label class="option"><input type="radio" name="q29" value="C"><div><b>C.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q29" value="D"><div><b>D.</b> >0</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_3=(-3)^3(9-9)=-27\cdot 0=0\).  
+      Odp.: <b>C</b>.
+    </div>
+  </div>
+<footer>Trudne zadanie? To Twoja szansa na power-up ⊂(▀¯▀⊂)</footer>
+
+
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec=document.getElementById(sectionId);
+  if(!sec) return;
+  const correct=sec.dataset.ans.trim().toUpperCase().split(',');
+  // klasyczne ABCD
+  const optionGroups={};
+  sec.querySelectorAll('.option input[type=radio]').forEach(inp=>{
+    const name=inp.name;
+    if(!optionGroups[name]) optionGroups[name]=[];
+    optionGroups[name].push(inp);
+  });
+  Object.entries(optionGroups).forEach(([name,inputs],idx)=>{
+    inputs.forEach(inp=>{
+      inp.addEventListener('change',()=>{
+        inputs.forEach(i=>i.parentElement.classList.remove('correct','incorrect'));
+        if(inp.value.toUpperCase()===correct[idx]) inp.parentElement.classList.add('correct');
+        else inp.parentElement.classList.add('incorrect');
+      });
+    });
+  });
+  const btn=sec.querySelector('.btn-solution');
+  const sol=sec.querySelector('.sol');
+  if(btn&&sol){
+    btn.addEventListener('click',()=>{ 
+      sol.style.display=sol.style.display==='block'?'none':'block';
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+Array.from({length:29},(_,i)=>'zad'+(i+1)).forEach(setupQuestion);
+</script>
+</body>
+</html>

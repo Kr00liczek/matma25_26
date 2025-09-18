@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <title>Średnia arytmetyczna</title>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+
+<h1>Średnia arytmetyczna</h1><br>
+
+<!-- Zadanie 1 -->
+
+<div class="section" id="zad1" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(czerwiec 2025 - zad. 29)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna trzech liczb: \(a, b, c\), jest równa 12. Średnia arytmetyczna sześciu liczb: \(2a, 3a, 2b, 3b, 2c, 3c\) jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad1" value="A"> A. 10</label>
+
+    <label class="option"><input type="radio" name="zad1" value="B"> B. 12</label>
+
+    <label class="option"><input type="radio" name="zad1" value="C"> C. 30</label>
+
+    <label class="option"><input type="radio" name="zad1" value="D"> D. 60</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol1">
+
+    <ol>
+
+      <li>\(\tfrac{a+b+c}{3}=12 \implies a+b+c=36\).</li>
+
+      <li>Suma sześciu liczb: \(2a+3a+2b+3b+2c+3c=5(a+b+c)=5\cdot36=180\).</li>
+
+      <li>Średnia = \(\tfrac{180}{6}=30\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 2 -->
+
+<div class="section" id="zad2" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(maj 2025 - zad. 29)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna siedmiu liczb: 1,2,3,4,5,x,y, jest równa 3. Suma \(x+y\) jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad2" value="A"> A. 4</label>
+
+    <label class="option"><input type="radio" name="zad2" value="B"> B. 5</label>
+
+    <label class="option"><input type="radio" name="zad2" value="C"> C. 6</label>
+
+    <label class="option"><input type="radio" name="zad2" value="D"> D. 7</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol2">
+
+    <ol>
+
+      <li>Suma wszystkich liczb = \(7\cdot3=21\).</li>
+
+      <li>Suma podanych pięciu: \(1+2+3+4+5=15\).</li>
+
+      <li>Stąd \(15+x+y=21 \implies x+y=6\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 3 -->
+
+<div class="section" id="zad3" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(sierpień 2024 - zad. 28)</div></div>
+
+  <div class="qtext">
+
+    W tabeli zestawiono liczbę punktów uzyskanych przez 32 uczniów pewnej klasy za rozwiązanie jednego zadania.
+
+  </div>
+
+  <table class="data">
+
+    <tr><th>Liczba punktów</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+
+    <tr><th>Liczba uczniów</th><td>2</td><td>2</td><td>5</td><td>6</td><td>11</td><td>6</td></tr>
+
+  </table>
+
+  <div class="qtext">Średnia arytmetyczna liczby punktów jest równa:</div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad3" value="A"> A. 2,5</label>
+
+    <label class="option"><input type="radio" name="zad3" value="B"> B. 3,25</label>
+
+    <label class="option"><input type="radio" name="zad3" value="C"> C. 3,31</label>
+
+    <label class="option"><input type="radio" name="zad3" value="D"> D. 4</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol3">
+
+    <ol>
+
+      <li>Suma punktów = \(0\cdot2+1\cdot2+2\cdot5+3\cdot6+4\cdot11+5\cdot6\).</li>
+
+      <li>= \(0+2+10+18+44+30=104\).</li>
+
+      <li>Liczba uczniów = 32. Średnia = \(\tfrac{104}{32}=3,25\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 4 -->
+
+<div class="section" id="zad4" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(czerwiec 2024 - zad. 28)</div></div>
+
+  <div class="qtext">
+
+    Na diagramie przedstawiono wyniki sprawdzianu. <br>
+
+    <img src="img/srednia01.png" alt="srednia01"><br>
+
+    Średnia ocen jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad4" value="A"> A. 3</label>
+
+    <label class="option"><input type="radio" name="zad4" value="B"> B. 3,12</label>
+
+    <label class="option"><input type="radio" name="zad4" value="C"> C. 3,5</label>
+
+    <label class="option"><input type="radio" name="zad4" value="D"> D. 4,16</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol4">
+
+    <ol>
+
+      <li>Z diagramu odczytujemy liczebności i mnożymy oceny przez liczby uczniów.</li>
+
+      <li>Obliczamy sumę ważoną i dzielimy przez liczbę uczniów.</li>
+
+      <li>Otrzymujemy wynik 3,12.</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 5 -->
+
+<div class="section" id="zad5" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(maj 2024 - zad. 28)</div></div>
+
+  <div class="qtext">
+
+    Średnia trzech liczb: \(a,b,c\) wynosi 9. Średnia sześciu liczb: \(a,a,b,b,c,c\) wynosi:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad5" value="A"> A. 9</label>
+
+    <label class="option"><input type="radio" name="zad5" value="B"> B. 6</label>
+
+    <label class="option"><input type="radio" name="zad5" value="C"> C. 4,5</label>
+
+    <label class="option"><input type="radio" name="zad5" value="D"> D. 18</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol5">
+
+    <ol>
+
+      <li>\(\tfrac{a+b+c}{3}=9 \implies a+b+c=27\).</li>
+
+      <li>Suma sześciu liczb: \(2a+2b+2c=2(a+b+c)=54\).</li>
+
+      <li>Średnia = \(\tfrac{54}{6}=9\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 6 -->
+
+<div class="section" id="zad6" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(sierpień 2023 - zad. 32)</div></div>
+
+  <div class="qtext">
+
+    Rozkład wynagrodzenia brutto w firmie (100 pracowników).<br>
+
+    <img src="img/srednia02.png" alt="srednia02"><br>
+
+    Średnia płaca brutto wynosi:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad6" value="A"> A. 5 690 zł</label>
+
+    <label class="option"><input type="radio" name="zad6" value="B"> B. 5 280 zł</label>
+
+    <label class="option"><input type="radio" name="zad6" value="C"> C. 6 257 zł</label>
+
+    <label class="option"><input type="radio" name="zad6" value="D"> D. 5 900 zł</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol6">
+
+    <ol>
+
+      <li>Z diagramu odczytujemy rozkład i obliczamy średnią ważoną.</li>
+
+      <li>Po obliczeniach średnia wynosi 5690 zł.</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 7 -->
+
+<div class="section" id="zad7" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(wrzesień 2022 - zad. 24.1)</div></div>
+
+  <div class="qtext">
+
+    Rozkład płac brutto w firmie F (160 osób).<br>
+
+    <img src="img/srednia03.png" alt="srednia03"><br>
+
+    Średnia płaca brutto wynosi:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad7" value="A"> A. 4 593,75 zł</label>
+
+    <label class="option"><input type="radio" name="zad7" value="B"> B. 4 800,00 zł</label>
+
+    <label class="option"><input type="radio" name="zad7" value="C"> C. 5 360,00 zł</label>
+
+    <label class="option"><input type="radio" name="zad7" value="D"> D. 2 399,33 zł</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol7">
+
+    <ol>
+
+      <li>Obliczamy średnią ważoną z rozkładu słupkowego.</li>
+
+      <li>Otrzymujemy 4593,75 zł.</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+<!-- Zadanie 8 -->
+
+<div class="section" id="zad8" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(sierpień 2022 - zad. 26)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna zestawu liczb \(a, b, c, d\) jest równa 20. Wtedy średnia arytmetyczna zestawu liczb \(a-10, b+30, c, d\) jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad8" value="A"> A. 10</label>
+
+    <label class="option"><input type="radio" name="zad8" value="B"> B. 20</label>
+
+    <label class="option"><input type="radio" name="zad8" value="C"> C. 25</label>
+
+    <label class="option"><input type="radio" name="zad8" value="D"> D. 30</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol8">
+
+    <ol>
+
+      <li>\(\tfrac{a+b+c+d}{4}=20 \implies a+b+c+d=80\).</li>
+
+      <li>Nowy zestaw: \((a-10)+(b+30)+c+d = (a+b+c+d)+20=100\).</li>
+
+      <li>Średnia = \(100:4=25\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 9 -->
+
+<div class="section" id="zad9" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(maj 2022 - zad. 28)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna zestawu sześciu liczb: \(2x, 4, 6, 8, 11, 13\) jest równa 5. Wynika stąd, że:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad9" value="A"> A. \(x=-1\)</label>
+
+    <label class="option"><input type="radio" name="zad9" value="B"> B. \(x=7\)</label>
+
+    <label class="option"><input type="radio" name="zad9" value="C"> C. \(x=-6\)</label>
+
+    <label class="option"><input type="radio" name="zad9" value="D"> D. \(x=6\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol9">
+
+    <ol>
+
+      <li>Suma liczb = \(2x+4+6+8+11+13=2x+42\).</li>
+
+      <li>\(\tfrac{2x+42}{6}=5 \implies 2x+42=30\).</li>
+
+      <li>\(2x=-12 \implies x=-6\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 10 -->
+
+<div class="section" id="zad10" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(czerwiec 2021 - zad. 28)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna czterech liczb dodatnich: \(2, 3x, 3x+2, 3x+4\) jest równa \(\tfrac{13}{2}\). Wynika stąd, że:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad10" value="A"> A. \(x=9\)</label>
+
+    <label class="option"><input type="radio" name="zad10" value="B"> B. \(x=\tfrac{13}{2}\)</label>
+
+    <label class="option"><input type="radio" name="zad10" value="C"> C. \(x=\tfrac{5}{9}\)</label>
+
+    <label class="option"><input type="radio" name="zad10" value="D"> D. \(x=2\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol10">
+
+    <ol>
+
+      <li>Suma = \(2+(3x)+(3x+2)+(3x+4)=9x+8\).</li>
+
+      <li>\(\tfrac{9x+8}{4}=\tfrac{13}{2} \implies 9x+8=26\).</li>
+
+      <li>\(9x=18 \implies x=2\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 11 -->
+
+<div class="section" id="zad11" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(sierpień 2019 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna dziesięciu liczb naturalnych 3, 10, 5, x, x, x, x, 12, 19, 7 jest równa 12. Mediana tych liczb jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad11" value="A"> A. 14</label>
+
+    <label class="option"><input type="radio" name="zad11" value="B"> B. 12</label>
+
+    <label class="option"><input type="radio" name="zad11" value="C"> C. 16</label>
+
+    <label class="option"><input type="radio" name="zad11" value="D"> D. x</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol11">
+
+    <ol>
+
+      <li>Suma liczb = \(3+10+5+4x+12+19+7 = 56+4x\).</li>
+
+      <li>\(\tfrac{56+4x}{10}=12 \implies 56+4x=120 \implies x=16\).</li>
+
+      <li>Po uporządkowaniu danych, mediana (średnia 5. i 6. elementu) = \(\tfrac{12+16}{2}=14\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 12 -->
+
+<div class="section" id="zad12" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(czerwiec 2018 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    W ankiecie zebrano dane o liczbie książek przeczytanych w ostatnim roku przez 100 osób.
+
+  </div>
+
+  <table class="data">
+
+    <tr><th>Liczba książek</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+
+    <tr><th>Liczba osób</th><td>23</td><td>14</td><td>28</td><td>17</td><td>11</td><td>7</td></tr>
+
+  </table>
+
+  <div class="qtext">Średnia liczba książek przeczytanych przez jedną osobę jest równa:</div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad12" value="A"> A. 0,5</label>
+
+    <label class="option"><input type="radio" name="zad12" value="B"> B. 1</label>
+
+    <label class="option"><input type="radio" name="zad12" value="C"> C. 2</label>
+
+    <label class="option"><input type="radio" name="zad12" value="D"> D. 2,5</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol12">
+
+    <ol>
+
+      <li>Suma książek = \(0\cdot23+1\cdot14+2\cdot28+3\cdot17+4\cdot11+5\cdot7\).</li>
+
+      <li>= \(0+14+56+51+44+35=200\).</li>
+
+      <li>Średnia = \(200:100=2\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 13 -->
+
+<div class="section" id="zad13" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(sierpień 2016 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Jeżeli do zestawu czterech danych: 4, 7, 8, x dołączymy liczbę 2, to średnia arytmetyczna wzrośnie o 2. Zatem:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad13" value="A"> A. \(x=-51\)</label>
+
+    <label class="option"><input type="radio" name="zad13" value="B"> B. \(x=-6\)</label>
+
+    <label class="option"><input type="radio" name="zad13" value="C"> C. \(x=10\)</label>
+
+    <label class="option"><input type="radio" name="zad13" value="D"> D. \(x=29\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol13">
+
+    <ol>
+
+      <li>Średnia z 4,7,8,x: \(\tfrac{19+x}{4}\).</li>
+
+      <li>Po dodaniu 2: \(\tfrac{21+x}{5}\).</li>
+
+      <li>Równanie: \(\tfrac{21+x}{5}=\tfrac{19+x}{4}+2\).</li>
+
+      <li>Po przekształceniu: \(4(21+x)=5(19+x+8)\implies 84+4x=135+5x\).</li>
+
+      <li>\(x=-51\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 14 -->
+
+<div class="section" id="zad14" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(czerwiec 2016 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna czterech liczb: \(x-1, 3x, 5x+1, 7x\) jest równa 72. Wynika stąd, że:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad14" value="A"> A. \(x=9\)</label>
+
+    <label class="option"><input type="radio" name="zad14" value="B"> B. \(x=10\)</label>
+
+    <label class="option"><input type="radio" name="zad14" value="C"> C. \(x=17\)</label>
+
+    <label class="option"><input type="radio" name="zad14" value="D"> D. \(x=18\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol14">
+
+    <ol>
+
+      <li>Suma = \((x-1)+3x+(5x+1)+7x = 16x\).</li>
+
+      <li>Średnia = \(\tfrac{16x}{4}=4x=72\).</li>
+
+      <li>\(x=18\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 15 -->
+
+<div class="section" id="zad15" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(czerwiec 2015 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna zestawu: 2,4,7,8,x = \(n\). Średnia zestawu: 2,4,7,8,x,2x = \(2n\). Wynika stąd, że:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad15" value="A"> A. \(x=49\)</label>
+
+    <label class="option"><input type="radio" name="zad15" value="B"> B. \(x=21\)</label>
+
+    <label class="option"><input type="radio" name="zad15" value="C"> C. \(x=14\)</label>
+
+    <label class="option"><input type="radio" name="zad15" value="D"> D. \(x=7\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol15">
+
+    <ol>
+
+      <li>\(n=\tfrac{21+x}{5}\).</li>
+
+      <li>\(2n=\tfrac{21+3x}{6}\).</li>
+
+      <li>Równanie: \(\tfrac{42+2x}{5}=\tfrac{21+3x}{6}\).</li>
+
+      <li>\(6(42+2x)=5(21+3x)\implies 252+12x=105+15x\).</li>
+
+      <li>\(3x=147 \implies x=49\).</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 16 -->
+
+<div class="section" id="zad16" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(maj 2015 - zad. 24)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna zestawu danych: 2,4,7,8,9 jest taka sama jak średnia zestawu: 2,4,7,8,9,x. Wynika stąd, że:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad16" value="A"> A. x=0</label>
+
+    <label class="option"><input type="radio" name="zad16" value="B"> B. x=3</label>
+
+    <label class="option"><input type="radio" name="zad16" value="C"> C. x=5</label>
+
+    <label class="option"><input type="radio" name="zad16" value="D"> D. x=6</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol16">
+
+    <ol>
+
+      <li>Suma 5 liczb = 30, średnia = 6.</li>
+
+      <li>Nowy zestaw: \(\tfrac{30+x}{6}=6\).</li>
+
+      <li>\(30+x=36 \implies x=6\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+<!-- Zadanie 17 -->
+
+<div class="section" id="zad17" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(czerwiec 2014 - zad. 15)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna liczby punktów uzyskanych na egzaminie przez studentów I grupy, liczącej 40 studentów, jest równa 30. Dwudziestu studentów tworzących II grupę otrzymało w sumie 1800 punktów. Zatem średni wynik z tego egzaminu, liczony łącznie dla wszystkich studentów z obu grup, jest równy:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad17" value="A"> A. 20 pkt</label>
+
+    <label class="option"><input type="radio" name="zad17" value="B"> B. 30 pkt</label>
+
+    <label class="option"><input type="radio" name="zad17" value="C"> C. 50 pkt</label>
+
+    <label class="option"><input type="radio" name="zad17" value="D"> D. 60 pkt</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol17">
+
+    <ol>
+
+      <li>I grupa: \(40 \cdot 30 = 1200\).</li>
+
+      <li>II grupa: 1800.</li>
+
+      <li>Łącznie: 3000 punktów, 60 osób.</li>
+
+      <li>Średnia = \(3000 : 60 = 50\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 18 -->
+
+<div class="section" id="zad18" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(czerwiec 2013 - zad. 22)</div></div>
+
+  <div class="qtext">
+
+    Wyniki sprawdzianu z matematyki są przedstawione na poniższym diagramie.
+
+    <img src="img/srednia04.png" alt="Diagram średniej - zad. 18">
+
+    Średnia ocen uzyskanych przez uczniów z tego sprawdzianu jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad18" value="A"> A. 2</label>
+
+    <label class="option"><input type="radio" name="zad18" value="B"> B. 3</label>
+
+    <label class="option"><input type="radio" name="zad18" value="C"> C. 3,5</label>
+
+    <label class="option"><input type="radio" name="zad18" value="D"> D. 4</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol18">
+
+    <ol>
+
+      <li>Z diagramu obliczamy średnią (waga × wartość / suma wag).</li>
+
+      <li>Obliczenia dają średnią \(3,5\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 19 -->
+
+<div class="section" id="zad19" data-ans="C">
+
+  <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(sierpień 2011 - zad. 18)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna sześciu liczb: 3, 1, 1, 0, x, 2 jest równa 2. Wtedy liczba x jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad19" value="A"> A. 3</label>
+
+    <label class="option"><input type="radio" name="zad19" value="B"> B. 4</label>
+
+    <label class="option"><input type="radio" name="zad19" value="C"> C. 5</label>
+
+    <label class="option"><input type="radio" name="zad19" value="D"> D. 6</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol19">
+
+    <ol>
+
+      <li>Suma = \(3+1+1+0+x+2 = 7+x\).</li>
+
+      <li>\(\tfrac{7+x}{6}=2 \implies 7+x=12 \implies x=5\).</li>
+
+      <li>Odp.: <b>C</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 20 -->
+
+<div class="section" id="zad20" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(maj 2011 - zad. 23)</div></div>
+
+  <div class="qtext">
+
+    Uczniowie pewnej klasy zostali poproszeni o odpowiedź na pytanie: „Ile osób liczy twoja rodzina?”. Wyniki przedstawiono w tabeli:
+
+  </div>
+
+  <table class="data">
+
+    <tr><th>Liczba osób w rodzinie</th><td>3</td><td>4</td><td>x</td></tr>
+
+    <tr><th>Liczba uczniów</th><td>6</td><td>12</td><td>2</td></tr>
+
+  </table>
+
+  <div class="qtext">Średnia liczba osób w rodzinie dla uczniów tej klasy jest równa 4. Wtedy liczba x jest równa:</div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad20" value="A"> A. 3</label>
+
+    <label class="option"><input type="radio" name="zad20" value="B"> B. 4</label>
+
+    <label class="option"><input type="radio" name="zad20" value="C"> C. 5</label>
+
+    <label class="option"><input type="radio" name="zad20" value="D"> D. 7</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol20">
+
+    <ol>
+
+      <li>Suma osób = \(3\cdot6+4\cdot12+2x = 18+48+2x=66+2x\).</li>
+
+      <li>Liczba uczniów = 20.</li>
+
+      <li>\(\tfrac{66+2x}{20}=4 \implies 66+2x=80 \implies x=7\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 21 -->
+
+<div class="section" id="zad21" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(maj 2010 - zad. 25)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna dziesięciu liczb: x, 3, 1, 4, 1, 5, 1, 4, 1, 5 jest równa 3. Wtedy:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad21" value="A"> A. x=2</label>
+
+    <label class="option"><input type="radio" name="zad21" value="B"> B. x=3</label>
+
+    <label class="option"><input type="radio" name="zad21" value="C"> C. x=4</label>
+
+    <label class="option"><input type="radio" name="zad21" value="D"> D. x=5</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol21">
+
+    <ol>
+
+      <li>Suma bez x: \(3+1+4+1+5+1+4+1+5=25\).</li>
+
+      <li>Suma z x: \(25+x\).</li>
+
+      <li>\(\tfrac{25+x}{10}=3 \implies 25+x=30 \implies x=5\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 22 -->
+
+<div class="section" id="zad22" data-ans="D">
+
+  <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(listopad 2009 - zad. 24)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna pięciu liczb: 5, x, 1, 3, 1 jest równa 3. Wtedy:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad22" value="A"> A. x=2</label>
+
+    <label class="option"><input type="radio" name="zad22" value="B"> B. x=3</label>
+
+    <label class="option"><input type="radio" name="zad22" value="C"> C. x=4</label>
+
+    <label class="option"><input type="radio" name="zad22" value="D"> D. x=5</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol22">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol22">
+
+    <ol>
+
+      <li>Suma = \(5+x+1+3+1=10+x\).</li>
+
+      <li>\(\tfrac{10+x}{5}=3 \implies 10+x=15 \implies x=5\).</li>
+
+      <li>Odp.: <b>D</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 23 -->
+
+<div class="section" id="zad23" data-ans="4.48">
+
+  <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(informator CKE)</div></div>
+
+  <div class="qtext">
+
+    Na wykresie słupkowym poniżej podano rozkład miesięcznych zarobków pracowników firmy F. 
+
+    <img src="img/srednia05.png" alt="Diagram średniej - zad. 23">
+
+    Oblicz średnią miesięcznego wynagrodzenia netto wszystkich pracowników firmy F. Wynik podaj bez zaokrąglania.
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="number" name="zad23" class="frac-input" data-answer="4.48"> Wpisz wynik</label>
+
+  </div>
+
+  <div class="controls">
+
+    <button class="btn btn-check">Sprawdź</button>
+
+    <button class="btn btn-solution" data-target="sol23">Rozwiązanie</button>
+
+  </div>
+
+  <div class="sol" id="sol23">
+
+    <ol>
+
+      <li>Z wykresu obliczamy sumę iloczynów wartości i liczności.</li>
+
+      <li>Suma wartości = 4,48 × liczba pracowników.</li>
+
+      <li>Średnia wynosi dokładnie 4,48 tys. zł.</li>
+
+      <li>Odp.: <b>4,48</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 24 -->
+
+<div class="section" id="zad24" data-ans="A">
+
+  <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(informator CKE)</div></div>
+
+  <div class="qtext">
+
+    Średnia arytmetyczna danych przedstawionych na diagramie częstości jest równa:
+
+    <img src="img/srednia06.png" alt="Diagram średniej - zad. 24">
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad24" value="A"> A. 1</label>
+
+    <label class="option"><input type="radio" name="zad24" value="B"> B. 1,2</label>
+
+    <label class="option"><input type="radio" name="zad24" value="C"> C. 1,5</label>
+
+    <label class="option"><input type="radio" name="zad24" value="D"> D. 1,8</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol24">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol24">
+
+    <ol>
+
+      <li>Na podstawie diagramu liczmy średnią ważoną.</li>
+
+      <li>Wychodzi dokładnie 1.</li>
+
+      <li>Odp.: <b>A</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 25 -->
+
+<div class="section" id="zad25" data-ans="B">
+
+  <div class="qheader"><div class="qid">Zad. 25</div><div class="qmeta">(zbiór CKE - zad. 61)</div></div>
+
+  <div class="qtext">
+
+    Średnia wieku czterech kobiet jest równa 24. Średnia wieku sześciu mężczyzn jest równa 26. Średnia wieku tych dziesięciu osób jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad25" value="A"> A. 25</label>
+
+    <label class="option"><input type="radio" name="zad25" value="B"> B. 25,2</label>
+
+    <label class="option"><input type="radio" name="zad25" value="C"> C. 24,9</label>
+
+    <label class="option"><input type="radio" name="zad25" value="D"> D. 25,5</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol25">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol25">
+
+    <ol>
+
+      <li>Kobiety: \(4 \cdot 24=96\).</li>
+
+      <li>Mężczyźni: \(6 \cdot 26=156\).</li>
+
+      <li>Suma = 252, razem 10 osób.</li>
+
+      <li>Średnia = \(252:10=25,2\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+<footer>Ćwiczenie czyni mistrza – i Ty właśnie ćwiczysz ^_^</footer>
+
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.querySelectorAll('.section').forEach(sec => {
+
+    const ans = (sec.dataset.ans||'').split(',').map(s=>s.trim().toUpperCase());
+
+    sec.querySelectorAll('input').forEach(inp=>{
+
+      inp.addEventListener('change',()=>{
+
+        if(inp.type==='radio'){
+
+          sec.querySelectorAll('.option').forEach(opt=>opt.classList.remove('correct','incorrect'));
+
+          const lab=inp.closest('.option');
+
+          if(ans.includes(inp.value.toUpperCase())) lab.classList.add('correct'); else lab.classList.add('incorrect');
+
+        }
+
+      });
+
+    });
+// input + przycisk "Sprawdź"
+    const inp = sec.querySelector('.frac-input');
+    const btn = sec.querySelector('.btn-check');
+    if (inp && btn) {
+      btn.addEventListener('click', () => {
+        const val = inp.value.trim();
+        const good = (inp.dataset.answer || '').trim();
+        btn.classList.remove('correct','incorrect');
+        if (val === good) {
+          btn.classList.add('correct');
+          alert("Dobrze! To poprawna odpowiedź.");
+        } else {
+          btn.classList.add('incorrect');
+          alert("Źle! Spróbuj ponownie.");
+        }
+      });
+    }
+
+
+    sec.querySelectorAll('.btn-solution').forEach(btn=>{
+
+      btn.addEventListener('click',()=>{
+
+        const t=document.getElementById(btn.dataset.target);
+
+        if(t) t.style.display=t.style.display==='block'?'none':'block';
+
+      });
+
+    });
+
+  });
+
+});
+
+</script>
+
+</body>
+
+</html>

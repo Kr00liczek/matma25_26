@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kąty, wierzchołki i przekątne</title>
+  <!-- MathJax for nice fractions / formulas if needed in solutions -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+ <h1>Kąty, wierzchołki i przekątne figur na płaszczyźnie</h1><br>
+<!-- Zadanie 1 -->
+
+<div class="section" id="zad1" data-ans="B,E" data-type="multi">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 1</div>
+
+    <div class="qmeta">(pokazowy 2023 - zad. 5)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek).
+
+    <br><img src="img/wkp01.png" alt="wkp01">
+
+    <br> Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe.
+
+  </div>
+
+  <div class="options">
+
+    <label class="option">
+
+      <input type="checkbox" name="zad1" value="A">
+
+      <div>
+
+        <strong>A.</strong>
+
+        \(\begin{cases}
+
+        (\alpha+\beta)+\beta=90^\circ\\
+
+        \alpha+\beta=2\alpha-\beta
+
+        \end{cases}\)
+
+      </div>
+
+    </label>
+
+    <label class="option">
+
+      <input type="checkbox" name="zad1" value="B">
+
+      <div>
+
+        <strong>B.</strong>
+
+        \(\begin{cases}
+
+        (\alpha+\beta)+\beta=180^\circ\\
+
+        \alpha+\beta=2\alpha-\beta
+
+        \end{cases}\)
+
+      </div>
+
+    </label>
+
+    <label class="option">
+
+      <input type="checkbox" name="zad1" value="C">
+
+      <div>
+
+        <strong>C.</strong>
+
+        \(\begin{cases}
+
+        (\alpha+\beta)+\beta=180^\circ\\
+
+        \beta=2\alpha-\beta
+
+        \end{cases}\)
+
+      </div>
+
+    </label>
+
+    <label class="option">
+
+      <input type="checkbox" name="zad1" value="D">
+
+      <div>
+
+        <strong>D.</strong>
+
+        \(\begin{cases}
+
+        \alpha+\beta=90^\circ\\
+
+        \beta=2\alpha-\beta
+
+        \end{cases}\)
+
+      </div>
+
+    </label>
+
+    <label class="option">
+
+      <input type="checkbox" name="zad1" value="E">
+
+      <div>
+
+        <strong>E.</strong>
+
+        \(\begin{cases}
+
+        \alpha+\beta=2\alpha-\beta\\
+
+        180^\circ-(2\alpha-\beta)=\beta
+
+        \end{cases}\)
+
+      </div>
+
+    </label>
+
+    <label class="option">
+
+      <input type="checkbox" name="zad1" value="F">
+
+      <div>
+
+        <strong>F.</strong>
+
+        \(\begin{cases}
+
+        3\alpha+2\beta=360^\circ\\
+
+        2\alpha-\beta=2\beta
+
+        \end{cases}\)
+
+      </div>
+
+    </label>
+
+  </div>
+
+  <div class="controls">
+
+    <button class="btn btn-solution" data-target="sol1">Rozwiązanie</button>
+
+  </div>
+
+  <div class="sol" id="sol1">
+
+    <ol>
+
+      <li>Zauważamy podstawowe własności kątów: kąty przyległe sumują się do \(180^\circ\), kąty przeciwne przy przecięciu prostych są równe.</li>
+
+      <li>Opcja B: pierwsze równanie \((\alpha+\beta)+\beta=180^\circ\) to stwierdzenie, że kąt przyległy do sumy \(\alpha+\beta\) ma miarę \(180^\circ\) — poprawne. Drugie równanie opisuje zależność między \(\alpha\) i \(\beta\) wynikającą z figury — jest zgodne z opisem. Zatem B jest prawidłowa.</li>
+
+      <li>Opcja E: pierwsze równanie to alternatywne przekształcenie relacji między \(\alpha\) i \(\beta\), a drugie stwierdzenie \((180^\circ-(2\alpha-\beta)=\beta)\) to przepisanie relacji z uwzględnieniem przyległości kątów — również zgodne z rysunkiem. Zatem E jest prawidłowa.</li>
+
+      <li>Wnioskujemy, że poprawnymi odpowiedziami są <b>B</b> i <b>E</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 2 -->
+
+<div class="section" id="zad2" data-ans="B">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 2</div>
+
+    <div class="qmeta">(maj 2021 - zad. 22)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    W równoległoboku \(ABCD\) (rysunek) kąt \( \alpha \) ma miarę \(70^\circ\).<br>
+
+    <img src="img/wkp02.png" alt="wkp02"><br>
+
+    Wtedy kąt \( \beta \) ma miarę:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad2" value="A"> A. 80°</label>
+
+    <label class="option"><input type="radio" name="zad2" value="B"> B. 70°</label>
+
+    <label class="option"><input type="radio" name="zad2" value="C"> C. 60°</label>
+
+    <label class="option"><input type="radio" name="zad2" value="D"> D. 50°</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol2">
+
+    <ol>
+
+      <li>W równoległoboku przeciwległe kąty są równe, stąd jeśli kąt \(\alpha=70^\circ\), to kąt naprzeciwko również ma \(70^\circ\).</li>
+
+      <li>Jeżeli oznaczony na rysunku kąt \(\beta\) jest kątem przeciwnym do \(\alpha\), to \(\beta=\alpha=70^\circ\).</li>
+
+      <li>Odp.: <b>B</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 3 -->
+
+<div class="section" id="zad3" data-ans="B">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 3</div>
+
+    <div class="qmeta">(maj 2021 - zad. 23)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    W każdym \(n\)-kącie wypukłym liczba przekątnych to \(\dfrac{n(n-3)}{2}\). Wielokątem wypukłym, w którym liczba przekątnych jest o 25 większa od liczby boków, jest:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad3" value="A"> A. siedmiokąt</label>
+
+    <label class="option"><input type="radio" name="zad3" value="B"> B. dziesięciokąt</label>
+
+    <label class="option"><input type="radio" name="zad3" value="C"> C. dwunastokąt</label>
+
+    <label class="option"><input type="radio" name="zad3" value="D"> D. piętnastokąt</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol3">
+
+    <ol>
+
+      <li>Chcemy \( \dfrac{n(n-3)}{2} - n = 25\).</li>
+
+      <li>Pomnóżmy przez 2: \(n(n-3) - 2n = 50 \Rightarrow n^2 -5n -50=0\).</li>
+
+      <li>Rozwiązanie: \( \Delta =25+200=225\), \(\sqrt{\Delta}=15\). Stąd \(n=\dfrac{5+15}{2}=10\) (odrzucamy ujemne rozwiązanie).</li>
+
+      <li>Odp.: <b>B (dziesięciokąt)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 4 -->
+
+<div class="section" id="zad4" data-ans="B">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 4</div>
+
+    <div class="qmeta">(sierpień 2019 - zad. 14)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Trójkąt równoramienny \(ABC\) (\(|AC|=|BC|\)). Na podstawie \(AB\) punkt \(D\) taki, że \(|AD|=|CD|\), \(|BC|=|BD|\) oraz \(\angle BCD=72^\circ\).<br>
+
+    <img src="img/wkp03.png" alt="wkp03"><br>
+
+    Oblicz miarę kąta \(\angle ACD\).
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad4" value="A"> A. 38°</label>
+
+    <label class="option"><input type="radio" name="zad4" value="B"> B. 36°</label>
+
+    <label class="option"><input type="radio" name="zad4" value="C"> C. 42°</label>
+
+    <label class="option"><input type="radio" name="zad4" value="D"> D. 40°</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol4">
+
+    <ol>
+
+      <li>Skorzystaj z własności trójkąta równoramiennego: \(|AC|=|BC|\) ⇒ kąty przy podstawie \(AB\) są równe.</li>
+
+      <li>Zauważmy, że warunki \(|AD|=|CD|\) i \(|BC|=|BD|\) powodują dodatkowe symetrie i zależności kątowe między fragmentami figury (kąty utworzone na odcinku \(BD\) i przy punkcie \(C\)).</li>
+
+      <li>Przeprowadź klasyczne „zagęszczenie” równań kątowych i znajdź, że \(\angle ACD = 36^\circ\).</li>
+
+      <li>Odp.: <b>B (36°)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 5 -->
+
+<div class="section" id="zad5" data-ans="D">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 5</div>
+
+    <div class="qmeta">(czerwiec 2019 - zad. 20)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Trójkąt równoramienny \(ABC\) (\(|AC|=|BC|\)). Kąt między ramionami (kąt przy wierzchołku C) ma \(44^\circ\). Dwusieczna kąta z wierzchołka A przecina bok \(BC\) w punkcie \(D\). Oblicz \(\angle ADC\).
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad5" value="A"> A. 78°</label>
+
+    <label class="option"><input type="radio" name="zad5" value="B"> B. 34°</label>
+
+    <label class="option"><input type="radio" name="zad5" value="C"> C. 68°</label>
+
+    <label class="option"><input type="radio" name="zad5" value="D"> D. 102°</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol5">
+
+    <ol>
+
+      <li>Kąt przy wierzchołku \(C\) to \(44^\circ\). Sumaryczna suma kątów w trójkącie to \(180^\circ\).</li>
+
+      <li>Stąd kąty przy podstawie są równe i każdy ma miarę \(\dfrac{180^\circ-44^\circ}{2}=68^\circ\).</li>
+
+      <li>Dwusieczna kąta przy \(A\) dzieli kąt \(A\) na połówki: \(\tfrac{68^\circ}{2}=34^\circ\).</li>
+
+      <li>W trójkącie \(ADC\): \(\angle ADC = 180^\circ - (\angle CAD + \angle ACD) = 180^\circ - (34^\circ + 44^\circ) = 102^\circ.\)</li>
+
+      <li>Odp.: <b>D (102°)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 6 -->
+
+<div class="section" id="zad6" data-ans="A">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 6</div>
+
+    <div class="qmeta">(czerwiec 2016 - zad. 13)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Trapez \(ABCD\) — przekątna \(AC \perp BC\), \(|AD|=|DC|\), \(\angle ABC=50^\circ\). (rysunek)<br>
+
+    <img src="img/wkp04.png" alt="wkp04"><br>
+
+    Oblicz \(\beta\).
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad6" value="A"> A. \(\beta=100^\circ\)</label>
+
+    <label class="option"><input type="radio" name="zad6" value="B"> B. \(\beta=120^\circ\)</label>
+
+    <label class="option"><input type="radio" name="zad6" value="C"> C. \(\beta=110^\circ\)</label>
+
+    <label class="option"><input type="radio" name="zad6" value="D"> D. \(\beta=130^\circ\)</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol6">
+
+    <ol>
+
+      <li>Przekątna \(AC\) jest prostopadła do \(BC\) oraz \(AD=DC\) — to sugeruje symetrię względem prostej przechodzącej przez \(C\).</li>
+
+      <li>Zależności geometryczne prowadzą do wyliczenia \(\beta\) jako \(100^\circ\) (szczegółowe śledzenie kątów poprzez kąty przyległe i własności trapezu równoramiennego).</li>
+
+      <li>Odp.: <b>A (100°)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 7 -->
+
+<div class="section" id="zad7" data-ans="A">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 7</div>
+
+    <div class="qmeta">(czerwiec 2015 - zad. 15)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Miary kątów wewnętrznych trójkąta pozostają w stosunku \(3:4:5\). Oblicz najmniejszy kąt.
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad7" value="A"> A. 45°</label>
+
+    <label class="option"><input type="radio" name="zad7" value="B"> B. 90°</label>
+
+    <label class="option"><input type="radio" name="zad7" value="C"> C. 75°</label>
+
+    <label class="option"><input type="radio" name="zad7" value="D"> D. 60°</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol7">
+
+    <ol>
+
+      <li>Suma kątów wewnętrznych trójkąta \(=180^\circ\). Stosunek daje: \(3+4+5=12\) części => jedna część = \(180^\circ/12=15^\circ\).</li>
+
+      <li>Najmniejszy kąt = \(3\cdot 15^\circ = 45^\circ\).</li>
+
+      <li>Odp.: <b>A (45°)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 8 -->
+
+<div class="section" id="zad8" data-ans="B">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 8</div>
+
+    <div class="qmeta">(czerwiec 2015 - zad. 16)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Trójkąt \(ABC\), \(|AC|=|BC|\). Na boku \(AB\) punkt \(D\) taki, że \(|BD|=|CD|\) oraz \(\angle ACD=21^\circ\). (rysunek)<br>
+
+    <img src="img/wkp05.png" alt="wkp05"><br>
+
+    Oblicz \(\angle BCD\).
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad8" value="A"> A. 57°</label>
+
+    <label class="option"><input type="radio" name="zad8" value="B"> B. 53°</label>
+
+    <label class="option"><input type="radio" name="zad8" value="C"> C. 51°</label>
+
+    <label class="option"><input type="radio" name="zad8" value="D"> D. 55°</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol8">
+
+    <ol>
+
+      <li>Trójkąt jest równoramienny (\(|AC|=|BC|\)), więc kąty przy podstawie są równe.</li>
+
+      <li>Warunek \(|BD|=|CD|\) i dane \(\angle ACD=21^\circ\) umożliwiają tradycyjne rozpisanie kątów i dojście do wartości \(\angle BCD=53^\circ\).</li>
+
+      <li>Odp.: <b>B (53°)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 9 -->
+
+<div class="section" id="zad9" data-ans="B">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 9</div>
+
+    <div class="qmeta">(maj 2010 - zad. 13)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Liczba przekątnych siedmiokąta foremnego jest równa:
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad9" value="A"> A. 7</label>
+
+    <label class="option"><input type="radio" name="zad9" value="B"> B. 14</label>
+
+    <label class="option"><input type="radio" name="zad9" value="C"> C. 21</label>
+
+    <label class="option"><input type="radio" name="zad9" value="D"> D. 28</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol9">
+
+    <ol>
+
+      <li>Wzór: liczba przekątnych = \(\dfrac{n(n-3)}{2}\). Dla \(n=7\): \(\dfrac{7\cdot4}{2}=14\).</li>
+
+      <li>Odp.: <b>B (14)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 10 -->
+
+<div class="section" id="zad10" data-ans="A">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 10</div>
+
+    <div class="qmeta">(informator CKE)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Różnica miar dwóch sąsiednich kątów wewnętrznych równoległoboku jest \(30^\circ\). Oblicz kąt rozwarty tego równoległoboku.
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad10" value="A"> A. 105°</label>
+
+    <label class="option"><input type="radio" name="zad10" value="B"> B. 115°</label>
+
+    <label class="option"><input type="radio" name="zad10" value="C"> C. 125°</label>
+
+    <label class="option"><input type="radio" name="zad10" value="D"> D. 135°</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol10">
+
+    <ol>
+
+      <li>Niech kąty przy boku będą \(x\) (niejszy) i \(x+30^\circ\) (większy). Suma sąsiednich kątów w równoległoboku wynosi \(180^\circ\).</li>
+
+      <li>Stąd \(x+(x+30)=180 \Rightarrow 2x=150 \Rightarrow x=75^\circ\). Kąt rozwarty to \(x+30=105^\circ\).</li>
+
+      <li>Odp.: <b>A (105°)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 11 -->
+
+<div class="section" id="zad11" data-ans="B">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 11</div>
+
+    <div class="qmeta">(informator CKE)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Różnica miar kątów przy ramieniu trapezu równoramiennego (nie będącego równoległobokiem) jest \(40^\circ\). Jaka jest miara kąta przy krótszej podstawie?
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="radio" name="zad11" value="A"> A. 120°</label>
+
+    <label class="option"><input type="radio" name="zad11" value="B"> B. 110°</label>
+
+    <label class="option"><input type="radio" name="zad11" value="C"> C. 80°</label>
+
+    <label class="option"><input type="radio" name="zad11" value="D"> D. 70°</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol11">
+
+    <ol>
+
+      <li>W trapezie równoramiennym pary kątów przy jednej podstawie są równe. Niech kąty przy dłuższej podstawie to \(x\) i \(x+40\).</li>
+
+      <li>Suma pary kątów przyległych do jednej podstawy wynosi \(180^\circ\), zatem rozwiązanie prowadzi do kąta przy krótszej podstawie równego \(110^\circ\).</li>
+
+      <li>Odp.: <b>B (110°)</b>.</li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<!-- Zadanie 12 -->
+
+<div class="section" id="zad12" data-ans="B,D" data-type="multi">
+
+  <div class="qheader">
+
+    <div class="qid">Zad. 12</div>
+
+    <div class="qmeta">(zbiór CKE - zad. 38)</div>
+
+  </div>
+
+  <div class="qtext">
+
+    Dany jest trójkąt równoramienny (nie równoboczny). Punkt \(O\) jest środkiem okręgu opisanego na tym trójkącie, a punkt \(H\) jest ortocentrum. Wybierz dwie właściwe odpowiedzi.
+
+  </div>
+
+  <div class="options">
+
+    <label class="option"><input type="checkbox" name="zad12" value="A"> <strong>A.</strong> Punkt \(O\) jest równo oddalony tylko od dwóch wierzchołków tego trójkąta.</label>
+
+    <label class="option"><input type="checkbox" name="zad12" value="B"> <strong>B.</strong> Punkt \(O\) jest równo oddalony od trzech wierzchołków tego trójkąta.</label>
+
+    <label class="option"><input type="checkbox" name="zad12" value="C"> <strong>C.</strong> Punkt \(O\) jest równo oddalony od trzech boków tego trójkąta.</label>
+
+    <label class="option"><input type="checkbox" name="zad12" value="D"> <strong>D.</strong> Punkt \(H\) jest równo oddalony tylko od dwóch wierzchołków tego trójkąta.</label>
+
+    <label class="option"><input type="checkbox" name="zad12" value="E"> <strong>E.</strong> Punkt \(H\) jest równo oddalony od trzech wierzchołków tego trójkąta.</label>
+
+    <label class="option"><input type="checkbox" name="zad12" value="F"> <strong>F.</strong> Punkt \(H\) jest równo oddalony od trzech boków tego trójkąta.</label>
+
+  </div>
+
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+
+  <div class="sol" id="sol12">
+
+    <ol>
+
+      <li>Punkt \(O\) (środek okręgu opisanego) jest równo odległy od wszystkich trzech wierzchołków trójkąta — to definicja środka okręgu opisanego. Stąd odpowiedź B jest prawdziwa.</li>
+
+      <li>Punkt \(H\) (ortocentrum) w trójkącie równoramiennym leży na osi symetrii trójkąta; odległość ortocentrum do wierzchołków zwykle nie jest jednakowa dla wszystkich trzech wierzchołków. W szczególnym przypadku trójkąta równoramiennego ortocentrum jest równo oddalone tylko od dwóch wierzchołków (symetria względem osi) — stąd D jest prawdziwe.</li>
+
+      <li>Pozostałe stwierdzenia są fałszywe (np. \(O\) nie jest równo oddalony tylko od dwóch wierzchołków, tylko od wszystkich trzech; \(H\) nie jest równo oddalony od trzech boków).</li>
+
+      <li>Odp.: <b>B, D</b>.</li>
+
+    </ol>
+
+  </div>
+<footer>Małe zwycięstwa budują wielką pewność siebie ( ͡° ͜ʖ ͡°)</footer>
+
+</div>
+
+</div> 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Utility: normalize answers string (comma-separated uppercase, no spaces)
+    function normAns(s){
+      return (s||'').toString().split(',').map(x=>x.trim().toUpperCase()).filter(x=>x!=='').join(',');
+    }
+
+    document.querySelectorAll('.section').forEach(sec => {
+      const rawAns = sec.dataset.ans || '';
+      const correctStr = normAns(rawAns);
+      const correctSet = new Set(correctStr.split(',').filter(Boolean));
+
+      document.querySelectorAll(".section").forEach(sec => {
+  const correctAns = sec.dataset.ans;
+
+  // Obsługa checkboxów
+  sec.querySelectorAll("input[type=checkbox]").forEach(ch => {
+    ch.addEventListener("change", () => {
+      if (ch.checked) {
+        if (correctAns.split(",").includes(ch.value)) {
+          ch.parentElement.classList.add("correct");
+          ch.parentElement.classList.remove("incorrect");
+        } else {
+          ch.parentElement.classList.add("incorrect");
+          ch.parentElement.classList.remove("correct");
+        }
+      } else {
+        ch.parentElement.classList.remove("correct", "incorrect"); // reset po odznaczeniu
+      }
+    });
+  });
+
+  // Obsługa radio
+  sec.querySelectorAll("input[type=radio]").forEach(r => {
+    r.addEventListener("change", () => {
+      sec.querySelectorAll(".option").forEach(opt => {
+        opt.classList.remove("correct", "incorrect");
+      });
+      if (r.value === correctAns) {
+        r.parentElement.classList.add("correct");
+      } else {
+        r.parentElement.classList.add("incorrect");
+      }
+    });
+  });
+});
+
+      // INPUT + SPRAWDŹ (number/text) buttons
+      const inp = sec.querySelector('input[type="text"].frac-input, input[type="number"].num-input');
+      const btn = sec.querySelector('.btn-check');
+      if(inp && btn){
+        btn.addEventListener('click', ()=>{
+          const val = inp.value.trim();
+          const targetAns = (sec.dataset.ans||'').trim();
+          // simple equality check (caller asked to compare to sec.dataset.ans)
+          if(val === targetAns){
+            alert("Dobrze! To poprawna odpowiedź.");
+            inp.classList.add('correct'); inp.classList.remove('incorrect');
+            btn.classList.add('correct'); btn.classList.remove('incorrect');
+          } else {
+            alert("Źle! Spróbuj ponownie.");
+            inp.classList.add('incorrect'); inp.classList.remove('correct');
+            btn.classList.add('incorrect'); btn.classList.remove('correct');
+          }
+        });
+      }
+
+      // Toggle rozwiązania
+      sec.querySelectorAll('.btn-solution').forEach(btnSol=>{
+        btnSol.addEventListener('click', ()=>{
+          const target = document.getElementById(btnSol.dataset.target);
+          if(!target) return;
+          target.style.display = target.style.display==='block' ? 'none' : 'block';
+        });
+      });
+
+    }); // forEach section
+
+  });
+  </script>
+ 
+</body>
+</html>

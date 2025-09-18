@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Układy równań liniowych</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- MathJax for nice fractions / formulas if needed in solutions -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+    <h1>Układy równań liniowych</h1><br>
+
+    <!-- Zad. 1 -->
+    <div class="section" id="zad1" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 1</div>
+        <div class="qmeta">(grudzień 2024 - zad. 7)</div>
+      </div>
+      <div class="qtext">
+        Para liczb \(x=-1\) i \(y=6\) jest rozwiązaniem układu
+        \[
+          \begin{cases}
+            a x + 3y = 20\\
+            x + b y = 5
+          \end{cases}
+        \]
+        gdzie \(a\) oraz \(b\) są liczbami rzeczywistymi. Wartość wyrażenia \(a\cdot b\) jest równa:
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad1" value="A"> A. \((-2)\)</label>
+        <label class="option"><input type="radio" name="zad1" value="B"> B. \((-0{,}5)\)</label>
+        <label class="option"><input type="radio" name="zad1" value="C"> C. \(0{,}5\)</label>
+        <label class="option"><input type="radio" name="zad1" value="D"> D. \(2\)</label>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-solution" data-target="sol1">Rozwiązanie</button>
+      </div>
+
+      <div class="sol" id="sol1">
+        <ol>
+          <li>Podstawiamy \(x=-1,\;y=6\) do pierwszego równania: \(a(-1)+3\cdot6=20\) ⇒ \(-a+18=20\) ⇒ \(-a=2\) ⇒ \(a=-2\).</li>
+          <li>Podstawiamy do drugiego: \(-1 + b\cdot6 = 5\) ⇒ \(6b = 6\) ⇒ \(b=1\).</li>
+          <li>Zatem \(a\cdot b = (-2)\cdot 1 = -2\). Odpowiedź A.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Zad. 2 (z obrazkiem) -->
+    <div class="section" id="zad2" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 2</div>
+        <div class="qmeta">(sierpień 2024 - zad. 8)</div>
+      </div>
+      <div class="qtext">
+        Na rysunku przedstawiono interpretację geometryczną jednego z poniższych układów równań.
+      </div>
+
+      <div style="text-align:center;">
+        <img src="img/uklady01.png" alt="uklady01">
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad2" value="A"> A.
+          \(\begin{cases} y = x+2 \\ y = 2x-3 \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad2" value="B"> B.
+          \(\begin{cases} y = -x+2 \\ y = 2x-3 \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad2" value="C"> C.
+          \(\begin{cases} y = x+2 \\ y = -2x-3 \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad2" value="D"> D.
+          \(\begin{cases} y = -x+2 \\ y = 2x+3 \end{cases}\)
+        </label>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-solution" data-target="sol2">Rozwiązanie</button>
+      </div>
+
+      <div class="sol" id="sol2">
+        <ol>
+          <li>Na rysunku widać prostą o nachyleniu dodatnim (przechodzi w górę w prawo) i prostą o nachyleniu większym niż 1 (bardziej stroma).</li>
+          <li>Opcja B to prosta nachylona ujemnie i druga o nachyleniu 2; porównując z rysunkiem otrzymujemy poprawną interpretację (szczegóły geometryczne na rysunku).</li>
+          <li>Odpowiedź: B.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Zad. 3 -->
+    <div class="section" id="zad3" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 3</div>
+        <div class="qmeta">(czerwiec 2024 - zad. 7)</div>
+      </div>
+      <div class="qtext">
+        Rozważamy układ
+        \[
+          \begin{cases}
+            x - 2y = 3 \\
+            -4x + 8y = -12
+          \end{cases}
+        \]
+        Ten układ:
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad3" value="A"> A. nie ma rozwiązań.</label>
+        <label class="option"><input type="radio" name="zad3" value="B"> B. ma dokładnie jedno rozwiązanie.</label>
+        <label class="option"><input type="radio" name="zad3" value="C"> C. dokładnie dwa rozwiązania.</label>
+        <label class="option"><input type="radio" name="zad3" value="D"> D. ma nieskończenie wiele rozwiązań.</label>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-solution" data-target="sol3">Rozwiązanie</button>
+      </div>
+
+      <div class="sol" id="sol3">
+        <ol>
+          <li>Drugie równanie to \(-4x+8y=-12\). Dzieląc przez \(-4\) otrzymamy \(x-2y=3\) — to dokładnie pierwsze równanie.</li>
+          <li>Oba równania są tożsame ⇒ nieskończenie wiele rozwiązań (wszystkie pary spełniające \(x-2y=3\)).</li>
+          <li>Odpowiedź: D.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Zad. 4 -->
+    <div class="section" id="zad4" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 4</div>
+        <div class="qmeta">(maj 2024 - zad. 10)</div>
+      </div>
+      <div class="qtext">
+        W październiku zasadzono razem \(1960\) drzew w dwóch sadach. Po roku uschło \(5\%\) w pierwszym sadzie i \(10\%\) w drugim. Po usunięciu uschniętych drzew liczba drzew w drugim sadzie stanowiła \(60\%\) liczby drzew, które pozostały w pierwszym sadzie. Niech \(x\) i \(y\) to liczby drzew posadzonych odpowiednio w pierwszym i drugim sadzie. Który układ prowadzi do obliczenia \(x\) i \(y\)?
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad4" value="A"> A.
+          \(\begin{cases} x+y=1960 \\ 0{,}6\cdot 0{,}95x = 0{,}9y \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad4" value="B"> B.
+          \(\begin{cases} x+y=1960 \\ 0{,}95x = 0{,}6\cdot 0{,}9y \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad4" value="C"> C.
+          \(\begin{cases} x+y=1960 \\ 0{,}05x = 0{,}6\cdot 0{,}1y \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad4" value="D"> D.
+          \(\begin{cases} x+y=1960 \\ 0{,}4\cdot 0{,}95x = 0{,}9y \end{cases}\)
+        </label>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-solution" data-target="sol4">Rozwiązanie</button>
+      </div>
+
+      <div class="sol" id="sol4">
+        <ol>
+          <li>Po roku w pierwszym sadzie pozostało \(0{,}95x\) drzew, w drugim \(0{,}9y\).</li>
+          <li>Dane: liczba drzew w drugim sadzie stanowi \(60\%\) liczby drzew pozostałych w pierwszym sadzie ⇒ \(0{,}9y = 0{,}6\cdot 0{,}95x\).</li>
+          <li>Dodatkowo \(x+y=1960\). To układ A.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Zad. 5 (z obrazkiem) -->
+    <div class="section" id="zad5" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 5</div>
+        <div class="qmeta">(maj 2024 - zad. 11)</div>
+      </div>
+      <div class="qtext">
+        Na rysunku przedstawiono dwie proste równoległe — wybierz układ równań, którego interpretację geometryczną przedstawiono.
+      </div>
+
+      <div style="text-align:center;">
+        <img src="img/uklady02.png" alt="uklady02">
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad5" value="A"> A.
+          \(\begin{cases} y = -\tfrac{3}{2}x + 3\\ y = -\tfrac{3}{2}x -1 \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad5" value="B"> B.
+          \(\begin{cases} y = \tfrac{3}{2}x + 3\\ y = -\tfrac{2}{3}x -1 \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad5" value="C"> C.
+          \(\begin{cases} y = \tfrac{3}{2}x + 3\\ y = \tfrac{3}{2}x -1 \end{cases}\)
+        </label>
+        <label class="option"><input type="radio" name="zad5" value="D"> D.
+          \(\begin{cases} y = -\tfrac{3}{2}x -3\\ y = \tfrac{3}{2}x +1 \end{cases}\)
+        </label>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-solution" data-target="sol5">Rozwiązanie</button>
+      </div>
+
+      <div class="sol" id="sol5">
+        <ol>
+          <li>Na rysunku obie proste mają jednakowy współczynnik kierunkowy (oba są nachylone w tę samą stronę) i różne wyrazy wolne ⇒ współczynnik kierunkowy ten sam i różne wyrazy wolne.</li>
+          <li>Opcja A ma ten sam współczynnik kierunkowy \(-\tfrac{3}{2}\) i różne wyrazy wolne ⇒ proste równoległe.</li>
+          <li>Odpowiedź: A.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Zad. 6 -->
+    <div class="section" id="zad6" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 6</div>
+        <div class="qmeta">(grudzień 2023 - zad. 6)</div>
+      </div>
+      <div class="qtext">
+        Dany jest układ
+        \[
+          \begin{cases}
+            x - 3y + 5 = 0\\
+            2x + y + 3 = 0
+          \end{cases}
+        \]
+        Rozwiązaniem jest para:
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad6" value="A"> A. \(x=1,\; y=2\)</label>
+        <label class="option"><input type="radio" name="zad6" value="B"> B. \(x=0,\; y=-3\)</label>
+        <label class="option"><input type="radio" name="zad6" value="C"> C. \(x=-2,\; y=1\)</label>
+        <label class="option"><input type="radio" name="zad6" value="D"> D. \(x=-1,\; y=-1\)</label>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-solution" data-target="sol6">Rozwiązanie</button>
+      </div>
+
+      <div class="sol" id="sol6">
+        <ol>
+          <li>Rozwiążemy układ: z pierwszego \(x = 3y-5\). Podstawiamy do drugiego: \(2(3y-5)+y+3=0\) ⇒ \(6y-10+y+3=0\) ⇒ \(7y-7=0\) ⇒ \(y=1\).</li>
+          <li>Wówczas \(x=3\cdot1-5=-2\). Odpowiedź C.</li>
+        </ol>
+      </div>
+    </div>
+<!-- Zadanie 7 -->
+<div class="section" id="zad7" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 7</div>
+    <div class="qmeta">(sierpień 2023 - zad. 10)</div>
+  </div>
+  <div class="qtext">
+    W kartezjańskim układzie współrzędnych (x, y), punkt (−8, 6) jest punktem przecięcia prostych o równaniach
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad7" value="A"> A. \(2x + 3y = 2\) i \(-x + y = -14\)</label>
+    <label class="option"><input type="radio" name="zad7" value="B"> B. \(3x + 2y = -12\) i \(2x + y = 10\)</label>
+    <label class="option"><input type="radio" name="zad7" value="C"> C. \(x + y = -2\) i \(x - 2y = 4\)</label>
+    <label class="option"><input type="radio" name="zad7" value="D"> D. \(x - y = -14\) i \(-2x + y = 22\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol7">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol7">
+    <p>Podstawiając punkt (−8, 6) sprawdzamy: <br>
+    Dla układu D: \(x - y = -14 \Rightarrow -8 - 6 = -14\) ✓ oraz \(-2x + y = 22 \Rightarrow -2(-8) + 6 = 22\) ✓.<br>
+    Punkt spełnia obie proste.<br>
+    Odpowiedź: <b>D</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 8 -->
+<div class="section" id="zad8" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 8</div>
+    <div class="qmeta">(maj 2023 - zad. 10)</div>
+  </div>
+  <div class="qtext">
+    Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych (x, y) jednego z niżej zapisanych układów równań A–D.
+    <img src="img/uklady03.png" alt="uklady03">
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad8" value="A"> A. \(y = -x + 2,\; y = -2x + 1\)</label>
+    <label class="option"><input type="radio" name="zad8" value="B"> B. \(y = x - 2,\; y = -2x - 1\)</label>
+    <label class="option"><input type="radio" name="zad8" value="C"> C. \(y = x - 2,\; y = 2x + 1\)</label>
+    <label class="option"><input type="radio" name="zad8" value="D"> D. \(y = -x + 2,\; y = 2x - 1\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol8">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol8">
+    <p>Z rysunku widać, że proste mają współczynniki kierunkowe \(-1\) i \(2\).<br>
+    Odpowiedź: <b>D</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 9 -->
+<div class="section" id="zad9" data-ans="C,E">
+  <div class="qheader">
+    <div class="qid">Zad. 9</div>
+    <div class="qmeta">(maj 2023 - zad. 11)</div>
+  </div>
+  <div class="qtext">
+    Dany jest prostokąt o bokach długości a i b, gdzie a > b. Obwód tego prostokąta jest równy 30. Jeden z boków prostokąta jest o 5 krótszy od drugiego.<br>
+    Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F.
+  </div>
+  <div class="options">
+    <label class="option"><input type="checkbox" name="zad9" value="A"> A. \(\begin{cases} 2ab = 30 \\ a - b = 5 \end{cases}\)</label>
+    <label class="option"><input type="checkbox" name="zad9" value="B"> B. \(\begin{cases} 2a + b = 30 \\ a = 5b \end{cases}\)</label>
+    <label class="option"><input type="checkbox" name="zad9" value="C"> C. \(\begin{cases} 2(a+b) = 30 \\ b = a - 5 \end{cases}\)</label>
+    <label class="option"><input type="checkbox" name="zad9" value="D"> D. \(\begin{cases} 2a + 2b = 30 \\ b = 5a \end{cases}\)</label>
+    <label class="option"><input type="checkbox" name="zad9" value="E"> E. \(\begin{cases} 2a + 2b = 30 \\ a - b = 5 \end{cases}\)</label>
+    <label class="option"><input type="checkbox" name="zad9" value="F"> F. \(\begin{cases} a + b = 30 \\ a = b + 5 \end{cases}\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol9">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol9">
+    <p>Warunki: obwód \(2(a+b)=30\) oraz różnica boków \(a-b=5\).<br>
+    Układy odpowiadają literom <b>C</b> i <b>E</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 10 -->
+<div class="section" id="zad10" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 10</div>
+    <div class="qmeta">(grudzień 2022 - zad. 3)</div>
+  </div>
+  <div class="qtext">
+    Właściciel sklepu kupił w hurtowni 50 par identycznych spodni po \(x\) zł za parę i 40 identycznych marynarek po \(y\) zł za sztukę. Za zakupy w hurtowni zapłacił 8000 zł. Po doliczeniu marży 50% na każdą parę spodni i 20% na każdą marynarkę ceny detaliczne spodni i marynarki były jednakowe.<br>
+    Cenę pary spodni \(x\) oraz cenę marynarki \(y\) można obliczyć z układu równań:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad10" value="A"> A. \(\begin{cases} x + y = 8000 \\ 0.5x = 0.2y \end{cases}\)</label>
+    <label class="option"><input type="radio" name="zad10" value="B"> B. \(\begin{cases} 50x + 40y = 8000 \\ 0.5x = 0.2y \end{cases}\)</label>
+    <label class="option"><input type="radio" name="zad10" value="C"> C. \(\begin{cases} 50x + 40y = 8000 \\ 1.5x = 1.2y \end{cases}\)</label>
+    <label class="option"><input type="radio" name="zad10" value="D"> D. \(\begin{cases} x + y = 8000 \\ 1.5x = 1.2y \end{cases}\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol10">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol10">
+    <p>Równanie kosztu: \(50x+40y=8000\). <br>
+    Warunek cen: \(1.5x = 1.2y\). <br>
+    Odpowiedź: <b>C</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 11 -->
+<div class="section" id="zad11" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 11</div>
+    <div class="qmeta">(grudzień 2022 - zad. 10)</div>
+  </div>
+  <div class="qtext">
+    Dany jest układ równań:<br>
+    \(y = x - 1\)<br>
+    \(y = -x + 1\)<br>
+    Na którym z rysunków A–D przedstawiona jest interpretacja geometryczna tego układu?
+    <img src="img/uklady04.png" alt="uklady04">
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad11" value="A"> A</label>
+    <label class="option"><input type="radio" name="zad11" value="B"> B</label>
+    <label class="option"><input type="radio" name="zad11" value="C"> C</label>
+    <label class="option"><input type="radio" name="zad11" value="D"> D</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol11">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol11">
+    <p>Układ tworzą dwie proste przecinające się pod kątem prostym w punkcie (1,0). Zgadza się z rysunkiem <b>A</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 12 -->
+<div class="section" id="zad12" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 12</div>
+    <div class="qmeta">(wrzesień 2022 - zad. 9)</div>
+  </div>
+  <div class="qtext">
+    Klient banku wypłacił z bankomatu kwotę 1040 zł w banknotach 20, 50 i 100 zł. Banknotów 100-złotowych było dwa razy więcej niż 50-złotowych, a 20-złotowych było o 2 mniej niż 50-złotowych. Niech \(x\) oznacza liczbę banknotów 50-złotowych, a \(y\) liczbę banknotów 20-złotowych. Poprawny układ równań to:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad12" value="A"> A. \(\begin{cases} 20y + 50x + 100\cdot 2x = 1040 \\ y = x - 2 \end{cases}\)</label>
+    <label class="option"><input type="radio" name="zad12" value="B"> B. \(\begin{cases} 20y + 50x + 50x\cdot 2 = 1040 \\ y = x - 2 \end{cases}\)</label>
+    <label class="option"><input type="radio" name="zad12" value="C"> C. \(\begin{cases} 20y + 50x + 100\cdot 2x = 1040 \\ x = y - 2 \end{cases}\)</label>
+    <label class="option"><input type="radio" name="zad12" value="D"> D. \(\begin{cases} 20y + 50x + 50x\cdot 2 = 1040 \\ x = y - 2 \end{cases}\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol12">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol12">
+    <p>Warunki: kwota \(20y+50x+100\cdot 2x=1040\), oraz \(y=x-2\). <br>
+    Odpowiedź: <b>A</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 13 -->
+<div class="section" id="zad13" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 13</div>
+    <div class="qmeta">(maj 2022 - zad. 6)</div>
+  </div>
+  <div class="qtext">
+    Rozwiązaniem układu równań:<br>
+    \(11x - 11y = 1\)<br>
+    \(22x + 22y = -1\)<br>
+    jest para liczb: \(x = x_0, y = y_0\). Wtedy:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad13" value="A"> A. \(x_0 > 0, y_0 > 0\)</label>
+    <label class="option"><input type="radio" name="zad13" value="B"> B. \(x_0 > 0, y_0 < 0\)</label>
+    <label class="option"><input type="radio" name="zad13" value="C"> C. \(x_0 < 0, y_0 > 0\)</label>
+    <label class="option"><input type="radio" name="zad13" value="D"> D. \(x_0 < 0, y_0 < 0\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol13">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol13">
+    <p>Rozwiązując: z pierwszego równania \(x-y=\tfrac{1}{11}\). Drugie daje \(x+y=-\tfrac{1}{22}\). <br>
+    Stąd \(x=\tfrac{1}{44} >0\), \(y=-\tfrac{3}{44} <0\). <br>
+    Odpowiedź: <b>B</b>.</p>
+  </div>
+</div>
+
+<!-- Zadanie 14 -->
+<div class="section" id="zad14" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 14</div>
+    <div class="qmeta">(czerwiec 2021 - zad. 21)</div>
+  </div>
+  <div class="qtext">
+    Prosta przechodząca przez punkty \((-4,-1)\) i \((5,5)\) ma równanie:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad14" value="A"> A. \(y = x + 3\)</label>
+    <label class="option"><input type="radio" name="zad14" value="B"> B. \(y = \tfrac{2}{3}x + \tfrac{5}{3}\)</label>
+    <label class="option"><input type="radio" name="zad14" value="C"> C. \(y = x - 3\)</label>
+    <label class="option"><input type="radio" name="zad14" value="D"> D. \(y = \tfrac{2}{3}x + \tfrac{11}{3}\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol14">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol14">
+    <p>Współczynnik kierunkowy: \(\frac{5-(-1)}{5-(-4)}=\frac{6}{9}=\tfrac{2}{3}\).<br>
+    Podstawiając punkt (5,5): \(5=\tfrac{2}{3}\cdot5+b \Rightarrow b=\tfrac{5}{3}\).<br>
+    Równanie: \(y=\tfrac{2}{3}x+\tfrac{5}{3}\). <br>
+    Odpowiedź: <b>B</b>.</p>
+  </div>
+</div>
+<!-- Zadanie 15 -->
+<div class="section" id="zad15" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 15</div>
+    <div class="qmeta">(maj 2021 - zad. 8)</div>
+  </div>
+  <div class="qtext">
+    Na rysunku obok przedstawiono geometryczną interpretację jednego z niżej zapisanych układów równań.
+    Wskaż ten układ, którego geometryczną interpretację przedstawiono na rysunku.
+    <img src="img/uklady05.png" alt="Wykres układu równań">
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad15" value="A"> \( y = x + 1,\; y = -2x + 4 \)</label>
+    <label class="option"><input type="radio" name="zad15" value="B"> \( y = x - 1,\; y = 2x + 4 \)</label>
+    <label class="option"><input type="radio" name="zad15" value="C"> \( y = x - 1,\; y = -2x + 4 \)</label>
+    <label class="option"><input type="radio" name="zad15" value="D"> \( y = x + 1,\; y = 2x + 4 \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol15">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol15">
+    <ol>
+      <li>Na wykresie widać prostą o dodatnim nachyleniu i prostą o ujemnym nachyleniu.</li>
+      <li>To odpowiada układowi \( y = x + 1 \) i \( y = -2x + 4 \).</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 16 -->
+<div class="section" id="zad16" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 16</div>
+    <div class="qmeta">(marzec 2021 - zad. 5)</div>
+  </div>
+  <div class="qtext">
+    Para liczb \( x = 1, y = -3 \) spełnia układ równań:
+    \[
+    \begin{cases}
+    x - y = a^2 \\
+    (1+a)x - 3y = -4a
+    \end{cases}
+    \]
+    Wtedy \( a \) jest równe:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad16" value="A"> 2</label>
+    <label class="option"><input type="radio" name="zad16" value="B"> -2</label>
+    <label class="option"><input type="radio" name="zad16" value="C"> \( \sqrt{2} \)</label>
+    <label class="option"><input type="radio" name="zad16" value="D"> \( -\sqrt{2} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol16">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol16">
+    <ol>
+      <li>Podstawiamy \( x=1, y=-3 \) do pierwszego równania:  
+          \( 1 - (-3) = 4 = a^2 \implies a = \pm 2 \).</li>
+      <li>Dla \( a=2 \): drugie równanie daje \( (1+2)\cdot 1 - 3(-3) = 3+9=12 \), a prawa strona: \( -8 \). Sprzeczność.</li>
+      <li>Dla \( a=-2 \): lewe: \( (1-2)\cdot 1 - 3(-3) = -1+9=8 \), prawa: \( -4\cdot (-2)=8 \). Zgadza się.</li>
+      <li>Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 17 -->
+<div class="section" id="zad17" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 17</div>
+    <div class="qmeta">(sierpień 2019 - zad. 5)</div>
+  </div>
+  <div class="qtext">
+    Para liczb \( x=3, y=1 \) jest rozwiązaniem układu:
+    \[
+    \begin{cases}
+    -x + 12y = a^2 \\
+    2x + ay = 9
+    \end{cases}
+    \]
+    Dla:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad17" value="A"> \( \tfrac{7}{3} \)</label>
+    <label class="option"><input type="radio" name="zad17" value="B"> -3</label>
+    <label class="option"><input type="radio" name="zad17" value="C"> 3</label>
+    <label class="option"><input type="radio" name="zad17" value="D"> \( -\tfrac{7}{3} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol17">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol17">
+    <ol>
+      <li>Podstawiamy \( x=3, y=1 \): \(-3+12=9=a^2 \implies a=\pm 3\).</li>
+      <li>W drugim: \( 2\cdot 3 + a\cdot 1 = 9 \implies 6+a=9 \implies a=3\).</li>
+      <li>Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 18 -->
+<div class="section" id="zad18" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 18</div>
+    <div class="qmeta">(czerwiec 2019 - zad. 7)</div>
+  </div>
+  <div class="qtext">
+    Układ równań:
+    \[
+    \begin{cases}
+    2x - y = 2 \\
+    x + my = 1
+    \end{cases}
+    \]
+    ma nieskończenie wiele rozwiązań dla:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad18" value="A"> \( m=-1 \)</label>
+    <label class="option"><input type="radio" name="zad18" value="B"> \( m=1 \)</label>
+    <label class="option"><input type="radio" name="zad18" value="C"> \( m=\tfrac{1}{2} \)</label>
+    <label class="option"><input type="radio" name="zad18" value="D"> \( m=-\tfrac{1}{2} \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol18">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol18">
+    <ol>
+      <li>Nieskończenie wiele rozwiązań, gdy układy równań są proporcjonalne.</li>
+      <li>Eliminacja: \(2x-y=2 \iff x=\frac{y+2}{2}\).</li>
+      <li>Podstawiamy: \(\frac{y+2}{2} + my = 1\).</li>
+      <li>Porównując współczynniki, wychodzi \( m=-\tfrac{1}{2} \).</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 19 -->
+<div class="section" id="zad19" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 19</div>
+    <div class="qmeta">(maj 2019 - zad. 5)</div>
+  </div>
+  <div class="qtext">
+    Para liczb \( x=2, y=2 \) jest rozwiązaniem układu:
+    \[
+    \begin{cases}
+    ax+y=4 \\
+    -2x+3y=2a
+    \end{cases}
+    \]
+    dla:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad19" value="A"> -1</label>
+    <label class="option"><input type="radio" name="zad19" value="B"> 1</label>
+    <label class="option"><input type="radio" name="zad19" value="C"> -2</label>
+    <label class="option"><input type="radio" name="zad19" value="D"> 2</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol19">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol19">
+    <ol>
+      <li>Podstawiamy \( x=2, y=2 \): \( 2a+2=4 \implies 2a=2 \implies a=1\).</li>
+      <li>Sprawdzenie: \(-4+6=2=2a=2\). Zgadza się.</li>
+      <li>Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 20 -->
+<div class="section" id="zad20" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 20</div>
+    <div class="qmeta">(sierpień 2017 - zad. 7)</div>
+  </div>
+  <div class="qtext">
+    Obwód prostokąta o bokach długości \( a \) i \( b \) jest równy 60. Jeden z boków prostokąta jest o 10 dłuższy
+    od drugiego. Oblicz długości boków tego prostokąta. Który układ równań opisuje te zależności?
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad20" value="A"> \( 2(a+b)=60,\; a+10=b \)</label>
+    <label class="option"><input type="radio" name="zad20" value="B"> \( 2a+b=60,\; 10b=a \)</label>
+    <label class="option"><input type="radio" name="zad20" value="C"> \( 2ab=60,\; a-b=10 \)</label>
+    <label class="option"><input type="radio" name="zad20" value="D"> \( 2(a+b)=60,\; 10a=b \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol20">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol20">
+    <ol>
+      <li>Obwód: \( 2(a+b)=60 \).</li>
+      <li>Różnica boków: \( b=a+10 \).</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 21 -->
+<div class="section" id="zad21" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 21</div>
+    <div class="qmeta">(czerwiec 2017 - zad. 8)</div>
+  </div>
+  <div class="qtext">
+    Rozwiązaniem układu równań
+    \[
+    \begin{cases}
+    x+y=1 \\
+    x-y=b
+    \end{cases}
+    \]
+    z niewiadomymi \( x \) i \( y \) jest para liczb dodatnich. Wynika stąd, że:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad21" value="A"> \( b < -1 \)</label>
+    <label class="option"><input type="radio" name="zad21" value="B"> \( b=-1 \)</label>
+    <label class="option"><input type="radio" name="zad21" value="C"> \( -1 < b < 1 \)</label>
+    <label class="option"><input type="radio" name="zad21" value="D"> \( b \ge 1 \)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol21">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol21">
+    <ol>
+      <li>Dodajemy układ: \( 2x=1+b \implies x=\tfrac{1+b}{2} \).</li>
+      <li>Podstawiamy: \( y=1-x=\tfrac{1-b}{2} \).</li>
+      <li>Warunek: \( x>0, y>0 \implies -1<b<1 \).</li>
+      <li>Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+<!-- Zadanie 22 -->
+<div class="section" id="zad22" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 22</div>
+    <div class="qmeta">(sierpień 2016 - zad. 12)</div>
+  </div>
+  <div class="qtext">
+    Układ równań
+    \[
+    \begin{cases}
+    2x - 3y = 5 \\
+    -4x + 6y = -10
+    \end{cases}
+    \]
+    
+    
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad22" value="A"> A. nie ma rozwiązań.</label>
+    <label class="option"><input type="radio" name="zad22" value="B"> B. ma dokładnie jedno rozwiązanie.</label>
+    <label class="option"><input type="radio" name="zad22" value="C"> C. ma dokładnie dwa rozwiązania.</label>
+    <label class="option"><input type="radio" name="zad22" value="D"> D. ma nieskończenie wiele rozwiązań.</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol22">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol22">
+    <ol>
+      <li>Drugi wiersz to wielokrotność pierwszego: \(-4x+6y=-10 \iff 2(2x-3y)=10\).</li>
+      <li>To ten sam układ równań — nieskończenie wiele rozwiązań.</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 23 -->
+<div class="section" id="zad23" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 23</div>
+    <div class="qmeta">(czerwiec 2016 - zad. 18)</div>
+  </div>
+  <div class="qtext">
+    Układ równań
+    \[
+    \begin{cases}
+    y = -ax + 2a \\
+    y = \tfrac{b}{3}x - 2
+    \end{cases}
+    \]
+    nie ma rozwiązań dla:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad23" value="A"> A. \(a=-1, b=-3\)</label>
+    <label class="option"><input type="radio" name="zad23" value="B"> B. \(a=1, b=3\)</label>
+    <label class="option"><input type="radio" name="zad23" value="C"> C. \(a=1, b=-3\)</label>
+    <label class="option"><input type="radio" name="zad23" value="D"> D. \(a=-1, b=3\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol23">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol23">
+    <ol>
+      <li>Dwie proste nie mają punktów wspólnych, jeśli są równoległe i różne.</li>
+      <li>Dla \(a=1\): pierwsza prosta ma równanie \(y=-x+2\), czyli współczynnik kierunkowy \(-1\).</li>
+      <li>Dla \(b=-3\): druga prosta to \(y=-x-2\), też współczynnik kierunkowy \(-1\), inny wyraz wolny.</li>
+      <li>Zatem są równoległe i rozłączne.</li>
+      <li>Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 24 -->
+<div class="section" id="zad24" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 24</div>
+    <div class="qmeta">(czerwiec 2015 - zad. 5)</div>
+  </div>
+  <div class="qtext">
+    Para liczb \(x=2, y=1\) jest rozwiązaniem układu równań:
+    \[
+    \begin{cases}
+    x + ay = 5 \\
+    2x - y = 3
+    \end{cases}
+    \]
+    gdy
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad24" value="A"> A. \(a=-3\)</label>
+    <label class="option"><input type="radio" name="zad24" value="B"> B. \(a=-2\)</label>
+    <label class="option"><input type="radio" name="zad24" value="C"> C. \(a=2\)</label>
+    <label class="option"><input type="radio" name="zad24" value="D"> D. \(a=3\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol24">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol24">
+    <ol>
+      <li>Podstawiamy \(x=2, y=1\) do pierwszego równania: \(2+a=5 \implies a=3\).</li>
+      <li>Drugie równanie: \(2\cdot 2 - 1=3\) — zgadza się.</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 25 -->
+<div class="section" id="zad25" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 25</div>
+    <div class="qmeta">(grudzień 2013 - zad. 16)</div>
+  </div>
+  <div class="qtext">
+    Dane jest równanie \(3x+4y-5=0\). Z którym z poniższych równań tworzy ono układ sprzeczny?
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad25" value="A"> A. \(6x+8y-10=0\)</label>
+    <label class="option"><input type="radio" name="zad25" value="B"> B. \(4x-3y+5=0\)</label>
+    <label class="option"><input type="radio" name="zad25" value="C"> C. \(9x+12y-10=0\)</label>
+    <label class="option"><input type="radio" name="zad25" value="D"> D. \(5x+4y-3=0\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol25">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol25">
+    <ol>
+      <li>Pierwsza prosta: \(y=-\tfrac{3}{4}x+\tfrac{5}{4}\).</li>
+      <li>Równanie C: \(9x+12y-10=0 \iff y=-\tfrac{3}{4}x+\tfrac{10}{12}\).</li>
+      <li>Mają ten sam współczynnik kierunkowy, ale różne wyrazy wolne.</li>
+      <li>Zatem są równoległe i rozłączne.</li>
+      <li>Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 26 -->
+<div class="section" id="zad26" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 26</div>
+    <div class="qmeta">(sierpień 2013 - zad. 4)</div>
+  </div>
+  <div class="qtext">
+    Rozwiązaniem układu równań
+    \[
+    \begin{cases}
+    3x - 5y = 0 \\
+    2x - y = 14
+    \end{cases}
+    \]
+    jest para liczb \((x,y)\) takich, że:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad26" value="A"> A. \(x<0, y<0\)</label>
+    <label class="option"><input type="radio" name="zad26" value="B"> B. \(x<0, y>0\)</label>
+    <label class="option"><input type="radio" name="zad26" value="C"> C. \(x>0, y<0\)</label>
+    <label class="option"><input type="radio" name="zad26" value="D"> D. \(x>0, y>0\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol26">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol26">
+    <ol>
+      <li>Z pierwszego równania: \(3x=5y \implies y=\tfrac{3}{5}x\).</li>
+      <li>Podstawiamy do drugiego: \(2x-\tfrac{3}{5}x=14 \implies \tfrac{7}{5}x=14 \implies x=10\).</li>
+      <li>Wtedy \(y=\tfrac{3}{5}\cdot 10=6\).</li>
+      <li>Zatem \(x>0, y>0\).</li>
+      <li>Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 27 -->
+<div class="section" id="zad27" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 27</div>
+    <div class="qmeta">(maj 2013 - zad. 4)</div>
+  </div>
+  <div class="qtext">
+    Rozwiązaniem układu równań
+    \[
+    \begin{cases}
+    5x+3y=3 \\
+    8x-6y=48
+    \end{cases}
+    \]
+    jest para liczb:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad27" value="A"> A. \(x=-3, y=4\)</label>
+    <label class="option"><input type="radio" name="zad27" value="B"> B. \(x=-3, y=6\)</label>
+    <label class="option"><input type="radio" name="zad27" value="C"> C. \(x=3, y=-4\)</label>
+    <label class="option"><input type="radio" name="zad27" value="D"> D. \(x=9, y=4\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol27">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol27">
+    <ol>
+      <li>Z pierwszego równania: \(5x+3y=3\).</li>
+      <li>Podstawiamy \(x=3\): \(15+3y=3 \implies 3y=-12 \implies y=-4\).</li>
+      <li>Sprawdzamy w drugim: \(8\cdot 3 -6\cdot(-4)=24+24=48\). Zgadza się.</li>
+      <li>Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 28 -->
+<div class="section" id="zad28" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 28</div>
+    <div class="qmeta">(sierpień 2011 - zad. 3)</div>
+  </div>
+  <div class="qtext">
+    Rozwiązaniem układu równań
+    \[
+    \begin{cases}
+    x+3y=5 \\
+    2x-y=3
+    \end{cases}
+    \]
+    jest:
+  </div>
+  <div class="options">
+    <label class="option"><input type="radio" name="zad28" value="A"> A. \(x=2, y=1\)</label>
+    <label class="option"><input type="radio" name="zad28" value="B"> B. \(x=2, y=-1\)</label>
+    <label class="option"><input type="radio" name="zad28" value="C"> C. \(x=1, y=2\)</label>
+    <label class="option"><input type="radio" name="zad28" value="D"> D. \(x=1, y=-2\)</label>
+  </div>
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol28">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol28">
+    <ol>
+      <li>Podstawiamy \(x=2, y=1\): \(2+3=5\) — zgadza się.</li>
+      <li>Sprawdzamy drugie równanie: \(2\cdot 2 -1=3\). Zgadza się.</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+<footer>Każde zadanie to nowe doświadczenie dla Ciebie (งツ)ว</footer>
+
+  </div>
+
+  <!-- Skrypt obsługujący wszystkie typy zadań (radia, checkbox, input, toggle sol) -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Utility: normalize answers string (comma-separated uppercase, no spaces)
+    function normAns(s){
+      return (s||'').toString().split(',').map(x=>x.trim().toUpperCase()).filter(x=>x!=='').join(',');
+    }
+
+    document.querySelectorAll('.section').forEach(sec => {
+      const rawAns = sec.dataset.ans || '';
+      const correctStr = normAns(rawAns);
+      const correctSet = new Set(correctStr.split(',').filter(Boolean));
+
+      document.querySelectorAll(".section").forEach(sec => {
+  const correctAns = sec.dataset.ans;
+
+  // Obsługa checkboxów
+  sec.querySelectorAll("input[type=checkbox]").forEach(ch => {
+    ch.addEventListener("change", () => {
+      if (ch.checked) {
+        if (correctAns.split(",").includes(ch.value)) {
+          ch.parentElement.classList.add("correct");
+          ch.parentElement.classList.remove("incorrect");
+        } else {
+          ch.parentElement.classList.add("incorrect");
+          ch.parentElement.classList.remove("correct");
+        }
+      } else {
+        ch.parentElement.classList.remove("correct", "incorrect"); // reset po odznaczeniu
+      }
+    });
+  });
+
+  // Obsługa radio
+  sec.querySelectorAll("input[type=radio]").forEach(r => {
+    r.addEventListener("change", () => {
+      sec.querySelectorAll(".option").forEach(opt => {
+        opt.classList.remove("correct", "incorrect");
+      });
+      if (r.value === correctAns) {
+        r.parentElement.classList.add("correct");
+      } else {
+        r.parentElement.classList.add("incorrect");
+      }
+    });
+  });
+});
+
+      // INPUT + SPRAWDŹ (number/text) buttons
+      const inp = sec.querySelector('input[type="text"].frac-input, input[type="number"].num-input');
+      const btn = sec.querySelector('.btn-check');
+      if(inp && btn){
+        btn.addEventListener('click', ()=>{
+          const val = inp.value.trim();
+          const targetAns = (sec.dataset.ans||'').trim();
+          // simple equality check (caller asked to compare to sec.dataset.ans)
+          if(val === targetAns){
+            alert("Dobrze! To poprawna odpowiedź.");
+            inp.classList.add('correct'); inp.classList.remove('incorrect');
+            btn.classList.add('correct'); btn.classList.remove('incorrect');
+          } else {
+            alert("Źle! Spróbuj ponownie.");
+            inp.classList.add('incorrect'); inp.classList.remove('correct');
+            btn.classList.add('incorrect'); btn.classList.remove('correct');
+          }
+        });
+      }
+
+      // Toggle rozwiązania
+      sec.querySelectorAll('.btn-solution').forEach(btnSol=>{
+        btnSol.addEventListener('click', ()=>{
+          const target = document.getElementById(btnSol.dataset.target);
+          if(!target) return;
+          target.style.display = target.style.display==='block' ? 'none' : 'block';
+        });
+      });
+
+    }); // forEach section
+
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ciąg arytmetyczny</title>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  :root{
+    --bg:#0f1113;
+    --card:#191b1d;
+    --text:#e6eef3;
+    --muted:#99a0a6;
+    --accent:#60a5fa;
+    --ok-bg:#163824;
+    --ok-border:#2fa84a;
+    --bad-bg:#3a1515;
+    --bad-border:#c23b3b;
+    --hover-shadow: 0 0 12px rgba(96,165,250,0.12);
+  }
+  body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+         max-width: 980px; margin: 18px auto; padding: 18px; background: var(--bg); color: var(--text); }
+  h1 { text-align:center; color: #fff; margin-bottom: 6px; }
+  p.lead { text-align:center; color:var(--muted); margin-top:0; margin-bottom:18px; }
+  .q { background: var(--card); border: 1px solid #26292b; border-radius: 12px; padding: 14px; margin: 14px 0; }
+  .q-header { display:flex; align-items:flex-start; gap:10px; }
+  .qid { background:#0b1114; color:var(--accent); padding:6px 10px; border-radius:8px; font-weight:700; }
+  .qtext { flex:1; white-space:pre-wrap; }
+  .opts { margin-top:12px; display:block; }
+  .opt { margin:8px 0; padding:10px 12px; border-radius:10px; border:1px solid #2b2d2f; cursor:pointer;
+         transition: transform .08s ease, box-shadow .12s ease; background:transparent; color:var(--text); }
+  .opt:hover { transform: translateY(-3px); box-shadow: var(--hover-shadow); }
+  .opt[data-type="pf"] { display:inline-block; margin-right:6px; padding:8px 14px; }
+  .opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: #bff2c8; }
+  .opt.wrong { background: var(--bad-bg); border-color: var(--bad-border); color: #ffc7c7; }
+  .explain { margin-top:12px; padding:14px; background:#0c0d0e; border-radius:10px; display:none; color:var(--muted); border:1px solid #222; line-height:1.45; }
+  .show { display:block !important; }
+  button.showBtn { margin-top:10px; background:#0f1720; color:var(--text); border:1px solid #222; padding:8px 12px; border-radius:8px; cursor:pointer; }
+  button.showBtn:hover { box-shadow: var(--hover-shadow); }
+  table.pf { border-collapse:collapse; margin-top:8px; width:100%; }
+  table.pf td { border:1px solid #333; padding:10px 18px; cursor:pointer; vertical-align:middle; }
+  .footer { text-align:center; color:var(--muted); margin-top:18px; font-size:13px; }
+  code { background:#0b0b0b; padding:2px 6px; border-radius:4px; color:#cbd5e1; }
+  @media (max-width:640px){ .opt[data-type="pf"]{display:block;margin-bottom:6px;} }
+ #btn-back {
+  position: fixed;
+  top: 20px;       
+  left: 20px;      
+  z-index: 9999;   
+  
+  display: inline-block;
+  padding: 15px 25px;
+  background: #ed2939;
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#btn-back:hover {
+  background: #831720;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+</style>
+
+</head>
+<body>
+    <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+<h1>Ciąg arytmetyczny</h1><br>
+
+<div id="app"></div>
+
+<script>
+// Dane: pytania + opcje + poprawne + krótkie uzasadnienie.
+// Na niektóre pytania daje bardziej szczegółowe wyjaśnienie (np. Zad.1 i Zad.2).
+const data = [
+  {
+    id:1, type:"pf",
+    text: "Ciąg (a_n) jest określony wzorem \\(a_n = 3n^2 - 3n\\) dla każdej liczby naturalnej \\(n\\ge1\\).\\nOceń prawdziwość poniższych stwierdzeń:",
+    statements: [
+      {s:"Ciąg (a_n) jest arytmetyczny.", correct:"F"},
+      {s:"Wszystkie wyrazy ciągu (a_n) są liczbami parzystymi.", correct:"P"}
+    ],
+    explanation: `<b>Rozwiązanie:</b><br>
+    Dla ciągu \\(a_n=3n^2-3n=3n(n-1)\\):<br>
+    \\(a_1=3\\cdot1^2-3\\cdot1=0,\\; a_2=6,\\; a_3=18\\). Różnice między kolejnymi: \\(6\\) i \\(12\\) — nie są stałe, więc ciąg <b>nie</b> jest arytmetyczny.<br><br>
+    Wzór zapiszemy jako \\(a_n=3n(n-1)\\). Iloczyn dwóch kolejnych liczb naturalnych \\(n(n-1)\\) zawsze zawiera liczbę parzystą, więc każdy wyraz jest parzysty.<br><b>Odp.: (F, P).</b>`
+  },
+  {
+    id:2, type:"abc",
+    text: "W ciągu arytmetycznym (a_n) dane są wyrazy: \\(a_1=52\\) oraz \\(a_{25}=2\\). Różnica ciągu (a_n) jest równa:",
+    options:[
+      {k:"A",t:"\\(-\\tfrac{25}{12}\\)"},
+      {k:"B",t:"\\(-2\\)"},
+      {k:"C",t:"2"},
+      {k:"D",t:"\\(\\tfrac{25}{12}\\)"}
+    ],
+    correct:"A",
+    explanation:`<b>Rozwiązanie:</b><br>
+    Korzystamy ze wzoru \\(a_n=a_1+(n-1)r\\). Dla \\(n=25\\): \\(2=52+24r\\) ⇒ \\(24r=-50\\) ⇒ \\(r=-\\tfrac{25}{12}\\).<br><b>Odp.: \\(-25/12\\).</b>`
+  },
+  {
+    id:3, type:"abc",
+    text: "Suma \\(S_{25}\\) dwudziestu pięciu początkowych wyrazów ciągu (a_n) z zad.2 (\\(a_1=52, a_{25}=2\\)) jest równa:",
+    options:[
+      {k:"A",t:"675"},
+      {k:"B",t:"700"},
+      {k:"C",t:"1300"},
+      {k:"D",t:"1325"}
+    ],
+    correct:"A",
+    explanation:`Suma: \\(S_{25}=\\frac{(a_1+a_{25})\\cdot25}{2}=\\frac{(52+2)\\cdot25}{2}=675.\\)`
+  },
+  {
+    id:4, type:"abc",
+    text: "Trzywyrazowy ciąg \\((5m, 4+2m, m)\\) jest arytmetyczny, gdy liczba m jest równa:",
+    options:[
+      {k:"A",t:"-4"},
+      {k:"B",t:"-1"},
+      {k:"C",t:"1"},
+      {k:"D",t:"4"}
+    ],
+    correct:"D",
+    explanation:"Dla ciągu arytmetycznego środkowy wyraz to średnia arytmetyczna: \\(4+2m=\\frac{5m+m}{2}=3m\\) ⇒ \\(4+2m=3m\\) ⇒ \\(m=4\\)."
+  },
+  /* Zadanie 5 */
+  {
+    id:5, type:"combo",
+    text: "Trzywyrazowy ciąg \\((2m-5,\\;4,\\;9)\\) jest arytmetyczny. Dokończ zdanie: Ten ciąg jest ... oraz m = ...",
+    options:[
+      {k:"A",t:"rosnący; m = -1 (niepoprawne)"},
+      {k:"B",t:"rosnący; m = 2"},
+      {k:"C",t:"malejący; m = 3 (niepoprawne)"}
+    ],
+    correct:"A,2",
+    explanation: `<b>Rozwiązanie krok po kroku:</b><br>
+    Mamy trzy kolejne wyrazy ciągu arytmetycznego: \\(a_1=2m-5,\\; a_2=4,\\; a_3=9\\). 
+    W ciągu arytmetycznym środkowy wyraz jest średnią arytmetyczną dwóch sąsiednich, czyli
+    \\[a_2 = \\frac{a_1 + a_3}{2}.\\]
+    Podstawiamy wartości:
+    \\[4 = \\frac{(2m-5) + 9}{2}.\\]
+    Mnożymy obie strony przez 2:
+    \\[8 = 2m -5 + 9 = 2m +4.\\]
+    Odejmujemy 4:
+    \\[4 = 2m \\Rightarrow m = 2.\\]
+    Teraz sprawdzamy monotoniczność ciągu: dla \\(m=2\\) mamy wyrazy
+    \\(a_1 = 2\\cdot2 -5 = -1,\\; a_2 = 4,\\; a_3 =9\\). Widzimy, że \\(-1 < 4 < 9\\), więc ciąg jest <b>rosnący</b>.<br>
+    <b>Odpowiedź:</b> ciąg rosnący, \\(m = 2\\).` 
+  },
+
+  /* Zadanie 6 */
+  {
+    id:6, type:"abc",
+    text: "W ciągu arytmetycznym dane: \\(a_1 = 7\\) oraz \\(a_2 = 13\\). Oblicz \\(a_{10}\\).",
+    options:[{k:"A",t:"-47"},{k:"B",t:"52"},{k:"C",t:"61"},{k:"D",t:"67"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica ciągu to \\(r = a_2 - a_1 = 13 - 7 = 6\\).
+    Wzór ogólny: \\(a_n = a_1 + (n-1)r\\). Dla \\(n=10\\):
+    \\[a_{10} = 7 + (10-1)\\cdot 6 = 7 + 9\\cdot 6 = 7 + 54 = 61.\\]
+    <b>Odp.: \\(a_{10} = 61\\).</b>`
+  },
+
+  /* Zadanie 7 */
+  {
+    id:7, type:"abc",
+    text: "Dany jest ciąg arytmetyczny: \\(a_2 = 4, a_3 = 9\\). Oblicz \\(a_6\\).",
+    options:[{k:"A",t:"24"},{k:"B",t:"29"},{k:"C",t:"36"},{k:"D",t:"69"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = a_3 - a_2 = 9 - 4 = 5.\\)
+    Możemy wyznaczyć \\(a_1 = a_2 - r = 4 - 5 = -1\\), a następnie
+    \\[a_6 = a_1 + 5r = -1 + 5\\cdot 5 = -1 + 25 = 24.\\]
+    Alternatywnie: \\(a_6 = a_3 + 3r = 9 + 3\\cdot 5 = 24.\\)
+    <b>Odp.: 24.</b>`
+  },
+
+  /* Zadanie 8 */
+  {
+    id:8, type:"abc",
+    text: "Trzywyrazowy ciąg \\((1, 4, a+5)\\) jest arytmetyczny. Znajdź \\(a\\).",
+    options:[{k:"A",t:"0"},{k:"B",t:"7"},{k:"C",t:"2"},{k:"D",t:"11"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Środkowy wyraz jest średnią: \\(4 = \\frac{1 + (a+5)}{2}\\).
+    Mnożymy przez 2: \\(8 = 1 + a + 5 = a + 6\\).
+    Stąd: \\(a = 8 - 6 = 2.\\)
+    <b>Odp.: a = 2.</b>`
+  },
+
+  /* Zadanie 9 */
+  {
+    id:9, type:"pf",
+    text: "Dany jest ciąg \\(a_n = -3n + 5\\). Oceń prawdziwość stwierdzeń: (1) 2, -1, -4 są trzy kolejne początkowe wyrazy (2) (a_n) ma różnicę równą 5.",
+    statements:[{s:"Liczby 2, -1, -4 są trzema kolejnymi początkowymi wyrazami ciągu (a_n).", correct:"P"},
+                {s:"(a_n) jest ciągiem arytmetycznym o różnicy równej 5.", correct:"F"}],
+    explanation: `<b>Rozwiązanie:</b><br>
+    Podstawiamy kolejne wartości \\(n=1,2,3\\):
+    \\[a_1 = -3\\cdot1 + 5 = 2,\\quad a_2 = -3\\cdot2 + 5 = -1,\\quad a_3 = -3\\cdot3 + 5 = -4.\\]
+    Zatem pierwsze stwierdzenie jest prawdziwe (te liczby to rzeczywiście trzy kolejne wyrazy).<br>
+    Różnica ciągu: \\(a_{n+1} - a_n = (-3(n+1)+5) - (-3n+5) = -3.\\)
+    Różnica nie wynosi \\(5\\), więc drugie stwierdzenie jest fałszywe.<br>
+    <b>Odp.: (P, F).</b>`
+  },
+
+  /* Zadanie 10 */
+  {
+    id:10, type:"abc",
+    text: "Pięciowyrazowy ciąg \\((-3,\\;\\tfrac{1}{2},\\;x,\\;y,\\;11)\\) jest arytmetyczny. Znajdź \\(x\\) i \\(y\\).",
+    options:[{k:"A",t:"x=4, y=15/2"},{k:"B",t:"x=15/2, y=4"},{k:"C",t:"x=-4, y=15/2"},{k:"D",t:"x=-15/2, y=4"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    W arytmetycznym 5-wyrazowym mamy \\(a_1=-3\\) i \\(a_5 = 11\\). Różnica:
+    \\[r = \\frac{a_5 - a_1}{4} = \\frac{11 - (-3)}{4} = \\frac{14}{4} = \\frac{7}{2}.\\]
+    Teraz kolejne wyrazy:
+    \\[a_2 = -3 + r = -3 + \\tfrac{7}{2} = \\tfrac{-6 + 7}{2} = \\tfrac{1}{2},\\]
+    \\[a_3 = a_2 + r = \\tfrac{1}{2} + \\tfrac{7}{2} = 4,\\]
+    \\[a_4 = a_3 + r = 4 + \\tfrac{7}{2} = \\tfrac{8 + 7}{2} = \\tfrac{15}{2}.\\]
+    Stąd \\(x = a_3 = 4,\\; y = a_4 = \\tfrac{15}{2}.\\)
+    <b>Odp.: x = 4, y = \\tfrac{15}{2}.</b>`
+  },
+
+  /* Zadanie 11 */
+  {
+    id:11, type:"combo",
+    text: "Dany jest ciąg \\(a_n = 3n - 1\\). Dokończ: Ciąg (a_n) jest ... oraz uzasadnienie ...",
+    options:[{k:"A1",t:"rosnący; an+1 - an = 3"},{k:"B2",t:"malejący; an+1 - an = 0"},{k:"C3",t:"stały; an+1 - an = -1"}],
+    correct:"A,3",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Obliczamy różnicę między kolejnymi wyrazami:
+    \\[a_{n+1} - a_n = (3(n+1)-1) - (3n -1) = 3.\\]
+    Ponieważ różnica jest stała i dodatnia (\\(+3\\)), ciąg jest <b>rosnący</b>.
+    Możemy też zapisać: \\(a_n = 3n - 1,\\; a_{n+1} = 3n + 2\\), więc wzrost jest o \\(3\\) przy każdym kroku.`
+  },
+
+  /* Zadanie 12 */
+  {
+    id:12, type:"abc",
+    text: "Dla \\(a_n = 3n - 1\\) znajdź najmniejsze naturalne \\(n\\), dla którego \\(a_n > 25\\).",
+    options:[{k:"A",t:"8"},{k:"B",t:"9"},{k:"C",t:"7"},{k:"D",t:"26"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Warunek: \\(3n - 1 > 25\\) ⇒ \\(3n > 26\\) ⇒ \\(n > \\tfrac{26}{3} \\approx 8{,}66\\).
+    Najmniejsze całkowite \\(n\\) spełniające ten warunek to \\(n = 9\\).
+    <b>Odp.: 9.</b>`
+  },
+
+  /* Zadanie 13 */
+  {
+    id:13, type:"abc",
+    text: "Dla \\(a_n = 3n - 1\\) suma \\(S_n\\) pierwszych \\(n\\) wyrazów jest równa 57. Znajdź \\(n\\).",
+    options:[{k:"A",t:"6"},{k:"B",t:"23"},{k:"C",t:"5"},{k:"D",t:"11"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Ciąg jest arytmetyczny z \\(a_1 = 2\\) i \\(r = 3\\). Wzór na sumę pierwszych \\(n\\) wyrazów:
+    \\[S_n = \\frac{n}{2}\\bigl(2a_1 + (n-1)r\\bigr) = \\frac{n}{2}(4 + 3(n-1)) = \\frac{n}{2}(3n + 1).\\]
+    Szukamy \\(n\\) takiego, że \\(\\dfrac{n}{2}(3n+1) = 57\\). Mnożymy obie strony przez 2:
+    \\[n(3n+1) = 114 \\Rightarrow 3n^2 + n - 114 = 0.\\]
+    Rozwiązujemy równanie kwadratowe: \\(\\Delta = 1 + 4\\cdot3\\cdot114 = 1 + 1368 = 1369 = 37^2.\\)
+    Stąd \\(n = \\dfrac{-1 + 37}{6} = \\dfrac{36}{6} = 6\\) (odrzucamy rozwiązanie ujemne).<br>
+    <b>Odp.: n = 6.</b>`
+  },
+
+  /* Zadanie 14 */
+  {
+    id:14, type:"abc",
+    text: "Dla ciągu arytmetycznego: różnica \\(r = 2\\) oraz \\(a_8 = 48\\). Oblicz \\(a_4\\).",
+    options:[{k:"A",t:"2"},{k:"B",t:"24"},{k:"C",t:"3"},{k:"D",t:"40"}],
+    correct:"D",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Wiemy, że \\(a_8 = a_4 + (8-4)r = a_4 + 4r\\).
+    Podstawiamy \\(48 = a_4 + 4\\cdot 2 = a_4 + 8\\) ⇒ \\(a_4 = 48 - 8 = 40.\\)
+    <b>Odp.: 40.</b>`
+  },
+
+  /* Zadanie 15 */
+  {
+    id:15, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_5 = -31\\) oraz \\(a_{10} = -66\\). Znajdź różnicę \\(r\\).",
+    options:[{k:"A",t:"-7"},{k:"B",t:"-19.4"},{k:"C",t:"7"},{k:"D",t:"19.4"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica między wyrazami oddalonymi o 5 miejsc to \\(a_{10} - a_5 = 5r\\).
+    Stąd: \\(5r = -66 - (-31) = -35\\) ⇒ \\(r = -\\dfrac{35}{5} = -7.\\)
+    <b>Odp.: r = -7.</b>`
+  },
+
+  /* Zadanie 16 */
+  {
+    id:16, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_3 + a_5 = 58\\). Oblicz \\(a_4\\).",
+    options:[{k:"A",t:"28"},{k:"B",t:"29"},{k:"C",t:"33"},{k:"D",t:"40"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    W ciągu arytmetycznym środkowy wyraz między \\(a_3\\) i \\(a_5\\) to \\(a_4\\), czyli
+    \\[a_3 + a_5 = 2a_4.\\]
+    Zatem \\(2a_4 = 58\\) ⇒ \\(a_4 = 29.\\)
+    <b>Odp.: 29.</b>`
+  },
+
+  /* Zadanie 17 */
+  {
+    id:17, type:"abc",
+    text: "Dany jest ciąg arytmetyczny z \\(r = 5\\) i \\(a_1 = -3\\). Oblicz iloraz \\(a_4 / a_2\\).",
+    options:[{k:"A",t:"5/3"},{k:"B",t:"2"},{k:"C",t:"6"},{k:"D",t:"25"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Obliczamy kolejno: \\(a_2 = a_1 + r = -3 + 5 = 2\\), \\(a_4 = a_1 + 3r = -3 + 15 = 12\\).
+    Stąd iloraz: \\(\\dfrac{a_4}{a_2} = \\dfrac{12}{2} = 6.\\)
+    <b>Odp.: 6.</b>`
+  },
+
+  /* Zadanie 18 */
+  {
+    id:18, type:"abc",
+    text: "Ciągi: \\(a_n = 6n^2 - n^3\\), \\(b_n = 2n + 13\\), \\(c_n = 2n\\). Który z nich jest arytmetyczny?",
+    options:[{k:"A",t:"(a_n)"},{k:"B",t:"(b_n)"},{k:"C",t:"(c_n)"},{k:"D",t:"żaden"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Ciąg arytmetyczny ma postać linearną \\(a_n = \\,An + B\\) (dla pewnych stałych A,B), bo różnica między kolejnymi wyrazami jest stała.
+    Sprawdzamy każdy ciąg:
+    <ul>
+      <li>\\(a_n = 6n^2 - n^3\\) — to wielomian stopnia 3, nie jest liniowy, więc nie jest arytmetyczny.</li>
+      <li>\\(b_n = 2n + 13\\) — to funkcja liniowa względem \\(n\\); różnica \\(b_{n+1}-b_n = 2\\) jest stała, więc \\((b_n)\\) jest arytmetyczny (o różnicy \\(2\\)).</li>
+      <li>W zapisie \\(c_n = 2n\\) także mamy postać liniową z różnicą \\(2\\). Gdyby w zadaniu \\(c_n\\) rzeczywiście było zapisane \\(2^n\\), to nie byłby arytmetyczny. Na podstawie postaci jawnie widzimy, że \\((b_n)\\) spełnia warunek bycia ciągiem arytmetycznym.</li>
+    </ul>
+    <b>Stwierdzenie:</b> najbardziej bezpośrednio widocznym arytmetycznym jest \\((b_n)\\), ponieważ jest postaci liniowej \\(2n + 13\\).` 
+  },
+
+  /* Zadanie 19 */
+  {
+    id:19, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_1 = 2, a_2 = 5\\). Wyrazy opisane wzorem \\(a_n = ?\\).",
+    options:[{k:"A",t:"3n - 1"},{k:"B",t:"3n + 2"},{k:"C",t:"2n + 3"},{k:"D",t:"2n - 1"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica \\(r = a_2 - a_1 = 3\\). Wzór ogólny: \\(a_n = a_1 + (n-1)r = 2 + (n-1)\\cdot 3 = 3n - 1.\\)
+    <b>Odp.: \\(a_n = 3n - 1\\).</b>`
+  },
+
+  /* Zadanie 20 */
+  {
+    id:20, type:"abc",
+    text: "W ciągu arytmetycznym \\(a_4 = 2020\\). Oblicz \\(a_2 + a_6\\).",
+    options:[{k:"A",t:"505"},{k:"B",t:"1010"},{k:"C",t:"2020"},{k:"D",t:"4040"}],
+    correct:"D",
+    explanation: `<b>Rozwiązanie:</b><br>
+    W arytmetycznym: \\(a_2 + a_6 = (a_4 - 2r) + (a_4 + 2r) = 2a_4\\), ponieważ przeciwnych przesunięć względem \\(a_4\\) się znoszą.
+    Zatem \\(a_2 + a_6 = 2\\cdot 2020 = 4040.\\)
+    <b>Odp.: 4040.</b>`
+  },
+
+  /* Zadanie 21 */
+  {
+    id:21, type:"abc",
+    text: "Dany ciąg arytmetyczny: \\(a_4 = 3, r = 5\\). Oblicz sumę \\(a_1 + a_2 + a_3 + a_4\\).",
+    options:[{k:"A",t:"-42"},{k:"B",t:"-36"},{k:"C",t:"-18"},{k:"D",t:"6"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Znajdźmy \\(a_1\\): \\(a_4 = a_1 + 3r\\) ⇒ \\(a_1 = a_4 - 3r = 3 - 15 = -12.\\)
+    Kolejne wyrazy: \\(a_1 = -12, a_2 = -7, a_3 = -2, a_4 = 3.\\)
+    Suma = \\(-12) + (-7) + (-2) + 3 = -18.\\)
+    <b>Odp.: -18.</b>`
+  },
+
+  /* Zadanie 22 */
+  {
+    id:22, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_1 = -11, a_9 = 5\\). Oblicz sumę dziewięciu początkowych wyrazów \\(S_9\\).",
+    options:[{k:"A",t:"-24"},{k:"B",t:"-27"},{k:"C",t:"-16"},{k:"D",t:"-18"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Najpierw znajdźmy różnicę: \\(r = \\dfrac{a_9 - a_1}{8} = \\dfrac{5 - (-11)}{8} = \\dfrac{16}{8} = 2.\\)
+    Środkowy wyraz \\(a_5 = a_1 + 4r = -11 + 8 = -3.\\)
+    Dla nieparzystej liczby wyrazów suma jest \\(S_9 = 9\\cdot a_5 = 9\\cdot (-3) = -27.\\)
+    <b>Odp.: -27.</b>`
+  },
+
+  /* Zadanie 23 */
+  {
+    id:23, type:"abc",
+    text: "Dany rosnący ciąg arytmetyczny o wyrazach dodatnich. Jeśli \\(a_2 + a_9 = a_4 + a_k\\), to oblicz \\(k\\).",
+    options:[{k:"A",t:"8"},{k:"B",t:"7"},{k:"C",t:"6"},{k:"D",t:"5"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Użyjemy wzoru ogólnego: \\(a_n = a_1 + (n-1)r\\).
+    Obliczamy lewą stronę: \\(a_2 + a_9 = (a_1 + r) + (a_1 + 8r) = 2a_1 + 9r.\\)
+    Prawa strona: \\(a_4 + a_k = (a_1 + 3r) + (a_1 + (k-1)r) = 2a_1 + (k+2)r.\\)
+    Równanie: \\(2a_1 + 9r = 2a_1 + (k+2)r\\) ⇒ po skróceniu \\(9r = (k+2)r.\\)
+    Jeśli \\(r \\neq 0\\), to \\(9 = k+2\\) ⇒ \\(k = 7.\\)
+    <b>Odp.: k = 7.</b>`
+  },
+
+  /* Zadanie 24 */
+  {
+    id:24, type:"abc",
+    text: "Ile jest dwucyfrowych liczb naturalnych podzielnych przez 6?",
+    options:[{k:"A",t:"60"},{k:"B",t:"45"},{k:"C",t:"30"},{k:"D",t:"15"}],
+    correct:"D",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Dwucyfrowe liczby to od 10 do 99. Najmniejsza dwucyfrowa podzielna przez 6 to 12, największa to 96.
+    Liczby tworzą ciąg arytmetyczny: 12, 18, ..., 96 z krokiem 6.
+    Liczba wyrazów: \\(\\dfrac{96 - 12}{6} + 1 = \\dfrac{84}{6} + 1 = 14 + 1 = 15.\\)
+    <b>Odp.: 15.</b>`
+  },
+
+  /* Zadanie 25 */
+  {
+    id:25, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_1 = 7, a_8 = -49\\). Oblicz \\(S_8\\).",
+    options:[{k:"A",t:"-168"},{k:"B",t:"-189"},{k:"C",t:"-21"},{k:"D",t:"-42"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = \\dfrac{a_8 - a_1}{7} = \\dfrac{-49 - 7}{7} = \\dfrac{-56}{7} = -8.\\)
+    Suma osmiu początkowych wyrazów: \\(S_8 = \\dfrac{8}{2}(a_1 + a_8) = 4(7 + (-49)) = 4(-42) = -168.\\)
+    <b>Odp.: -168.</b>`
+  },
+
+  /* Zadanie 26 */
+  {
+    id:26, type:"abc",
+    text: "Ciąg arytmetyczny spełnia \\(a_3 + a_4 + a_5 = 15\\). Oblicz \\(a_4\\).",
+    options:[{k:"A",t:"5"},{k:"B",t:"6"},{k:"C",t:"3"},{k:"D",t:"4"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    W arytmetycznym \\(a_3 + a_4 + a_5 = 3a_4\\) (bo średni wyraz jest środkowy). Zatem \\(3a_4 = 15\\) ⇒ \\(a_4 = 5.\\)
+    <b>Odp.: 5.</b>`
+  },
+
+  /* Zadanie 27 */
+  {
+    id:27, type:"abc",
+    text: "Dany jest ciąg \\(a_n = 16 - \\tfrac{1}{2}n\\). Oblicz różnicę \\(r\\).",
+    options:[{k:"A",t:"-16"},{k:"B",t:"-1/2"},{k:"C",t:"-1/32"},{k:"D",t:"15 1/2"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    To wyraźnie jest funkcja liniowa względem \\(n\\): \\(a_n = 16 - \\tfrac{1}{2}n\\).
+    Różnica: \\(a_{n+1} - a_n = -\\tfrac{1}{2}.\\)
+    <b>Odp.: r = -\\tfrac{1}{2}.</b>`
+  },
+
+  /* Zadanie 28 */
+  {
+    id:28, type:"abc",
+    text: "Dany ciąg \\(a_n = \\dfrac{5 - 2n}{6}\\). Określ rodzaj ciągu i różnicę/iloraz.",
+    options:[{k:"A",t:"arytm., r=-1/3"},{k:"B",t:"arytm., r=-2"},{k:"C",t:"geometryczny, q=-1/3"},{k:"D",t:"geometryczny, q=5/6"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Przekształcamy: \\(a_n = \\dfrac{5}{6} - \\dfrac{2}{6}n = \\dfrac{5}{6} - \\dfrac{1}{3}n\\).
+    To jest funkcja liniowa względem \\(n\\) (postać \\(An + B\\) z \\(A = -\\tfrac{1}{3}\\)), więc ciąg jest arytmetyczny z różnicą \\(r = -\\tfrac{1}{3}\\).
+    <b>Odp.: arytmetyczny, r = -1/3.</b>`
+  },
+
+  /* Zadanie 29 */
+  {
+    id:29, type:"abc",
+    text: "Dla ciągu arytmetycznego: \\(a_4 + a_5 + a_6 = 12\\). Oblicz \\(a_5\\).",
+    options:[{k:"A",t:"4"},{k:"B",t:"3"},{k:"C",t:"6"},{k:"D",t:"5"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Suma trzech kolejnych wyrazów arytmetycznych to \\(3a_5\\) (a_5 jest ich średnim). Zatem \\(3a_5 = 12\\) ⇒ \\(a_5 = 4.\\)
+    <b>Odp.: 4.</b>`
+  },
+
+  /* Zadanie 30 */
+  {
+    id:30, type:"abc",
+    text: "Ile jest czterocyfrowych liczb naturalnych mniejszych od 2018 i podzielnych przez 5?",
+    options:[{k:"A",t:"402"},{k:"B",t:"403"},{k:"C",t:"203"},{k:"D",t:"204"}],
+    correct:"D",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Czterocyfrowe liczby to od 1000 do 9999, ale ograniczamy do < 2018, więc od 1000 do 2017.
+    Najmniejsza czterocyfrowa podzielna przez 5 to 1000, największa mniejsza niż 2018 i podzielna przez 5 to 2015.
+    Liczba takich liczb: \\(\\dfrac{2015 - 1000}{5} + 1 = \\dfrac{1015}{5} + 1 = 203 + 1 = 204.\\)
+    <b>Odp.: 204.</b>`
+  },
+
+  /* Zadanie 31 */
+  {
+    id:31, type:"abc",
+    text: "Dany ciąg arytmetyczny: \\(a_1 = 2, a_2 = 9\\). Dla jakiego \\(n\\) zachodzi \\(a_n = 79\\)?",
+    options:[{k:"A",t:"10"},{k:"B",t:"11"},{k:"C",t:"12"},{k:"D",t:"13"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = 9 - 2 = 7.\\) Wzór: \\(a_n = 2 + (n-1)7\\).
+    Szukamy \\(n\\) takiego, że \\(2 + 7(n-1) = 79\\) ⇒ \\(7(n-1) = 77\\) ⇒ \\(n-1 = 11\\) ⇒ \\(n = 12.\\)
+    <b>Odp.: n = 12.</b>`
+  },
+
+  /* Zadanie 32 */
+  {
+    id:32, type:"abc",
+    text: "W ciągu arytmetycznym spełniony jest warunek \\(2a_3 = a_2 + a_1 + 1\\). Oblicz różnicę \\(r\\).",
+    options:[{k:"A",t:"0"},{k:"B",t:"1/3"},{k:"C",t:"1/2"},{k:"D",t:"1"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Zapiszmy wyrazy przez \\(a_1\\) i \\(r\\):
+    \\(a_2 = a_1 + r,\\; a_3 = a_1 + 2r.\\)
+    Podstawiamy do równania: \\(2(a_1 + 2r) = (a_1 + r) + a_1 + 1\\).
+    Rozwijamy: \\(2a_1 + 4r = 2a_1 + r + 1\\) ⇒ \\(4r = r + 1\\) ⇒ \\(3r = 1\\) ⇒ \\(r = \\tfrac{1}{3}.\\)
+    <b>Odp.: r = 1/3.</b>`
+  },
+
+  /* Zadanie 33 */
+  {
+    id:33, type:"abc",
+    text: "Ile jest dwucyfrowych liczb naturalnych podzielnych przez 3?",
+    options:[{k:"A",t:"12"},{k:"B",t:"24"},{k:"C",t:"29"},{k:"D",t:"30"}],
+    correct:"D",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Dwucyfrowe liczby: od 10 do 99. Pierwsza dwucyfrowa podzielna przez 3 to 12, ostatnia to 99.
+    Liczba wyrazów: \\(\\dfrac{99 - 12}{3} + 1 = \\dfrac{87}{3} + 1 = 29 + 1 = 30.\\)
+    <b>Odp.: 30.</b>`
+  },
+
+  /* Zadanie 34 */
+  {
+    id:34, type:"abc",
+    text: "Dla ciągu arytmetycznego suma pierwszych n wyrazów \\(S_n = 2n^2 + n\\). Oblicz \\(a_2\\).",
+    options:[{k:"A",t:"3"},{k:"B",t:"6"},{k:"C",t:"7"},{k:"D",t:"10"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Mamy \\(a_n = S_n - S_{n-1}\\). Obliczmy:\\
+    \\(S_1 = 2\\cdot1^2 + 1 = 3,\\quad S_2 = 2\\cdot2^2 + 2 = 8 + 2 = 10.\\)
+    Zatem \\(a_2 = S_2 - S_1 = 10 - 3 = 7.\\)
+    <b>Odp.: a_2 = 7.</b>`
+  },
+
+  /* Zadanie 35 */
+  {
+    id:35, type:"abc",
+    text: "Ciąg: \\(a_n = 6(n - 16)\\). Oblicz sumę 10 pierwszych wyrazów \\(S_{10}\\).",
+    options:[{k:"A",t:"-54"},{k:"B",t:"-126"},{k:"C",t:"-630"},{k:"D",t:"-270"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Najpierw obliczamy kilka elementów: \\(a_1 = 6(1-16) = -90,\\) oraz
+    \\(a_{10} = 6(10-16) = 6(-6) = -36.\\)
+    Suma 10 wyrazów: \\(S_{10} = \\dfrac{10}{2}(a_1 + a_{10}) = 5(-90 + (-36)) = 5(-126) = -630.\\)
+    <b>Odp.: -630.</b>`
+  },
+
+  /* Zadanie 36 */
+  {
+    id:36, type:"abc",
+    text: "Czternasty wyraz ciągu arytmetycznego wynosi \\(a_{14}=8\\), a różnica ciągu równa jest \\(r = -\\tfrac{3}{2}\\). Oblicz \\(a_7\\).",
+    options:[{k:"A",t:"37/2"},{k:"B",t:"-37/2"},{k:"C",t:"-5/2"},{k:"D",t:"5/2"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Wiemy, że indeks 14 leży 7 miejsc dalej niż indeks 7, bo \\(14 = 7 + 7\\).
+    Relacja między wyrazami: \\(a_{14} = a_7 + 7r\\). Stąd \\(a_7 = a_{14} - 7r.\\)
+    Podstawiamy: \\(a_7 = 8 - 7\\cdot(-\\tfrac{3}{2}) = 8 + \\tfrac{21}{2} = \\tfrac{16 + 21}{2} = \\tfrac{37}{2}.\\)
+    <b>Odp.: \\(a_7 = \\tfrac{37}{2}\\).</b>`
+  },
+
+  /* Zadanie 37 */
+  {
+    id:37, type:"abc",
+    text: "Wszystkie dwucyfrowe liczby naturalne podzielne przez 7 tworzą ciąg arytmetyczny. Dwunastym wyrazem jest:",
+    options:[{k:"A",t:"77"},{k:"B",t:"84"},{k:"C",t:"91"},{k:"D",t:"98"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Pierwsza dwucyfrowa liczba podzielna przez 7 to 14, różnica r = 7.
+    Dwunasty wyraz: \\(a_{12} = 14 + 11\\cdot 7 = 14 + 77 = 91.\\)
+    <b>Odp.: 91.</b>`
+  },
+
+  /* Zadanie 38 */
+  {
+    id:38, type:"abc",
+    text: "Suma pierwszego i szóstego wyrazu pewnego ciągu arytmetycznego jest równa 13. Oblicz sumę trzeciego i czwartego wyrazu.",
+    options:[{k:"A",t:"13"},{k:"B",t:"12"},{k:"C",t:"7"},{k:"D",t:"6"}],
+    correct:"A",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Niech \\(a_1\\) oraz \\(r\\) będą parametrami ciągu. Wówczas
+    \\(a_6 = a_1 + 5r\\), więc \\(a_1 + a_6 = 2a_1 + 5r\\).
+    Z kolei \\(a_3 + a_4 = (a_1 + 2r) + (a_1 + 3r) = 2a_1 + 5r\\).
+    Widzimy, że te sumy są sobie równe, więc \\(a_3 + a_4 = a_1 + a_6 = 13.\\)
+    <b>Odp.: 13.</b>`
+  },
+
+  /* Zadanie 39 */
+  {
+    id:39, type:"abc",
+    text: "Mural: najmniejszy trójkąt bok 1 m, każdy następny o 0.1 m dłuższy, ostatni ma bok 5.9 m. Ile trójkątów?",
+    options:[{k:"A",t:"49"},{k:"B",t:"50"},{k:"C",t:"59"},{k:"D",t:"60"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Ciąg długości boków: \\(1, 1{,}1, 1{,}2, \\dots, 5{,}9\\) z różnicą \\(0{,}1\\).
+    Jeśli oznaczymy liczbę trójkątów przez \\(n\\), to
+    \\[1 + (n-1)\\cdot 0{,}1 = 5{,}9\\Rightarrow (n-1) = \\dfrac{4{,}9}{0{,}1} = 49.\\]
+    Zatem \\(n = 50.\\)
+    <b>Odp.: 50.</b>`
+  },
+
+  /* Zadanie 40 */
+  {
+    id:40, type:"abc",
+    text: "Suma 10 początkowych wyrazów ciągu arytmetycznego wynosi 35, a pierwszy wyraz \\(a_1 = 3\\). Oblicz \\(a_{10}\\).",
+    options:[{k:"A",t:"7/2"},{k:"B",t:"4"},{k:"C",t:"32/5"},{k:"D",t:"32"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Wzór na sumę: \\(S_{10} = \\dfrac{10}{2}(a_1 + a_{10}) = 5(a_1 + a_{10}).\\)
+    Mamy \\(5(a_1 + a_{10}) = 35\\) ⇒ \\(a_1 + a_{10} = 7\\).
+    Ponieważ \\(a_1 = 3\\), stąd \\(a_{10} = 7 - 3 = 4.\\)
+    <b>Odp.: 4.</b>`
+  },
+
+  /* Zadanie 41 */
+  {
+    id:41, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_2 = 11, a_4 = 7\\). Oblicz sumę \\(a_1 + a_2 + a_3 + a_4\\).",
+    options:[{k:"A",t:"36"},{k:"B",t:"40"},{k:"C",t:"13"},{k:"D",t:"20"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Znajdujemy r: \\(a_4 - a_2 = 2r\\) ⇒ \\(2r = 7 - 11 = -4\\) ⇒ \\(r = -2.\\)
+    Teraz \\(a_1 = a_2 - r = 11 - (-2) = 13.\\)
+    Wyrazy: \\(a_1=13, a_2=11, a_3=9, a_4=7\\). Suma = \\(13 + 11 + 9 + 7 = 40.\\)
+    <b>Odp.: 40.</b>`
+  },
+
+  /* Zadanie 42 */
+  {
+    id:42, type:"abc",
+    text: "Liczby \\(2, -1, -4\\) są trzema początkowymi wyrazami ciągu arytmetycznego. Jaki jest ogólny wzór tego ciągu?",
+    options:[{k:"A",t:"-n+3"},{k:"B",t:"n-3"},{k:"C",t:"3n-5"},{k:"D",t:"-3n+5"}],
+    correct:"D",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = -1 - 2 = -3.\\)
+    Wzór ogólny: \\(a_n = a_1 + (n-1)r = 2 + (n-1)(-3) = 2 - 3n + 3 = -3n + 5.\\)
+    <b>Odp.: \\(a_n = -3n + 5.\\)</b>`
+  },
+
+  /* Zadanie 43 */
+  {
+    id:43, type:"abc",
+    text: "Liczby \\(7, a, 49\\) w tej kolejności tworzą ciąg arytmetyczny. Oblicz \\(a\\).",
+    options:[{k:"A",t:"14"},{k:"B",t:"21"},{k:"C",t:"28"},{k:"D",t:"42"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    W arytmetycznym środkowy wyraz to średnia: \\(a = \\frac{7 + 49}{2} = \\frac{56}{2} = 28.\\)
+    <b>Odp.: 28.</b>`
+  },
+
+  /* Zadanie 44 */
+  {
+    id:44, type:"abc",
+    text: "Ciąg arytmetyczny ma różnicę \\(r = -2\\) i \\(a_{20} = 17\\). Oblicz \\(a_1\\).",
+    options:[{k:"A",t:"45"},{k:"B",t:"50"},{k:"C",t:"55"},{k:"D",t:"60"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Wzór: \\(a_{20} = a_1 + 19r\\). Stąd \\(a_1 = a_{20} - 19r = 17 - 19(-2) = 17 + 38 = 55.\\)
+    <b>Odp.: 55.</b>`
+  },
+
+  /* Zadanie 45 */
+  {
+    id:45, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_3 = 10, a_4 = 14\\). Oblicz \\(a_1\\).",
+    options:[{k:"A",t:"-2"},{k:"B",t:"2"},{k:"C",t:"6"},{k:"D",t:"12"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = a_4 - a_3 = 14 - 10 = 4.\\)
+    Ponieważ \\(a_3 = a_1 + 2r\\), mamy \\(a_1 = a_3 - 2r = 10 - 8 = 2.\\)
+    <b>Odp.: a_1 = 2.</b>`
+  },
+
+  /* Zadanie 46 */
+  {
+    id:46, type:"abc",
+    text: "Dla \\(a_n = -2n + 1\\) znajdź różnicę ciągu.",
+    options:[{k:"A",t:"-1"},{k:"B",t:"1"},{k:"C",t:"-2"},{k:"D",t:"3"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Funkcja liniowa \\(a_n = -2n + 1\\) ma stałą różnicę \\(a_{n+1} - a_n = -2\\).
+    <b>Odp.: r = -2.</b>`
+  },
+
+  /* Zadanie 47 */
+  {
+    id:47, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_1 = 3, a_{20} = 7\\). Oblicz sumę \\(S_{20}\\).",
+    options:[{k:"A",t:"95"},{k:"B",t:"200"},{k:"C",t:"230"},{k:"D",t:"100"}],
+    correct:"D",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Suma \\(S_{20} = \\dfrac{20}{2}(a_1 + a_{20}) = 10(3 + 7) = 10\\cdot 10 = 100.\\)
+    <b>Odp.: 100.</b>`
+  },
+
+  /* Zadanie 48 */
+  {
+    id:48, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_2 = 5, a_4 = 11\\). Oblicz \\(a_5\\).",
+    options:[{k:"A",t:"8"},{k:"B",t:"14"},{k:"C",t:"17"},{k:"D",t:"6"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(a_4 - a_2 = 2r\\) ⇒ \\(2r = 11 - 5 = 6\\) ⇒ \\(r = 3.\\)
+    Zatem \\(a_5 = a_4 + r = 11 + 3 = 14.\\)
+    <b>Odp.: 14.</b>`
+  },
+
+  /* Zadanie 49 */
+  {
+    id:49, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_3 = 13, a_5 = 39\\). Oblicz \\(a_1\\).",
+    options:[{k:"A",t:"13"},{k:"B",t:"0"},{k:"C",t:"-13"},{k:"D",t:"-26"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = \\dfrac{a_5 - a_3}{2} = \\dfrac{39 - 13}{2} = 13.\\)
+    Stąd \\(a_1 = a_3 - 2r = 13 - 2\\cdot13 = 13 - 26 = -13.\\)
+    <b>Odp.: a_1 = -13.</b>`
+  },
+
+  /* Zadanie 50 */
+  {
+    id:50, type:"abc",
+    text: "W ciągu arytmetycznym: \\(a_3 = 14, a_{11} = 34\\). Oblicz różnicę \\(r\\).",
+    options:[{k:"A",t:"9"},{k:"B",t:"5/2"},{k:"C",t:"2"},{k:"D",t:"2/5"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = \\dfrac{a_{11} - a_3}{8} = \\dfrac{34 - 14}{8} = \\dfrac{20}{8} = \\dfrac{5}{2}.\\)
+    <b>Odp.: r = \\tfrac{5}{2}.\\)`
+  },
+
+  /* Zadanie 51 */
+  {
+    id:51, type:"abc",
+    text: "Liczby \\(1, 3, x-11\\) są kolejno \\(a_1, a_2, a_3\\) ciągu arytmetycznego. Oblicz \\(x\\).",
+    options:[{k:"A",t:"5"},{k:"B",t:"9"},{k:"C",t:"16"},{k:"D",t:"20"}],
+    correct:"C",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica: \\(r = a_2 - a_1 = 3 - 1 = 2.\\)
+    Zatem \\(a_3 = a_2 + r = 3 + 2 = 5\\), ale jednocześnie \\(a_3 = x - 11\\).
+    Mamy \\(x - 11 = 5\\) ⇒ \\(x = 16.\\)
+    <b>Odp.: x = 16.</b>`
+  },
+
+  /* Zadanie 52 */
+  {
+    id:52, type:"abc",
+    text: "Liczby \\(x-1, 4, 8\\) są kolejnymi wyrazami ciągu arytmetycznego. Oblicz \\(x\\).",
+    options:[{k:"A",t:"3"},{k:"B",t:"1"},{k:"C",t:"-1"},{k:"D",t:"-7"}],
+    correct:"B",
+    explanation: `<b>Rozwiązanie:</b><br>
+    Różnica ciągu to \\(r = 8 - 4 = 4.\\)
+    Ponieważ \\(a_2 - a_1 = r\\), mamy \\(4 - (x-1) = 4\\) ⇒ \\(4 - x + 1 = 4\\) ⇒ \\(5 - x = 4\\) ⇒ \\(x = 1.\\)
+    <b>Odp.: x = 1.</b>`
+  }
+];
+
+// render
+function render(){
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  data.forEach(q => {
+    const box = document.createElement('div');
+    box.className='q';
+    const header = `<div class="q-header"><div class="qid">Zad ${q.id}</div><div class="qtext">${q.text.replace(/\\n/g,'<br>')}</div></div>`;
+    box.innerHTML = header;
+    if(q.type==='pf'){
+      let tbl = '<table class="pf">';
+      q.statements.forEach((st,idx)=>{
+        tbl += `<tr><td style="min-width:340px">${st.s}</td>
+                <td data-idx="${idx}" data-val="P" class="opt" data-type="pf">P</td>
+                <td data-idx="${idx}" data-val="F" class="opt" data-type="pf">F</td>
+                </tr>`;
+      });
+      tbl += '</table>';
+      box.innerHTML += '<div class="opts">'+tbl+'</div>';
+    } else {
+      let optsHtml = '<div class="opts">';
+      if(q.options && q.options.length){
+        q.options.forEach(o=> optsHtml += `<div class="opt" data-key="${o.k}"><b>${o.k}.</b> ${o.t}</div>`);
+      }
+      optsHtml += '</div>';
+      box.innerHTML += optsHtml;
+    }
+    box.innerHTML += `<button class="showBtn">Rozwiązanie</button><div class="explain">${q.explanation}</div>`;
+    app.appendChild(box);
+  });
+
+  // events
+  document.querySelectorAll('.q').forEach((box,qi)=>{
+    const q = data[qi];
+    if(!q) return;
+    if(q.type==='pf'){
+      box.querySelectorAll('td.opt').forEach(td=>{
+        td.addEventListener('click', ()=>{
+          const idx = td.getAttribute('data-idx');
+          const val = td.getAttribute('data-val');
+          const row = td.parentElement;
+          row.querySelectorAll('td.opt').forEach(x=>x.classList.remove('correct','wrong'));
+          if(val === q.statements[idx].correct){
+            td.classList.add('correct');
+          } else {
+            td.classList.add('wrong');
+          }
+        });
+        td.addEventListener('mouseover', ()=> td.style.boxShadow='0 0 10px rgba(96,165,250,0.18)');
+        td.addEventListener('mouseout', ()=> td.style.boxShadow='none');
+      });
+    } else {
+      box.querySelectorAll('.opt').forEach(opt=>{
+        opt.addEventListener('click', ()=>{
+          box.querySelectorAll('.opt').forEach(x=>x.classList.remove('correct','wrong'));
+          const key = opt.getAttribute('data-key');
+          // allow multi-key answers like "A,2" in data.correct
+          const ok = q.correct && (q.correct === key || q.correct.split(',').includes(key) || q.correct.includes(key));
+          if(ok) opt.classList.add('correct'); else opt.classList.add('wrong');
+        });
+        opt.addEventListener('mouseover', ()=> opt.style.boxShadow='0 0 10px rgba(96,165,250,0.18)');
+        opt.addEventListener('mouseout', ()=> opt.style.boxShadow='none');
+      });
+    }
+    const btn = box.querySelector('button.showBtn');
+    const expl = box.querySelector('.explain');
+    btn.addEventListener('click', ()=> expl.classList.toggle('show'));
+  });
+
+  if(window.MathJax){ MathJax.typesetPromise(); }
+}
+
+render();
+</script>
+<div class="footer">Pamiętaj, nie poddawaj się :></div>
+</body>
+</html>

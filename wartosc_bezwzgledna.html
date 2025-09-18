@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wartość bezwzględna</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Wartość bezwzględna</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2025 - zad. 1)</div>
+        <div class="qtext">Liczby \(x_1, x_2\) są rozwiązaniami równania \(|x-6|=4\). Oblicz iloczyn \(x_1\cdot x_2\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> 20</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> 24</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> 100</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|x-6|=4 \implies x-6=4 \lor x-6=-4\).  
+      Stąd \(x=10\) lub \(x=2\).  
+      Iloczyn: \(10\cdot 2=20\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2024 - zad. 1)</div>
+        <div class="qtext">Liczby \(x_1, x_2\) są rozwiązaniami równania \(|x+4|=7\). Oblicz sumę \(x_1+x_2\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> \(-14\)</div></label>
+      <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> \(-8\)</div></label>
+      <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> 8</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|x+4|=7 \implies x+4=7 \lor x+4=-7\).  
+      Stąd \(x=3\) lub \(x=-11\).  
+      Suma: \(3+(-11)=-8\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2017 - zad. 1)</div>
+        <div class="qtext">Oblicz wartość wyrażenia \(|9-2|-|4-7|\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> \(-10\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> \(-4\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|9-2|=7\), \(|4-7|=3\).  
+      Wynik: \(7-3=4\).  
+      Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2016 - zad. 13)</div>
+        <div class="qtext">Oblicz wartość liczby \(\tfrac{|3-9|}{-3}\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(-2\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> \(-4\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|3-9|=6\).  
+      \(\tfrac{6}{-3}=-2\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2015 - zad. 2)</div>
+        <div class="qtext">Najmniejsza dodatnia liczba całkowita spełniająca nierówność \(|x+4{,}5| \geq 6\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> \(x=1\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> \(x=2\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> \(x=3\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> \(x=6\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Warunek: \(|x+4.5|\geq 6 \implies x+4.5\geq 6 \lor x+4.5\leq -6\).  
+      Pierwsza: \(x\geq 1.5\). Najmniejsza dodatnia całkowita: \(x=2\).  
+      Druga: \(x\leq -10.5\) (odrzucona).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2012 - zad. 5)</div>
+        <div class="qtext">Wskaż liczbę spełniającą równanie \(|3x+1|=4x\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> \(-1\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> \(-2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Przypadek 1: \(3x+1\geq 0 \implies 3x+1=4x \implies x=1\).  
+      Przypadek 2: \(3x+1<0 \implies -(3x+1)=4x \implies -3x-1=4x \implies -7x=1 \implies x=-\tfrac17\) (nie całkowite).  
+      Rozwiązanie: \(x=1\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2012 - zad. 2)</div>
+        <div class="qtext">Rozwiąż równanie \(|2x+3|=5\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> 1 i \(-4\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> 1 i 2</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> \(-1\) i 4</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> \(-2\) i 2</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(2x+3=5 \lor 2x+3=-5\).  
+      Z pierwszego: \(x=1\). Z drugiego: \(x=-4\).  
+      Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2011 - zad. 1)</div>
+        <div class="qtext">Wskaż nierówność, którą spełnia liczba \(\pi\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> \(|x+1|&gt;5\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> \(|x-1|&lt;2\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> \(|x+\tfrac23|\leq 4\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> \(|x-\tfrac13|\geq 3\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Sprawdzamy \(x=\pi\approx 3.14\).  
+      A: \(|3.14+1|=4.14&lt;5\) ❌  
+      B: \(|3.14-1|=2.14\not&lt;2\) ❌  
+      C: \(|3.14+0.67|=3.81\leq 4\) ✔  
+      D: \(|3.14-0.33|=2.81\not\geq 3\) ❌  
+      Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2011 - zad. 4)</div>
+        <div class="qtext">Wskaż liczbę spełniającą równanie \(|4x-5|=x\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> \(-1\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> \(-2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Przypadek 1: \(4x-5\geq 0 \implies 4x-5=x \implies 3x=5 \implies x=\tfrac53\) (nie na liście).  
+      Przypadek 2: \(4x-5&lt;0 \implies -(4x-5)=x \implies -4x+5=x \implies 5x=5 \implies x=1\).  
+      Odp.: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2011 - zad. 8)</div>
+        <div class="qtext">Oblicz wartość wyrażenia \(|5-2|+|1-6|\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q10" value="A"><div><b>A.</b> 8</div></label>
+      <label class="option"><input type="radio" name="q10" value="B"><div><b>B.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q10" value="C"><div><b>C.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q10" value="D"><div><b>D.</b> \(-2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|5-2|=3\), \(|1-6|=5\).  
+      Suma: \(3+5=8\).  
+      Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2010 - zad. 1)</div>
+        <div class="qtext">Oblicz wartość wyrażenia \(|5-7|-|-3+4|\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> \(-3\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> \(-5\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> 3</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|5-7|=2\), \(|-3+4|=1\).  
+      Różnica: \(2-1=1\).  
+      Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <footer>Nie bój się trudnych zadań – one robią z Ciebie wojownika (ง •̀_•́)ง</footer>
+
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const correct = (sec.getAttribute('data-ans')||'').toUpperCase().trim();
+
+  const options = sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input = opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val = (input.value||'').toUpperCase().trim();
+      if(val === correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click', ()=>{ 
+      sol.style.display = sol.style.display==='block' ? 'none' : 'block'; 
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+Array.from({length:11},(_,i)=>'zad'+(i+1)).forEach(setupQuestion);
+</script>
+</body>
+</html>

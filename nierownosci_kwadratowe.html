@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Nierówności kwadratowe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+<h1>Nierówności kwadratowe</h1><br>
+  <!-- Zadanie 1 -->
+<div class="section" id="zad1" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div style="flex:1">
+      <div class="qmeta">(grudzień 2022 - zad. 8)</div>
+      <div class="qtext">
+        Dana jest nierówność kwadratowa \((3x-9)(x+k)<0\) z niewiadomą \(x\) i parametrem \(k\in\mathbb{R}\).
+        Rozwiązaniem tej nierówności jest przedział \((-2,3)\). Liczba \(k\) jest równa
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad1" value="A"> A. −2</label>
+    <label class="option"><input type="radio" name="zad1" value="B"> B. 2</label>
+    <label class="option"><input type="radio" name="zad1" value="C"> C. −3</label>
+    <label class="option"><input type="radio" name="zad1" value="D"> D. 3</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol1">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol1">
+    <ol>
+      <li>Pierwiastki wyrażenia to miejsca zerowe czynników: \(3x-9=0\Rightarrow x=3\) oraz \(x+k=0\Rightarrow x=-k\).</li>
+      <li>Skoro rozwiązaniem jest \((-2,3)\), to drugi pierwiastek musi być \(-2\): czyli \(-k=-2\).</li>
+      <li>Stąd \(k=2\). Odp.: <b>2</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 2 -->
+<div class="section" id="zad2" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 2</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2019 - zad. 3)</div>
+      <div class="qtext">
+        Jedną z liczb spełniających nierówność \((x-6)(x-2)^2(x+4)(x+10)>0\) jest
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad2" value="A"> A. −5</label>
+    <label class="option"><input type="radio" name="zad2" value="B"> B. 0</label>
+    <label class="option"><input type="radio" name="zad2" value="C"> C. 3</label>
+    <label class="option"><input type="radio" name="zad2" value="D"> D. 5</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol2">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol2">
+    <ol>
+      <li>Pierwiastki wielomianu: \(x=6,\;x=2\) (krotn. 2), \(x=-4,\;x=-10\).</li>
+      <li>Węzły parzyste (tu: \(x=2\)) nie zmieniają znaku iloczynu. Zbadajmy znak w przedziale \((-10,-4)\): weźmy np. \(x=-5\).</li>
+      <li>Dla \(x=-5\): \((x-6)<0,\; (x-2)^2>0,\; (x+4)<0,\; (x+10)>0\) → iloczyn: \( (-)\cdot(+)\cdot(-)\cdot(+)=+\).</li>
+      <li>Stąd \(x=-5\) spełnia nierówność. Odp.: <b>−5</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 3 -->
+<div class="section" id="zad3" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 3</div>
+    <div style="flex:1">
+      <div class="qmeta">(marzec 2012 - zad. 8)</div>
+      <div class="qtext">
+        Największą liczbą całkowitą spełniającą nierówność \((4+x)^2 < (x-4)(x+4)\) jest
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad3" value="A"> A. −5</label>
+    <label class="option"><input type="radio" name="zad3" value="B"> B. −4</label>
+    <label class="option"><input type="radio" name="zad3" value="C"> C. −3</label>
+    <label class="option"><input type="radio" name="zad3" value="D"> D. −2</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol3">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol3">
+    <ol>
+      <li>Przekształć: \((x+4)^2 < x^2-16\).</li>
+      <li>Odejmij \(x^2\): \(8x+16 < -16 \Rightarrow 8x < -32 \Rightarrow x<-4\).</li>
+      <li>Największa liczba całkowita mniejsza od \(-4\) to \(-5\). Odp.: <b>−5</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 4 (obrazek) -->
+<div class="section" id="zad4" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 4</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2011 - zad. 7)</div>
+      <div class="qtext">
+        Wskaż, który zbiór przedstawiony na osi liczbowej jest zbiorem liczb spełniających jednocześnie:
+        \(3(x-1)(x-5)\le 0\) oraz \(x>1\).
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px; text-align:center;">
+    <img src="img/nierownosci01.png" alt="zad 4 wykres" />
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad4" value="A"> A</label>
+    <label class="option"><input type="radio" name="zad4" value="B"> B</label>
+    <label class="option"><input type="radio" name="zad4" value="C"> C</label>
+    <label class="option"><input type="radio" name="zad4" value="D"> D</label>
+  </div>
+  <!-- obrazkowe: brak rozwiązania krok po kroku (zgodnie z ustaleniami) -->
+</div>
+
+<!-- Zadanie 5 -->
+<div class="section" id="zad5" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 5</div>
+    <div style="flex:1">
+      <div class="qmeta">(listopad 2010 - zad. 13)</div>
+      <div class="qtext">
+        Zbiorem rozwiązań nierówności \((x-2)(x+3)\ge 0\) jest
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad5" value="A"> A. [−2, 3]</label>
+    <label class="option"><input type="radio" name="zad5" value="B"> B. [−3, 2]</label>
+    <label class="option"><input type="radio" name="zad5" value="C"> C. (−∞, −3] ∪ [2, +∞)</label>
+    <label class="option"><input type="radio" name="zad5" value="D"> D. (−∞, −2] ∪ [3, +∞)</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol5">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol5">
+    <ol>
+      <li>Wspólne pierwiastki: \(x=2\) i \(x=-3\).</li>
+      <li>Funkcja przyjmuje wartości \(\ge0\) poza przedziałem między pierwiastkami, czyli \(x\le-3\) lub \(x\ge2\).</li>
+      <li>Zapis: \((-\infty,-3]\cup[2,\infty)\). Odp.: <b>C</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 6 -->
+<div class="section" id="zad6" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 6</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2010 - zad. 7)</div>
+      <div class="qtext">
+        Zbiorem rozwiązań nierówności \(x(x+5)>0\) jest
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad6" value="A"> A. (−∞, 0) ∪ (5, +∞)</label>
+    <label class="option"><input type="radio" name="zad6" value="B"> B. (−∞, −5) ∪ (0, +∞)</label>
+    <label class="option"><input type="radio" name="zad6" value="C"> C. (−∞, −5) ∪ (5, +∞)</label>
+    <label class="option"><input type="radio" name="zad6" value="D"> D. (−5, +∞)</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol6">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol6">
+    <ol>
+      <li>Pierwiastki: \(x=0\) i \(x=-5\). Testujemy przedziały:</li>
+      <li>Dla \(x<-5\): oba czynniki ujemne → iloczyn dodatni. Dla \(x\in(-5,0)\): znaki różne → ujemny. Dla \(x>0\): oba dodatnie → dodatni.</li>
+      <li>Stąd \(x\in(-\infty,-5)\cup(0,\infty)\). Odp.: <b>B</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 7 -->
+<div class="section" id="zad7" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 7</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2010 - zad. 7)</div>
+      <div class="qtext">
+        Do zbioru rozwiązań nierówności \((x-2)(x+3)<0\) należy liczba
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad7" value="A"> A. 9</label>
+    <label class="option"><input type="radio" name="zad7" value="B"> B. 7</label>
+    <label class="option"><input type="radio" name="zad7" value="C"> C. 4</label>
+    <label class="option"><input type="radio" name="zad7" value="D"> D. 1</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol7">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol7">
+    <ol>
+      <li>Nierówność \((x-2)(x+3)<0\) jest spełniona dla \(x\in(-3,2)\).</li>
+      <li>Spośród podanych liczb jedyną leżącą w tym przedziale jest \(1\). Odp.: <b>1</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 8 (obrazek) -->
+<div class="section" id="zad8" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 8</div>
+    <div style="flex:1">
+      <div class="qmeta">(listopad 2009 - zad. 11)</div>
+      <div class="qtext">
+        Zbiór rozwiązań nierówności \((x+1)(x-3)>0\) przedstawiony jest na rysunku:
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px; text-align:center;">
+    <img src="img/nierownosci02.png" alt="zad 8 wykres" />
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad8" value="A"> A</label>
+    <label class="option"><input type="radio" name="zad8" value="B"> B</label>
+    <label class="option"><input type="radio" name="zad8" value="C"> C</label>
+    <label class="option"><input type="radio" name="zad8" value="D"> D</label>
+  </div>
+  <!-- obrazkowe: brak rozwiązania krok po kroku -->
+</div>
+
+<!-- Zadanie 9 -->
+<div class="section" id="zad9" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 9</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">
+        Zbiorem rozwiązań nierówności \(x^2 \ge 9\) jest
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad9" value="A"> A. (−∞, −3] ∪ [3, +∞)</label>
+    <label class="option"><input type="radio" name="zad9" value="B"> B. [−3, 3]</label>
+    <label class="option"><input type="radio" name="zad9" value="C"> C. [−3, +∞)</label>
+    <label class="option"><input type="radio" name="zad9" value="D"> D. [3, +∞)</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol9">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol9">
+    <ol>
+      <li>Rozwiązujemy \(x^2\ge9 \iff x^2-9\ge0 \iff (x-3)(x+3)\ge0\).</li>
+      <li>Rozwiązanie to \(x\le-3\) lub \(x\ge3\), czyli \((-\infty,-3]\cup[3,\infty)\). Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 10 -->
+<div class="section" id="zad10" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 10</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">
+        Zbiorem rozwiązań nierówności \(x^2 > 4x\) jest
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad10" value="A"> A. (−∞, −4) ∪ (0, +∞)</label>
+    <label class="option"><input type="radio" name="zad10" value="B"> B. (4, ∞)</label>
+    <label class="option"><input type="radio" name="zad10" value="C"> C. (−∞, −2) ∪ (2, +∞)</label>
+    <label class="option"><input type="radio" name="zad10" value="D"> D. (−∞, 0) ∪ (4, +∞)</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol10">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol10">
+    <ol>
+      <li>Przekształcamy: \(x^2>4x\iff x^2-4x>0\iff x(x-4)>0\).</li>
+      <li>Rozwiązaniem są przedziały, gdzie iloczyn dodatni: \(x<0\) lub \(x>4\).</li>
+      <li>Zapis: \((-\infty,0)\cup(4,\infty)\). Odp.: <b>D</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Zadanie 11 -->
+<div class="section" id="zad11" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 11</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">
+        Zbiorem rozwiązań nierówności \(x^2 \ge 5\) jest
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad11" value="A"> A. (−∞, −√5] ∪ [√5, +∞)</label>
+    <label class="option"><input type="radio" name="zad11" value="B"> B. (−∞, −√5]</label>
+    <label class="option"><input type="radio" name="zad11" value="C"> C. [√5, +∞)</label>
+    <label class="option"><input type="radio" name="zad11" value="D"> D. [5, +∞)</label>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-solution" data-target="sol11">Rozwiązanie</button>
+  </div>
+  <div class="sol" id="sol11">
+    <ol>
+      <li>Równanie graniczne: \(x^2=5\Rightarrow x=\pm\sqrt5\).</li>
+      <li>Dla \(x^2\ge5\) mamy \(x\le -\sqrt5\) lub \(x\ge\sqrt5\). Czyli \((-\infty,-\sqrt5]\cup[\sqrt5,\infty)\).</li>
+      <li>Odp.: <b>A</b>.</li>
+    </ol>
+  </div>
+</div>
+
+<footer>Hej, jesteś odważny, że się tego uczysz! (✿◠‿◠)</footer>
+
+</div>
+
+<script>
+function toggleSolution(id) {
+  const el = document.getElementById(id);
+  if (el.style.display === "block") {
+    el.style.display = "none";
+  } else {
+    el.style.display = "block";
+  }
+}
+/* Handler podświetlania pojedynczego wyboru (radio) i toggla rozwiązań.
+   Działa dla sekcji z data-ans (jedna lub kilka liter rozdzielonych przecinkami).
+*/
+document.addEventListener('DOMContentLoaded', ()=>{
+
+  // Funkcja pomocnicza - zaznacza etykietę jako correct/incorrect
+  function markLabel(label, state){
+    label.classList.remove('correct','incorrect');
+    if(state === 'correct') label.classList.add('correct');
+    if(state === 'incorrect') label.classList.add('incorrect');
+  }
+
+  // Ustawienie dla wszystkich sekcji
+  document.querySelectorAll('.section').forEach(sec=>{
+    const rawAns = (sec.dataset.ans||'').toString().trim().toUpperCase();
+    // wspieramy wiele poprawnych odpowiedzi rozdzielonych przecinkami (np. "C,E")
+    const correctSet = new Set(rawAns.split(',').map(s=>s.trim()).filter(Boolean));
+
+    // radio inputs
+    const radios = sec.querySelectorAll('input[type="radio"]');
+    if(radios.length>0){
+      radios.forEach(r=>{
+        r.addEventListener('change', ()=>{
+          // usuń klasy ze wszystkich etykiet w tej sekcji
+          sec.querySelectorAll('.option').forEach(l=>l.classList.remove('correct','incorrect'));
+          // znajdź label (rodzic)
+          const lab = r.closest('.option') || r.parentElement;
+          const val = (r.value||'').toString().toUpperCase().trim();
+          if(correctSet.size===0){
+            // brak klucza — nic nie podświetlamy
+            return;
+          }
+          if(correctSet.has(val)){
+            markLabel(lab,'correct');
+          } else {
+            markLabel(lab,'incorrect');
+          }
+        });
+      });
+    }
+
+    // przyciski Rozwiązanie
+    const btn = sec.querySelector('.btn-solution');
+    if(btn){
+      const targetId = btn.dataset.target;
+      const sol = document.getElementById(targetId);
+      btn.addEventListener('click', ()=>{
+        if(!sol) return;
+        sol.style.display = sol.style.display === 'block' ? 'none' : 'block';
+        if(window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
+      });
+    }
+
+  });
+
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Okrąg w układzie współrzędnych</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Okrąg w układzie współrzędnych</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2025 - zad. 23)</div>
+        <div class="qtext">
+          W układzie współrzędnych dany jest okrąg \(O: (x+1)^2+(y-2)^2=9\).  
+          Okrąg \(K\) jest obrazem okręgu \(O\) w symetrii osiowej względem osi \(Oy\).  
+          Równanie okręgu \(K\) to:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad1" value="A">A. \((x+1)^2+(y+2)^2=9\)</label>
+      <label class="option"><input type="radio" name="zad1" value="B">B. \((x+1)^2+(y-2)^2=9\)</label>
+      <label class="option"><input type="radio" name="zad1" value="C">C. \((x-1)^2+(y+2)^2=9\)</label>
+      <label class="option"><input type="radio" name="zad1" value="D">D. \((x-1)^2+(y-2)^2=9\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Odbicie względem osi \(Oy\) zmienia znak współrzędnej \(x\).  
+      Środek okręgu \(O\) to \((-1,2)\). Odbity punkt: \((1,2)\).  
+      Równanie: \((x-1)^2+(y-2)^2=9\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2025 - zad. 24)</div>
+        <div class="qtext">
+          Punkt \(P=(0,0)\) leży na okręgu o środku \(S=(2,4)\). Równanie tego okręgu to:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad2" value="A">A. \((x-2)^2+(y-4)^2=2\sqrt{5}\)</label>
+      <label class="option"><input type="radio" name="zad2" value="B">B. \((x-2)^2+(y-4)^2=20\)</label>
+      <label class="option"><input type="radio" name="zad2" value="C">C. \((x+2)^2+(y+4)^2=2\sqrt{5}\)</label>
+      <label class="option"><input type="radio" name="zad2" value="D">D. \((x+2)^2+(y+4)^2=20\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Odległość \(PS=\sqrt{(0-2)^2+(0-4)^2}=\sqrt{4+16}= \sqrt{20}\).  
+      Równanie: \((x-2)^2+(y-4)^2=20\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2024 - zad. 23)</div>
+        <div class="qtext">
+          Dane są okręgi:  
+          \(o_1:(x-1)^2+(y-2)^2=1\),  
+          \(o_2:(x+1)^2+(y+2)^2=9\),  
+          \(o_3:(x-3)^2+(y-4)^2=4\),  
+          \(o_4:(x+3)^2+(y+4)^2=16\).  
+          Który okrąg nie ma punktów wspólnych z osiami układu?
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad3" value="A">A. \(o_1\)</label>
+      <label class="option"><input type="radio" name="zad3" value="B">B. \(o_2\)</label>
+      <label class="option"><input type="radio" name="zad3" value="C">C. \(o_3\)</label>
+      <label class="option"><input type="radio" name="zad3" value="D">D. \(o_4\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Sprawdzenie przecięć z osiami pokazuje, że tylko \(o_3\) leży całkowicie „poza” nimi.  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2024 - zad. 23)</div>
+        <div class="qtext">
+          Odcinek o końcach \(A=(-4,7), B=(6,-1)\) jest średnicą okręgu.  
+          Podaj równanie okręgu:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad4" value="A">A. \((x-1)^2+(y-3)^2=41\)</label>
+      <label class="option"><input type="radio" name="zad4" value="B">B. \((x-5)^2+(y+4)^2=41\)</label>
+      <label class="option"><input type="radio" name="zad4" value="C">C. \((x-1)^2+(y+3)^2=41\)</label>
+      <label class="option"><input type="radio" name="zad4" value="D">D. \((x-5)^2+(y-4)^2=41\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek to punkt \(M=\big(\tfrac{-4+6}{2}, \tfrac{7+(-1)}{2}\big)=(1,3)\).  
+      Promień: \(AM=\sqrt{(1+4)^2+(3-7)^2}=\sqrt{25+16}=\sqrt{41}\).  
+      Równanie: \((x-1)^2+(y-3)^2=41\).  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 (P/F) -->
+  <div class="section" id="zad5" data-ans="P,F">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2024 - zad. 23.1)</div>
+        <div class="qtext">
+          Dany jest okrąg: \((x-1)^2+(y+2)^2=5\).  
+          Oceń prawdziwość stwierdzeń:
+        </div>
+      </div>
+    </div>
+
+    <div class="qmeta"><b>1.</b> Punkt \((-1,-3)\) należy do okręgu.</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad5_1" value="P">P. Prawda</label>
+      <label class="option"><input type="radio" name="zad5_1" value="F">F. Fałsz</label>
+    </div><br>
+
+    <div class="qmeta"><b>2.</b> Promień okręgu wynosi \(5\).</div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad5_2" value="P">P. Prawda</label>
+      <label class="option"><input type="radio" name="zad5_2" value="F">F. Fałsz</label>
+    </div>
+
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      1. Podstawienie: \((-1-1)^2+(-3+2)^2=4+1=5\) ⇒ należy. Odp.: P.  
+      2. Równanie ma postać \((x-a)^2+(y-b)^2=r^2\). Tutaj \(r^2=5\), więc \(r=\sqrt{5}\), a nie 5. Odp.: F.  
+      Klucz: P, F.
+    </div>
+  </div>
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2023 - zad. 20)</div>
+        <div class="qtext">
+          Okrąg o środku \(S=(4,-2)\) jest styczny do osi \(Ox\).  
+          Podaj równanie tego okręgu:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad6" value="A">A. \((x-4)^2+(y+2)^2=4\)</label>
+      <label class="option"><input type="radio" name="zad6" value="B">B. \((x-4)^2+(y+2)^2=2\)</label>
+      <label class="option"><input type="radio" name="zad6" value="C">C. \((x+4)^2+(y-2)^2=4\)</label>
+      <label class="option"><input type="radio" name="zad6" value="D">D. \((x+4)^2+(y-2)^2=2\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Odległość środka od osi \(Ox\) wynosi \(|-2|=2\). To promień.  
+      Zatem równanie: \((x-4)^2+(y+2)^2=2^2=4\).  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2023 - zad. 26)</div>
+        <div class="qtext">
+          Okrąg o środku \(S=(-1,2)\) i promieniu \(3\). Równanie tego okręgu to:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad7" value="A">A. \((x-1)^2+(y+2)^2=9\)</label>
+      <label class="option"><input type="radio" name="zad7" value="B">B. \((x-1)^2+(y+2)^2=3\)</label>
+      <label class="option"><input type="radio" name="zad7" value="C">C. \((x+1)^2+(y-2)^2=9\)</label>
+      <label class="option"><input type="radio" name="zad7" value="D">D. \((x+1)^2+(y-2)^2=3\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Wzór ogólny: \((x-x_0)^2+(y-y_0)^2=r^2\).  
+      Tu: \((x-(-1))^2+(y-2)^2=9\).  
+      \((x+1)^2+(y-2)^2=9\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(pokazowy 2023 - zad. 17)</div>
+        <div class="qtext">
+          Okrąg o środku \(S=(2,-5)\) i promieniu \(r=3\). Podaj równanie:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad8" value="A">A. \((x-2)^2+(y+5)^2=9\)</label>
+      <label class="option"><input type="radio" name="zad8" value="B">B. \((x+2)^2+(y-5)^2=3\)</label>
+      <label class="option"><input type="radio" name="zad8" value="C">C. \((x-2)^2+(y+5)^2=3\)</label>
+      <label class="option"><input type="radio" name="zad8" value="D">D. \((x+2)^2+(y-3)^2=9\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Wzór: \((x-x_0)^2+(y-y_0)^2=r^2\).  
+      Tu: \((x-2)^2+(y-(-5))^2=9\) czyli \((x-2)^2+(y+5)^2=9\).  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2022 - zad. 27)</div>
+        <div class="qtext">
+          Okrąg \((x-3)^2+(y-3)^2=13\) przecina oś \(Oy\) w punktach:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad9" value="A">A. \((0,1)\) i \((0,5)\)</label>
+      <label class="option"><input type="radio" name="zad9" value="B">B. \((0,1)\) i \((0,-5)\)</label>
+      <label class="option"><input type="radio" name="zad9" value="C">C. \((1,0)\) i \((5,0)\)</label>
+      <label class="option"><input type="radio" name="zad9" value="D">D. \((0,-1)\) i \((0,5)\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Na osi \(Oy\) mamy \(x=0\).  
+      Równanie: \((0-3)^2+(y-3)^2=13 \implies 9+(y-3)^2=13\).  
+      \((y-3)^2=4 \implies y=1\) lub \(y=5\).  
+      Punkty: \((0,1)\), \((0,5)\).  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(wrzesień 2022 - zad. 11)</div>
+        <div class="qtext">
+          Punkt \(A=(8,11)\), okrąg \((x-3)^2+(y+1)^2=25\).  
+          Odległość punktu od środka tego okręgu to:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad10" value="A">A. 25</label>
+      <label class="option"><input type="radio" name="zad10" value="B">B. 13</label>
+      <label class="option"><input type="radio" name="zad10" value="C">C. \(\sqrt{125}\)</label>
+      <label class="option"><input type="radio" name="zad10" value="D">D. \(\sqrt{265}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek: \((3,-1)\).  
+      Odległość: \(\sqrt{(8-3)^2+(11-(-1))^2}=\sqrt{25+144}=\sqrt{169}=13\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2020 - zad. 12)</div>
+        <div class="qtext">
+          Do okręgu o środku \(S=(2,4)\) należy punkt \(P=(1,3)\). Długość tego okręgu wynosi:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad11" value="A">A. \(4\pi\sqrt{2}\)</label>
+      <label class="option"><input type="radio" name="zad11" value="B">B. \(3\pi\sqrt{2}\)</label>
+      <label class="option"><input type="radio" name="zad11" value="C">C. \(2\pi\sqrt{2}\)</label>
+      <label class="option"><input type="radio" name="zad11" value="D">D. \(\pi\sqrt{2}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Promień: \(SP=\sqrt{(1-2)^2+(3-4)^2}=\sqrt{1+1}=\sqrt{2}\).  
+      Długość okręgu: \(2\pi r=2\pi\sqrt{2}\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2020 - zad. 15)</div>
+        <div class="qtext">
+          Punkty \(A=(80,-1)\), \(B=(-6,-19)\) są wierzchołkami trójkąta prostokątnego.  
+          Kąt prosty przy wierzchołku \(C\).  
+          Środek okręgu opisanego na tym trójkącie to:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad12" value="A">A. (43, -10)</label>
+      <label class="option"><input type="radio" name="zad12" value="B">B. (37, 10)</label>
+      <label class="option"><input type="radio" name="zad12" value="C">C. (43, 10)</label>
+      <label class="option"><input type="radio" name="zad12" value="D">D. (37, -10)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      W trójkącie prostokątnym środek okręgu opisanego to środek przeciwprostokątnej \(AB\).  
+      \(\left(\tfrac{80+(-6)}{2}, \tfrac{-1+(-19)}{2}\right)=(37,-10)\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2019 - zad. 15)</div>
+        <div class="qtext">
+          Okrąg o środku \(S=(a,5)\) styczny do osi \(Oy\) i prostej \(y=2\). Promień tego okręgu wynosi:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad13" value="A">A. 3</label>
+      <label class="option"><input type="radio" name="zad13" value="B">B. 5</label>
+      <label class="option"><input type="radio" name="zad13" value="C">C. 2</label>
+      <label class="option"><input type="radio" name="zad13" value="D">D. 4</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Odległość od środka do prostej \(y=2\): \(|5-2|=3\).  
+      To promień.  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2019 - zad. 20)</div>
+        <div class="qtext">
+          Punkty \(A=(-2,5)\), \(B=(4,-1)\). Średnica okręgu wpisanego w kwadrat o boku \(AB\) wynosi:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad14" value="A">A. 12</label>
+      <label class="option"><input type="radio" name="zad14" value="B">B. 6</label>
+      <label class="option"><input type="radio" name="zad14" value="C">C. \(6\sqrt{2}\)</label>
+      <label class="option"><input type="radio" name="zad14" value="D">D. \(2\sqrt{6}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Długość boku: \(\sqrt{(4-(-2))^2+(-1-5)^2}=\sqrt{36+36}=\sqrt{72}=6\sqrt{2}\).  
+      To średnica okręgu wpisanego.  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2018 - zad. 17)</div>
+        <div class="qtext">
+          Okrąg o środku \(S_1=(2,1)\) i promieniu \(r\) oraz okrąg o środku \(S_2=(5,5)\), promień 4 są styczne zewnętrznie.  
+          Wtedy \(r=\) ?
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad15" value="A">A. 1</label>
+      <label class="option"><input type="radio" name="zad15" value="B">B. 2</label>
+      <label class="option"><input type="radio" name="zad15" value="C">C. 3</label>
+      <label class="option"><input type="radio" name="zad15" value="D">D. 4</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Odległość między środkami: \(\sqrt{(5-2)^2+(5-1)^2}=\sqrt{9+16}=\sqrt{25}=5\).  
+      Dla styczności zewnętrznej: \(r+4=5 \implies r=1\).  
+      Odp.: A.
+    </div>
+  </div>
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2016 - zad. 20)</div>
+        <div class="qtext">
+          Okręgi o środkach \(S_1=(3,4)\) i \(S_2=(9,-4)\) mają równe promienie i są styczne zewnętrznie.  
+          Promień każdego z tych okręgów jest równy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad16" value="A">A. 8</label>
+      <label class="option"><input type="radio" name="zad16" value="B">B. 6</label>
+      <label class="option"><input type="radio" name="zad16" value="C">C. 5</label>
+      <label class="option"><input type="radio" name="zad16" value="D">D. \( \tfrac{5}{2} \)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Odległość między środkami:  
+      \(\sqrt{(9-3)^2+((-4)-4)^2}=\sqrt{36+64}=\sqrt{100}=10\).  
+      Dla styczności zewnętrznej: \(2r=10 \implies r=5\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2015 - zad. 21)</div>
+        <div class="qtext">
+          Okrąg przedstawiony na rysunku ma środek \(O=(3,1)\) i przechodzi przez punkty \(S=(0,4)\) i \(T=(0,-2)\).  
+          Podaj równanie tego okręgu:
+        </div>
+      </div>
+    </div>
+    <div class="qimg"><img src="img/owuw.png" alt="okrag"></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad17" value="A">A. \((x+3)^2+(y+1)^2=18\)</label>
+      <label class="option"><input type="radio" name="zad17" value="B">B. \((x-3)^2+(y+1)^2=18\)</label>
+      <label class="option"><input type="radio" name="zad17" value="C">C. \((x-3)^2+(y-1)^2=18\)</label>
+      <label class="option"><input type="radio" name="zad17" value="D">D. \((x+3)^2+(y-1)^2=18\)</label>
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2014 - zad. 15)</div>
+        <div class="qtext">
+          Ile punktów wspólnych ma okrąg \((x+2)^2+(y-3)^2=4\) z osiami układu współrzędnych?
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad18" value="A">A. 4</label>
+      <label class="option"><input type="radio" name="zad18" value="B">B. 2</label>
+      <label class="option"><input type="radio" name="zad18" value="C">C. 1</label>
+      <label class="option"><input type="radio" name="zad18" value="D">D. 0</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek: \((-2,3)\), promień: \(2\).  
+      Odległość od osi \(Oy\): \(|-2|=2\) → styczność → 1 punkt.  
+      Odległość od osi \(Ox\): \(|3|=3\) > 2 → brak przecięcia.  
+      Łącznie 1 punkt.  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2014 - zad. 23)</div>
+        <div class="qtext">
+          Punkty \(M=(2,0)\) i \(N=(0,-2)\) są punktami styczności okręgu z osiami układu współrzędnych.  
+          Podaj równanie tego okręgu:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad19" value="A">A. \((x-2)^2+(y-2)^2=4\)</label>
+      <label class="option"><input type="radio" name="zad19" value="B">B. \((x-2)^2+(y+2)^2=4\)</label>
+      <label class="option"><input type="radio" name="zad19" value="C">C. \((x+2)^2+(y+2)^2=4\)</label>
+      <label class="option"><input type="radio" name="zad19" value="D">D. \((x+2)^2+(y-2)^2=4\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Okrąg styczny w \((2,0)\) i \((0,-2)\) ma środek \((2,-2)\) i promień \(2\).  
+      Równanie: \((x-2)^2+(y+2)^2=4\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2013 - zad. 19)</div>
+        <div class="qtext">
+          Odległość między środkami okręgów \((x+1)^2+(y-2)^2=9\) oraz \(x^2+y^2=10\) jest równa:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad20" value="A">A. \(\sqrt{5}\)</label>
+      <label class="option"><input type="radio" name="zad20" value="B">B. \(\sqrt{10}-3\)</label>
+      <label class="option"><input type="radio" name="zad20" value="C">C. 3</label>
+      <label class="option"><input type="radio" name="zad20" value="D">D. 5</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek pierwszego: \((-1,2)\).  
+      Środek drugiego: \((0,0)\).  
+      Odległość: \(\sqrt{(-1-0)^2+(2-0)^2}=\sqrt{1+4}=\sqrt{5}\).  
+      Odp.: A.
+    </div>
+  </div>
+  <!-- Zadanie 21 -->
+  <div class="section" id="zad21" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 21</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2012 - zad. 23)</div>
+        <div class="qtext">
+          Na okręgu \((x-2)^2+(y+7)^2=4\) leży punkt:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad21" value="A">A. \((-2,5)\)</label>
+      <label class="option"><input type="radio" name="zad21" value="B">B. \((2,-5)\)</label>
+      <label class="option"><input type="radio" name="zad21" value="C">C. \((2,-7)\)</label>
+      <label class="option"><input type="radio" name="zad21" value="D">D. \((7,-2)\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek: \((2,-7)\), promień: \(2\).  
+      Sprawdzamy punkty: dla \((2,-5)\): \((2-2)^2+((-5)+7)^2=0+2^2=4\). Pasuje.  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 22 -->
+  <div class="section" id="zad22" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 22</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2012 - zad. 21)</div>
+        <div class="qtext">
+          Dany jest okrąg \((x+4)^2+(y-6)^2=100\). Środek tego okręgu ma współrzędne:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad22" value="A">A. \((-4,-6)\)</label>
+      <label class="option"><input type="radio" name="zad22" value="B">B. \((4,6)\)</label>
+      <label class="option"><input type="radio" name="zad22" value="C">C. \((4,-6)\)</label>
+      <label class="option"><input type="radio" name="zad22" value="D">D. \((-4,6)\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Okrąg: \((x-(-4))^2+(y-6)^2=100\).  
+      Środek: \((-4,6)\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 23 -->
+  <div class="section" id="zad23" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 23</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2011 - zad. 19)</div>
+        <div class="qtext">
+          Styczną do okręgu \((x-1)^2+y^2-4=0\) jest prosta o równaniu:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad23" value="A">A. \(x=1\)</label>
+      <label class="option"><input type="radio" name="zad23" value="B">B. \(x=3\)</label>
+      <label class="option"><input type="radio" name="zad23" value="C">C. \(y=0\)</label>
+      <label class="option"><input type="radio" name="zad23" value="D">D. \(y=4\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie okręgu: \((x-1)^2+y^2=4\). Środek \((1,0)\), promień \(2\).  
+      Styczna pionowa: \(x=3\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 24 -->
+  <div class="section" id="zad24" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 24</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2011 - zad. 16)</div>
+        <div class="qtext">
+          Dany jest okrąg \((x+2)^2+(y-3)^2=5\). Środek tego okręgu ma współrzędne:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad24" value="A">A. \((2,-3)\)</label>
+      <label class="option"><input type="radio" name="zad24" value="B">B. \((- \sqrt{2},- \sqrt{3})\)</label>
+      <label class="option"><input type="radio" name="zad24" value="C">C. \((-2,3)\)</label>
+      <label class="option"><input type="radio" name="zad24" value="D">D. \((\sqrt{2},\sqrt{3})\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie w postaci: \((x-(-2))^2+(y-3)^2=5\).  
+      Środek: \((-2,3)\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 25 -->
+  <div class="section" id="zad25" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 25</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2010 - zad. 21)</div>
+        <div class="qtext">
+          Wskaż równanie okręgu o promieniu \(6\).
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad25" value="A">A. \(x^2+y^2=3\)</label>
+      <label class="option"><input type="radio" name="zad25" value="B">B. \(x^2+y^2=6\)</label>
+      <label class="option"><input type="radio" name="zad25" value="C">C. \(x^2+y^2=12\)</label>
+      <label class="option"><input type="radio" name="zad25" value="D">D. \(x^2+y^2=36\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Promień \(r=6\) → \(r^2=36\).  
+      Równanie: \(x^2+y^2=36\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 26 -->
+  <div class="section" id="zad26" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 26</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2010 - zad. 21)</div>
+        <div class="qtext">
+          Okrąg \((x+2)^2+(y-1)^2=13\) ma promień równy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad26" value="A">A. \(\sqrt{13}\)</label>
+      <label class="option"><input type="radio" name="zad26" value="B">B. 13</label>
+      <label class="option"><input type="radio" name="zad26" value="C">C. 8</label>
+      <label class="option"><input type="radio" name="zad26" value="D">D. \(2\sqrt{2}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \((x+2)^2+(y-1)^2=r^2\), gdzie \(r^2=13\).  
+      Promień \(r=\sqrt{13}\).  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 27 -->
+  <div class="section" id="zad27" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 27</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2010 - zad. 20)</div>
+        <div class="qtext">
+          Punkty \(S=(2,1)\), \(M=(6,4)\). Podaj równanie okręgu o środku \(S\) przechodzącego przez punkt \(M\).
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad27" value="A">A. \((x-2)^2+(y-1)^2=5\)</label>
+      <label class="option"><input type="radio" name="zad27" value="B">B. \((x-2)^2+(y-1)^2=25\)</label>
+      <label class="option"><input type="radio" name="zad27" value="C">C. \((x-6)^2+(y-4)^2=5\)</label>
+      <label class="option"><input type="radio" name="zad27" value="D">D. \((x-6)^2+(y-4)^2=25\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Promień: \(\sqrt{(6-2)^2+(4-1)^2}=\sqrt{16+9}=\sqrt{25}=5\).  
+      Równanie: \((x-2)^2+(y-1)^2=25\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 28 -->
+  <div class="section" id="zad28" data-ans="A,F">
+    <div class="qheader">
+      <div class="qid">Zad. 28</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">
+          Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x, y), dany jest okrąg  
+          \(O:(x-2)^2+(y+3)^2=16\).  
+          Dokończ zdania, wybierając jedną odpowiedź spośród A–D oraz jedną spośród E–G:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <div style="margin-bottom:8px; font-weight:600;">1. Środek S okręgu O ma współrzędne:</div>
+      <label class="option"><input type="radio" name="zad28a" value="A">A. \((2,-3)\)</label>
+      <label class="option"><input type="radio" name="zad28a" value="B">B. \((-2,-3)\)</label>
+      <label class="option"><input type="radio" name="zad28a" value="C">C. \((-2,3)\)</label>
+      <label class="option"><input type="radio" name="zad28a" value="D">D. \((2,3)\)</label>
+
+      <div style="margin:12px 0 8px; font-weight:600;">2. Promień r okręgu O jest równy:</div>
+      <label class="option"><input type="radio" name="zad28b" value="E">E. \(r=16\)</label>
+      <label class="option"><input type="radio" name="zad28b" value="F">F. \(r=4\)</label>
+      <label class="option"><input type="radio" name="zad28b" value="G">G. \(r=5\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \((x-2)^2+(y+3)^2=r^2\).  
+      Środek: \((2,-3)\). Promień: \(\sqrt{16}=4\).  
+      Odp.: A, F.
+    </div>
+  </div>
+<footer>Każda godzina nauki to inwestycja w siebie ⊂(◉‿◉)つ</footer>
+
+</div>
+
+<script>
+function byId(id){return document.getElementById(id)}
+function setupSingleChoice(sec){
+  const correct = (sec.dataset.ans||'').trim().toUpperCase();
+  const groups = {};
+  sec.querySelectorAll('.option input[type=radio]').forEach(inp=>{
+    const name = inp.name;
+    if(!groups[name]) groups[name] = [];
+    groups[name].push(inp);
+  });
+  Object.entries(groups).forEach(([name,inputs],idx)=>{
+    inputs.forEach(inp=>{
+      inp.addEventListener('change',()=>{
+        inputs.forEach(i=>i.parentElement.classList.remove('correct','incorrect'));
+        if(inp.value.toUpperCase()===correct.split(',')[idx]){
+          inp.parentElement.classList.add('correct');
+        } else {
+          inp.parentElement.classList.add('incorrect');
+        }
+      });
+    });
+  });
+}
+function setupToggleSolution(sec){
+  const btn=sec.querySelector('.btn-solution');
+  const sol=sec.querySelector('.sol');
+  if(btn&&sol){
+    btn.addEventListener('click',()=>{
+      sol.style.display=sol.style.display==='block'?'none':'block';
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+function setupSection(id){
+  const sec=byId(id);
+  if(!sec) return;
+  setupSingleChoice(sec);
+  setupToggleSolution(sec);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  for(let i=1;i<=28;i++){ setupSection('zad'+i); }
+});
+</script>
+</body>
+</html>

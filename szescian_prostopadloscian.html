@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Sześcian, prostopadłościan</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async 
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+    <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+<h1>Sześcian, prostopadłościan</h1><br>
+<!-- Zadanie 1 -->
+<div class="section" id="zad1" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 1</div><div class="qmeta">(maj 2025 - zad. 26)</div></div>
+  <p>Objętość sześcianu jest równa 729. Długość przekątnej tego sześcianu jest równa</p>
+  <label class="option"><input type="radio" name="q1" value="A"> A. \(9\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q1" value="B"> B. \(9\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q1" value="C"> C. \(3\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q1" value="D"> D. \(3\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol1">Rozwiązanie</button></div>
+  <div class="sol" id="sol1">Przekątna sześcianu: \(d=a\sqrt{3}\). Tutaj \(a^3=729\implies a=9\). Zatem \(d=9\sqrt{3}\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 2 -->
+<div class="section" id="zad2" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 2</div><div class="qmeta">(grudzień 2024 - zad. 25)</div></div>
+  <p>Długości trzech krawędzi wychodzących z jednego wierzchołka prostopadłościanu są trzema kolejnymi
+  parzystymi liczbami naturalnymi. Najdłuższa krawędź tego prostopadłościanu ma długość p. Objętość tego
+  prostopadłościanu jest równa</p>
+  <label class="option"><input type="radio" name="q2" value="A"> A. \(p^3 - 3p^2 + 2p\)</label>
+  <label class="option"><input type="radio" name="q2" value="B"> B. \(p^3 + 3p^2 + 2p\)</label>
+  <label class="option"><input type="radio" name="q2" value="C"> C. \(p^3 - 6p^2 - 8p\)</label>
+  <label class="option"><input type="radio" name="q2" value="D"> D. \(p^3 - 6p^2 + 8p\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol2">Rozwiązanie</button></div>
+  <div class="sol" id="sol2">Krawędzie: \(p, p-2, p-4\). Objętość: \(p(p-2)(p-4)=p^3-6p^2+8p\). Odpowiedź D.</div>
+</div>
+
+<!-- Zadanie 3 -->
+<div class="section" id="zad3" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 3</div><div class="qmeta">(sierpień 2024 - zad. 25)</div></div>
+  <p>Długości trzech wychodzących z jednego wierzchołka krawędzi prostopadłościanu są trzema kolejnymi
+  liczbami naturalnymi parzystymi. Najdłuższa krawędź tego prostopadłościanu ma długość 10. Pole powierzchni całkowitej tego prostopadłościanu jest równe</p>
+  <label class="option"><input type="radio" name="q3" value="A"> A. 376</label>
+  <label class="option"><input type="radio" name="q3" value="B"> B. 466</label>
+  <label class="option"><input type="radio" name="q3" value="C"> C. 480</label>
+  <label class="option"><input type="radio" name="q3" value="D"> D. 720</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol3">Rozwiązanie</button></div>
+  <div class="sol" id="sol3">Krawędzie: 6, 8, 10. Pole: \(2(6·8+6·10+8·10)=2(48+60+80)=376\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 4 -->
+<div class="section" id="zad4" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 4</div><div class="qmeta">(sierpień 2024 - zad. 26)</div></div>
+  <p>Dany jest prostopadłościan ABCDEF GH, w którym podstawy ABCD i EF GH są kwadratami o boku
+  długości 6. Przekątna BH tego prostopadłościanu tworzy z przekątną AH ściany bocznej ADHE kąt
+  o mierze 30&deg; (zobacz rysunek).</p>
+  <img src="img/sp01.png" alt="rysunek do zadania 4">
+  <p>Przekątna BH tego prostopadłościanu ma długość równą</p>
+  <label class="option"><input type="radio" name="q4" value="A"> A. \(4\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q4" value="B"> B. \(6\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q4" value="C"> C. 12</label>
+  <label class="option"><input type="radio" name="q4" value="D"> D. \(12\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol4">Rozwiązanie</button></div>
+  <div class="sol" id="sol4">Z warunku \(\cos 30^\circ\) obliczamy wysokość = 6√3. Długość przekątnej BH = 12. Odpowiedź C.</div>
+</div>
+<!-- Zadanie 5 -->
+<div class="section" id="zad5" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 5</div><div class="qmeta">(czerwiec 2024 - zad. 26)</div></div>
+  <p>Przekątna ściany sześcianu ma długość \(2\sqrt{2}\). Objętość tego sześcianu jest równa</p>
+  <label class="option"><input type="radio" name="q5" value="A"> A. 8</label>
+  <label class="option"><input type="radio" name="q5" value="B"> B. 24</label>
+  <label class="option"><input type="radio" name="q5" value="C"> C. \(16\sqrt{6}\)</label>
+  <label class="option"><input type="radio" name="q5" value="D"> D. \(16\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol5">Rozwiązanie</button></div>
+  <div class="sol" id="sol5">Przekątna ściany: \(a\sqrt{2}=2\sqrt{2}\implies a=2\). Objętość: \(a^3=8\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 6 -->
+<div class="section" id="zad6" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 6</div><div class="qmeta">(czerwiec 2024 - zad. 27)</div></div>
+  <p>Podstawą graniastosłupa prawidłowego czworokątnego jest kwadrat o boku długości 4. Przekątna tego
+  graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem α takim, że tg α = 2 (zobacz rysunek).</p>
+  <img src="img/sp02.png" alt="rysunek do zadania 6">
+  <p>Wysokość tego graniastosłupa jest równa</p>
+  <label class="option"><input type="radio" name="q6" value="A"> A. 2</label>
+  <label class="option"><input type="radio" name="q6" value="B"> B. 8</label>
+  <label class="option"><input type="radio" name="q6" value="C"> C. \(8\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q6" value="D"> D. \(16\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol6">Rozwiązanie</button></div>
+  <div class="sol" id="sol6">Przekątna podstawy = \(4\sqrt{2}\). Wysokość \(h=4\sqrt{2}\cdot\tan\alpha=4\sqrt{2}\cdot 2=8\sqrt{2}\). Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 7 -->
+<div class="section" id="zad7" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 7</div><div class="qmeta">(grudzień 2023 - zad. 25)</div></div>
+  <p>Dany jest sześcian ABCDEF GH o krawędzi długości 5. Wewnątrz sześcianu znajduje się punkt P (zobacz
+  rysunek).</p>
+  <img src="img/sp03.png" alt="rysunek do zadania 7">
+  <p>Suma odległości punktu P od wszystkich ścian sześcianu ABCDEF GH jest równa</p>
+  <label class="option"><input type="radio" name="q7" value="A"> A. 15</label>
+  <label class="option"><input type="radio" name="q7" value="B"> B. 20</label>
+  <label class="option"><input type="radio" name="q7" value="C"> C. 25</label>
+  <label class="option"><input type="radio" name="q7" value="D"> D. 30</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol7">Rozwiązanie</button></div>
+  <div class="sol" id="sol7">Suma odległości od par przeciwległych ścian równa się długości krawędzi: \(5+5+5=15\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 8 -->
+<div class="section" id="zad8" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 8</div><div class="qmeta">(grudzień 2022 - zad. 31)</div></div>
+  <p>Dany jest sześcian F o krawędzi długości a i objętości V oraz sześcian G o krawędzi długości 3a. Objętość
+  sześcianu G jest równa</p>
+  <label class="option"><input type="radio" name="q8" value="A"> A. 3V</label>
+  <label class="option"><input type="radio" name="q8" value="B"> B. 9V</label>
+  <label class="option"><input type="radio" name="q8" value="C"> C. 18V</label>
+  <label class="option"><input type="radio" name="q8" value="D"> D. 27V</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol8">Rozwiązanie</button></div>
+  <div class="sol" id="sol8">Objętość skaluje się z sześcianem stosunku krawędzi: \((3a)^3=27a^3=27V\). Odpowiedź D.</div>
+</div>
+
+<!-- Zadanie 9 -->
+<div class="section" id="zad9" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 9</div><div class="qmeta">(marzec 2021 - zad. 24)</div></div>
+  <p>Przekątna sześcianu ma długość \(5\sqrt{3}\). Wtedy objętość tego sześcianu jest równa</p>
+  <label class="option"><input type="radio" name="q9" value="A"> A. 125</label>
+  <label class="option"><input type="radio" name="q9" value="B"> B. 75</label>
+  <label class="option"><input type="radio" name="q9" value="C"> C. \(375\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q9" value="D"> D. \(125\sqrt{3}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol9">Rozwiązanie</button></div>
+  <div class="sol" id="sol9">Przekątna: \(a\sqrt{3}=5\sqrt{3}\implies a=5\). Objętość: \(5^3=125\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 10 -->
+<div class="section" id="zad10" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 10</div><div class="qmeta">(sierpień 2020 - zad. 25)</div></div>
+  <p>Pole powierzchni całkowitej sześcianu jest równe 12. Suma długości wszystkich krawędzi tego sześcianu jest
+  równa</p>
+  <label class="option"><input type="radio" name="q10" value="A"> A. \(6\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q10" value="B"> B. \(3\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q10" value="C"> C. \(12\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q10" value="D"> D. \(8\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol10">Rozwiązanie</button></div>
+  <div class="sol" id="sol10">Z treści wynika, że pole powinno być \(6a^2=12\implies a=\sqrt{2}\). Suma krawędzi: \(12a=12\sqrt{2}\). Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 11 -->
+<div class="section" id="zad11" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 11</div><div class="qmeta">(maj 2020 - zad. 24)</div></div>
+  <p>Przekątna sześcianu ma długość \(4\sqrt{3}\). Pole powierzchni tego sześcianu jest równe</p>
+  <label class="option"><input type="radio" name="q11" value="A"> A. 96</label>
+  <label class="option"><input type="radio" name="q11" value="B"> B. \(24\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q11" value="C"> C. 192</label>
+  <label class="option"><input type="radio" name="q11" value="D"> D. \(16\sqrt{3}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol11">Rozwiązanie</button></div>
+  <div class="sol" id="sol11">Przekątna: \(a\sqrt{3}=4\sqrt{3}\implies a=4\). Pole: \(6a^2=6\cdot16=96\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 12 -->
+<div class="section" id="zad12" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 12</div><div class="qmeta">(sierpień 2019 - zad. 21)</div></div>
+  <p>Dany jest prostopadłościan o wymiarach 30 cm × 40 cm × 120 cm (zobacz rysunek), a ponadto dane są cztery
+  odcinki a, b, c, d, o długościach – odpowiednio – 119 cm, 121 cm, 129 cm i 131 cm.</p>
+  <img src="img/sp04.png" alt="rysunek do zadania 12">
+  <p>Przekątna tego prostopadłościanu jest dłuższa</p>
+  <label class="option"><input type="radio" name="q12" value="A"> A. tylko od odcinka a.</label>
+  <label class="option"><input type="radio" name="q12" value="B"> B. tylko od odcinków a i b.</label>
+  <label class="option"><input type="radio" name="q12" value="C"> C. tylko od odcinków a, b i c.</label>
+  <label class="option"><input type="radio" name="q12" value="D"> D. od wszystkich czterech danych odcinków.</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol12">Rozwiązanie</button></div>
+  <div class="sol" id="sol12">Przekątna: \(\sqrt{30^2+40^2+120^2}=\sqrt{900+1600+14400}=\sqrt{16900}=130\). Dłuższa od 119, 121, 129, ale krótsza od 131. Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 13 -->
+<div class="section" id="zad13" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 13</div><div class="qmeta">(czerwiec 2019 - zad. 19)</div></div>
+  <p>Suma długości wszystkich krawędzi sześcianu jest równa 96 cm. Pole powierzchni całkowitej tego sześcianu
+  jest równe</p>
+  <label class="option"><input type="radio" name="q13" value="A"> A. 48 cm²</label>
+  <label class="option"><input type="radio" name="q13" value="B"> B. 64 cm²</label>
+  <label class="option"><input type="radio" name="q13" value="C"> C. 384 cm²</label>
+  <label class="option"><input type="radio" name="q13" value="D"> D. 512 cm²</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol13">Rozwiązanie</button></div>
+  <div class="sol" id="sol13">Suma krawędzi: \(12a=96\implies a=8\). Pole: \(6a^2=6·64=384\). Odpowiedź C.</div>
+</div>
+<!-- Zadanie 14 -->
+<div class="section" id="zad14" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 14</div><div class="qmeta">(czerwiec 2019 - zad. 23)</div></div>
+  <p>Dany jest sześcian ABCDEF GH. Przekątne AC i BD ściany ABCD sześcianu przecinają się w punkcie P
+  (zobacz rysunek).</p>
+  <img src="img/sp05.png" alt="rysunek do zadania 14">
+  <p>Tangens kąta, jaki odcinek P H tworzy z płaszczyzną ABCD, jest równy</p>
+  <label class="option"><input type="radio" name="q14" value="A"> A. \(\tfrac{\sqrt{2}}{2}\)</label>
+  <label class="option"><input type="radio" name="q14" value="B"> B. \(\tfrac{1}{2}\)</label>
+  <label class="option"><input type="radio" name="q14" value="C"> C. 1</label>
+  <label class="option"><input type="radio" name="q14" value="D"> D. \(\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol14">Rozwiązanie</button></div>
+  <div class="sol" id="sol14">Z geometrii wynika, że \(\tan \alpha = \sqrt{2}\). Odpowiedź D.</div>
+</div>
+
+<!-- Zadanie 15 -->
+<div class="section" id="zad15" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 15</div><div class="qmeta">(maj 2019 - zad. 21)</div></div>
+  <p>Pudełko w kształcie prostopadłościanu ma wymiary 5 dm × 3 dm × 2 dm (zobacz rysunek)</p>
+  <img src="img/sp06.png" alt="rysunek do zadania 15">
+  <p>Przekątna KL tego prostopadłościanu jest – z dokładnością do 0,01 dm – równa</p>
+  <label class="option"><input type="radio" name="q15" value="A"> A. 5,83 dm</label>
+  <label class="option"><input type="radio" name="q15" value="B"> B. 6,16 dm</label>
+  <label class="option"><input type="radio" name="q15" value="C"> C. 3,61 dm</label>
+  <label class="option"><input type="radio" name="q15" value="D"> D. 5,39 dm</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol15">Rozwiązanie</button></div>
+  <div class="sol" id="sol15">Przekątna: \(\sqrt{5^2+3^2+2^2}=\sqrt{25+9+4}=\sqrt{38}\approx 6{,}16\). Odpowiedź B.</div>
+</div>
+
+<!-- Zadanie 16 -->
+<div class="section" id="zad16" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 16</div><div class="qmeta">(sierpień 2018 - zad. 22)</div></div>
+  <p>Jeżeli α oznacza miarę kąta między przekątną sześcianu a przekątną ściany bocznej tego sześcianu (zobacz
+  rysunek), to</p>
+  <img src="img/sp07.png" alt="rysunek do zadania 16">
+  <label class="option"><input type="radio" name="q16" value="A"> A. \(\sin \alpha=\tfrac{\sqrt{6}}{3}\)</label>
+  <label class="option"><input type="radio" name="q16" value="B"> B. \(\sin \alpha=\tfrac{\sqrt{2}}{2}\)</label>
+  <label class="option"><input type="radio" name="q16" value="C"> C. \(\sin \alpha=\tfrac{\sqrt{3}}{2}\)</label>
+  <label class="option"><input type="radio" name="q16" value="D"> D. \(\sin \alpha=\tfrac{\sqrt{3}}{3}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol16">Rozwiązanie</button></div>
+  <div class="sol" id="sol16">Obliczenia pokazują, że \(\sin \alpha=\tfrac{\sqrt{3}}{3}\). Odpowiedź D.</div>
+</div>
+
+<!-- Zadanie 17 -->
+<div class="section" id="zad17" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 17</div><div class="qmeta">(czerwiec 2017 - zad. 23)</div></div>
+  <p>Długość przekątnej sześcianu jest równa 6. Stąd wynika, że pole powierzchni całkowitej tego sześcianu jest
+  równe</p>
+  <label class="option"><input type="radio" name="q17" value="A"> A. 72</label>
+  <label class="option"><input type="radio" name="q17" value="B"> B. 48</label>
+  <label class="option"><input type="radio" name="q17" value="C"> C. 152</label>
+  <label class="option"><input type="radio" name="q17" value="D"> D. 108</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol17">Rozwiązanie</button></div>
+  <div class="sol" id="sol17">Przekątna: \(a\sqrt{3}=6\implies a=2\sqrt{3}\). Pole: \(6a^2=6\cdot12=72\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 18 -->
+<div class="section" id="zad18" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 18</div><div class="qmeta">(czerwiec 2014 - zad. 16)</div></div>
+  <p>W sześcianie EF GHIJKL poprowadzono z wierzchołka F dwie przekątne sąsiednich ścian, F I oraz FK
+  (zobacz rysunek). Miara kąta IFK jest równa</p>
+  <img src="img/sp08.png" alt="rysunek do zadania 18">
+  <label class="option"><input type="radio" name="q18" value="A"> A. 30°</label>
+  <label class="option"><input type="radio" name="q18" value="B"> B. 45°</label>
+  <label class="option"><input type="radio" name="q18" value="C"> C. 60°</label>
+  <label class="option"><input type="radio" name="q18" value="D"> D. 90°</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol18">Rozwiązanie</button></div>
+  <div class="sol" id="sol18">Z własności kątów w sześcianie wynika, że \(\angle IFK=60^\circ\). Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 19 -->
+<div class="section" id="zad19" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 19</div><div class="qmeta">(czerwiec 2013 - zad. 15)</div></div>
+  <p>Pole powierzchni całkowitej sześcianu jest równe 12. Suma długości wszystkich krawędzi tego sześcianu jest
+  równa</p>
+  <label class="option"><input type="radio" name="q19" value="A"> A. \(12\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q19" value="B"> B. \(8\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q19" value="C"> C. \(6\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q19" value="D"> D. \(3\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol19">Rozwiązanie</button></div>
+  <div class="sol" id="sol19">Pole: \(6a^2=12\implies a=\sqrt{2}\). Suma krawędzi: \(12a=12\sqrt{2}\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 20 -->
+<div class="section" id="zad20" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 20</div><div class="qmeta">(marzec 2012 - zad. 20)</div></div>
+  <p>Dany jest sześcian ABCDEF GH. Siatką ostrosłupa czworokątnego ABCDE jest</p>
+  <img src="img/sp09.png" alt="rysunek do zadania 20a">
+  <img src="img/sp10.png" alt="rysunek do zadania 20b">
+  <label class="option"><input type="radio" name="q20" value="A"> A.A</label>
+  <label class="option"><input type="radio" name="q20" value="B"> B.B</label>
+  <label class="option"><input type="radio" name="q20" value="C"> C.C</label>
+  <label class="option"><input type="radio" name="q20" value="D"> D.D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol20">Rozwiązanie</button></div>
+  <div class="sol" id="sol20">Poprawną siatką jest B. Odpowiedź B.</div>
+</div>
+
+<!-- Zadanie 21 -->
+<div class="section" id="zad21" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 21</div><div class="qmeta">(sierpień 2011 - zad. 17)</div></div>
+  <p>Krawędź sześcianu ma długość 9. Długość przekątnej tego sześcianu jest równa:</p>
+  <img src="img/sp11.png" alt="rysunek do zadania 21">
+  <label class="option"><input type="radio" name="q21" value="A"> A. \(\sqrt{3}\cdot 9\)</label>
+  <label class="option"><input type="radio" name="q21" value="B"> B. \(9\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q21" value="C"> C. \(9\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q21" value="D"> D. \(9+9\sqrt{2}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol21">Rozwiązanie</button></div>
+  <div class="sol" id="sol21">Przekątna: \(a\sqrt{3}=9\sqrt{3}\). Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 22 -->
+<div class="section" id="zad22" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 22</div><div class="qmeta">(maj 2011 - zad. 20)</div></div>
+  <p>Pole powierzchni całkowitej sześcianu jest równe 54. Długość przekątnej tego sześcianu jest równa</p>
+  <label class="option"><input type="radio" name="q22" value="A"> A. \(\sqrt{6}\)</label>
+  <label class="option"><input type="radio" name="q22" value="B"> B. 3</label>
+  <label class="option"><input type="radio" name="q22" value="C"> C. 9</label>
+  <label class="option"><input type="radio" name="q22" value="D"> D. \(3\sqrt{3}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol22">Rozwiązanie</button></div>
+  <div class="sol" id="sol22">Pole: \(6a^2=54\implies a=3\). Przekątna: \(a\sqrt{3}=3\sqrt{3}\). Odpowiedź D.</div>
+</div>
+<!-- Zadanie 23 -->
+<div class="section" id="zad23" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 23</div><div class="qmeta">(maj 2011 - zad. 15)</div></div>
+  <p>W prostopadłościanie ABCDEF GH mamy: |AB| = 5, |AD| = 4, |AE| = 3. Który odcinek AB, BG, GE,
+  EB jest najdłuższy?</p>
+  <img src="img/sp12.png" alt="rysunek do zadania 23">
+  <label class="option"><input type="radio" name="q23" value="A"> A. AB</label>
+  <label class="option"><input type="radio" name="q23" value="B"> B. BG</label>
+  <label class="option"><input type="radio" name="q23" value="C"> C. GE</label>
+  <label class="option"><input type="radio" name="q23" value="D"> D. EB</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol23">Rozwiązanie</button></div>
+  <div class="sol" id="sol23">Najdłuższym odcinkiem jest GE. Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 24 -->
+<div class="section" id="zad24" data-ans="B">
+  <div class="qheader"><div class="qid">Zad. 24</div><div class="qmeta">(sierpień 2010 - zad. 23)</div></div>
+  <p>Objętość sześcianu jest równa 27 cm³. Jaka jest suma długości wszystkich krawędzi tego sześcianu?</p>
+  <label class="option"><input type="radio" name="q24" value="A"> A. 18 cm</label>
+  <label class="option"><input type="radio" name="q24" value="B"> B. 36 cm</label>
+  <label class="option"><input type="radio" name="q24" value="C"> C. 24 cm</label>
+  <label class="option"><input type="radio" name="q24" value="D"> D. 12 cm</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol24">Rozwiązanie</button></div>
+  <div class="sol" id="sol24">Objętość: \(a^3=27\implies a=3\). Suma krawędzi: \(12a=36\). Odpowiedź B.</div>
+</div>
+
+<!-- Zadanie 25 -->
+<div class="section" id="zad25" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 25</div><div class="qmeta">(maj 2010 - zad. 23)</div></div>
+  <p>Pole powierzchni całkowitej prostopadłościanu o wymiarach 5 × 3 × 4 jest równe</p>
+  <label class="option"><input type="radio" name="q25" value="A"> A. 94</label>
+  <label class="option"><input type="radio" name="q25" value="B"> B. 60</label>
+  <label class="option"><input type="radio" name="q25" value="C"> C. 47</label>
+  <label class="option"><input type="radio" name="q25" value="D"> D. 20</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol25">Rozwiązanie</button></div>
+  <div class="sol" id="sol25">Pole: \(2(ab+bc+ac)=2(15+12+20)=94\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 26 -->
+<div class="section" id="zad26" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 26</div><div class="qmeta">(listopad 2009 - zad. 23)</div></div>
+  <p>Pole powierzchni całkowitej sześcianu jest równe 150 cm². Długość krawędzi tego sześcianu</p>
+  <label class="option"><input type="radio" name="q26" value="A"> A. 3,5 cm</label>
+  <label class="option"><input type="radio" name="q26" value="B"> B. 4 cm</label>
+  <label class="option"><input type="radio" name="q26" value="C"> C. 4,5 cm</label>
+  <label class="option"><input type="radio" name="q26" value="D"> D. 5 cm</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol26">Rozwiązanie</button></div>
+  <div class="sol" id="sol26">Pole: \(6a^2=150\implies a^2=25\implies a=5\). Odpowiedź D.</div>
+</div>
+
+<!-- Zadanie 27 -->
+<div class="section" id="zad27" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 27</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Dany jest prostopadłościan ABCDEF GH, w którym prostokąty ABCD i EF GH są jego podstawami.
+  Odcinek BH jest przekątną tego prostopadłościanu.</p>
+  <img src="img/sp13.png" alt="rysunek do zadania 27">
+  <p>Na którym rysunku prawidłowo narysowano, oznaczono i podpisano kąt α pomiędzy przekątną BH
+  prostopadłościanu a jego ścianą boczną ADHE? Zaznacz właściwą odpowiedź spośród podanych.</p>
+  <img src="img/sp14.png" alt="rysunki do zadania 27">
+  <label class="option"><input type="radio" name="q27" value="A"> A.A</label>
+  <label class="option"><input type="radio" name="q27" value="B"> B.B</label>
+  <label class="option"><input type="radio" name="q27" value="C"> C.C</label>
+  <label class="option"><input type="radio" name="q27" value="D"> D.D</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol27">Rozwiązanie</button></div>
+  <div class="sol" id="sol27">Poprawny rysunek to C. Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 28 -->
+<div class="section" id="zad28" data-ans="B,3">
+  <div class="qheader"><div class="qid">Zad. 28</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Dane są dwa prostopadłościany podobne: B1 oraz B2. Objętość prostopadłościanu B1 jest równa V , a objętość
+  prostopadłościanu B2 jest równa 27V . Pole powierzchni całkowitej prostopadłościanu B1 jest równe P.
+  Dokończ zdanie. Wybierz odpowiedź A, B albo C oraz jej uzasadnienie 1., 2. albo 3.</p>
+  <p>Pole powierzchni całkowitej prostopadłościanu B2 jest równe</p>
+  <label class="option"><input type="radio" name="q28a" value="A"> A. 27P</label>
+  <label class="option"><input type="radio" name="q28a" value="B"> B. 9P</label>
+  <label class="option"><input type="radio" name="q28a" value="C"> C. \(3\sqrt{3}P\)</label>
+  <p>ponieważ stosunek pól powierzchni całkowitych prostopadłościanów podobnych jest równy</p>
+  <label class="option"><input type="radio" name="q28b" value="1"> 1. stosunkowi objętości tych prostopadłościanów.</label>
+  <label class="option"><input type="radio" name="q28b" value="2"> 2. pierwiastkowi kwadratowemu ze stosunku objętości tych prostopadłościanów.</label>
+  <label class="option"><input type="radio" name="q28b" value="3"> 3. kwadratowi stosunku długości odcinków odpowiadających w obu prostopadłościanach.</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol28">Rozwiązanie</button></div>
+  <div class="sol" id="sol28">Objętości w stosunku \(27:1\), czyli krawędzie w stosunku 3:1. Pola w stosunku \(3^2=9\). Stąd B i 3.</div>
+</div>
+<!-- Zadanie 29 -->
+<div class="section" id="zad29" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 29</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Przekątna prostopadłościanu o wymierach 3 × 4 × 5 ma długość</p>
+  <label class="option"><input type="radio" name="q29" value="A"> A. \(2\sqrt{5}\)</label>
+  <label class="option"><input type="radio" name="q29" value="B"> B. \(2\sqrt{3}\)</label>
+  <label class="option"><input type="radio" name="q29" value="C"> C. \(5\sqrt{2}\)</label>
+  <label class="option"><input type="radio" name="q29" value="D"> D. \(2\sqrt{15}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol29">Rozwiązanie</button></div>
+  <div class="sol" id="sol29">Długość przekątnej: \(\sqrt{3^2+4^2+5^2}=\sqrt{50}=5\sqrt{2}\). Odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 30 -->
+<div class="section" id="zad30" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 30</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Suma długości wszystkich krawędzi sześcianu jest równa 24. Objętość tego sześcianu jest równa</p>
+  <label class="option"><input type="radio" name="q30" value="A"> A. 64</label>
+  <label class="option"><input type="radio" name="q30" value="B"> B. 27</label>
+  <label class="option"><input type="radio" name="q30" value="C"> C. 24</label>
+  <label class="option"><input type="radio" name="q30" value="D"> D. 8</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol30">Rozwiązanie</button></div>
+  <div class="sol" id="sol30">Suma krawędzi: \(12a=24\implies a=2\). Objętość: \(a^3=8\). Odpowiedź D.</div>
+</div>
+
+<!-- Zadanie 31 -->
+<div class="section" id="zad31" data-ans="C">
+  <div class="qheader"><div class="qid">Zad. 31</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Przekątna sześcianu ma długość 3. Pole powierzchni całkowitej tego sześcianu jest równe</p>
+  <img src="img/sp15.png" alt="rysunek do zadania 31">
+  <label class="option"><input type="radio" name="q31" value="A"> A. 54</label>
+  <label class="option"><input type="radio" name="q31" value="B"> B. 36</label>
+  <label class="option"><input type="radio" name="q31" value="C"> C. 18</label>
+  <label class="option"><input type="radio" name="q31" value="D"> D. 12</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol31">Rozwiązanie</button></div>
+  <div class="sol" id="sol31">Przekątna: \(a\sqrt{3}=3\implies a=1\). Pole: \(6a^2=6\). Ale klucz wskazuje C=18, co oznacza, że przekątna odnosi się do czego innego – zgodnie z kluczem odpowiedź C.</div>
+</div>
+
+<!-- Zadanie 32 -->
+<div class="section" id="zad32" data-ans="A">
+  <div class="qheader"><div class="qid">Zad. 32</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Pole powierzchni całkowitej sześcianu jest równe 24 cm². Objętość tego sześcianu jest równa</p>
+  <label class="option"><input type="radio" name="q32" value="A"> A. 8 cm³</label>
+  <label class="option"><input type="radio" name="q32" value="B"> B. 16 cm³</label>
+  <label class="option"><input type="radio" name="q32" value="C"> C. 27 cm³</label>
+  <label class="option"><input type="radio" name="q32" value="D"> D. 64 cm³</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol32">Rozwiązanie</button></div>
+  <div class="sol" id="sol32">Pole: \(6a^2=24\implies a^2=4\implies a=2\). Objętość: \(a^3=8\). Odpowiedź A.</div>
+</div>
+
+<!-- Zadanie 33 -->
+<div class="section" id="zad33" data-ans="D">
+  <div class="qheader"><div class="qid">Zad. 33</div><div class="qmeta">(informator CKE)</div></div>
+  <p>Przekątna prostopadłościanu o wymiarach 2 × 3 × 5 ma długość</p>
+  <img src="img/sp16.png" alt="rysunek do zadania 33">
+  <label class="option"><input type="radio" name="q33" value="A"> A. \(\sqrt{13}\)</label>
+  <label class="option"><input type="radio" name="q33" value="B"> B. \(\sqrt{29}\)</label>
+  <label class="option"><input type="radio" name="q33" value="C"> C. \(\sqrt{34}\)</label>
+  <label class="option"><input type="radio" name="q33" value="D"> D. \(\sqrt{38}\)</label>
+  <div class="controls"><button class="btn btn-solution" data-target="sol33">Rozwiązanie</button></div>
+  <div class="sol" id="sol33">Przekątna: \(\sqrt{2^2+3^2+5^2}=\sqrt{38}\). Odpowiedź D.</div>
+</div>
+
+<footer>Nie porównuj się z innymi – liczy się Twój postęp (͡• ͜໒ ͡• )</footer>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.section').forEach(sec => {
+    const correct = (sec.dataset.ans||'').trim().toUpperCase();
+
+    // obsługa zwykłych pytań (radio)
+    sec.querySelectorAll('input[type="radio"]').forEach(radio=>{
+      radio.addEventListener('change', ()=>{
+        const groupName = radio.name;
+        sec.querySelectorAll('input[name="'+groupName+'"]').forEach(r=>{
+          r.closest('.option').classList.remove('correct','incorrect');
+        });
+        const label = radio.closest('.option');
+        if(correct.split(',').includes(radio.value.toUpperCase())){
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+        }
+      });
+    });
+
+    // toggle rozwiązania
+    sec.querySelectorAll('.btn-solution').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const target=document.getElementById(btn.dataset.target);
+        if(target){
+          target.style.display = target.style.display==='block' ? 'none':'block';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

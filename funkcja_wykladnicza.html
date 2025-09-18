@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Funkcja wykładnicza</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- MathJax do ładnego renderowania wzorów -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+        <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+    <h1>Funkcja wykładnicza</h1><br>
+
+    <!-- Zadanie 1 (obrazek, pełna treść, bez rozwiązania krok po kroku) -->
+<div class="section" id="zad1" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 1</div>
+    <div style="flex:1">
+      <div class="qmeta">(pokazowy 2023 - zad. 13.1)</div>
+      <div class="qtext">
+        Czas \(T\) półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę – 
+        po przyjęciu jednorazowej dawki. <br><br>
+        Przyjmij, że po przyjęciu jednej dawki masa \(m\) leku w organizmie zmienia się w czasie zgodnie z zależnością
+        wykładniczą
+        \[
+          m(t) = m_0 \cdot \left(\tfrac{1}{2}\right)^{t/T}
+        \]
+        gdzie: <br>
+        \(m_0\) – masa przyjętej dawki leku <br>
+        \(T\) – czas półtrwania leku <br>
+        \(t\) – czas liczony od momentu przyjęcia dawki. <br><br>
+        W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym
+        momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych
+        poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. <br><br>
+        Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę \(m_0 = 100\) mg leku L. 
+        Czas półtrwania tego leku w organizmie jest równy \(T = 4\) doby. <br><br>
+        Wykres zależności masy \(M\) leku L w organizmie tego pacjenta od czasu \(t\), liczonego od momentu przyjęcia
+        przez pacjenta pierwszej dawki, przedstawiono na rysunku:
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px; text-align:center;">
+    <img src="img/yax01.png" alt="wykres zad 1" />
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad1" value="A"> A</label>
+    <label class="option"><input type="radio" name="zad1" value="B"> B</label>
+    <label class="option"><input type="radio" name="zad1" value="C"> C</label>
+    <label class="option"><input type="radio" name="zad1" value="D"> D</label>
+  </div>
+</div>
+
+    <!-- Zadanie 2 -->
+    <div class="section" id="zad2" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 2</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2023 - zad. 12)</div>
+          <div class="qtext">
+            Proces stygnięcia: \(T(x)=78\cdot2^{-0.05x}+22\). Temperatura po 20 minutach wynosi:
+          </div>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad2" value="A"> A. 22 °C</label>
+        <label class="option"><input type="radio" name="zad2" value="B"> B. 39 °C</label>
+        <label class="option"><input type="radio" name="zad2" value="C"> C. 78 °C</label>
+        <label class="option"><input type="radio" name="zad2" value="D"> D. 61 °C</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Obliczamy \(T(20)=78\cdot2^{-0.05\cdot20}+22=78\cdot2^{-1}+22=78\cdot\tfrac{1}{2}+22=39+22=61\).  
+        Odp.: <b>D</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 3 -->
+    <div class="section" id="zad3" data-ans="B">
+      <div class="qheader">
+        <div class="qid">Zad. 3</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2020 - zad. 12)</div>
+          <div class="qtext">
+            Funkcja \(f(x)=4^{-x}+1\). Liczba \(f\!\left(\tfrac{1}{2}\right)\) jest równa:
+          </div>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad3" value="A"> A. \(1/2\)</label>
+        <label class="option"><input type="radio" name="zad3" value="B"> B. \(3/2\)</label>
+        <label class="option"><input type="radio" name="zad3" value="C"> C. 3</label>
+        <label class="option"><input type="radio" name="zad3" value="D"> D. 17</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(f\!\left(\tfrac{1}{2}\right)=4^{-\tfrac{1}{2}}+1=\frac{1}{\sqrt{4}}+1=\tfrac{1}{2}+1=\tfrac{3}{2}\).  
+        Odp.: <b>B</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 4 -->
+    <div class="section" id="zad4" data-ans="D">
+      <div class="qheader">
+        <div class="qid">Zad. 4</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2020 - zad. 19)</div>
+          <div class="qtext">
+            \(f(x)=\left(\tfrac12\right)^x\). Oblicz \(f(-3)\).
+          </div>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad4" value="A"> A. \(1/6\)</label>
+        <label class="option"><input type="radio" name="zad4" value="B"> B. \(1/8\)</label>
+        <label class="option"><input type="radio" name="zad4" value="C"> C. 6</label>
+        <label class="option"><input type="radio" name="zad4" value="D"> D. 8</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        \(f(-3)=\left(\tfrac12\right)^{-3}=2^3=8\).  
+        Odp.: <b>D</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 5 -->
+    <div class="section" id="zad5" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 5</div>
+        <div style="flex:1">
+          <div class="qmeta">(sierpień 2018 - zad. 8)</div>
+          <div class="qtext">
+            Dane: \(f(x)=3^x\) oraz \(g(x)=f(-x)\). Punkt wspólny wykresów f i g:
+          </div>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad5" value="A"> A. nie istnieje</label>
+        <label class="option"><input type="radio" name="zad5" value="B"> B. ma współrzędne (1,0)</label>
+        <label class="option"><input type="radio" name="zad5" value="C"> C. ma współrzędne (0,1)</label>
+        <label class="option"><input type="radio" name="zad5" value="D"> D. ma współrzędne (0,0)</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Punkt wspólny: szukamy \(x\) takiego, że \(3^x=3^{-x}\). To daje \(3^{2x}=1\Rightarrow2x=0\Rightarrow x=0\). Wtedy \(y=3^0=1\). Punkt: (0,1).  
+        Odp.: <b>C</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 6 -->
+    <div class="section" id="zad6" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 6</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2014 - zad. 5)</div>
+          <div class="qtext">
+            Dane: \(f(x)=-5^x+1\) oraz \(g(x)=5^x\). Ile punktów wspólnych wykresów tych funkcji?
+          </div>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad6" value="A"> A. 3</label>
+        <label class="option"><input type="radio" name="zad6" value="B"> B. 2</label>
+        <label class="option"><input type="radio" name="zad6" value="C"> C. 1</label>
+        <label class="option"><input type="radio" name="zad6" value="D"> D. 0</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Szukamy \(x\) z równania \(-5^x+1=5^x\Rightarrow 2\cdot5^x=1\Rightarrow5^x=\tfrac12\). Ma to dokładnie jedno rozwiązanie \(x=\log_5(\tfrac12)\).  
+        Odp.: <b>C</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 7 -->
+    <div class="section" id="zad7" data-ans="A">
+      <div class="qheader">
+        <div class="qid">Zad. 7</div>
+        <div style="flex:1">
+          <div class="qmeta">(maj 2014 - zad. 22)</div>
+          <div class="qtext">
+            Do wykresu funkcji \(y=-2^{\,x-2}\) należy punkt:
+          </div>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad7" value="A"> A. \(A=(2,-1)\)</label>
+        <label class="option"><input type="radio" name="zad7" value="B"> B. \(B=(1,-2)\)</label>
+        <label class="option"><input type="radio" name="zad7" value="C"> C. \(C=(1,\tfrac12)\)</label>
+        <label class="option"><input type="radio" name="zad7" value="D"> D. \(D=(4,4)\)</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Dla punktu \(A=(2,-1)\): prawa strona \(y=-2^{2-2}=-2^0=-1\). Pasuje.  
+        Odp.: <b>A</b>.
+      </div>
+    </div>
+
+    <!-- Zadanie 8 -->
+    <div class="section" id="zad8" data-ans="C">
+      <div class="qheader">
+        <div class="qid">Zad. 8</div>
+        <div style="flex:1">
+          <div class="qmeta">(grudzień 2013 - zad. 5)</div>
+          <div class="qtext">
+            Funkcja \(f(x)=3^x\) przyjmuje wartość 6 dla argumentu:
+          </div>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="radio" name="zad8" value="A"> A. \(x=2\)</label>
+        <label class="option"><input type="radio" name="zad8" value="B"> B. \(x=\log_3 2\)</label>
+        <label class="option"><input type="radio" name="zad8" value="C"> C. \(x=\log_3 6\)</label>
+        <label class="option"><input type="radio" name="zad8" value="D"> D. \(x=\log_6 3\)</label>
+      </div>
+
+      <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+      <div class="sol">
+        Szukamy \(x\) takiego, że \(3^x=6\Rightarrow x=\log_3 6\).  
+        Odp.: <b>C</b>.
+      </div>
+    </div>
+
+<!-- Zadanie 9 (obrazek, pełna treść, bez rozwiązania krok po kroku) -->
+<div class="section" id="zad9" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 9</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">
+        Czas \(T\) połowicznego rozpadu izotopu promieniotwórczego to czas, po którym liczba jąder danego izotopu 
+        (a zatem i masa tego izotopu) zmniejsza się o połowę – tzn. połowa jąder danego izotopu przemienia się
+        w inne jądra. <br><br>
+        Liczba jąder \(N(t)\) izotopu promieniotwórczego pozostających w próbce po czasie \(t\), licząc
+        od chwili \(t_0=0\), wyraża się zależnością wykładniczą:
+        \[
+          N(t) = N_0 \cdot \left(\tfrac{1}{2}\right)^{t/T}
+        \]
+        gdzie \(N_0\) jest liczbą jąder izotopu promieniotwórczego w chwili początkowej \(t_0=0\). <br><br>
+        Na poniższych rysunkach 1.–4. przedstawiono wykresy różnych zależności:
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px; text-align:center;">
+    <img src="img/yax02.png" alt="wykresy zad 9" />
+  </div>
+
+  <div class="qtext" style="margin-top:10px;">
+    Wykres zależności wykładniczej \(N(t)\) – opisanej we wstępie do zadania – przedstawiono na:
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad9" value="A"> A</label>
+    <label class="option"><input type="radio" name="zad9" value="B"> B</label>
+    <label class="option"><input type="radio" name="zad9" value="C"> C</label>
+    <label class="option"><input type="radio" name="zad9" value="D"> D</label>
+  </div>
+</div>
+
+<footer>Wiedza to skarb, a Ty właśnie go gromadzisz :3</footer>
+
+  </div> <!-- koniec container -->
+
+  <!-- Skrypt (inicjalizacja wszystkich zadań na stronie) -->
+  <script>
+    // helpers
+    function byId(id){ return document.getElementById(id); }
+
+    // single-choice (radio) handler
+    function setupSingleChoice(sec){
+      if(!sec) return;
+      const correct = (sec.dataset.ans||'').trim().toUpperCase();
+      const labels = Array.from(sec.querySelectorAll('.option'));
+      labels.forEach(lbl=>{
+        const inp = lbl.querySelector('input[type=radio]');
+        if(!inp) return;
+        // klik na label (input change) obsługuje klasy
+        inp.addEventListener('change', ()=>{
+          // usuń klasy
+          labels.forEach(l=>{ l.classList.remove('correct','incorrect'); });
+          const val = (inp.value||'').toUpperCase();
+          if(val === correct) lbl.classList.add('correct');
+          else lbl.classList.add('incorrect');
+        });
+        // ułatwienie: klik całego labela (jeśli CSS ptr) - input zmieni się automatycznie
+      });
+
+      // toggle rozwiązanie, jeśli jest
+      const btn = sec.querySelector('.btn-solution');
+      const sol = sec.querySelector('.sol');
+      if(btn && sol){
+        btn.addEventListener('click', ()=>{
+          sol.style.display = sol.style.display === 'block' ? 'none' : 'block';
+          if(window.MathJax) MathJax.typesetPromise();
+        });
+      }
+    }
+
+    // zainicjalizuj wszystkie sekcje zad1..zad9
+    document.addEventListener('DOMContentLoaded', ()=>{
+      for(let i=1;i<=9;i++){
+        setupSingleChoice(document.getElementById('zad'+i));
+      }
+    });
+  </script>
+</body>
+</html>

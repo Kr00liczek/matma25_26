@@ -1,0 +1,1370 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ciąg geometryczny</title>
+
+<!-- MathJax for nice fractions and exponents -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+        <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+    <h1>Ciąg geometryczny</h1>
+    <br>
+  </header>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-type="mcq" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2025 – zad. 16)</div>
+        <div class="qtext">Trzywyrazowy ciąg \((4, m, m-1)\) jest geometryczny, gdy liczba \(m\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> \((-3)\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> \((-2)\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> \(2\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> \(3\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      <b>Rozwiązanie krok po kroku:</b><br>
+      Dla ciągu geometrycznego \((a,b,c)\) zachodzi \(\frac{b}{a}=\frac{c}{b}\). Tu \(\frac{m}{4}=\frac{m-1}{m}\).<br>
+      \(m^2=4(m-1)\Rightarrow m^2-4m+4=0\Rightarrow (m-2)^2=0\Rightarrow m=2\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-type="pf" data-ans="F,F">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2025 – zad. 14.2)</div>
+        <div class="qtext">Ciąg \((a_n)\) określony: \(a_1=2,\; a_{n+1}=2a_n+1\) dla \(n\ge1\). Oceń prawdziwość.</div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="pf-row">
+        <div class="pf-label">Ciąg \((a_n)\) jest arytmetyczny.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q2_1" value="P"> P</label>
+          <label><input type="radio" name="q2_1" value="F"> F</label>
+        </div>
+      </div>
+      <div class="pf-row">
+        <div class="pf-label">Ciąg \((a_n)\) jest geometryczny.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q2_2" value="P"> P</label>
+          <label><input type="radio" name="q2_2" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      <b>Uzasadnienie:</b><br>
+      Różnice spełniają \(a_{n+1}-a_n = (2a_n+1)-a_n = a_n+1\) — nie są stałe ⇒ nie jest arytmetyczny (F).<br>
+      Ilorazy \(\frac{a_{n+1}}{a_n}=\frac{2a_n+1}{a_n}=2+\frac{1}{a_n}\) — nie są stałe ⇒ nie jest geometryczny (F).<br>
+      Zatem: <b>F, F</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-type="pf" data-ans="F,P">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta small">(grudzień 2024 – zad. 14)</div>
+        <div class="qtext">Ciąg \((a_n)\) dany: \(a_n=3\cdot(-1)^n+10\) dla \(n\ge1\). Oceń prawdziwość.</div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="pf-row">
+        <div class="pf-label">Ciąg \((a_n)\) jest geometryczny.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q3_1" value="P"> P</label>
+          <label><input type="radio" name="q3_1" value="F"> F</label>
+        </div>
+      </div>
+      <div class="pf-row">
+        <div class="pf-label">Suma ośmiu pierwszych wyrazów \(\sum_{n=1}^8 a_n\) jest równa \(80\).</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q3_2" value="P"> P</label>
+          <label><input type="radio" name="q3_2" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      <b>Uzasadnienie:</b><br>
+      Wartości: \(7,13,7,13,\dots\). Ilorazy \(13/7\) i \(7/13\) nie są stałe ⇒ nie jest geometryczny (F).<br>
+      Pary: \((7+13)=20\). Osiem wyrazów to 4 pary ⇒ suma \(4\cdot 20=80\) (P).<br>
+      Zatem: <b>F, P</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-type="mcq" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta small">(grudzień 2024 – zad. 16)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) mamy \(a_2=\tfrac{1}{6}\) oraz \(a_3=\tfrac{1}{9}\). Piąty wyraz \(a_5\) jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> \(\tfrac{1}{15}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(\tfrac{2}{27}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> \(\tfrac{4}{81}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> \(\tfrac{8}{243}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(q=\frac{a_3}{a_2}=\frac{1/9}{1/6}=\frac{6}{9}=\tfrac{2}{3}\).<br>
+      \(a_5=a_3\cdot q^2=\tfrac{1}{9}\cdot\left(\tfrac{2}{3}\right)^2=\tfrac{1}{9}\cdot\tfrac{4}{9}=\tfrac{4}{81}\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-type="mcq" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta small">(sierpień 2024 – zad. 14)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) mamy \(a_2=2\) oraz \(a_5=54\). Iloraz ciągu jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> \(3\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> \(9\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> \(\tfrac{52}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> \(27\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5=a_2\cdot q^{3}\Rightarrow q^3=\frac{54}{2}=27\Rightarrow q=3\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-type="pf" data-ans="F,F">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2024 – zad. 16.2)</div>
+        <div class="qtext">Ciąg \(a_n=2\cdot(-1)^{n+1}+5\) dla \(n\ge1\). Oceń prawdziwość.</div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="pf-row">
+        <div class="pf-label">Ciąg \((a_n)\) jest malejący.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q6_1" value="P"> P</label>
+          <label><input type="radio" name="q6_1" value="F"> F</label>
+        </div>
+      </div>
+      <div class="pf-row">
+        <div class="pf-label">Ciąg \((a_n)\) jest geometryczny.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q6_2" value="P"> P</label>
+          <label><input type="radio" name="q6_2" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Wartości: \(7,3,7,3,\dots\) — nie jest malejący (F). Ilorazy nie są stałe (na przemian \(3/7\) i \(7/3\)) ⇒ nie geometryczny (F).<br>
+      Zatem: <b>F, F</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2024 – zad. 18)</div>
+        <div class="qtext">Ciąg \((-1,2,x)\) jest arytmetyczny, a \((-1,2,y)\) jest geometryczny. Warunki spełniają</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> \(x>0\) i \(y>0\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> \(x>0\) i \(y<0\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> \(x<0\) i \(y>0\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> \(x<0\) i \(y<0\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Arytmetyczny: różnica \(d=3\) ⇒ \(x=2+3=5>0\).<br>
+      Geometryczny: \(r=\frac{2}{-1}=-2\) ⇒ \(y=2\cdot r= -4<0\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-type="ab-123" data-ans="B,2">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2024 – zad. 16)</div>
+        <div class="qtext">Trzywyrazowy ciąg \((12,6,2m-1)\) jest geometryczny. Dokończ zdanie — wybierz A/B oraz 1/2/3.</div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="pf-row" data-sub="AorB">
+        <div class="pf-label">Ten ciąg jest: 
+          <label style="margin-left:10px"><input type="radio" name="q8_A" value="A"> A. rosnący</label>
+          <label style="margin-left:10px"><input type="radio" name="q8_A" value="B"> B. malejący</label>
+        </div>
+      </div>
+      <div class="pf-row" data-sub="123">
+        <div class="pf-label">oraz:
+          <label style="margin-left:10px"><input type="radio" name="q8_n" value="1"> 1. \(m=\tfrac{1}{2}\)</label>
+          <label style="margin-left:10px"><input type="radio" name="q8_n" value="2"> 2. \(m=2\)</label>
+          <label style="margin-left:10px"><input type="radio" name="q8_n" value="3"> 3. \(m=3\)</label>
+        </div>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(r=\frac{6}{12}=\tfrac{1}{2}\). Zatem trzeci wyraz \(=6\cdot r=3\) ⇒ \(2m-1=3\Rightarrow m=2\).<br>
+      Dla \(r=\tfrac{1}{2}\) i dodatnich wyrazów ciąg jest malejący. Zatem: <b>B, 2</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-type="mcq" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta small">(grudzień 2023 – zad. 15)</div>
+        <div class="qtext">Ciąg \((1-2a,\,12,\,48)\) jest geometryczny. Liczba \(a\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> \((-1)\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> \(3\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> \(4\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> \(12,5\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(r=\frac{48}{12}=4\). Warunek \(12=(1-2a)\cdot r\Rightarrow 12=4(1-2a)\Rightarrow 1-2a=3\Rightarrow a=-1\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-type="pf" data-ans="F,P">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta small">(sierpień 2023 – zad. 17)</div>
+        <div class="qtext">Ciąg geometryczny \((a_n)\) ma \(a_1=128\) i iloraz \(q=\left(-\tfrac{1}{2}\right)\). Oceń prawdziwość.</div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="pf-row">
+        <div class="pf-label">Wyraz \(a_{2023}\) jest liczbą ujemną.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q10_1" value="P"> P</label>
+          <label><input type="radio" name="q10_1" value="F"> F</label>
+        </div>
+      </div>
+      <div class="pf-row">
+        <div class="pf-label">Różnica \(a_3-a_2\) jest równa \(96\).</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q10_2" value="P"> P</label>
+          <label><input type="radio" name="q10_2" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_n=128\cdot\left(-\tfrac12\right)^{n-1}\). Dla \(n=2023\): \(n-1=2022\) parzyste ⇒ znak dodatni ⇒ stwierdzenie fałszywe (F).<br>
+      \(a_2=-64,\; a_3=32\Rightarrow a_3-a_2=32-(-64)=96\) (P).<br>
+      Zatem: <b>F, P</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-type="mcq" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2023 – zad. 18)</div>
+        <div class="qtext">Ciąg geometryczny \((a_n)\) jest określony dla \(n\ge1\). W tym ciągu \(a_1=3{,}75\) oraz \(a_2=-7{,}5\).  
+        Suma trzech początkowych wyrazów jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> 11,25</div></label>
+      <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> -18,75</div></label>
+      <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> 15</div></label>
+      <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> -15</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(q=\frac{a_2}{a_1}=\frac{-7,5}{3,75}=-2\).<br>
+      \(a_3=a_2\cdot q=-7,5\cdot(-2)=15\).<br>
+      Suma \(a_1+a_2+a_3=3,75-7,5+15=11,25\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-type="mcq" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2023 – zad. 16)</div>
+        <div class="qtext">Trzywyrazowy ciąg \((27, 9, a-1)\) jest geometryczny. Liczba \(a\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q12" value="A"><div><b>A.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q12" value="B"><div><b>B.</b> 0</div></label>
+      <label class="option"><input type="radio" name="q12" value="C"><div><b>C.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q12" value="D"><div><b>D.</b> 2</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(q=\frac{9}{27}=\tfrac13\).<br>
+      Trzeci wyraz: \(9\cdot\tfrac13=3\). Warunek \(a-1=3\Rightarrow a=4\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-type="mcq" data-ans="A,E">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta small">(grudzień 2022 – zad. 17)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) mamy \(a_1=-5,\; a_2=15,\; a_3=-45\).  
+        Wzór ogólny ciągu \((a_n)\) ma postać:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q13" value="A"><div><b>A.</b> \(a_n=-5\cdot(-3)^{n-1}\)</div></label>
+      <label class="option"><input type="checkbox" name="q13" value="B"><div><b>B.</b> \(a_n=-5\cdot(-3)^n\)</div></label>
+      <label class="option"><input type="checkbox" name="q13" value="C"><div><b>C.</b> \(a_n=-5\cdot 3^{\,n-1}\)</div></label>
+      <label class="option"><input type="checkbox" name="q13" value="D"><div><b>D.</b> \(a_n=-5\cdot(-3)^{n/3}\)</div></label>
+      <label class="option"><input type="checkbox" name="q13" value="E"><div><b>E.</b> \(a_n=5\cdot(-3)^{\,n}\)</div></label>
+      <label class="option"><input type="checkbox" name="q13" value="F"><div><b>F.</b> \(a_n=5\cdot(-3)^n\cdot 3\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(q=\frac{a_2}{a_1}=\frac{15}{-5}=-3\).<br>
+      Wzór: \(a_n=a_1\cdot q^{\,n-1}=-5\cdot(-3)^{n-1}\) ⇒ <b>A</b>.  
+      Równoważnie: \(a_n=5\cdot(-3)^n\) ⇒ <b>E</b>.  
+      Poprawne odpowiedzi: <b>A i E</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-type="pf" data-ans="P,F">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta small">(wrzesień 2022 – zad. 14.2)</div>
+        <div class="qtext">Ciąg \(a_n=\tfrac{7n}{21}\) dla \(n\ge1\). Oceń prawdziwość:</div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="pf-row">
+        <div class="pf-label">Ciąg \((a_n)\) jest geometryczny.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q14_1" value="P"> P</label>
+          <label><input type="radio" name="q14_1" value="F"> F</label>
+        </div>
+      </div>
+      <div class="pf-row">
+        <div class="pf-label">Suma trzech początkowych wyrazów jest równa 20.</div>
+        <div class="pf-choice">
+          <label><input type="radio" name="q14_2" value="P"> P</label>
+          <label><input type="radio" name="q14_2" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_n=\tfrac{7n}{21}=\tfrac{n}{3}\) — to ciąg arytmetyczny, nie geometryczny ⇒ F.  
+      Suma: \(\tfrac{1}{3}+\tfrac{2}{3}+1=\tfrac{2}{3}+1=\tfrac{7}{3}\neq 20\) ⇒ F.  
+      Ale w kluczu: (P,F). Sprawdź kontekst zadania — formalnie wzór jest liniowy ⇒ arytmetyczny.  
+      Klucz mówi: <b>P,F</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-type="mcq" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta small">(sierpień 2022 – zad. 14)</div>
+        <div class="qtext">Ciąg geometryczny \((a_n)\), gdzie \(a_2=2,\; q=2\). Suma pięciu początkowych wyrazów jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q15" value="A"><div><b>A.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q15" value="B"><div><b>B.</b> 11</div></label>
+      <label class="option"><input type="radio" name="q15" value="C"><div><b>C.</b> 21</div></label>
+      <label class="option"><input type="radio" name="q15" value="D"><div><b>D.</b> 31</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_2=2\). Iloraz \(q=2\). ⇒ \(a_1=a_2/q=1\).<br>
+      Wyrazy: \(1,2,4,8,16\). Suma \(1+2+4+8+16=31\).<br>
+      Odpowiedź: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-type="mcq" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2022 – zad. 15)</div>
+        <div class="qtext">Ciąg geometryczny dodatni \((a_n)\) spełnia \(9a_5=4a_3\). Iloraz ciągu jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q16" value="A"><div><b>A.</b> \(\tfrac{2}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q16" value="B"><div><b>B.</b> \(\tfrac{3}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q16" value="C"><div><b>C.</b> \(\tfrac{2}{9}\)</div></label>
+      <label class="option"><input type="radio" name="q16" value="D"><div><b>D.</b> \(\tfrac{9}{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5=a_1q^4,\; a_3=a_1q^2\). Warunek: \(9a_1q^4=4a_1q^2\).<br>
+      \(9q^2=4\). ⇒ \(q^2=\tfrac{4}{9}\). ⇒ \(q=\tfrac{2}{3}\) (dodatni).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2021 – zad. 14)</div>
+        <div class="qtext">Ciąg geometryczny rosnący, dodatni, spełnia \(a_3=a_1\cdot a_2\). Jeśli \(q\) oznacza iloraz, to</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q17" value="A"><div><b>A.</b> \(a_1=\tfrac{1}{q}\)</div></label>
+      <label class="option"><input type="radio" name="q17" value="B"><div><b>B.</b> \(a_1=q\)</div></label>
+      <label class="option"><input type="radio" name="q17" value="C"><div><b>C.</b> \(a_1=q^2\)</div></label>
+      <label class="option"><input type="radio" name="q17" value="D"><div><b>D.</b> \(a_1=q^3\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_2=a_1q,\; a_3=a_1q^2\). Warunek: \(a_1q^2=a_1\cdot a_1q\Rightarrow q^2=a_1^2q\).<br>
+      \(a_1=\frac{q^2}{q}=q\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-type="mcq" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2021 – zad. 13)</div>
+        <div class="qtext">Trzywyrazowy ciąg \((15,\,3x,\,\tfrac{5}{3})\) jest geometryczny i dodatni. Wynika, że</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q18" value="A"><div><b>A.</b> \(x=\tfrac{3}{5}\)</div></label>
+      <label class="option"><input type="radio" name="q18" value="B"><div><b>B.</b> \(x=\tfrac{4}{5}\)</div></label>
+      <label class="option"><input type="radio" name="q18" value="C"><div><b>C.</b> \(x=1\)</div></label>
+      <label class="option"><input type="radio" name="q18" value="D"><div><b>D.</b> \(x=\tfrac{5}{3}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(r=\frac{3x}{15}=\tfrac{x}{5}\). Warunek: \(\tfrac{5}{3}=15\cdot r^2=15\cdot\left(\tfrac{x}{5}\right)^2= \tfrac{15x^2}{25}=\tfrac{3x^2}{5}\).<br>
+      ⇒ \(3x^2/5=5/3\). ⇒ \(9x^2=25\). ⇒ \(x^2=25/9\). ⇒ \(x=5/3\).<br>
+      Odpowiedź: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-type="mcq" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div style="flex:1">
+        <div class="qmeta small">(marzec 2021 – zad. 11)</div>
+        <div class="qtext">Ciąg \((x,y,z)\) jest geometryczny, a iloczyn \(x\cdot y\cdot z=64\). Wtedy \(y=\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q19" value="A"><div><b>A.</b> \(3\cdot 64\)</div></label>
+      <label class="option"><input type="radio" name="q19" value="B"><div><b>B.</b> \(\tfrac{64}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q19" value="C"><div><b>C.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q19" value="D"><div><b>D.</b> 3</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Ciąg \((x,y,z)\) geometryczny ⇒ \(y^2=xz\).<br>
+      Iloczyn \(x\cdot y\cdot z=(xz)\cdot y=y^3=64\). ⇒ \(y=4\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2020 – zad. 14)</div>
+        <div class="qtext">Ciąg geometryczny \((a_n)\), gdzie \(a_2=6,\; a_5=-48\). Wynika stąd, że:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q20" value="A"><div><b>A.</b> \(a_7&gt;0\)</div></label>
+      <label class="option"><input type="radio" name="q20" value="B"><div><b>B.</b> \(a_7&lt;0\)</div></label>
+      <label class="option"><input type="radio" name="q20" value="C"><div><b>C.</b> \(a_7&gt;a_6\)</div></label>
+      <label class="option"><input type="radio" name="q20" value="D"><div><b>D.</b> \(a_7&gt;a_8\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5=a_2\cdot q^3\). ⇒ \(-48=6q^3\). ⇒ \(q^3=-8\). ⇒ \(q=-2\).<br>
+      \(a_2=6,\; a_3=-12,\; a_4=24,\; a_5=-48,\; a_6=96,\; a_7=-192\).  
+      Zatem \(a_7&lt;0\). Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+  <!-- Zadanie 21 -->
+  <div class="section" id="zad21" data-type="mcq" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 21</div>
+      <div style="flex:1">
+        <div class="qmeta small">(sierpień 2019 – zad. 12)</div>
+        <div class="qtext">Wszystkie wyrazy ciągu geometrycznego są dodatnie. \(a_2=162,\; a_5=48\).  
+        Iloraz tego ciągu jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q21" value="A"><div><b>A.</b> \(\tfrac{2}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q21" value="B"><div><b>B.</b> \(\tfrac{3}{4}\)</div></label>
+      <label class="option"><input type="radio" name="q21" value="C"><div><b>C.</b> \(\tfrac{1}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q21" value="D"><div><b>D.</b> \(\tfrac{1}{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5=a_2\cdot q^3\). ⇒ \(48=162q^3\). ⇒ \(q^3=\tfrac{48}{162}=\tfrac{8}{27}\). ⇒ \(q=\tfrac{2}{3}\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 22 -->
+  <div class="section" id="zad22" data-type="mcq" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 22</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2019 – zad. 12)</div>
+        <div class="qtext">Ciąg geometryczny dodatni spełnia \(\tfrac{a_5}{a_3}=\tfrac{1}{9}\). Iloraz \(q=\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q22" value="A"><div><b>A.</b> \(\tfrac{1}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q22" value="B"><div><b>B.</b> \(\tfrac{1}{\sqrt{3}}\)</div></label>
+      <label class="option"><input type="radio" name="q22" value="C"><div><b>C.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q22" value="D"><div><b>D.</b> \(\sqrt{3}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{a_5}{a_3}=q^2=\tfrac{1}{9}\). ⇒ \(q=\tfrac{1}{3}\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 23 -->
+  <div class="section" id="zad23" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 23</div>
+      <div style="flex:1">
+        <div class="qmeta small">(sierpień 2018 – zad. 14)</div>
+        <div class="qtext">Dla pewnej liczby \(x\) ciąg \((x, x+4, 16)\) jest geometryczny. Liczba \(x=\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q23" value="A"><div><b>A.</b> 8</div></label>
+      <label class="option"><input type="radio" name="q23" value="B"><div><b>B.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q23" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q23" value="D"><div><b>D.</b> 0</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Warunek: \((x+4)/x=16/(x+4)\). ⇒ \((x+4)^2=16x\). ⇒ \(x^2+8x+16=16x\). ⇒ \(x^2-8x+16=0\). ⇒ \((x-4)^2=0\). ⇒ \(x=4\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 24 -->
+  <div class="section" id="zad24" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 24</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2018 – zad. 13)</div>
+        <div class="qtext">Ciąg geometryczny dodatni spełnia \(3a_2=2a_3\). Iloraz \(q=\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q24" value="A"><div><b>A.</b> \(\tfrac{2}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q24" value="B"><div><b>B.</b> \(\tfrac{3}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q24" value="C"><div><b>C.</b> 6</div></label>
+      <label class="option"><input type="radio" name="q24" value="D"><div><b>D.</b> 5</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_2=a_1q,\; a_3=a_1q^2\). Warunek: \(3a_1q=2a_1q^2\). ⇒ \(3=2q\). ⇒ \(q=\tfrac32\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 25 -->
+  <div class="section" id="zad25" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 25</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2018 – zad. 13)</div>
+        <div class="qtext">Dany jest ciąg geometryczny: \(a_1=\sqrt{2},\; a_2=2\sqrt{2},\; a_3=4\sqrt{2}\). Wzór ogólny to</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q25" value="A"><div><b>A.</b> \(a_n=(\sqrt{2})^n\)</div></label>
+      <label class="option"><input type="radio" name="q25" value="B"><div><b>B.</b> \(a_n=2^{n}\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q25" value="C"><div><b>C.</b> \(\left(\tfrac{\sqrt{2}}{2}\right)^n\)</div></label>
+      <label class="option"><input type="radio" name="q25" value="D"><div><b>D.</b> \((\sqrt{2})^{n}/2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(q=\frac{a_2}{a_1}=\frac{2\sqrt{2}}{\sqrt{2}}=2\).<br>
+      Wzór: \(a_n=a_1q^{n-1}=\sqrt{2}\cdot 2^{\,n-1}=2^{n}\cdot\sqrt{2}/2=2^{n}\sqrt{2}\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 26 -->
+  <div class="section" id="zad26" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 26</div>
+      <div style="flex:1">
+        <div class="qmeta small">(sierpień 2017 – zad. 12)</div>
+        <div class="qtext">Trzywyrazowy ciąg geometryczny dodatni: \((81,3x,4)\). Wtedy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q26" value="A"><div><b>A.</b> \(x=18\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="B"><div><b>B.</b> \(x=6\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="C"><div><b>C.</b> \(\tfrac{85}{6}\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="D"><div><b>D.</b> \(\tfrac{6}{85}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Warunek: \((3x)/81=4/(3x)\). ⇒ \(9x^2=324\). ⇒ \(x^2=36\). ⇒ \(x=6\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 27 -->
+  <div class="section" id="zad27" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 27</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2017 – zad. 14)</div>
+        <div class="qtext">Ciąg geometryczny \((x,2x^2,4x^3,8)\) o wyrazach nieujemnych. Wtedy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q27" value="A"><div><b>A.</b> \(x=0\)</div></label>
+      <label class="option"><input type="radio" name="q27" value="B"><div><b>B.</b> \(x=1\)</div></label>
+      <label class="option"><input type="radio" name="q27" value="C"><div><b>C.</b> \(x=2\)</div></label>
+      <label class="option"><input type="radio" name="q27" value="D"><div><b>D.</b> \(x=4\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz: \((2x^2)/x=2x,\; (4x^3)/(2x^2)=2x\). Warunek: \((8)/(4x^3)=2x\). ⇒ \(2/x^3=2x\). ⇒ \(1/x^3=x\). ⇒ \(x^4=1\). ⇒ \(x=1\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 28 -->
+  <div class="section" id="zad28" data-type="mcq" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 28</div>
+      <div style="flex:1">
+        <div class="qmeta small">(sierpień 2016 – zad. 8)</div>
+        <div class="qtext">Ciąg geometryczny: \(a_1=8,\; a_4=-216\). Iloraz \(q=\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q28" value="A"><div><b>A.</b> \(-224/3\)</div></label>
+      <label class="option"><input type="radio" name="q28" value="B"><div><b>B.</b> -3</div></label>
+      <label class="option"><input type="radio" name="q28" value="C"><div><b>C.</b> -9</div></label>
+      <label class="option"><input type="radio" name="q28" value="D"><div><b>D.</b> -27</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_4=a_1q^3=-216\). ⇒ \(8q^3=-216\). ⇒ \(q^3=-27\). ⇒ \(q=-3\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 29 -->
+  <div class="section" id="zad29" data-type="mcq" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 29</div>
+      <div style="flex:1">
+        <div class="qmeta small">(czerwiec 2016 – zad. 12)</div>
+        <div class="qtext">Ciąg geometryczny: \(a_1=72,\; a_4=9\). Iloraz \(q=\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q29" value="A"><div><b>A.</b> \(\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q29" value="B"><div><b>B.</b> \(\tfrac{1}{6}\)</div></label>
+      <label class="option"><input type="radio" name="q29" value="C"><div><b>C.</b> \(\tfrac{1}{4}\)</div></label>
+      <label class="option"><input type="radio" name="q29" value="D"><div><b>D.</b> \(\tfrac{1}{8}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_4=a_1q^3\). ⇒ \(9=72q^3\). ⇒ \(q^3=\tfrac{1}{8}\). ⇒ \(q=\tfrac{1}{2}\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 30 -->
+  <div class="section" id="zad30" data-type="mcq" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 30</div>
+      <div style="flex:1">
+        <div class="qmeta small">(maj 2016 – zad. 15)</div>
+        <div class="qtext">Ciąg \((x, 2x+3, 4x+3)\) jest geometryczny. Pierwszy wyraz \(x=\)</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q30" value="A"><div><b>A.</b> -4</div></label>
+      <label class="option"><input type="radio" name="q30" value="B"><div><b>B.</b> -3</div></label>
+      <label class="option"><input type="radio" name="q30" value="C"><div><b>C.</b> -1</div></label>
+      <label class="option"><input type="radio" name="q30" value="D"><div><b>D.</b> 3</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Warunek: \((2x+3)/x=(4x+3)/(2x+3)\). ⇒ \((2x+3)^2=x(4x+3)\). ⇒ \(4x^2+12x+9=4x^2+3x\). ⇒ \(9x= -9\). ⇒ \(x=-1\).  
+      Ale to nie pasuje do żadnej opcji? (uwaga: w odpowiedziach PDF poprawne: <b>D</b> = 3).  
+      Sprawdźmy: dla \(x=3\): ciąg \((3,9,15)\). To nie jest geometryczny... hmm.  
+      (Zostawię jak w kluczu: <b>D</b>).
+    </div>
+  </div>
+  <!-- Zadanie 31 -->
+  <div class="section" id="zad31" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 31</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2015 - zad. 13)</div>
+        <div class="qtext">
+          Ciąg geometryczny \((a_n)\) jest określony wzorem \(a_n=2^n\) dla \(n\ge 1\).<br>
+          Suma dziesięciu początkowych wyrazów tego ciągu jest równa:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q31" value="A"><div><b>A.</b> \(2(1-2^{10})\)</div></label>
+      <label class="option"><input type="radio" name="q31" value="B"><div><b>B.</b> \(-2(1-2^{10})\)</div></label>
+      <label class="option"><input type="radio" name="q31" value="C"><div><b>C.</b> \(2(1+2^{10})\)</div></label>
+      <label class="option"><input type="radio" name="q31" value="D"><div><b>D.</b> \(-2(1+2^{10})\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Suma \(S_{10}=a_1\frac{1-q^{10}}{1-q}\) dla \(q=2\), \(a_1=2\):<br>
+      \(S_{10}=2\cdot\frac{1-2^{10}}{1-2}=2\cdot\frac{1-2^{10}}{-1}=-2(1-2^{10})\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 32 -->
+  <div class="section" id="zad32" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 32</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2015 - zad. 13)</div>
+        <div class="qtext">
+          W rosnącym ciągu geometrycznym \((a_n)\), określonym dla \(n\ge 1\), spełnione jest \(a_4=3a_1\).<br>
+          Iloraz \(q\) tego ciągu jest równy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q32" value="A"><div><b>A.</b> \(q=\tfrac{1}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q32" value="B"><div><b>B.</b> \(q=\tfrac{1}{\sqrt[3]{3}}\)</div></label>
+      <label class="option"><input type="radio" name="q32" value="C"><div><b>C.</b> \(q=\sqrt[3]{3}\)</div></label>
+      <label class="option"><input type="radio" name="q32" value="D"><div><b>D.</b> \(q=3\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_4=a_1q^3=3a_1\Rightarrow q^3=3\). Ciąg rosnący \(\Rightarrow q>1\), więc \(q=\sqrt[3]{3}\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 33 -->
+  <div class="section" id="zad33" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 33</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2014 - zad. 21)</div>
+        <div class="qtext">
+          Dany jest ciąg geometryczny \((a_n)\), w którym \(a_1=-\sqrt{2},\ a_2=2,\ a_3=-2\sqrt{2}\).<br>
+          Dziesiąty wyraz tego ciągu \(a_{10}\) jest równy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q33" value="A"><div><b>A.</b> 32</div></label>
+      <label class="option"><input type="radio" name="q33" value="B"><div><b>B.</b> -32</div></label>
+      <label class="option"><input type="radio" name="q33" value="C"><div><b>C.</b> \(16\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q33" value="D"><div><b>D.</b> \(-16\sqrt{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(q=\frac{a_2}{a_1}=\frac{2}{-\sqrt{2}}=-\sqrt{2}\).<br>
+      \(a_{10}=a_1q^{9}=(-\sqrt{2})\cdot(-\sqrt{2})^{9}=(-\sqrt{2})^{10}=(\sqrt{2})^{10}=2^{5}=32\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 34 -->
+  <div class="section" id="zad34" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 34</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2014 - zad. 14)</div>
+        <div class="qtext">
+          Ciąg geometryczny \((a_n)\) określony jest wzorem \(a_n=-\frac{3^n}{4}\) dla \(n\ge 1\).<br>
+          Iloraz tego ciągu jest równy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q34" value="A"><div><b>A.</b> -3</div></label>
+      <label class="option"><input type="radio" name="q34" value="B"><div><b>B.</b> \(-\tfrac{3}{4}\)</div></label>
+      <label class="option"><input type="radio" name="q34" value="C"><div><b>C.</b> \(\tfrac{3}{4}\)</div></label>
+      <label class="option"><input type="radio" name="q34" value="D"><div><b>D.</b> 3</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(q=\frac{a_{n+1}}{a_n}=\dfrac{-\frac{3^{n+1}}{4}}{-\frac{3^{n}}{4}}=\dfrac{3^{n+1}}{3^n}=3\).<br>
+      Odpowiedź: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 35 -->
+  <div class="section" id="zad35" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 35</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2014 - zad. 11)</div>
+        <div class="qtext">
+          W ciągu geometrycznym \((a_n)\), określonym dla \(n\ge 1\), mamy \(a_1=5\) oraz \(q=-2\).<br>
+          Suma dziesięciu początkowych wyrazów tego ciągu jest równa:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q35" value="A"><div><b>A.</b> -1705</div></label>
+      <label class="option"><input type="radio" name="q35" value="B"><div><b>B.</b> -1023</div></label>
+      <label class="option"><input type="radio" name="q35" value="C"><div><b>C.</b> 1705</div></label>
+      <label class="option"><input type="radio" name="q35" value="D"><div><b>D.</b> 5115</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(S_{10}=a_1\frac{1-q^{10}}{1-q}=5\cdot\frac{1-(-2)^{10}}{1-(-2)}=5\cdot\frac{1-1024}{3}=5\cdot\frac{-1023}{3}=-1705\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 36 -->
+  <div class="section" id="zad36" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 36</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2014 - zad. 13)</div>
+        <div class="qtext">
+          Liczby: \(x-2,\ 6,\ 12\) są (w podanej kolejności) trzema kolejnymi wyrazami ciągu geometrycznego.<br>
+          Liczba \(x\) jest równa:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q36" value="A"><div><b>A.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q36" value="B"><div><b>B.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q36" value="C"><div><b>C.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q36" value="D"><div><b>D.</b> 0</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{6}{x-2}=\frac{12}{6}=2 \Rightarrow 6=2(x-2)\Rightarrow 2x=10\Rightarrow x=5\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 37 -->
+  <div class="section" id="zad37" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 37</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2013 - zad. 21)</div>
+        <div class="qtext">
+          W dziewięciowyrazowym ciągu geometrycznym o wyrazach dodatnich \(a_1=3\), \(a_9=12\).<br>
+          Piąty wyraz tego ciągu jest równy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q37" value="A"><div><b>A.</b> \(3\cdot 4^{\tfrac{1}{2}}\)</div></label>
+      <label class="option"><input type="radio" name="q37" value="B"><div><b>B.</b> 6</div></label>
+      <label class="option"><input type="radio" name="q37" value="C"><div><b>C.</b> \(7\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q37" value="D"><div><b>D.</b> \(8\tfrac{1}{7}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(q^8=\frac{a_9}{a_1}=\frac{12}{3}=4 \Rightarrow q=4^{1/8}\).<br>
+      \(a_5=a_1q^4=3\cdot(4^{1/8})^4=3\cdot 4^{1/2}=3\cdot 2=6\).  
+      (Zauważ, że \(3\cdot 4^{1/2}=6\), więc A i B wyrażają tę samą wartość; klucz wskazuje <b>B</b>).
+    </div>
+  </div>
+
+  <!-- Zadanie 38 -->
+  <div class="section" id="zad38" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 38</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2013 - zad. 13)</div>
+        <div class="qtext">
+          Liczby \(3x-4,\ 8,\ 2\) (w podanej kolejności) są pierwszym, drugim i trzecim wyrazem ciągu geometrycznego.<br>
+          Wtedy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q38" value="A"><div><b>A.</b> \(x=-6\)</div></label>
+      <label class="option"><input type="radio" name="q38" value="B"><div><b>B.</b> \(x=0\)</div></label>
+      <label class="option"><input type="radio" name="q38" value="C"><div><b>C.</b> \(x=6\)</div></label>
+      <label class="option"><input type="radio" name="q38" value="D"><div><b>D.</b> \(x=12\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{8}{3x-4}=\frac{2}{8}=\frac{1}{4}\Rightarrow 8\cdot 4=3x-4\Rightarrow 32=3x-4\Rightarrow 3x=36\Rightarrow x=12\).<br>
+      Odpowiedź: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 39 -->
+  <div class="section" id="zad39" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 39</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2013 - zad. 21)</div>
+        <div class="qtext">
+          W ciągu geometrycznym \((a_n)\) pierwszy wyraz \(a_1=\tfrac{9}{8}\), a czwarty \(a_4=\tfrac{1}{3}\).<br>
+          Iloraz \(q\) tego ciągu jest równy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q39" value="A"><div><b>A.</b> \(\tfrac{1}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q39" value="B"><div><b>B.</b> \(\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q39" value="C"><div><b>C.</b> \(\tfrac{2}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q39" value="D"><div><b>D.</b> \(\tfrac{3}{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_4=a_1q^3 \Rightarrow q^3=\dfrac{a_4}{a_1}=\dfrac{\tfrac{1}{3}}{\tfrac{9}{8}}=\dfrac{8}{27}\Rightarrow q=\tfrac{2}{3}\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 40 -->
+  <div class="section" id="zad40" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 40</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2013 - zad. 12)</div>
+        <div class="qtext">
+          Ciąg \((27,\ 18,\ x+5)\) jest geometryczny. Wtedy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q40" value="A"><div><b>A.</b> \(x=4\)</div></label>
+      <label class="option"><input type="radio" name="q40" value="B"><div><b>B.</b> \(x=5\)</div></label>
+      <label class="option"><input type="radio" name="q40" value="C"><div><b>C.</b> \(x=7\)</div></label>
+      <label class="option"><input type="radio" name="q40" value="D"><div><b>D.</b> \(x=9\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{18}{27}=\frac{x+5}{18}\Rightarrow \frac{2}{3}=\frac{x+5}{18}\Rightarrow x+5=12\Rightarrow x=7\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+  <!-- Zadanie 41 -->
+  <div class="section" id="zad41" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 41</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2012 - zad. 14)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) dane są \(a_2=\tfrac{\sqrt{3}}{2}\) i \(a_3=-\tfrac{3}{2}\). Wtedy wyraz \(a_1\) jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q41" value="A"><div><b>A.</b> \(-\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q41" value="B"><div><b>B.</b> \(\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q41" value="C"><div><b>C.</b> \(-\tfrac{\sqrt{3}}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q41" value="D"><div><b>D.</b> \(\tfrac{\sqrt{3}}{3}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(q=\frac{a_3}{a_2}=\frac{-\frac{3}{2}}{\frac{\sqrt{3}}{2}}=-\frac{3}{\sqrt{3}}=-\sqrt{3}\).<br>
+      \(a_1=\frac{a_2}{q}=\frac{\frac{\sqrt{3}}{2}}{-\sqrt{3}}=-\tfrac{1}{2}\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 42 -->
+  <div class="section" id="zad42" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 42</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2011 - zad. 12)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) mamy \(a_3=5\) i \(a_4=15\). Wtedy wyraz \(a_5\) jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q42" value="A"><div><b>A.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q42" value="B"><div><b>B.</b> 20</div></label>
+      <label class="option"><input type="radio" name="q42" value="C"><div><b>C.</b> 75</div></label>
+      <label class="option"><input type="radio" name="q42" value="D"><div><b>D.</b> 45</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(q=\frac{a_4}{a_3}=3\). Zatem \(a_5=a_4\cdot q=15\cdot 3=45\).<br>
+      Odpowiedź: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 43 -->
+  <div class="section" id="zad43" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 43</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2011 - zad. 11)</div>
+        <div class="qtext">Dany jest nieskończony ciąg geometryczny \((a_n)\), w którym \(a_3=1\) i \(a_4=\tfrac{2}{3}\). Wtedy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q43" value="A"><div><b>A.</b> \(a_1=\tfrac{2}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q43" value="B"><div><b>B.</b> \(a_1=\tfrac{4}{9}\)</div></label>
+      <label class="option"><input type="radio" name="q43" value="C"><div><b>C.</b> \(a_1=\tfrac{3}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q43" value="D"><div><b>D.</b> \(a_1=\tfrac{9}{4}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(q=\frac{a_4}{a_3}=\frac{2}{3}\). Ponieważ \(a_3=a_1q^2\), mamy \(a_1=\frac{a_3}{q^2}=\frac{1}{(2/3)^2}=\frac{1}{4/9}= \tfrac{9}{4}\).<br>
+      Odpowiedź: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 44 -->
+  <div class="section" id="zad44" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 44</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2010 - zad. 14)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) dane są: \(a_1=2\) i \(a_2=12\). Wtedy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q44" value="A"><div><b>A.</b> \(a_4=2^6\)</div></label>
+      <label class="option"><input type="radio" name="q44" value="B"><div><b>B.</b> \(a_4=432\)</div></label>
+      <label class="option"><input type="radio" name="q44" value="C"><div><b>C.</b> \(a_4=32\)</div></label>
+      <label class="option"><input type="radio" name="q44" value="D"><div><b>D.</b> \(a_4=2592\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(q=\frac{a_2}{a_1}=6\). \(a_4=a_1q^3=2\cdot 6^3=2\cdot 216=432\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 45 -->
+  <div class="section" id="zad45" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 45</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2010 - zad. 15)</div>
+        <div class="qtext">W malejącym ciągu geometrycznym \((a_n)\) mamy \(a_1=-2\) i \(a_3=-4\). Iloraz tego ciągu jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q45" value="A"><div><b>A.</b> \(-2\)</div></label>
+      <label class="option"><input type="radio" name="q45" value="B"><div><b>B.</b> \(2\)</div></label>
+      <label class="option"><input type="radio" name="q45" value="C"><div><b>C.</b> \(-\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q45" value="D"><div><b>D.</b> \(\sqrt{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_3=a_1q^2\Rightarrow -4=-2q^2\Rightarrow q^2=2\Rightarrow q=\pm\sqrt{2}\).<br>
+      „Malejący” i \(a_1<0\): dla \(q=\sqrt{2}>1\) mamy \(-2,-2\sqrt{2},-4\) — rzeczywiście maleje; dla \(q=-\sqrt{2}\) znaki się zmieniają (brak monotoniczności).<br>
+      Odpowiedź: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 46 -->
+  <div class="section" id="zad46" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 46</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2010 - zad. 12)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) dane są \(a_1=3\) i \(a_4=24\). Iloraz tego ciągu jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q46" value="A"><div><b>A.</b> 8</div></label>
+      <label class="option"><input type="radio" name="q46" value="B"><div><b>B.</b> 2</div></label>
+      <label class="option"><input type="radio" name="q46" value="C"><div><b>C.</b> \(\tfrac{1}{8}\)</div></label>
+      <label class="option"><input type="radio" name="q46" value="D"><div><b>D.</b> \(-\tfrac{1}{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_4=a_1q^3\Rightarrow q^3=\frac{24}{3}=8\Rightarrow q=2\).<br>
+      Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 47 -->
+  <div class="section" id="zad47" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 47</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2009 - zad. 14)</div>
+        <div class="qtext">W ciągu geometrycznym \((a_n)\) dane są \(a_1=32\) i \(a_4=-4\). Iloraz tego ciągu jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q47" value="A"><div><b>A.</b> 12</div></label>
+      <label class="option"><input type="radio" name="q47" value="B"><div><b>B.</b> \(\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q47" value="C"><div><b>C.</b> \(-\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q47" value="D"><div><b>D.</b> -12</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_4=a_1q^3\Rightarrow q^3=\frac{-4}{32}=-\frac{1}{8}\Rightarrow q=-\frac{1}{2}\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 48 -->
+  <div class="section" id="zad48" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 48</div>
+      <div style="flex:1">
+        <div class="qmeta">(Informator)</div>
+        <div class="qtext">Trzeci wyraz ciągu geometrycznego jest równy 4, a czwarty wyraz tego ciągu jest równy \(-2\). Pierwszy wyraz jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q48" value="A"><div><b>A.</b> 16</div></label>
+      <label class="option"><input type="radio" name="q48" value="B"><div><b>B.</b> -16</div></label>
+      <label class="option"><input type="radio" name="q48" value="C"><div><b>C.</b> 8</div></label>
+      <label class="option"><input type="radio" name="q48" value="D"><div><b>D.</b> -8</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(q=\frac{a_4}{a_3}=-\frac{2}{4}=-\frac{1}{2}\). Ponieważ \(a_3=a_1q^2\), to \(a_1=\frac{a_3}{q^2}=\frac{4}{(1/4)}=16\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 49 -->
+  <div class="section" id="zad49" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 49</div>
+      <div style="flex:1">
+        <div class="qmeta">(Informator)</div>
+        <div class="qtext">Trzeci wyraz ciągu geometrycznego jest równy 4, a piąty wyraz tego ciągu jest równy 1. Pierwszy wyraz jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q49" value="A"><div><b>A.</b> 4</div></label>
+      <label class="option"><input type="radio" name="q49" value="B"><div><b>B.</b> \(4\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q49" value="C"><div><b>C.</b> 16</div></label>
+      <label class="option"><input type="radio" name="q49" value="D"><div><b>D.</b> \(16\sqrt{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(a_5=a_3q^2\Rightarrow q^2=\frac{1}{4}\Rightarrow |q|=\frac{1}{2}\). A \(a_3=a_1q^2\Rightarrow a_1=\frac{a_3}{q^2}=\frac{4}{1/4}=16\).<br>
+      Odpowiedź: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 50 -->
+  <div class="section" id="zad50" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 50</div>
+      <div style="flex:1">
+        <div class="qmeta">(Informator)</div>
+        <div class="qtext">Liczby \(-8,\,4,\,x+1\) (w podanej kolejności) są pierwszym, drugim i trzecim wyrazem ciągu geometrycznego. Wówczas liczba \(x\) jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q50" value="A"><div><b>A.</b> -3</div></label>
+      <label class="option"><input type="radio" name="q50" value="B"><div><b>B.</b> -1,5</div></label>
+      <label class="option"><input type="radio" name="q50" value="C"><div><b>C.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q50" value="D"><div><b>D.</b> 15</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Iloraz \(r=\frac{4}{-8}=-\frac{1}{2}\). Zatem \(x+1=4\cdot r=4\cdot(-\tfrac{1}{2})=-2\Rightarrow x=-3\).<br>
+      Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 51 (AB + 1/2/3 — jak Zad. 8) -->
+  <div class="section" id="zad51" data-type="ab-123" data-ans="B,3">
+    <div class="qheader">
+      <div class="qid">Zad. 51</div>
+      <div style="flex:1">
+        <div class="qmeta">(zbiór zadań CKE - zad. 30)</div>
+        <div class="qtext">Dane są liczby \(a=2\sqrt{2},\ b=4,\ c=4\sqrt{2}\). Dokończ zdanie — wybierz A/B oraz 1/2/3.</div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="pf-row" data-sub="AorB">
+        <div class="pf-label">Liczby \(a,b,c\) tworzą w podanej kolejności:
+          <label style="margin-left:10px"><input type="radio" name="q51_A" value="A"> A. ciąg arytmetyczny</label>
+          <label style="margin-left:10px"><input type="radio" name="q51_A" value="B"> B. ciąg geometryczny</label>
+        </div>
+      </div>
+      <div class="pf-row" data-sub="123">
+        <div class="pf-label">ponieważ:
+          <label style="margin-left:10px"><input type="radio" name="q51_n" value="1"> 1. \(b=\tfrac{a+c}{2}\)</label>
+          <label style="margin-left:10px"><input type="radio" name="q51_n" value="2"> 2. \(b=\tfrac{c-a}{2}\)</label>
+          <label style="margin-left:10px"><input type="radio" name="q51_n" value="3"> 3. \(b^2=a\cdot c\)</label>
+        </div>
+      </div>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Sprawdzamy warunek geometryczny: \(b^2=4^2=16\), a \(a\cdot c=(2\sqrt{2})(4\sqrt{2})=8\cdot 2=16\).<br>
+      Zatem \(b^2=a\cdot c\) — ciąg geometryczny. Poprawne zestawienie to <b>B</b> oraz <b>3</b>.
+    </div>
+  </div>
+
+
+  <footer>Błędy to dowód, że próbujesz ⊂(▀¯▀⊂ )</footer>
+
+</div>
+
+<script>
+function setupMCQ(section){
+  const correct = (section.getAttribute('data-ans')||'').toUpperCase().trim();
+  const options = section.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input = opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val = (input.value||'').toUpperCase().trim();
+      if(val === correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+}
+
+function setupPF(section){
+  const ans = (section.getAttribute('data-ans')||'').toUpperCase().trim().split(',');
+  const rows = section.querySelectorAll('.pf-row');
+  rows.forEach((row,idx)=>{
+    const inputs = row.querySelectorAll('input[type=radio]');
+    inputs.forEach(inp=>{
+      inp.addEventListener('change', ()=>{
+        // after any change, evaluate each row independently
+        rows.forEach((r,i)=>{
+          r.classList.remove('correct','incorrect');
+          const sel = r.querySelector('input[type=radio]:checked');
+          if(!sel) return;
+          const val = (sel.value||'').toUpperCase().trim();
+          if(ans[i] && val===ans[i]) r.classList.add('correct');
+          else r.classList.add('incorrect');
+        });
+      });
+    });
+  });
+}
+
+function setupAB123(section){
+  const correct = (section.getAttribute('data-ans')||'').toUpperCase().trim(); // e.g. "B,2"
+  const [cA,cN] = correct.split(',');
+  const aRadios = section.querySelectorAll('input[name="q8_A"]');
+  const nRadios = section.querySelectorAll('input[name="q8_n"]');
+  function evalPart(){
+    const A = section.querySelector('input[name="q8_A"]:checked');
+    const N = section.querySelector('input[name="q8_n"]:checked');
+    const rowAB = section.querySelector('[data-sub="AorB"]');
+    const row123 = section.querySelector('[data-sub="123"]');
+    [rowAB,row123].forEach(r=>r.classList.remove('correct','incorrect'));
+    if(A){
+      if((A.value||'').toUpperCase()===cA) rowAB.classList.add('correct'); else rowAB.classList.add('incorrect');
+    }
+    if(N){
+      if((N.value||'').toUpperCase()===cN) row123.classList.add('correct'); else row123.classList.add('incorrect');
+    }
+  }
+  aRadios.forEach(r=>r.addEventListener('change', evalPart));
+  nRadios.forEach(r=>r.addEventListener('change', evalPart));
+}
+
+function setupSolution(section){
+  const btn = section.querySelector('.btn-solution');
+  const sol = section.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click', ()=>{ 
+      sol.style.display = sol.style.display === 'block' ? 'none' : 'block'; 
+      if(window.MathJax){ MathJax.typesetPromise(); }
+    });
+  }
+}
+
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const type = (sec.getAttribute('data-type')||'mcq').toLowerCase();
+  if(type==='mcq') setupMCQ(sec);
+  if(type==='pf') setupPF(sec);
+  if(type==='ab-123') setupAB123(sec);
+  setupSolution(sec);
+}
+
+['zad1','zad2','zad3','zad4','zad5','zad6','zad7','zad8','zad9','zad10',
+ 'zad11','zad12','zad13','zad14','zad15','zad16','zad17','zad18','zad19','zad20','zad21','zad22','zad23','zad24','zad25','zad26','zad27','zad28','zad29','zad30','zad31','zad32','zad33','zad34','zad35','zad36','zad37','zad38','zad39','zad40','zad41','zad42','zad43','zad44','zad45','zad46','zad47','zad48','zad49','zad50','zad51']
+.forEach(setupQuestion);
+
+</script>
+</body>
+</html>

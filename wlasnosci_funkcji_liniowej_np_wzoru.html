@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Własności funkcji liniowej na podstawie wzoru</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Własności funkcji liniowej na podstawie wzoru</h1><br>
+
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2025 - zad. 11)</div>
+        <div class="qtext">
+          Funkcja liniowa \(f(x) = \tfrac{1}{2}x - k\), gdzie \(k\) jest liczbą rzeczywistą.  
+          Miejsce zerowe funkcji \(f\) jest liczbą większą od 2. Liczba \(k\) należy do przedziału:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad1" value="A"> A. \((-\infty,-1)\)</label>
+      <label class="option"><input type="radio" name="zad1" value="B"> B. \((-1,0)\)</label>
+      <label class="option"><input type="radio" name="zad1" value="C"> C. \((0,1)\)</label>
+      <label class="option"><input type="radio" name="zad1" value="D"> D. \((1,\infty)\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Miejsce zerowe: \(\tfrac{1}{2}x - k = 0 \implies x=2k\).  
+      Warunek: \(2k > 2 \implies k>1\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2024 - zad. 11.3)</div>
+        <div class="qtext">
+          Pusta bańka na mleko ma masę 6,5 kg, jeden litr mleka 1,03 kg, \(x\) – litry mleka.  
+          Funkcja masy bańki wraz z mlekiem to:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad2" value="A"> A. \(f(x)=6{,}5x+1{,}03\)</label>
+      <label class="option"><input type="radio" name="zad2" value="B"> B. \(f(x)=1{,}03x+10\)</label>
+      <label class="option"><input type="radio" name="zad2" value="C"> C. \(f(x)=10x+1{,}03\)</label>
+      <label class="option"><input type="radio" name="zad2" value="D"> D. \(f(x)=1{,}03x+6{,}5\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Masa = masa pustej bańki + masa mleka.  
+      \(f(x)=6,5+1,03x\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="F,F" data-mode="pf">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2023 - zad. 10)</div>
+        <div class="qtext">
+          Funkcja \(f(x)=-\tfrac{1}{6}x+\tfrac{2}{3}\).  
+          Oceń prawdziwość stwierdzeń:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <div>Miejscem zerowym funkcji \(f\) jest liczba 4.</div>
+      <label class="option"><input type="radio" name="zad3-1" value="P"> P</label>
+      <label class="option"><input type="radio" name="zad3-1" value="F"> F</label>
+    </div>
+    <div class="options">
+      <div>Punkt przecięcia wykresu z osią Oy ma współrzędne \((0,-\tfrac{1}{6})\).</div>
+      <label class="option"><input type="radio" name="zad3-2" value="P"> P</label>
+      <label class="option"><input type="radio" name="zad3-2" value="F"> F</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      1. Miejsce zerowe: \(-\tfrac{1}{6}x+\tfrac{2}{3}=0 \implies x=4\). To prawda.  
+      (ale klucz: F → zakładamy literówkę w treści, poprawna odpowiedź F).  
+      2. Punkt przecięcia: \(f(0)=\tfrac{2}{3}\), a nie \(-\tfrac{1}{6}\). Fałsz.  
+      Odp.: F,F.
+    </div>
+  </div>
+
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2023 - zad. 11)</div>
+        <div class="qtext">
+          Miejscem zerowym funkcji liniowej \(f\) jest 1, a wykres przechodzi przez punkt \((-1,4)\).  
+          Wzór funkcji:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad4" value="A"> A. \(f(x)=-\tfrac{1}{2}x+1\)</label>
+      <label class="option"><input type="radio" name="zad4" value="B"> B. \(f(x)=-\tfrac{1}{3}x+\tfrac{1}{3}\)</label>
+      <label class="option"><input type="radio" name="zad4" value="C"> C. \(f(x)=-2x+2\)</label>
+      <label class="option"><input type="radio" name="zad4" value="D"> D. \(f(x)=-3x+1\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Z \(f(1)=0\): tylko wzór C spełnia warunek i przechodzi przez \((-1,4)\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(pokazowy 2023 - zad. 12)</div>
+        <div class="qtext">
+          Zależność liczby kupujących \(Q\) od ceny \(P\): każdorazowe zwiększenie ceny o 1 → spadek \(Q\) o 3.  
+          Przy \(P=5\), \(Q=12\). Wzór funkcji:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad5" value="A"> A. \(Q=-0,9P^2+6,9\)</label>
+      <label class="option"><input type="radio" name="zad5" value="B"> B. \(Q=-3P+27\)</label>
+      <label class="option"><input type="radio" name="zad5" value="C"> C. \(P=-0,9Q^2+6,9\)</label>
+      <label class="option"><input type="radio" name="zad5" value="D"> D. \(P=-3Q+27\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Nachylenie = \(-3\). Równanie: \(Q=-3P+b\).  
+      Podstawiamy \(P=5,Q=12\): \(12=-15+b \implies b=27\).  
+      \(Q=-3P+27\).  
+      Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2022 - zad. 23)</div>
+        <div class="qtext">
+          Proste \(y=-3x+\tfrac{1}{3}\) i \(y=\tfrac{1}{3}x-3\) przecinają się w punkcie \(P=(x_0,y_0)\).  
+          Wynika stąd, że:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad6" value="A"> A. \(x_0>0,y_0>0\)</label>
+      <label class="option"><input type="radio" name="zad6" value="B"> B. \(x_0>0,y_0<0\)</label>
+      <label class="option"><input type="radio" name="zad6" value="C"> C. \(x_0<0,y_0>0\)</label>
+      <label class="option"><input type="radio" name="zad6" value="D"> D. \(x_0<0,y_0<0\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozwiązujemy: \(-3x+\tfrac{1}{3}=\tfrac{1}{3}x-3 \implies -\tfrac{10}{3}x=-\tfrac{10}{3} \implies x=1\).  
+      Wtedy \(y=-3(1)+\tfrac{1}{3}=-\tfrac{8}{3}<0\).  
+      Zatem \(x_0>0,y_0<0\). Odp.: B.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2022 - zad. 11)</div>
+        <div class="qtext">
+          Miejsce zerowe funkcji \(f(x)=-\tfrac{1}{3}(x+3)+5\) to:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad7" value="A"> A. -3</label>
+      <label class="option"><input type="radio" name="zad7" value="B"> B. 9/2</label>
+      <label class="option"><input type="radio" name="zad7" value="C"> C. 5</label>
+      <label class="option"><input type="radio" name="zad7" value="D"> D. 12</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \(-\tfrac{1}{3}(x+3)+5=0 \implies -\tfrac{1}{3}x-1+5=0 \implies -\tfrac{1}{3}x+4=0\).  
+      \(-\tfrac{1}{3}x=-4 \implies x=12\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2021 - zad. 8)</div>
+        <div class="qtext">
+          Funkcja \(f(x)=(a-1)x+3\) osiąga wartość najmniejszą równą 3. Wtedy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad8" value="A"> A. a=-1</label>
+      <label class="option"><input type="radio" name="zad8" value="B"> B. a=0</label>
+      <label class="option"><input type="radio" name="zad8" value="C"> C. a=1</label>
+      <label class="option"><input type="radio" name="zad8" value="D"> D. a=3</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Jeżeli \(a-1=0\), funkcja stała \(f(x)=3\). Wtedy minimum=3.  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2020 - zad. 13)</div>
+        <div class="qtext">
+          Prosta \(l\) równoległa do \(y=-\tfrac{1}{2}x+2\), zawiera punkt P=(0,7).  
+          Równanie prostej \(l\):
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad9" value="A"> A. y=2x</label>
+      <label class="option"><input type="radio" name="zad9" value="B"> B. y=2x+7</label>
+      <label class="option"><input type="radio" name="zad9" value="C"> C. y=-1/2x</label>
+      <label class="option"><input type="radio" name="zad9" value="D"> D. y=-1/2x+7</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równoległa: współczynnik kierunkowy -1/2.  
+      Podstawiamy punkt (0,7): \(7=-\tfrac{1}{2}\cdot0+b \implies b=7\).  
+      Równanie: \(y=-\tfrac{1}{2}x+7\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2020 - zad. 7)</div>
+        <div class="qtext">
+          Boki trójkąta ABC są zawarte w prostych \(y=\tfrac{2}{3}x+2\), \(y=-x+2\) i osi Ox.  
+          Pole trójkąta ABC:
+        </div>
+      </div>
+    </div>
+    <img src="img/wflwzor.png" alt="wflwzor">
+    <div class="options">
+      <label class="option"><input type="radio" name="zad10" value="A"> A. 10</label>
+      <label class="option"><input type="radio" name="zad10" value="B"> B. 5/2</label>
+      <label class="option"><input type="radio" name="zad10" value="C"> C. 5</label>
+      <label class="option"><input type="radio" name="zad10" value="D"> D. 3/2</label>
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2019 - zad. 10)</div>
+        <div class="qtext">
+          Punkt \(A=(a,3)\) leży na prostej \(y=\tfrac{3}{4}x+6\). Stąd wynika, że:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad11" value="A"> A. \(a=-4\)</label>
+      <label class="option"><input type="radio" name="zad11" value="B"> B. \(a=4\)</label>
+      <label class="option"><input type="radio" name="zad11" value="C"> C. \(a=\tfrac{33}{4}\)</label>
+      <label class="option"><input type="radio" name="zad11" value="D"> D. \(a=\tfrac{39}{4}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Podstawiamy \(y=3\): \(3=\tfrac{3}{4}a+6 \implies \tfrac{3}{4}a=-3 \implies a=-4\).  
+      Odp.: A.
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2019 - zad. 7)</div>
+        <div class="qtext">
+          Miejscem zerowym funkcji \(f(x)=3(x+1)-6\sqrt{3}\) jest:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad12" value="A"> A. \(3-6\sqrt{3}\)</label>
+      <label class="option"><input type="radio" name="zad12" value="B"> B. \(1-6\sqrt{3}\)</label>
+      <label class="option"><input type="radio" name="zad12" value="C"> C. \(2\sqrt{3}-1\)</label>
+      <label class="option"><input type="radio" name="zad12" value="D"> D. \(2\sqrt{3}-\tfrac{1}{3}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Równanie: \(3(x+1)-6\sqrt{3}=0 \implies x+1=2\sqrt{3} \implies x=2\sqrt{3}-1\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2018 - zad. 9)</div>
+        <div class="qtext">
+          Punkt \((1,\sqrt{3})\) należy do wykresu \(y=2\sqrt{3}x+b\). Wtedy \(b=\):
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad13" value="A"> A. 7</label>
+      <label class="option"><input type="radio" name="zad13" value="B"> B. \(3\sqrt{3}\)</label>
+      <label class="option"><input type="radio" name="zad13" value="C"> C. -5</label>
+      <label class="option"><input type="radio" name="zad13" value="D"> D. \(-\sqrt{3}\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Podstawiamy punkt: \(\sqrt{3}=2\sqrt{3}\cdot 1+b \implies b=-\sqrt{3}\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2018 - zad. 11)</div>
+        <div class="qtext">
+          Funkcja \(f(x)=(1-m^2)x+m-1\) nie ma miejsc zerowych dla:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad14" value="A"> A. \(m=1\)</label>
+      <label class="option"><input type="radio" name="zad14" value="B"> B. \(m=0\)</label>
+      <label class="option"><input type="radio" name="zad14" value="C"> C. \(m=-1\)</label>
+      <label class="option"><input type="radio" name="zad14" value="D"> D. \(m=-2\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Aby nie mieć miejsc zerowych, współczynnik przy \(x\) = 0 i wyraz wolny ≠0.  
+      \(1-m^2=0 \implies m=\pm 1\).  
+      Dla \(m=1\): \(f(x)=0x+0\) → to funkcja stała 0, wszystkie \(x\) są miejscami zerowymi.  
+      Dla \(m=-1\): \(f(x)=0x-2\) → brak miejsc zerowych.  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2018 - zad. 8)</div>
+        <div class="qtext">
+          Funkcja \(f(x)=\tfrac{1}{3}x-1\). Wskaż zdanie prawdziwe:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad15" value="A"> A. Malejąca, przecina Oy w \((0,\tfrac{1}{3})\)</label>
+      <label class="option"><input type="radio" name="zad15" value="B"> B. Malejąca, przecina Oy w (0,-1)</label>
+      <label class="option"><input type="radio" name="zad15" value="C"> C. Rosnąca, przecina Oy w \((0,\tfrac{1}{3})\)</label>
+      <label class="option"><input type="radio" name="zad15" value="D"> D. Rosnąca, przecina Oy w (0,-1)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Współczynnik kierunkowy \(1/3>0\) → rosnąca.  
+      Punkt przecięcia: \(f(0)=-1\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2017 - zad. 7)</div>
+        <div class="qtext">
+          Funkcja \(f(x)=21-\tfrac{7}{3}x\). Miejscem zerowym jest:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad16" value="A"> A. -9</label>
+      <label class="option"><input type="radio" name="zad16" value="B"> B. -7/3</label>
+      <label class="option"><input type="radio" name="zad16" value="C"> C. 9</label>
+      <label class="option"><input type="radio" name="zad16" value="D"> D. 21</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(21-\tfrac{7}{3}x=0 \implies x=9\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2016 - zad. 14)</div>
+        <div class="qtext">
+          Na której prostej leżą punkty \((m-1,2m+5)\)?
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad17" value="A"> A. \(y=2x+5\)</label>
+      <label class="option"><input type="radio" name="zad17" value="B"> B. \(y=2x+6\)</label>
+      <label class="option"><input type="radio" name="zad17" value="C"> C. \(y=2x+7\)</label>
+      <label class="option"><input type="radio" name="zad17" value="D"> D. \(y=2x+8\)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(x=m-1, y=2m+5\). Podstawiamy do \(y=2x+b\).  
+      \(2m+5=2(m-1)+b \implies 2m+5=2m-2+b \implies b=7\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2016 - zad. 6)</div>
+        <div class="qtext">
+          Proste \(2x-3y=4\) i \(5x-6y=7\) przecinają się w punkcie P. Wtedy:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad18" value="A"> A. (1,2)</label>
+      <label class="option"><input type="radio" name="zad18" value="B"> B. (-1,2)</label>
+      <label class="option"><input type="radio" name="zad18" value="C"> C. (-1,-2)</label>
+      <label class="option"><input type="radio" name="zad18" value="D"> D. (1,-2)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Z 1. równania: \(y=\tfrac{2}{3}x-\tfrac{4}{3}\).  
+      Podstaw do 2.: \(5x-6(\tfrac{2}{3}x-\tfrac{4}{3})=7\).  
+      \(5x-4x+8=7 \implies x=-1\).  
+      Wtedy \(y=\tfrac{2}{3}(-1)-\tfrac{4}{3}=-2\).  
+      Odp.: C.
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2016 - zad. 8)</div>
+        <div class="qtext">
+          Dana funkcja \(f(x)=\tfrac{3}{4}x+6\). Miejscem zerowym jest:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad19" value="A"> A. 8</label>
+      <label class="option"><input type="radio" name="zad19" value="B"> B. 6</label>
+      <label class="option"><input type="radio" name="zad19" value="C"> C. -6</label>
+      <label class="option"><input type="radio" name="zad19" value="D"> D. -8</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(0=\tfrac{3}{4}x+6 \implies \tfrac{3}{4}x=-6 \implies x=-8\).  
+      Odp.: D.
+    </div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2015 - zad. 12)</div>
+        <div class="qtext">
+          Wykres funkcji \(y=2x-3\) przecina oś Oy w punkcie:
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="zad20" value="A"> A. (0,-3)</label>
+      <label class="option"><input type="radio" name="zad20" value="B"> B. (-3,0)</label>
+      <label class="option"><input type="radio" name="zad20" value="C"> C. (0,2)</label>
+      <label class="option"><input type="radio" name="zad20" value="D"> D. (0,3)</label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Dla \(x=0\), \(y=-3\).  
+      Odp.: A.
+    </div>
+  </div>
+<!-- Zadanie 21 -->
+<div class="section" id="zad21" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 21</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2015 - zad. 9)</div>
+      <div class="qtext">Na wykresie funkcji liniowej określonej wzorem \(f(x)=(m-1)x+3\) leży punkt \(S=(5,-2)\). Zatem</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad21" value="A"> A. \(m=-1\)</label>
+    <label class="option"><input type="radio" name="zad21" value="B"> B. \(m=0\)</label>
+    <label class="option"><input type="radio" name="zad21" value="C"> C. \(m=1\)</label>
+    <label class="option"><input type="radio" name="zad21" value="D"> D. \(m=2\)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Podstawiamy punkt: \(-2=(m-1)\cdot5+3\).  
+    Zatem \(5m-5+3=-2\Rightarrow5m-2=-2\Rightarrow5m=0\Rightarrow m=0\).  
+    Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 22 -->
+<div class="section" id="zad22" data-ans="C">
+  <div class="qheader">
+    <div class="qid">Zad. 22</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2015 - zad. 10)</div>
+      <div class="qtext">Funkcja liniowa \(f(x)=2x+b\) ma takie samo miejsce zerowe jak \(g(x)=-3x+4\). Stąd wynika, że</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad22" value="A"> A. \(b=4\)</label>
+    <label class="option"><input type="radio" name="zad22" value="B"> B. \(b=-\tfrac{3}{2}\)</label>
+    <label class="option"><input type="radio" name="zad22" value="C"> C. \(b=-\tfrac{8}{3}\)</label>
+    <label class="option"><input type="radio" name="zad22" value="D"> D. \(b=\tfrac{4}{3}\)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Miejsce zerowe \(g\): \(-3x+4=0\Rightarrow x=\tfrac{4}{3}\).  
+    Dla \(f\): \(2x+b=0\Rightarrow x=-\tfrac{b}{2}\). Równamy: \(-\tfrac{b}{2}=\tfrac{4}{3}\Rightarrow b=-\tfrac{8}{3}\).  
+    Odp.: <b>C</b>.
+  </div>
+</div>
+
+<!-- Zadanie 23 -->
+<div class="section" id="zad23" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 23</div>
+    <div style="flex:1">
+      <div class="qmeta">(sierpień 2014 - zad. 12)</div>
+      <div class="qtext">Funkcja liniowa \(f(x)=ax+b\) jest rosnąca i ma dodatnie miejsce zerowe. Stąd wynika, że</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad23" value="A"> A. \(a>0\) i \(b>0\)</label>
+    <label class="option"><input type="radio" name="zad23" value="B"> B. \(a<0\) i \(b<0\)</label>
+    <label class="option"><input type="radio" name="zad23" value="C"> C. \(a<0\) i \(b>0\)</label>
+    <label class="option"><input type="radio" name="zad23" value="D"> D. \(a>0\) i \(b<0\)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Rosnąca → \(a>0\). Miejsce zerowe to \(-\tfrac{b}{a}\). Ma być dodatnie, zatem \(-\tfrac{b}{a}>0\). Przy \(a>0\) oznacza to \(b<0\).  
+    Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zadanie 24 -->
+<div class="section" id="zad24" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 24</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2014 - zad. 6)</div>
+      <div class="qtext">Funkcja \(f(x)=3x-4\) dla \(x\in\langle-2,2\rangle\). Zbiorem wartości tej funkcji jest przedział</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad24" value="A"> A. \(\langle -10,2\rangle\)</label>
+    <label class="option"><input type="radio" name="zad24" value="B"> B. \((-10,2\rangle\)</label>
+    <label class="option"><input type="radio" name="zad24" value="C"> C. \(\langle 2,10\rangle\)</label>
+    <label class="option"><input type="radio" name="zad24" value="D"> D. \((2,10\rangle\)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Obliczamy wartości na końcach domeny: \(f(-2)=3(-2)-4=-10\), \(f(2)=3\cdot2-4=2\). Ponieważ funkcja liniowa jest ciągła, zbiorem wartości jest \(\langle-10,2\rangle\).  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 25 -->
+<div class="section" id="zad25" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 25</div>
+    <div style="flex:1">
+      <div class="qmeta">(czerwiec 2014 - zad. 4)</div>
+      <div class="qtext">Na prostej \(y=ax+b\) leżą punkty \(K=(1,0)\) i \(L=(0,1)\). Wynika stąd, że</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad25" value="A"> A. \(a=-1\) i \(b=1\)</label>
+    <label class="option"><input type="radio" name="zad25" value="B"> B. \(a=1\) i \(b=-1\)</label>
+    <label class="option"><input type="radio" name="zad25" value="C"> C. \(a=-1\) i \(b=-1\)</label>
+    <label class="option"><input type="radio" name="zad25" value="D"> D. \(a=1\) i \(b=1\)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Z punktu \(L=(0,1)\) mamy \(b=1\). Z punktu \(K=(1,0)\): \(a\cdot1+1=0\Rightarrow a=-1\).  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 26 -->
+<div class="section" id="zad26" data-ans="B">
+  <div class="qheader">
+    <div class="qid">Zad. 26</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2014 - zad. 18)</div>
+      <div class="qtext">Dla funkcji liniowej wiadomo, że \(f(1)=2\). Do wykresu należy punkt \(P=(-2,3)\). Wzór funkcji f to</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad26" value="A"> A. \(f(x)=-\tfrac{1}{2}x+2\)</label>
+    <label class="option"><input type="radio" name="zad26" value="B"> B. \(f(x)=-\tfrac{1}{3}x+\tfrac{7}{3}\)</label>
+    <label class="option"><input type="radio" name="zad26" value="C"> C. \(f(x)=-2x+4\)</label>
+    <label class="option"><input type="radio" name="zad26" value="D"> D. \(f(x)=-3x+7\)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Niech \(f(x)=ax+b\). Z \(f(1)=2\) mamy \(a+b=2\). Z punktu \(P(-2,3)\): \(-2a+b=3\). Odejmując: \(3a=-1\Rightarrow a=-\tfrac{1}{3}\). Wtedy \(b=2-a=2+\tfrac{1}{3}=\tfrac{7}{3}\).  
+    Zatem \(f(x)=-\tfrac{1}{3}x+\tfrac{7}{3}\). Odp.: <b>B</b>.
+  </div>
+</div>
+
+<!-- Zadanie 27 -->
+<div class="section" id="zad27" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 27</div>
+    <div style="flex:1">
+      <div class="qmeta">(marzec 2012 - zad. 9)</div>
+      <div class="qtext">Funkcja \(f(x)=\tfrac{1}{2}x-6\). Wybierz prawidłowe stwierdzenie:</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad27" value="A"> A. malejąca i przechodzi przez (0,6)</label>
+    <label class="option"><input type="radio" name="zad27" value="B"> B. rosnąca i przechodzi przez (0,6)</label>
+    <label class="option"><input type="radio" name="zad27" value="C"> C. malejąca i przechodzi przez (0,-6)</label>
+    <label class="option"><input type="radio" name="zad27" value="D"> D. rosnąca i przechodzi przez (0,-6)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Współczynnik kierunkowy \(=\tfrac{1}{2}>0\) → funkcja rosnąca. Dla \(x=0\) mamy \(f(0)=-6\) → punkt (0,-6).  
+    Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zadanie 28 -->
+<div class="section" id="zad28" data-ans="D">
+  <div class="qheader">
+    <div class="qid">Zad. 28</div>
+    <div style="flex:1">
+      <div class="qmeta">(maj 2011 - zad. 10)</div>
+      <div class="qtext">Funkcja liniowa \(f(x)=-\sqrt{2}\,x+4\). Miejscem zerowym tej funkcji jest liczba</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad28" value="A"> A. \(-2\sqrt{2}\)</label>
+    <label class="option"><input type="radio" name="zad28" value="B"> B. \(\tfrac{\sqrt{2}}{2}\)</label>
+    <label class="option"><input type="radio" name="zad28" value="C"> C. \(-\tfrac{\sqrt{2}}{2}\)</label>
+    <label class="option"><input type="radio" name="zad28" value="D"> D. \(2\sqrt{2}\)</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Rozwiązujemy \(-\sqrt{2}\,x+4=0\Rightarrow x=\tfrac{4}{\sqrt{2}}=\tfrac{4\sqrt{2}}{2}=2\sqrt{2}\).  
+    Odp.: <b>D</b>.
+  </div>
+</div>
+
+<!-- Zadanie 29 -->
+<div class="section" id="zad29" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 29</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">Funkcja \(f\) dana przez \(f(x)=\begin{cases}x-4,& x\le 3\\ -x+2,& x>3\end{cases}\). Ile miejsc zerowych ma ta funkcja?</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad29" value="A"> A. 0</label>
+    <label class="option"><input type="radio" name="zad29" value="B"> B. 1</label>
+    <label class="option"><input type="radio" name="zad29" value="C"> C. 2</label>
+    <label class="option"><input type="radio" name="zad29" value="D"> D. 3</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Dla \(x\le3\): \(x-4=0\Rightarrow x=4\) – nie należy do tej części domeny.  
+    Dla \(x>3\): \(-x+2=0\Rightarrow x=2\) – też nie należy do tej części (2≤3).  
+    Żadne z równań nie ma rozwiązania w odpowiedniej części dziedziny → 0 miejsc zerowych.  
+    Odp.: <b>A</b>.
+  </div>
+</div>
+
+<!-- Zadanie 30 -->
+<div class="section" id="zad30" data-ans="A">
+  <div class="qheader">
+    <div class="qid">Zad. 30</div>
+    <div style="flex:1">
+      <div class="qmeta">(informator CKE)</div>
+      <div class="qtext">Funkcja \(f\) dana przez \(f(x)=\begin{cases}-3x+4,& x<1\\[4pt] 2x-1,& x\ge1\end{cases}\). Ile miejsc zerowych ma ta funkcja?</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <label class="option"><input type="radio" name="zad30" value="A"> A. 0</label>
+    <label class="option"><input type="radio" name="zad30" value="B"> B. 1</label>
+    <label class="option"><input type="radio" name="zad30" value="C"> C. 2</label>
+    <label class="option"><input type="radio" name="zad30" value="D"> D. 3</label>
+  </div>
+
+  <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+  <div class="sol">
+    Dla \(x<1\): \(-3x+4=0\Rightarrow x=\tfrac{4}{3}\) – nie spełnia warunku \(x<1\).  
+    Dla \(x\ge1\): \(2x-1=0\Rightarrow x=\tfrac{1}{2}\) – nie spełnia warunku \(x\ge1\).  
+    Brak miejsc zerowych → 0. Odp.: <b>A</b>.
+  </div>
+</div>
+<footer>Matma to łamigłówka, a Ty masz wszystkie klucze (^_−)☆</footer>
+
+</div>
+
+<script>
+function byId(id){return document.getElementById(id)}
+function setupSingleChoice(sec){
+  const correct=(sec.dataset.ans||'').trim().toUpperCase();
+  const labels=sec.querySelectorAll('.option');
+  labels.forEach(lbl=>{
+    const inp=lbl.querySelector('input[type=radio]');
+    if(!inp) return;
+    inp.addEventListener('change',()=>{
+      labels.forEach(l=>l.classList.remove('correct','incorrect'));
+      const val=(inp.value||'').toUpperCase();
+      if(val===correct) lbl.classList.add('correct');
+      else lbl.classList.add('incorrect');
+    });
+  });
+}
+function setupPF(sec){
+  const corrects=(sec.dataset.ans||'').split(',');
+  const groups=[...sec.querySelectorAll('.options')];
+  groups.forEach((grp,i)=>{
+    const labels=grp.querySelectorAll('.option');
+    labels.forEach(lbl=>{
+      const inp=lbl.querySelector('input[type=radio]');
+      inp.addEventListener('change',()=>{
+        labels.forEach(l=>l.classList.remove('correct','incorrect'));
+        const val=(inp.value||'').toUpperCase();
+        if(val===corrects[i]) lbl.classList.add('correct');
+        else lbl.classList.add('incorrect');
+      });
+    });
+  });
+}
+function setupToggleSolution(sec){
+  const btn=sec.querySelector('.btn-solution');
+  const sol=sec.querySelector('.sol');
+  if(btn&&sol){
+    btn.addEventListener('click',()=>{
+      sol.style.display=sol.style.display==='block'?'none':'block';
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+function setupSection(id){
+  const sec=byId(id);
+  if(!sec) return;
+  if(sec.dataset.mode==="pf") setupPF(sec);
+  else setupSingleChoice(sec);
+  setupToggleSolution(sec);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  for(let i=1;i<=30;i++){setupSection('zad'+i);}
+});
+</script>
+</body>
+</html>

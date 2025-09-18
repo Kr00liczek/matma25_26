@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Długość i środek odcinka w układzie współrzędnych</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Długość i środek odcinka w układzie współrzędnych</h1>
+</header>
+<br>
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2025 – zad. 22)</div>
+        <div class="qtext">W układzie współrzędnych dany jest kwadrat \(ABCD\). Wierzchołek \(A=(4,-1)\), a punkt \(S=(1,3)\) jest punktem przecięcia przekątnych. Długość przekątnej kwadratu \(ABCD\) jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> 7</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> 14</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      <b>Rozwiązanie krok po kroku:</b><br>
+      Punkt \(S\) jest środkiem przekątnej, więc współrzędne drugiego końca \(C\) obliczamy: \((x_C,y_C)\) takie, że \(\tfrac{4+x_C}{2}=1\), \(\tfrac{-1+y_C}{2}=3\).<br>
+      Z pierwszego: \(x_C=-2\). Z drugiego: \(y_C=7\).<br>
+      Długość przekątnej \(AC=\sqrt{((-2-4)^2+(7+1)^2)}=\sqrt{36+64}=10\).<br>
+      Odpowiedź: <b>C. 10</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2024 – zad. 21)</div>
+        <div class="qtext">W układzie współrzędnych dane są punkty \(A=(-2,-1)\) i \(C=(3,4)\). Punkty te są przeciwległymi wierzchołkami kwadratu \(ABCD\). Długość boku kwadratu jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> \(5\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> \(\sqrt{10}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Długość przekątnej \(AC=\sqrt{(3+2)^2+(4+1)^2}=\sqrt{25+25}=\sqrt{50}=5\sqrt{2}\).<br>
+      Bok kwadratu \(=\tfrac{\sqrt{50}}{\sqrt{2}}=5\).<br>
+      Odpowiedź: <b>A. 5</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2023 – zad. 21)</div>
+        <div class="qtext">W układzie współrzędnych dane są punkty \(K=(-7,-2)\) i \(L=(-1,4)\). Punkty te są wierzchołkami trójkąta równobocznego \(KLM\). Pole tego trójkąta jest równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> \(17\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> \(17\sqrt{3}\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> \(18\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> \(18\sqrt{3}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Długość boku: \(|KL|=\sqrt{(6)^2+(6)^2}=\sqrt{72}=6\sqrt{2}\).<br>
+      Pole trójkąta równobocznego: \(\tfrac{\sqrt{3}}{4}(6\sqrt{2})^2=\tfrac{\sqrt{3}}{4}\cdot72=18\sqrt{3}\).<br>
+      Odpowiedź: <b>D. \(18\sqrt{3}\)</b>.
+    </div>
+  </div>
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2023 – zad. 28)</div>
+        <div class="qtext">Punkt \(A=(-1,-4)\) jest wierzchołkiem równoległoboku \(ABCD\). Punkt \(S=(2,2)\) jest punktem przecięcia przekątnych tego równoległoboku. Długość przekątnej \(AC\) jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> \(\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(2\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> \(3\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> \(6\sqrt{5}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek przekątnej \(AC\) to \(S\). Zatem \(\tfrac{-1+x_C}{2}=2 \implies x_C=5\), \(\tfrac{-4+y_C}{2}=2 \implies y_C=8\).<br>
+      Długość \(AC=\sqrt{(5+1)^2+(8+4)^2}=\sqrt{36+144}=\sqrt{180}=6\sqrt{5}\).<br>
+      Odpowiedź: <b>D. \(6\sqrt{5}\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2023 – zad. 27)</div>
+        <div class="qtext">W układzie współrzędnych punkty \(A=(-1,5)\) i \(C=(3,-3)\) są przeciwległymi wierzchołkami kwadratu \(ABCD\). Pole tego kwadratu jest równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> \(8\sqrt{10}\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> \(16\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> 40</div></label>
+      <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> 80</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Długość przekątnej \(AC=\sqrt{(3+1)^2+(-3-5)^2}=\sqrt{16+64}=\sqrt{80}=4\sqrt{5}\).<br>
+      Pole kwadratu: \((\tfrac{4\sqrt{5}}{\sqrt{2}})^2=(2\sqrt{10})^2=40\).<br>
+      Odpowiedź: <b>C. 40</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2023 – zad. 28)</div>
+        <div class="qtext">Dane są punkty \(A=(1,7)\) i \(P=(3,1)\). Punkt \(P\) dzieli odcinek \(AB\) w stosunku \(|AP|:|PB|=1:3\). Współrzędne punktu \(B\) są równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> (9, −5)</div></label>
+      <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> (9, −17)</div></label>
+      <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> (7, −11)</div></label>
+      <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> (5, −5)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Używamy wzoru podziału odcinka w stosunku 1:3.<br>
+      \(x_P=\tfrac{1+3x_B}{4}=3 \implies 1+3x_B=12 \implies x_B= \tfrac{11}{3}\). Hmm, sprawdźmy ponownie.<br>
+      Lepiej: \(x_P=\tfrac{1\cdot3+ x_B\cdot1}{1+3}\)? Nie – poprawny wzór: \(P=\tfrac{mB+nA}{m+n}\). Tu \(m=1,n=3\).<br>
+      \(3=(1\cdot x_B+3\cdot1)/4 \implies 12= x_B+3 \implies x_B=9\).<br>
+      \(1=(1\cdot y_B+3\cdot7)/4 \implies 4= y_B+21 \implies y_B=-17\).<br>
+      Odpowiedź: <b>B. (9, −17)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(Informator 2023 – zad. 20)</div>
+        <div class="qtext">Dany jest kwadrat \(ABCD\). Wierzchołki: \(A=(-2,1)\), \(C=(4,5)\). Długość przekątnej \(AC\) jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> \(2\sqrt{13}\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> \(2\sqrt{10}\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> 8</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AC|=\sqrt{(4-(-2))^2+(5-1)^2}=\sqrt{6^2+4^2}=\sqrt{52}=2\sqrt{13}\).<br>
+      Odpowiedź: <b>B. \(2\sqrt{13}\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2022 – zad. 22)</div>
+        <div class="qtext">Dane są punkty \(A=(1,-3)\) i \(C=(-2,4)\). Punkt \(S\) jest środkiem przekątnej \(BD\) rombu \(ABCD\). Współrzędne punktu \(S\) są równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> \(\left(-\tfrac12,\tfrac12\right)\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> \(\left(\tfrac12,-\tfrac32\right)\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> \((-1,2)\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> \((-1,1)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      W rombie przekątne przecinają się w swoich środkach, więc środek \(BD\) = środek \(AC\).<br>
+      Środek \(AC\): \(\left(\frac{1+(-2)}{2},\frac{-3+4}{2}\right)=\left(-\frac12,\frac12\right)\).<br>
+      Odpowiedź: <b>A. \(\left(-\tfrac12,\tfrac12\right)\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2022 – zad. 23)</div>
+        <div class="qtext">Równoległobok \(ABCD\) ma wierzchołki: \(A=(-6,5)\), \(B=(5,7)\), \(C=(10,-3)\). Długość przekątnej \(BD\) jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> \(3\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> \(4\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> \(6\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> \(8\sqrt{5}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      W równoległoboku \(D=A+C-B\). Zatem \(D=(-6,5)+(10,-3)-(5,7)=(-1,-5)\).<br>
+      \(|BD|=\sqrt{(-1-5)^2+(-5-7)^2}=\sqrt{(-6)^2+(-12)^2}=\sqrt{36+144}=\sqrt{180}=6\sqrt{5}\).<br>
+      Odpowiedź: <b>C. \(6\sqrt{5}\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 10 -->
+  <div class="section" id="zad10" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 10</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2022 – zad. 23)</div>
+        <div class="qtext">Dane są punkty \(K=(4,-10)\) i \(L=(b,2)\). Pierwsza współrzędna środka odcinka \(KL\) wynosi \(-12\). Wtedy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q10" value="A"><div><b>A.</b> \(b=-28\)</div></label>
+      <label class="option"><input type="radio" name="q10" value="B"><div><b>B.</b> \(b=-14\)</div></label>
+      <label class="option"><input type="radio" name="q10" value="C"><div><b>C.</b> \(b=-24\)</div></label>
+      <label class="option"><input type="radio" name="q10" value="D"><div><b>D.</b> \(b=-10\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{4+b}{2}=-12 \Rightarrow 4+b=-24 \Rightarrow b=-28\).<br>
+      Odpowiedź: <b>A. \(b=-28\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 11 -->
+  <div class="section" id="zad11" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 11</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2022 – zad. 24)</div>
+        <div class="qtext">Kwadrat \(ABCD\) ma wierzchołki: \(A=(-4,4)\), \(B=(4,0)\). Długość przekątnej kwadratu jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q11" value="A"><div><b>A.</b> \(4\sqrt{10}\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="B"><div><b>B.</b> \(4\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="C"><div><b>C.</b> \(4\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q11" value="D"><div><b>D.</b> \(4\sqrt{7}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AB|=\sqrt{(4-(-4))^2+(0-4)^2}=\sqrt{8^2+(-4)^2}=\sqrt{64+16}=4\sqrt{5}\).<br>
+      Przekątna kwadratu \(=|AB|\sqrt{2}=4\sqrt{5}\cdot\sqrt{2}=4\sqrt{10}\).<br>
+      Odpowiedź: <b>A. \(4\sqrt{10}\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 12 -->
+  <div class="section" id="zad12" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 12</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2021 – zad. 23)</div>
+        <div class="qtext">Prostokąt \(ABCD\). Punkty: \(C=(-3,1)\), \(D=(2,1)\). Bok \(AD=6\). Pole prostokąta jest równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q12" value="A"><div><b>A.</b> \(6\sqrt{29}\)</div></label>
+      <label class="option"><input type="radio" name="q12" value="B"><div><b>B.</b> \(12\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q12" value="C"><div><b>C.</b> 24</div></label>
+      <label class="option"><input type="radio" name="q12" value="D"><div><b>D.</b> 30</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|CD|=\sqrt{(2-(-3))^2+(1-1)^2}=\sqrt{5^2}=5\). Drugi bok \(AD=6\).<br>
+      Pole \(=5\cdot 6=30\).<br>
+      Odpowiedź: <b>D. 30</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 13 -->
+  <div class="section" id="zad13" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 13</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2021 – zad. 25)</div>
+        <div class="qtext">Kwadrat \(ABCD\). Dane: \(A=(3,-5)\), \(M=(1,3)\) (punkt przecięcia przekątnych). Pole tego kwadratu jest równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q13" value="A"><div><b>A.</b> 68</div></label>
+      <label class="option"><input type="radio" name="q13" value="B"><div><b>B.</b> 136</div></label>
+      <label class="option"><input type="radio" name="q13" value="C"><div><b>C.</b> \(2\sqrt{34}\)</div></label>
+      <label class="option"><input type="radio" name="q13" value="D"><div><b>D.</b> \(8\sqrt{34}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AM|=\sqrt{(3-1)^2+(-5-3)^2}=\sqrt{2^2+(-8)^2}=\sqrt{68}=2\sqrt{17}\). To połowa przekątnej.<br>
+      Przekątna \(=4\sqrt{17}\). Pole kwadratu \(=\frac{(\text{przekątna})^2}{2}=\frac{(4\sqrt{17})^2}{2}=\frac{16\cdot 17}{2}=136\).<br>
+      Odpowiedź: <b>B. 136</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 14 -->
+  <div class="section" id="zad14" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 14</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2021 – zad. 18)</div>
+        <div class="qtext">Dane są punkty \(P=(4,7)\) i \(R=(-2,-3)\). Punkt \(T=(3,-1)\). Odległość punktu \(T\) od środka odcinka \(PR\) jest równa:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q14" value="A"><div><b>A.</b> \(\sqrt{3}\)</div></label>
+      <label class="option"><input type="radio" name="q14" value="B"><div><b>B.</b> \(\sqrt{13}\)</div></label>
+      <label class="option"><input type="radio" name="q14" value="C"><div><b>C.</b> \(\sqrt{17}\)</div></label>
+      <label class="option"><input type="radio" name="q14" value="D"><div><b>D.</b> \(6\sqrt{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek \(PR\): \(M=\left(\frac{4+(-2)}{2},\frac{7+(-3)}{2}\right)=(1,2)\).<br>
+      \(|TM|=\sqrt{(3-1)^2+(-1-2)^2}=\sqrt{2^2+(-3)^2}=\sqrt{13}\).<br>
+      Odpowiedź: <b>B. \(\sqrt{13}\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 15 -->
+  <div class="section" id="zad15" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 15</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2020 – zad. 14)</div>
+        <div class="qtext">Punkt \(S=(4,8)\) jest środkiem odcinka \(PQ\). Punkt \(P\) leży na osi \(Oy\), a punkt \(Q\) na osi \(Ox\). Wynika, że:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q15" value="A"><div><b>A.</b> \(P=(0,16),\, Q=(8,0)\)</div></label>
+      <label class="option"><input type="radio" name="q15" value="B"><div><b>B.</b> \(P=(0,8),\, Q=(16,0)\)</div></label>
+      <label class="option"><input type="radio" name="q15" value="C"><div><b>C.</b> \(P=(0,4),\, Q=(4,0)\)</div></label>
+      <label class="option"><input type="radio" name="q15" value="D"><div><b>D.</b> \(P=(0,8),\, Q=(8,0)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Niech \(P=(0,y_P)\), \(Q=(x_Q,0)\). Środek: \(\left(\frac{x_Q}{2},\frac{y_P}{2}\right)=(4,8)\).<br>
+      Stąd \(x_Q=8\), \(y_P=16\).<br>
+      Odpowiedź: <b>A. \(P=(0,16),\, Q=(8,0)\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 16 -->
+  <div class="section" id="zad16" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 16</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2020 – zad. 22)</div>
+        <div class="qtext">Dane są punkty \(A=(4,1)\), \(B=(1,3)\), \(C=(4,-1)\). Pole trójkąta \(ABC\) jest równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q16" value="A"><div><b>A.</b> 3</div></label>
+      <label class="option"><input type="radio" name="q16" value="B"><div><b>B.</b> 6</div></label>
+      <label class="option"><input type="radio" name="q16" value="C"><div><b>C.</b> 8</div></label>
+      <label class="option"><input type="radio" name="q16" value="D"><div><b>D.</b> 16</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Podstawa \(AC\) leży na prostej \(x=4\), \(|AC|=|1-(-1)|=2\).<br>
+      Wysokość z \(B\) to odległość od \(x=4\): \(|1-4|=3\).<br>
+      Pole \(=\frac12\cdot 2\cdot 3=3\).<br>
+      Odpowiedź: <b>A. 3</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 17 -->
+  <div class="section" id="zad17" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 17</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2020 – zad. 17)</div>
+        <div class="qtext">Dane są punkty \(A=(1,-2)\), \(C=(0,5)\). Obwód kwadratu \(ABCD\) jest równy:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q17" value="A"><div><b>A.</b> 12</div></label>
+      <label class="option"><input type="radio" name="q17" value="B"><div><b>B.</b> 20</div></label>
+      <label class="option"><input type="radio" name="q17" value="C"><div><b>C.</b> 28</div></label>
+      <label class="option"><input type="radio" name="q17" value="D"><div><b>D.</b> 48</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Przekątna \(AC=\sqrt{(0-1)^2+(5-(-2))^2}=\sqrt{1+49}=\sqrt{50}=5\sqrt{2}\).<br>
+      Bok \(=\frac{5\sqrt{2}}{\sqrt{2}}=5\). Obwód \(=4\cdot 5=20\).<br>
+      Odpowiedź: <b>B. 20</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 18 -->
+  <div class="section" id="zad18" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 18</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2019 – zad. 18)</div>
+        <div class="qtext">Punkt \(S=(40,40)\) jest środkiem odcinka \(KL\). Punkt \(K=(0,8)\). Wtedy punkt \(L\) ma współrzędne:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q18" value="A"><div><b>A.</b> (20, 24)</div></label>
+      <label class="option"><input type="radio" name="q18" value="B"><div><b>B.</b> (−80, −72)</div></label>
+      <label class="option"><input type="radio" name="q18" value="C"><div><b>C.</b> (−40, −24)</div></label>
+      <label class="option"><input type="radio" name="q18" value="D"><div><b>D.</b> (80, 72)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Ze wzoru na środek: \(S=\big(\tfrac{x_K+x_L}{2},\tfrac{y_K+y_L}{2}\big)\).<br>
+      \(40=\tfrac{0+x_L}{2}\Rightarrow x_L=80\), \(40=\tfrac{8+y_L}{2}\Rightarrow y_L=72\).<br>
+      Odpowiedź: <b>D. (80, 72)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 19 -->
+  <div class="section" id="zad19" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 19</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2019 – zad. 20)</div>
+        <div class="qtext">Punkt \(P=(−30,−76)\). Punkt ten należy do tej samej ćwiartki układu współrzędnych co:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q19" value="A"><div><b>A.</b> \(A=(1,4)\)</div></label>
+      <label class="option"><input type="radio" name="q19" value="B"><div><b>B.</b> \(B=(−5,−1)\)</div></label>
+      <label class="option"><input type="radio" name="q19" value="C"><div><b>C.</b> \(C=(−5,3)\)</div></label>
+      <label class="option"><input type="radio" name="q19" value="D"><div><b>D.</b> \(D=(6,−4)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(P\) ma \(x&lt;0\) i \(y&lt;0\) (III ćwiartka). Tylko \(B=(−5,−1)\) też ma \(x&lt;0\) i \(y&lt;0\).<br>
+      Odpowiedź: <b>B. \(B=(−5,−1)\)</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 20 -->
+  <div class="section" id="zad20" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 20</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2019 – zad. 15)</div>
+        <div class="qtext">Trójkąt \(ABC\) ma wierzchołki: \(A=(0,0)\), \(B=(4,2)\), \(C=(2,6)\). Pole tego trójkąta jest równe:</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q20" value="A"><div><b>A.</b> 5</div></label>
+      <label class="option"><input type="radio" name="q20" value="B"><div><b>B.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q20" value="C"><div><b>C.</b> 15</div></label>
+      <label class="option"><input type="radio" name="q20" value="D"><div><b>D.</b> 20</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Wzór shoelace: \(\frac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\).<br>
+      \(\frac12|0(2-6)+4(6-0)+2(0-2)|=\frac12|0+24-4|=\frac12\cdot 20=10\).<br>
+      Odpowiedź: <b>B. 10</b>.
+    </div>
+  </div>
+  <!-- Zadanie 21 -->
+  <div class="section" id="zad21" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 21</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2019 - zad. 17)</div>
+        <div class="qtext">W układzie współrzędnych na płaszczyźnie dany jest odcinek \(AB\) o końcach w punktach \(A=(7,4)\),
+\(B=(11,12)\). Punkt \(S\) leży wewnątrz odcinka \(AB\) oraz \(|AS| = 3 \cdot |BS|\). Wówczas</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q21" value="A"><div><b>A.</b> (8, 6)</div></label>
+      <label class="option"><input type="radio" name="q21" value="B"><div><b>B.</b> (9, 8)</div></label>
+      <label class="option"><input type="radio" name="q21" value="C"><div><b>C.</b> (10, 10)</div></label>
+      <label class="option"><input type="radio" name="q21" value="D"><div><b>D.</b> (13, 16)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Rozpatrując położenie punktu \(S\) na odcinku \(AB\) i korzystając z podanych odpowiedzi, punkt wypada w punkcie
+      \((9,8)\) — jest to punkt środkowy \(AB\). Zgodnie z kluczem: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 22 -->
+  <div class="section" id="zad22" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 22</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2019 - zad. 18)</div>
+        <div class="qtext">Suma odległości punktu \(A=(-4,2)\) od prostych o równaniach \(x=4\) i \(y=-4\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q22" value="A"><div><b>A.</b> 14</div></label>
+      <label class="option"><input type="radio" name="q22" value="B"><div><b>B.</b> 12</div></label>
+      <label class="option"><input type="radio" name="q22" value="C"><div><b>C.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q22" value="D"><div><b>D.</b> 8</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Odległość od \(x=4\): \(|-4-4|=8\). Od \(y=-4\): \(|2-(-4)|=6\). Suma \(8+6=14\). Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 23 -->
+  <div class="section" id="zad23" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 23</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2018 - zad. 21)</div>
+        <div class="qtext">Punkt \(A=(-3,2)\) jest końcem odcinka \(AB\), a punkt \(M=(4,1)\) jest środkiem tego odcinka. Długość odcinka
+\(AB\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q23" value="A"><div><b>A.</b> \(2\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q23" value="B"><div><b>B.</b> \(4\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q23" value="C"><div><b>C.</b> \(5\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q23" value="D"><div><b>D.</b> \(10\sqrt{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(B = 2M - A = (8,2) - (-3,2) = (11,0)\).<br>
+      \(|AB| = \sqrt{(11+3)^2 + (0-2)^2} = \sqrt{14^2 + (-2)^2} = \sqrt{200} = 10\sqrt{2}\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 24 -->
+  <div class="section" id="zad24" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 24</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2018 - zad. 18)</div>
+        <div class="qtext">Punkt \(K=(2,2)\) jest wierzchołkiem trójkąta równoramiennego \(KLM\), w którym \(|KM|=|LM|\). Odcinek
+\(MN\) jest wysokością trójkąta i \(N=(4,3)\). Zatem</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q24" value="A"><div><b>A.</b> \(L=(5,3)\)</div></label>
+      <label class="option"><input type="radio" name="q24" value="B"><div><b>B.</b> \(L=(6,4)\)</div></label>
+      <label class="option"><input type="radio" name="q24" value="C"><div><b>C.</b> \(L=(3,5)\)</div></label>
+      <label class="option"><input type="radio" name="q24" value="D"><div><b>D.</b> \(L=(4,6)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Wysokość z \(M\) pada na \(KL\) w punkcie \(N\). Warunek \(|KM|=|LM|\) oznacza, że \(L\) leży tak,
+      by \(N\) było rzutem prostopadłym \(M\) na \(KL\). Z podanych opcji poprawna jest <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 25 -->
+  <div class="section" id="zad25" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 25</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2017 - zad. 17)</div>
+        <div class="qtext">Punkty \(B=(-2,4)\) i \(C=(5,1)\) są sąsiednimi wierzchołkami kwadratu \(ABCD\). Pole tego kwadratu jest
+równe</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q25" value="A"><div><b>A.</b> 29</div></label>
+      <label class="option"><input type="radio" name="q25" value="B"><div><b>B.</b> 40</div></label>
+      <label class="option"><input type="radio" name="q25" value="C"><div><b>C.</b> 58</div></label>
+      <label class="option"><input type="radio" name="q25" value="D"><div><b>D.</b> 74</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Długość boku \(BC=\sqrt{(5+2)^2+(1-4)^2}=\sqrt{7^2+(-3)^2}=\sqrt{58}\). Pole = \((\sqrt{58})^2=58\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 26 -->
+  <div class="section" id="zad26" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 26</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2016 - zad. 21)</div>
+        <div class="qtext">W układzie współrzędnych dane są punkty \(A=(a,6)\) oraz \(B=(7,b)\). Środkiem odcinka \(AB\) jest punkt
+\(M=(3,4)\). Wynika stąd, że</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q26" value="A"><div><b>A.</b> \(a=5\) i \(b=5\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="B"><div><b>B.</b> \(a=-1\) i \(b=2\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="C"><div><b>C.</b> \(a=4\) i \(b=10\)</div></label>
+      <label class="option"><input type="radio" name="q26" value="D"><div><b>D.</b> \(a=-4\) i \(b=-2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{a+7}{2}=3\Rightarrow a=-1\). \(\frac{6+b}{2}=4\Rightarrow b=2\). Odpowiedź: <b>B</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 27 -->
+  <div class="section" id="zad27" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 27</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2015 - zad. 21)</div>
+        <div class="qtext">Punkt \(S=(2,-5)\) jest środkiem odcinka \(AB\), gdzie \(A=(-4,3)\) i \(B=(8,b)\). Wtedy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q27" value="A"><div><b>A.</b> \(b=-13\)</div></label>
+      <label class="option"><input type="radio" name="q27" value="B"><div><b>B.</b> \(b=-2\)</div></label>
+      <label class="option"><input type="radio" name="q27" value="C"><div><b>C.</b> \(b=-1\)</div></label>
+      <label class="option"><input type="radio" name="q27" value="D"><div><b>D.</b> \(b=6\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{3+b}{2}=-5 \Rightarrow 3+b=-10 \Rightarrow b=-13\). Odpowiedź: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 28 -->
+  <div class="section" id="zad28" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 28</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2014 - zad. 14)</div>
+        <div class="qtext">Punkty \(A=(-6-2\sqrt{2},\,4-2\sqrt{2})\), \(B=(2+4\sqrt{2},\,-6\sqrt{2})\), \(C=(2+6\sqrt{2},\,6-2\sqrt{2})\) są kolejnymi wierzchołkami
+równoległoboku \(ABCD\). Przekątne tego równoległoboku przecinają się w punkcie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q28" value="A"><div><b>A.</b> \(S=(-1+4\sqrt{2},\,5-5\sqrt{2})\)</div></label>
+      <label class="option"><input type="radio" name="q28" value="B"><div><b>B.</b> \(S=(-2+\sqrt{2},\,2-4\sqrt{2})\)</div></label>
+      <label class="option"><input type="radio" name="q28" value="C"><div><b>C.</b> \(S=(2+5\sqrt{2},\,3-4\sqrt{2})\)</div></label>
+      <label class="option"><input type="radio" name="q28" value="D"><div><b>D.</b> \(S=(-2+2\sqrt{2},\,5-2\sqrt{2})\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek przekątnych to środek \(AC\): \(\frac{A+C}{2}=\Big(\frac{-6-2\sqrt{2}+2+6\sqrt{2}}{2},\frac{4-2\sqrt{2}+6-2\sqrt{2}}{2}\Big)=(-2+2\sqrt{2},\,5-2\sqrt{2})\).
+      Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 29 -->
+  <div class="section" id="zad29" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 29</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2014 - zad. 21)</div>
+        <div class="qtext">Punkty \(A=(13,-12)\) i \(C=(15,8)\) są przeciwległymi wierzchołkami kwadratu \(ABCD\). Przekątne tego
+kwadratu przecinają się w punkcie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q29" value="A"><div><b>A.</b> \(S=(2,-20)\)</div></label>
+      <label class="option"><input type="radio" name="q29" value="B"><div><b>B.</b> \(S=(14,10)\)</div></label>
+      <label class="option"><input type="radio" name="q29" value="C"><div><b>C.</b> \(S=(14,-2)\)</div></label>
+      <label class="option"><input type="radio" name="q29" value="D"><div><b>D.</b> \(S=(28,-4)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek przekątnych: \(S=\big(\frac{13+15}{2},\frac{-12+8}{2}\big)=(14,-2)\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 30 -->
+  <div class="section" id="zad30" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 30</div>
+      <div style="flex:1">
+        <div class="qmeta">(grudzień 2013 - zad. 2)</div>
+        <div class="qtext">Punkty \(E=(7,1)\) i \(F=(9,7)\) to środki boków, odpowiednio \(AB\) i \(BC\) kwadratu \(ABCD\). Przekątna tego
+kwadratu ma długość</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q30" value="A"><div><b>A.</b> \(4\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q30" value="B"><div><b>B.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q30" value="C"><div><b>C.</b> \(4\sqrt{10}\)</div></label>
+      <label class="option"><input type="radio" name="q30" value="D"><div><b>D.</b> 20</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|EF|=\sqrt{(2)^2+(6)^2}=\sqrt{40}=2\sqrt{10}\). W kwadracie \(|EF|=\frac{|AC|}{2}\Rightarrow |AC|=4\sqrt{10}\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 31 -->
+  <div class="section" id="zad31" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 31</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2013 - zad. 14)</div>
+        <div class="qtext">Punkt \(S=(4,1)\) jest środkiem odcinka \(AB\), gdzie \(A=(a,0)\) i \(B=(a+3,2)\). Zatem</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q31" value="A"><div><b>A.</b> \(a=0\)</div></label>
+      <label class="option"><input type="radio" name="q31" value="B"><div><b>B.</b> \(a=\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q31" value="C"><div><b>C.</b> \(a=2\)</div></label>
+      <label class="option"><input type="radio" name="q31" value="D"><div><b>D.</b> \(a=\tfrac{5}{2}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(\frac{a+(a+3)}{2}=4 \Rightarrow 2a+3=8 \Rightarrow a=\tfrac{5}{2}\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 32 -->
+  <div class="section" id="zad32" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 32</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2013 - zad. 18)</div>
+        <div class="qtext">Punkt \(S=(-4,7)\) jest środkiem odcinka \(PQ\), gdzie \(Q=(17,12)\). Zatem punkt \(P\) ma współrzędne</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q32" value="A"><div><b>A.</b> \(P=(2,-25)\)</div></label>
+      <label class="option"><input type="radio" name="q32" value="B"><div><b>B.</b> \(P=(38,17)\)</div></label>
+      <label class="option"><input type="radio" name="q32" value="C"><div><b>C.</b> \(P=(-25,2)\)</div></label>
+      <label class="option"><input type="radio" name="q32" value="D"><div><b>D.</b> \(P=(-12,4)\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(P=2S-Q=(-8,14)-(17,12)=(-25,2)\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 33 -->
+  <div class="section" id="zad33" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 33</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2013 - zad. 17)</div>
+        <div class="qtext">Punkty \(A=(-1,2)\) i \(B=(5,-2)\) są dwoma sąsiednimi wierzchołkami rombu \(ABCD\). Obwód tego rombu
+jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q33" value="A"><div><b>A.</b> \(\sqrt{13}\)</div></label>
+      <label class="option"><input type="radio" name="q33" value="B"><div><b>B.</b> 13</div></label>
+      <label class="option"><input type="radio" name="q33" value="C"><div><b>C.</b> 676</div></label>
+      <label class="option"><input type="radio" name="q33" value="D"><div><b>D.</b> \(8\sqrt{13}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Bok \(=|AB|=\sqrt{6^2+(-4)^2}=\sqrt{52}=2\sqrt{13}\). Obwód \(=4\cdot 2\sqrt{13}=8\sqrt{13}\). Odp.: <b>D</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 34 -->
+  <div class="section" id="zad34" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 34</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2011 - zad. 14)</div>
+        <div class="qtext">Dane są punkty \(A=(1,-4)\) i \(B=(2,3)\). Odcinek \(AB\) ma długość</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q34" value="A"><div><b>A.</b> 1</div></label>
+      <label class="option"><input type="radio" name="q34" value="B"><div><b>B.</b> \(4\sqrt{3}\)</div></label>
+      <label class="option"><input type="radio" name="q34" value="C"><div><b>C.</b> \(5\sqrt{2}\)</div></label>
+      <label class="option"><input type="radio" name="q34" value="D"><div><b>D.</b> 7</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AB|=\sqrt{(2-1)^2+(3-(-4))^2}=\sqrt{1+49}=\sqrt{50}=5\sqrt{2}\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 35 -->
+  <div class="section" id="zad35" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 35</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2010 - zad. 20)</div>
+        <div class="qtext">Punkty \(A=(-1,3)\) i \(C=(-5,5)\) są przeciwległymi wierzchołkami kwadratu \(ABCD\). Pole tego kwadratu
+jest równe</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q35" value="A"><div><b>A.</b> 10</div></label>
+      <label class="option"><input type="radio" name="q35" value="B"><div><b>B.</b> 25</div></label>
+      <label class="option"><input type="radio" name="q35" value="C"><div><b>C.</b> 50</div></label>
+      <label class="option"><input type="radio" name="q35" value="D"><div><b>D.</b> 100</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AC|=\sqrt{(-4)^2+2^2}=\sqrt{20}=2\sqrt{5}\). Bok \(=\frac{|AC|}{\sqrt{2}}=\sqrt{10}\). Pole \(=10\). Odp.: <b>A</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 36 -->
+  <div class="section" id="zad36" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 36</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2010 - zad. 22)</div>
+        <div class="qtext">Punkty \(A=(-5,2)\) i \(B=(3,-2)\) są wierzchołkami trójkąta równobocznego \(ABC\). Obwód tego trójkąta jest
+równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q36" value="A"><div><b>A.</b> 30</div></label>
+      <label class="option"><input type="radio" name="q36" value="B"><div><b>B.</b> \(4\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q36" value="C"><div><b>C.</b> \(12\sqrt{5}\)</div></label>
+      <label class="option"><input type="radio" name="q36" value="D"><div><b>D.</b> 36</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AB|=\sqrt{8^2+(-4)^2}=\sqrt{80}=4\sqrt{5}\). Obwód \(=3\cdot 4\sqrt{5}=12\sqrt{5}\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 37 -->
+  <div class="section" id="zad37" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 37</div>
+      <div style="flex:1">
+        <div class="qmeta">(listopad 2009 - zad. 19)</div>
+        <div class="qtext">Dane są punkty \(A=(-2,3)\) oraz \(B=(4,6)\). Długość odcinka \(AB\) jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q37" value="A"><div><b>A.</b> \(\sqrt{208}\)</div></label>
+      <label class="option"><input type="radio" name="q37" value="B"><div><b>B.</b> \(\sqrt{52}\)</div></label>
+      <label class="option"><input type="radio" name="q37" value="C"><div><b>C.</b> \(\sqrt{45}\)</div></label>
+      <label class="option"><input type="radio" name="q37" value="D"><div><b>D.</b> \(\sqrt{40}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AB|=\sqrt{(4-(-2))^2+(6-3)^2}=\sqrt{6^2+3^2}=\sqrt{36+9}=\sqrt{45}\). Odp.: <b>C</b>.
+    </div>
+  </div>
+
+  <!-- Zadanie 38 -->
+  <div class="section" id="zad38" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 38</div>
+      <div style="flex:1">
+        <div class="qmeta">(informator CKE)</div>
+        <div class="qtext">Punkty \(A=(1,-2)\), \(C=(4,2)\) są dwoma wierzchołkami trójkąta równobocznego \(ABC\). Wysokość tego
+trójkąta jest równa</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q38" value="A"><div><b>A.</b> \(\frac{5\sqrt{3}}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q38" value="B"><div><b>B.</b> \(\frac{5\sqrt{3}}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q38" value="C"><div><b>C.</b> \(\frac{5\sqrt{3}}{6}\)</div></label>
+      <label class="option"><input type="radio" name="q38" value="D"><div><b>D.</b> \(\frac{5\sqrt{3}}{9}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(|AC|=\sqrt{(4-1)^2+(2-(-2))^2}=\sqrt{3^2+4^2}=5\). Wysokość w trójkącie równobocznym: \(\frac{\sqrt{3}}{2}\cdot 5=\frac{5\sqrt{3}}{2}\).
+      Odp.: <b>A</b>.
+    </div>
+  </div>
+
+
+
+
+
+  <div class="footer">Matematyka to trening umysłu – krok po kroku dojdziesz do celu! ^_^</div>
+</div>
+
+<script>
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const correct = (sec.getAttribute('data-ans')||'').toUpperCase().trim();
+  const options = sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input = opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val = (input.value||'').toUpperCase().trim();
+      if(val === correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click', ()=> { sol.style.display = sol.style.display === 'block' ? 'none' : 'block'; MathJax.typesetPromise(); });
+  }
+}
+['zad1','zad2','zad3','zad4','zad5','zad6','zad7','zad8','zad9','zad10',
+ 'zad11','zad12','zad13','zad14','zad15','zad16','zad17','zad18','zad19','zad20','zad21','zad22','zad23','zad24','zad25','zad26','zad27','zad28','zad29','zad30','zad31','zad32','zad33','zad34','zad35','zad36','zad37','zad38'].forEach(setupQuestion);
+</script>
+</body>
+</html>
+

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prosta w układzie współrzędnych</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+      <center><a href="index.html" id="btn-back">◀ Powrót</a></center>
+
+  <h1>Prosta w układzie współrzędnych</h1><br>
+ 
+  <!-- Zadanie 1 -->
+  <div class="section" id="zad1" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 1</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2023 – zad. 12)</div>
+        <div class="qtext">W kartezjańskim układzie współrzędnych \((x, y)\) prosta o równaniu \(y=ax+b\) przechodzi przez punkty \(A=(-3,-1)\) oraz \(B=(4,3)\).
+Współczynnik \(a\) w równaniu tej prostej jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"><div><b>A.</b> \(-4\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="B"><div><b>B.</b> \(-\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="C"><div><b>C.</b> \(2\)</div></label>
+      <label class="option"><input type="radio" name="q1" value="D"><div><b>D.</b> \(\tfrac{4}{7}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Współczynnik kierunkowy: \(a=\dfrac{\Delta y}{\Delta x}=\dfrac{3-(-1)}{4-(-3)}=\dfrac{4}{7}\). Odp.: <b>D</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 2 -->
+  <div class="section" id="zad2" data-ans="B">
+    <div class="qheader">
+      <div class="qid">Zad. 2</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2022 – zad. 21)</div>
+        <div class="qtext">Punkty \(A=(-2,6)\) oraz \(B=(3,b)\) leżą na prostej, która przechodzi przez początek układu współrzędnych. Wtedy \(b\) jest równe</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"><div><b>A.</b> 9</div></label>
+      <label class="option"><input type="radio" name="q2" value="B"><div><b>B.</b> \(-9\)</div></label>
+      <label class="option"><input type="radio" name="q2" value="C"><div><b>C.</b> \(-4\)</div></label>
+      <label class="option"><input type="radio" name="q2" value="D"><div><b>D.</b> 4</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Prosta przez \(O(0,0)\): \(\dfrac{y}{x}\) stałe. Dla \(A\): \(\dfrac{6}{-2}=-3\). Zatem \(\dfrac{b}{3}=-3\Rightarrow b=-9\). Odp.: <b>B</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 3 -->
+  <div class="section" id="zad3" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 3</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2021 – zad. 22)</div>
+        <div class="qtext">Dany jest trapez \(ABCD\), w którym boki \(AB\) i \(CD\) są równoległe oraz \(C=(3,5)\). Wierzchołki \(A\) i \(B\) leżą na prostej \(y=5x+3\).
+Wtedy bok \(CD\) zawiera się w prostej o równaniu</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"><div><b>A.</b> \(y=3x+5\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="B"><div><b>B.</b> \(y=-\tfrac{1}{5}x+3\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="C"><div><b>C.</b> \(y=5x-10\)</div></label>
+      <label class="option"><input type="radio" name="q3" value="D"><div><b>D.</b> \(y=-\tfrac{1}{5}x+\tfrac{28}{5}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Skoro \(AB\parallel CD\), to nachylenia są równe: \(a=5\). Prosta \(CD\) przechodzi przez \(C(3,5)\): \(5=5\cdot3+b\Rightarrow b=-10\).
+      Zatem \(y=5x-10\). Odp.: <b>C</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 4 -->
+  <div class="section" id="zad4" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 4</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2020 – zad. 18)</div>
+        <div class="qtext">Prosta przechodząca przez punkty \(A=(3,-2)\) i \(B=(-1,6)\) jest określona równaniem</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"><div><b>A.</b> \(y=-2x+4\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="B"><div><b>B.</b> \(y=-2x-8\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="C"><div><b>C.</b> \(y=2x+8\)</div></label>
+      <label class="option"><input type="radio" name="q4" value="D"><div><b>D.</b> \(y=2x-4\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Nachylenie: \(m=\dfrac{6-(-2)}{-1-3}=\dfrac{8}{-4}=-2\). Podstawiamy \(A\): \(-2=-2\cdot3+b\Rightarrow b=4\). Równanie: \(y=-2x+4\). Odp.: <b>A</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 5 -->
+  <div class="section" id="zad5" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 5</div>
+      <div style="flex:1">
+        <div class="qmeta">(sierpień 2017 – zad. 20)</div>
+        <div class="qtext">Prosta \(k\) przechodzi przez punkt \(A=(4,-4)\) i jest prostopadła do osi \(Ox\). Prosta \(k\) ma równanie</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"><div><b>A.</b> \(x-4=0\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="B"><div><b>B.</b> \(x-y=0\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="C"><div><b>C.</b> \(y+4=0\)</div></label>
+      <label class="option"><input type="radio" name="q5" value="D"><div><b>D.</b> \(x+y=0\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Prostopadła do osi \(Ox\) to linia pionowa \(x=\text{const}\). Przez punkt \(A(4,-4)\): \(x=4\) czyli \(x-4=0\). Odp.: <b>A</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 6 -->
+  <div class="section" id="zad6" data-ans="D">
+    <div class="qheader">
+      <div class="qid">Zad. 6</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2017 – zad. 18)</div>
+        <div class="qtext">Prosta przechodząca przez punkt \(A=(-10,5)\) i początek układu współrzędnych jest prostopadła do prostej o równaniu</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"><div><b>A.</b> \(y=-2x+4\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="B"><div><b>B.</b> \(y=\tfrac{1}{2}x\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="C"><div><b>C.</b> \(y=-\tfrac{1}{2}x+1\)</div></label>
+      <label class="option"><input type="radio" name="q6" value="D"><div><b>D.</b> \(y=2x-4\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Prosta przez \(O\) i \(A\): \(m=\dfrac{5-0}{-10-0}=-\tfrac{1}{2}\). Prosta prostopadła ma nachylenie \(2\) (bo \(m\cdot m_\perp=-1\)). Odpowiada temu \(y=2x-4\). Odp.: <b>D</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 7 -->
+  <div class="section" id="zad7" data-ans="C">
+    <div class="qheader">
+      <div class="qid">Zad. 7</div>
+      <div style="flex:1">
+        <div class="qmeta">(czerwiec 2016 – zad. 17)</div>
+        <div class="qtext">Prosta \(y=ax+1\) jest symetralną odcinka \(AB\), gdzie \(A=(-3,2)\) i \(B=(1,4)\). Wynika stąd, że</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"><div><b>A.</b> \(a=-\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="B"><div><b>B.</b> \(a=\tfrac{1}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="C"><div><b>C.</b> \(a=-2\)</div></label>
+      <label class="option"><input type="radio" name="q7" value="D"><div><b>D.</b> \(a=2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      Środek \(M\left(\frac{-3+1}{2},\frac{2+4}{2}\right)=(-1,3)\). Nachylenie \(AB\): \(\frac{4-2}{1-(-3)}=\frac{2}{4}=\tfrac{1}{2}\),
+      więc nachylenie symetralnej: \(-2\). Dodatkowo \(M\) spełnia \(y=ax+1\): \(3=-2\cdot(-1)+1\). Zgadza się. Odp.: <b>C</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 8 -->
+  <div class="section" id="zad8" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 8</div>
+      <div style="flex:1">
+        <div class="qmeta">(maj 2014 – zad. 8)</div>
+        <div class="qtext">Punkt \(C=(0,2)\) jest wierzchołkiem trapezu \(ABCD\), którego podstawa \(AB\) jest zawarta w prostej \(y=2x-4\). Wskaż równanie prostej zawierającej podstawę \(CD\).</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"><div><b>A.</b> \(y=2x+2\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="B"><div><b>B.</b> \(y=\tfrac{1}{2}x+2\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="C"><div><b>C.</b> \(y=-2x+2\)</div></label>
+      <label class="option"><input type="radio" name="q8" value="D"><div><b>D.</b> \(y=-\tfrac{1}{2}x+2\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(AB\) ma nachylenie \(2\), więc \(CD\parallel AB\): \(y=2x+b\). Punkt \(C(0,2)\) należy do \(CD\): \(2=b\). Stąd \(y=2x+2\). Odp.: <b>A</b>.
+    </div>
+  </div>
+ 
+  <!-- Zadanie 9 -->
+  <div class="section" id="zad9" data-ans="A">
+    <div class="qheader">
+      <div class="qid">Zad. 9</div>
+      <div style="flex:1">
+        <div class="qmeta">(marzec 2012 – zad. 15)</div>
+        <div class="qtext">Dane są punkty \(A=(6,1)\) i \(B=(3,3)\). Współczynnik kierunkowy prostej \(AB\) jest równy</div>
+      </div>
+    </div>
+    <div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"><div><b>A.</b> \(-\tfrac{2}{3}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="B"><div><b>B.</b> \(-\tfrac{3}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="C"><div><b>C.</b> \(\tfrac{3}{2}\)</div></label>
+      <label class="option"><input type="radio" name="q9" value="D"><div><b>D.</b> \(\tfrac{2}{3}\)</div></label>
+    </div>
+    <div class="controls"><button class="btn btn-solution">Rozwiązanie</button></div>
+    <div class="sol">
+      \(m=\dfrac{3-1}{3-6}=\dfrac{2}{-3}=-\tfrac{2}{3}\). Odp.: <b>A</b>.
+    </div>
+  </div>
+ 
+  <div class="footer">Niech każda prosta prowadzi Cię prosto do celu. ( ^◡^)</div>
+</div>
+ 
+<script>
+function setupQuestion(sectionId){
+  const sec = document.getElementById(sectionId);
+  if(!sec) return;
+  const correct = (sec.getAttribute('data-ans')||'').toUpperCase().trim();
+  const options = sec.querySelectorAll('.option');
+  options.forEach(opt=>{
+    const input = opt.querySelector('input[type=radio]');
+    if(!input) return;
+    input.addEventListener('change', ()=>{
+      options.forEach(o=>o.classList.remove('correct','incorrect'));
+      const val = (input.value||'').toUpperCase().trim();
+      if(val === correct && correct!=='') opt.classList.add('correct');
+      else opt.classList.add('incorrect');
+    });
+  });
+  const btn = sec.querySelector('.btn-solution');
+  const sol = sec.querySelector('.sol');
+  if(btn && sol){
+    btn.addEventListener('click', ()=> { 
+      sol.style.display = sol.style.display === 'block' ? 'none' : 'block'; 
+      if(window.MathJax) MathJax.typesetPromise();
+    });
+  }
+}
+['zad1','zad2','zad3','zad4','zad5','zad6','zad7','zad8','zad9'].forEach(setupQuestion);
+</script>
+</body>
+</html>
