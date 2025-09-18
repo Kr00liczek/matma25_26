@@ -27,7 +27,66 @@ footer{margin-top:20px; color:var(--muted); font-size:0.95rem; text-align:center
 .pf-choice{display:flex; gap:10px; align-items:center;}
 .pf-row.correct{background:var(--ok-bg); border-color:var(--ok-border); color:#c9f7d0;}
 .pf-row.incorrect{background:var(--bad-bg); border-color:var(--bad-border); color:#ffd2d2;}
-@media (max-width:640px){ .opt[data-type="pf"]{display:block;margin-bottom:6px;} }
+@media (max-width: 640px) {
+  .container {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    padding: 10px;
+    margin: 12px 0;
+  }
+
+  .options {
+    gap: 8px;
+  }
+
+  .option {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .sol {
+    font-size: 0.9rem;
+  }
+
+  /* przycisk powrotu mniejszy */
+  #btn-back {
+    top: 10px;
+    left: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
+  /* linki w index.html: 1 kolumna zamiast 2 */
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  a {
+    padding: 18px;
+    font-size: 17px;
+  }
+
+  input {
+    width: 55px;
+    font-size: 18px;
+  }
+
+  table th, table td {
+    padding: 4px 6px;
+    font-size: 0.85rem;
+  }
+}
 .section img {
   display: block;
   max-width: 100%;
@@ -134,3 +193,4 @@ a:hover {
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠢⠤⠀⠀⠤⠤⠒⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 */
+
